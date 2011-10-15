@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Liberty
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20110810
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Collegiate Go Association</title>
+<meta name="Go Weiqi Baduk Collegiate Association" content="" />
+<meta name="Website for the Collegiate Go Association, a new group dedicated to teaching, playing, and supporting Go in university communities and beyond." content="" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link href="../media/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body id="{{ NavId }}">
+<div id="wrapper">
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="../home/" id="homenav">Home</a></li>
+				<li><a href="../whatsnew/" id="whatsnewnav">What's New</a></li>
+				<li><a href="../membership/" id="membershipnav">Membership</a></li>
+				<li><a href="../images/" id="imagesnav">Images</a></li>
+				<li><a href="../links/" id="linksnav">Links</a></li>
+				<li><a href="../about/" id="aboutnav">About</a></li>
+				<li><a href="../ing/" id="ingnav">Ing Foundation</a></li>
+				<li><a href="../contact/" id="contactnav">Contact</a></li>
+				
+			</ul>
+		</div>
+		<!-- end #menu -->
+	</div>
+	<!-- end #header -->
+	<div id="logo" >
+		<h1><a href="/home/">Collegiate Go Association </a></h1>
+		<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
+	</div>
+	<!-- end #logo -->
+	<div id="page">
+		{% block page %}
+		<p>Default Page</p>		
+		{% endblock page %}
+	<div style="clear: both;">&nbsp;</div>	
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+			<p>Copyright (c) 2011 Collegiate Go Association. All rights reserved. Adapted from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+</div>
+</body>
+</html>

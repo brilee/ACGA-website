@@ -1,0 +1,47 @@
+{% extends "default.html" %}
+
+{% block page %}
+	{% block content %}
+	{% endblock content %}
+	{% block sidebar %}
+	<div id="sidebar">		
+				<ul>
+					<li>
+						<h2>Join the CGA! </h2>
+						<ul>
+							<li><a href="../membership/index.html#newmember">Let us know about your club</a></li>
+							<li><a href="../membership/index.html#clubs">Search existing member clubs</a></li>
+							<li><a href="../membership/index.html#newclub">Want to start a club? We can help!</a></li>
+							<li><a href="../membership/index.html#benefits">Membership benefits </a></li>
+						</ul>
+					</li>
+					<li>
+						<h2>Tournament information</h2>
+						<ul>
+							<li>First tournament @ somewhere, somewhen</li>
+							<li>Second tournament @ somewhere, somewhen</li>
+							<li>etc. </li>
+						</ul>
+							
+					</li>
+					<li>
+						<h2>Calendar</h2>
+						<p> Visit the <a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">CGA google calendar</a> to stay up to date on all things go!</p>
+						<!--<iframe src="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York" style="border: 0" width="270" height="200" frameborder="0" scrolling="no" alt="Sorry, your browser doesn't handle the Google Calendar iframe!></iframe>-->
+					</li>
+					<li>
+						<h2>Games of the Month</h2>
+						<p> Right-click and download the .sgf files below, or find an .sgf editor 
+						<a href="http://senseis.xmp.net/?GoEditingPrograms">here</a>!
+							</p>
+						<ul>
+							<li><a href="/games/GotM/30-10kyu.sgf"></a><a href="#">30-10 kyu game</a></li>
+							<li><a href="/games/GotM/10-1kyu.sgf">10 kyu - 1 kyu game</a></li>
+							<li><a href="/games/GotM/dan.sgf">Amateur dan game</a></li>
+							<li><a href="/games/GotM/pro.sgf">Professional game</a></li>
+						</ul>
+					</li>
+				</ul>
+	</div>
+	{% endblock %}
+{% endblock %}
