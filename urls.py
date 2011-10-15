@@ -25,8 +25,9 @@ urlpatterns = patterns('CGA.views',
     (r'^contact/$', 'contact'),
     (r'^style.css/$', 'stylesheet'),
 )
-#urlpatterns += patterns('',
-#	
-#	 (r'^style.css/$', 'stylesheet'),
-# 
-#)
+urlpatterns += patterns('',
+	
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': '/home/cole/Webs/CGA/site_media'})
+ 
+)

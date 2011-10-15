@@ -4,14 +4,19 @@
 	{% block title %} <p> Default Title </p>{% endblock %}	
 	<br />
 	<br /> 
-	{% block pagedata %}<p> Default Page Data </p>{% endblock %}
-	<br />
-	{% block links %} 
-	<h2>Quick links at the CGA</h2>
-	<br />
-	<a href="../whatsnew/">New At The CGA</a>, <a href="../membership/">CGA Membership</a>,
-	<a href="../membership/index.html#clubs">CGA Member Search</a>,
-	<a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">CGA Calendar</a>, 
-	<a href="../whatsnew/tournaments.html">Tournament Information</a>, <a href="../links/">Online Resources</a> </li>
-	{% endblock %}
+	<div id="content" >
+	<ul>
+		{% block pagedata %}<p> Default Page Data </p>{% endblock %}
+		<br />
+		{% block links %}
+		<h2>Quick links at the CGA</h2>
+		<br />
+		<li><a href="../whatsnew/">New At The CGA</a>, <a href="../membership/">CGA Membership</a>,
+		<a href="../membership/index.html#clubs">CGA Member Search</a>,
+		<a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">CGA Calendar</a>, 
+		<a href="../whatsnew/tournaments.html">Tournament Information</a>, <a href="../links/">Online Resources</a> </li>
+		{% endblock %}
+	</ul>
+	</div>
+	<!-- end #content-->
 {% endblock %}
