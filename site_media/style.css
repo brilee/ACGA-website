@@ -121,7 +121,7 @@ img.right {
 
 #menu li {
 	display: block;
-	background: url(images/img02.jpg) repeat-y left top;
+	background: url(/site_media/img02.jpg) repeat-y left top;
 	float: left;
 }
 
@@ -166,7 +166,7 @@ body#contact a#contactnav {
 
 /* Search */
 
-#search {
+/*#search {
 	float: right;
 	width: 305px;
 	height: 50px;
@@ -205,7 +205,7 @@ body#contact a#contactnav {
 	padding: 0px 5px;
 	background: #000000;
 	color: #FFFFFF;
-}
+}*/
 
 /* Page */
 
@@ -324,7 +324,7 @@ body#contact #logo {
 #content li li {
 	margin: 0 0 0 5px;
 	padding: 10px 0px 15px 15px;
-	background: url(images/img09.jpg) no-repeat left 16px;
+	background: url(/site_media/img09.jpg) no-repeat left 16px;
 }
 
 body#images img {
@@ -365,7 +365,7 @@ body#images img {
 
 .post .meta {
 	padding: 2px 30px 2px 16px;
-	background: url(images/img08.jpg) no-repeat left 10px;
+	background: url(/site_media/img08.jpg) no-repeat left 10px;
 	border-bottom: 1px #BDBDBB dotted;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
@@ -425,7 +425,7 @@ body#images img {
 #sidebar li li {
 	margin: 0 0 0 5px;
 	padding: 10px 0px 15px 15px;
-	background: url(images/img09.jpg) no-repeat left 16px;
+	background: url(/site_media/img09.jpg) no-repeat left 16px;
 }
 
 #sidebar p {
@@ -513,7 +513,7 @@ body#images img {
 	height: 95px;
 	margin: 0 auto;
 	padding: 0;
-	background: url(images/img05.jpg) no-repeat left top;
+	/*background: url(/site_media/img05.jpg) no-repeat left top;*/
 }
 
 #footer p {

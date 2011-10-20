@@ -1,0 +1,24 @@
+{% extends "content.html" %}
+
+{% block title %}<div id="form">Contact</div>{% endblock title %}
+{% block pagedata %}
+	<li>
+	<p>We're a fast-growing group, so let us know how we can improve the site, answer your questions, or serve the Go community.</p>
+	</li>
+	<li>
+	{% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+        {% endif %}
+
+        <form action="/contact/#form" method="post">{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
+       </form>
+	</li>
+
+{% endblock pagedata %}
+

@@ -1,12 +1,12 @@
-{% extends 'sidebar.html' %}
+{% extends sidebar %}
 
 {% block content %}
-	{% block title %} <p> Default Title </p>{% endblock %}	
+	<h1 class="title">{% block title %} <p> Default Title </p>{% endblock %}</h1>
 	<br />
 	<br /> 
 	<div id="content" >
 	<ul>
-		{% block pagedata %}<p> Default Page Data </p>{% endblock %}
+		{% block pagedata %}<p> Default Page Data </p>{% endblock pagedata %}
 		<br />
 		{% block links %}
 		<h2>Quick links at the CGA</h2>
@@ -15,7 +15,7 @@
 		<a href="../membership/index.html#clubs">CGA Member Search</a>,
 		<a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">CGA Calendar</a>, 
 		<a href="../whatsnew/tournaments.html">Tournament Information</a>, <a href="../links/">Online Resources</a> </li>
-		{% endblock %}
+		{% endblock links%}
 	</ul>
 	</div>
 	<!-- end #content-->

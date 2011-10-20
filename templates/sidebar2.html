@@ -1,9 +1,9 @@
 {% extends "default.html" %}
 
-{ % block page % }
-	{ % block content % }
-	{ % endblock content % }
-	{ % block sidebar % }
+{% block page %}
+	{% block content %}
+	{% endblock content %}
+	{% block sidebar %}
 	<div id="sidebar">
 		<ul>
 			<li>
@@ -29,5 +29,5 @@
 		</ul>
 	</div>
 	<!-- end #sidebar -->
-	{ % endblock % }
-{ % endblock % }
+	{% endblock sidebar %}
+{% endblock page %}

@@ -1,0 +1,21 @@
+{% extends "content.html" %}
+
+{% block title %}Login{% endblock title %}
+{% block pagedata %}
+
+{% if form.errors %}
+<p>Sorry, that's not a valid username/password combination. Please try again.</p>
+{% endif %}
+
+<form method="post" action="">
+<!--{ csrf_token %}-->
+    <label for="username">School name:</label>
+    <input type="text" name="username" value="" id="username">
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="" id="password">
+
+    <input type="submit" value="Login" />
+    <input type="hidden" name="next" value="/membership/profile/" />
+  </form>
+
+{% endblock pagedata %}

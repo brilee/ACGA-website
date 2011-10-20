@@ -1,0 +1,33 @@
+{% extends "default.html" %}
+
+{% block page %}
+	{% block content %}
+	{% endblock content %}
+	{% block sidebar %}
+<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Tournament information</h2>
+				<ul>
+					<li>First tournament @ somewhere, somewhen</li>
+					<li>Second tournament @ somewhere, somewhen</li>
+					<li>etc. </li>
+				</ul>
+					
+			</li>
+			<li>
+				<h2 align="left">Fastest-growing areas</h2>
+				<br/>
+				<br/>
+				<p> Here's where we can put info on states with rapid increases in clubs, areas with young players, seminars, etc.</p>
+			</li>
+			<li>
+				<h2>Calendar</h2>
+				<p> Visit the <a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">CGA google calendar</a> to stay up to date on all things go!</p>
+				<!--<iframe src="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York" style="border: 0" width="270" height="200" frameborder="0" scrolling="no" alt="Sorry, your browser doesn't handle the Google Calendar iframe!></iframe>-->
+			</li>
+		</ul>
+	</div>
+	<!-- end #sidebar -->
+	{% endblock sidebar%}
+{% endblock page %}
