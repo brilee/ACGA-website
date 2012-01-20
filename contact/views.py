@@ -9,15 +9,17 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
+            message_and_email = 'Enjoy this message from ' + cd['email'] + ': ' + cd['message']
             send_mail(
                 cd['subject'],
-                cd['message'],
-                cd.get('email', 'noreply@example.com'),
+                message_and_email,
+                'from@example.com',
                 ['collegiatego@gmail.com'],
+                fail_silently=False
             )
             return HttpResponseRedirect('/contact/thanks/#form')
         else:
-            return render_to_response('contact.html', {'NavID':'contact', 'sidebar':'sidebar3.html', 'form':form})
+            return render_to_response('contact.html', {'form':form})
     else:
         form = ContactForm()
-    return render_to_response('contact.html', {'NavID':'contact', 'sidebar':'sidebar3.html', 'form':form})
+    return render_to_response('contact.html', {'form':form})

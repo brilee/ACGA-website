@@ -1,0 +1,15 @@
+{% extends "members.html" %}
+
+{% block maintext %}
+
+{% if error %}
+<p style="color: red;"> {{ error }} </p>
+{% endif %}
+<h2>Success!</h2>
+<br />
+<p> You've been successfully logged out.</p>
+
+<p> <a href="/members/">Return to the ACGA Membership page</a></p>
+<p> <a href="/accounts/login/">Return to login page</a></p>
+
+{% endblock maintext %}

@@ -33,6 +33,8 @@ h2 {
 }
 
 h3 {
+	font-size: 17px;
+	text-align: center;	}
 }
 
 /*hr {
@@ -41,11 +43,17 @@ h3 {
 
 p, ul, ol {
 	margin-top: 0;
-	line-height: 240%;
+	line-height: 180%;
 	text-align: justify;
 }
 
 ul, ol {
+}
+
+p {
+	margin-top: 0;
+	line-height: 180%;
+	text-align: justify;
 }
 
 blockquote {
@@ -101,7 +109,7 @@ img.right {
 	width: 1000px;
 	height: 60px;
 	margin: 0 auto;
-	background: #FFFFFF;
+	background: #FFFFDD;
 }
 
 /* Menu */
@@ -129,12 +137,12 @@ img.right {
 	display: block;
 	float: left;
 	height: 20px;
-	margin-right: 3px;
-	padding: 28px 20px 15px 20px;
+	margin-right: 0px;
+	padding: 28px 25px 15px 25px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: bold;
 	color: #7C0104;
 }
@@ -147,9 +155,8 @@ img.right {
 
 
 body#home a#homenav,
-body#whatsnew a#whatsnewnav,
-body#membership a#membershipnav,
-body#images a#imagesnav,
+body#members a#membersnav,
+body#media a#medianav,
 body#about a#aboutnav,
 body#links a#linksnav,
 body#ing a#ingnav,
@@ -213,57 +220,51 @@ body#contact a#contactnav {
 	width: 950px;
 	margin: 0 auto;
 	padding: 20px 25px;
-	background: #FFFFFF;
+	background: #FFFFDD;
 }
 
 /** LOGO */
 
 #logo {
 	width: 1000px;
-	height: 415px;
+	height: 166px;
 	margin: 0 auto;
 	padding-top: 25px;
-	background: #FFFFFF url(RedCGA.png) no-repeat center 25px;
+	background: #FFFFDD url('RedCGA.png') no-repeat center 25px; 
 }
 
 body#home #logo {
-	background:#FFFFFF url(RedCGA.png) no-repeat center 25px;
+   background: #FFFFDD url('RedCGA.png') no-repeat center 25px;
+	height: 415px;
 }
 
 body#home #content h2{
-	text-align: center
+	text-align: center;
 }
 
-body#whatsnew #logo {
-	background:#FFFFFF url(OrangeCGA.png) no-repeat center 25px;
+body#members #logo{
+	background: #FFFFDD url(GreenCGA.png) no-repeat center 25px;
 }
 
-body#membership #logo {
-	background:#FFFFFF url(BlueCGA.png) no-repeat center 25px;
-}
-
-body#images #logo {
-	background:#FFFFFF url(PurpleCGA.png) no-repeat center 25px;
+body#media #logo {
+	background: #FFFFDD url(PurpleCGA.png) no-repeat center 25px;
 }
 
 body#about #logo {
-	background:#FFFFFF url(GreenCGA.png) no-repeat center 25px;
+	background: #FFFFDD url(TurquoiseCGA.png) no-repeat center 25px;
 }
 
 body#links #logo {
-	background:#FFFFFF url(GoldCGA.png) no-repeat center 25px;
+	background: #FFFFDD url(GoldCGA.png) no-repeat center 25px;
 }
 
 body#ing #logo {
-	background:#FFFFFF url(DrabCGA.png) no-repeat center 25px;
+	background: #FFFFDD url(DrabCGA.png) no-repeat center 25px;
 }
 
 body#contact #logo {
-	background:#FFFFFF url(TurquoiseCGA.png) no-repeat center 25px;
+	background: #FFFFDD url(OrangeCGA.png) no-repeat center 25px;
 }
-
-
-
 
 #logo h1, #logo p {
 	width: 450px;
@@ -281,12 +282,16 @@ body#contact #logo {
 }
 
 #logo h1 {
-	padding-top: 212px;
-	padding-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 4px;
 	text-align: center;
 	text-transform: capitalize;
-	font-size: 60px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 50px;
+	font-family: Georgia, Helvetica, serif;
+}
+body#home #logo h1 {
+	padding-top: 212px;
+	padding-bottom: 12px;
 }
 
 #logo a {
@@ -327,14 +332,14 @@ body#contact #logo {
 	background: url(/site_media/img09.jpg) no-repeat left 16px;
 }
 
-body#images img {
+body#media img {
 	margin-left: 0px;
 	width: 600px;
 	height: 450px;
 }
 
 #content caption {
-	text-align: center
+	text-align: center;
 }
 
 #content h2 {
@@ -413,7 +418,7 @@ body#images img {
 
 #sidebar li {
 	border-bottom: 1px #BDBDBB dotted;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	padding: 0px 0 10px 0px;
 }
 
@@ -430,7 +435,7 @@ body#images img {
 
 #sidebar p {
 	margin: 0;
-	padding: 0px 10px 20px 10px;
+	padding: 0px 10px 0px 10px;
 }
 
 #sidebar h2 {
@@ -444,9 +449,16 @@ body#images img {
 #sidebar p {
 	line-height: 200%;
 }
-
+	
 #sidebar a {
 	color: #B84B00;
+}
+
+/* qlinks */
+
+#qlinks {
+	font-family: Arial, Helvetica, sans-serif;
+	border-top: 1px #BDBDBB dotted;
 }
 
 /* Calendar */
@@ -529,3 +541,5 @@ body#images img {
 #footer a {
 	color: #000000;
 }
+
+/* Forms */

@@ -13,21 +13,21 @@ Released   : 20110810
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Collegiate Go Association</title>
+<title>ACGA</title>
 <meta name="Go Weiqi Baduk Collegiate Association" content="" />
-<meta name="Website for the Collegiate Go Association, a new group dedicated to teaching, playing, and supporting Go in university communities and beyond." content="" />
+<meta name="Website for the American Collegiate Go Association, a new group dedicated to teaching, playing, and supporting Go in university communities and beyond." content="" />
 <link rel="shortcut icon" href="/site_media/favicon.ico" type="image/x-icon"/>
 <link href="/site_media/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
-<body id="{{ NavID }}">
+{% block BodyID %}
+{% endblock BodyID %}
 <div id="wrapper">
 	<div id="header">
 		<div id="menu">
 			<ul>
 				<li><a href="/home/" id="homenav">Home</a></li>
-				<li><a href="/whatsnew/" id="whatsnewnav">What's New</a></li>
-				<li><a href="/membership/" id="membershipnav">Membership</a></li>
-				<li><a href="/images/" id="imagesnav">Images</a></li>
+				<li><a href="/members/" id="membersnav">Members</a></li>
+				<li><a href="/media/" id="medianav">Media</a></li>
 				<li><a href="/links/" id="linksnav">Links</a></li>
 				<li><a href="/about/" id="aboutnav">About</a></li>
 				<li><a href="/ing/" id="ingnav">Ing Foundation</a></li>
@@ -39,19 +39,43 @@ Released   : 20110810
 	</div>
 	<!-- end #header -->
 	<div id="logo" >
-		<h1><a href="/home/">Collegiate Go Association </a></h1>
+		<h1><a href="/home/">American Collegiate Go Association </a></h1>
 		<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
 	</div>
 	<!-- end #logo -->
 	<div id="page">
-		{% block page %}
-		<p>Default Page</p>		
-		{% endblock page %}
-	<div style="clear: both;">&nbsp;</div>	
+		<h1 class="title">{% block title %} <p> Default Title </p>{% endblock %}</h1>
+        <br />
+        <br />
+        <div id="content" >
+        {% block maintext %}
+        <p>Default maintext</p>		
+        {% endblock maintext %}
+            <div id="qlinks">
+    	        <br/>
+    	        <h2>Quick links at the ACGA</h2>
+    	        <br />
+    	        <a href="/members/">ACGA Membership</a>
+    	        <a href="/members/#search">ACGA Member Search</a>,
+    	        <a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">ACGA Calendar</a>,
+    	        <a href="/members/#tournaments">Tournament Information</a>,
+    	        <a href="/links/">Online Resources</a>,
+    	        <a href="/ing/">Ing Foundation</a>
+            </div>
+            <!--end #qlinks -->
+        </div>
+        <!-- end #content-->
+        <div id="sidebar">
+            {% block sidebar %}
+            <p>Default sidebar</p>
+            {% endblock sidebar %}
+        </div>
+        <!-- end #sidebar-->
+        <div style="clear: both;">&nbsp;</div>	
 	</div>
 	<!-- end #page -->
-	<div id="footer">
-			<p>Copyright (c) 2011 Collegiate Go Association. All rights reserved. Adapted from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+    <div id="footer">
+		<p>Copyright (c) 2011 American Collegiate Go Association. All rights reserved. Adapted from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
 	</div>
 	<!-- end #footer -->
 </div>
