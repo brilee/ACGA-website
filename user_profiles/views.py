@@ -7,22 +7,22 @@ from CGA.forms import ProfileForm
 @login_required
 def profile(request):
     user = request.user
-    u_p = request.user.get_profile()
+    email = user.email
+    u_p = user.get_profile()
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
-            print('valid ProfileForm')
-            u_p.description = form['description']
-            u_p.club = form['club']
-            u_p.handles = form['handles']
-            u_p.aga = form['aga']
+            u_p.description = request.POST.get('description','')
+            u_p.club = request.POST.get('club','')
+            u_p.handles = request.POST.get('handles','')
+            u_p.aga = request.POST.get('aga','')
+            u_p.save()
             update = True
         else:
             update = False
-        return render_to_response('profile.html', {'form':form, 'user':user, 'update':update, 'email':u_p.email})
+        return render_to_response('profile.html', {'form':form, 'user':user, 'update':update, 'email':email})
     else:
         username = u_p.user
-        email = u_p.email
         description = u_p.description
         club = u_p.club
         handles = u_p.handles
@@ -34,5 +34,4 @@ def profile(request):
                 'handles':handles,
                 'aga':aga}
         form = ProfileForm(data)
-        return render_to_response('profile.html', {'form':form, 'user':user})
-
+        return render_to_response('profile.html', {'form':form, 'user':user, 'email':email})
