@@ -1,5 +1,5 @@
 import os, sys
-sys.path.append('/home/cole/Webs')
+sys.path.append('/var/www/')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'CGA.settings'
 

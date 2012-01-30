@@ -17,42 +17,33 @@ urlpatterns = patterns('CGA.views',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
+    (r'^$', direct_to_template, {
+        'template': 'home.html' }
+    ),
     (r'^home/$', direct_to_template, {
-	'template': 'home.html', 'extra_context': {'sidebar': 'sidebar.html'},
-	}),
+	'template': 'home.html'	}
+    ),
     (r'^links/$', direct_to_template, {
-	'template': 'links.html', 'extra_context': {'sidebar': 'sidebar.html'},
-	}),
+	'template': 'links.html'}
+    ),
     (r'^ing/$', direct_to_template, {
-	'template': 'ing.html', 'extra_context': {'sidebar': 'sidebar.html'},
-	}),
+	'template': 'ing.html'}
+    ),
     (r'^about/$', direct_to_template, {
-	'template': 'about.html', 'extra_context': {'sidebar': 'sidebar3.html'},
-	}),
-	(r'^members/$', direct_to_template, {
-	'template': 'members.html', 'extra_context': {'sidebar': 'sidebar2.html'}
-	})
+	'template': 'about.html'}
+    ),
+    (r'^tournaments/$', direct_to_template, {
+	'template': 'tournaments.html'}
+    ),
 )
 
 urlpatterns += patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': '/home/cole/Webs/CGA/site_media'}),
+        {'document_root': '/var/www/CGA/site_media'}),
 )
 
 urlpatterns += patterns('CGA.contact.views',
     (r'^contact/$', 'contact'),
     (r'^contact/thanks/$', direct_to_template, {
         'template': 'thanks.html'}),
-)
-
-urlpatterns += patterns('CGA.media.views',
-    (r'^media/$', 'media'),
-)
-
-urlpatterns += patterns('CGA.user_profiles.views',
-    (r'^accounts/profile/', 'profile'),
-)
-
-urlpatterns += patterns('',
-    (r'^accounts/', include('CGA.registration.urls')),
 )
