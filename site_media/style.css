@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: left;
 }
 
@@ -142,7 +142,7 @@ img.right {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 	color: #7C0104;
 }
@@ -156,6 +156,7 @@ img.right {
 
 body#home a#homenav,
 body#tournaments a#tournamentsnav,
+body#members a#membersnav,
 body#about a#aboutnav,
 body#links a#linksnav,
 body#ing a#ingnav,
@@ -233,7 +234,7 @@ body#contact a#contactnav {
 }
 
 body#home #logo {
-   background: #FFFFDD url('RedCGA.jpg') no-repeat center 25px;
+   background: #FFFFDD url(RedCGA.jpg) no-repeat center 25px;
 	height: 415px;
 }
 
@@ -243,6 +244,10 @@ body#home #content h2{
 
 body#tournaments #logo{
 	background: #FFFFDD url(GreenCGA.jpg) no-repeat center 25px;
+}
+
+body#members #logo{
+	background: #FFFFDD url(PurpleCGA.jpg) no-repeat center 25px;
 }
 
 body#about #logo {
@@ -302,7 +307,7 @@ body#home #logo h1 {
 }
 
 #content h1, h2, h3 {
-    margin: 0 0 16 32;
+    margin: 0 0 8px;
 }
 
 #content ul  {
@@ -313,6 +318,7 @@ body#home #logo h1 {
 
 #content li {
 	line-height: 160%;
+	padding: 8px 0px 2px 8px;
 /*	margin-bottom: 30px;
 	padding: 0px 0px 10px 0px; */
 }
@@ -326,7 +332,7 @@ body#home #logo h1 {
 
 #content li li {
 	margin: 0 0 0 5px;
-	padding: 10px 0px 15px 15px;
+	padding: 8px 0px 2px 8px;
 	background: url(/site_media/img09.jpg) no-repeat left 16px;
 }
 

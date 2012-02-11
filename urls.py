@@ -35,6 +35,9 @@ urlpatterns = patterns('CGA.views',
     (r'^tournaments/$', direct_to_template, {
 	'template': 'tournaments.html'}
     ),
+    (r'^members/$', direct_to_template, {
+	'template': 'members.html'}
+    ),
 )
 
 urlpatterns += patterns('',
