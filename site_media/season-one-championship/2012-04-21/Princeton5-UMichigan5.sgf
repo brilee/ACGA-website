@@ -1,0 +1,549 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[6.50]TM[2700]OT[5x30 byo-yomi]
+PW[Princeton5]PB[UMichigan5]DT[2012-04-20]PC[The KGS Go Server at http://www.gokgs.com/]C[UMichigan5 [-\]: have a good game
+Princeton5 [-\]: hi
+Princeton5 [-\]: hf
+UMichigan5 [-\]: this is Michael Zhang
+]RE[B+23.50]
+;B[pd]BL[2692.001]C[Princeton5 [-\]: Sida Huang
+]
+;W[dp]WL[2695.191]
+;B[pq]BL[2687.283]
+;W[dc]WL[2693.599]
+;B[de]BL[2680.133]
+;W[ce]WL[2688.766]
+;B[cf]BL[2676.661]
+;W[cd]WL[2687.92]
+;B[df]BL[2664.039]
+;W[fc]WL[2685.769]
+;B[cj]BL[2662.144]
+;W[po]WL[2681.821]
+;B[qm]BL[2636.895]
+;W[no]WL[2611.939]
+;B[qo]BL[2618.43]
+;W[pp]WL[2590.786]
+;B[qp]BL[2615.936]
+;W[oq]WL[2590.074]
+;B[qq]BL[2605.773]
+;W[or]WL[2588.848]
+;B[fq]BL[2505.694]
+;W[hq]WL[2587.403]C[Sectoid [4d?\]: doesnt look really joseki to me...
+]
+;B[fo]BL[2493.483]
+;W[dn]WL[2584.77]
+;B[ip]BL[2486.647]
+;W[iq]WL[2581.89]
+;B[jp]BL[2485.206]
+;W[hp]WL[2578.816]
+;B[ho]BL[2484.153]
+;W[jq]WL[2577.506]
+;B[kp]BL[2483.079]
+;W[lq]WL[2576.896]
+;B[cq]BL[2380.228]
+;W[dq]WL[2569.045]
+;B[dr]BL[2377.993]
+;W[cp]WL[2567.368]
+;B[br]BL[2376.669]
+;W[bq]WL[2566.335]
+;B[cr]BL[2376.032]
+;W[eq]WL[2544.229]
+;B[bp]BL[2315.92]
+;W[bo]WL[2542.836]
+;B[aq]BL[2314.905]
+;W[go]WL[2540.482]
+;B[gn]BL[2287.514]
+;W[gp]WL[2538.751]
+;B[hn]BL[2269.185]
+;W[fn]WL[2537.238]
+;B[fm]BL[2259.308]
+;W[en]WL[2535.641]
+;B[er]BL[2253.898]
+;W[fp]WL[2527.149]C[Anmuyu [?\]: E8
+]
+;B[qf]BL[2202.503]
+;W[jn]WL[2524.384]C[Sectoid [4d?\]: E8?!
+Anmuyu [?\]: K7
+]
+;B[km]BL[2169.1]
+;W[kn]WL[2521.023]
+;B[jm]BL[2165.853]C[Anmuyu [?\]: wow
+]
+;W[ln]WL[2518.855]
+;B[in]BL[2163.983]
+;W[ff]WL[2512.646]C[Sectoid [4d?\]: what's going on
+Anmuyu [?\]: they cannot see our comments, corect?
+Sectoid [4d?\]: i assume so
+Anmuyu [?\]: .......don't assume
+Sectoid [4d?\]: hi
+Sectoid [4d?\]: can you see our comments?
+Sectoid [4d?\]: lol
+Anmuyu [?\]: LOL
+Sectoid [4d?\]: see?
+Anmuyu [?\]: D16 first
+Sectoid [4d?\]: who do you prefer
+Anmuyu [?\]: hmmm, B
+Anmuyu [?\]: although I'd have played E8 earlier as oppose to R14
+]
+;B[lm]BL[2001.443]C[Sectoid [4d?\]: is R14 better or O17
+]
+;W[lp]WL[2500.873]
+;B[nl]BL[1989.885]C[haru05 [?\]: ...
+Sectoid [4d?\]: hmm
+haru05 [?\]: who ur asking to
+]
+;W[ld]WL[2492.535]C[Sectoid [4d?\]: dunno
+Sectoid [4d?\]: there's only 6 of us here
+Sectoid [4d?\]: i like black
+Anmuyu [?\]: mike is probably regreting not having M4 earlier
+Anmuyu [?\]: common, everyone likes black
+Sectoid [4d?\]: but the exchangeM7 for M4
+Sectoid [4d?\]: seems good for black
+Anmuyu [?\]: 3 corners, no weak group, potential in the middle
+Sectoid [4d?\]: i mean why does white want M4?
+]
+;B[nc]BL[1932.065]C[Sectoid [4d?\]: oh
+haru05 [?\]: to get more overconcentrated?
+Anmuyu [?\]: because black M4 is sente and large?
+]
+;W[hl]WL[2477.666]C[Sectoid [4d?\]: sente yes
+Sectoid [4d?\]: large = ?!?!?
+]
+;B[il]BL[1917.028]
+;W[hk]WL[2474.957]C[Sectoid [4d?\]: when mike plays O17
+]
+;B[jj]BL[1903.118]C[haru05 [?\]: thats the move u might like
+]
+;W[ik]WL[2472.765]C[Sectoid [4d?\]: i imediately R17
+]
+;B[jk]BL[1900.973]
+;W[hi]WL[2468.582]
+;B[jh]BL[1892.97]
+;W[ch]WL[2466.115]
+;B[dh]BL[1890.13]
+;W[di]WL[2462.606]
+;B[ci]BL[1886.011]C[Anmuyu [?\]: mike is good
+]
+;W[dg]WL[2461.499]C[Anmuyu [?\]: see, should have exchanged D17 earlier :)
+Sectoid [4d?\]: does white B12 work
+]
+;B[bh]BL[1832.309]
+;W[eh]WL[2459.846]C[Sectoid [4d?\]: oh
+]
+;B[cg]BL[1824.912]C[Sectoid [4d?\]: black is kinda scared?
+haru05 [?\]: wise choice
+]
+;W[lg]WL[2451.58]C[Anmuyu [?\]: oh well, he's leading, no need to risk
+]
+;B[jf]BL[1808.998]
+;W[nd]WL[2448.948]C[Sectoid [4d?\]: oh wow
+]
+;B[mc]BL[1801.478]
+;W[nf]WL[2446.873]C[Anmuyu [?\]: wow
+Sectoid [4d?\]: wow
+]
+;B[kb]BL[1793.182]C[Anmuyu [?\]: ?!
+]
+;W[ni]WL[2441.603]C[haru05 [?\]: i didn;t teach him that...
+Anmuyu [?\]: ....
+Sectoid [4d?\]: hahahaah
+]
+;B[pi]BL[1786.514]
+;W[ph]WL[2439.823]
+;B[qh]BL[1783.722]
+;W[oi]WL[2438.995]
+;B[pj]BL[1782.034]
+;W[ok]WL[2437.986]C[Anmuyu [?\]: oh well.
+Sectoid [4d?\]: what is white's plan
+]
+;B[oj]BL[1772.624]C[Sectoid [4d?\]: kill the whole middle?
+]
+;W[nj]WL[2436.746]
+;B[nk]BL[1771.025]C[Sectoid [4d?\]: oh no
+Anmuyu [?\]: no way..
+]
+;W[pg]WL[2431.285]C[Sectoid [4d?\]: hmm
+haru05 [?\]: being tricky
+]
+;B[qg]BL[1767.159]C[haru05 [?\]: and screw
+]
+;W[gm]WL[2424.044]C[Anmuyu [?\]: back can just connect everything from this point on...
+Sectoid [4d?\]: black has territory
+Anmuyu [?\]: D10
+]
+;B[bl]BL[1720.381]
+;W[dk]WL[2421.631]C[Anmuyu [?\]: ....
+Anmuyu [?\]: mike....
+Sectoid [4d?\]: wow another sj second line move
+]
+;B[dj]BL[1710.427]C[Sectoid [4d?\]: L18 + B8
+]
+;W[ej]WL[2420.166]
+;B[dh]BL[1709.147]C[haru05 [?\]: sheeee
+Sectoid [4d?\]: you can see sj's influence
+]
+;W[ei]WL[2400.48]
+;B[eg]BL[1706.37]
+;W[fg]WL[2399.745]C[Anmuyu [?\]: take
+Sectoid [4d?\]: wtf...
+Anmuyu [?\]: E8
+]
+;B[jd]BL[1686.181]
+;W[ic]WL[2397.466]C[Anmuyu [?\]: hoho, nice
+haru05 [?\]: thomas move=N12
+Sectoid [4d?\]: ...
+Sectoid [4d?\]: does it work?
+Anmuyu [?\]: my move would be N12 too
+Sectoid [4d?\]: ahhaha
+]
+;B[jc]BL[1644.206]C[Sectoid [4d?\]: R17 is something one has to try vs. mike
+]
+;W[ke]WL[2387.359]C[Anmuyu [?\]: wow
+Anmuyu [?\]: J18
+]
+;B[ib]BL[1611.427]C[Sectoid [4d?\]: omg
+Anmuyu [?\]: or exchange N6 now
+Sectoid [4d?\]: he played your move
+]
+;W[hc]WL[2381.227]
+;B[hb]BL[1606.21]C[Anmuyu [?\]: hee's  good
+]
+;W[lc]WL[2378.938]
+;B[lb]BL[1604.017]
+;W[ie]WL[2375.819]
+;B[gc]BL[1596.634]
+;W[gd]WL[2374.25]
+;B[gb]BL[1595.436]C[Anmuyu [?\]: wow
+]
+;W[je]WL[2369.691]C[haru05 [?\]: white...doesn't know what go is
+]
+;B[fb]BL[1586.744]
+;W[ec]WL[2368.526]C[Anmuyu [?\]: E18,
+Anmuyu [?\]: :(
+]
+;B[hd]BL[1577.511]
+;W[id]WL[2363.818]
+;B[fd]BL[1576.244]
+;W[ge]WL[2362.92]
+;B[ed]BL[1573.918]C[Anmuyu [?\]: young mike wants to kill now/..
+]
+;W[dd]WL[2359.395]
+;B[ee]BL[1569.926]C[Anmuyu [?\]: :(
+haru05 [?\]: -_-;;
+Sectoid [4d?\]: can he?
+Anmuyu [?\]: no
+]
+;W[bc]WL[2352.086]C[Anmuyu [?\]: lol
+Anmuyu [?\]: well, C19 now
+]
+;B[da]BL[1556]
+;W[cb]WL[2349.277]C[Anmuyu [?\]: oh...
+Anmuyu [?\]: G2
+Anmuyu [?\]: or D8
+haru05 [?\]: b just need to play P16 and its game over
+]
+;B[ol]BL[1532.045]C[Anmuyu [?\]: lol
+]
+;W[lj]WL[2344.56]C[Sectoid [4d?\]: i was just thinking P16
+Sectoid [4d?\]: white needs to R17 quickly
+Anmuyu [?\]: Iwould D8
+Anmuyu [?\]: and then G2
+Anmuyu [?\]: exchange N6 now
+Sectoid [4d?\]: hey R17 you might take corner in sente
+Sectoid [4d?\]: hee
+Anmuyu [?\]: take corner in sente.... is your opponent 18k or something?
+Sectoid [4d?\]: opponent is mike
+haru05 [?\]: :D
+Sectoid [4d?\]: i told you R17.... is a must vs. mike
+Anmuyu [?\]: not this mike
+]
+;B[mn]BL[1422.777]C[Anmuyu [?\]: nice
+]
+;W[lo]WL[2340.471]C[Sectoid [4d?\]: wow
+Anmuyu [?\]: mike is listening to my instructions
+Anmuyu [?\]: ok D8
+]
+;B[ij]BL[1394.505]C[Anmuyu [?\]: ?
+]
+;W[hj]WL[2337.487]
+;B[gr]BL[1384.873]
+;W[qc]WL[2332.704]C[Sectoid [4d?\]: is G2 bigger or H1?
+haru05 [?\]: SAD
+Sectoid [4d?\]: hahahaa 
+]
+;B[pc]BL[1376.531]
+;W[qd]WL[2331.218]C[Sectoid [4d?\]: white plays R17
+Anmuyu [?\]: lol
+]
+;B[qb]BL[1373.975]C[Sectoid [4d?\]: yay
+]
+;W[rb]WL[2330.205]C[haru05 [?\]: sad
+Sectoid [4d?\]: umm
+Anmuyu [?\]: connect
+haru05 [?\]: already impossible to kill
+haru05 [?\]: sad
+]
+;B[pb]BL[1360.913]
+;W[qe]WL[2325.865]
+;B[pe]BL[1356.574]
+;W[rf]WL[2323.406]
+;B[ra]BL[1352.413]C[Anmuyu [?\]: but I feel S19
+]
+;W[rd]WL[2319.201]C[Sectoid [4d?\]: ohohoho
+Anmuyu [?\]: but i fell
+Sectoid [4d?\]: ?
+Sectoid [4d?\]: white wants ko
+Anmuyu [?\]: but i feel his opponent might do something
+Anmuyu [?\]: go mike!
+haru05 [?\]: ok even if thats alive...b is ahead
+Anmuyu [?\]: take the ko
+haru05 [?\]: don't screw more...
+Anmuyu [?\]: don't worry his fine
+haru05 [?\]: no
+haru05 [?\]: he is not
+Anmuyu [?\]: lol, he's leading
+Anmuyu [?\]: and has 21min left
+Sectoid [4d?\]: assume white is alive...
+haru05 [?\]: ..u don't know how bad he can mess up
+haru05 [?\]: :(
+Sectoid [4d?\]: he
+Sectoid [4d?\]: hey
+Sectoid [4d?\]: white has komi
+Sectoid [4d?\]: i told you R17 would work vs. mike
+haru05 [?\]: b is ahead "slightly:
+Sectoid [4d?\]: that's his weakness
+haru05 [?\]: of course i know
+Sectoid [4d?\]: 3-3point
+Anmuyu [?\]: I don't see what black can do besides T18 now
+Sectoid [4d?\]: black can play sente endgame
+]
+;B[se]BL[1205.441]C[Sectoid [4d?\]: huh
+Anmuyu [?\]: this is bigger, common
+haru05 [?\]: oh~
+haru05 [?\]: still ko but...
+]
+;W[rg]WL[2295.904]
+;B[rh]BL[1201.761]C[Anmuyu [?\]: now it's white first ko...
+haru05 [?\]: no
+Anmuyu [?\]: mike...
+]
+;W[sd]WL[2279.981]C[Sectoid [4d?\]: huh?
+Anmuyu [?\]: hah?
+Anmuyu [?\]: T18, T18!
+Sectoid [4d?\]: i think white should T18 no?
+haru05 [?\]: thats correct answer lol
+]
+;B[sb]BL[1188.39]
+;W[sc]WL[2277.649]
+;B[rc]BL[1186.615]
+;W[hm]WL[2264.898]C[Anmuyu [?\]: connect
+haru05 [?\]: i don't connect
+Sectoid [4d?\]: omg mike is counting
+Sectoid [4d?\]: i hate that
+Anmuyu [?\]: lol
+Anmuyu [?\]: connect and b has L3
+haru05 [?\]: there are more chance to screw up for mike if he answer :(
+Anmuyu [?\]: , w will answer, trust me
+]
+;B[re]BL[1132.232]
+;W[im]WL[2262.865]C[haru05 [?\]: good
+Anmuyu [?\]: D8 now
+haru05 [?\]: b won
+]
+;B[jl]BL[1123.581]
+;W[ig]WL[2259.784]C[Anmuyu [?\]: ah?!
+]
+;B[jg]BL[1120.145]
+;W[ii]WL[2258.158]
+;B[ji]BL[1118.014]
+;W[pm]WL[2253.031]
+;B[pl]BL[1097.421]C[Anmuyu [?\]: Q6
+]
+;W[qn]WL[2251.98]
+;B[rn]BL[1096.223]
+;W[pn]WL[2251.345]C[Anmuyu [?\]: ...
+]
+;B[rm]BL[1094.978]C[Sectoid [4d?\]: hmm
+]
+;W[ll]WL[2241.58]C[Sectoid [4d?\]: black thinks he has won
+]
+;B[ml]BL[1090.952]C[Anmuyu [?\]: D8, D8!
+haru05 [?\]: b is ahead about 10 but
+Anmuyu [?\]: ....
+haru05 [?\]: expecting to win less at the end
+]
+;W[lk]WL[2234.217]C[Sectoid [4d?\]: white M9 cannot be right
+haru05 [?\]: maybe 4 pts :(
+Sectoid [4d?\]: even though my endgame sucks
+]
+;B[bn]BL[1067.884]C[Sectoid [4d?\]: B6 ?
+Sectoid [4d?\]: tesuji?
+]
+;W[cn]WL[2223.339]C[Anmuyu [?\]: N15 is alos there
+]
+;B[ao]BL[1064.033]
+;W[co]WL[2222.043]
+;B[cm]BL[1059.296]
+;W[dm]WL[2219.987]C[Sectoid [4d?\]: i like K1
+Anmuyu [?\]: C9
+]
+;B[ck]BL[1039.236]C[Anmuyu [?\]: K1 is good
+]
+;W[rs]WL[2215.456]
+;B[rr]BL[1036.042]
+;W[qs]WL[2213.736]C[Anmuyu [?\]: K1, K1!
+Anmuyu [?\]: lol
+]
+;B[dl]BL[1030.761]
+;W[el]WL[2210.75]
+;B[ek]BL[1029.584]
+;W[fk]WL[2210.047]C[Anmuyu [?\]: K1, K1!
+]
+;B[ih]BL[1001.929]
+;W[hh]WL[2208.55]
+;B[if]BL[1000.834]
+;W[hf]WL[2207.407]
+;B[hg]BL[999.206]
+;W[gg]WL[2206.482]C[Anmuyu [?\]: K1...
+Sectoid [4d?\]: hmm
+Sectoid [4d?\]:  i thought mike's endgame was better than mine
+]
+;B[be]BL[972.853]C[Anmuyu [?\]: no way...
+haru05 [?\]: ?
+]
+;W[bd]WL[2203.975]C[haru05 [?\]: ur bad
+]
+;B[bf]BL[971.622]
+;W[dk]WL[2203.25]
+;B[cl]BL[966.248]
+;W[qr]WL[2183.616]C[Anmuyu [?\]: wow
+Anmuyu [?\]: T3 then
+Sectoid [4d?\]: i still dont get T15
+Sectoid [4d?\]: why cant white answer T18
+Anmuyu [?\]: coz it's mike?
+Anmuyu [?\]: lol
+Anmuyu [?\]: oh, you meant that part
+Anmuyu [?\]: well, his opponent declare himself to be a 3k....
+]
+;B[rq]BL[863.002]
+;W[md]WL[2175.678]C[Anmuyu [?\]: K1, K1!
+haru05 [?\]: oh maybe that works
+]
+;B[pr]BL[854.467]
+;W[ps]WL[2174.155]C[Anmuyu [?\]: of course that works....
+]
+;B[lh]BL[837.241]
+;W[mh]WL[2171.516]
+;B[li]BL[835.906]
+;W[mi]WL[2170.376]C[Sectoid [4d?\]: K1 seems good endgame to me
+Anmuyu [?\]: K1, K1
+Sectoid [4d?\]: and it also seems sente
+Sectoid [4d?\]: no?
+haru05 [?\]: K1 is leading assuming he didn't get that move
+Anmuyu [?\]: you are right, that's y I have been chearing all along...
+haru05 [?\]: but slightly
+haru05 [?\]: i mean he is leading slightly
+]
+;B[is]BL[784.425]C[Anmuyu [?\]: ....
+Sectoid [4d?\]: oh 
+Sectoid [4d?\]: is J1 better
+Anmuyu [?\]: no
+haru05 [?\]: same...
+Sectoid [4d?\]: some endgame tesuji
+Sectoid [4d?\]: cool
+haru05 [?\]: no
+]
+;W[jr]WL[2154.048]C[haru05 [?\]: now its same
+Anmuyu [?\]: yes, white should have K1
+Anmuyu [?\]: now it's same
+]
+;B[js]BL[759.837]
+;W[ks]WL[2152.272]
+;B[hr]BL[757.851]
+;W[ir]WL[2149.681]
+;B[hs]BL[756.326]
+;W[gq]WL[2138.329]C[haru05 [?\]: actually J1 is better if he wants sente
+]
+;B[fr]BL[740.723]C[Anmuyu [?\]: b is thinking?
+]
+;W[kr]WL[2136.593]
+;B[mo]BL[736.334]
+;W[mp]WL[2134.452]
+;B[nn]BL[734.348]C[Anmuyu [?\]: K1 is also sente, no?
+]
+;W[oo]WL[2130.326]C[haru05 [?\]: didn't have to answer
+]
+;B[of]BL[729.318]
+;W[og]WL[2127.366]C[Anmuyu [?\]: L13
+Anmuyu [?\]: white would, i feel
+UMichigan4 [-\]: hi i am Umichigan4
+UMichigan4 [-\]: oh
+UMichigan4 [-\]: hmm
+haru05 [?\]: ....
+haru05 [?\]: ru playing today
+UMichigan4 [-\]: dunno
+UMichigan4 [-\]: mike told me to log on
+UMichigan4 [-\]: today is better i can sleep more tonight?
+]
+;B[kg]BL[653.314]C[Anmuyu [?\]: T_T I won't get much sleep
+haru05 [?\]: we can play me3 tonight
+]
+;W[ki]WL[2118.803]
+;B[kh]BL[648.723]C[haru05 [?\]: wait
+]
+;W[kj]WL[2117.79]C[Anmuyu [?\]: hoho?
+]
+;B[lf]BL[642.499]
+;W[mg]WL[2116.743]
+;B[kf]BL[639.749]C[Anmuyu [?\]: lol
+]
+;W[oe]WL[2109.119]
+;B[pf]BL[637.41]
+;W[mf]WL[2107.999]C[Anmuyu [?\]: wow
+]
+;B[od]BL[635.04]
+;W[ne]WL[2103.39]
+;B[le]BL[632.276]
+;W[kd]WL[2101.724]
+;B[ca]BL[616.479]
+;W[ba]WL[2099.966]
+;B[eb]BL[615.23]
+;W[kc]WL[2096.915]C[Anmuyu [?\]: mike is good
+]
+;B[jb]BL[612.988]
+;W[db]WL[2093.084]
+;B[ea]BL[600.98]C[UMichigan4 [-\]: who is winning
+haru05 [?\]: b
+haru05 [?\]: told u
+]
+;W[ek]WL[2073.986]C[UMichigan4 [-\]: by how much
+Anmuyu [?\]: mike, obviously
+Anmuyu [?\]: A16
+haru05 [?\]: did not count when he get k1
+UMichigan4 [-\]: there is nothing obvious about mike winning
+Anmuyu [?\]: you thought he's gonna miss that?
+]
+;B[sr]BL[573.417]
+;W[ef]WL[2069.209]
+;B[dg]BL[570.366]C[Anmuyu [?\]: oh mike...
+Anmuyu [?\]: A16
+]
+;W[ae]WL[2060.131]
+;B[af]BL[567.643]
+;W[ad]WL[2059.454]C[Anmuyu [?\]: P7
+]
+;B[om]BL[543.242]
+;W[mm]WL[2057.621]
+;B[nm]BL[540.479]C[Anmuyu [?\]: actually should have P7 -> w A15 -> T2?
+]
+;W[ig]WL[2049.508]
+;B[mm]BL[536.52]
+;W[hg]WL[2047.163]C[UMichigan4 [-\]: game is over soon
+]
+;B[]BL[536.518]
+;W[]WL[2047.161]TW[aa][ab][bb][ac][cc][hd][he][gf][ng][fh][gh][nh][oh][fi][gi][fj][gj][gk][fl][gl][em][fm][gn][hn][in][do][eo][fo][ho][io][jo][ko][ep][ip][jp][kp][np][op][kq][mq][nq][lr][mr][nr][ls][ms][ns]TB[fa][ga][ha][ia][ja][ka][la][ma][na][oa][pa][qa][sa][mb][nb][ob][rb][oc][qc][sc][qd][rd][sd][qe][rf][sf][ag][bg][rg][sg][ah][ch][sh][ai][bi][qi][ri][si][aj][bj][qj][rj][sj][ak][bk][ok][pk][qk][rk][sk][al][ql][rl][sl][am][bm][sm][an][sn][ro][so][ap][rp][sp][bq][sq][ar][as][bs][cs][ds][es][fs][gs]C[haru05 [?\]: winning by a lot
+haru05 [?\]: X_X
+UMichigan5 [-\]: ty
+Princeton5 [-\]: thx
+UMichigan5 [-\]: thank you 
+UMichigan4 [-\]: R17 :D :D
+])

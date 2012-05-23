@@ -1,0 +1,206 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]HA[9]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[Cornell4]PB[DeAnza4]DT[2012-03-31]PC[The KGS Go Server at http://www.gokgs.com/]AB[dd][jd][pd][dj][jj][pj][dp][jp][pp]RE[W+Resign]
+;W[qf]WL[1796.95]C[Cornell4 [-\]: have a good game
+DeAnza4 [-\]: have a good game
+]
+;B[nc]BL[1780.795]
+;W[cn]WL[1791.731]
+;B[fq]BL[1762.473]
+;W[df]WL[1782.052]
+;B[fd]BL[1750.669]
+;W[fj]WL[1763.817]
+;B[dl]BL[1720.569]
+;W[en]WL[1759.348]
+;B[dh]BL[1691.936]
+;W[ff]WL[1754.724]
+;B[of]BL[1643.697]
+;W[fl]WL[1746.275]
+;B[cm]BL[1625.254]
+;W[bn]WL[1742.105]
+;B[bm]BL[1618.199]
+;W[ci]WL[1721.699]
+;B[di]BL[1611.855]
+;W[ch]WL[1716.147]
+;B[fh]BL[1555.774]
+;W[gh]WL[1702.384]
+;B[cj]BL[1534.771]
+;W[dg]WL[1694.228]
+;B[ck]BL[1493.191]
+;W[ek]WL[1679.429]
+;B[bl]BL[1468.251]
+;W[bj]WL[1674.898]
+;B[bk]BL[1445.769]
+;W[bi]WL[1663.217]
+;B[cq]BL[1376.281]
+;W[nq]WL[1630.94]
+;B[qn]BL[1359.095]
+;W[gp]WL[1609.151]
+;B[gq]BL[1344.648]
+;W[ip]WL[1588.809]
+;B[jq]BL[1292.45]
+;W[ep]WL[1585.563]
+;B[eq]BL[1289.286]
+;W[no]WL[1569.978]
+;B[nm]BL[1254.143]
+;W[iq]WL[1550.207]
+;B[jr]BL[1235.036]
+;W[ir]WL[1541.075]
+;B[jo]BL[1193.89]
+;W[jm]WL[1511.527]
+;B[ln]BL[1179.284]
+;W[mm]WL[1486.604]
+;B[mn]BL[1126.706]
+;W[nn]WL[1480.959]
+;B[mp]BL[1083.633]
+;W[np]WL[1476.866]
+;B[mq]BL[1033.647]
+;W[mr]WL[1469.354]
+;B[lr]BL[1019.73]
+;W[pm]WL[1437.902]
+;B[qm]BL[1001.262]
+;W[nl]WL[1427.229]
+;B[lm]BL[965.608]
+;W[ml]WL[1416.087]
+;B[kl]BL[896.011]
+;W[qq]WL[1385.282]
+;B[pq]BL[858.021]
+;W[qp]WL[1382.918]
+;B[po]BL[851.367]
+;W[pr]WL[1366.986]
+;B[ql]BL[819.283]
+;W[pn]WL[1333.573]
+;B[qo]BL[813.363]
+;W[nr]WL[1319.829]
+;B[mo]BL[747.886]
+;W[qi]WL[1306.519]
+;B[qj]BL[706.186]
+;W[pi]WL[1303.258]
+;B[oi]BL[690.829]
+;W[oj]WL[1300.317]
+;B[ni]BL[660.938]
+;W[rj]WL[1286.541]
+;B[rk]BL[649.537]
+;W[pk]WL[1266.835]
+;B[qk]BL[612.403]
+;W[ri]WL[1259.676]
+;B[ok]BL[595.95]
+;W[nj]WL[1257.3]
+;B[nk]BL[582.58]
+;W[mj]WL[1255.136]
+;B[pl]BL[536.393]
+;W[ol]WL[1247.324]
+;B[rp]BL[505.663]
+;W[rq]WL[1244.672]
+;B[so]BL[474.253]
+;W[sm]WL[1214.129]
+;B[sl]BL[365.488]
+;W[hc]WL[1099.689]
+;B[gc]BL[340.744]
+;W[ec]WL[1088.567]
+;B[ed]BL[328.082]
+;W[dc]WL[1072.012]
+;B[cc]BL[295.73]
+;W[cb]WL[1067.954]
+;B[bc]BL[284.721]
+;W[bb]WL[1036.177]
+;B[cd]BL[271.296]
+;W[gb]WL[1022.811]
+;B[fc]BL[252.851]
+;W[fb]WL[1019.173]
+;B[hd]BL[238.508]
+;W[ic]WL[1015.412]
+;B[id]BL[223.405]
+;W[jc]WL[997.956]
+;B[kc]BL[197.377]
+;W[kd]WL[985.499]
+;B[ke]BL[190.047]
+;W[ld]WL[981.619]
+;B[le]BL[156.345]
+;W[ge]WL[974.496]
+;B[gd]BL[150.282]
+;W[lc]WL[951.832]
+;B[he]BL[89.612]
+;W[jf]WL[932.83]
+;B[je]BL[70.16]
+;W[hf]WL[917.166]
+;B[mi]BL[32.234]
+;W[qd]WL[905.322]
+;B[qc]BL[22.627]
+;W[rc]WL[902.036]
+;B[rd]BL[30]OB[5]
+;W[qe]WL[899.7]
+;B[rb]BL[30]OB[5]
+;W[pc]WL[897.529]
+;B[sc]BL[30]OB[5]
+;W[qb]WL[895.686]
+;B[rc]BL[30]OB[5]
+;W[ob]WL[871.317]
+;B[oc]BL[30]OB[5]
+;W[pb]WL[866.823]
+;B[nb]BL[30]OB[5]
+;W[od]WL[851.235]
+;B[pe]BL[30]OB[5]
+;W[nd]WL[839.048]C[DeAnza2 [-\]: claps ****
+]
+;B[oa]BL[30]OB[5]C[DeAnza5 [-\]: hmm?
+DeAnza2 [-\]: common fulbert u can do it
+DeAnza5 [-\]: yea :3
+DeAnza5 [-\]: they can't hear us yet right?
+]
+;W[og]WL[791.271]C[DeAnza2 [-\]: idk
+]
+;B[ng]BL[30]OB[5]
+;W[pf]WL[785.36]C[DeAnza5 [-\]: yea, they can't
+DeAnza5 [-\]: rule is if you can use the things to go back moves
+DeAnza5 [-\]: they can't hear you
+]
+;B[oe]BL[30]OB[4]
+;W[nf]WL[781.271]
+;B[mg]BL[30]OB[4]
+;W[aq]WL[751.336]
+;B[bq]BL[30]OB[4]
+;W[ap]WL[748.552]
+;B[fp]BL[30]OB[4]
+;W[go]WL[741.116]C[DeAnza5 [-\]: hmm, it seems like it is up to killin that big lower right.
+]
+;B[hr]BL[30]OB[4]
+;W[eo]WL[721.048]
+;B[br]BL[30]OB[4]
+;W[lj]WL[692.254]C[DeAnza1 [-\]: nice try fulbert =)
+Cornell4 [-\]: thank you for the game
+DeAnza4 [-\]: thank you
+DeAnza2 [-\]: very good game
+DeAnza2 [-\]: claps for both players
+Cornell4 [-\]: upper right should've been urs
+DeAnza4 [-\]: yeah
+Cornell4 [-\]: if you had more time lol
+DeAnza4 [-\]: I made a mistake
+DeAnza4 [-\]: lol
+DeAnza5 [-\]: yea
+DeAnza5 [-\]: it is really hard to play
+DeAnza2 [-\]: its fine
+DeAnza5 [-\]: on byo-yomi
+DeAnza2 [-\]: next time we r going to b stronger
+DeAnza5 [-\]: yup ^ ^
+Cornell4 [-\]: well, your first board won
+Cornell4 [-\]: congrats on that
+DeAnza2 [-\]: 2 board won
+DeAnza2 [-\]: so i won
+DeAnza2 [-\]: XD
+DeAnza2 [-\]: but then
+Cornell4 [-\]: how strong r u?
+DeAnza2 [-\]: the other 3 lost
+Cornell4 [-\]: our 2nd board is 2d
+DeAnza2 [-\]: 7 kyu
+DeAnza2 [-\]: i used 8 stones
+DeAnza5 [-\]: nice
+DeAnza4 [-\]: nice
+DeAnza5 [-\]: it is very hard to play agaist so mcuh 
+DeAnza2 [-\]: i know
+DeAnza5 [-\]: anyway, I liked my game, the fighting was huge, but I let him get big moyo 
+Cornell4 [-\]: you gave up on left way too soon
+DeAnza4 [-\]: me?
+Cornell4 [-\]: it was not going to die that easily
+Cornell4 [-\]: yeah
+])

@@ -1,0 +1,377 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[Princeton5]PB[CGLBrown5]DT[2012-02-18]PC[The KGS Go Server at http://www.gokgs.com/]RE[B+Time]
+;B[pp]BL[1790.914]
+;W[dd]WL[1794.158]
+;B[pd]BL[1783.402]
+;W[dp]WL[1788.956]
+;B[cm]BL[1779.61]
+;W[cg]WL[1780.175]
+;B[cj]BL[1774.43]
+;W[mc]WL[1765.49]
+;B[jc]BL[1749.09]
+;W[kc]WL[1720.633]
+;B[kd]BL[1673.689]
+;W[kb]WL[1691.96]
+;B[id]BL[1648.372]
+;W[fd]WL[1673.791]
+;B[gc]BL[1642.064]
+;W[fc]WL[1668.563]
+;B[oc]BL[1611.367]
+;W[nd]WL[1661.913]
+;B[qg]BL[1600.103]
+;W[pi]WL[1647.036]
+;B[fq]BL[1586.475]
+;W[eq]WL[1638.931]
+;B[fp]BL[1572.726]
+;W[cn]WL[1629.108]
+;B[dm]BL[1561.585]
+;W[dn]WL[1619.34]
+;B[em]BL[1542.52]
+;W[jp]WL[1617.795]
+;B[mq]BL[1514.961]
+;W[lq]WL[1594.088]
+;B[pm]BL[1486.539]
+;W[ql]WL[1585.176]
+;B[qm]BL[1484.645]
+;W[pl]WL[1564.76]
+;B[iq]BL[1466.301]
+;W[qq]WL[1556.979]
+;B[pq]BL[1458.431]
+;W[qp]WL[1461.833]
+;B[qo]BL[1456.733]
+;W[ro]WL[1448.917]
+;B[rn]BL[1453.458]
+;W[pr]WL[1440.201]
+;B[or]BL[1448.553]
+;W[oq]WL[1424.101]
+;B[op]BL[1406.653]
+;W[nq]WL[1410.399]
+;B[np]BL[1402.585]
+;W[nr]WL[1407.071]
+;B[mr]BL[1398.244]
+;W[ns]WL[1392.418]
+;B[ms]BL[1393.201]
+;W[os]WL[1325.6]
+;B[rr]BL[1385.034]
+;W[qr]WL[1275.26]
+;B[lp]BL[1316.507]
+;W[om]WL[1256.299]
+;B[on]BL[1305.91]
+;W[mo]WL[1168.333]
+;B[mp]BL[1301.684]
+;W[nm]WL[1163.131]
+;B[jq]BL[1295.837]
+;W[ko]WL[1139.415]
+;B[lo]BL[1274.862]
+;W[po]WL[1034.289]
+;B[qn]BL[1262.028]
+;W[no]WL[1004.928]
+;B[nn]BL[1215.573]
+;W[rp]WL[961.472]
+;B[mn]BL[1154.683]
+;W[mj]WL[955.238]
+;B[kn]BL[1148.117]
+;W[jn]WL[948.598]
+;B[io]BL[1125.593]
+;W[km]WL[945.407]
+;B[ln]BL[1117.175]
+;W[lm]WL[931.163]
+;B[jo]BL[1105.224]
+;W[in]WL[898.448]
+;B[ho]BL[1082.512]
+;W[jl]WL[871.898]
+;B[dh]BL[1036.377]
+;W[qh]WL[826.98]
+;B[pg]BL[1028.089]
+;W[dg]WL[820.167]
+;B[nf]BL[985.514]
+;W[mg]WL[808.772]
+;B[mf]BL[976.85]
+;W[jb]WL[778.005]
+;B[ib]BL[973.566]
+;W[ld]WL[755.228]
+;B[ke]BL[966.419]
+;W[lf]WL[739.351]
+;B[le]BL[960.421]
+;W[lg]WL[733.4]
+;B[nb]BL[956.199]
+;W[mb]WL[729.817]
+;B[ja]BL[925.068]
+;W[nc]WL[719.502]
+;B[ob]BL[921.768]
+;W[oe]WL[702.912]
+;B[pe]BL[882.609]
+;W[ka]WL[697.954]
+;B[ia]BL[878.193]
+;W[hc]WL[693.017]
+;B[hd]BL[846.845]
+;W[gd]WL[688.264]
+;B[gb]BL[824.938]C[Princeton5 [-\]: oops :( meant g18
+]
+;W[fb]WL[676.92]C[CGLBrown5 [-\]: :/
+]
+;B[hb]BL[770.612]
+;W[ga]WL[666.222]
+;B[en]BL[625.019]
+;W[eo]WL[641.105]
+;B[fo]BL[619.826]
+;W[bi]WL[637.633]
+;B[ch]BL[574.121]
+;W[bh]WL[632.045]
+;B[bj]BL[571.543]
+;W[of]WL[620.891]
+;B[og]BL[567.62]
+;W[ng]WL[614.674]
+;B[me]BL[564.428]
+;W[md]WL[572.042]C[CGLadmin2 [-\]: hey i think brown5 got disconnected, are you all set princeton5?
+CGLBrown5 [-\]: that was weird
+CGLBrown5 [-\]: kgs didn't register your move
+Princeton5 [-\]: oo
+CGLBrown5 [-\]: looked like you were thinking for 5 minutes on my screen...
+Princeton5 [-\]: i see. do you want some time back?
+CGLBrown5 [-\]: i guess it's up to the admins
+]
+;B[jg]BL[190.782]
+;W[eh]WL[562.322]C[CGLadmin2 [-\]: not my problem:) u decide
+]
+;B[ej]BL[162.889]
+;W[gg]WL[539.879]C[Princeton5 [-\]: could you read the chat on move 122?
+Princeton5 [-\]: (admin)
+]
+;B[hf]BL[116.678]
+;W[ih]WL[483.66]
+;B[jh]BL[101.911]
+;W[ii]WL[472.26]C[CGLBrown5 [-\]: k thank you for the time,
+CGLBrown5 [-\]: also i've requested an undo i think
+CGLBrown5 [-\]: great
+CGLBrown5 [-\]: thanks
+CGLBrown5 [-\]: i guess my internet is being strange :/
+Princeton5 [-\]: okay. could you also add back my minute?
+CGLBrown5 [-\]: didn't see that for a while
+CGLBrown5 [-\]: yup
+Princeton5 [-\]: and i gave you 5.
+]
+(;B[ji]BL[329.183]C[CGLBrown5 [-\]: thanks
+]
+;W[jj]WL[393.935]
+;B[ki]BL[321.348]
+;W[kj]WL[347.984]
+;B[li]BL[313.249]
+;W[mi]WL[345.404]
+;B[oi]BL[266.072]
+;W[oj]WL[330.576]
+;B[nh]BL[147.782]
+;W[mh]WL[269.354]
+;B[gk]BL[88.123]
+;W[hk]WL[240.238]
+;B[gm]BL[44.147]
+;W[hm]WL[205.377]
+;B[gi]BL[28.121]
+;W[ci]WL[200.532]
+;B[di]BL[25.895]
+;W[ei]WL[197.117]
+;B[dj]BL[24.988]
+;W[fi]WL[183.624]
+;B[fj]BL[16.635]
+;W[hi]WL[171.868]
+;B[eg]BL[30]OB[4]
+;W[fh]WL[144.939]
+;B[ff]BL[30]OB[4]
+;W[gf]WL[133.032]
+;B[gh]BL[30]OB[4]
+;W[fg]WL[98.136]
+;B[hg]BL[30]OB[4]
+;W[ef]WL[90.511]
+;B[hh]BL[30]OB[4]
+;W[hj]WL[85.635]
+;B[hn]BL[30]OB[4]
+;W[gj]WL[78.018]
+;B[im]BL[30]OB[4]
+;W[hl]WL[67.364]
+;B[jm]BL[30]OB[4]
+;W[mm]WL[42]
+;B[gl]BL[30]OB[4]
+;W[aj]WL[30]OW[5]
+;B[ak]BL[30]OB[4]
+;W[ai]WL[30]OW[5]
+;B[bl]BL[30]OB[4]
+;W[bg]WL[30]OW[5]
+;B[bn]BL[30]OB[4]
+;W[co]WL[30]OW[5]
+;B[bo]BL[30]OB[4]
+;W[bp]WL[30]OW[5]
+;B[ep]BL[30]OB[4]
+;W[dq]WL[30]OW[5]
+;B[do]BL[30]OB[4]
+;W[cp]WL[30]OW[5]
+;B[rl]BL[30]OB[4]
+;W[rk]WL[30]OW[5]
+;B[rh]BL[30]OB[4]
+;W[ri]WL[30]OW[5]
+;B[rg]BL[30]OB[4]
+;W[qj]WL[30]OW[5]
+;B[lj]BL[30]OB[4]
+;W[lk]WL[30]OW[5]
+;B[er]BL[30]OB[4]
+;W[dr]WL[30]OW[5]
+;B[fr]BL[30]OB[4]
+;W[jf]WL[30]OW[5]
+;B[kf]BL[30]OB[4]
+;W[je]WL[30]OW[5]
+;B[jd]BL[30]OB[4]
+;W[ig]WL[30]OW[5]
+;B[if]BL[30]OB[4]
+;W[kg]WL[30]OW[5]
+;B[br]BL[30]OB[4]
+;W[ap]WL[30]OW[5]
+;B[cr]BL[30]OB[4]
+;W[ds]WL[30]OW[5]
+;B[bq]BL[30]OB[4]
+;W[kh]WL[30]OW[5]
+;B[ie]BL[30]OB[4]
+;W[jf]WL[30]OW[5]
+;B[od]BL[30]OB[3]
+;W[lh]WL[30]OW[5]
+;B[pf]BL[30]OB[3]
+;W[ne]WL[30]OW[5]
+;B[ma]BL[30]OB[3]
+;W[ge]WL[30]OW[5]
+;B[sk]BL[30]OB[3]
+;W[sj]WL[30]OW[4]
+;B[sl]BL[30]OB[3]
+;W[sn]WL[30]OW[4]
+;B[rm]BL[30]OB[3]
+;W[so]WL[30]OW[4]
+;B[sh]BL[30]OB[3]
+;W[il]WL[30]OW[4]
+;B[si]BL[30]OB[3]
+;W[rj]WL[30]OW[4]
+;B[ph]BL[30]OB[3]
+;W[ni]WL[30]OW[4]
+;B[oh]BL[30]OB[3]
+;W[jg]WL[30]OW[4]
+;B[la]BL[30]OB[3]
+;W[cs]WL[30]OW[3]
+;B[bs]BL[30]OB[3]
+;W[eo]WL[30]OW[3]C[Princeton4 [-\]: ante don't go over time
+]
+;B[qi]BL[30]OB[3]
+;W[am]WL[30]OW[3]
+;B[bm]BL[30]OB[3]
+;W[qh]WL[30]OW[3]
+;B[do]BL[30]OB[3]
+;W[sm]WL[30]OW[3]
+;B[pn]BL[30]OB[3]
+;W[fa]WL[30]OW[3]
+;B[qi]BL[30]OB[3]
+;W[eo]WL[30]OW[3]
+;B[pj]BL[30]OB[3]
+;W[qk]WL[30]OW[3]
+;B[ol]BL[30]OB[3]
+;W[ok]WL[30]OW[3]
+;B[pk]BL[30]OB[3]
+;W[nl]WL[30]OW[3]
+;B[pl]BL[30]OB[3]
+;W[ha]WL[30]OW[3]
+;B[ic]BL[30]OB[3]
+;W[ao]WL[30]OW[3]
+;B[]BL[30]OB[3]
+;W[an]WL[30]OW[3]
+;B[al]BL[30]OB[3]
+;W[do]WL[30]OW[2]
+;B[]BL[30]OB[3]
+;W[je]WL[30]OW[2]
+;B[lb]BL[30]OB[3]
+;W[he]WL[30]OW[2]
+;B[lc]BL[30]OB[3]C[CGLadmin [-\]: Yeah, there you go
+CGLadmin [-\]: If you cancel the 'done', you can continue playing
+]
+(;W[ar]WL[30]OW[1]C[CGLadmin [-\]: What region is in doubt?
+CGLadmin [-\]: Ah, ok
+]
+;B[es]BL[30]OB[3]C[Princeton2 [?\]: we'll see soon enough lol
+CGLBrown5 [-\]: gogogo!
+CGLBrown5 [-\]: noooo
+Princeton2 [?\]: it's ok
+Princeton5 [-\]: oops
+Princeton2 [?\]: white lost anyways
+Princeton5 [-\]: okay yeah i see
+Princeton2 [?\]: the bottom
+CGLadmin [-\]: Yeah, true
+CGLBrown5 [-\]: yeah basically only one eye
+CGLadmin [-\]: Iit's a seki now
+Princeton2 [?\]: after he made it only have 1 outer lib
+CGLBrown5 [-\]: that's the problem
+Princeton2 [?\]: he won b4
+CGLadmin [-\]: But black could have killed white
+Princeton2 [?\]: yea
+CGLBrown5 [-\]: yeah
+CGLadmin [-\]: Black should simply descend to A3
+Princeton2 [?\]: it's not seki though
+CGLBrown5 [-\]: i realized e2 was mistake
+Princeton2 [?\]: a3 still wins
+CGLBrown5 [-\]: yeah a3 better
+CGLBrown5 [-\]: hehe
+Princeton5 [-\]: a3 is a dead shape i think
+CGLadmin [-\]: A3 is seki
+Princeton2 [?\]: white has no eyes
+CGLadmin [-\]: After white A3, black cannot approach
+Princeton2 [?\]: c3 
+Princeton2 [?\]: wins
+CGLadmin [-\]: Neither side can atari
+Princeton2 [?\]: for black
+Princeton2 [?\]: makes dead shape
+CGLBrown5 [-\]: ah
+CGLadmin [-\]: Oh, wait
+CGLadmin [-\]: Sorry!
+CGLadmin [-\]: I'm a fool
+CGLBrown5 [-\]: ?
+CGLadmin [-\]: You're right
+Princeton2 [?\]: if white had a2 a3 a1 earlier
+CGLadmin [-\]: Even if white A3, Black C3 kills
+Princeton2 [?\]: black would be dead
+CGLadmin2 [-\]: game reviews will start in 1 minute
+CGLadmin [-\]: Yeah, my mistake
+CGLadmin [-\]: Good lord, now I have to review something
+CGLadmin [-\]: Sorry!
+CGLadmin [-\]: >_<
+Princeton2 [?\]: ok bye
+CGLBrown5 [-\]: haha
+Princeton2 [?\]: haha
+CGLBrown5 [-\]: thanks for the game princeton5
+Princeton4 [-\]: sida good job!
+CGLBrown5 [-\]: sorry about all the confusion with kgs
+Princeton2 [?\]: thanks
+Princeton5 [-\]: thanks for the game
+CGLBrown5 [-\]: how do we review?
+Princeton2 [?\]: options
+CGLBrown5 [-\]:  / are you down for a review?
+Princeton2 [?\]: review game
+CGLBrown5 [-\]: k
+])
+(;W[]WL[30]OW[2]
+;B[]BL[30]OB[3]TW[aa][ba][ca][da][ea][ab][bb][cb][db][eb][ac][bc][cc][dc][ec][ad][bd][cd][ed][ae][be][ce][de][ee][fe][af][bf][cf][df][ff][ag][eg][ah][jh][ji][ki][li][ij][lj][nj][ik][jk][kk][mk][nk][kl][ll][ml][sp][rq][sq][or][rr][sr][ps][qs][rs][ss]TB[ka][na][oa][pa][qa][ra][sa][jb][kb][mb][pb][qb][rb][sb][hc][kc][mc][nc][pc][qc][rc][sc][ld][md][nd][qd][rd][sd][ne][oe][qe][re][se][of][qf][rf][sf][sg][qh][pi][ri][qj][rj][sj][bk][ck][dk][ek][fk][qk][rk][cl][dl][el][fl][ql][am][fm][an][cn][dn][fn][gn][in][jn][ao][co][do][eo][go][ko][mo][no][oo][po][ap][bp][cp][dp][gp][hp][ip][jp][kp][aq][cq][dq][eq][gq][hq][kq][lq][ar][dr][gr][hr][ir][jr][kr][lr][as][cs][ds][es][fs][gs][hs][is][js][ks][ls]C[Princeton5 [-\]: um can we play out the bottom left
+Princeton5 [-\]: i forgot we didn't finish there
+CGLBrown5 [-\]: ok i think they're dead though
+CGLBrown5 [-\]: you have 3 liberties
+CGLBrown5 [-\]: how do we play it out?
+CGLBrown5 [-\]: i'm not experienced with kgs
+CGLadmin [-\]: You can continue playing the game if there's anything in doubt
+Princeton5 [-\]: i think yo ujust hit done
+Princeton5 [-\]: after you mark it
+Princeton5 [-\]: and then i reject and then we play it out
+CGLadmin [-\]: Done will end the game
+CGLadmin [-\]: IF you both select it
+CGLBrown5 [-\]: k
+]))
+(;B[ir]BL[87.743]C[CGLBrown5 [-\]: misclick
+CGLBrown5 [-\]: misclick
+Princeton5 [-\]: ask an admin
+CGLadmin2 [-\]: Hi
+CGLBrown5 [-\]: it seems that we can't read 
+CGLBrown5 [-\]: what the admins say
+CGLBrown5 [-\]: damn, my touchpad was set to "tap to click"
+CGLBrown5 [-\]: unbelievable
+Princeton5 [-\]: okay, i'll make my move, just request an undo if admin allows itundo
+]))

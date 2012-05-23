@@ -1,0 +1,5 @@
+RewriteEngine On
+rewritecond %{http_host} ^www.collegiatego.org [nc]
+rewritecond %{http_host} ^collegiatego.org [nc]
+rewritecond %{http_host} ^www.collegiatego.org/home [nc]
+rewriterule ^(.*) http://www.college-go.org/$1 [R=301,nc]

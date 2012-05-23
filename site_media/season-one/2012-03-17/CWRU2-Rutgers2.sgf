@@ -1,0 +1,402 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[6.50]TM[1800]OT[5x30 byo-yomi]
+PW[CWRU2]PB[Rutgers2]DT[2012-03-17]PC[The KGS Go Server at http://www.gokgs.com/]C[CWRU2 [?\]: have a good one
+Rutgers2 [?\]: you too
+TWeather [-\]: go Andrew!
+Rutgers2 [?\]: just for the record, I'm Nikunj Patel (1k) from Rutgers 
+]RE[W+7.50]
+;B[pd]BL[1751.141]
+;W[dd]WL[1793.765]
+;B[pq]BL[1748.022]
+;W[dp]WL[1789.27]
+;B[qk]BL[1743.268]C[CWRU2 [?\]: im Andrew Fu (3d) from case wester reserve
+]
+;W[jp]WL[1775.966]
+;B[cn]BL[1734.906]
+;W[fq]WL[1774.136]C[TWeather [-\]: strange they went for an even game...
+]
+;B[bp]BL[1708.1]C[CWRU4 [-\]: the guy from rutgers asked if he could play even
+]
+;W[cm]WL[1748.183]C[TWeather [-\]: i see
+]
+;B[bm]BL[1696.935]
+;W[bn]WL[1737.2]
+;B[bo]BL[1688.283]
+;W[dn]WL[1732.916]
+;B[an]BL[1682.628]
+;W[cl]WL[1727.826]
+;B[lq]BL[1647.094]
+;W[nc]WL[1721.737]
+;B[pf]BL[1624.737]
+;W[pb]WL[1717.534]
+;B[qc]BL[1617.499]
+;W[kc]WL[1715.691]
+;B[cf]BL[1609.534]
+;W[be]WL[1691.188]
+;B[ce]BL[1545.198]
+;W[cd]WL[1681.003]
+;B[bf]BL[1542.937]
+;W[bd]WL[1644.542]
+;B[cj]BL[1540.015]
+;W[bl]WL[1604.049]
+;B[cq]BL[1537.787]
+;W[ch]WL[1558.566]
+;B[bh]BL[1509.439]
+;W[dh]WL[1508.181]
+;B[bi]BL[1502.226]
+;W[dj]WL[1492.055]
+;B[dk]BL[1492.145]
+;W[ck]WL[1476.096]
+;B[di]BL[1461.87]
+;W[ej]WL[1460.604]
+;B[ci]BL[1452.014]
+;W[ei]WL[1456.029]
+;B[eh]BL[1370.646]
+;W[dg]WL[1451.653]
+;B[ef]BL[1294.37]
+;W[eg]WL[1434.708]
+;B[fh]BL[1275.943]
+;W[fg]WL[1432.58]
+;B[ee]BL[1265.924]
+;W[gj]WL[1244.081]
+;B[ed]BL[1250.702]
+;W[ec]WL[1241.239]
+;B[fc]BL[1249.075]
+;W[eb]WL[1240.396]
+;B[do]BL[1209.921]
+;W[en]WL[1135.767]
+;B[ge]BL[1091.285]
+;W[gh]WL[1058.781]
+;B[jq]BL[1054.699]
+;W[kp]WL[1031.926]
+;B[iq]BL[1045.775]
+;W[pl]WL[971.117]
+;B[pk]BL[1022.709]
+;W[kq]WL[960.563]
+;B[kr]BL[1016.411]
+;W[lr]WL[940.221]
+;B[mr]BL[1009.94]
+;W[jr]WL[936.96]
+;B[ls]BL[1009.137]
+;W[ir]WL[935.9]
+;B[ip]BL[917.875]
+;W[io]WL[808.784]
+;B[hr]BL[910.775]
+;W[hq]WL[805.731]
+;B[hp]BL[906.854]
+;W[gp]WL[804.55]C[TWeather [-\]: ?
+TWeather [-\]: that's a pretty big ko...
+]
+;B[ho]BL[871.315]C[TWeather [-\]: oh wait no
+TWeather [-\]: that's brilliant
+TWeather [-\]: yeah no, still ko
+TWeather [-\]: but so many local ko threats
+]
+;W[gr]WL[721.36]
+;B[hn]BL[732.325]
+;W[hs]WL[584.664]
+;B[jo]BL[707.583]
+;W[lp]WL[559.543]
+;B[mp]BL[696.044]
+;W[kn]WL[558.424]
+;B[in]BL[671.042]
+;W[mo]WL[545.325]
+;B[jm]BL[627.131]
+;W[np]WL[539.345]
+;B[mq]BL[618.53]
+;W[km]WL[517.765]
+;B[jl]BL[560.772]
+;W[lk]WL[488.345]
+;B[kl]BL[480.678]
+;W[ll]WL[485.515]
+;B[ji]BL[473.397]
+;W[jj]WL[470.475]
+;B[ij]BL[467.614]
+;W[kj]WL[458.26]
+;B[hj]BL[418.584]
+;W[hl]WL[397.612]
+;B[ik]BL[352.708]
+;W[ii]WL[386.782]
+;B[hi]BL[331.469]
+;W[ih]WL[384.986]
+;B[hh]BL[289.126]
+;W[hg]WL[382.124]
+;B[ig]BL[282.384]
+;W[jh]WL[380.106]
+;B[hf]BL[269.263]
+;W[gg]WL[376.556]
+;B[ek]BL[264.18]
+;W[fj]WL[325.803]
+;B[gl]BL[214.641]
+;W[gk]WL[250.701]
+;B[fl]BL[121.824]
+;W[gm]WL[136.459]
+;B[hm]BL[78.598]
+;W[fm]WL[132.4]
+;B[hk]BL[30]OB[5]
+;W[el]WL[127.632]
+;B[il]BL[30]OB[5]
+;W[fk]WL[113.226]
+;B[jn]BL[30]OB[5]
+;W[no]WL[87.174]
+;B[pp]BL[30]OB[5]
+;W[fb]WL[79.408]
+;B[gc]BL[30]OB[5]
+;W[kg]WL[69.947]
+;B[ph]BL[30]OB[5]
+;W[dr]WL[66.029]
+;B[cr]BL[30]OB[5]
+;W[hd]WL[17.733]
+;B[gd]BL[30]OB[5]
+;W[qo]WL[10.56]
+;B[po]BL[30]OB[5]
+;W[qn]WL[30]OW[5]
+;B[pn]BL[30]OB[5]
+;W[pm]WL[30]OW[5]
+;B[rl]BL[30]OB[5]
+;W[rm]WL[30]OW[5]
+;B[ql]BL[30]OB[5]
+;W[qm]WL[30]OW[5]
+;B[rp]BL[30]OB[5]
+;W[qb]WL[30]OW[5]
+;B[rb]BL[30]OB[5]
+;W[pc]WL[30]OW[5]
+;B[qd]BL[30]OB[5]
+;W[ra]WL[30]OW[5]
+;B[sb]BL[30]OB[5]
+;W[ro]WL[30]OW[5]
+;B[rq]BL[30]OB[4]
+;W[oi]WL[30]OW[5]
+;B[ok]BL[30]OB[4]
+;W[nm]WL[30]OW[5]
+;B[pi]BL[30]OB[4]
+;W[hc]WL[30]OW[5]
+;B[gb]BL[30]OB[4]
+;W[hb]WL[30]OW[5]
+;B[ha]BL[30]OB[4]
+;W[jb]WL[30]OW[5]
+;B[ie]BL[30]OB[4]
+;W[jf]WL[30]OW[5]
+;B[if]BL[30]OB[4]
+;W[eo]WL[30]OW[5]
+;B[dq]BL[30]OB[4]C[TWeather [-\]: close-ish gamr
+TWeather [-\]: game*
+]
+;W[er]WL[30]OW[5]C[TWeather [-\]: not bad for a three stone difference played even
+]
+;B[nj]BL[30]OB[4]
+;W[cs]WL[30]OW[5]C[CWRU3 [?\]: No kidding
+]
+;B[bs]BL[30]OB[4]
+;W[ds]WL[30]OW[5]
+;B[nl]BL[30]OB[4]
+;W[on]WL[30]OW[5]
+;B[br]BL[30]OB[4]
+;W[co]WL[30]OW[5]
+;B[li]BL[30]OB[4]
+;W[mi]WL[30]OW[5]
+;B[mj]BL[30]OB[4]
+;W[lj]WL[30]OW[5]
+;B[mh]BL[30]OB[4]
+;W[lh]WL[30]OW[5]
+;B[ni]BL[30]OB[4]
+;W[ki]WL[30]OW[5]
+;B[md]BL[30]OB[4]C[TWeather [-\]: i think black might be ahead with this
+TWeather [-\]: actually, he is
+]
+;W[nd]WL[30]OW[5]
+;B[me]BL[30]OB[4]C[CWRU3 [?\]: He's looking pretty good
+]
+;W[ne]WL[30]OW[5]C[CWRU3 [?\]: White is showing perserverance
+]
+;B[mf]BL[30]OB[4]
+;W[mc]WL[30]OW[5]
+;B[nf]BL[30]OB[4]
+;W[bn]WL[30]OW[5]
+;B[ml]BL[30]OB[3]
+;W[mm]WL[30]OW[5]
+;B[ol]BL[30]OB[3]
+;W[om]WL[30]OW[5]
+;B[cn]BL[30]OB[3]
+;W[nq]WL[30]OW[5]
+;B[nr]BL[30]OB[3]
+;W[bn]WL[30]OW[5]
+;B[gi]BL[30]OB[3]
+;W[fi]WL[30]OW[5]
+;B[cn]BL[30]OB[3]
+;W[rc]WL[30]OW[5]
+;B[rd]BL[30]OB[3]
+;W[bn]WL[30]OW[5]C[CWRU1 [?\]: I hope he plays R4 before P3
+]
+;B[ko]BL[30]OB[3]
+;W[lo]WL[30]OW[5]
+;B[cn]BL[30]OB[3]
+;W[oq]WL[30]OW[5]
+;B[or]BL[30]OB[3]C[CWRU1 [?\]: noooooo
+]
+;W[bn]WL[30]OW[5]C[TWeather [-\]: haha
+CWRU5 [?\]: saw that coming
+]
+;B[eh]BL[30]OB[2]
+;W[hl]WL[30]OW[5]
+;B[cn]BL[30]OB[2]C[TWeather [-\]: that was a heavily paid ko threat
+]
+;W[cg]WL[30]OW[5]
+;B[bg]BL[30]OB[2]
+;W[bn]WL[30]OW[5]
+;B[oe]BL[30]OB[2]
+;W[am]WL[30]OW[5]C[TWeather [-\]: why not D17?
+]
+;B[ia]BL[30]OB[2]
+;W[ja]WL[30]OW[5]C[CWRU1 [?\]: Man
+CWRU1 [?\]: Andrew needs another large ko
+]
+;B[ld]BL[30]OB[2]C[CWRU1 [?\]: since the bottom left is now a million threats
+]
+;W[ao]WL[30]OW[5]
+;B[ap]BL[30]OB[2]C[TWeather [-\]: i love that andrew denies everything you say the moment yuo say it
+]
+;W[cp]WL[30]OW[5]
+;B[aq]BL[30]OB[2]C[CWRU4 [-\]: now it's 1 ko threat
+]
+;W[fa]WL[30]OW[5]C[CWRU1 [?\]: I wanted him to play B10 so bad...
+]
+;B[lc]BL[30]OB[2]
+;W[lb]WL[30]OW[5]
+;B[ga]BL[30]OB[2]
+;W[ff]WL[30]OW[5]
+;B[fe]BL[30]OB[2]
+;W[mg]WL[30]OW[5]
+;B[ng]BL[30]OB[2]
+;W[lg]WL[30]OW[5]
+;B[jd]BL[30]OB[2]
+;W[jc]WL[30]OW[5]
+;B[jg]BL[30]OB[2]
+;W[ke]WL[30]OW[5]
+;B[kd]BL[30]OB[2]
+;W[mi]WL[30]OW[5]
+;B[ib]BL[30]OB[2]
+;W[ic]WL[30]OW[5]
+;B[li]BL[30]OB[2]C[CWRU1 [?\]: I think Andrew still has the threats to fight this
+]
+;W[sp]WL[30]OW[5]C[CWRU1 [?\]: T4 is sooo big
+]
+;B[sq]BL[30]OB[2]
+;W[mi]WL[30]OW[5]
+;B[lm]BL[30]OB[2]
+;W[ln]WL[30]OW[5]
+;B[li]BL[30]OB[2]
+;W[sl]WL[30]OW[5]
+;B[sk]BL[30]OB[2]
+;W[mi]WL[30]OW[5]
+;B[dc]BL[30]OB[2]C[TWeather [-\]: it's pretty close, i'm not sure who's ahead anymore
+]
+;W[db]WL[30]OW[5]
+;B[li]BL[30]OB[2]
+;W[sc]WL[30]OW[5]
+;B[sd]BL[30]OB[2]
+;W[mi]WL[30]OW[5]
+;B[cc]BL[30]OB[2]
+;W[bc]WL[30]OW[5]
+;B[li]BL[30]OB[2]C[CWRU1 [?\]: I think.... Andrew is comfy now
+CWRU1 [?\]: surprisingly
+TWeather [-\]: possible
+]
+;W[sn]WL[30]OW[5]C[CWRU1 [?\]: komi margin, I think
+]
+;B[gl]BL[30]OB[2]
+;W[qp]WL[30]OW[5]
+;B[qq]BL[30]OB[2]
+;W[mi]WL[30]OW[5]
+;B[cb]BL[30]OB[2]
+;W[bb]WL[30]OW[5]
+;B[li]BL[30]OB[2]
+;W[sj]WL[30]OW[5]
+;B[rk]BL[30]OB[2]
+;W[mi]WL[30]OW[5]
+;B[ca]BL[30]OB[2]
+;W[ba]WL[30]OW[5]
+;B[li]BL[30]OB[2]C[CWRU1 [?\]: S9 before T10?
+]
+;W[js]WL[30]OW[5]
+;B[od]BL[30]OB[2]
+;W[oc]WL[30]OW[5]C[TWeather [-\]: yes, that's my count actually. komi margin. both 48/49 points on board, plus excess of 3 prisoners, could be a comfy win for andrew. i didn't trust SE, but he seems to agree too.
+CWRU1 [?\]: That's what SE said.
+]
+;B[mi]BL[30]OB[2]C[TWeather [-\]: ha
+]
+;W[ks]WL[30]OW[5]C[CWRU4 [-\]: man, stealing my line
+]
+;B[lr]BL[30]OB[2]C[CWRU1 [?\]: yup.
+]
+;W[ak]WL[30]OW[5]
+;B[aj]BL[30]OB[2]
+;W[af]WL[30]OW[5]C[TWeather [-\]: 1k, huh?
+]
+;B[ag]BL[30]OB[2]
+;W[ae]WL[30]OW[5]
+;B[go]BL[30]OB[2]
+;W[fo]WL[30]OW[5]
+;B[eq]BL[30]OB[2]
+;W[ep]WL[30]OW[5]
+;B[gn]BL[30]OB[2]
+;W[mk]WL[30]OW[5]
+;B[bj]BL[30]OB[2]
+;W[bk]WL[30]OW[5]
+;B[so]BL[30]OB[2]
+;W[sm]WL[30]OW[5]
+;B[sp]BL[30]OB[2]
+;W[an]WL[30]OW[5]
+;B[df]BL[30]OB[2]
+;W[fl]WL[30]OW[5]
+;B[hl]BL[30]OB[2]
+;W[nb]WL[30]OW[5]
+;B[gf]BL[30]OB[2]
+;W[fh]WL[30]OW[5]
+;B[je]BL[30]OB[2]
+;W[kf]WL[30]OW[5]
+;B[nk]BL[30]OB[2]
+;W[qa]WL[30]OW[5]
+;B[lf]BL[30]OB[2]
+;W[kh]WL[30]OW[5]
+;B[]BL[30]OB[2]
+;W[]WL[30]OW[5]TW[aa][ca][da][ea][ka][la][ma][na][oa][pa][ab][cb][kb][mb][ob][ac][cc][dc][ad][eh][ji][dk][ek][al][dl][bm][dm][em][lm][cn][mn][nn][rn][do][fp][gq][fr][hr][es][fs][gs][is]TB[rc][sc][fd][pe][qe][re][se][of][qf][rf][sf][og][pg][qg][rg][sg][ah][nh][oh][qh][rh][sh][ai][oi][qi][ri][si][oj][pj][qj][rj][sj][im][io][bq][ar][pr][qr][rr][sr][as][ms][ns][os][ps][qs][rs][ss]C[CWRU4 [-\]: nice job andrew!
+Rutgers2 [?\]: thanks for the game
+CWRU1 [?\]: Nice, Andrew
+CWRU2 [?\]: thanks for the game
+CWRU2 [?\]: how did u guys do?
+CWRU3 [?\]: I humbly lost
+CWRU1 [?\]: I reduced a liberty from the wrong side
+CWRU5 [?\]: I won.
+CWRU1 [?\]: and exploded
+CWRU3 [?\]: So does that put us at 2-3?
+TWeather [-\]: yes
+CWRU1 [?\]: hm?
+CWRU1 [?\]: we're 3-2
+CWRU3 [?\]: wait no - 3-2
+CWRU1 [?\]: we won the match
+CWRU2 [?\]: where's cinnoman?
+CWRU3 [?\]: yeah
+CWRU2 [?\]: did cinnoman win?
+CWRU3 [?\]: he did indeed
+TWeather [-\]: he did
+TWeather [-\]: by 2.5
+CWRU3 [?\]: although he's cardamom today
+CWRU5 [?\]: We're 3-2.  Kenneth won too, right?
+CWRU2 [?\]: so we are 3-2
+CWRU2 [?\]: nice
+TWeather [-\]: yes
+CWRU1 [?\]: Man
+CWRU2 [?\]: my game finished last i guess?
+CWRU1 [?\]: I'll play better next week
+CWRU3 [?\]: yep
+CWRU5 [?\]: yep
+CGLadmin [-\]: Reviews are now starting
+CWRU2 [?\]: where do we go for reviews
+TWeather [-\]: mike's game/ CWRU3 will be reviewed
+CGLadmin [-\]: look for the games hosted by CGLadmin in the cgl room
+CWRU3 [?\]: seriously?
+CWRU3 [?\]: sweet
+CWRU2 [?\]: nice mikey
+CGLadmin [-\]: There is also a game northeastern1 against cmu1 that will be reviewed by a 6d
+])

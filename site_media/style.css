@@ -142,7 +142,7 @@ img.right {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: bold;
 	color: #7C0104;
 }
@@ -155,9 +155,10 @@ img.right {
 
 
 body#home a#homenav,
-body#tournaments a#tournamentsnav,
+body#CGL a#CGLnav,
 body#members a#membersnav,
 body#about a#aboutnav,
+body#news a#newsnav,
 body#links a#linksnav,
 body#ing a#ingnav,
 body#contact a#contactnav {
@@ -242,7 +243,7 @@ body#home #content h2{
 	text-align: center;
 }
 
-body#tournaments #logo{
+body#CGL #logo{
 	background: #FFFFDD url(GreenCGA.jpg) no-repeat center 25px;
 }
 
@@ -254,7 +255,7 @@ body#about #logo {
 	background: #FFFFDD url(TurquoiseCGA.jpg) no-repeat center 25px;
 }
 
-body#links #logo {
+body#news #logo {
 	background: #FFFFDD url(GoldCGA.jpg) no-repeat center 25px;
 }
 
@@ -307,7 +308,7 @@ body#home #logo h1 {
 }
 
 #content h1, h2, h3 {
-    margin: 0 0 8px;
+    margin: 8px 0px 8px;
 }
 
 #content ul  {
@@ -318,7 +319,8 @@ body#home #logo h1 {
 
 #content li {
 	line-height: 160%;
-	padding: 8px 0px 2px 8px;
+	padding: 4px 0px 4px 20px;
+	margin: 4px 0px;
 /*	margin-bottom: 30px;
 	padding: 0px 0px 10px 0px; */
 }
@@ -334,6 +336,26 @@ body#home #logo h1 {
 	margin: 0 0 0 5px;
 	padding: 8px 0px 2px 8px;
 	background: url(/site_media/img09.jpg) no-repeat left 16px;
+}
+
+#roster {
+	margin: 20px 20px 20px 20px;
+}
+
+#roster td {
+	border-left: 10px;
+	border-right: 10px;
+	padding: 4px 2px 0px;
+}
+
+#retired {
+	margin: 20px 20px 20px 20px;
+}
+
+#retired td {
+	border-left: 10px;
+	border-right: 10px;
+	padding: 4px 2px 0px;
 }
 
 body#media img {
@@ -425,6 +447,7 @@ body#media img {
 #sidebar li ul {
 	border: none;
 	background: none;
+    list-style: none;
 }
 
 #sidebar li li {

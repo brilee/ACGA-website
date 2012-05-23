@@ -1,0 +1,494 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[2700]OT[5x30 byo-yomi]
+PW[Brown4]PB[UMichigan4]DT[2012-04-27]PC[The KGS Go Server at http://www.gokgs.com/]C[UMichigan4 [-\]: hi
+Brown4 [?\]: hi
+UMichigan4 [-\]: This is Yizao
+Brown4 [?\]: this is richen
+UMichigan4 [-\]: have fun
+]RE[B+10.50]
+;B[pd]BL[2687.027]C[Brown4 [?\]: have a good game
+Brown4 [?\]:  i am about 2 dan
+Brown4 [?\]: what about you?
+]
+;W[qp]WL[2687.735]C[UMichigan4 [-\]: roughly the same
+]
+;B[cd]BL[2675.227]C[Brown4 [?\]: all right
+]
+;W[dp]WL[2682.425]
+;B[ic]BL[2668.719]
+;W[dg]WL[2663.633]
+;B[ed]BL[2666.243]
+;W[dj]WL[2660.956]
+;B[op]BL[2660.498]
+;W[mq]WL[2647.563]
+;B[qq]BL[2655.402]
+;W[pq]WL[2636.865]
+;B[pp]BL[2653.959]
+;W[oq]WL[2634.301]
+;B[nq]BL[2650.593]
+;W[np]WL[2632.547]
+;B[nr]BL[2645.515]
+;W[qr]WL[2628.14]
+;B[rq]BL[2644.273]
+;W[or]WL[2624.031]
+;B[no]BL[2633.108]
+;W[mp]WL[2622.051]
+;B[qo]BL[2631.881]
+;W[qf]WL[2601.724]C[Sectoid [4d?\]: O5 unusual?
+]
+;B[qh]BL[2576.351]
+;W[of]WL[2591.804]
+;B[nd]BL[2572.32]C[Sectoid [4d?\]: i think UM4 made a mistake
+jingzhang [1d\]: in joseki?
+Sectoid [4d?\]: yup
+]
+;W[pi]WL[2573.537]C[Sectoid [4d?\]: lose sente in bottom right
+]
+;B[qi]BL[2569.519]
+;W[pj]WL[2571.227]
+;B[ph]BL[2562.486]C[Sectoid [4d?\]: a bit scared will lose S2 sente
+]
+;W[oh]WL[2567.943]
+;B[qj]BL[2560.727]
+;W[pk]WL[2564.389]
+;B[ql]BL[2556.282]C[Sectoid [4d?\]: as well... then it is disaster
+jingzhang [1d\]: yup
+jingzhang [1d\]: I checked, it's mistake
+Sectoid [4d?\]: checked?
+Sectoid [4d?\]: with whom
+jingzhang [1d\]: for Umich, should defned r5 first
+jingzhang [1d\]: this forces n2 for white
+jingzhang [1d\]: then exchange o5
+jingzhang [1d\]: sene
+]
+;W[qc]WL[2511.023]C[Sectoid [4d?\]: yeah that joseki is bad for black already
+Sectoid [4d?\]: if you ask me
+Sectoid [4d?\]: losing sente is TT
+]
+;B[qd]BL[2521.897]
+;W[rd]WL[2486.674]
+;B[pc]BL[2486.726]
+;W[rb]WL[2465.552]
+;B[qb]BL[2484.661]
+;W[rc]WL[2464.415]
+;B[og]BL[2483.374]
+;W[pg]WL[2453.725]
+;B[ng]BL[2481.663]
+;W[nf]WL[2428.102]
+;B[nh]BL[2460.054]
+;W[oi]WL[2424.288]
+;B[mj]BL[2423.006]
+;W[pl]WL[2404.468]
+;B[qm]BL[2410.678]
+;W[ml]WL[2358.98]
+;B[qg]BL[2307.106]
+;W[pf]WL[2352.902]
+;B[re]BL[2304.233]
+;W[rf]WL[2345.73]
+;B[qe]BL[2302.752]
+;W[pb]WL[2308.324]
+;B[ob]BL[2251.188]
+;W[qa]WL[2304.549]C[Sectoid [4d?\]: black is losing :(
+]
+;B[se]BL[2224.913]C[jingzhang [1d\]: yes
+jingzhang [1d\]: but has chances...
+]
+;W[lf]WL[2271.678]C[jingzhang [1d\]: bad opening though for black
+]
+;B[me]BL[2173.476]
+;W[mf]WL[2265.463]
+;B[lh]BL[2171.464]
+;W[jf]WL[2226.003]
+;B[ke]BL[2088.065]
+;W[kf]WL[2222.881]
+;B[jh]BL[2027.514]
+;W[jd]WL[2205.005]
+;B[je]BL[2009.341]
+;W[ie]WL[2199.109]
+;B[kd]BL[1988.155]
+;W[id]WL[2176.017]
+;B[if]BL[1985.249]
+;W[ig]WL[2105.025]
+;B[hf]BL[1982.173]
+;W[jg]WL[2095.253]
+;B[jc]BL[1896.928]
+;W[kk]WL[2078.253]
+;B[nl]BL[1890.902]
+;W[mk]WL[2044.885]
+;B[jj]BL[1792.746]
+;W[jk]WL[2000.776]
+;B[hi]BL[1739.735]
+;W[hg]WL[1994.815]
+;B[ik]BL[1697.234]
+;W[il]WL[1985.962]
+;B[hk]BL[1665.491]
+;W[gg]WL[1934.009]
+;B[hl]BL[1587.154]
+;W[hm]WL[1901.829]
+;B[im]BL[1563.663]
+;W[jl]WL[1899.814]
+;B[gm]BL[1559.973]
+;W[hn]WL[1898.305]
+;B[nm]BL[1558.823]
+;W[nj]WL[1869.648]
+;B[lj]BL[1526.536]
+;W[nk]WL[1847.141]
+;B[ln]BL[1422.802]
+;W[jn]WL[1755.606]C[Sectoid [4d?\]: :( :( i feel black is getting crushed
+]
+;B[gn]BL[1246.603]
+;W[gl]WL[1705.81]
+;B[in]BL[1072.505]
+;W[ho]WL[1696.06]
+;B[gk]BL[1055.773]C[jingzhang [1d\]: indeed...
+]
+;W[fl]WL[1662.921]
+;B[io]BL[1046.574]C[Sectoid [4d?\]: sad
+]
+;W[kn]WL[1565.969]
+;B[ip]BL[898.211]
+;W[go]WL[1535.953]
+;B[kj]BL[809.914]
+;W[jm]WL[1132.53]
+;B[gq]BL[658.693]
+;W[jq]WL[874.328]
+;B[iq]BL[544.281]C[UMichigan5 [-\]: White is sure thinking about this move
+]
+;W[eq]WL[448.256]
+;B[jr]BL[446.759]
+;W[kq]WL[421.776]
+;B[kr]BL[416.508]
+;W[lr]WL[379.903]C[Sectoid [4d?\]: white wants to read kill
+]
+;B[hr]BL[296.901]
+;W[fk]WL[161.89]C[Sectoid [4d?\]: time to invade?
+Sectoid [4d?\]: or G16?
+]
+;B[fj]BL[30]OB[4]
+;W[gi]WL[59.593]
+;B[gj]BL[30]OB[4]
+;W[ej]WL[52.146]
+;B[ii]BL[30]OB[4]C[Sectoid [4d?\]: ..
+Sectoid [4d?\]: so patient
+]
+;W[fd]WL[30]OW[4]
+;B[hd]BL[30]OB[4]
+;W[ee]WL[30]OW[4]
+;B[ec]BL[30]OB[4]
+;W[fc]WL[30]OW[4]
+;B[lo]BL[30]OB[3]
+;W[lm]WL[30]OW[4]C[jingzhang [1d\]: he needs to make something happen on left side
+]
+;B[rr]BL[30]OB[3]
+;W[ps]WL[30]OW[4]
+;B[ns]BL[30]OB[3]
+;W[ms]WL[30]OW[4]
+;B[lp]BL[30]OB[3]C[UMichigan5 [-\]: he needs to make a lot happen there
+]
+;W[qk]WL[30]OW[4]
+;B[lq]BL[30]OB[3]
+;W[mr]WL[30]OW[4]
+;B[de]BL[30]OB[2]
+;W[rk]WL[30]OW[4]
+;B[fe]BL[30]OB[2]
+;W[ge]WL[30]OW[4]
+;B[ef]BL[30]OB[2]
+;W[gd]WL[30]OW[3]
+;B[em]BL[30]OB[2]
+;W[fo]WL[30]OW[3]
+;B[bp]BL[30]OB[2]
+;W[cq]WL[30]OW[3]
+;B[cm]BL[30]OB[1]
+;W[dn]WL[30]OW[3]
+;B[dl]BL[30]OB[1]
+;W[ck]WL[30]OW[3]
+;B[en]BL[30]OB[1]
+;W[dk]WL[30]OW[3]
+;B[eo]BL[30]OB[1]
+;W[fp]WL[30]OW[3]
+;B[ep]BL[30]OB[1]
+;W[fq]WL[30]OW[3]
+;B[do]BL[30]OB[1]
+;W[bq]WL[30]OW[3]
+;B[cp]BL[30]OB[1]
+;W[dq]WL[30]OW[3]
+;B[el]BL[30]OB[1]
+;W[ek]WL[30]OW[3]
+;B[bn]BL[30]OB[1]
+;W[fr]WL[30]OW[3]
+;B[aq]BL[30]OB[1]
+;W[ar]WL[30]OW[3]
+;B[ap]BL[30]OB[1]
+;W[bs]WL[30]OW[3]C[UMichigan1 [-\]: mike
+]
+;B[he]BL[30]OB[1]
+;W[gf]WL[30]OW[3]C[UMichigan1 [-\]: we are 2-1 but losing other 2 games
+Beetlebum [5k?\]: :/
+UMichigan5 [-\]: Yeah....
+]
+;B[bg]BL[30]OB[1]C[Sectoid [4d?\]: are we losign this one?
+Sectoid [4d?\]: i think we might nto be
+Beetlebum [5k?\]: time will tell xD
+UMichigan1 [-\]: is this yizao?
+UMichigan5 [-\]: yeah
+]
+;W[bh]WL[30]OW[3]C[UMichigan1 [-\]: ok i should watch this
+jingzhang [1d\]: yes
+]
+;B[cg]BL[30]OB[1]
+;W[ch]WL[30]OW[3]C[Sectoid [4d?\]: anbo is really wtf
+jingzhang [1d\]: anbo is getting screwed
+Sectoid [4d?\]: attack turned into capture
+UMichigan1 [-\]: expected
+Sectoid [4d?\]: he has huge moyo
+jingzhang [1d\]: overly aggressive
+Sectoid [4d?\]: attack and try to capture
+Sectoid [4d?\]: then die himself
+jingzhang [1d\]: so sad
+jingzhang [1d\]: I think I could've done better in that situation...
+]
+;B[eg]BL[30]OB[1]C[UMichigan1 [-\]: wait
+UMichigan5 [-\]: not over yet guys
+]
+;W[bl]WL[30]OW[3]
+;B[dh]BL[30]OB[1]C[UMichigan5 [-\]: omg
+]
+;W[di]WL[30]OW[3]C[jingzhang [1d\]: as long as yizao doesn't run out of time...
+Brown1 [-\]: P19!!!!!!!!!!!!!!!!!!!!!
+Brown1 [-\]: SOMEBODY
+jingzhang [1d\]: hahaha
+UMichigan5 [-\]: b 10 cmon
+UMichigan5 [-\]: do it
+]
+;B[bj]BL[30]OB[1]C[UMichigan5 [-\]: fight with hnor
+jingzhang [1d\]: hahaha
+UMichigan1 [-\]: wtf?
+UMichigan5 [-\]: *honor
+]
+;W[eh]WL[30]OW[3]
+;B[fh]BL[30]OB[1]C[Sectoid [4d?\]: wtf
+UMichigan1 [-\]: interesting
+Brown1 [-\]: seki?
+UMichigan5 [-\]: he cant connect :P
+Sectoid [4d?\]: seki
+]
+;W[bm]WL[30]OW[2]C[UMichigan1 [-\]: ok this game is not over at all
+]
+;B[cn]BL[30]OB[1]
+;W[cf]WL[30]OW[2]
+;B[bf]BL[30]OB[1]
+;W[be]WL[30]OW[2]C[jingzhang [1d\]: yizao with a comeback... 
+jingzhang [1d\]: his patience paid off
+Sectoid [4d?\]: maybe
+Sectoid [4d?\]: he might have won by just answering
+jingzhang [1d\]: he's not getting crushed anymore
+]
+;B[ce]BL[30]OB[1]
+;W[af]WL[30]OW[2]
+;B[df]BL[30]OB[1]
+;W[ag]WL[30]OW[2]
+;B[dh]BL[30]OB[1]
+;W[bi]WL[30]OW[2]C[UMichigan1 [-\]: oh?
+UMichigan1 [-\]: i think we are winnng now
+]
+;B[cj]BL[30]OB[1]
+;W[dg]WL[30]OW[2]
+;B[sf]BL[30]OB[1]C[UMichigan5 [-\]: what is this?
+]
+;W[rg]WL[30]OW[2]C[UMichigan5 [-\]: omg
+]
+;B[dh]BL[30]OB[1]C[UMichigan5 [-\]: thats hilarious
+]
+;W[aj]WL[30]OW[2]
+;B[ak]BL[30]OB[1]
+;W[dg]WL[30]OW[2]
+;B[sg]BL[30]OB[1]
+;W[rh]WL[30]OW[2]
+;B[dh]BL[30]OB[1]
+;W[ai]WL[30]OW[2]C[UMichigan1 [-\]: ...screwed -_-;;
+]
+;B[sh]BL[30]OB[1]
+;W[si]WL[30]OW[2]C[UMichigan5 [-\]: could have made this seki
+UMichigan5 [-\]: ugh
+Brown1 [-\]: true
+]
+;B[bd]BL[30]OB[1]C[Sectoid [4d?\]: alreayd lost points in corner
+Brown1 [-\]: P 19 for the love of god
+Sectoid [4d?\]: was seki worth it
+]
+;W[dg]WL[30]OW[2]C[jingzhang [1d\]: yes so much on the p19
+]
+;B[ae]BL[30]OB[1]C[Brown1 [-\]: P19 PLEEEEEEASE
+Beetlebum [5k?\]: lol
+]
+;W[oa]WL[30]OW[2]C[UMichigan5 [-\]: hahahaha
+Brown1 [-\]: YEES
+Brown1 [-\]: \\BOOM
+]
+;B[nb]BL[30]OB[1]C[UMichigan1 [-\]: ha
+]
+;W[na]WL[30]OW[2]C[UMichigan1 [-\]: close game
+UMichigan1 [-\]: :( behind
+Sectoid [4d?\]: disagree 
+Sectoid [4d?\]: i think close
+]
+;B[rs]BL[30]OB[1]C[Sectoid [4d?\]: not behind
+UMichigan1 [-\]: for u, it is close
+jingzhang [1d\]: what is this...
+]
+;W[qs]WL[30]OW[2]C[jingzhang [1d\]: crap
+UMichigan5 [-\]: im going to throw my laptop out of the window
+Beetlebum [5k?\]: lol
+Sectoid [4d?\]: you have a window?
+UMichigan1 [-\]: ? u did nothing
+]
+;B[ma]BL[30]OB[1]C[jingzhang [1d\]: p19
+UMichigan1 [-\]: u think it is sente
+UMichigan1 [-\]: but it is not
+]
+;W[pa]WL[30]OW[2]
+;B[mb]BL[30]OB[1]C[jingzhang [1d\]: why not?
+]
+;W[fn]WL[30]OW[2]C[jingzhang [1d\]: teach me sj
+UMichigan1 [-\]: w can tenuki in this game and this will make ko
+Sectoid [4d?\]: is F6 sente?
+]
+;B[lk]BL[30]OB[1]C[jingzhang [1d\]: but isn't that bigger than b16?
+UMichigan1 [-\]: we lost 
+UMichigan1 [-\]: -_-
+Sectoid [4d?\]: is M9 sente!!!!
+]
+;W[mi]WL[30]OW[2]
+;B[ll]BL[30]OB[1]
+;W[mm]WL[30]OW[2]C[UMichigan1 [-\]: hey
+]
+;B[mo]BL[30]OB[1]C[UMichigan1 [-\]: watch anbo's game
+]
+;W[os]WL[30]OW[2]C[jingzhang [1d\]: he's not screwed?
+]
+;B[mh]BL[30]OB[1]C[UMichigan1 [-\]: just go watch
+]
+;W[ni]WL[30]OW[2]C[Sectoid [4d?\]: why?
+UMichigan5 [-\]: look at it
+Sectoid [4d?\]: getting captured again?
+UMichigan1 [-\]: he is winning slightly
+]
+;B[dh]BL[30]OB[1]
+;W[ei]WL[30]OW[2]
+;B[fi]BL[30]OB[1]
+;W[kh]WL[30]OW[2]
+;B[ki]BL[30]OB[1]
+;W[kg]WL[30]OW[2]C[UMichigan5 [-\]: I need a drink
+]
+;B[li]BL[30]OB[1]
+;W[eb]WL[30]OW[2]
+;B[db]BL[30]OB[1]
+;W[fb]WL[30]OW[2]
+;B[da]BL[30]OB[1]C[Sectoid [4d?\]: good work on winning UM5!
+]
+;W[on]WL[30]OW[2]
+;B[nn]BL[30]OB[1]
+;W[sn]WL[30]OW[1]
+;B[rn]BL[30]OB[1]
+;W[sl]WL[30]OW[1]
+;B[so]BL[30]OB[1]
+;W[hb]WL[30]OW[1]
+;B[ib]BL[30]OB[1]C[Beetlebum [5k?\]: xD he might be getting a drink still 
+]
+;W[fm]WL[30]OW[1]
+;B[pm]BL[30]OB[1]
+;W[ol]WL[30]OW[1]C[UMichigan1 [-\]: oh..this game.. 
+]
+;B[om]BL[30]OB[1]
+;W[gh]WL[30]OW[1]
+;B[ih]BL[30]OB[1]
+;W[sm]WL[30]OW[1]
+;B[ah]BL[30]OB[1]
+;W[ag]WL[30]OW[1]
+;B[ha]BL[30]OB[1]
+;W[ga]WL[30]OW[1]C[UMichigan1 [-\]: we won..
+Beetlebum [5k?\]: ^_^
+]
+;B[ia]BL[30]OB[1]
+;W[hc]WL[30]OW[1]
+;B[gs]BL[30]OB[1]
+;W[fs]WL[30]OW[1]
+;B[ea]BL[30]OB[1]
+;W[ko]WL[30]OW[1]
+;B[kp]BL[30]OB[1]
+;W[gr]WL[30]OW[1]
+;B[hs]BL[30]OB[1]
+;W[cl]WL[30]OW[1]C[Brown4 [?\]: what did i do!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+]
+;B[fa]BL[30]OB[1]C[Brown4 [?\]: a......
+]
+;W[gb]WL[30]OW[1]
+;B[jo]BL[30]OB[1]
+;W[km]WL[30]OW[1]
+;B[le]BL[30]OB[1]
+;W[hp]WL[30]OW[1]
+;B[hq]BL[30]OB[1]
+;W[an]WL[30]OW[1]
+;B[ao]BL[30]OB[1]
+;W[am]WL[30]OW[1]
+;B[rl]BL[30]OB[1]
+;W[oe]WL[30]OW[1]
+;B[od]BL[30]OB[1]
+;W[ks]WL[30]OW[1]
+;B[js]BL[30]OB[1]
+;W[ff]WL[30]OW[1]
+;B[sd]BL[30]OB[1]
+;W[sc]WL[30]OW[1]
+;B[dg]BL[30]OB[1]
+;W[ah]WL[30]OW[1]
+;B[ee]BL[30]OB[1]
+;W[ls]WL[30]OW[1]
+;B[rm]BL[30]OB[1]
+;W[sk]WL[30]OW[1]
+;B[af]BL[30]OB[1]
+;W[ci]WL[30]OW[1]
+;B[]BL[30]OB[1]
+;W[]WL[30]OW[1]TW[ra][sa][qb][sb][gc][qg][ph][qh][qi][ri][bj][cj][oj][qj][rj][sj][ak][bk][ok][al][gm][gn][nq][br][cr][dr][er][nr][pr][as][cs][ds][es][ns]TB[aa][ba][ca][ja][ka][la][ab][bb][cb][jb][kb][lb][ac][bc][cc][dc][kc][lc][mc][nc][oc][ad][dd][id][jd][ld][md][be][ie][cf][ji][hj][ij][dm][dn][on][pn][qn][bo][co][oo][po][ro][jp][qp][rp][sp][jq][kq][sq][ir][sr][is][ss]C[Beetlebum [5k?\]: gg
+UMichigan4 [-\]: 承让承让
+UMichigan4 [-\]: lucky
+UMichigan1 [-\]: good job
+UMichigan5 [-\]: gg
+Brown4 [?\]: good game
+UMichigan4 [-\]: gg!
+Brown4 [?\]: i had chance but let it go
+Brown4 [?\]:  i mean on the left
+UMichigan4 [-\]: yeah
+UMichigan4 [-\]: I was behind a lot before the bottom left
+UMichigan2 [-\]: over? what's the final?
+UMichigan1 [-\]: 4-1?
+UMichigan5 [-\]: 4-1
+UMichigan5 [-\]: we win
+UMichigan4 [-\]: that was a good game, thanks!
+UMichigan2 [-\]: who lost?
+UMichigan5 [-\]: 3rd boad
+UMichigan2 [-\]: i c
+UMichigan1 [-\]: but Brown was much tougher than princeton
+UMichigan2 [-\]: agree
+UMichigan2 [-\]: ok, who is currently on/close to campus?
+UMichigan4 [-\]: not me
+UMichigan2 [-\]: SJ?
+UMichigan5 [-\]: not me
+UMichigan1 [-\]: im in ann arbor hahaha
+UMichigan2 [-\]: ....
+UMichigan2 [-\]: i just felt talking is faster than typing
+UMichigan1 [-\]: no way
+UMichigan2 [-\]: no way no way
+UMichigan2 [-\]: you type faster?
+UMichigan1 [-\]: it takes time to meet togather
+UMichigan2 [-\]: ok then
+UMichigan2 [-\]: we should probably log back in with our own account
+Brown3 [?\]: great games guys :)
+UMichigan2 [-\]: this is too confusing...
+UMichigan2 [-\]: thanks Brown!
+Brown3 [?\]: thanks Michigan for the matches
+jingzhang [1d\]: thank you brown
+jingzhang [1d\]: review?
+UMichigan1 [-\]: ok
+UMichigan4 [-\]: thank you brown
+UMichigan4 [-\]: very exciting games
+])

@@ -14,7 +14,7 @@ def contact(request):
                 cd['subject'],
                 message_and_email,
                 'from@example.com',
-                ['collegiatego@gmail.com'],
+                ['acga.organizers@gmail.com'],
                 fail_silently=False
             )
             return HttpResponseRedirect('/contact/thanks/#form')

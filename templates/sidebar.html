@@ -9,37 +9,53 @@
 {% block sidebar %}
 <ul>
 	<li>
-	<h2>CGL - Latest News </h2>
-    <ul>
-    	<li><a href="/tournaments/">Tournament Details Announced!</a></li>
-    	<li><a href="/contact/">Sign your school up to participate this season</a></li>
-	</ul>
-	</li>
-	<li>
-		<h2>4 February</h2>
+		<h2>Latest News</a></h2>
 		<ul>
-			<li>Brown University defeats MIT, 3-2</li>
-			<li>Northeastern University defeats Brandeis, 3-2</li>
+{% for news in sidebar_latest_news %}
+			<li><a href="/news/{{news.id}}">{{news.tagline}}</a></li>
+{% endfor %}
+			<li><a href="/contact/">Sign your school up to participate this season</a></li>
+
 		</ul>
 	</li>
+
 	<li>
 	    <h2>Upcoming Matches</h2>
-        <p><strong>18 February, 1 PM EST.</strong></p>
-		<ul>
-		    <li>Brown University vs. Northeastern University</li>
-		    <li>MIT vs. Brandeis University</li>
+{% if sidebar_upcoming_round %}
+	    <p><strong>{{sidebar_upcoming_round}}</strong></p>
+	    <ul>
+	{% for match in sidebar_upcoming_round.match_set.all %}
+			<li>{{match.school1}} vs. {{match.school2}}</li>
+	{% empty %}
+			<li>No matches entered yet </li>
+	{% endfor %}
+{% else %}
+		<p>No upcoming matches; perhaps it's the beginning or end of a season</p>
+{% endif %}
 		</ul>
-
+	</li>
+	
+	<li>
+		<h2><a href="/CGL/results/">Recent Matches</a></h2>
+{% for round in sidebar_recent_rounds %}
+		<p><strong>{{round}}</strong></p>
+		<ul>
+	{% for match in round.match_set.all %}
+		{% if match.score1 > match.score2 %}
+			<li>{{match.school1}} defeats {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
+		{% else %}{% if match.score2 > match.score1 %}
+			<li>{{match.school2}} defeats {{match.school1}}, {{match.score2}}-{{match.score1}}</li>
+		{% else %}
+			<li>{{match.school1}} ties {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
+		{% endif %}{% endif %}
+	{% endfor %}			
+		</ul>
+{% endfor %}
 	</li>
 <!--	<li>
 		<h2>Calendar</h2>
 		<p> Visit the <a href="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York">ACGA google calendar</a> to stay up to date on all things go!</p>
 		<iframe src="https://www.google.com/calendar/embed?src=collegiate.go%40gmail.com&ctz=America/New_York" style="border: 0" width="270" height="200" frameborder="0" scrolling="no" alt="Sorry, your browser doesn't handle the Google Calendar iframe!></iframe>
 	</li> -->
-
-	<li>
-		<h2>Games of the Month</h2>
-		<p>Coming soon!</p>
-	</li>
 </ul>
 {% endblock sidebar %}

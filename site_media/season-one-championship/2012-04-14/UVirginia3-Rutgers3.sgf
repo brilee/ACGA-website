@@ -1,0 +1,377 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[6.50]TM[2700]OT[5x30 byo-yomi]
+PW[UVirginia3]PB[Rutgers3]DT[2012-04-14]PC[The KGS Go Server at http://www.gokgs.com/]C[Rutgers3 [-\]: hi, my name is Nikunj Patel from Rutgers
+]RE[W+37.50]
+;B[pd]BL[2676.464]C[UVirginia3 [-\]: for the record, this is Joo Young Park from UVA
+]
+;W[dp]WL[2687.746]C[Rutgers3 [-\]: nice to meet you, have a nice game
+]
+;B[qp]BL[2668.597]C[UVirginia3 [-\]: you too
+]
+;W[dd]WL[2684.277]
+;B[fq]BL[2665.268]
+;W[iq]WL[2679.125]
+;B[oq]BL[2656.654]
+;W[eq]WL[2666.684]
+;B[fp]BL[2634.989]
+;W[dn]WL[2664.557]
+;B[cq]BL[2618.806]
+;W[cp]WL[2652.443]
+;B[er]BL[2615.708]
+;W[dq]WL[2650.708]
+;B[dr]BL[2614.322]
+;W[cr]WL[2646.623]
+;B[kq]BL[2609.329]
+;W[io]WL[2644.432]
+;B[fn]BL[2601.804]
+;W[el]WL[2642.228]
+;B[hn]BL[2596.533]
+;W[in]WL[2637.786]
+;B[gl]BL[2567.96]
+;W[il]WL[2633.86]
+;B[fk]BL[2549.094]
+;W[dj]WL[2630.813]
+;B[pj]BL[2503.076]
+;W[ij]WL[2624.029]
+;B[hk]BL[2497.73]
+;W[ik]WL[2621.038]
+;B[hm]BL[2482.796]
+;W[im]WL[2615.691]
+;B[gi]BL[2475.816]
+;W[ei]WL[2610.925]
+;B[fc]BL[2465.013]
+;W[fd]WL[2605.787]
+;B[cf]BL[2455.843]
+;W[ce]WL[2580.488]
+;B[df]BL[2370.347]
+;W[ch]WL[2576.327]
+;B[cc]BL[2347.08]
+;W[cd]WL[2541.751]
+;B[dc]BL[2276.783]
+;W[ec]WL[2538.774]
+;B[eb]BL[2274.636]
+;W[ed]WL[2537.512]
+;B[gc]BL[2245.034]
+;W[gd]WL[2534.681]
+;B[ff]BL[2184.108]
+;W[fb]WL[2518.708]
+;B[gb]BL[2182.383]
+;W[db]WL[2516.872]
+;B[fa]BL[2181.069]
+;W[cb]WL[2514.906]
+;B[bc]BL[2180.241]
+;W[bb]WL[2512.878]
+;B[ih]BL[2162.445]
+;W[hi]WL[2499.561]
+;B[hh]BL[2121.214]
+;W[gh]WL[2494.327]
+;B[hj]BL[2119.82]
+;W[ii]WL[2485.976]
+;B[fh]BL[2094.783]
+;W[gj]WL[2455.932]
+;B[gg]BL[2055.538]
+;W[fj]WL[2446.943]
+;B[hp]BL[2028.193]
+;W[ip]WL[2408.623]
+;B[hr]BL[2002.451]
+;W[ir]WL[2234.81]
+;B[gr]BL[1933.778]
+;W[hq]WL[2165.612]
+;B[gq]BL[1803.526]
+;W[fs]WL[2162.517]
+;B[ho]BL[1781.425]
+;W[hl]WL[2093.17]
+;B[gk]BL[1764.18]
+;W[gm]WL[2091.781]
+;B[fm]BL[1747.655]
+;W[fl]WL[2090.466]
+;B[gn]BL[1743.967]
+;W[ds]WL[2087.538]
+;B[fr]BL[1732.997]
+;W[es]WL[2085.221]
+;B[bq]BL[1690.475]
+;W[br]WL[2011.348]
+;B[gs]BL[1662.161]
+;W[eo]WL[1992.036]
+;B[fo]BL[1649.429]
+;W[mq]WL[1961.152]
+;B[lp]BL[1646.726]
+;W[mp]WL[1951.197]
+;B[lo]BL[1642.645]
+;W[op]WL[1947.85]
+;B[pp]BL[1630.634]
+;W[nn]WL[1943.095]
+;B[lm]BL[1613.568]
+;W[or]WL[1939.136]
+;B[pr]BL[1605.709]
+;W[nq]WL[1936.874]
+;B[pq]BL[1603.695]
+;W[lq]WL[1933.878]
+;B[jr]BL[1532.393]
+;W[kr]WL[1869.201]
+;B[lr]BL[1446.513]
+;W[kp]WL[1866.791]
+;B[ks]BL[1424.619]
+;W[is]WL[1865.183]
+;B[nr]BL[1331.199]
+;W[mr]WL[1862.137]
+;B[os]BL[1329.73]
+;W[ms]WL[1860.187]
+;B[oo]BL[1314.26]
+;W[mo]WL[1854.001]
+;B[ko]BL[1274.617]
+;W[jp]WL[1842.355]
+;B[pm]BL[1254.17]
+;W[nl]WL[1837.136]
+;B[lk]BL[1251.393]
+;W[mj]WL[1831.336]
+;B[lj]BL[1239.886]
+;W[li]WL[1823.825]
+;B[mk]BL[1221.781]
+;W[nk]WL[1822.473]
+;B[mi]BL[1216.249]
+;W[nj]WL[1821.249]
+;B[ki]BL[1213.937]
+;W[lh]WL[1819.629]
+;B[mm]BL[1098.021]
+;W[nm]WL[1813.711]
+;B[ji]BL[1066.883]
+;W[kj]WL[1811.352]
+;B[jj]BL[1065.541]
+;W[kk]WL[1809.749]
+;B[jk]BL[1063.765]
+;W[kl]WL[1808.166]
+;B[jl]BL[1061.824]
+;W[km]WL[1807.036]
+;B[jm]BL[1058.043]
+;W[kn]WL[1806.119]
+;B[jn]BL[1047.011]
+;W[ln]WL[1804.838]
+;B[ph]BL[1029.802]
+;W[jo]WL[1800.286]
+;B[kg]BL[1015.347]
+;W[nh]WL[1796.181]
+;B[nc]BL[982.37]
+;W[qc]WL[1787.517]
+;B[qd]BL[979.013]
+;W[pc]WL[1786.4]
+;B[oc]BL[977.097]
+;W[rd]WL[1785.236]
+;B[re]BL[974.577]
+;W[rc]WL[1784.362]
+;B[qf]BL[971.578]
+;W[ob]WL[1782.393]
+;B[nb]BL[970.274]
+;W[pb]WL[1781.343]
+;B[mg]BL[963.441]
+;W[lg]WL[1770.704]
+;B[lf]BL[950.422]
+;W[mh]WL[1763.608]
+;B[kf]BL[944.256]
+;W[hd]WL[1755.662]
+;B[ic]BL[937.703]
+;W[hc]WL[1743.781]
+;B[hb]BL[927.412]
+;W[id]WL[1741.808]
+;B[jd]BL[920.337]
+;W[je]WL[1723.624]
+;B[kd]BL[912.583]
+;W[if]WL[1710.639]
+;B[jf]BL[879.435]
+;W[mf]WL[1598.315]
+;B[ng]BL[748.222]
+;W[og]WL[1595.151]
+;B[nf]BL[747.232]
+;W[of]WL[1594.117]
+;B[ne]BL[741.475]
+;W[oh]WL[1593.368]
+;B[oi]BL[717.22]
+;W[pl]WL[1582.564]
+;B[ql]BL[713.707]
+;W[qm]WL[1581.284]
+;B[pn]BL[665.934]
+;W[qk]WL[1572.551]
+;B[pk]BL[649.703]
+;W[rl]WL[1285.917]
+;B[ol]BL[590.747]
+;W[qi]WL[1284.391]
+;B[qj]BL[560.829]
+;W[qh]WL[1242.187]C[UVirginia2 [-\]: it's all down to this game
+zuangster [5k\]: !!!!!!!!!
+CGLadmin [-\]: OH
+CGLadmin [-\]: My
+CGLadmin [-\]: GOD...
+UVirginia2 [-\]: we need some sort of dramatic music
+Omniscient [2k?\]: jaws?
+]
+;B[pg]BL[205.603]
+;W[pi]WL[1235.579]C[UVirginia2 [-\]: duuuuuuh duh
+UVirginia2 [-\]: duuuuuh duh
+]
+;B[oj]BL[127.138]
+;W[rj]WL[1232.946]
+;B[ql]BL[125.663]
+;W[jh]WL[1227.259]
+;B[kh]BL[117.081]
+;W[pl]WL[1225.498]
+;B[be]BL[68.773]
+;W[bd]WL[1220.435]
+;B[ql]BL[67.818]
+;W[ig]WL[1218.705]
+;B[rk]BL[4.378]
+;W[jg]WL[1215.959]
+;B[fi]BL[30]OB[5]
+;W[ej]WL[1212.48]
+;B[eg]BL[30]OB[4]
+;W[hg]WL[1198.976]C[Rutgers2 [?\]: b12 works for ko?
+UVirginia1 [-\]: omg what did our Korean man do?
+]
+;B[cg]BL[30]OB[3]C[Rutgers2 [?\]: nuuuu
+]
+;W[dh]WL[1166.491]
+;B[bg]BL[30]OB[3]
+;W[ae]WL[1138.467]
+;B[af]BL[30]OB[3]
+;W[bf]WL[1125.16]
+;B[hf]BL[30]OB[3]
+;W[ie]WL[1121.231]
+;B[be]BL[30]OB[3]
+;W[ad]WL[1104.848]
+;B[bh]BL[30]OB[3]
+;W[bi]WL[1103.144]
+;B[ah]BL[30]OB[3]
+;W[bf]WL[1101.342]C[CGLadmin [-\]: this is quite an epic deciding match
+]
+;B[bj]BL[30]OB[3]C[UVirginia2 [-\]: if w just seals him in, it's very close
+]
+;W[ci]WL[1093.148]
+;B[be]BL[30]OB[3]
+;W[bp]WL[1091.505]
+;B[cs]BL[30]OB[3]
+;W[bf]WL[1088.099]
+;B[ee]BL[30]OB[3]
+;W[fe]WL[1081.63]
+;B[be]BL[30]OB[3]
+;W[ds]WL[1076.369]
+;B[es]BL[30]OB[3]
+;W[bf]WL[1074.097]
+;B[dg]BL[30]OB[2]C[Omniscient [2k?\]: B has a whole bunch of internal threats
+]
+;W[de]WL[1068.757]C[Omniscient [2k?\]: there's one
+]
+;B[be]BL[30]OB[2]
+;W[ke]WL[1066.88]C[CGLadmin [-\]: ouch
+UVirginia2 [-\]: yeah
+UVirginia2 [-\]: was wondering if he would see this
+CGLadmin [-\]: can b give em up?
+Omniscient [2k?\]: i say ignore
+]
+;B[le]BL[30]OB[1]C[UVirginia2 [-\]: i dont think he can afford it
+Omniscient [2k?\]: ooh
+]
+;W[bf]WL[1053.792]C[CGLadmin [-\]: its hard to imagine w losing i think
+Omniscient [2k?\]: O11's a threat
+]
+;B[ni]BL[30]OB[1]C[UVirginia2 [-\]: if he somehow lives and invades into the a8 area, b can win
+UVirginia2 [-\]: w maybe should ignore
+]
+;W[be]WL[1005.001]C[CGLadmin [-\]: ooh
+UVirginia2 [-\]: yeah
+]
+;B[oe]BL[30]OB[1]C[DeAnza4 [-\]: OH SNAP.
+UVirginia2 [-\]: now he either gets the m16 cut, or saves his stones
+]
+;W[ld]WL[983.271]C[Rutgers1 [-\]: please do not make comments here, it might influence the players.
+Omniscient [2k?\]: i think it's over =/
+]
+;B[me]BL[30]OB[1]C[Omniscient [2k?\]: they can't see chat
+]
+;W[jc]WL[981.34]C[Omniscient [2k?\]: unless someone is relaying it to them from another computer
+Jfulbert [11k\]: they can't see the chat while they're playing
+Rutgers1 [-\]: Yes, it is over
+DeAnza5 [-\]: While they are playing, they cannot see this chat, so it is no need to worry
+]
+;B[ib]BL[30]OB[1]
+;W[kc]WL[979.051]C[DeAnza5 [-\]: They do see it after the game, though
+]
+;B[sd]BL[30]OB[1]
+;W[rb]WL[963.417]C[Rutgers1 [-\]: Thanks for telling me that. I am new to KGS
+]
+;B[bs]BL[30]OB[1]C[UVirginia2 [-\]: kgs=kibbitzing go server
+]
+;W[aq]WL[953.249]
+;B[oa]BL[30]OB[1]
+;W[pa]WL[939.588]C[UVirginia2 [-\]: n8 is biggest move
+]
+;B[em]BL[30]OB[1]C[UVirginia1 [-\]: I'm getting a heart attack...
+]
+;W[dm]WL[902.621]
+;B[ek]BL[30]OB[1]
+;W[dl]WL[899.924]C[UVirginia2 [-\]: something would have to go epicly bad for w to lose at this point
+]
+;B[dk]BL[30]OB[1]
+;W[ck]WL[896.908]
+;B[gm]BL[30]OB[1]
+;W[ll]WL[879.489]
+;B[pf]BL[30]OB[1]
+;W[ml]WL[867.185]C[Omniscient [2k?\]: like the R18 tesuji?
+]
+;B[li]BL[30]OB[1]C[UVirginia2 [-\]: yeah
+]
+;W[na]WL[863.635]C[UVirginia2 [-\]: though even that might not be enough
+UVirginia2 [-\]: depends what w got from the ko
+]
+;B[cl]BL[30]OB[1]
+;W[bk]WL[855.559]
+;B[np]BL[30]OB[1]
+;W[sc]WL[847.874]
+;B[se]BL[30]OB[1]
+;W[mb]WL[845.249]C[UVirginia2 [-\]: huzzah
+]
+;B[mc]BL[30]OB[1]
+;W[lb]WL[843.534]
+;B[jb]BL[30]OB[1]
+;W[kb]WL[832.943]
+;B[da]BL[30]OB[1]
+;W[ca]WL[830.419]
+;B[ea]BL[30]OB[1]
+;W[ns]WL[826.784]
+;B[or]BL[30]OB[1]
+;W[no]WL[824.41]C[UVirginia2 [-\]: guys in case, leader dude said to remind everyone that we play again at 3
+]
+;B[ka]BL[30]OB[1]
+;W[la]WL[821.575]
+;B[ja]BL[30]OB[1]
+;W[md]WL[816.562]
+;B[nd]BL[30]OB[1]
+;W[lc]WL[813.383]C[UVirginia4 [-\]: k
+]
+;B[op]BL[30]OB[1]
+;W[ok]WL[808.528]
+;B[om]BL[30]OB[1]
+;W[ar]WL[803.143]
+;B[ds]BL[30]OB[1]
+;W[en]WL[785.015]C[UVirginia2 [-\]: w only has one group
+]
+;B[]BL[30]OB[1]
+;W[]WL[785.007]TW[aa][ba][ma][oa][qa][ra][sa][ab][qb][sb][ac][bc][cc][dc][jd][kd][ee][ge][he][af][cf][df][ef][ff][gf][hf][ag][bg][cg][dg][eg][fg][gg][ah][bh][eh][fh][gh][hh][ih][ai][di][fi][gi][aj][bj][cj][ak][al][bl][cl][am][bm][cm][lm][mm][an][bn][cn][mn][ao][bo][co][do][ko][lo][ap][lp][bq][cq][jq][kq][jr][kr][lr][js][ks][ls]TB[ga][ha][ia][fb][od][pe][qe][mf][of][rf][sf][lg][og][qg][rg][sg][lh][mh][nh][oh][qh][rh][sh][pi][qi][ri][si][rj][sj][qk][sk][pl][rl][sl][qm][rm][sm][qn][rn][sn][go][po][qo][ro][so][gp][rp][sp][qq][rq][sq][qr][rr][sr][fs][ps][qs][rs][ss]C[DeAnza2 [-\]: a very big one
+Rutgers3 [-\]: thanks
+CGLadmin [-\]: great game
+UVirginia3 [-\]: gg
+DeAnza2 [-\]: claps
+DeAnza4 [-\]: excellent game, guys.
+Jfulbert [11k\]: gg
+UVirginia3 [-\]: didn't realize all this chat was going on
+CGLadmin [-\]: UVA advances to the next round!  uva vs Brown at 3pm
+UVirginia4 [-\]: brown？
+Northeast2 [-\]: i thought we play brown
+CGLadmin [-\]: oh wait i'm sorry
+UVirginia2 [-\]: princeton
+UVirginia4 [-\]: princeton？
+CGLadmin [-\]: yes, uva- princeton
+UVirginia4 [-\]: k
+Rutgers1 [-\]: congratulations. princeton is strong
+Rutgers1 [-\]: good luck
+UVirginia4 [-\]: thx.
+UVirginia4 [-\]: nice game
+])

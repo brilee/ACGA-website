@@ -1,0 +1,304 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]HA[2]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[Cornell2]PB[CGLBrand2]DT[2012-02-18]PC[The KGS Go Server at http://www.gokgs.com/]AB[pd][dp]RE[W+Resign]
+;W[pp]WL[1796.184]C[Cornell2 [-\]: k, now have a good game
+]
+;B[dc]BL[1795.261]C[CGLBrand2 [-\]: good game
+]
+;W[ce]WL[1791.014]
+;B[fd]BL[1785.86]
+;W[cc]WL[1784.242]
+;B[cb]BL[1777.827]
+;W[dd]WL[1778.143]
+;B[ec]BL[1754.728]
+;W[bc]WL[1768.051]
+;B[jc]BL[1721.073]
+;W[fq]WL[1764.342]
+;B[cn]BL[1716.739]
+;W[dr]WL[1759.89]
+;B[qn]BL[1675.609]
+;W[np]WL[1747.421]
+;B[pj]BL[1662.751]
+;W[cl]WL[1737.091]
+;B[cq]BL[1653.347]
+;W[el]WL[1728.522]C[Cornell2 [-\]: ?
+Cornell2 [-\]: sorry
+Cornell2 [-\]: it's the other game...
+]
+;B[fo]BL[1576.563]
+;W[hp]WL[1666.903]
+;B[ho]BL[1563.436]
+;W[io]WL[1664.028]
+;B[gp]BL[1532.044]
+;W[gq]WL[1644.681]
+;B[ip]BL[1494.042]
+;W[hq]WL[1641.289]
+;B[in]BL[1491.875]
+;W[jo]WL[1639.86]
+;B[hn]BL[1490.498]
+;W[jn]WL[1637.039]
+;B[di]BL[1471.353]
+;W[fi]WL[1629.242]
+;B[dk]BL[1464.32]
+;W[dl]WL[1627.255]
+;B[fj]BL[1438.344]
+;W[ej]WL[1609.108]
+;B[ek]BL[1407.926]
+;W[fk]WL[1605.518]
+;B[gj]BL[1406.411]
+;W[dj]WL[1602.169]
+;B[ei]BL[1403.386]
+;W[ck]WL[1596.903]
+;B[fh]BL[1400.423]
+;W[jd]WL[1530.769]
+;B[gi]BL[1386.765]C[CGLBrand2 [-\]: ?
+austere: cornell2
+austere: david
+austere: you were late
+austere: i was playing
+austere: can you log out?
+austere: close and leave, don't hit forfeit
+austere: david, are you here?:
+austere: david?
+]
+;W[qf]WL[1305.643]C[austere: david, stop
+austere: david? are you here?
+austere: david sim
+austere: white: identify your self
+austere: ...hoy
+]
+;B[pf]BL[1321.218]C[Cornell2 [-\]: I am really sorry for coming late
+]
+;W[qc]WL[1295.726]C[austere: this is my game now!@
+]
+;B[pc]BL[1307.293]C[austere: stop playing
+]
+;W[qd]WL[1293.234]
+;B[qe]BL[1305.496]
+;W[re]WL[1291.806]
+;B[pe]BL[1304.161]
+;W[rf]WL[1290.171]
+;B[kd]BL[1294.44]
+;W[pg]WL[1280.789]C[austere: david!
+austere: omg
+]
+;B[je]BL[1266.805]
+;W[og]WL[1271.031]C[austere: david, you are playing with my name
+]
+;B[qb]BL[1229.489]C[austere: change the the name at least
+]
+;W[rb]WL[1263.187]
+;B[pb]BL[1225.842]
+;W[qo]WL[1259.546]C[jared [?\]: tell the TD, don't interrupt the game
+austere: jared, this is my gaem
+jared [?\]: so tell the TD
+]
+;B[pn]BL[1188.042]C[austere: i called david like 3 times
+]
+;W[pl]WL[1210.643]
+;B[ql]BL[1176.303]
+;W[qk]WL[1184.34]
+;B[pk]BL[1171.186]
+;W[qm]WL[1182.919]
+;B[ol]BL[1162.267]
+;W[rl]WL[1180.086]
+;B[oo]BL[1119.134]
+;W[rn]WL[1165.194]
+;B[jm]BL[1077.459]
+;W[om]WL[1148.989]
+;B[pm]BL[1059.864]
+;W[ql]WL[1144.623]
+;B[nm]BL[1051.733]
+;W[ok]WL[1143.154]
+;B[on]BL[1049.817]
+;W[oj]WL[1141.774]
+;B[op]BL[1043.634]
+;W[oq]WL[1139.325]
+;B[nq]BL[1033.773]
+;W[mq]WL[1127.434]
+;B[nr]BL[1018.289]
+;W[pq]WL[1104.164]
+;B[mp]BL[1014.696]
+;W[lp]WL[1102.724]
+;B[mo]BL[1007.663]
+;W[lq]WL[1101.115]
+;B[bb]BL[976.152]
+;W[bg]WL[727.213]
+;B[ko]BL[836.446]
+;W[jp]WL[711.383]
+;B[bi]BL[772.186]
+;W[bm]WL[584.611]
+;B[bd]BL[633.418]
+;W[ad]WL[513.556]
+;B[be]BL[586.446]
+;W[bf]WL[496.961]
+;B[bh]BL[530.963]
+;W[dg]WL[382.34]
+;B[ef]BL[516.43]
+;W[ch]WL[359.904]
+;B[ci]BL[511.853]
+;W[df]WL[358.151]
+;B[kn]BL[501.166]
+;W[nf]WL[340.086]
+;B[md]BL[488.363]
+;W[nd]WL[333.87]
+;B[nc]BL[486.462]
+;W[me]WL[332.569]
+;B[le]BL[471.827]
+;W[kj]WL[295.228]
+;B[nj]BL[455.775]
+;W[oi]WL[288.985]
+;B[nk]BL[400.245]
+;W[lh]WL[208.187]
+;B[li]BL[347.737]
+;W[kh]WL[156.894]
+;B[ni]BL[322.936]
+;W[lf]WL[130.597]
+;B[oh]BL[310.329]
+;W[pi]WL[98.293]
+;B[ph]BL[300.444]
+;W[qi]WL[94.401]
+;B[nh]BL[211.231]
+;W[kf]WL[62.27]
+;B[qh]BL[185.574]
+;W[qg]WL[58.744]
+;B[ri]BL[183.822]
+;W[qj]WL[57.334]
+;B[mg]BL[173.295]
+;W[mf]WL[54.142]
+;B[ki]BL[141.926]
+;W[jf]WL[49.854]
+;B[id]BL[131.848]
+;W[ji]WL[34.795]
+;B[jj]BL[123.407]
+;W[ij]WL[29.483]
+;B[jk]BL[120.804]
+;W[ii]WL[26.268]
+;B[bn]BL[92.731]
+;W[gl]WL[30]OW[5]
+;B[cr]BL[79.949]
+;W[er]WL[30]OW[5]
+;B[lo]BL[41.268]
+;W[iq]WL[30]OW[5]
+;B[ms]BL[30]OB[5]
+;W[or]WL[30]OW[4]
+;B[ks]BL[30]OB[5]
+;W[mr]WL[30]OW[4]
+;B[no]BL[30]OB[5]
+;W[jr]WL[30]OW[4]
+;B[ik]BL[30]OB[5]
+;W[hk]WL[30]OW[4]
+;B[if]BL[30]OB[5]
+;W[ig]WL[30]OW[4]
+;B[hg]BL[30]OB[5]
+;W[ee]WL[30]OW[4]
+;B[fe]BL[30]OB[5]
+;W[hf]WL[30]OW[4]
+;B[ie]BL[30]OB[5]
+;W[gg]WL[30]OW[4]
+;B[hh]BL[30]OB[5]
+;W[eg]WL[30]OW[4]
+;B[ff]BL[30]OB[5]
+;W[fg]WL[30]OW[4]
+;B[gf]BL[30]OB[5]
+;W[il]WL[30]OW[4]
+;B[jl]BL[30]OB[5]
+;W[an]WL[30]OW[4]
+;B[ao]BL[30]OB[5]
+;W[am]WL[30]OW[4]
+;B[bp]BL[30]OB[5]
+;W[cs]WL[30]OW[4]
+;B[bs]BL[30]OB[5]
+;W[ds]WL[30]OW[4]
+;B[rh]BL[30]OB[5]
+;W[br]WL[30]OW[4]
+;B[ar]BL[30]OB[5]
+;W[as]WL[30]OW[4]
+;B[cm]BL[30]OB[5]
+;W[bk]WL[30]OW[4]
+;B[bs]BL[30]OB[5]
+;W[mc]WL[30]OW[4]
+;B[ld]BL[30]OB[5]
+;W[as]WL[30]OW[4]
+;B[ak]BL[30]OB[5]
+;W[aj]WL[30]OW[4]
+;B[bs]BL[30]OB[5]
+;W[lr]WL[30]OW[4]
+;B[hj]BL[30]OB[5]
+;W[qa]WL[30]OW[3]
+;B[ih]BL[30]OB[5]
+;W[jh]WL[30]OW[3]
+;B[rd]BL[30]OB[4]
+;W[rc]WL[30]OW[3]
+;B[im]BL[30]OB[4]
+;W[as]WL[30]OW[3]
+;B[ng]BL[30]OB[4]
+;W[of]WL[30]OW[3]
+;B[ra]BL[30]OB[4]
+;W[sa]WL[30]OW[3]
+;B[pa]BL[30]OB[4]
+;W[nb]WL[30]OW[3]
+;B[oc]BL[30]OB[4]
+;W[mb]WL[30]OW[3]
+;B[lb]BL[30]OB[4]
+;W[oe]WL[30]OW[3]
+;B[ma]BL[30]OB[4]
+;W[od]WL[30]OW[3]
+;B[lc]BL[30]OB[4]
+;W[oa]WL[30]OW[3]
+;B[ra]BL[30]OB[4]
+;W[gh]WL[30]OW[3]
+;B[hi]BL[30]OB[4]
+;W[qa]WL[30]OW[3]
+;B[ae]BL[30]OB[3]
+;W[ob]WL[30]OW[3]
+;B[ac]BL[30]OB[3]
+;W[cd]WL[30]OW[3]C[CGLBrand2 [-\]: thanks
+CGLBrand2 [-\]: haha 
+Cornell2 [-\]: well I was lucky
+Cornell2 [-\]: austere are you joe?
+Cornell2 [-\]: I
+Cornell2 [-\]: I'm so sorry
+Cornell2 [-\]: I couldn't see you talking to me
+Cornell2 [-\]: i don't know why but somehow the chats weren't apperaed on my screen
+Cornell2 [-\]: until the end of the game
+austere: oh. that's fine
+Cornell2 [-\]: and I'm really sorry for being late
+austere: i thought you could still hear us in free games.
+austere: i guess not, the admins must have done something
+Cornell2 [-\]: ah
+Cornell2 [-\]: well
+austere: it's ok. 
+Cornell2 [-\]: i was even further frustrated as I was heading for a defeat
+Cornell2 [-\]: oh, gosh
+austere: yeah, you went in for 3-3..i never would do that  in this case
+austere: the outside is so huge
+Cornell2 [-\]: well
+Cornell2 [-\]: um
+Cornell2 [-\]: honsetly i just woke up when I joiend the game
+Cornell2 [-\]: joined
+Cornell2 [-\]: *
+Cornell2 [-\]: and I didn't know that i was going to play
+Cornell2 [-\]: i mean
+Cornell2 [-\]: you were playing already
+Cornell2 [-\]: i wasnt kinda prepared
+Cornell2 [-\]: to get  into the game
+austere: yeah, you logged in as cornell2.
+Cornell2 [-\]: anyway
+Cornell2 [-\]: that 3,3 wasn a good decision
+Cornell2 [-\]: really
+Cornell2 [-\]: i regretted that move every time
+austere: yeah, i think it's just too huge outside
+Cornell2 [-\]: i was concerned about the two groups on the left side
+Cornell2 [-\]: so i hesitated to make a bold move
+austere: well. good effort
+Cornell2 [-\]: hows the score?
+austere: imma change the meeting to tuesday
+austere: cornell1, 2 won
+austere: 3 was close
+Cornell2 [-\]: ho
+Cornell2 [-\]: oh
+Cornell2 [-\]: did we play only three games?
+austere: no, the other 3 lost
+Cornell2 [-\]: oh
+])

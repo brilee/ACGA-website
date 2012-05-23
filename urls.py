@@ -8,7 +8,7 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('CGA.views',
+urlpatterns = patterns('CGA.CGL.views',
     # Example:
     #(r'^login/$', 'auth.views.login_user'),
 
@@ -17,11 +17,9 @@ urlpatterns = patterns('CGA.views',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-    (r'^$', direct_to_template, {
-        'template': 'home.html' }
+    (r'^$', 'display_home'
     ),
-    (r'^home/$', direct_to_template, {
-	'template': 'home.html'	}
+    (r'^home/$', 'display_home'
     ),
     (r'^links/$', direct_to_template, {
 	'template': 'links.html'}
@@ -32,12 +30,25 @@ urlpatterns = patterns('CGA.views',
     (r'^about/$', direct_to_template, {
 	'template': 'about.html'}
     ),
-    (r'^tournaments/$', direct_to_template, {
-	'template': 'tournaments.html'}
+    (r'^CGL/$', 'display_CGL'
     ),
-    (r'^members/$', direct_to_template, {
-	'template': 'members.html'}
+    (r'^CGL/results/$', 'display_results'
     ),
+    (r'^CGL/results/([A-Za-z_-]{1,50})/$', 'display_season'
+    ),
+    (r'^CGL/games/([0-9]{1,4})/$', 'display_game'
+    ),
+    (r'^members/$', 'display_members'
+    ),
+    (r'^members/([A-Za-z_-]{1,50})/$', 'display_school'
+    ),                       
+    (r'^news/$', 'display_news'
+    ),
+    (r'^news/([0-9]{1,4})/$', 'display_post'
+    ),
+    (r'^allemail/$', 'display_emails'
+    ),
+                       
 )
 
 urlpatterns += patterns('',
