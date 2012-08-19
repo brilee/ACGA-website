@@ -1,1 +1,1 @@
-current_season_name = 'Season One Championship'
+current_season_name = 'Season Two'

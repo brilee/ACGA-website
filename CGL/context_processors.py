@@ -2,7 +2,8 @@
 # under "TEMPLATE_CONTEXT_PROCESSORS".
 
 
-from models import Round, Newsfeed, Season
+from models import Round, Season
+from CGA.ACGA.models import Newsfeed
 from settings import current_season_name
 
 def current_season(request):

@@ -7,6 +7,14 @@ from settings import current_season_name
 import datetime
 import os
 
+def wrap_tag(text, tag, extras=False):
+    if extras:
+        open_tag = '<' + tag + ' ' + extras + '>'
+    else:
+        open_tag = '<' + tag + '>'
+    close_tag = '</' + tag + '>'
+
+    return open_tag + text + close_tag
 
 #class SchoolUser(models.Model):
 #    user = models.ForeignKey(auth_models.User, unique=True)
@@ -59,6 +67,8 @@ class Season(models.Model):
     slug_name = models.SlugField(blank=True, editable=False)
     schoolyear = models.CharField(max_length = 40, help_text="2011-2012, etc.")
     schools = models.ManyToManyField(School, through='Membership')
+    html = models.TextField(blank=True, help_text="Any custom HTML for this season you'd like to appear in the archives")
+    description = models.TextField(blank=True, help_text="Any historical notes about this season you'd like to appear in the archives")
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
@@ -182,17 +192,4 @@ class Forfeit(models.Model):
 
     def __unicode__(self):
         return unicode('%s vs %s on %s, board %s' %(self.match.school1, self.match.school2, self.match.round.date, self.board))
-
-class Newsfeed(models.Model):
-    title = models.CharField(max_length=100)
-    tagline = models.CharField(max_length=100, help_text = 'This text appears in the recent announcements on the sidebar')
-    preview = models.TextField(help_text = 'The first few sentences of the post')
-    content = models.TextField()
-    pub_date = models.DateTimeField(auto_now_add=True)
-
-    def get_date(self):
-        return unicode(self.pub_date.strftime('%Y-%B-%d'))
-    
-    def __unicode__(self):
-        return unicode('%s published on %s' % (self.title, self.pub_date.strftime('%Y-%B-%d')))
 

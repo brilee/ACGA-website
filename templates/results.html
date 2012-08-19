@@ -6,20 +6,16 @@
 
 
 {% block maintext %}
+
 <h2> Standings: </h2>
-<iframe src="http://challonge.com/CGLSeasonOneChampionship/module?width=600&height=600"
-        width="680"
-        height="600"
-        frameborder="0" scrolling="no" allowtransparency="true">
-</iframe>
-<!-- Temporarily commented out for Season One Championship
+
 <ul>
 	<li><strong>School Name (Wins-Losses-Ties)</strong></li>
 {% for membership in all_memberships %}
 	<li><Strong>{{membership.school.name}} ({{membership.num_wins}} - {{membership.num_losses}} - {{membership.num_ties}})</STRONG></li>
 {% endfor %} 
 </ul>
-!-->
+
 <hr />
 
 <h3>Quick Link to Rounds</h3>
