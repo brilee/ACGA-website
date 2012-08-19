@@ -3,4 +3,4 @@
 *.mo
 *.po
 *~
-settings.py
+sensitive_data.py
