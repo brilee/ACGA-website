@@ -1,0 +1,32 @@
+{% extends "sidebar_ACGA.html" %}
+
+{% block BodyID %}
+<body id="home">
+{% endblock BodyID %}
+{% block title %}{% endblock title %}
+
+{% block maintext %}
+
+
+<img style="float:right;margin:15px 0px 0px 20px;" src="../site_media/FrontMontage.jpg" alt="Sorry, can't display this image!"/>
+<h1>Welcome to the ACGA!</h1>
+<hr />
+{% for post in latest_posts %}
+<div class='newsfeed'>
+	<h4>{{post.get_date}}</h4><h3>{{post.title}}</h3>
+	{{post.preview|safe|linebreaks}}
+	<p><a href="/news/{{post.id}}">Read more...</a></p>
+</div>
+<hr />
+{% endfor %}
+
+<p>The <strong>American Collegiate Go Association</strong> is a national network of schools and students dedicated to strengthening the American Go community.</p>
+
+<p>We run the Collegiate Go League, the first online competitive league for college Go clubs. It is hosted on KGS, one of the most popular online go servers. <a href="/tournaments/"> Find out more.</a> You can sign your school up <a href="/contact/">here</a> - we have matches of one sort or another running throughout the year, so you
+can get started anytime!</p>
+
+<p> Check out these <a
+href="/links/">links</a> for more information about the game of Go, online servers, tournaments, game collections, and more! </p>
+
+{% endblock maintext %}
+

@@ -1,0 +1,35 @@
+{% extends "sidebar_ACGA.html" %}
+
+{% block BodyID %}
+<body id="members">
+{% endblock BodyID %}
+
+{% block title %}Members{% endblock title %}
+
+{% block maintext %}
+<div id="members">
+<br />
+<h3>New members:</h3>
+<p>We're delighted to welcome
+
+{% for school in recent_schools %} 
+	{% if not forloop.last %}<strong>{{school.name}},</strong>
+	{% else %}and <strong>{{school.name}}</strong>
+	{% endif %}
+{% endfor%} 
+
+to the CGL. Good Luck!</p>
+
+{% for school in all_schools %}
+<h3><a href="http://college-go.org/members/{{school.slug_name}}">{{school.name}}</a></h3></li>
+<ul>
+	<li>Club President: {{school.club_president}}</li>
+	<li>Team Captain: {{school.captain}}</li>
+	<li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
+</ul>
+{% empty %}
+<p>No schools found in database</p>
+{% endfor %}
+
+</div>
+{% endblock maintext %}

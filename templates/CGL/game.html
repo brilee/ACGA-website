@@ -1,0 +1,21 @@
+{% extends "sidebar_CGL.html" %}
+
+{% block javascript %}
+<script src="/site_media/eidogo-player/js/all.compressed.js"></script>
+{% endblock javascript %}
+
+
+{% block BodyID %}
+<body id="CGL">
+{% endblock BodyID %}
+
+{% block title %}Viewing {{game.school1_player.name}} ({{game.school1_player.get_rank_display}}) vs. {{game.school2_player.name}} ({{game.school2_player.get_rank_display}}){% endblock title %}
+
+{% block maintext %}
+
+
+<div class="eidogo-player-auto" sgf="{{game.gamefile.url}}"></div>
+
+<p><a href="{{game.gamefile.url}}">Download game</a></p>
+
+{% endblock maintext %}
