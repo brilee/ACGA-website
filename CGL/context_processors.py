@@ -10,11 +10,9 @@ def current_season(request):
     current_season = Season.get(name=current_season_name)
     return {'current_season': current_season}
 
-def sidebar(request):
-    sidebar_latest_news = Newsfeed.objects.order_by('-pub_date')[:3]
+def sidebar_CGL(request):
     sidebar_upcoming_round = Round.objects.get_next_round()
     sidebar_recent_rounds = Round.objects.get_recent_rounds(2)
-    return {'sidebar_latest_news': sidebar_latest_news,
-            'sidebar_upcoming_round': sidebar_upcoming_round,
+    return {'sidebar_upcoming_round': sidebar_upcoming_round,
             'sidebar_recent_rounds': sidebar_recent_rounds,}
 

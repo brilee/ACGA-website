@@ -5,10 +5,6 @@ from django.shortcuts import render_to_response, get_object_or_404
 from models import School, Season, Round, Membership, Game
 from settings import current_season_name
 
-def display_CGL(request):
-    return render_to_response('CGL.html',
-                              context_instance=RequestContext(request))
-
 def display_roster(request):
     school_name = school_name.strip().replace('_', ' ').replace('-', ' ')
     s = get_object_or_404(School, name=school_name)

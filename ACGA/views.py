@@ -45,5 +45,6 @@ def display_post(request, post_id):
 def display_emails(request):
     all_schools = School.objects.all()
     return render_to_response('all_emails.html',
-                              {'all_schools': all_schools})
+                              {'all_schools': all_schools},
+                              context_instance=RequestContext(request))
 
