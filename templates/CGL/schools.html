@@ -1,0 +1,31 @@
+{% extends "base_CGL.html" %}
+
+{% block PageID %}<div id="schools">{% endblock PageID %}
+
+{% block title %}Schools{% endblock title %}
+
+{% block maintext %}
+<h3>New schools:</h3>
+<p>We're delighted to welcome
+
+{% for school in recent_schools %} 
+	{% if not forloop.last %}<strong>{{school.name}},</strong>
+	{% else %}and <strong>{{school.name}}</strong>
+	{% endif %}
+{% endfor%} 
+
+to the CGL.</p>
+
+{% for school in all_schools %}
+<h3><a href="/CGL/schools/{{school.slug_name}}">{{school.name}}</a></h3></li>
+<ul>
+	<li>Club President: {{school.club_president}}</li>
+	<li>Team Captain: {{school.captain}}</li>
+	<li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
+	<li>Meeting information: {{school.meeting_info}}</li>
+</ul>
+{% empty %}
+<p>No schools found in database</p>
+{% endfor %}
+
+{% endblock maintext %}

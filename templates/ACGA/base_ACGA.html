@@ -1,0 +1,42 @@
+{% extends "basebase.html" %}
+
+{% block BodyID %} <body id="ACGA"> {% endblock BodyID %}
+
+{% block header %}
+<div id="menu">
+	<ul>
+		<li><a href="/" id="homenav">ACGA</a></li>
+		<li><a href="/CGL/" id="CGLnav">CGL</a></li>
+		<li><a href="/members/" id="membersnav">Members</a></li>
+		<li><a href="/news/" id="newsnav">News</a></li>
+		<li><a href="/ing/" id="ingnav">Ing Foundation</a></li>
+		<li><a href="/about/" id="aboutnav">About</a></li>
+		<li><a href="/contact/" id="contactnav">Contact us</a></li>
+	</ul>
+</div>
+<!-- end #menu -->
+{% endblock header %}
+
+{% block logo %}
+<div id="logo" >
+	<h1><a href="/home/">American Collegiate Go Association </a></h1>
+	<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
+</div>
+<!-- end #logo -->
+{% endblock logo %}
+
+{% block sidebar %}
+<ul>
+	<li>
+		<h2>Latest News</a></h2>
+		<ul>
+{% for news in sidebar_latest_news %}
+			<li><a href="/news/{{news.id}}">{{news.tagline}}</a></li>
+{% endfor %}
+			<li><a href="/contact/">Sign your school up to participate this season</a></li>
+
+		</ul>
+	</li>
+</ul>
+
+{% endblock %}

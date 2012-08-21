@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Liberty
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20110810
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ACGA</title>
+<meta name="Go Weiqi Baduk Collegiate Association" content="" />
+<meta name="Website for the American Collegiate Go Association, a new group dedicated to teaching, playing, and supporting Go in university communities and beyond." content="" />
+<link rel="shortcut icon" href="/site_media/favicon.ico" type="image/x-icon"/>
+<link href="/site_media/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26829521-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% block javascript %}
+{% endblock %}
+
+</head>
+{% block BodyID %}
+<body>
+{% endblock BodyID %}
+{% block PageID %}
+<div>
+{% endblock PageID %}
+<div id="wrapper">
+	<div id="header">
+		{% block header %}
+		<div id="menu">
+			<ul>
+				<li><a href="/" id="homenav">ACGA</a></li>
+				<li><a href="/CGL/" id="CGLnav">CGL</a></li>
+				<li><a href="/members/" id="membersnav">Members</a></li>
+				<li><a href="/news/" id="newsnav">News</a></li>
+				<li><a href="/ing/" id="ingnav">Ing Foundation</a></li>
+				<li><a href="/about/" id="aboutnav">About</a></li>
+				<li><a href="/contact/" id="contactnav">Contact us</a></li>
+			</ul>
+		</div>
+		{% endblock header %}
+	</div>
+	<!-- end #header -->
+		{% block logo %}
+	<div id="logo" >
+		<h1><a href="/home/">American Collegiate Go Association </a></h1>
+		<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
+	</div>
+		{% endblock logo %}
+	<div id="page">
+        {% block page %}
+		<h1 class="title">{% block title %} <p> Default Title </p>{% endblock %}</h1>
+        <br />
+        <br />
+        <div id="content" >
+        {% block maintext %}
+        <p>Default maintext</p>		
+        {% endblock maintext %}
+        </div>
+        <!-- end #content-->
+        
+        <div id="sidebar">
+            {% block sidebar %}
+            <p>Default sidebar</p>
+            {% endblock sidebar %}
+        </div>
+        <!-- end #sidebar-->
+
+        <div style="clear: both;">&nbsp;</div>	
+	{% endblock page %}
+    </div>
+	<!-- end #page -->
+	
+    <div id="footer">
+		<p>Copyright (c) 2012 American Collegiate Go Association. All rights reserved. Adapted from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+</div>
+<!-- end #wrapper -->
+</div>
+<!-- end #pageID -->
+</body>
+</html>
