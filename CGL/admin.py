@@ -15,8 +15,8 @@ class SchoolAdmin (GuardedModelAdmin):
 class PlayerAdmin (GuardedModelAdmin):
     pass
 
-admin.site.register(School, SchoolAdmin)
-admin.site.register(Player, PlayerAdmin)
+admin.site.register(School)
+admin.site.register(Player)
 admin.site.register(Season)
 admin.site.register(Membership)
 admin.site.register(Round)

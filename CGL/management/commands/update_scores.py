@@ -3,29 +3,9 @@ from CGL.models import *
 from CGL.settings import current_season_name
 
 class Command(BaseCommand):
-    args = 'None'
+    args = '<Season Name>'
     help = '''Recalculates all player records, match scores, and school records
-            for the current season only'''
-
-    def update_player_record(self, player):
-        wins = 0
-        losses = 0
-        # player was player 1 of a game
-        for game in player.game_school1_player.all():
-            if game.winner == 'School1':
-                wins += 1
-            else:
-                losses += 1
-        # player was player 2 of a game
-        for game in player.game_school2_player.all():
-            if game.winner == 'School1':
-                losses += 1
-            else:
-                wins += 1
-                
-        player.num_wins = wins
-        player.num_losses = losses
-        player.save()
+            for the requested season. Defaults to current season'''
 
     def update_match_and_schools(self, current_season):
         # reset all scores for this season
@@ -69,13 +49,36 @@ class Command(BaseCommand):
                 mem1.save()
                 mem2.save()
                 
+    def update_player_record(self, player):
+        wins = 0
+        losses = 0
+        # player was player 1 of a game
+        for game in player.game_school1_player.all():
+            if game.winner == 'School1':
+                wins += 1
+            else:
+                losses += 1
+        # player was player 2 of a game
+        for game in player.game_school2_player.all():
+            if game.winner == 'School1':
+                losses += 1
+            else:
+                wins += 1
+                
+        player.num_wins = wins
+        player.num_losses = losses
+        player.save()
     
     def handle(self, *args, **options):
-        current_season = Season.objects.get(name=current_season_name)
-        self.stdout.write('Current season match records updated\n')
+        if not args:
+            season = Season.objects.get(name=current_season_name)
+        else:
+            season = Season.objects.get(name=args[0])
+        self.stdout.write('Updating %s\n' % (season.name))
+        self.update_match_and_schools(season)
+        self.stdout.write('%s match records updated\n' % (season.name))
         self.stdout.write('School records updated from match results\n')
-        self.update_match_and_schools(current_season)
-        self.stdout.write('All player records updated\n')
         for player in Player.objects.all():
             self.update_player_record(player)
+        self.stdout.write('All player records updated\n')
         self.stdout.write('Done!\n')

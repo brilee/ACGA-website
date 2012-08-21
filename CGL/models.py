@@ -8,6 +8,11 @@ import datetime
 import os
 
 def wrap_tag(text, tag, extras=False):
+    '''
+    Wraps an html tag around some text.
+    Tag should be specified without brackets.
+    Extras should be given as raw text - 'id="someID"'
+    '''
     if extras:
         open_tag = '<' + tag + ' ' + extras + '>'
     else:
@@ -58,6 +63,12 @@ class Player(models.Model):
 
     def __unicode__(self):
         return unicode("%s - %s" %(self.school.name, self.name))
+
+    def name_and_rank(self):
+        return unicode('%s, %s' % (self.name, self.get_rank_display()))
+
+    def browser_display_link(self):
+        return unicode('/CGL/players/%s' % (self.slug_name))
 
     class Meta:
         ordering = ['school', 'name', 'rank']
@@ -156,19 +167,56 @@ class Game(models.Model):
         return unicode('/CGL/games/%s' % (self.id))
     
     def display_result(self):
-        contents = (self.board, self.browser_display_link(), self.school1_player.name, self.school1_player.get_rank_display(), self.school2_player.name, self.school2_player.get_rank_display())
-        before = '<li>Board %s: <a href="%s">'
-        after = '</a></li>'
-        if self.winner == 'School1':
-            if self.white_school == 'School1':
-                return unicode((before + '<b>%s, %s (W)</b> vs. %s, %s (B)' + after) % contents)
-            else:
-                return unicode((before + '<b>%s, %s (B)</b> vs. %s, %s (W)' + after) % contents)
+        '''
+        Generates a nice representation of the game, with the format:
+        School_1 player vs. School_2 player [sgf link]
+        with the winner's name in bold.
+        '''
+        player1 = self.school1_player
+        player2 = self.school2_player
+        
+        p1 = player1.name_and_rank()
+        p2 = player2.name_and_rank()
+        
+        if self.white_school == 'School1':
+            p1 += ' (W)'
+            p2 += ' (B)'
         else:
-            if self.white_school == 'School2':
-                return unicode((before + '%s, %s (W) vs. <b>%s, %s (B)</b>' + after) % contents)
-            else:
-                return unicode((before + '%s, %s (B) vs. <b>%s, %s (W)</b>' + after) % contents)
+            p2 += ' (W)'
+            p1 += ' (B)'
+
+        if self.winner == 'School1':
+            p1 = wrap_tag(p1, 'b')
+        else:
+            p2 = wrap_tag(p2, 'b')
+
+        def add_player_link(arg):
+            link = arg[1].browser_display_link()
+            return wrap_tag(arg[0], 'a', extras='href="%s"' % link)
+
+        (p1, p2) = map(add_player_link, ((p1, player1), (p2, player2)))
+
+        sgf = wrap_tag('[sgf]', 'a', extras='href="%s"' % self.gamefile.url)
+        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.browser_display_link())
+        
+        almost_done = '%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2)
+
+        return unicode(wrap_tag(almost_done, 'li'))
+        
+        
+##        contents = (self.board, self.browser_display_link(), self.school1_player.name, self.school1_player.get_rank_display(), self.school2_player.name, self.school2_player.get_rank_display())
+##        before = '<li>Board %s: <a href="%s">'
+##        after = '</a></li>'
+##        if self.winner == 'School1':
+##            if self.white_school == 'School1':
+##                return unicode((before + '<b>%s, %s (W)</b> vs. %s, %s (B)' + after) % contents)
+##            else:
+##                return unicode((before + '<b>%s, %s (B)</b> vs. %s, %s (W)' + after) % contents)
+##        else:
+##            if self.white_school == 'School2':
+##                return unicode((before + '%s, %s (W) vs. <b>%s, %s (B)</b>' + after) % contents)
+##            else:
+##                return unicode((before + '%s, %s (B) vs. <b>%s, %s (W)</b>' + after) % contents)
 
     def __unicode__(self):
         return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))

@@ -153,20 +153,36 @@ img.right {
 	color: #FFFFFF;
 }
 
-
-body#home a#homenav,
-body#CGL a#CGLnav,
-body#members a#membersnav,
-body#about a#aboutnav,
-body#news a#newsnav,
-body#links a#linksnav,
-body#ing a#ingnav,
-body#contact a#contactnav {
+/* ACGA/CGL menu permanent highlighting*/
+body#ACGA a#homenav,
+body#CGL a#CGLnav{
 	background: #7C0104;
 	height: 20px;
 	color: #FFFFFF;
 }
 
+/* ACGA subpages menu highlighting */
+div#members a#membersnav,
+div#about a#aboutnav,
+div#news a#newsnav,
+div#links a#linksnav,
+div#ing a#ingnav,
+div#contact a#contactnav {
+	background: #7C0104;
+	height: 20px;
+	color: #FFFFFF;
+}
+
+/* CGL subpages menu highlighting */
+div#results a#resultsnav,
+div#schools a#schoolsnav,
+div#players a#playersnav,
+div#games a#gamesnav,
+div#join a#joinnav {
+	background: #7C0104;
+	height: 20px;
+	color: #FFFFFF;
+}
 
 #menu .first {
 	background: none;
@@ -234,36 +250,36 @@ body#contact a#contactnav {
 	background: #FFFFDD url('BlueCGA.jpg') no-repeat center 25px; 
 }
 
-body#home #logo {
+div#home #logo {
    background: #FFFFDD url(RedCGA.jpg) no-repeat center 25px;
 	height: 415px;
 }
 
-body#home #content h2{
+div#home #content h2{
 	text-align: center;
 }
 
-body#CGL #logo{
+div#CGL #logo{
 	background: #FFFFDD url(GreenCGA.jpg) no-repeat center 25px;
 }
 
-body#members #logo{
+div#members #logo{
 	background: #FFFFDD url(PurpleCGA.jpg) no-repeat center 25px;
 }
 
-body#about #logo {
+div#about #logo {
 	background: #FFFFDD url(TurquoiseCGA.jpg) no-repeat center 25px;
 }
 
-body#news #logo {
+div#news #logo {
 	background: #FFFFDD url(GoldCGA.jpg) no-repeat center 25px;
 }
 
-body#ing #logo {
+div#ing #logo {
 	background: #FFFFDD url(DrabCGA.jpg) no-repeat center 25px;
 }
 
-body#contact #logo {
+div#contact #logo {
 	background: #FFFFDD url(OrangeCGA.jpg) no-repeat center 25px;
 }
 
@@ -290,7 +306,7 @@ body#contact #logo {
 	font-size: 50px;
 	font-family: Georgia, Helvetica, serif;
 }
-body#home #logo h1 {
+div#home #logo h1 {
 	padding-top: 212px;
 	padding-bottom: 12px;
 }
@@ -482,63 +498,6 @@ body#media img {
 #qlinks {
 	font-family: Arial, Helvetica, sans-serif;
 	border-top: 1px #BDBDBB dotted;
-}
-
-/* Calendar */
-
-#calendar {
-}
-
-#calendar caption {
-	padding-bottom: 5px;
-	font-weight: bold;
-}
-
-#calendar table {
-	width: 100%;
-	border-collapse: collapse;
-	border-bottom: 1px solid #24130F;
-	border-left: 1px solid #24130F;
-	border-right: 1px solid #24130F;
-}
-
-#calendar thead th {
-	padding: 5px 0;
-	text-align: center;
-	border-top: 1px solid #24130F;
-	border-left: 1px solid #24130F;
-	background: #24130F;
-}
-
-#calendar tbody td {
-	padding: 5px 0;
-	text-align: center;
-	border-top: 1px solid #24130F;
-	border-left: 1px solid #24130F;
-	border-bottom: 1px solid #24130F;
-}
-
-#calendar tfoot td {
-	padding: 5px;
-	border-left: 1px solid #24130F;
-	border-bottom: 1px solid #24130F;
-}
-
-#calendar tfoot #next {
-	border-top: 1px solid #24130F;
-	text-align: right;
-}
-
-#calendar tfoot #prev {
-	border-top: 1px solid #24130F;
-}
-
-#calendar .pad {
-	border-bottom: 1px solid #24130F;
-}
-
-#calendar #today {
-	background: #24130F;
 }
 
 /* Footer */

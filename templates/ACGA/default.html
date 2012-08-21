@@ -40,6 +40,7 @@ Released   : 20110810
 {% endblock BodyID %}
 <div id="wrapper">
 	<div id="header">
+		{% block header %}
 		<div id="menu">
 			<ul>
 				<li><a href="/home/" id="homenav">Home</a></li>
@@ -52,13 +53,14 @@ Released   : 20110810
 			</ul>
 		</div>
 		<!-- end #menu -->
+		<div id="logo" >
+			<h1><a href="/home/">American Collegiate Go Association </a></h1>
+			<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
+		</div>
+		<!-- end #logo -->
+		{% endblock header %}
 	</div>
 	<!-- end #header -->
-	<div id="logo" >
-		<h1><a href="/home/">American Collegiate Go Association </a></h1>
-		<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
-	</div>
-	<!-- end #logo -->
 	<div id="page">
         {% block page %}
 		<h1 class="title">{% block title %} <p> Default Title </p>{% endblock %}</h1>
