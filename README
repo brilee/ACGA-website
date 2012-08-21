@@ -2,7 +2,7 @@ Hi, and welcome to the ACGA website backend.
 
 The site is broadly arranged into two sections: ACGA-relevant material, and CGL-relevant material. The corresponding urls/views/models are under their respective apps. The templates folder is correspondingly partitioned.
 
-Some general django tips: changes to models/urls are not dynamically loaded; you can force them to show up by restarting the server (>>>apachectl restart).
+Some general django tips: changes to models/urls/settings are not dynamically loaded; you can force them to show up by restarting the server (>>>apachectl restart).
 Models can be syntax-checked by running ./manage.py validate
 
 Git repository is hosted at github.com/brilee/ACGA-website
@@ -15,5 +15,5 @@ This recalculates match results, school records, and player records for the curr
 (Needs to be adapted for use under manage.py) - This generates round pairings for the rest of the season, assuming that the season has had all of its round dates specified and all of its participating schools specified.
 ./manage.py round_pairings
 
-(Needs to be implemented) - This changes the current season, which will cause the entire site to update (recent/upcoming matches sidebar, results page, and a few other miscellaneous places). The setting is stores under /CGL/settings.py
+This changes the current season, which will cause the entire site to update (recent/upcoming matches sidebar, results page, and a few other miscellaneous places). The setting is stores under /CGL/settings.py
 ./manage.py change_season <Season Name>
