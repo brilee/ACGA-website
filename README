@@ -12,8 +12,9 @@ There are some new commands under ./manage.py for your convenience, stored at /C
 This recalculates match results, school records, and player records for the current season, from scratch. It's computationally intensive. It used to be run upon any update to a match, but that was way too slow. Now I run it once every two weeks, after I've finished adding that round's games.
 ./manage.py update_scores <Season Name>
 
-(Needs to be adapted for use under manage.py) - This generates round pairings for the rest of the season, assuming that the season has had all of its round dates specified and all of its participating schools specified.
+This generates round pairings for the next round, as determined by date. This must be done incrementally every two weeks instead of at the beginning of the season, as new schools may have signed up in the meantime.
+If the round already has some matches created, this algorithm ignores those schools and continues on. This is useful if you want to ensure that two schools are matched in an upcoming round.
 ./manage.py round_pairings
 
-This changes the current season, which will cause the entire site to update (recent/upcoming matches sidebar, results page, and a few other miscellaneous places). The setting is stores under /CGL/settings.py
+This changes the current season, which will cause the entire site to update (recent/upcoming matches sidebar, results page, and a few other miscellaneous places). This command is equivalent to editing the file located at /CGL/settings.py
 ./manage.py change_season <Season Name>

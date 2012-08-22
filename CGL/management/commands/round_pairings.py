@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
 from CGL.settings import current_season_name
 import random
+import datetime
 
 class Command(BaseCommand):
     args = 'None'
@@ -48,25 +49,39 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         next_round = Round.objects.get_next_round()
-
-        if next_round.match_set.all():
-            raise CommandError('Next round must be empty; delete any existing matchups and try again')
-        
+        if not next_round:
+            raise CommandError('No upcoming round. Create a round first')
+            
         current_season = Season.objects.get(name=current_season_name)
 
+        # Only retrieves the schools signed up for current season.
         all_schools = current_season.schools.all()
+
         if len(all_schools) < 2:
             raise CommandError('Fewer than two schools are registered for the season')
-        all_matches = Match.objects.filter(round__season = current_season)
 
+        existing_matches = next_round.match_set.all()
+        matched_schools = ([m.school1.id for m in existing_matches] +
+                           [m.school2.id for m in existing_matches])
+        unmatched_schools = all_schools.exclude(id__in=match_schools)
+
+        # Note - this also select matches that are prescheduled for the future.
+        # This is desirable since if we want to match two schools in the future,
+        # it wouldn't do to match them up now.
+        all_matches = Match.objects.filter(round__season = current_season)
+        
         # We index each school by school.id
-        # Store all matches as entries in a matrix.
+        # Store all matches as entries in an adjacency matrix.
         # If M_ij = 1, then school i and school j have already played.
         # If M_ij = 0, then school i and school j have not played.
+        # Adj matrix is super inefficient since our matches are pretty sparse,
+        # but well.. we don't have that many schools, yet. Might have to rework
+        # when we get bigger (>100 schools?)
         
-        # Since the matrix will have blank rows/columns if an ID number
-        # was skipped, must also pass a list of valid IDs.
-        all_id = [school.id for school in all_schools]
+        # all_id is the requested list of IDs to be matched.
+        # This excludes already-matched schools and IDs corresponding to
+        # nonexistent schools, for example if a school was deleted at some point.
+        all_id = [school.id for school in unmatched_schools]
         max_id = max(all_id) + 1
         match_matrix = [[0]*max_id for i in range(max_id)]
         
@@ -75,6 +90,7 @@ class Command(BaseCommand):
             match_matrix[i][j] = 1
             match_matrix[j][i] = 1
 
+        # See algorithm description above.
         all_matchups = self.find_matchups(match_matrix, all_id)
 
         # Unpack the results and create matches in database.
