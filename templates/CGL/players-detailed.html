@@ -5,5 +5,25 @@
 {% block title %}Viewing details for {{player.name}}{% endblock title %}
 
 {% block maintext %}
-[to be implemented]
+<ul>
+	<li><strong>Name:</strong> {{player.name}}</li>
+	<li><strong>Rank:</strong> {{player.get_rank_display}}</li>
+	<li><strong>KGS username:</strong> {{player.KGS_username}}</li>
+	<li><strong>School:</strong> {{player.school.name}}</li>
+	<li><strong>Total Wins:</strong> {{player.num_wins}}</li>
+	<li><strong>Total Losses:</strong> {{player.num_losses}}</li>
+	<li><strong>Active?:</strong>{% if player.isActive %} Yes {% else %} No {% endif %}</li>
+</ul>
+
+<hr />
+
+<h3>Games played</h3>
+<ul>
+{% for game in player.game_set %}
+	<li>{{game.match.round.date}} - {{game.display_result|safe}}</li>
+{% endfor %}
+</ul>
+
+
+
 {% endblock maintext %}

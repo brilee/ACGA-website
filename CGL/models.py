@@ -73,6 +73,16 @@ class Player(models.Model):
     def name_with_link(self):
         return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.browser_display_link()))
 
+    def game_set(self):
+        ''' Custom method because Game has two ForeignKeys to Player, so
+        reverse lookup is not well-defined. This overloads to provide
+        expected behavior '''
+        games1 = self.game_school1_player.all()
+        games2 = self.game_school2_player.all()
+        all_games = games1 | games2
+        all_games = all_games.order_by('-match__round__date')
+        return all_games
+    
     class Meta:
         ordering = ['school', 'name', 'rank']
 
