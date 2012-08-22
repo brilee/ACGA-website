@@ -38,10 +38,8 @@ def display_player_search(request):
     # To implement: player searching
     return direct_to_template(request, 'players.html', locals())
 
-def display_player(request, player_name):
-    player_name = player_name.strip().replace('_', ' ').replace('-', ' ')
-    player = get_object_or_404(Player, name=player_name)
-
+def display_player(request, player_id):
+    player = get_object_or_404(Player, id=player_id)
     return direct_to_template(request, 'players-detailed.html', locals())
 
 def display_game(request, game_id):

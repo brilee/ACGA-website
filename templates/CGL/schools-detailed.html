@@ -22,7 +22,7 @@
 	</tr>
 {% for player in roster %}
 	<tr>
-		<td>{{ player.name }}</td>
+		<td>{{ player.name_with_link|safe }}</td>
 		<td>{{ player.get_rank_display }}</td>
 		<td>{{ player.KGS_username }}</td>
 	</tr>

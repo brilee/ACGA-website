@@ -9,7 +9,7 @@ urlpatterns = patterns('CGA.CGL.views',
     (r'^results/$', 'display_results'),
     (r'^results/([A-Za-z_-]{1,50})/$', 'display_season'),
     (r'^players/$', 'display_player_search'),
-    (r'^players/([A-Za-z_-]{1,50})/$', 'display_player'),
+    (r'^players/([0-9]{1,4})/$', 'display_player'),
     (r'^games/([0-9]{1,4})/$', 'display_game'),
     (r'^join/$', redirect_to, {'url': '/contact/'}),
 )

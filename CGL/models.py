@@ -68,7 +68,10 @@ class Player(models.Model):
         return unicode('%s, %s' % (self.name, self.get_rank_display()))
 
     def browser_display_link(self):
-        return unicode('/CGL/players/%s' % (self.slug_name))
+        return unicode('/CGL/players/%s' % (self.id))
+
+    def name_with_link(self):
+        return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.browser_display_link()))
 
     class Meta:
         ordering = ['school', 'name', 'rank']
