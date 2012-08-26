@@ -40,7 +40,7 @@ class Command(BaseCommand):
                 if m.score1 > m.score2:
                     mem1.num_wins += 1
                     mem2.num_losses += 1
-                elif m.score2 < m.score1:
+                elif m.score1 < m.score2:
                     mem1.num_losses += 1
                     mem2.num_wins += 1
                 else:
