@@ -7,8 +7,8 @@ from models import School, Season, Round, Membership, Game, Player
 from settings import current_season_name
 
 def display_school(request):
-    all_schools = School.objects.all()
-    recent_schools = School.objects.order_by("-id")[:5]
+    all_schools = School.objects.filter(inCGL=True)
+    recent_schools = all_schools.order_by("-id")[:5]
 
     return direct_to_template(request, 'schools.html', locals())
 
