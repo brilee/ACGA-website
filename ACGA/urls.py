@@ -6,7 +6,7 @@ from django.views.generic.simple import direct_to_template
 urlpatterns = patterns('CGA.ACGA.views',    
     (r'^$', 'display_home'),
     (r'^home/$', 'display_home'),
-    (r'^links/$', direct_to_template, {'template': 'links.html'}),
+    (r'^resources/$', 'display_resources'),
     (r'^ing/$', direct_to_template, {'template': 'ing.html'}),
     (r'^about/$', direct_to_template, {'template': 'about.html'}),
     (r'^members/$', 'display_members'),

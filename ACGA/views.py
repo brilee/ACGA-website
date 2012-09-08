@@ -3,7 +3,7 @@ from django.template.loader import get_template
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic.simple import direct_to_template
-from models import Newsfeed
+from models import Newsfeed, Document
 from CGA.CGL.models import School
 
 def display_home(request):
@@ -31,3 +31,7 @@ def display_emails(request):
 
     return direct_to_template(request, 'all-emails.html', locals())
 
+def display_resources(request):
+    public_documents = Document.objects.filter(public=True)
+
+    return direct_to_template(request, 'resources.html', locals())

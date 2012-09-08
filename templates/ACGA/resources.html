@@ -1,14 +1,23 @@
 {% extends "base_ACGA.html" %}
 
-{% block PageID %}<div id="links">{% endblock PageID %}
+{% block PageID %}<div id="resources">{% endblock PageID %}
 
-{% block title %}Links{% endblock title %}
+{% block title %}Resources{% endblock title %}
 {% block maintext %}
 <p>There are hundreds of resources online for go players of every strength - check out some of the links below to learn more about the game, the players, the culture, and the worldwide go community.</p>
 <ul>
+	<br/>
+	<h2>Resources for Go Clubs</h2>
+	<img style="float:right;margin-left:15px;clear:right;" src="../site_media/SeigenShinSized.jpg" alt="Sorry, can't display this image!"/>
+    <p>The ACGA has packaged the collective wisdom of our many members into a set of handy documents for leaders of Go clubs.</p>
+    
+    <ul>
+    {% for document in public_documents %}
+    	<li><a href="{{document.upload.url}}">{{document}}</a></li>
+    {% endfor %}
+    </ul>
     <br/>
     <h2> New to Go? </h2>
-    <img style="float:right;margin-left:15px;clear:right;" src="../site_media/SeigenShinSized.jpg" alt="Sorry, can't display this image!"/>
     <p><strong>Go</strong> is an <strong>ancient two-player board game</strong> based on simple rules that lead to immense strategic and aesthetic complexity. Also known as weiqi <em>(China)</em>, baduk <em>(Korea)</em>, or igo <em>(Japan)</em>, Go combines the <strong>tactical intensity of chess</strong> with <strong>abstract, global judgment</strong> to make an exceptionally challenging and rewarding game. <strong>To learn how to play</strong>, take a look at <a href="http://en.wikipedia.org/wiki/Go_(board_game)#Overview">the basics</a>, check out our links below, or <a href="/contact/">contact us</a> with your questions.</p>
     <br/>
     <h2>Tutorial and Introduction</h2>
