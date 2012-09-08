@@ -26,13 +26,15 @@ def wrap_tag(text, tag, extras=False):
 
 class School(models.Model):
     name = models.CharField(max_length=50)
-    KGS_name = models.CharField(max_length=50, help_text="The prefix used for the KGS accounts")
+    KGS_name = models.CharField(blank=True, max_length=50, help_text="The prefix used for the KGS accounts")
     slug_name = models.SlugField(blank=True, editable=False)
     club_president = models.CharField(max_length=50, blank = True)
-    captain = models.CharField(max_length=50)
+    captain = models.CharField(blank=True, max_length=50)
     contact_email = models.EmailField()
     website = models.URLField(blank = True)
     meeting_info = models.TextField(blank=True)
+    inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL.")
+
 #    managers = models.ForeignKey(SchoolUser)
 
     def save(self, *args, **kwargs):
