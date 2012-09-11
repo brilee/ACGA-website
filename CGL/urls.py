@@ -11,5 +11,4 @@ urlpatterns = patterns('CGA.CGL.views',
     (r'^players/$', 'display_player_search'),
     (r'^players/([0-9]{1,4})/$', 'display_player'),
     (r'^games/([0-9]{1,4})/$', 'display_game'),
-    (r'^join/$', redirect_to, {'url': '/contact/'}),
 )

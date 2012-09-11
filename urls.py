@@ -25,6 +25,10 @@ urlpatterns += patterns('CGA.contact.views',
     (r'^contact/$', 'contact'),
     (r'^contact/thanks/$', direct_to_template, {
         'template': 'thanks.html'}),
+
+    (r'^CGL/join/$', 'join_CGL'),
+    (r'^CGL/join/thanks/$', direct_to_template, {
+        'template': 'thanks_CGL.html'}),
 )
 
 urlpatterns += patterns('',
