@@ -1,8 +1,7 @@
-from django.shortcuts import render_to_response, redirect
+from django.views.generic.simple import direct_to_template
 from CGA.forms import ContactForm
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
-from django.template import RequestContext
 
 def contact(request):
     if request.method == 'POST':
@@ -19,10 +18,10 @@ def contact(request):
             )
             return HttpResponseRedirect('/contact/thanks/#form')
         else:
-            return render_to_response('contact.html', {'form':form})
+            return direct_to_template(request, 'contact.html', locals())
     else:
         form = ContactForm()
-    return render_to_response('contact.html', {'form':form})
+    return direct_to_template(request, 'contact.html', locals())
 
 def join_CGL(request):
     if request.method == 'POST':
@@ -39,8 +38,8 @@ def join_CGL(request):
             )
             return HttpResponseRedirect('/CGL/join/thanks/#form')
         else:
-            return render_to_response('join_CGL.html', {'form':form})
+            return direct_to_template(request, 'join_CGL.html', locals())
     else:
         form = ContactForm()
-    return render_to_response('join_CGL.html', {'form':form})
+    return direct_to_template(request, 'join_CGL.html', locals())
     
