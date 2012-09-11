@@ -9,7 +9,7 @@ class Command(BaseCommand):
     help = '''Creates completely random match pairings for the first round
             that has not happened yet, as judged by today's date'''
     
-    def find_matchups(match_matrix, all_id):
+    def find_matchups(self, match_matrix, all_id):
         ''' match_matrix is defined by M_ij = 1 if schools have already played.
         all_id 
         Returns a set of matchups (i,j) drawn from all_id, such that M_ij = 0
@@ -63,7 +63,7 @@ class Command(BaseCommand):
         existing_matches = next_round.match_set.all()
         matched_schools = ([m.school1.id for m in existing_matches] +
                            [m.school2.id for m in existing_matches])
-        unmatched_schools = all_schools.exclude(id__in=match_schools)
+        unmatched_schools = all_schools.exclude(id__in=matched_schools)
 
         # Note - this also select matches that are prescheduled for the future.
         # This is desirable since if we want to match two schools in the future,
@@ -82,7 +82,7 @@ class Command(BaseCommand):
         # This excludes already-matched schools and IDs corresponding to
         # nonexistent schools, for example if a school was deleted at some point.
         all_id = [school.id for school in unmatched_schools]
-        max_id = max(all_id) + 1
+        max_id = max(school.id for school in all_schools) + 1
         match_matrix = [[0]*max_id for i in range(max_id)]
         
         for match in all_matches:
@@ -100,5 +100,5 @@ class Command(BaseCommand):
                               school2 = School.objects.get(id=matchup[1]),
                               )
             new_match.save()
-        self.stdout.write('Matchups created for round on %s' % next_round.date)
+        self.stdout.write('Matchups created for round on %s\n' % next_round.date)
         
