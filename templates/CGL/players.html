@@ -1,9 +1,38 @@
 {% extends 'base_CGL.html' %}
 
 {% block PageID %} <div id="players">{% endblock PageID%}
-
-{% block title %}Player search{% endblock title %}
+{% block title %}Player Search {% endblock %}
 
 {% block maintext %}
-Search players [to be implemented]
-{% endblock maintext %}
+
+<form method="GET" action="" name="PlayerSearch">
+<div id="search">
+	<p>Search for player name or KGS name</p>
+	<input type=text name="query">
+	<input type=submit value="Search" id="search_button">
+</div>
+</form>
+
+
+{% if errors %}
+<div id="errors">
+<ul>
+	{% for error in errors %}
+	<li>{{error}}</li>
+	{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if results %}
+<div id="search_results">
+{{results|length}} matches found.
+	<ul>
+	{% for result in results %}
+		<li> <a href="{{result.browser_display_link}}">{{result.name_and_rank}}</a></li>
+	{% endfor %}
+	</ul>
+</div>
+{% endif %}
+
+{% endblock %}

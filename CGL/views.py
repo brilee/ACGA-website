@@ -1,6 +1,6 @@
 from django.template.loader import get_template
 from django.shortcuts import get_object_or_404
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views.generic.simple import direct_to_template
 
 from models import School, Season, Round, Membership, Game, Player
@@ -35,7 +35,19 @@ def display_season(request, season_name):
     return direct_to_template(request, 'results-detailed.html', locals())
 
 def display_player_search(request):
-    # To implement: player searching
+    query = request.GET.get('query', '')
+    errors = []
+
+    if query:
+        results = Player.objects.filter(name__icontains=query) | Player.objects.filter(KGS_username__icontains=query)
+        
+        # If only one player found, automatically redirect to that player's page
+        if len(results) == 1:
+            return HttpResponseRedirect(results[0].browser_display_link())
+
+        if not results:
+            errors.append('No results')
+
     return direct_to_template(request, 'players.html', locals())
 
 def display_player(request, player_id):
