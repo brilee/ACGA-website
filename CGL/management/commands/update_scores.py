@@ -2,6 +2,8 @@ from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
 from CGL.settings import current_season_name
 
+from datetime import date, timedelta
+
 class Command(BaseCommand):
     args = '<Season Name>'
     help = '''Recalculates all player records, match scores, and school records
@@ -17,7 +19,7 @@ class Command(BaseCommand):
             
         # compute the result of each match, based on games and forfeits
         # at the same time, tally up each school's wins/losses
-        for round in current_season.round_set.all():
+        for round in current_season.round_set.filter(date__lte=date.today()):
             for m in round.match_set.all():
                 score1 = 0
                 score2 = 0
@@ -49,17 +51,27 @@ class Command(BaseCommand):
                 mem1.save()
                 mem2.save()
                 
-    def update_player_record(self, player):
+    def update_player_record(self, player):        
         wins = 0
         losses = 0
+
+        # Assume player is inactive until evidence to contrary is found
+        player.isActive = False
+        
         # player was player 1 of a game
         for game in player.game_school1_player.all():
+            if (date.today() - game.match.round.date) < timedelta(days=180):
+                player.isActive = True
+
             if game.winner == 'School1':
                 wins += 1
             else:
                 losses += 1
         # player was player 2 of a game
         for game in player.game_school2_player.all():
+            if (date.today() - game.match.round.date) < timedelta(days=180):
+                player.isActive = True
+
             if game.winner == 'School1':
                 losses += 1
             else:

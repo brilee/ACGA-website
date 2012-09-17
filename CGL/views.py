@@ -16,7 +16,7 @@ def display_roster(request, school_name):
     school_name = school_name.strip().replace('_', ' ').replace('-', ' ')
     school = get_object_or_404(School, name=school_name)
     roster = school.player_set.filter(isActive=1).order_by('rank')
-    retired = school.player_set.filter(isActive=0)
+    inactives = school.player_set.filter(isActive=0).order_by('rank')
     
     return direct_to_template(request, 'schools-detailed.html', locals())
 
