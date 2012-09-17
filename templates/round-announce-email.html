@@ -1,0 +1,20 @@
+Hi everyone,
+
+This Saturday, {{next_round.date}} at 1pm EST, we have a CGL round scheduled. Your team should log onto the accounts we have provided and be ready to go at 1pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
+
+The following schools are paired together:
+
+{% for match in next_round.match_set.all %}
+	{{match.school1}} vs. {{match.school2}}
+{% endfor %}
+
+{% if unmatched_school %}
+{{unmatched_school}} has a bye this round.
+
+If your school cannot compete this Saturday, please let us know as soon as possible, so that we can switch in {{unmatched_school}}.
+
+{% else %}
+If your school cannot compete this Saturday, please let us know as soon as possible.
+{% endif %}
+
+Good luck to all teams.
