@@ -27,5 +27,21 @@
 		<td>{{ player.KGS_username }}</td>
 	</tr>
 {% endfor %}
+
+
+</table><h3>Inactive Players (last game > 6 months)</h3>
+<table id="roster">
+	<tr>
+		<td>Name</td>
+		<td>Rank</td>
+		<td>KGS username</td>
+	</tr>
+{% for player in inactives %}
+	<tr>
+		<td>{{ player.name_with_link|safe }}</td>
+		<td>{{ player.get_rank_display }}</td>
+		<td>{{ player.KGS_username }}</td>
+	</tr>
+{% endfor %}
 </table>
 {% endblock maintext %}

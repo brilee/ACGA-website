@@ -31,7 +31,7 @@
 <h3 id="{{round}}">{{round}}</h3>
 <ul>
 	{% for match in round.match_set.all %}
-	<li><h4><a href="/members/{{match.school1.slug_name}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="/members/{{match.school2.slug_name}}">{{match.school2.name}}</a> </h4>
+	<li><h4><a href="{{match.school1.url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.url}}">{{match.school2.name}}</a> </h4>
 		<ul>
 		{% for game in match.game_set.all %}
 			{{game.display_result|safe}}		

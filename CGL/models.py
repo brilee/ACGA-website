@@ -41,6 +41,9 @@ class School(models.Model):
         self.slug_name = slugify(self.name)
         super(School, self).save(*args, **kwargs)
 
+    def url(self):
+        return unicode('/CGL/schools/%s' % self.slug_name)
+
     class Meta:
         ordering = ['name']
 
@@ -178,6 +181,19 @@ class Game(models.Model):
     class Meta:
         ordering = ['-match__round__date', 'board']
 
+    def white_player(self):
+        if self.white_school == 'School1':
+            return school1_player
+        else:
+            return school2_player
+
+    def black_player(self):
+        if self.white_school == 'School1':
+            return school2_player
+        else:
+            return school1_player
+        
+    
     def browser_display_link(self):
         return unicode('/CGL/games/%s' % (self.id))
     
