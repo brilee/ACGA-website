@@ -51,7 +51,10 @@ class School(models.Model):
         return self.name
 
 class Player(models.Model):
-    RANK_CHOICES = [(-9, '9d'), (-8, '8d'), (-7, '7d'), (-6, '6d'), (-5, '5d'), (-4, '4d'), (-3, '3d'), (-2, '2d'), (-1, '1d'), (1, '1k'), (2, '2k'), (3, '3k'), (4, '4k'), (5, '5k'), (6, '6k'), (7, '7k'), (8, '8k'), (9, '9k'), (10, '10k'), (11, '11k'), (12, '12k'), (13, '13k'), (14, '14k'), (15, '15k'), (16, '16k'), (17, '17k'), (18, '18k'), (19, '19k'), (20, '20k'), (21, '21k'), (22, '22k'), (23, '23k'), (24, '24k'), (25, '25k'), (26, '26k'), (27, '27k'), (28, '28k'), (29, '29k'), (30, '30k'), (100, '')]
+    RANK_CHOICES = ([(-10 * i, '%ip' % i) for i in range(9, 0, -1)] +
+                    [(-1 * i, '%id' % i) for i in range(9, 0, -1)] +
+                    [(i, '%ik' % i) for i in range(1,31)] +
+                    [(100, '')])
     name = models.CharField(max_length=30)
     slug_name = models.SlugField(blank=True, editable=False)
     rank = models.IntegerField(choices = RANK_CHOICES, blank=True, default= 100)
