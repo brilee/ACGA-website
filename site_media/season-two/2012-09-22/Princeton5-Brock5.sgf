@@ -1,0 +1,209 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[Princeton5]PB[Brock5]DT[2012-09-22]PC[The KGS Go Server at http://www.gokgs.com/]C[Princeton5 [-\]: Hi gg!
+Brock5 [-\]: Good luck and have fun
+Brock5 [-\]: you too
+]RE[B+Time]
+;B[pd]BL[1783.068]
+;W[dd]WL[1798.118]
+;B[pq]BL[1778.338]
+;W[dp]WL[1794.815]
+;B[qk]BL[1776.539]
+;W[nd]WL[1786.493]
+;B[pf]BL[1749.77]
+;W[oc]WL[1743.983]
+;B[pc]BL[1736.751]
+;W[jd]WL[1735.826]
+;B[cf]BL[1721.803]
+;W[ce]WL[1722.215]
+;B[df]BL[1717.973]
+;W[be]WL[1686.812]
+;B[fc]BL[1693.07]
+;W[fd]WL[1678.131]
+;B[gd]BL[1683.734]
+;W[fe]WL[1634.331]
+;B[dc]BL[1568.322]
+;W[ec]WL[1615.447]
+;B[eb]BL[1564.839]
+;W[ed]WL[1614.151]
+;B[gb]BL[1550.63]
+;W[cc]WL[1569.417]
+;B[db]BL[1526.827]
+;W[ge]WL[1567.092]
+;B[hd]BL[1515.512]
+;W[cb]WL[1528.177]
+;B[di]BL[1493.84]
+;W[cj]WL[1507.761]
+;B[dj]BL[1456.534]
+;W[dk]WL[1503.714]
+;B[ck]BL[1418.171]
+;W[bh]WL[1440.111]
+;B[bi]BL[1351.852]
+;W[ci]WL[1431.383]
+;B[bj]BL[1334.714]
+;W[ch]WL[1428.041]
+;B[dl]BL[1332.199]
+;W[cl]WL[1418.964]
+;B[ek]BL[1304.994]
+;W[bk]WL[1414.999]
+;B[bl]BL[1294.382]
+;W[dk]WL[1412.62]
+;B[lc]BL[1282.128]
+;W[ck]WL[1379.761]
+;B[le]BL[1273.673]
+;W[ld]WL[1335.609]
+;B[kd]BL[1244.15]
+;W[kc]WL[1323.596]
+;B[md]BL[1237.355]
+;W[ie]WL[1270.407]
+;B[jc]BL[1229.741]
+;W[kb]WL[1269.116]
+;B[jb]BL[1220.757]
+;W[lb]WL[1258.755]
+;B[mb]BL[1218.132]
+;W[ke]WL[1246.555]
+;B[ld]BL[1209.708]
+;W[ic]WL[1163.692]
+;B[id]BL[1190.496]
+;W[je]WL[1160.769]
+;B[ib]BL[1185.53]
+;W[fh]WL[1098.064]
+;B[fi]BL[1167.794]
+;W[eh]WL[1081.832]
+;B[fq]BL[1155.991]
+;W[gp]WL[1051.019]
+;B[eo]BL[1125.098]
+;W[dm]WL[1030.904]
+;B[do]BL[1109.629]
+;W[co]WL[1024.253]
+;B[dq]BL[1078.471]
+;W[cq]WL[1002.885]
+;B[ep]BL[1074.294]
+;W[cp]WL[1000.886]
+;B[ip]BL[1068.587]
+;W[gn]WL[926.217]
+;B[dn]BL[1033.574]
+;W[cn]WL[906.614]
+;B[gq]BL[1023.799]
+;W[hp]WL[841.982]
+;B[hq]BL[1019.517]
+;W[jp]WL[826.872]
+;B[io]BL[1009.841]
+;W[in]WL[806.197]
+;B[jn]BL[979.436]
+;W[iq]WL[779.283]
+;B[jq]BL[975.445]
+;W[jm]WL[699.78]
+;B[im]BL[941.33]
+;W[hn]WL[692.784]
+;B[kn]BL[908.39]
+;W[km]WL[609.27]
+;B[ln]BL[895.797]
+;W[jo]WL[565.312]
+;B[ir]BL[892.065]
+;W[lm]WL[549.924]
+;B[em]BL[867.525]
+;W[el]WL[542.105]
+;B[fl]BL[865.199]
+;W[dl]WL[511.694]
+;B[gk]BL[834.231]
+;W[fm]WL[481.608]
+;B[en]BL[831.684]
+;W[gl]WL[456.515]
+;B[fk]BL[821.153]
+;W[hl]WL[454.302]
+;B[il]BL[794.35]
+;W[ik]WL[426.987]
+;B[mm]BL[778.102]
+;W[ml]WL[327.181]
+;B[nm]BL[674.696]
+;W[nl]WL[317.964]
+;B[ll]BL[665.518]C[Princeton5 [-\]: if you do not mind continue playing just for fun
+Brock5 [-\]: i wouldnt mind at all
+Brock5 [-\]: were all learning anyways
+]
+(;W[jl]WL[289.172]
+;B[lk]BL[657.48]
+;W[mj]WL[280.226]
+;B[jk]BL[641.904]
+;W[hm]WL[275.529]
+;B[li]BL[635.895]
+;W[lf]WL[262.945]
+;B[mf]BL[625.534]
+;W[lg]WL[256.642]
+;B[mh]BL[587.844]
+;W[mg]WL[191.381]
+;B[nf]BL[558.005]
+;W[ng]WL[182.635]
+;B[nh]BL[556.101]
+;W[oh]WL[176.866]
+;B[og]BL[543.273]
+;W[pg]WL[167.55]
+;B[of]BL[535.664]
+(;W[oj]WL[103.932]C[Princeton5 [-\]: sorry!
+Princeton5 [-\]: but I keep making mistakes
+Brock5 [-\]: argg... i shouldnt have let you do that lol
+Princeton5 [-\]: need to think more carefully
+]
+;B[he]BL[495.121]
+;W[hf]WL[100.027]
+;B[if]BL[473.681]
+;W[jg]WL[72.46]
+;B[ig]BL[464.975]C[Princeton5 [-\]: here maybe I should try just blocking you?
+Princeton3 [-\]: are you guys playing with undos?
+Princeton3 [-\]: what was the result?
+]
+(;W[jh]WL[1.377]
+;B[ih]BL[756.115]
+;W[lh]WL[30]OW[2]
+;B[mi]BL[1048.354]C[Brock5 [-\]: ops
+]
+;W[ki]WL[30]OW[2])
+(;W[ih]WL[38.989]
+;B[hg]BL[461.25]
+;W[gf]WL[33.688]C[Princeton3 [-\]: oh wait
+Princeton3 [-\]: this is review
+]
+;B[jf]BL[456.581]C[Princeton3 [-\]: nvm
+]
+;W[kf]WL[25.845]
+;B[lh]BL[453.806]
+;W[kg]WL[21.499]
+;B[jh]BL[448.278]C[Princeton5 [-\]: does not work
+])
+(;W[hg]WL[60.077]
+;B[ih]BL[462.3]C[Princeton5 [-\]: where should I put it?
+Brock5 [-\]: im not quite sure...
+Brock5 [-\]: do you want to increase the time?
+Princeton5 [-\]: maybe I shouldn't have connected on the left
+Princeton5 [-\]: sure
+Princeton5 [-\]: how?
+Brock5 [-\]: i added it already 
+]
+;W[jh]WL[36.776]
+;B[jf]BL[454.079]
+;W[kf]WL[34.596]
+;B[lh]BL[451.683]
+;W[ji]WL[23.36]
+;B[kg]BL[449.166]C[Princeton5 [-\]: oh... you got me again...
+Brock5 [-\]: yup
+Brock5 [-\]: lol
+Princeton5 [-\]: uh can I undo that?
+Brock5 [-\]: yea
+]))
+(;W[oi]WL[140.256]
+;B[nj]BL[517.693]C[Princeton5 [-\]: no that
+Brock5 [-\]: hmm?
+Princeton5 [-\]: that's not right can I undo?
+Brock5 [-\]: oh ok
+]))
+(;W[lk]WL[305.725]
+;B[kl]BL[662.997]
+;W[hm]WL[303.238]
+;B[jl]BL[653.899]
+;W[jk]WL[301.944]
+;B[hk]BL[639.408]C[Princeton5 [-\]: gg
+Brock5 [-\]: gg
+Princeton5 [-\]: You win can I undo that move?
+Brock5 [-\]: sure
+]))

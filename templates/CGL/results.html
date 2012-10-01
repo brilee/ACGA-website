@@ -1,5 +1,8 @@
 {% extends "base_CGL.html" %}
 
+{% block javascript %}<script type="text/javascript" src="/site_media/CollapsibleLists.js"></script>
+{% endblock %}
+
 {% block PageID %}<div id="results">{% endblock PageID %}
 
 {% block title %}Current Season: {{current_season.name}}{% endblock title %}
@@ -18,20 +21,13 @@
 
 <hr />
 
-<h3>Quick Link to Rounds</h3>
-<ul>
+<h3>Rounds</h3>
+<ul class="collapsibleList">
 {% for round in current_season.round_set.all %}
-	<li><a href="#{{round}}">{{round}}</a></li>
-{% endfor %}
-</ul>
-
-<hr />
-
-{% for round in current_season.round_set.all %}
-<h3 id="{{round}}">{{round}}</h3>
-<ul>
+	<li><h3 class="clickable">{{round}}</h3>
+	<ul>
 	{% for match in round.match_set.all %}
-	<li><h4><a href="{{match.school1.url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.url}}">{{match.school2.name}}</a> </h4>
+		<li><h4><span class="clickable">[Expand]</span> <a href="{{match.school1.url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.url}}">{{match.school2.name}}</a></h4>
 		<ul>
 		{% for game in match.game_set.all %}
 			{{game.display_result|safe}}		
@@ -40,11 +36,12 @@
 			{{forfeit.display_result|safe}}
 		{% endfor %}
 		</ul>
-	</li>
+		</li>
 	{% endfor %}
-</ul>
+	</ul>
+	</li>
 {% endfor %}
-
+</ul>
 <hr />
 
 <h2>Archives</h2>
@@ -52,6 +49,10 @@
 <h3><a href="/CGL/results/{{season.slug_name}}">{{season.name}}</a></h3>
 {% endfor %}
 
-
-
 {% endblock maintext %}
+
+{% block javascript_footer %}
+<script type="text/javascript">CollapsibleLists.apply();</script>
+{% endblock %}
+
+

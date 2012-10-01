@@ -97,6 +97,11 @@ img.right {
 	margin-right: 0;
 }
 
+.clickable {
+	text-decoration: underline;
+	font-weight:bold;
+}
+
 #wrapper {
 }
 
@@ -352,7 +357,6 @@ div#home #logo h1 {
 #content li li {
 	margin: 0 0 0 5px;
 	padding: 8px 0px 2px 8px;
-	background: url(/site_media/img09.jpg) no-repeat left 16px;
 }
 
 #roster {
@@ -470,7 +474,6 @@ body#media img {
 #sidebar li li {
 	margin: 0 0 0 5px;
 	padding: 10px 0px 15px 15px;
-	background: url(/site_media/img09.jpg) no-repeat left 16px;
 }
 
 #sidebar p {

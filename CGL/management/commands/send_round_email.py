@@ -16,7 +16,9 @@ class Command(BaseCommand):
         participating_schools = set(m.school for m in Membership.objects.filter(season__name=current_season_name))
         matched_schools = set(m.school1 for m in next_round.match_set.all()) | set(m.school2 for m in next_round.match_set.all())
         unmatched_school = participating_schools - matched_schools
-
+        if unmatched_school:
+            # should be either 0 or 1 schools; turn a set of one into its contents.
+            unmatched_school = unmatched_school.pop()
         t = loader.get_template('round-announce-email.html')
         c = Context({'unmatched_school':unmatched_school, 'next_round':next_round},)
 

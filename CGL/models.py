@@ -165,7 +165,8 @@ class Match(models.Model):
    
     class Meta:
         verbose_name_plural = 'Matches'
-    
+        ordering = ['-round__date']
+
 class Game(models.Model):
     def upload_location(instance, filename):
         return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
