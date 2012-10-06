@@ -5,25 +5,41 @@
 
 {% block PageID %}<div id="results">{% endblock PageID %}
 
-{% block title %}Current Season: {{current_season.name}}{% endblock title %}
+{% block title %}Results for {{requested_season.name}}{% endblock title %}
 
 
 {% block maintext %}
 
+{{requested_season.html|safe}}
+
+<p>{{requested_season.description}} </p>
+
 <h2> Standings: </h2>
 
-<ul>
-	<li><strong>School Name (Wins-Losses-Ties)</strong></li>
+<table>
+	<tr>
+		<th>School Name</th>
+		<th>Wins</th>
+		<th>Losses</th>
+		<th>Ties</th>
+		<th><span class='red'>Number of Forfeited Games</span></th>
+	</tr>
 {% for membership in all_memberships %}
-	<li><Strong>{{membership.school.name}} ({{membership.num_wins}} - {{membership.num_losses}} - {{membership.num_ties}})</STRONG></li>
+	<tr>
+		<td>{{membership.school.name}}</td>
+		<td>{{membership.num_wins}}</td>
+		<td>{{membership.num_losses}}</td>
+		<td>{{membership.num_ties}}</td>
+		<td>{{membership.num_forfeits}}</td>
+	</tr>
 {% endfor %} 
-</ul>
+</table>
 
 <hr />
 
 <h3>Rounds</h3>
 <ul class="collapsibleList">
-{% for round in current_season.round_set.all %}
+{% for round in requested_season.round_set.all %}
 	<li><h3 class="clickable">{{round}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}

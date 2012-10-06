@@ -1,5 +1,5 @@
 from django.template.loader import get_template
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views.generic.simple import direct_to_template
 
@@ -20,19 +20,17 @@ def display_roster(request, school_name):
     
     return direct_to_template(request, 'schools-detailed.html', locals())
 
-def display_results(request):
+def redirect_to_current_season(request):
     current_season = Season.objects.get(name=current_season_name)
-    all_seasons = Season.objects.all()
-    all_memberships = Membership.objects.filter(season=current_season).order_by('-num_wins', 'num_losses', '-num_ties')
-
-    return direct_to_template(request, 'results.html', locals())
+    return redirect(current_season)
     
 def display_season(request, season_name):
     season_name = season_name.strip()
-    season = get_object_or_404(Season, slug_name=season_name)
-    all_memberships = Membership.objects.filter(season=season).order_by('-num_wins', 'num_losses', '-num_ties')
-    
-    return direct_to_template(request, 'results-detailed.html', locals())
+    requested_season = get_object_or_404(Season, slug_name=season_name)
+    all_memberships = Membership.objects.filter(season=requested_season).order_by('-num_wins', 'num_losses', '-num_ties', 'num_forfeits')
+    all_seasons = Season.objects.all()
+
+    return direct_to_template(request, 'results.html', locals())
 
 def display_player_search(request):
     query = request.GET.get('query', '')
