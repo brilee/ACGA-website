@@ -54,7 +54,7 @@ class Player(models.Model):
     RANK_CHOICES = ([(-10 * i, '%ip' % i) for i in range(9, 0, -1)] +
                     [(-1 * i, '%id' % i) for i in range(9, 0, -1)] +
                     [(i, '%ik' % i) for i in range(1,31)] +
-                    [(100, '')])
+                    [(100, '??')])
     name = models.CharField(max_length=30)
     slug_name = models.SlugField(blank=True, editable=False)
     rank = models.IntegerField(choices = RANK_CHOICES, blank=True, default= 100)
@@ -108,6 +108,10 @@ class Season(models.Model):
 
     def __unicode__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return '/CGL/results/%s' % self.slug_name
+
 
 class Membership(models.Model):
     school = models.ForeignKey(School)
@@ -115,6 +119,7 @@ class Membership(models.Model):
     num_wins = models.IntegerField(editable=False, default = 0)
     num_losses = models.IntegerField(editable=False, default = 0)
     num_ties = models.IntegerField(editable=False, default = 0)
+    num_forfeits = models.IntegerField(editable=False, default = 0)
 
     def __unicode__(self):
         return unicode("%s in %s" %(self.school, self.season))
@@ -178,7 +183,7 @@ class Game(models.Model):
     board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
     gamefile = models.FileField(upload_to=upload_location)
     white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are formatted whitePlayer-blackPlayer")
-    winner = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
+    winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
     school1_player = models.ForeignKey(Player, related_name="game_school1_player")
     school2_player = models.ForeignKey(Player, related_name="game_school2_player")
 
@@ -187,16 +192,21 @@ class Game(models.Model):
 
     def white_player(self):
         if self.white_school == 'School1':
-            return school1_player
+            return self.school1_player
         else:
-            return school2_player
+            return self.school2_player
 
     def black_player(self):
         if self.white_school == 'School1':
-            return school2_player
+            return self.school2_player
         else:
-            return school1_player
-        
+            return self.school1_player
+       
+    def winner(self):
+        if self.winning_school == 'School1':
+            return self.school1_player
+        else:
+            return self.school2_player
     
     def browser_display_link(self):
         return unicode('/CGL/games/%s' % (self.id))

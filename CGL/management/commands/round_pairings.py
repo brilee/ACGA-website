@@ -15,34 +15,36 @@ class Command(BaseCommand):
         Returns a set of matchups (i,j) drawn from all_id, such that M_ij = 0
         Algorithm is probabilistic, with chance of success going down as
         constraints are added.
+
+        Algorithm prioritizes schools with fewest forfeits, and works thus:
+
+        1) Take all unmatched schools, sorted by num_forfeits
+        2) while len(unmatched_schools) > 1: take first unmatched school and
+            pair them up with a random school that they have not played yet.
+        3) If we run into a dead end where the last two unmatched schools
+            have already played each other: trash all progress and start from (2)
         '''
 
         success = False
-        # Outer loop: tries to find a set of random pairings that work,
-        # and starts over if it doesn't.
+        # Outer loop: repeatedly starts over from scratch until
+        # inner loop exits with success == True.
         while success == False:
             matchups = []
             pool = all_id[:]
-            # Select a random school. Find the first valid partner.
-            # Check those schools off [by removing from pool]. Repeat.
-            # If at any point a school cannot be matched, start over.
-            while True:
-                # Select random school
-                s1 = pool.pop(random.randint(0,len(pool)-1))
 
-                if not any(match_matrix[s1][s2] == 0 for s2 in pool):
-                    # No valid partner found
+            while True:
+                s1 = pool.pop(0)
+
+                possible_matches = [s for s in pool if match_matrix[s1][s] == 0]
+
+                if not possible_matches:
                     break
-                
-                for i, s2 in enumerate(pool):
-                    # Find the first matching school, then remove from pool
-                    if match_matrix[s1][s2] == 0:
-                        pool.pop(i)
-                        matchups.append((s1,s2))
-                        break
+
+                s2 = random.choice(possible_matches)
+                pool.remove(s2)
+                matchups.append((s1,s2))
+
                 if len(pool)<2:
-                    # We've matched all but 0 or 1 of the schools, so we're done.
-                    # Schools with more constraints is more likely to be left unmatched.
                     success = True
                     break
         return matchups
@@ -60,23 +62,31 @@ class Command(BaseCommand):
         if len(all_schools) < 2:
             raise CommandError('Fewer than two schools are registered for the season')
 
+        # This allows for manual matching of schools. Algorithm will then
+        # ignore manually matched schools.
         existing_matches = next_round.match_set.all()
         matched_schools = ([m.school1.id for m in existing_matches] +
                            [m.school2.id for m in existing_matches])
         unmatched_schools = all_schools.exclude(id__in=matched_schools)
 
-        # Note - this also select matches that are prescheduled for the future.
+        # Sort schools by number of forfeits. This ensures that schools with
+        # fewest forfeits get matched up consistently, whereas schools with
+        # many forfeits are more likely to be sat out.
+        unmatched_schools = sorted(unmatched_schools, key=lambda s: s.num_forfeits)
+
+        # Find existing matches, so that we don't match up two schools again.
+        # This also select matches that are prescheduled for the future.
         # This is desirable since if we want to match two schools in the future,
         # it wouldn't do to match them up now.
-        all_matches = Match.objects.filter(round__season = current_season)
+        existing_matches = Match.objects.filter(round__season = current_season)
         
         # We index each school by school.id
         # Store all matches as entries in an adjacency matrix.
         # If M_ij = 1, then school i and school j have already played.
         # If M_ij = 0, then school i and school j have not played.
-        # Adj matrix is super inefficient since our matches are pretty sparse,
-        # but well.. we don't have that many schools, yet. Might have to rework
-        # when we get bigger (>100 schools?)
+        # Adj matrix is inefficient since our matches are pretty sparse.
+        # Since we don't have that many schools yet, shouldn't matter.
+        # Might have to rework when we get bigger (>100 schools?)
         
         # all_id is the requested list of IDs to be matched.
         # This excludes already-matched schools and IDs corresponding to
@@ -85,7 +95,7 @@ class Command(BaseCommand):
         max_id = max(school.id for school in all_schools) + 1
         match_matrix = [[0]*max_id for i in range(max_id)]
         
-        for match in all_matches:
+        for match in existing_matches:
             i, j = match.school1.id, match.school2.id
             match_matrix[i][j] = 1
             match_matrix[j][i] = 1
