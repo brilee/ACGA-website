@@ -11,6 +11,12 @@
 
 {% block maintext %}
 
+<ul>
+    <li> Board {{game.board}} of {{game.match}}</li>
+    <li> Winner: {{game.winner.name}}</li>
+    <li> White: {{game.white_player.name}}</li>
+    <li> Black: {{game.black_player.name}}</li>
+</ul>
 
 <div class="eidogo-player-auto" sgf="{{game.gamefile.url}}"></div>
 
