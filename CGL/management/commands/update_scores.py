@@ -36,10 +36,13 @@ class Command(BaseCommand):
                     else:
                         m.score2 += 1
                 for forfeit in m.forfeit_set.all():
-                    if forfeit.forfeit == 'School1':
+                    if forfeit.school1_noshow and forfeit.school2_noshow:
+                        mem1.num_forfeits += 1
+                        mem2.num_forfeits += 1
+                    elif forfeit.school1_noshow and not forfeit.school2_noshow:
                         m.score2 += 1
                         mem1.num_forfeits += 1
-                    else:
+                    elif forfeit.school2_noshow and not forfeit.school1_noshow:
                         m.score1 += 1
                         mem2.num_forfeits += 1
                 m.save()

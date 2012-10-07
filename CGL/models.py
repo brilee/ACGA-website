@@ -230,7 +230,7 @@ class Game(models.Model):
             p2 += ' (W)'
             p1 += ' (B)'
 
-        if self.winner == 'School1':
+        if self.winning_school == 'School1':
             p1 = wrap_tag(p1, 'b')
         else:
             p2 = wrap_tag(p2, 'b')
@@ -272,15 +272,18 @@ class Forfeit(models.Model):
 
     match = models.ForeignKey(Match, help_text="School1 vs School2")
     board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
-    forfeit = models.CharField(max_length=10, choices = SCHOOL_CHOICES, help_text="Who forfeited the match?")
+    school1_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 1 fail to show up?")
+    school2_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 2 fail to show up?")
 
     class Meta:
         ordering = ['-match__round__date', 'board']
 
     def display_result(self):
-        if self.forfeit == 'School1':
+        if self.school1_noshow and self.school2_noshow:
+            return unicode('<li>Board %s: Both schools failed to show</li>' % self.board)
+        elif self.school1_noshow and not self.school2_noshow:
             return unicode('<li>Board %s: %s forfeits this board</li>' % (self.board, self.match.school1.name))
-        else:
+        elif not self.school1_noshow and self.school2_noshow:
             return unicode('<li>Board %s: %s forfeits this board</li>' % (self.board, self.match.school2.name))
 
     def __unicode__(self):
