@@ -1,0 +1,270 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[6.50]TM[1800]OT[5x30 byo-yomi]
+PW[Brock1]PB[UMichigan1]DT[2012-10-06]PC[The KGS Go Server at http://www.gokgs.com/]C[Brock1 [-\]: hi
+]RE[W+Resign]
+;B[pd]BL[1761.119]
+;W[pp]WL[1793.624]
+;B[cd]BL[1751.632]
+;W[cp]WL[1789.642]
+;B[qn]BL[1739.309]
+;W[qf]WL[1785.976]
+;B[qh]BL[1691.856]
+;W[of]WL[1774.236]
+;B[nd]BL[1687.698]
+;W[qk]WL[1765.741]
+;B[qe]BL[1669.105]
+;W[pn]WL[1710.23]
+;B[pm]BL[1662.096]
+;W[qm]WL[1708.289]
+;B[po]BL[1636.11]
+;W[on]WL[1705.801]
+;B[qp]BL[1632.668]
+;W[oo]WL[1702.971]
+;B[qo]BL[1630.793]
+;W[qq]WL[1648.409]
+;B[pq]BL[1609.82]
+;W[op]WL[1642.168]
+;B[rm]BL[1561.165]
+;W[ql]WL[1638.848]
+;B[qr]BL[1559.461]
+;W[rq]WL[1624.419]
+;B[rr]BL[1557.699]
+;W[rf]WL[1576.313]
+;B[oq]BL[1544.686]
+;W[nq]WL[1568.728]
+;B[nr]BL[1486.097]
+;W[mr]WL[1545.435]
+;B[mq]BL[1479.753]
+;W[np]WL[1542.594]
+;B[or]BL[1478.714]
+;W[lq]WL[1525.1]
+;B[eq]BL[1463.438]
+;W[gq]WL[1487.995]
+;B[eo]BL[1458.672]
+;W[dn]WL[1483.868]
+;B[go]BL[1448.565]
+;W[dq]WL[1446.004]
+;B[er]BL[1401.832]
+;W[ip]WL[1440.861]
+;B[cl]BL[1390.496]
+;W[dl]WL[1432.455]
+;B[dk]BL[1373.541]
+;W[el]WL[1428.23]
+;B[cm]BL[1366.396]
+;W[cn]WL[1421.678]
+;B[io]BL[1359.732]
+;W[jp]WL[1415.346]
+;B[ek]BL[1312.345]
+;W[gl]WL[1401.683]
+;B[jo]BL[1162.436]
+;W[ko]WL[1390.254]
+;B[kn]BL[1121.467]
+;W[jn]WL[1387.087]
+;B[hq]BL[1087.139]
+;W[ho]WL[1374.226]
+;B[in]BL[1082.129]
+;W[hn]WL[1371.703]
+;B[im]BL[1076.163]
+;W[hp]WL[1352.737]
+;B[gp]BL[1056.786]
+;W[gr]WL[1334.495]
+;B[hr]BL[1042.685]
+;W[ir]WL[1324.065]
+;B[fl]BL[961.031]
+;W[fm]WL[1315.293]
+;B[fk]BL[958.145]
+;W[dr]WL[1241.076]
+;B[em]BL[927.935]
+;W[en]WL[1199.286]
+;B[dm]BL[874.288]
+;W[hm]WL[1151.978]
+;B[ed]BL[860.078]
+;W[lc]WL[1129.744]
+;B[ic]BL[850.729]
+;W[me]WL[1092.735]
+;B[md]BL[779.887]
+;W[ld]WL[1090.46]
+;B[le]BL[779.057]
+;W[ke]WL[1075.917]
+;B[lf]BL[774.744]
+;W[mf]WL[1072.887]
+;B[nf]BL[706.528]
+;W[mg]WL[1049.282]
+;B[pf]BL[658.479]
+;W[pg]WL[1023.58]
+;B[pe]BL[638.093]
+;W[qg]WL[1020.486]
+;B[og]BL[635.1]
+;W[oh]WL[1018.035]
+;B[oe]BL[631.071]
+;W[kg]WL[1004.478]
+;B[ph]BL[620.594]
+;W[ng]WL[963.916]
+;B[rh]BL[560.416]
+;W[of]WL[917.631]
+;B[bn]BL[537.757]
+;W[ne]WL[913.684]
+;B[fn]BL[518.767]
+;W[bo]WL[910.673]
+;B[dp]BL[477.308]
+;W[co]WL[899.866]
+;B[fq]BL[442.7]
+;W[qc]WL[893.966]
+;B[rd]BL[394.403]
+;W[rc]WL[875.636]
+;B[mb]BL[378.342]
+;W[lb]WL[870.231]
+;B[re]BL[46.872]
+;W[ob]WL[853.679]
+;B[oc]BL[30]OB[4]
+;W[pc]WL[847.429]
+;B[nb]BL[30]OB[4]
+;W[oa]WL[840.419]
+;B[sd]BL[30]OB[4]
+;W[mc]WL[831.204]
+;B[sf]BL[30]OB[4]
+;W[pj]WL[798.103]
+;B[rg]BL[30]OB[4]
+;W[og]WL[794.792]
+;B[rj]BL[30]OB[4]
+;W[rk]WL[786.167]
+;B[nc]BL[30]OB[3]
+;W[ma]WL[781.026]
+;B[pi]BL[30]OB[3]
+;W[oj]WL[688.919]
+;B[qj]BL[30]OB[3]
+;W[sg]WL[677.205]
+;B[sk]BL[30]OB[3]
+;W[sl]WL[673.014]
+;B[sj]BL[30]OB[3]
+;W[rl]WL[644.233]
+;B[sh]BL[30]OB[3]
+;W[ri]WL[640.511]
+;B[oi]BL[30]OB[3]
+;W[ni]WL[629.677]
+;B[nj]BL[30]OB[3]
+;W[om]WL[624.028]
+;B[mi]BL[30]OB[3]
+;W[nh]WL[619.891]
+;B[gs]BL[30]OB[3]
+;W[iq]WL[611.808]
+;B[fr]BL[30]OB[3]
+;W[rp]WL[567.856]
+;B[il]BL[30]OB[3]
+;W[bm]WL[558.971]
+;B[bl]BL[30]OB[3]
+;W[an]WL[551.361]
+;B[lo]BL[30]OB[3]
+;W[kp]WL[543.866]
+;B[ln]BL[30]OB[3]
+;W[mp]WL[541.295]
+;B[nl]BL[30]OB[3]
+;W[ol]WL[533.179]
+;B[je]BL[30]OB[3]
+;W[jf]WL[524.787]
+;B[ie]BL[30]OB[3]
+;W[if]WL[521.864]
+;B[kd]BL[30]OB[3]
+;W[lg]WL[501.147]
+;B[sq]BL[30]OB[3]
+;W[gc]WL[475.98]
+;B[ro]BL[30]OB[3]
+;W[ge]WL[468.352]
+;B[he]BL[30]OB[3]
+;W[hf]WL[465.507]
+;B[gb]BL[30]OB[3]
+;W[fb]WL[463.114]
+;B[hb]BL[30]OB[3]
+;W[fc]WL[457.24]
+;B[gf]BL[30]OB[3]
+;W[fe]WL[452.228]
+;B[kc]BL[30]OB[3]
+;W[fg]WL[433.445]
+;B[od]BL[30]OB[3]
+;W[na]WL[428.43]C[UMichigan1 [-\]: Good game.
+yizao [3d?\]: yea
+UMichigan1 [-\]: Losing the upper right group was too much.
+yizao [3d?\]: Bob, right?
+UMichigan1 [-\]: Yes. Hi Yizao.
+Brock4 [-\]: great job
+yizao [3d?\]: the left bottom, b seems a little too aggressive?
+yizao [3d?\]: could have gone lighter?
+UMichigan1 [-\]: Yes.
+UMichigan1 [-\]: Too greedy.
+Brock1 [-\]: good game
+yizao [3d?\]: before that the game was very close
+UMichigan1 [-\]: But I was not sure how else to play.
+yizao [3d?\]: I would simply run away... :)))
+UMichigan1 [-\]: I thought the thickness with the two stone capture might keep the game playable.
+Brock1 [-\]: actually, that two is not meaningful
+yizao [3d?\]: yea, playable, but I am afread already b lost some points there
+yizao [3d?\]: c8 was a little greedy?
+Brock1 [-\]: maybe
+Brock1 [-\]: I want to balance
+Brock1 [-\]: both sides
+UMichigan1 [-\]: Yes, maybe with the weak stones in the middle.
+yizao [3d?\]: w's attack was very successful
+UMichigan1 [-\]: Yes.
+UMichigan1 [-\]: Thanks for the game.
+Brock1 [-\]: my mouse is broken, I accidently put h8 instead of f8
+Brock1 [-\]: Thanks, too
+yizao [3d?\]: good game
+UMichigan1 [-\]: Good to see you Yizao.
+yizao [3d?\]: you too!
+Brock1 [-\]: BYe
+UMichigan1 [-\]: How are things going.
+UMichigan1 [-\]: Bye.
+yizao [3d?\]: Hopefully I will Ann Arbor some time  
+yizao [3d?\]: bye
+yizao [3d?\]: not bad
+UMichigan1 [-\]: I will look forward to seeing you then.
+yizao [3d?\]: students are not as good as at UM, of course
+yizao [3d?\]: otherwise the research environment is better (for me)
+UMichigan1 [-\]: We have some excellent students.
+yizao [3d?\]: yea
+UMichigan1 [-\]: Good.
+yizao [3d?\]: well, I mean undergrads
+yizao [3d?\]: but the probabilists here are good and very nice
+UMichigan1 [-\]: Great.
+yizao [3d?\]: and some analysts are also very fun to talk to
+UMichigan1 [-\]: I wish we had a bit more here.
+yizao [3d?\]: so I saw another post of stat and math at UM?
+yizao [3d?\]: hehe
+UMichigan1 [-\]: Hmm. I am not sure about the post.
+yizao [3d?\]: I mean, opening position?
+yizao [3d?\]: OK
+UMichigan1 [-\]: Working with math was a challenge.
+yizao [3d?\]: then probably they just mention Stat in the post
+UMichigan1 [-\]: I suppose we still have the position.
+yizao [3d?\]: yea, I heard some ot it
+yizao [3d?\]: so stats is hiring again?
+UMichigan1 [-\]: I am not sure.
+UMichigan1 [-\]: We have been thinking mainly about our external review.
+yizao [3d?\]: I see
+UMichigan1 [-\]: I think we may have a position.
+yizao [3d?\]: Tailen talked about it last time
+yizao [3d?\]: wow
+UMichigan1 [-\]: Seems like we usually do.
+UMichigan1 [-\]: Are there go players near you?
+yizao [3d?\]: yes, very impressive
+yizao [3d?\]: not until very recently I found a grad student playing
+yizao [3d?\]: but we haven't played yet
+yizao [3d?\]: I didn't check the club here
+yizao [3d?\]: too busy schedule
+UMichigan1 [-\]: Yes, I imagine you are busy.
+yizao [3d?\]: but it would be fun to play Go in my office :-)))
+UMichigan1 [-\]: What are you teaching?
+yizao [3d?\]: calc I
+yizao [3d?\]: teaching is easy
+UMichigan1 [-\]: Good.
+yizao [3d?\]: but there are some other issues
+yizao [3d?\]: you understand:P
+UMichigan1 [-\]: Anyway, I should run. We want to take advantage of the reasonable weather, going for a walk.
+UMichigan1 [-\]: Teaching can be more than just teaching.
+yizao [3d?\]: sure
+yizao [3d?\]: have a nice weekend
+yizao [3d?\]: Hopefully I will see you soon in AA
+UMichigan1 [-\]: Thanks.  You too. And good luck with everything.
+UMichigan1 [-\]: Sounds good.
+UMichigan1 [-\]: Bye.
+])

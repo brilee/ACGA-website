@@ -1,0 +1,341 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[CWRU3]PB[Princeton3]DT[2012-10-06]PC[The KGS Go Server at http://www.gokgs.com/]RE[W+5.50]
+;B[qd]BL[1797.024]
+;W[dp]WL[1793.153]
+;B[dc]BL[1790.537]
+;W[qp]WL[1789.679]
+;B[cn]BL[1783.127]
+;W[fq]WL[1781.251]
+;B[ci]BL[1780.273]
+;W[od]WL[1771.809]
+;B[mc]BL[1767.602]
+;W[ne]WL[1754.867]
+;B[qg]BL[1764.337]
+;W[qc]WL[1717.942]
+;B[pc]BL[1741.067]
+;W[pd]WL[1701.578]
+;B[oc]BL[1731.522]
+;W[qe]WL[1666.39]
+;B[rd]BL[1727.64]
+;W[re]WL[1648.464]
+;B[rc]BL[1719.303]
+;W[nc]WL[1622.577]
+;B[nb]BL[1713.412]
+;W[nd]WL[1617.095]
+;B[qb]BL[1707.901]
+;W[pi]WL[1612.803]
+;B[oq]BL[1694.294]
+;W[mq]WL[1589.876]
+;B[po]BL[1599.714]
+;W[pp]WL[1587.088]
+;B[op]BL[1596.934]
+;W[oo]WL[1586.576]
+;B[no]BL[1584.442]
+;W[on]WL[1585.086]
+;B[mp]BL[1581.292]
+;W[lq]WL[1553.008]
+;B[lp]BL[1475.641]
+;W[kp]WL[1544.978]
+;B[ko]BL[1472.285]
+;W[jp]WL[1544.263]
+;B[jo]BL[1463.253]
+;W[ip]WL[1541.456]
+;B[ro]BL[1455.305]
+;W[qo]WL[1494.586]
+;B[pn]BL[1442.708]
+;W[qn]WL[1432.434]
+;B[pm]BL[1406.501]
+;W[om]WL[1421.136]
+;B[qm]BL[1381.593]
+;W[rm]WL[1346.378]
+;B[ol]BL[1313.638]
+;W[pl]WL[1328.187]
+;B[ql]BL[1284.973]
+;W[nl]WL[1321.239]
+;B[pk]BL[1280.852]
+;W[mn]WL[1310.358]
+;B[rn]BL[1273.817]
+;W[rp]WL[1294.726]
+;B[rl]BL[1269.948]
+;W[pr]WL[1293.671]
+;B[pq]BL[1230.843]
+;W[qq]WL[1267.907]
+;B[or]BL[1204.707]
+;W[qr]WL[1259.019]
+;B[sr]BL[1179.586]
+;W[lo]WL[1209.835]
+;B[nn]BL[1119.471]
+;W[nm]WL[1199.533]
+;B[ln]BL[1113.088]
+;W[so]WL[1191.05]
+;B[sm]BL[1109.896]
+;W[nr]WL[1153.822]
+;B[os]BL[896.37]
+;W[nk]WL[1115.195]
+;B[qi]BL[869.362]
+;W[pg]WL[1006.652]
+;B[pj]BL[804.264]
+;W[qh]WL[999.831]
+;B[rh]BL[799.713]
+;W[ph]WL[998.76]
+;B[rg]BL[793.664]
+;W[io]WL[980.088]
+;B[mm]BL[785.806]
+;W[jm]WL[974.302]
+;B[id]BL[777.482]
+;W[lm]WL[926.741]
+;B[mo]BL[765.794]
+;W[ll]WL[919.358]
+;B[sn]BL[717.698]
+;W[sp]WL[872.439]
+;B[rr]BL[706.33]
+;W[rs]WL[838.737]
+;B[ps]BL[670.067]
+;W[qs]WL[837.78]
+;B[sq]BL[656.751]
+;W[jn]WL[823.072]
+;B[ss]BL[638.47]
+;W[rq]WL[820.637]
+;B[sr]BL[636.395]
+;W[kn]WL[808.158]
+;B[ss]BL[629.675]
+;W[ml]WL[789.626]
+;B[sq]BL[619.138]
+;W[rr]WL[783.771]
+;B[sr]BL[614.059]
+;W[np]WL[782.8]
+;B[sq]BL[542.232]
+;W[nq]WL[777.852]
+;B[ss]BL[539.411]
+;W[cl]WL[740.858]
+;B[en]BL[526.582]
+;W[co]WL[735.327]
+;B[bo]BL[520.296]
+;W[bp]WL[728.488]
+;B[do]BL[518.181]
+;W[cp]WL[726.535]
+;B[ep]BL[515.544]
+;W[eq]WL[724.328]
+;B[dm]BL[486.133]
+;W[ek]WL[620.443]
+;B[ei]BL[420.566]
+;W[bm]WL[596.547]
+;B[dl]BL[403.195]
+;W[dk]WL[594.779]
+;B[ck]BL[350.345]
+;W[bn]WL[544.032]
+;B[fl]BL[288.868]
+;W[fk]WL[524.604]
+;B[gl]BL[274.195]
+;W[gk]WL[520.314]
+;B[cm]BL[247.872]
+;W[bl]WL[514.012]
+;B[fp]BL[234.01]
+;W[gn]WL[435.846]
+;B[fn]BL[167.375]
+;W[fo]WL[421.342]
+;B[el]BL[155.006]
+;W[hd]WL[388.383]
+;B[ic]BL[119.971]
+;W[dd]WL[348.682]
+;B[ed]BL[72.216]
+;W[ec]WL[261.396]
+;B[cc]BL[59.762]
+;W[de]WL[253.22]
+;B[fd]BL[29.918]
+;W[ff]WL[233.381]
+;B[fc]BL[30]OB[4]
+;W[dh]WL[229.113]
+;B[di]BL[30]OB[4]
+;W[gi]WL[217.306]
+;B[eh]BL[30]OB[4]
+;W[gg]WL[201.769]
+;B[dg]BL[30]OB[3]
+;W[df]WL[187.928]
+;B[cf]BL[30]OB[3]
+;W[be]WL[151.704]
+;B[bf]BL[30]OB[3]
+;W[eb]WL[146.989]
+;B[bd]BL[30]OB[3]
+;W[ce]WL[128.445]
+;B[ae]BL[30]OB[3]
+;W[fb]WL[71.779]
+;B[gc]BL[30]OB[3]
+;W[hc]WL[70.174]
+;B[gb]BL[30]OB[3]
+;W[hb]WL[67.978]
+;B[he]BL[30]OB[3]
+;W[ge]WL[40.501]
+;B[gd]BL[30]OB[3]
+;W[ie]WL[30]OW[5]
+;B[hf]BL[30]OB[3]C[CWRU1 [?\]: crazy game
+CWRU2 [2d?\]: indeed
+]
+;W[ib]WL[30]OW[5]C[CWRU1 [?\]: yoon needs to just take middle
+CWRU1 [?\]: and give up those stones
+]
+;B[jb]BL[30]OB[3]
+;W[jc]WL[30]OW[5]
+;B[jd]BL[30]OB[3]
+;W[kd]WL[30]OW[5]
+;B[kc]BL[30]OB[3]
+;W[je]WL[30]OW[5]
+;B[jc]BL[30]OB[3]C[CWRU1 [?\]: yoon showed mad perseverance
+CWRU1 [?\]: after the beginning
+CWRU1 [?\]: J13
+]
+;W[ig]WL[30]OW[5]C[CWRU2 [2d?\]: j13 is sweet
+CWRU1 [?\]: they cannot see us chat right
+CWRU2 [2d?\]: no, under free game you can't
+]
+;B[ia]BL[30]OB[3]C[CWRU1 [?\]: k just checking
+]
+;W[eg]WL[30]OW[5]
+;B[ch]BL[30]OB[3]
+;W[ld]WL[30]OW[5]
+;B[fh]BL[30]OB[3]C[CWRU1 [?\]: they both in byomi
+]
+;W[gh]WL[30]OW[5]C[CWRU1 [?\]: so it's gonna be rough
+]
+;B[fg]BL[30]OB[3]C[CWRU2 [2d?\]: if he can summon some magic in the centre...
+]
+;W[hl]WL[30]OW[5]C[CWRU2 [2d?\]: ...
+CWRU1 [?\]: uh
+]
+;B[pf]BL[30]OB[3]C[CWRU1 [?\]: lol
+CWRU2 [2d?\]: ha
+CWRU2 [2d?\]: they both don't see it
+CWRU1 [?\]: yah
+]
+;W[of]WL[30]OW[5]
+;B[oi]BL[30]OB[3]
+;W[nh]WL[30]OW[5]C[CWRU1 [?\]: middle has holes
+]
+;B[nj]BL[30]OB[3]
+;W[mj]WL[30]OW[5]
+;B[ni]BL[30]OB[3]
+;W[mi]WL[30]OW[5]C[CWRU1 [?\]: he gonna go back to E14
+]
+;B[ns]BL[30]OB[3]C[CWRU1 [?\]: nope
+CWRU2 [2d?\]: if he can G14, maaaybe bringable into yose
+]
+;W[lr]WL[30]OW[5]
+;B[ls]BL[30]OB[3]
+;W[ks]WL[30]OW[5]C[CWRU1 [?\]: feels like black ahead
+]
+;B[kr]BL[30]OB[3]C[CWRU1 [?\]: but i dunno
+CWRU1 [?\]: whatt
+CWRU2 [2d?\]: N1
+]
+;W[ms]WL[30]OW[5]C[CWRU1 [?\]: haha
+]
+;B[js]BL[30]OB[3]C[CWRU2 [2d?\]: that's big
+CWRU1 [?\]: this shit's fun
+CWRU2 [2d?\]: oooooooo
+]
+;W[kq]WL[30]OW[5]C[CWRU2 [2d?\]: yeah but nothing
+CWRU4 [-\]: what is b doing?
+]
+;B[hm]BL[30]OB[3]C[CWRU2 [2d?\]: he drunken roostered
+CWRU1 [?\]: lol
+]
+;W[gm]WL[30]OW[5]C[CWRU1 [?\]: noo
+]
+;B[go]BL[30]OB[3]C[CWRU1 [?\]: G5
+CWRU1 [?\]: instead of G7, G5
+]
+;W[gp]WL[30]OW[5]
+;B[eo]BL[30]OB[3]
+;W[hn]WL[30]OW[5]C[CWRU1 [?\]: still  not bad
+CWRU2 [2d?\]: i think that's proper order, what he playes
+]
+;B[hp]BL[30]OB[3]
+;W[gq]WL[30]OW[5]C[CWRU2 [2d?\]: played*
+]
+;B[fm]BL[30]OB[3]C[CWRU2 [2d?\]: and sente
+CWRU1 [?\]: black ends in gote
+CWRU1 [?\]: haha
+]
+;W[ho]WL[30]OW[5]C[CWRU2 [2d?\]: G14 come on!
+CWRU2 [2d?\]: that's nothinhg!
+CWRU4 [-\]: nope, they don't see it
+CWRU1 [?\]: yoon needs to fix G14
+CWRU1 [?\]: NOWWW
+]
+;B[gf]BL[30]OB[3]C[CWRU4 [-\]: too late
+CWRU1 [?\]: nooo
+CWRU2 [2d?\]: over
+CWRU2 [2d?\]: good effort by white
+]
+;W[lc]WL[30]OW[5]
+;B[lb]BL[30]OB[3]
+;W[md]WL[30]OW[5]
+;B[mb]BL[30]OB[3]C[CWRU1 [?\]: now its really over i think
+]
+;W[hg]WL[30]OW[5]C[CWRU2 [2d?\]: clearly
+]
+;B[fe]BL[30]OB[3]
+;W[if]WL[30]OW[5]C[CWRU1 [?\]: we win a close one
+CWRU1 [?\]: 3:2
+]
+;B[ef]BL[30]OB[3]
+;W[oh]WL[30]OW[5]
+;B[bk]BL[30]OB[3]
+;W[oj]WL[30]OW[5]
+;B[qf]BL[30]OB[3]C[CWRU2 [2d?\]: still undefeated in CGL since last year
+]
+;W[pe]WL[30]OW[5]C[CWRU1 [?\]: lol
+CWRU1 [?\]: yes we are
+]
+;B[al]BL[30]OB[3]C[CWRU2 [2d?\]: i really got lucky with my game though
+]
+;W[ri]WL[30]OW[5]C[CWRU1 [?\]: i will review it after yoon's done
+]
+;B[qj]BL[30]OB[3]
+;W[sd]WL[30]OW[5]
+;B[sc]BL[30]OB[3]
+;W[se]WL[30]OW[5]
+;B[an]BL[30]OB[3]
+;W[ao]WL[30]OW[5]
+;B[ak]BL[30]OB[3]
+;W[am]WL[30]OW[5]
+;B[fj]BL[30]OB[3]
+;W[gj]WL[30]OW[5]C[CWRU1 [?\]: what are they doing
+]
+;B[rj]BL[30]OB[3]
+;W[cj]WL[30]OW[5]C[CWRU2 [2d?\]: i think yoon's weakness is josekis
+]
+;B[bj]BL[30]OB[3]
+;W[dj]WL[30]OW[5]
+;B[bi]BL[30]OB[3]
+;W[sg]WL[30]OW[5]C[CWRU1 [?\]: he's rusty
+]
+;B[sh]BL[30]OB[3]C[CWRU1 [?\]: he will be fine
+]
+;W[sf]WL[30]OW[5]C[CWRU1 [?\]: once he gets a few games in
+]
+;B[fo]BL[30]OB[3]
+;W[ok]WL[30]OW[5]C[CWRU1 [?\]: joseki's overrated haha
+]
+;B[pl]BL[30]OB[3]
+;W[]WL[30]OW[5]
+;B[]BL[30]OB[3]TW[ke][le][me][oe][jf][kf][lf][mf][nf][jg][kg][lg][mg][ng][og][hh][ih][jh][kh][lh][mh][hi][ii][ji][ki][li][ni][oi][hj][ij][jj][kj][lj][nj][hk][ik][jk][kk][lk][mk][il][jl][kl][hm][im][km][mm][an][in][ln][mn][nn][bo][jo][ko][lo][mo][no][ap][hp][lp][mp][aq][bq][cq][dq][hq][iq][jq][ar][br][cr][dr][er][fr][gr][hr][ir][jr][kr][mr][as][bs][cs][ds][es][fs][gs][hs][is][js][ls]TB[aa][ba][ca][da][ea][fa][ga][ha][ja][ka][la][ma][na][oa][pa][qa][ra][sa][ab][bb][cb][db][eb][fb][hb][ib][kb][ob][pb][rb][sb][ac][bc][ec][hc][qc][ad][cd][dd][hd][be][ce][de][ee][ge][af][df][ff][ag][bg][cg][eg][ah][bh][dh][ai][ri][si][aj][sj][qk][rk][sk][sl][em][rm][dn][qn][qo][so][pp][qp][rp][sp][qq][rq][pr][qr][rr][qs][rs]C[CWRU2 [2d?\]: wait what?
+CWRU1 [?\]: LOL
+Princeton3 [-\]: thanks
+CWRU2 [2d?\]: we are soooooo obad at counting
+CWRU1 [?\]: we are bad
+Illyria [?\]: nice
+CWRU3 [-\]: thanks
+CWRU2 [2d?\]: well done yoon!
+CWRU2 [2d?\]: that was a nice comeback
+CWRU1 [?\]: yoon is a WINNNNEER
+CWRU1 [?\]: 4:1
+CWRU3 [-\]: I did bad at the beginning
+Illyria [?\]: I feel like a failure now
+CWRU1 [?\]: we saw that
+CWRU1 [?\]: haha kenny
+CWRU1 [?\]: we didn't need our secret weapon today
+CWRU2 [2d?\]: to the CWRU room!
+CWRU1 [?\]: so who's game we looking at first
+])
