@@ -31,7 +31,7 @@ class Command(BaseCommand):
 
                 # Figure out who won the match. Make note of forfeits.
                 for game in m.game_set.all():
-                    if game.winner == 'School1':
+                    if game.winning_school == 'School1':
                         m.score1 += 1
                     else:
                         m.score2 += 1
