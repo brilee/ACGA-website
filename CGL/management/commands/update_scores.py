@@ -70,7 +70,7 @@ class Command(BaseCommand):
         for game in player.game_set():
             if (date.today() - game.match.round.date) < timedelta(days=180):
                 player.isActive = True
-            if game.winner == player:
+            if game.winner() == player:
                 player.num_wins += 1
             else:
                 player.num_losses += 1
