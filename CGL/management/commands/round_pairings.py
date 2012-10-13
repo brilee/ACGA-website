@@ -72,8 +72,11 @@ class Command(BaseCommand):
         # Sort schools by number of forfeits. This ensures that schools with
         # fewest forfeits get matched up consistently, whereas schools with
         # many forfeits are more likely to be sat out.
-        unmatched_schools = sorted(unmatched_schools, key=lambda s: s.num_forfeits)
-
+        def get_forfeits(school, season):
+            m = Membership.objects.get(season=season, school=school)
+            return m.num_forfeits
+        unmatched_schools = sorted(unmatched_schools, key=lambda s: get_forfeits(s, current_season))
+        
         # Find existing matches, so that we don't match up two schools again.
         # This also select matches that are prescheduled for the future.
         # This is desirable since if we want to match two schools in the future,

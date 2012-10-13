@@ -19,5 +19,8 @@ If the round already has some matches created, this algorithm ignores those scho
 This changes the current season, which will cause the entire site to update (recent/upcoming matches sidebar, results page, and a few other miscellaneous places). This command is equivalent to editing the file located at /CGL/settings.py
 ./manage.py change_season <Season Name>
 
-This sends out an email to currently participating schools with a list of the upcoming round's matchups. The template for this email is under /templates/round-announce-email.html. 
-./manage.py send_round_email
+These two commands generate, and then send an email to currently participating schools, containing a list of the upcoming round's matchups. You can edit the rendered email before sending it out.
+The template for this email is under /templates/round-announce-email.html. 
+The rendered email is under /templates/round_email.txt
+./manage.py render_email
+./manage.py send_email
