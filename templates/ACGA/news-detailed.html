@@ -1,18 +1,9 @@
 {% extends "base_ACGA.html" %}
 
-{% block PageID %}<div id="news">{% endblock PageID %}
-
-{% block title %}{% endblock title %}
-
-
 {% block maintext %}
 
-<div class="newsfeed">
-	<h1>{{post.title}}</h1>
-	<br />
-	{{post.content|safe|linebreaks}}
-	<p>Published on {{post.get_date}}</p>
-</div>
-
+<h1>{{post.title}}</h1>
+{{post.content|safe|linebreaks}}
+<p>Published on {{post.get_date}}</p>
 
 {% endblock maintext %}

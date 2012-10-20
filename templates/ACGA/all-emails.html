@@ -1,13 +1,12 @@
 {% extends "base_ACGA.html" %}
 
-{% block title %}All email addresses (Internal! Anybody who knows this URL can find email addresses){% endblock title %}
-
+{% block title %}All email addresses{% endblock title %}
 
 {% block maintext %}
 
 {% for school in all_schools %}
 {{school.contact_email}}, 
-
+<br />
 {% endfor %}
 
 {% endblock %}

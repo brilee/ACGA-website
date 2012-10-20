@@ -4,12 +4,8 @@
 <script src="/site_media/eidogo-player/js/all.compressed.js"></script>
 {% endblock javascript %}
 
-
-{% block PageID %}<div id="games">{% endblock PageID %}
-
-{% block title %}Viewing {{game.school1_player.name}} ({{game.school1_player.get_rank_display}}) vs. {{game.school2_player.name}} ({{game.school2_player.get_rank_display}}){% endblock title %}
-
 {% block maintext %}
+<h1>Viewing {{game.school1_player.name}} ({{game.school1_player.get_rank_display}}) vs. {{game.school2_player.name}} ({{game.school2_player.get_rank_display}})</h1>
 
 <ul>
     <li> Board {{game.board}} of {{game.match}}</li>

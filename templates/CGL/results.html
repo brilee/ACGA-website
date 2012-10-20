@@ -1,28 +1,21 @@
 {% extends "base_CGL.html" %}
 
-{% block javascript %}<script type="text/javascript" src="/site_media/CollapsibleLists.js"></script>
-{% endblock %}
-
-{% block PageID %}<div id="results">{% endblock PageID %}
-
-{% block title %}Results for {{requested_season.name}}{% endblock title %}
-
+{% block javascript %}<script type="text/javascript" src="/site_media/CollapsibleLists.js"></script> {% endblock javascript %}
 
 {% block maintext %}
+<h2>{{requested_season.name}} Standings</h2>
 
 {{requested_season.html|safe}}
 
 <p>{{requested_season.description}} </p>
 
-<h2> Standings: </h2>
-
 <table>
 	<tr>
-		<th>School Name</th>
-		<th>Wins</th>
-		<th>Losses</th>
-		<th>Ties</th>
-		<th><span class='red'>Number of Forfeited Games</span></th>
+		<th>School Name  </th>
+		<th>Wins  </th>
+		<th>Losses  </th>
+		<th>Ties  </th>
+		<th><span style="color:red">Forfeited Games</span></th>
 	</tr>
 {% for membership in all_memberships %}
 	<tr>
@@ -35,15 +28,18 @@
 {% endfor %} 
 </table>
 
-<hr />
+</div>
+<!-- Lol I did a SQL injection attack on my own templating engine-->
+<div class="panel">
 
-<h3>Rounds</h3>
+<h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList">
 {% for round in requested_season.round_set.all %}
-	<li><h3 class="clickable">{{round}}</h3>
+	<li>
+	<h3 class="clickable">{{round}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}
-		<li><h4><span class="clickable">[Expand]</span> <a href="{{match.school1.url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.url}}">{{match.school2.name}}</a></h4>
+		<li><h5>[+] <a href="{{match.school1.url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.url}}">{{match.school2.name}}</a></h5>
 		<ul>
 		{% for game in match.game_set.all %}
 			{{game.display_result|safe}}		
@@ -58,7 +54,10 @@
 	</li>
 {% endfor %}
 </ul>
-<hr />
+
+</div>
+<!-- Lol I did a SQL injection attack on my own templating engine-->
+<div class="panel">
 
 <h2>Archives</h2>
 {% for season in all_seasons %}

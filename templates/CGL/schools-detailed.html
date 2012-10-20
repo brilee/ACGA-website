@@ -1,10 +1,7 @@
 {% extends "base_CGL.html" %}
 
-{% block PageID %}<div id="schools">{% endblock PageID %}
-
-{% block title %}{{ school.name }}{% endblock title %}
-
 {% block maintext %}
+<h1>{{school}}</h1>
 
 <h3>Club President: {{school.club_president}}</h3>
 <h3>Team Captain: {{ school.captain }}</h3>
@@ -29,7 +26,8 @@
 {% endfor %}
 
 
-</table><h3>Inactive Players (last game > 6 months)</h3>
+</table>
+<h3>Inactive/Retired Players (last game > 6 months)</h3>
 <table id="roster">
 	<tr>
 		<td>Name</td>

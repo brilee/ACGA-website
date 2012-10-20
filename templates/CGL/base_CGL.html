@@ -1,61 +1,64 @@
 {% extends "basebase.html" %}
 
-{% block BodyID %} <body id="CGL"> {% endblock BodyID %}
-
-{% block header %}
-<div id="menu">
-	<ul>
-		<li><a href="/" id="homenav">ACGA</a></li>
-		<li><a href="/CGL/" id="CGLnav">CGL</a></li>
-		<li><a href="/CGL/results" id="resultsnav">Results</a></li>
-		<li><a href="/CGL/schools" id="schoolsnav">Schools</a></li>
-		<li><a href="/CGL/players" id="playersnav">Players</a></li>
-		<li><a href="/CGL/join" id="joinnav">Join</a></li>
+{% block navigation %}
+	<div class="eight columns">
+	<ul class="nav-bar left">
+	<li><a href="/CGL/" id="CGLnav">CGL</a></li>
+	<li><a href="/CGL/rules">Rules</a></li>
+	<li><a href="/CGL/results">Leaderboard</a></li>
+	<li><a href="/CGL/schools">Schools</a></li>
+	<li><a href="/CGL/players">Players</a></li>
+	<li><a href="/CGL/join">Sign Up</a></li>
 	</ul>
-</div>
-{% endblock header %}
+	</div>
+	
+	<div class="four columns">
+	<ul class="nav-bar right">
+		<li><a href="/" id="homenav">ACGA</a></li>
+		<li><a href="/about/" id="aboutnav">About</a></li>
+		<li><a href="/contact/" id="contactnav">Contact us</a></li>
+	</ul>
+	</div>
+
+{% endblock navigation %}
 
 {% block logo %}
-<div id="logo" >
-<h1><a href="/CGL/">Collegiate Go League </a></h1>
-<p><i><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></i></p>
-</div>
+<img src="/site_media/CGL_banner.png" alt="CGL Banner not found!">
+<hr />
 {% endblock logo %}
 
 {% block sidebar %}
-<ul>
-	<li>
-	    <h2>Upcoming Matches</h2>
+<div class="panel">
+<h2>Upcoming Matches</h2>
 {% if sidebar_upcoming_round %}
-	    <p><strong>{{sidebar_upcoming_round}}</strong></p>
-	    <ul>
+    <p><strong>{{sidebar_upcoming_round}}</strong></p>
+    <ul>
 	{% for match in sidebar_upcoming_round.match_set.all %}
-			<li>{{match.school1}} vs. {{match.school2}}</li>
+		<li>{{match.school1}} vs. {{match.school2}}</li>
 	{% empty %}
-			<li>No matches entered yet </li>
+		<li>No matches entered yet </li>
 	{% endfor %}
-		</ul>
+	</ul>
 {% else %}
-		<p>No upcoming matches scheduled; perhaps it's the beginning or end of a season</p>
+	<p>No upcoming matches scheduled; perhaps it's the beginning or end of a season</p>
 {% endif %}
-	</li>
-	
-	<li>
-		<h2>Recent Matches</h2>
+</div>
+
+<div class="panel">
+<h2>Recent Matches</h2>
 {% for round in sidebar_recent_rounds %}
-		<p><strong>{{round}}</strong></p>
-		<ul>
+	<p><strong>{{round}}</strong></p>
+	<ul>
 	{% for match in round.match_set.all %}
 		{% if match.score1 > match.score2 %}
-			<li>{{match.school1}} defeats {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
+		<li>{{match.school1}} defeats {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
 		{% else %}{% if match.score2 > match.score1 %}
-			<li>{{match.school2}} defeats {{match.school1}}, {{match.score2}}-{{match.score1}}</li>
+		<li>{{match.school2}} defeats {{match.school1}}, {{match.score2}}-{{match.score1}}</li>
 		{% else %}
-			<li>{{match.school1}} ties {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
+		<li>{{match.school1}} ties {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
 		{% endif %}{% endif %}
 	{% endfor %}			
-		</ul>
+	</ul>
 {% endfor %}
-	</li>
-</ul>
+</div>
 {% endblock sidebar %}

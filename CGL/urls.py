@@ -4,6 +4,7 @@ from django.views.generic.simple import direct_to_template, redirect_to
 
 urlpatterns = patterns('CGA.CGL.views',
     (r'^$', direct_to_template, {'template': 'CGL.html'}),
+    (r'^rules/$', direct_to_template, {'template': 'CGL_rules.html'}),
     (r'^schools/$', 'display_school'),
     (r'^schools/([A-Za-z_-]{1,50})/$', 'display_roster'),                       
     (r'^results/$', 'redirect_to_current_season'),

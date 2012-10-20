@@ -1,29 +1,38 @@
 {% extends "base_CGL.html" %}
 
-{% block PageID %}<div id="CGL">{% endblock PageID %}
-
-{% block title %}Collegiate Go League{% endblock title %}
-
-{% block maintext %}
-<div id="tournaments">
-	<div id='league'>
-		<h2>League information</h2>
-		<p> The CGL is the first online competitive league for college Go clubs. Each season runs through the school year, and the top sixteen schools are invited to compete for a cash prize in an end-of-season championship tournament. Strong players are generally on hand to help review games, helping kyu and dan-level players alike to improve.</p>
-		<ul>
-			<li><b>League Format:</b> Matches occur once every other week throughout the school year, except in December and March, to avoid winter/spring breaks. A week before each round, our algorithm will randomly match together schools who have not played each other previously that season. If there are an odd number of schools, schools with the fewest forfeited games are given priority in match pairing. Seeding into the championship tournament is determined by number of wins, so a college who joins late may still be invited to the championship tournament. </li>
-		    <li><b>Match Format:</b> A "match" refers to a set of five games between two schools. Each school will field five players. The five players from each team will play each other, sorted from strongest to weakest. The match will be won by the school who wins best of the five boards. No-shows for a board are counted as forfeits.</li>
-			<li><b>Team logistics:</b> Each school will nominate a team captain, who will maintain a roster of active team members. These team members should be active members of the club. There is no limit to the number of people on a roster, although only five team members may represent a school in any given match. People are eligible to compete for a college club if they are active members of the club.</li>
-			<li><b>Time:</b> Matches occur every other Saturday throughout the regular season. The starting time is currently set at 1PM EST/10AM PST, and ending by 3PM EST/noon PST. Please try to arrive in the tournament room half an hour earlier than the match start, to minimize delays.</li>
-		    <li><b>Location:</b> <a href="http://www.gokgs.com">KGS</a>, Room: "Collegiate Go League", under "Tournaments".</li>
-		    <li><b>Game settings:</b> 30m main time, 5x30second byo-yomi, Chinese Ruleset with 6.5 points komi, unrated, handicapped according to KGS ratings, no undos. A moderator will be on hand to resolve any disputes/conflicts.</li>
-		    <li><b>Handicap:</b> Full handicap as determined by KGS ranking differences during normal season play. The end-of-season championship tournament will have <b>no</b> handicap. </li>
-		    <li><b>No-Show:</b> If an entire school has not shown up by 1:15PM EST, that school forfeits the entire match. If at least one team member has shown up, that deadline is extended to 1:30pm EST, after which all missing boards are considered forfeits.</li>
-            <li><b>Reporting Results:</b> We will handle the uploading and tagging of games. You can help us out by remembering to state your name in-game, so that the names of the players are in the SGF file. If we can't figure out who played a game, it will be recorded as "Unknown Player".</li>
-        </ul>
-	</div>
+{% block content %}
+<div class="row">
+<div class="twelve columns">
+	<img src="/site_media/CGL_banner.png" alt="CGL Banner not found!">
 	<hr />
+</div>
+</div>
 
-<img style="float:right;margin:15px 0px 0px 20px;clear:left;" src="../site_media/CGL-trophy.jpg" alt="Sorry, can't display this image!"/>
+
+<div class="row">
+
+<div class="four columns">
+<div class="panel">
+<h4>The CGL is the first online competitive league for college Go clubs. </h4>
+<h5><a href="/CGL/rules"> Learn how the League works</a></h5>
+</div>
+</div>
+
+<div class="four columns">
+<div class="panel">
+<h4>The top sixteen schools are seeded into a tournament to compete for a cash prize.</h4>
+<h5><a href="/CGL/results"> See who's in the lead</a></h5>
+</div>
+</div>
+
+<div class="four columns">
+<div class="panel">
+<h4>College clubs from all over the continent are joining the fun.</h4>
+<h5><a href="/CGL/join"> Join the CGL</a></h5>
+</div>
+</div>
 
 </div>
-{% endblock maintext %}
+
+<!--<img style="float:right;margin:15px 0px 0px 20px;clear:left;" src="../site_media/CGL-trophy.jpg" alt="Sorry, can't display this image!"/>-->
+{% endblock content %}

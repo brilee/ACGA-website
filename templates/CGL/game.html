@@ -4,15 +4,8 @@
 <script src="/site_media/eidogo-player/js/all.compressed.js"></script>
 {% endblock javascript %}
 
-
-{% block BodyID %}
-<body id="CGL">
-{% endblock BodyID %}
-
-{% block title %}Viewing {{game.school1_player.name}} ({{game.school1_player.get_rank_display}}) vs. {{game.school2_player.name}} ({{game.school2_player.get_rank_display}}){% endblock title %}
-
 {% block maintext %}
-
+<h1>Viewing {{game.school1_player.name}} ({{game.school1_player.get_rank_display}}) vs. {{game.school2_player.name}} ({{game.school2_player.get_rank_display}})</h1>
 
 <div class="eidogo-player-auto" sgf="{{game.gamefile.url}}"></div>
 

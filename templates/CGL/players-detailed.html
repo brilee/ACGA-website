@@ -1,10 +1,8 @@
 {% extends 'base_CGL.html' %}
 
-{% block PageID %} <div id="players">{% endblock PageID%}
-
-{% block title %}Viewing details for {{player.name}}{% endblock title %}
-
 {% block maintext %}
+<h1>CGL Record for {{player.name}}</h1>
+
 <ul>
 	<li><strong>Name:</strong> {{player.name}}</li>
 	<li><strong>Rank:</strong> {{player.get_rank_display}}</li>
@@ -23,7 +21,5 @@
 	<li>{{game.match.round.date}} - {{game.display_result|safe}}</li>
 {% endfor %}
 </ul>
-
-
 
 {% endblock maintext %}
