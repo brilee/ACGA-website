@@ -41,7 +41,7 @@ def display_player_search(request):
         
         # If only one player found, automatically redirect to that player's page
         if len(results) == 1:
-            return HttpResponseRedirect(results[0].browser_display_link())
+            return HttpResponseRedirect(results[0].get_absolute_url())
 
         if not results:
             errors.append('No results')

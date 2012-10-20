@@ -40,9 +40,10 @@ class School(models.Model):
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
         super(School, self).save(*args, **kwargs)
-
-    def url(self):
-        return unicode('/CGL/schools/%s' % self.slug_name)
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGA.CGL.views.display_roster', [str(self.slug_name)]) 
 
     class Meta:
         ordering = ['name']
@@ -74,12 +75,13 @@ class Player(models.Model):
 
     def name_and_rank(self):
         return unicode('%s, %s' % (self.name, self.get_rank_display()))
-
-    def browser_display_link(self):
-        return unicode('/CGL/players/%s' % (self.id))
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGA.CGL.views.display_player', [str(self.id)])
 
     def name_with_link(self):
-        return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.browser_display_link()))
+        return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.get_absolute_url()))
 
     def game_set(self):
         ''' Custom method because Game has two ForeignKeys to Player, so
@@ -108,9 +110,10 @@ class Season(models.Model):
 
     def __unicode__(self):
         return self.name
-    
+   
+    @models.permalink
     def get_absolute_url(self):
-        return '/CGL/results/%s' % self.slug_name
+        return ('CGA.CGL.views.display_season', [str(self.slug_name)])
 
 
 class Membership(models.Model):
@@ -135,12 +138,15 @@ class RoundManager(models.Manager):
             return next_round[0]
         else:
             return super(RoundManager,self).none()
+
     def get_recent_rounds(self, depth):
         ''' depth is how many recent rounds you want to retrieve'''
         all_past_rounds = super(RoundManager, self
                      ).filter(season=self.current_season
                         ).filter(date__lt=datetime.datetime.now()
                         ).order_by('-date')
+        if depth == 1:
+            return all_past_round[0]
         if len(all_past_rounds) < depth:
             return all_past_rounds
         else:
@@ -208,8 +214,9 @@ class Game(models.Model):
         else:
             return self.school2_player
     
-    def browser_display_link(self):
-        return unicode('/CGL/games/%s' % (self.id))
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGA.CGL.views.display_game', [str(self.id)])
     
     def display_result(self):
         '''
@@ -236,32 +243,17 @@ class Game(models.Model):
             p2 = wrap_tag(p2, 'b')
 
         def add_player_link(arg):
-            link = arg[1].browser_display_link()
+            link = arg[1].get_absolute_url()
             return wrap_tag(arg[0], 'a', extras='href="%s"' % link)
 
         (p1, p2) = map(add_player_link, ((p1, player1), (p2, player2)))
 
         sgf = wrap_tag('[sgf]', 'a', extras='href="%s"' % self.gamefile.url)
-        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.browser_display_link())
+        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.get_absolute_url())
         
         almost_done = '%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2)
 
         return unicode(wrap_tag(almost_done, 'li'))
-        
-        
-##        contents = (self.board, self.browser_display_link(), self.school1_player.name, self.school1_player.get_rank_display(), self.school2_player.name, self.school2_player.get_rank_display())
-##        before = '<li>Board %s: <a href="%s">'
-##        after = '</a></li>'
-##        if self.winner == 'School1':
-##            if self.white_school == 'School1':
-##                return unicode((before + '<b>%s, %s (W)</b> vs. %s, %s (B)' + after) % contents)
-##            else:
-##                return unicode((before + '<b>%s, %s (B)</b> vs. %s, %s (W)' + after) % contents)
-##        else:
-##            if self.white_school == 'School2':
-##                return unicode((before + '%s, %s (W) vs. <b>%s, %s (B)</b>' + after) % contents)
-##            else:
-##                return unicode((before + '%s, %s (B) vs. <b>%s, %s (W)</b>' + after) % contents)
 
     def __unicode__(self):
         return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))

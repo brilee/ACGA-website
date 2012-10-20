@@ -27,7 +27,7 @@
 {{results|length}} matches found.
 	<ul>
 	{% for result in results %}
-		<li> <a href="{{result.browser_display_link}}">{{result.name_and_rank}}</a></li>
+		<li> <a href="{{result.get_absolute_url}}">{{result.name_and_rank}}</a></li>
 	{% endfor %}
 	</ul>
 </div>

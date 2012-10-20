@@ -15,7 +15,7 @@
 to the ACGA.</p>
 
 {% for school in all_schools %}
-<h3><a href="{{school.url}}">{{school.name}}</a></h3></li>
+<h3><a href="{{school.get_absolute_url}}">{{school.name}}</a></h3></li>
 <ul>
 	<li>Club President: {{school.club_president}}</li>
 	<li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
