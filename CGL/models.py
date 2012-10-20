@@ -40,7 +40,7 @@ class School(models.Model):
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
         super(School, self).save(*args, **kwargs)
-    
+
     @models.permalink
     def get_absolute_url(self):
         return ('CGA.CGL.views.display_roster', [str(self.slug_name)]) 
@@ -75,13 +75,13 @@ class Player(models.Model):
 
     def name_and_rank(self):
         return unicode('%s, %s' % (self.name, self.get_rank_display()))
-    
+
     @models.permalink
     def get_absolute_url(self):
         return ('CGA.CGL.views.display_player', [str(self.id)])
 
     def name_with_link(self):
-        return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.get_absolute_url()))
+        return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.browser_display_link()))
 
     def game_set(self):
         ''' Custom method because Game has two ForeignKeys to Player, so
@@ -139,14 +139,15 @@ class RoundManager(models.Manager):
         else:
             return super(RoundManager,self).none()
 
+    def get_previous_round(self):
+        return self.get_recent_rounds(1)[0]
+    
     def get_recent_rounds(self, depth):
         ''' depth is how many recent rounds you want to retrieve'''
         all_past_rounds = super(RoundManager, self
                      ).filter(season=self.current_season
                         ).filter(date__lt=datetime.datetime.now()
                         ).order_by('-date')
-        if depth == 1:
-            return all_past_round[0]
         if len(all_past_rounds) < depth:
             return all_past_rounds
         else:
@@ -173,7 +174,24 @@ class Match(models.Model):
    
     def __unicode__(self):
         return unicode("%s vs. %s on %s" %(self.school1.name, self.school2.name,unicode(self.round.date)))
-   
+
+    def display_result(self):
+        if self.score1 > self.score2:
+            return unicode('%s defeats %s, %s - %s' %(self.school1.name,
+                                                       self.school2.name,
+                                                       self.score1,
+                                                       self.score2))
+        elif self.score2 > self.score1:
+            return unicode('%s defeats %s, %s - %s' %(self.school2.name,
+                                                       self.school1.name,
+                                                       self.score2,
+                                                       self.score1))
+        else:
+            return unicode('%s ties  %s, %s - %s' %(self.school1.name,
+                                                    self.school2.name,
+                                                    self.score1,
+                                                    self.score2))
+    
     class Meta:
         verbose_name_plural = 'Matches'
         ordering = ['-round__date']
@@ -243,13 +261,13 @@ class Game(models.Model):
             p2 = wrap_tag(p2, 'b')
 
         def add_player_link(arg):
-            link = arg[1].get_absolute_url()
+            link = arg[1].browser_display_link()
             return wrap_tag(arg[0], 'a', extras='href="%s"' % link)
 
         (p1, p2) = map(add_player_link, ((p1, player1), (p2, player2)))
 
         sgf = wrap_tag('[sgf]', 'a', extras='href="%s"' % self.gamefile.url)
-        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.get_absolute_url())
+        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.browser_display_link())
         
         almost_done = '%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2)
 
