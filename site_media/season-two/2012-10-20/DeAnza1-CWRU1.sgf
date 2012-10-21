@@ -1,0 +1,331 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]HA[4]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[DeAnza1]PB[CWRU1]DT[2012-10-20]PC[The KGS Go Server at http://www.gokgs.com/]AB[dd][pd][dp][pp]C[DeAnza1 [-\]: hi
+CWRU1 [?\]: hey
+]RE[W+Resign]
+;W[qf]WL[1789.165]
+;B[nc]BL[1796.17]
+;W[qn]WL[1784.804]C[CWRU1 [?\]: Andrew Fu CWRU1 3d
+CWRU1 [?\]: have a good one
+]
+;B[nq]BL[1781.921]C[DeAnza1 [-\]: Norman Tsai DeAnza1 7d
+DeAnza1 [-\]: gl hf
+]
+;W[pj]WL[1777.482]
+;B[dj]BL[1728.357]
+;W[fc]WL[1768.705]
+;B[cf]BL[1711.56]
+;W[fq]WL[1758.677]
+;B[cn]BL[1702.043]
+;W[dr]WL[1716.842]
+;B[cq]BL[1689.001]
+;W[iq]WL[1711.372]
+;B[kq]BL[1667.657]
+;W[fo]WL[1677.953]
+;B[ec]BL[1659.818]
+;W[fd]WL[1671.215]
+;B[id]BL[1653.461]
+;W[ef]WL[1604.777]
+;B[dg]BL[1575.044]
+;W[mp]WL[1461.587]
+;B[mq]BL[1537.76]
+;W[de]WL[1458.163]
+;B[cd]BL[1479.045]
+;W[eb]WL[1426.567]
+;B[db]BL[1461.655]
+;W[ed]WL[1424.253]
+;B[dc]BL[1459.735]
+;W[eg]WL[1391.202]
+;B[dh]BL[1453.039]
+;W[kc]WL[1367.444]
+;B[je]BL[1406.59]
+;W[ib]WL[1271.003]
+;B[ld]BL[1377.713]
+;W[kd]WL[1191.56]
+;B[ke]BL[1374.524]
+;W[le]WL[1189.902]
+;B[lc]BL[1372.804]
+;W[kb]WL[1148.532]
+;B[kg]BL[1252.829]
+;W[me]WL[1129.169]
+;B[ne]BL[1232.207]
+;W[mg]WL[1111.789]
+;B[nf]BL[1200.605]
+;W[lg]WL[1105.552]
+;B[kh]BL[1196.386]
+;W[qc]WL[960.926]
+;B[qd]BL[1181.471]
+;W[rd]WL[958.938]
+;B[oh]BL[1119.273]
+;W[mi]WL[945.351]
+;B[oj]BL[1077.024]
+;W[ok]WL[889.111]
+;B[nj]BL[1071.903]
+;W[pi]WL[884.151]
+;B[nh]BL[1037.776]
+;W[li]WL[871.231]
+;B[jj]BL[1017.881]
+;W[lk]WL[865.582]
+;B[ml]BL[946.774]
+;W[ll]WL[845.493]
+;B[ol]BL[942.463]
+;W[ih]WL[762.499]
+;B[ji]BL[845.909]
+;W[jl]WL[621.438]
+;B[gb]BL[814.307]C[Eup [-\]: H17
+]
+;W[hc]WL[593.686]C[Eup [-\]: if think playing htere for white was better than F18, destroys white's eye shape in sente
+]
+;B[il]BL[764.234]C[Eup [-\]: G18*
+]
+;W[im]WL[556.501]
+;B[ik]BL[750.005]
+;W[hm]WL[509.133]
+;B[gh]BL[639.911]
+;W[fb]WL[486.183]
+;B[pc]BL[600.896]
+;W[rb]WL[478.902]
+;B[qb]BL[597.651]
+;W[rc]WL[477.226]
+;B[qg]BL[576.301]
+;W[rf]WL[280.132]C[DeAnza1 [-\]: sorry, internet connection cut out
+CWRU1 [?\]: no problem
+]
+;B[pl]BL[556.888]
+;W[qh]WL[102.129]
+;B[qp]BL[541.748]
+;W[ql]WL[43.898]
+;B[ir]BL[487.054]
+;W[jr]WL[30]OW[4]
+;B[jq]BL[482.886]
+;W[hr]WL[30]OW[4]
+;B[ip]BL[479.207]
+;W[is]WL[30]OW[4]
+;B[jm]BL[451.125]
+;W[jk]WL[30]OW[3]
+;B[hj]BL[416.983]
+;W[mk]WL[30]OW[2]
+;B[mm]BL[292.981]
+;W[jn]WL[30]OW[1]
+;B[km]BL[287.824]
+;W[lm]WL[30]OW[1]
+;B[kn]BL[285.486]
+;W[nk]WL[30]OW[1]
+;B[pk]BL[281.691]
+;W[mn]WL[30]OW[1]
+;B[on]BL[248.506]
+;W[ko]WL[30]OW[1]
+;B[jo]BL[242.34]
+;W[kp]WL[30]OW[1]
+;B[in]BL[162.173]
+;W[jp]WL[30]OW[1]
+;B[ln]BL[142.205]
+;W[lo]WL[30]OW[1]
+;B[nn]BL[126.227]
+;W[mo]WL[30]OW[1]
+;B[hn]BL[118.286]
+;W[gm]WL[30]OW[1]
+;B[gn]BL[103.516]
+;W[fn]WL[30]OW[1]
+;B[hq]BL[73.899]
+;W[ir]WL[30]OW[1]
+;B[lq]BL[30]OB[5]
+;W[kl]WL[30]OW[1]
+;B[jn]BL[30]OB[5]
+;W[hp]WL[30]OW[1]
+;B[qk]BL[30]OB[5]
+;W[pg]WL[30]OW[1]
+;B[ob]BL[30]OB[5]
+;W[mb]WL[30]OW[1]
+;B[md]BL[30]OB[5]
+;W[qa]WL[30]OW[1]
+;B[pa]BL[30]OB[5]
+;W[pb]WL[30]OW[1]
+;B[fm]BL[30]OB[5]
+;W[fl]WL[30]OW[1]
+;B[qb]BL[30]OB[5]
+;W[ce]WL[30]OW[1]
+;B[be]BL[30]OB[5]
+;W[em]WL[30]OW[1]
+;B[ra]BL[30]OB[5]
+;W[cm]WL[30]OW[1]
+;B[bm]BL[30]OB[5]
+;W[cl]WL[30]OW[1]
+;B[bl]BL[30]OB[5]
+;W[ck]WL[30]OW[1]
+;B[bj]BL[30]OB[5]
+;W[cj]WL[30]OW[1]
+;B[bi]BL[30]OB[5]
+;W[ci]WL[30]OW[1]
+;B[ch]BL[30]OB[5]
+;W[dn]WL[30]OW[1]
+;B[co]BL[30]OB[5]
+;W[hf]WL[30]OW[1]
+;B[ig]BL[30]OB[5]
+;W[cr]WL[30]OW[1]
+;B[ri]BL[30]OB[5]
+;W[rj]WL[30]OW[1]
+;B[qj]BL[30]OB[5]
+;W[qi]WL[30]OW[1]
+;B[rh]BL[30]OB[5]
+;W[rg]WL[30]OW[1]
+;B[rk]BL[30]OB[5]
+;W[ng]WL[30]OW[1]
+;B[br]BL[30]OB[5]
+;W[bs]WL[30]OW[1]
+;B[bq]BL[30]OB[5]
+;W[hg]WL[30]OW[1]
+;B[hh]BL[30]OB[5]
+;W[if]WL[30]OW[1]
+;B[jg]BL[30]OB[5]
+;W[fi]WL[30]OW[1]
+;B[fj]BL[30]OB[5]
+;W[ls]WL[30]OW[1]
+;B[mr]BL[30]OB[5]
+;W[di]WL[30]OW[1]
+;B[fh]BL[30]OB[5]
+;W[eh]WL[30]OW[1]
+;B[gi]BL[30]OB[5]
+;W[ei]WL[30]OW[1]
+;B[ii]BL[30]OB[5]
+;W[bf]WL[30]OW[1]
+;B[df]BL[30]OB[5]
+;W[ee]WL[30]OW[1]
+;B[bg]BL[30]OB[5]
+;W[bd]WL[30]OW[1]
+;B[af]BL[30]OB[5]
+;W[bc]WL[30]OW[1]C[DeAnza1 [-\]: thx
+CWRU1 [?\]: thn
+CWRU1 [?\]: x
+DeAnza3 [-\]: (claps)
+DeAnza1 [-\]: lol ty
+DeAnza4 [-\]: claps
+DeAnza3 [-\]: so we won this tourny
+DeAnza1 [-\]: sweet
+DeAnza1 [-\]: what was the score?
+DeAnza4 [-\]: deanza 1 4 5 win the game 
+DeAnza3 [-\]: david hasnt finished yet
+DeAnza1 [-\]: david said he won by 1.5
+DeAnza3 [-\]: o so
+DeAnza3 [-\]: 4 to 1
+DeAnza3 [-\]: i lost 
+DeAnza5 [-\]: woo
+DeAnza3 [-\]: but i was winning
+DeAnza1 [-\]: oh good job all
+DeAnza3 [-\]: i lost because it lag
+DeAnza1 [-\]: oh same
+DeAnza1 [-\]: i was massively lagging near the end
+DeAnza1 [-\]: my 8 mins went into byo yomi
+DeAnza3 [-\]: same
+DeAnza4 [-\]: oh my. that's tough
+DeAnza5 [-\]: I was worried about that
+DeAnza1 [-\]: must be connection problems in this area
+DeAnza2 [-\]: u all done?
+DeAnza3 [-\]: yeah
+DeAnza3 [-\]: yup
+DeAnza1 [-\]: yep
+DeAnza3 [-\]: we beast it
+DeAnza3 [-\]: lol
+DeAnza2 [-\]: did we all win?
+DeAnza5 [-\]: except ruben
+DeAnza3 [-\]: i lost 
+DeAnza2 [-\]: he
+DeAnza3 [-\]: XC
+DeAnza2 [-\]: well we sitll won
+DeAnza2 [-\]: i barely won my game
+DeAnza4 [-\]: yeah
+DeAnza2 [-\]: i seriously thought i gamewas going to lose my 
+DeAnza5 [-\]: 4 won it by 3.5
+DeAnza2 [-\]: lose my game
+DeAnza5 [-\]: fulbert was close
+DeAnza4 [-\]: david won by 1.5
+DeAnza2 [-\]: i was so behind in my game
+DeAnza5 [-\]: damn
+DeAnza3 [-\]: i lost by time
+DeAnza1 [-\]: lol dang
+DeAnza5 [-\]: I won by res
+DeAnza1 [-\]: were you doing good though?
+DeAnza5 [-\]: yea
+DeAnza5 [-\]: he would have won
+DeAnza3 [-\]: i was winning by 12
+DeAnza3 [-\]: i think
+DeAnza5 [-\]: if not time
+DeAnza1 [-\]: oh could've been a sweep
+DeAnza3 [-\]: yeah
+DeAnza4 [-\]: haha
+DeAnza1 [-\]: lol not easy when its handi
+DeAnza5 [-\]: yea
+DeAnza3 [-\]: yeah its not
+DeAnza5 [-\]: Hello CGL admin!
+DeAnza3 [-\]: i need more practice
+DeAnza4 [-\]: hello CGL admin
+DeAnza3 [-\]: wat sup
+DeAnza3 [-\]: cgladmin
+DeAnza3 [-\]: ...
+DeAnza4 [-\]: he's busy recording dude.. don't disturb him
+DeAnza4 [-\]: lol
+DeAnza3 [-\]: lol
+DeAnza5 [-\]: Oh lol
+DeAnza5 [-\]: I wonder how yale did
+DeAnza5 [-\]: who were they playing again
+CGLadmin [-\]: oh, I download the .sgf, I don't actually... 'record' them
+CGLadmin [-\]: guys having fun?
+DeAnza4 [-\]: yeah
+DeAnza1 [-\]: nope, stress
+DeAnza3 [-\]: lol
+DeAnza3 [-\]: me too
+DeAnza2 [-\]: go is stressful when its labeled as a tournament game =)
+DeAnza4 [-\]: haha
+DeAnza4 [-\]: this my first time winning a tournament game
+DeAnza1 [-\]: grats man
+DeAnza4 [-\]: thx
+DeAnza2 [-\]: i was always stressed when i played in local tourneys in okinawa
+DeAnza1 [-\]: oh you went to japan too?
+DeAnza2 [-\]: i was in  the army for 7 years. thats when i learned go
+DeAnza2 [-\]: i was in korea for 3 years
+DeAnza2 [-\]: 2 years in japan
+DeAnza1 [-\]: wait, 7 years?
+DeAnza2 [-\]: i spent over a year in the US for training
+DeAnza2 [-\]: 1 year in reserves working in moffett field
+DeAnza1 [-\]: oh what the, are you older than you look? lol
+DeAnza2 [-\]: im 29
+DeAnza1 [-\]: ahh
+DeAnza4 [-\]: haha
+DeAnza2 [-\]: so im an older student
+DeAnza2 [-\]: almost 30
+DeAnza4 [-\]: He looks really young. I thought he was 20
+DeAnza1 [-\]: yea seriously
+DeAnza2 [-\]: yeah did i ever tell this story
+DeAnza2 [-\]: when i came back for vacation during my first year's break from the army
+DeAnza2 [-\]: a cop stopped me in the streets and asked why i wasnt at school
+DeAnza2 [-\]: haha
+DeAnza1 [-\]: lol
+DeAnza2 [-\]: cant wait till i graduate and get school over with. i hate it
+DeAnza3 [-\]: lol
+DeAnza1 [-\]: oh really? i think school is fun
+DeAnza2 [-\]: 2 more long years
+DeAnza2 [-\]: in a way it is
+DeAnza2 [-\]: but its so much work
+DeAnza2 [-\]: i dont like working when im at home
+DeAnza1 [-\]: work is so much work too lol
+DeAnza2 [-\]: i like to leave work at work
+DeAnza2 [-\]: working is a lot of work, but usually i don't have to worry about it the same degree as when im a student
+DeAnza2 [-\]: when you are student, and you are home, it doesn't mean you have homework or programming assignments due
+DeAnza4 [-\]: lol
+DeAnza2 [-\]: it doesn't mean that you don't i meant
+DeAnza3 [-\]: lol
+DeAnza2 [-\]: i worked overtime a lot as an IT guy
+DeAnza2 [-\]: and its nowhere as bad as being a student
+DeAnza2 [-\]: and they don't pay you for being a studnet
+DeAnza2 [-\]: i have to pay the school to give me work instead
+DeAnza1 [-\]: imma take a look at your guy's games
+DeAnza2 [-\]: can you review my bad game? lol
+DeAnza1 [-\]: sure
+DeAnza3 [-\]: yeah
+DeAnza3 [-\]: this kind of weird
+DeAnza3 [-\]: davids game being reviewed
+DeAnza3 [-\]: XD
+DeAnza1 [-\]: is it open?
+DeAnza1 [-\]: lemme take a look at #5 first
+DeAnza2 [-\]: ok
+])

@@ -56,8 +56,9 @@ class Command(BaseCommand):
             
         current_season = Season.objects.get(name=current_season_name)
 
-        # Only retrieves the schools signed up for current season.
-        all_schools = current_season.schools.all()
+        # Only retrieves schools that are participating in this season
+        # and that have not withdrawn from play.
+        all_schools = current_season.schools.filter(membership__still_participating = True)
 
         if len(all_schools) < 2:
             raise CommandError('Fewer than two schools are registered for the season')

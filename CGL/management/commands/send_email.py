@@ -14,7 +14,7 @@ class Command(BaseCommand):
 
         try:
             email_template = args[0]
-            f = open('templates/rendered-%s' % email_template
+            f = open('templates/rendered-%s' % email_template)
             email_contents = f.read()
         except IOError:
             raise CommandError('Rendered email not found!')
@@ -22,9 +22,9 @@ class Command(BaseCommand):
             f.close()
 
         subjects = {'next-round-announce': "[CGL] Next round: pairings announced",
-                    'previous-round-results': "[CGL] Previous round games uploaded!"
+                    'previous-round-results': "[CGL] Previous round games uploaded!",}
         
-        send_mail(subjects[email_template]
+        send_mail(subjects[email_template],
                   email_contents,
                   'cgl.tournament.director@gmail.com',
                   [school.contact_email for school in participating_schools])
