@@ -19,7 +19,7 @@
 	</tr>
 {% for player in roster %}
 	<tr>
-		<td>{{ player.name_with_link|safe }}</td>
+		<td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
 		<td>{{ player.get_rank_display }}</td>
 		<td>{{ player.KGS_username }}</td>
 	</tr>
@@ -36,7 +36,7 @@
 	</tr>
 {% for player in inactives %}
 	<tr>
-		<td>{{ player.name_with_link|safe }}</td>
+		<td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
 		<td>{{ player.get_rank_display }}</td>
 		<td>{{ player.KGS_username }}</td>
 	</tr>

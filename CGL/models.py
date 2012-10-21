@@ -80,9 +80,6 @@ class Player(models.Model):
     def get_absolute_url(self):
         return ('CGA.CGL.views.display_player', [str(self.id)])
 
-    def name_with_link(self):
-        return unicode(wrap_tag(self.name, 'a', 'href="%s"' % self.browser_display_link()))
-
     def game_set(self):
         ''' Custom method because Game has two ForeignKeys to Player, so
         reverse lookup is not well-defined. This overloads to provide
@@ -261,13 +258,13 @@ class Game(models.Model):
             p2 = wrap_tag(p2, 'b')
 
         def add_player_link(arg):
-            link = arg[1].browser_display_link()
+            link = arg[1].get_absolute_url()
             return wrap_tag(arg[0], 'a', extras='href="%s"' % link)
 
         (p1, p2) = map(add_player_link, ((p1, player1), (p2, player2)))
 
         sgf = wrap_tag('[sgf]', 'a', extras='href="%s"' % self.gamefile.url)
-        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.browser_display_link())
+        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.get_absolute_url())
         
         almost_done = '%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2)
 
