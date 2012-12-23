@@ -6,8 +6,7 @@
 	<ul class="nav-bar left">
 		<li><a href="/">ACGA</a></li>
 		<li><a href="/members/">Members</a></li>
-		<li><a href="/news/">News</a></li>
-		<li><a href="/ing/">Ing</a></li>
+		<li><a href="/events/">Events</a></li>
 		<li><a href="/resources/">Resources</a></li>
 	</ul>
 	</div>
@@ -15,29 +14,10 @@
 	<div class="five columns">
 	<ul class="nav-bar right">
 		<li><a href="/CGL/">CGL</a></li>
+		<li><a href="/ing/">Ing</a></li>
 		<li><a href="/about/" id="aboutnav">About</a></li>
-		<li><a href="/contact/" id="contactnav">Contact us</a></li>
+		<li><a href="/contact/" id="contactnav">Contact</a></li>
 	</ul>
 	</div>
 
 {% endblock navigation %}
-
-{% block logo %}
-<div class="panel">
-<div id="logo" >
-	<h1><a href="/home/">American Collegiate Go Association </a></h1>
-	<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
-</div>
-</div>
-{% endblock logo %}
-
-{% block sidebar %}
-<div class="panel">
-<h2>Latest News</a></h2>
-<ul>
-{% for news in sidebar_latest_news %}
-	<li><a href="/news/{{news.id}}">{{news.tagline}}</a></li>
-{% endfor %}
-</ul>
-</div>
-{% endblock sidebar %}

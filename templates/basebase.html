@@ -47,15 +47,13 @@
 	<ul class="nav-bar right">
 		<li><a href="/" id="homenav">ACGA</a></li>
 		<li><a href="/CGL/" id="CGLnav">CGL</a></li>
+		<li><a href="/ing/">Ing</a></li>
 		<li><a href="/about/" id="aboutnav">About</a></li>
 		<li><a href="/contact/" id="contactnav">Contact us</a></li>
 	</ul>
 	</div>
 	{% endblock navigation %}
 </div>
-
-<!-- Page content -->
-{% block content %}
 
 <!-- Banner -->
 <div class="row">
@@ -69,28 +67,19 @@
 	</div>
 </div>
 
-<!-- Sidebar and Content -->
-<div class="row">
+<!-- Page content -->
+{% block content %}
 
-<!-- Content -->
-	<div class="eight columns">
+<div class="row">
+	<div class="twelve columns">
 	<div class="panel">
 	{% block maintext %}
 	<p>Default maintext</p>		
 	{% endblock maintext %}
 	</div>
-	</div>
-
-<!-- Sidebar -->
-	<aside class="four columns">
-	{% block sidebar %}
-	<div class="panel">
-	<p>Default sidebar</p>
-	</div>
-	{% endblock sidebar %}
-	</aside>
-	
+	</div>	
 </div>
+
 {% endblock content %}
 
 <!-- Footer -->

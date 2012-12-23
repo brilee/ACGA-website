@@ -16,16 +16,6 @@ def display_members(request):
     recent_schools = School.objects.order_by("-id")[:5]
     return direct_to_template(request, 'members.html', locals())
 
-def display_news(request):
-    all_posts = Newsfeed.objects.all().order_by('-pub_date')
-
-    return direct_to_template(request, 'news.html', locals())
-
-def display_post(request, post_id):
-    post = Newsfeed.objects.get(id=post_id)
-
-    return direct_to_template(request, 'news-detailed.html', locals())
-
 def display_emails(request):
     all_schools = School.objects.all()
 

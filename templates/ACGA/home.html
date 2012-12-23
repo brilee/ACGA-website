@@ -1,26 +1,13 @@
 {% extends "base_ACGA.html" %}
 
-{% block content %}
-<div class="row">
-	<div class="twelve columns">
-<!--	<div style="background: url(../site_media/RedCGA.jpg); height:400px;">
-	<h1 style="color: #FFFFDD; padding-top:200px; padding-left:50px; width:400px; text-align:center;">American Collegiate Go Association</h1>
--->
+{% block logo %}
 	<div class="panel">
 	<h2 style="font-size:34px;">Welcome to the American Collegiate Go Association </h2>
-	</div>	
 	</div>
-</div>
-	<!-- KILL THIS WITH FIREEEEEEEEE it's ugly
-	{% for post in latest_posts %}
-	<div class='newsfeed'>
-		<h4>{{post.get_date}}</h4><h3>{{post.title}}</h3>
-		{{post.preview|safe|linebreaks}}
-		<p><a href="/news/{{post.id}}">Read more...</a></p>
-	</div>
-	<hr />
-	{% endfor %}
-	-->
+{% endblock logo %}
+
+{% block content %}
+
 <div class="row">
 
 	<div class="six columns">

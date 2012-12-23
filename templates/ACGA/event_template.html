@@ -1,0 +1,27 @@
+{% extends "base_ACGA.html" %}
+
+{% block content %}
+
+<div class="row">
+	<div class="twelve columns">
+	<div class="panel">
+	{% block maintext %}
+	<p>Default maintext</p>		
+	{% endblock maintext %}
+	</div>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="twelve columns">
+		<div class="panel">
+		<p> All of our events:</p>
+		<ul>
+			<li><a href="/events/spring_expo_2013/">Spring Expo 2013</a></li>
+			<li><a href="/events/spring_open_2012/">Spring Open 2012</a></li>
+		</ul>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
