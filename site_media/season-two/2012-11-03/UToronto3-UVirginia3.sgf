@@ -1,0 +1,321 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]HA[3]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UToronto3]PB[UVirginia3]DT[2012-11-03]PC[The KGS Go Server at http://www.gokgs.com/]RE[W+7.50]
+;B[dp]BL[1795.222]
+;B[dd]BL[1794.17]
+;B[pp]BL[1793.186]C[UToronto3 [-\]: have fun!
+UVirginia3 [-\]: good luck have fun!
+]
+;W[pd]WL[1783.165]C[UVirginia3 [-\]: Christopher Hsing; UVirginia, 5K playing~
+]
+;B[qj]BL[1785.523]C[UToronto3 [-\]: Stephen Lee; UToronto, 2K
+]
+;W[nq]WL[1757.116]
+;B[pq]BL[1781.702]
+;W[kq]WL[1750.386]
+;B[qf]BL[1776.26]
+;W[nc]WL[1742.264]
+;B[gq]BL[1769.68]
+;W[qm]WL[1737.388]
+;B[qn]BL[1751.577]
+;W[pm]WL[1723.874]
+;B[pn]BL[1750.027]
+;W[rn]WL[1694.12]
+;B[ro]BL[1737.374]
+;W[on]WL[1667.122]
+;B[om]BL[1724.267]
+;W[ol]WL[1659.484]
+;B[nm]BL[1723.045]
+;W[pk]WL[1657.361]
+;B[no]BL[1706.778]
+;W[qh]WL[1651.786]
+;B[pj]BL[1698.723]
+;W[oj]WL[1646.633]
+;B[ph]BL[1698.029]
+;W[pg]WL[1639.702]
+;B[oh]BL[1669.493]
+;W[qg]WL[1637.678]
+;B[nj]BL[1600.479]
+;W[nl]WL[1595.659]
+;B[mm]BL[1596.356]
+;W[oi]WL[1536.99]
+;B[pi]BL[1593.823]
+;W[nh]WL[1524.07]
+;B[ni]BL[1563.584]
+;W[ok]WL[1518.983]
+;B[og]BL[1562.554]
+;W[pf]WL[1432.883]
+;B[mh]BL[1518.632]
+;W[ml]WL[1417.02]
+;B[ll]BL[1517.673]
+;W[lk]WL[1400.122]
+;B[kl]BL[1497.877]
+;W[kk]WL[1370.707]
+;B[jl]BL[1468.109]
+;W[lo]WL[1325.818]
+;B[mp]BL[1458.838]
+;W[mq]WL[1288.119]
+;B[lp]BL[1452.226]
+;W[kp]WL[1272.115]
+;B[ko]BL[1446.055]
+;W[kh]WL[1155.531]
+;B[mf]BL[1400.047]
+;W[kf]WL[1122.595]
+;B[oe]BL[1381.94]
+;W[pe]WL[1056.3]
+;B[ke]BL[1360.699]
+;W[je]WL[1048.845]
+;B[kd]BL[1357.988]
+;W[md]WL[1046.185]
+;B[le]BL[1329.059]
+;W[jd]WL[1002.106]
+;B[rl]BL[1224.766]
+;W[qk]WL[943.34]
+;B[rk]BL[1215.015]
+;W[ri]WL[937.731]
+;B[ql]BL[1182.49]
+;W[mk]WL[835.59]
+;B[rj]BL[1167.016]
+;W[cf]WL[797.647]
+;B[cd]BL[1148.206]
+;W[fc]WL[775.975]
+;B[df]BL[1141.12]
+;W[cg]WL[677.075]
+;B[eb]BL[1128.943]
+;W[fb]WL[606.483]
+;B[ec]BL[1097.453]
+;W[fe]WL[582.611]
+;B[dg]BL[1079.086]
+;W[ci]WL[568.753]
+;B[dh]BL[1076.728]
+;W[cj]WL[566.11]
+;B[cq]BL[1072.296]
+;W[cm]WL[383.76]
+;B[em]BL[1066.319]
+;W[io]WL[310.589]
+;B[jn]BL[1040.685]
+;W[kc]WL[198.145]
+;B[jk]BL[1010.797]
+;W[li]WL[124.331]
+;B[gg]BL[1007.711]
+;W[hf]WL[104.079]
+;B[hg]BL[992.766]
+;W[gf]WL[65.346]
+;B[ej]BL[983.297]
+;W[fg]WL[49.835]
+;B[fh]BL[980.974]
+;W[gh]WL[30]OW[5]
+;B[hh]BL[965.135]
+;W[ek]WL[30]OW[5]
+;B[dl]BL[927.965]
+;W[fj]WL[30]OW[5]
+;B[dk]BL[911.836]
+;W[ei]WL[30]OW[5]
+;B[dj]BL[902.033]
+;W[di]WL[30]OW[5]
+;B[fi]BL[842.839]
+;W[eh]WL[30]OW[4]
+;B[gi]BL[834.007]
+;W[ce]WL[30]OW[4]
+;B[de]BL[741.412]
+;W[bd]WL[30]OW[4]
+;B[ch]BL[727.183]
+;W[bh]WL[30]OW[4]
+;B[bc]BL[725.283]
+;W[be]WL[30]OW[4]
+;B[bk]BL[692.738]
+;W[eg]WL[30]OW[4]
+;B[cb]BL[677.088]
+;W[in]WL[30]OW[3]
+;B[gn]BL[650.947]
+;W[kn]WL[30]OW[3]
+;B[ln]BL[537.331]
+;W[jo]WL[30]OW[3]
+;B[jm]BL[536.674]
+;W[hm]WL[30]OW[3]
+;B[gl]BL[534.76]
+;W[ij]WL[30]OW[3]
+;B[jj]BL[509.44]
+;W[ii]WL[30]OW[3]
+;B[gj]BL[500.651]
+;W[go]WL[30]OW[2]
+;B[fo]BL[498.854]
+;W[gp]WL[30]OW[2]
+;B[fp]BL[493.462]
+;W[hq]WL[30]OW[2]
+;B[gr]BL[492.757]
+;W[hk]WL[30]OW[2]
+;B[hl]BL[443.731]
+;W[or]WL[30]OW[2]
+;B[pr]BL[413.577]
+;W[hr]WL[30]OW[2]
+;B[jg]BL[407.271]
+;W[jf]WL[30]OW[2]
+;B[jh]BL[402.808]
+;W[kg]WL[30]OW[2]
+;B[ki]BL[391.999]
+;W[lh]WL[30]OW[2]
+;B[kj]BL[386.802]
+;W[mi]WL[30]OW[2]
+;B[mg]BL[363.723]
+;W[ps]WL[30]OW[1]
+;B[qs]BL[354.915]
+;W[os]WL[30]OW[1]
+;B[qr]BL[354.316]
+;W[gs]WL[30]OW[1]
+;B[er]BL[336.233]
+;W[fs]WL[30]OW[1]
+;B[fr]BL[332.695]
+;W[es]WL[30]OW[1]
+;B[ds]BL[319.451]
+;W[hs]WL[30]OW[1]
+;B[dr]BL[318.87]
+;W[pl]WL[30]OW[1]
+;B[rm]BL[310.959]
+;W[mn]WL[30]OW[1]
+;B[mo]BL[268.328]
+;W[lm]WL[30]OW[1]
+;B[nn]BL[267.106]
+;W[oo]WL[30]OW[1]
+;B[km]BL[228.56]
+;W[op]WL[30]OW[1]
+;B[ln]BL[223.365]
+;W[po]WL[30]OW[1]
+;B[qo]BL[218.343]
+;W[oq]WL[30]OW[1]
+;B[lq]BL[215.843]
+;W[lr]WL[30]OW[1]
+;B[ko]BL[213.287]
+;W[ck]WL[30]OW[1]
+;B[cl]BL[210.795]
+;W[bj]WL[30]OW[1]
+;B[bl]BL[207.67]
+;W[gm]WL[30]OW[1]
+;B[fm]BL[201.503]
+;W[ea]WL[30]OW[1]
+;B[da]BL[194.955]
+;W[fa]WL[30]OW[1]
+;B[ef]BL[190.964]
+;W[ed]WL[30]OW[1]
+;B[dc]BL[159.715]
+;W[hn]WL[30]OW[1]
+;B[fn]BL[157.428]
+;W[of]WL[30]OW[1]
+;B[me]BL[144.835]
+;W[nf]WL[30]OW[1]
+;B[ng]BL[140.924]
+;W[ne]WL[30]OW[1]
+;B[lc]BL[128]
+;W[ld]WL[30]OW[1]
+;B[mc]BL[126.298]
+;W[nd]WL[30]OW[1]
+;B[mb]BL[120.077]
+;W[kb]WL[30]OW[1]
+;B[qi]BL[117.112]
+;W[sh]WL[30]OW[1]
+;B[ff]BL[91.885]
+;W[ai]WL[30]OW[1]
+;B[ad]BL[89.536]
+;W[ae]WL[30]OW[1]
+;B[ac]BL[88.536]
+;W[ak]WL[30]OW[1]
+;B[al]BL[87.027]
+;W[aj]WL[30]OW[1]
+;B[im]BL[75.229]
+;W[kr]WL[30]OW[1]
+;B[if]BL[67.655]
+;W[ie]WL[30]OW[1]
+;B[ig]BL[66.843]
+;W[fd]WL[30]OW[1]
+;B[np]BL[56.729]
+;W[sj]WL[30]OW[1]
+;B[sk]BL[46.856]
+;W[si]WL[30]OW[1]
+;B[nh]BL[13.395]
+;W[ee]WL[30]OW[1]C[UVirginia3 [-\]: fill in dame points?
+UToronto3 [-\]: hmm thx
+UToronto4 [-\]: Wow
+]
+;B[mj]BL[30]OB[5]C[UToronto1 [-\]: did u say fill in damn points?
+]
+;W[lj]WL[30]OW[1]C[UToronto3 [-\]: sorry wrong chat
+]
+;B[nk]BL[30]OB[5]C[UVirginia3 [-\]: np
+]
+;W[lg]WL[30]OW[1]
+;B[lf]BL[30]OB[5]
+;W[hd]WL[30]OW[1]C[UToronto4 [-\]: nail biter
+]
+;B[nb]BL[30]OB[5]
+;W[ob]WL[30]OW[1]C[UToronto1 [-\]: i think uvirginia3 lost more than 15 points in endgame
+UToronto4 [-\]: unfortunate
+UVirginia2 [-\]: yeah
+UVirginia2 [-\]: it was the endgame that really got uvirginia3
+UToronto4 [-\]: being on SD Must be so intense
+UToronto1 [-\]: who is the strongest playing in uvirginia may i ask
+]
+;B[]BL[30]OB[4]
+;W[]WL[30]OW[1]TW[ga][ha][ia][ja][ka][la][ma][na][oa][pa][qa][ra][sa][gb][hb][ib][jb][lb][mb][nb][pb][qb][rb][sb][gc][hc][ic][jc][lc][mc][oc][pc][qc][rc][sc][gd][id][od][qd][rd][sd][ge][he][oe][qe][re][se][af][bf][qf][rf][sf][ag][bg][rg][sg][ah][rh][bi][ho][hp][ip][jp][iq][jq][ir][jr][mr][nr][is][js][ks][ls][ms][ns]TB[aa][ba][ca][ab][bb][db][cc][gh][ih][hi][ii][ji][fj][hj][ij][ek][fk][gk][hk][ik][el][fl][il][sl][am][bm][cm][dm][lm][sm][an][bn][cn][dn][en][kn][mn][rn][sn][ao][bo][co][do][eo][lo][so][ap][bp][cp][ep][qp][rp][sp][aq][bq][dq][eq][fq][qq][rq][sq][ar][br][cr][rr][sr][as][bs][cs][rs][ss]C[UVirginia3 [-\]: xD
+UToronto3 [-\]: thx
+UVirginia3 [-\]: thanks for the game!
+UToronto4 [-\]: so close gg guys
+UToronto1 [-\]: ...
+UToronto1 [-\]: not fun at all, wouldve been better if it was 3:2
+UToronto1 [-\]: 4:1 doesnt look so nice
+UToronto4 [-\]: lol
+UToronto4 [-\]: a win is a win
+UToronto3 [-\]: haha
+UToronto4 [-\]: this was our toughest opponents for sure
+UToronto4 [-\]: so far
+UToronto2 [-\]: Dammit, guys why didn't someone else lose?
+UToronto4 [-\]: i almost lost..
+UToronto4 [-\]: i shouldve have
+UToronto2 [-\]: lololololol
+UToronto4 [-\]: blah
+UToronto1 [-\]: utoronto2 lost
+UToronto5 [-\]: shame shame
+UToronto4 [-\]: troll Mark
+UToronto1 [-\]: broke our undefeated game streak
+UToronto4 [-\]: its ok man
+UToronto2 [-\]: lol
+UToronto4 [-\]: it had to happen
+UToronto4 [-\]: at some point
+UToronto5 [-\]: i almost lost too
+UToronto4 [-\]: yeah..
+UToronto5 [-\]: don't feel bad
+UToronto2 [-\]: lol
+UToronto2 [-\]: Just embarassed
+UToronto4 [-\]: how strong was OP
+UToronto4 [-\]: for board 2
+UToronto2 [-\]: at my fail move
+UToronto2 [-\]: he was strong
+UToronto2 [-\]: It would've been really close had I not done that
+UToronto2 [-\]: ...sacrifice
+UToronto4 [-\]: oh 
+UToronto4 [-\]: was he that 2d guy?
+UToronto2 [-\]: nope, strong 2kyu
+UToronto2 [-\]: apparently
+UToronto2 [-\]: seems a bit stronger imp
+UToronto2 [-\]: :D
+UToronto4 [-\]: youre just saying that cause he destroyed you
+UToronto4 [-\]: jk
+UToronto2 [-\]: nah, good early, mid and late
+UToronto2 [-\]: very consistent
+UToronto2 [-\]: he's here :P
+UToronto2 [-\]: but yeah
+UToronto4 [-\]: i escaped a horrible horrible death
+UToronto2 [-\]: until connor comes.
+UToronto4 [-\]: ....THIS TIME
+UToronto4 [-\]: YEAH
+UToronto4 [-\]: geez
+UToronto4 [-\]: i hate winning on luck
+UToronto4 [-\]: time to buckle down and power up to 1d so i dont get abused by 7k's
+UToronto2 [-\]: uhhuh
+UToronto2 [-\]: gotta step it up
+UToronto4 [-\]: k im gonna give you all shout outs on the facebook page
+UToronto4 [-\]: good job guys 
+UToronto4 [-\]: youre free
+UToronto2 [-\]: anyways gtg bye
+UToronto4 [-\]: cya
+UToronto3 [-\]: later
+])
