@@ -17,7 +17,8 @@ def display_roster(request, school_name):
     school = get_object_or_404(School, name=school_name)
     roster = school.player_set.filter(isActive=1).order_by('rank')
     inactives = school.player_set.filter(isActive=0).order_by('rank')
-    
+    participating_seasons = Membership.objects.filter(school__name=school_name)
+
     return direct_to_template(request, 'schools-detailed.html', locals())
 
 def redirect_to_current_season(request):

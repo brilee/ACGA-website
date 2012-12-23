@@ -1,15 +1,25 @@
 {% extends "base_CGL.html" %}
+{% load email_obfuscator %}
 
 {% block maintext %}
-<h1>{{school}}</h1>
+<h1>{{school.name}}</h1>
 
 <h3>Club President: {{school.club_president}}</h3>
 <h3>Team Captain: {{ school.captain }}</h3>
 <h3>CGL-KGS Account prefix: {{school.KGS_name}}</h3>
+<h3>Contact email: {{school.contact_email|obfuscate|safe}}</h3>
 <h3>Meeting information</h3>
 <p>{{school.meeting_info}}</p>
 <h3><a href="{{ school.website }}">Club Website</a></h3>
-<hr \>
+<hr />
+<h4>Participated, or is currently participating in the following seasons:</h4>
+<ul>
+{% for season_m in participating_seasons %}
+    <li><a href="{{season_m.season.get_absolute_url}}">{{season_m.season.name}}</a>: {{season_m.num_wins}}W, {{season_m.num_losses}}L, {{season_m.num_ties}}T.</li>
+{% endfor %}
+</ul>
+
+<hr />
 <h3>Active Roster</h3>
 <table id="roster">
 	<tr>
