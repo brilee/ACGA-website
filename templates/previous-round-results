@@ -6,8 +6,10 @@ Games have been uploaded for the most recent round ({{previous_round.date}}). (I
 	{{match.display_result}}
 {% endfor %}
 
-Past results can be found here:
+Full results can be found here:
 http://college-go.org/CGL/results
 
 If you'd like "Unknown Player" to stop appearing on your team's games, then please remind your team to introduce themselves in-game in the next round!
 
+Thanks,
+CGL Organizers

@@ -17,7 +17,9 @@ urlpatterns = patterns('',
 
     # Static content
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': '/var/www/CGA/site_media'}),
+        {'document_root': '/var/www/CGA/site_media/'}),
+    (r'^admin/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': '/var/www/CGA/media/admin/'}),
 )
 
 urlpatterns += patterns('CGA.contact.views',
