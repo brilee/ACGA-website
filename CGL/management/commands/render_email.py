@@ -14,14 +14,18 @@ class Command(BaseCommand):
             previous-round-results\n'''
 
     def handle(self, *args, **options):
+        participating_schools = set(m.school for m in Membership.objects.filter(season__name=current_season_name) if m.still_participating)
 
-        next_round = Round.objects.get_next_round()
-        participating_schools = set(m.school for m in Membership.objects.filter(season__name=current_season_name))
-        matched_schools = set(m.school1 for m in next_round.match_set.all()) | set(m.school2 for m in next_round.match_set.all())
-        unmatched_school = participating_schools - matched_schools
-        if unmatched_school:
-            # should be either 0 or 1 schools; turn a set of one into its contents.
-            unmatched_school = unmatched_school.pop()
+        try: 
+            next_round = Round.objects.get_next_round()
+            matched_schools = set(m.school1 for m in next_round.match_set.all()) | set(m.school2 for m in next_round.match_set.all())
+            unmatched_school = participating_schools - matched_schools
+            if unmatched_school:
+                # should be either 0 or 1 schools; turn a set of one into its contents.
+                unmatched_school = unmatched_school.pop()
+
+        except AttributeError:
+            self.stdout.write('Warning: No next round exists.\n')        
 
         previous_round = Round.objects.get_previous_round()
                     

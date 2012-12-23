@@ -104,15 +104,24 @@ class Command(BaseCommand):
             match_matrix[i][j] = 1
             match_matrix[j][i] = 1
 
-        # See algorithm description above.
-        all_matchups = self.find_matchups(match_matrix, all_id)
-
-        # Unpack the results and create matches in database.
-        for matchup in all_matchups:
-            new_match = Match(round = next_round,
+        while True:
+            # See algorithm description above.
+            all_matchups = self.find_matchups(match_matrix, all_id)
+            
+            for matchup in all_matchups:
+                self.stdout.write('%s vs. %s\n' % (School.objects.get(id=matchup[0]), School.objects.get(id=matchup[1])))
+                
+            finalize = ''
+            while finalize not in ('Y', 'N'):
+                finalize = raw_input('Do these matchups look okay? (Y/N)')
+            if finalize == 'Y':
+                # Unpack results and add to database
+                for matchup in all_matchups:
+                    new_match = Match(round = next_round,
                               school1 = School.objects.get(id=matchup[0]),
                               school2 = School.objects.get(id=matchup[1]),
                               )
-            new_match.save()
+                    new_match.save()
+                break
         self.stdout.write('Matchups created for round on %s\n' % next_round.date)
         
