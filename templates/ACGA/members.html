@@ -4,6 +4,8 @@
 {% block maintext %}
 <h1>Member Schools</h1>
 
+<img src="/site_media/FrontMontage.jpg" style="float: right;" alt="Image not found!">
+
 <p>We're delighted to welcome
 
 {% for school in recent_schools %} 
@@ -16,7 +18,7 @@ to the ACGA.</p>
 
 {% for school in all_schools %}
 <h3><a href="{{school.get_absolute_url}}">{{school.name}}</a></h3></li>
-<ul>
+<ul class="disc">
 	<li>Club President: {{school.club_president}}</li>
 	<li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
 	<li>Meeting information: {{school.meeting_info}}</li>
