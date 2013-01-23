@@ -107,13 +107,21 @@ class Command(BaseCommand):
         while True:
             # See algorithm description above.
             all_matchups = self.find_matchups(match_matrix, all_id)
+            unmatched = unmatched_schools[:]
             
             for matchup in all_matchups:
-                self.stdout.write('%s vs. %s\n' % (School.objects.get(id=matchup[0]), School.objects.get(id=matchup[1])))
+                school1 = School.objects.get(id=matchup[0])
+                school2 = School.objects.get(id=matchup[1])
+                self.stdout.write('%s vs. %s\n' % (school1, school2))
+                unmatched.remove(school1)
+                unmatched.remove(school2)
+                
+            if unmatched:
+                self.stdout.write('%s has a bye this round\n' % unmatched)
                 
             finalize = ''
-            while finalize not in ('Y', 'N'):
-                finalize = raw_input('Do these matchups look okay? (Y/N)')
+            while finalize not in ('Y', 'N', 'quit'):
+                finalize = raw_input('Do these matchups look okay? (Y/N/quit)\n')
             if finalize == 'Y':
                 # Unpack results and add to database
                 for matchup in all_matchups:
@@ -123,5 +131,7 @@ class Command(BaseCommand):
                               )
                     new_match.save()
                 break
+            if finalize == 'quit':
+                raise CommandError('Exiting without creating matchups')
         self.stdout.write('Matchups created for round on %s\n' % next_round.date)
         

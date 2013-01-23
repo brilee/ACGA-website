@@ -210,7 +210,7 @@ class Game(models.Model):
     school2_player = models.ForeignKey(Player, related_name="game_school2_player")
 
     class Meta:
-        ordering = ['-match__round__date', 'board']
+        ordering = ['-match__round__date', 'match__school1__name', 'board']
 
     def white_player(self):
         if self.white_school == 'School1':
