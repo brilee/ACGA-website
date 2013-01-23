@@ -1,17 +1,675 @@
 {% extends "base_CGL.html" %}
 
+{% block javascript %}
+<script type="text/javascript">
+function rescale_rating(r) {
+	// Sends [-8, 30] to [0, 5]
+	var a = (8 + r) * 7 / 38;
+	return a;
+};
+
+function calculateHandicap() {
+	var player_1_rank = parseInt(document.getElementById("player_1_rank").value);
+	var player_2_rank = parseInt(document.getElementById("player_2_rank").value);
+	var average_rank = (player_1_rank + player_2_rank) / 2;
+	var base_handicap = player_2_rank - player_1_rank;
+	var computed_handicap = base_handicap * (1 - 1 / (1 + rescale_rating(average_rank)));
+	computed_handicap = Math.round(computed_handicap);
+	var output = document.getElementById("handicap_output");
+	output.innerHTML = "Your appropriate handicap is " + computed_handicap.toString() + " stone(s)";
+};
+
+</script>
+
+{% endblock %}
+
 {% block maintext %}
 <h1>The Rules</h1>
 	<p><b>League Format:</b> Matches occur once every other week throughout the school year, except in December and March, to avoid winter/spring breaks. A week before each round, our algorithm will randomly match together schools who have not played each other previously that season. If there are an odd number of schools, schools with the fewest forfeited games are given priority in match pairing. Seeding into the championship tournament is determined by number of wins, so a college who joins late may still be invited to the championship tournament. </p>
     <p><b>Match Format:</b> A "match" refers to a set of five games between two schools. Each school will field five players. The five players from each team will play each other, sorted from strongest to weakest. The match will be won by the school who wins best of the five boards. No-shows for a board are counted as forfeits.</p>
-	<p><b>Team logistics:</b> Each school will nominate a team captain, who will maintain a roster of active team members. These team members should be active members of the club. There is no limit to the number of people on a roster, although only five team members may represent a school in any given match. People are eligible to compete for a college club if they are active members of the club.</p>
+	<p><b>Team logistics:</b> Each school will nominate a team captain, who will maintain a roster of active team members. The team captain will be responsible for making sure that their team shows up on time for each match. These team members should be active members of the club. There is no limit to the number of people on a roster, although only five team members may represent a school in any given match. People are eligible to compete for a college club if they are active members of the club.</p>
 	<p><b>Time:</b> Matches occur every other Saturday throughout the regular season. The starting time is currently set at 1PM EST/10AM PST, and ending by 3PM EST/noon PST. Please try to arrive in the tournament room half an hour earlier than the match start, to minimize delays.</p>
     <p><b>Location:</b> <a href="http://www.gokgs.com">KGS</a>, Room: "Collegiate Go League", under "Tournaments".</p>
-    <p><b>Game settings:</b> 30m main time, 5x30second byo-yomi, Chinese Ruleset with 6.5 points komi, unrated, handicapped according to KGS ratings, no undos. A moderator will be on hand to resolve any disputes/conflicts.</p>
-    <p><b>Handicap:</b> Full handicap as determined by KGS ranking differences during normal season play. The end-of-season championship tournament will have <b>no</b> handicap. </p>
+    <p><b>Game settings:</b> 30m main time, 5x30second byo-yomi, Chinese Ruleset with 6.5 points komi, unrated, no undos, and handicap as specified below. A moderator will be on hand to resolve any disputes/conflicts.</p>
+    <p><b>Handicap:</b> There is a sliding scale of handicap, ranging from full handicap for weaker players, partial handicap for low-kyu / low-dan players, and almost no handicap for dan players. See the handy tables and calculator below.</p>
     <p><b>No-Show:</b> If an entire school has not shown up by 1:15PM EST, that school forfeits the entire match. If at least one team member has shown up, that deadline is extended to 1:30pm EST, after which all missing boards are considered forfeits.</p>
     <p><b>Reporting Results:</b> We will handle the uploading and tagging of games. You can help us out by remembering to state your name in-game, so that the names of the players are in the SGF file. If we can't figure out who played a game, it will be recorded as "Unknown Player".</p>
 
 <!--<img style="float:right;margin:15px 0px 0px 20px;clear:left;" src="../site_media/CGL-trophy.jpg" alt="Sorry, can't display this image!"/>-->
+
+<h4>Handicap calculator</h4>
+<form name="handicap_calculator" method="get" action="#" onsubmit="return false;">
+<p id="handicap_output">Your appropriate handicap is: </p>
+
+<p>White:  <select id="player_1_rank" style="width:50px">
+<option value=-8>9d</option>
+<option value=-7>8d</option>
+<option value=-6>7d</option>
+<option value=-5>6d</option>
+<option value=-4>5d</option>
+<option value=-3>4d</option>
+<option value=-2>3d</option>
+<option value=-1>2d</option>
+<option value=0>1d</option>
+<option value=1>1k</option>
+<option value=2>2k</option>
+<option value=3>3k</option>
+<option value=4>4k</option>
+<option value=5>5k</option>
+<option value=6>6k</option>
+<option value=7>7k</option>
+<option value=8>8k</option>
+<option value=9>9k</option>
+<option value=10>10k</option>
+<option value=11>11k</option>
+<option value=12>12k</option>
+<option value=13>13k</option>
+<option value=14>14k</option>
+<option value=15>15k</option>
+<option value=16>16k</option>
+<option value=17>17k</option>
+<option value=18>18k</option>
+<option value=19>19k</option>
+<option value=20>20k</option>
+<option value=21>21k</option>
+<option value=22>22k</option>
+<option value=23>23k</option>
+<option value=24>24k</option>
+<option value=25>25k</option>
+<option value=26>26k</option>
+<option value=27>27k</option>
+<option value=28>28k</option>
+<option value=29>29k</option>
+</select>
+
+Black:  <select id="player_2_rank" style="width:50px;">
+<option value=-8>9d</option>
+<option value=-7>8d</option>
+<option value=-6>7d</option>
+<option value=-5>6d</option>
+<option value=-4>5d</option>
+<option value=-3>4d</option>
+<option value=-2>3d</option>
+<option value=-1>2d</option>
+<option value=0>1d</option>
+<option value=1>1k</option>
+<option value=2>2k</option>
+<option value=3>3k</option>
+<option value=4>4k</option>
+<option value=5>5k</option>
+<option value=6>6k</option>
+<option value=7>7k</option>
+<option value=8>8k</option>
+<option value=9>9k</option>
+<option value=10>10k</option>
+<option value=11>11k</option>
+<option value=12>12k</option>
+<option value=13>13k</option>
+<option value=14>14k</option>
+<option value=15>15k</option>
+<option value=16>16k</option>
+<option value=17>17k</option>
+<option value=18>18k</option>
+<option value=19>19k</option>
+<option value=20>20k</option>
+<option value=21>21k</option>
+<option value=22>22k</option>
+<option value=23>23k</option>
+<option value=24>24k</option>
+<option value=25>25k</option>
+<option value=26>26k</option>
+<option value=27>27k</option>
+<option value=28>28k</option>
+<option value=29>29k</option>
+</select></p>
+<input type="button" id="calculate_handicap" value="Calculate handicap" onclick="calculateHandicap();">
+</form>
+
+
+<p> "1 stone" handicap should be interpreted as "no komi".</p>
+
+
+<table>
+<tr>
+<td></td>
+<td>9d</td>
+<td>8d</td>
+<td>7d</td>
+<td>6d</td>
+<td>5d</td>
+<td>4d</td>
+<td>3d</td>
+<td>2d</td>
+<td>1d</td>
+<td>1k</td>
+<td>2k</td>
+<td>3k</td>
+</tr>
+<tr>
+<td>9d</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+</tr>
+<tr>
+<td>8d</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#9ae09a">5</td>
+</tr>
+<tr>
+<td>7d</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+</tr>
+<tr>
+<td>6d</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+</tr>
+<tr>
+<td>5d</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+</tr>
+<tr>
+<td>4d</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+</tr>
+<tr>
+<td>3d</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+</tr>
+<tr>
+<td>2d</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+</tr>
+<tr>
+<td>1d</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+</tr>
+<tr>
+<td>1k</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+</tr>
+<tr>
+<td>2k</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+</tr>
+<tr>
+<td>3k</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td></td>
+<td>2d</td>
+<td>1d</td>
+<td>1k</td>
+<td>2k</td>
+<td>3k</td>
+<td>4k</td>
+<td>5k</td>
+<td>6k</td>
+<td>7k</td>
+<td>8k</td>
+<td>9k</td>
+<td>10k</td>
+</tr>
+<tr>
+<td>2d</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#72d472">7</td>
+<td style="background-color:#5ece5e">8</td>
+</tr>
+<tr>
+<td>1d</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#72d472">7</td>
+</tr>
+<tr>
+<td>1k</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#86da86">6</td>
+</tr>
+<tr>
+<td>2k</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+</tr>
+<tr>
+<td>3k</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+</tr>
+<tr>
+<td>4k</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#aee6ae">4</td>
+</tr>
+<tr>
+<td>5k</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+</tr>
+<tr>
+<td>6k</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+</tr>
+<tr>
+<td>7k</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+</tr>
+<tr>
+<td>8k</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+</tr>
+<tr>
+<td>9k</td>
+<td style="background-color:#d47272">-7</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+</tr>
+<tr>
+<td>10k</td>
+<td style="background-color:#ce5e5e">-8</td>
+<td style="background-color:#d47272">-7</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td></td>
+<td>11k</td>
+<td>12k</td>
+<td>13k</td>
+<td>14k</td>
+<td>15k</td>
+<td>16k</td>
+<td>17k</td>
+<td>18k</td>
+<td>19k</td>
+<td>20k</td>
+</tr>
+<tr>
+<td>11k</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#72d472">7</td>
+</tr>
+<tr>
+<td>12k</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+<td style="background-color:#72d472">7</td>
+</tr>
+<tr>
+<td>13k</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+<td style="background-color:#86da86">6</td>
+</tr>
+<tr>
+<td>14k</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+<td style="background-color:#9ae09a">5</td>
+</tr>
+<tr>
+<td>15k</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+<td style="background-color:#aee6ae">4</td>
+</tr>
+<tr>
+<td>16k</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#c2ecc2">3</td>
+</tr>
+<tr>
+<td>17k</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+<td style="background-color:#d6f2d6">2</td>
+</tr>
+<tr>
+<td>18k</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+<td style="background-color:#d6f2d6">2</td>
+</tr>
+<tr>
+<td>19k</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+<td style="background-color:#eaf8ea">1</td>
+</tr>
+<tr>
+<td>20k</td>
+<td style="background-color:#d47272">-7</td>
+<td style="background-color:#d47272">-7</td>
+<td style="background-color:#da8686">-6</td>
+<td style="background-color:#e09a9a">-5</td>
+<td style="background-color:#e6aeae">-4</td>
+<td style="background-color:#ecc2c2">-3</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f2d6d6">-2</td>
+<td style="background-color:#f8eaea">-1</td>
+<td style="background-color:#ffffff">0</td>
+</tr>
+</table>
+
 
 {% endblock maintext %}
