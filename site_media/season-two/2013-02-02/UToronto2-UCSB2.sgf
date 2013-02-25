@@ -1,0 +1,203 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[UToronto2]PB[UCSB2]DT[2013-02-02]PC[The KGS Go Server at http://www.gokgs.com/]C[UCSB2 [-\]: good luck
+UToronto2 [-\]: have a nice game
+]RE[W+Time]
+;B[qd]BL[1791.121]
+;W[dc]WL[1785.871]
+;B[pq]BL[1780.649]
+;W[dq]WL[1751.878]
+;B[co]BL[1772.806]
+;W[cm]WL[1735.702]
+;B[cq]BL[1700.987]
+;W[cr]WL[1729.909]
+;B[dp]BL[1684.421]
+;W[eq]WL[1728.061]
+;B[bq]BL[1674.927]
+;W[br]WL[1726.229]
+;B[fo]BL[1574.857]
+;W[gp]WL[1724.029]
+;B[go]BL[1508.574]
+;W[hp]WL[1719.2]
+;B[dl]BL[1497.478]
+;W[cl]WL[1587.188]
+;B[dk]BL[1451.31]
+;W[dm]WL[1585.166]
+;B[em]BL[1446.563]
+;W[ck]WL[1583.581]
+;B[dj]BL[1427.406]
+;W[ci]WL[1581.345]
+;B[eh]BL[1416.889]
+;W[ch]WL[1488.321]
+;B[jd]BL[1351.278]
+;W[qj]WL[1447.054]
+;B[qn]BL[1331.514]
+;W[qg]WL[1441.326]
+;B[od]BL[1308.201]
+;W[lq]WL[1235.776]C[UToronto2 [-\]: UToronto2 Board 2 - Ben Mantle 4d
+]
+;B[jo]BL[1147.273]C[UCSB2 [-\]: Brandon Lin 2d
+]
+;W[kp]WL[1125.819]
+;B[pi]BL[1114.004]
+;W[qi]WL[1117.054]
+;B[pg]BL[1101.462]
+;W[ph]WL[1033.254]
+;B[oh]BL[1085.943]
+;W[qh]WL[1031.767]
+;B[oj]BL[1026.304]
+;W[ho]WL[825.391]
+;B[hn]BL[1011.255]
+;W[en]WL[818.032]
+;B[fm]BL[805.801]
+;W[in]WL[805.916]
+;B[io]BL[700.733]
+;W[gn]WL[772.556]
+;B[hm]BL[695.164]
+;W[fn]WL[767.103]
+;B[fp]BL[688.904]
+;W[fq]WL[758.312]
+;B[iq]BL[623.608]
+;W[oq]WL[729.524]
+;B[pp]BL[586.017]
+;W[pr]WL[697.686]
+;B[qr]BL[528.888]
+;W[ln]WL[686.378]
+;B[gm]BL[527.194]
+;W[ep]WL[677.857]
+;B[jq]BL[516.227]
+;W[km]WL[644.538]
+;B[jm]BL[490.201]
+;W[kk]WL[533.337]
+;B[jl]BL[405.949]
+;W[ko]WL[498.007]
+;B[jn]BL[362.853]
+;W[kl]WL[496.17]
+;B[fc]BL[278.195]
+;W[de]WL[453.891]
+;B[ql]BL[44.933]
+;W[or]WL[296.228]
+;B[re]BL[13.2]
+;W[ok]WL[206.996]
+;B[pk]BL[0.63]
+;W[pj]WL[204.376]
+;B[oi]BL[30]OB[5]
+;W[rl]WL[200.142]
+;B[rm]BL[30]OB[5]
+;W[rk]WL[192.051]
+;B[ol]BL[30]OB[5]
+;W[nk]WL[137.086]
+;B[pf]BL[30]OB[5]
+;W[rf]WL[133.072]
+;B[ki]BL[30]OB[5]
+;W[hc]WL[74.618]
+;B[fe]BL[30]OB[4]
+;W[jc]WL[40.44]
+;B[kc]BL[30]OB[4]
+;W[kb]WL[38.224]
+;B[jb]BL[30]OB[4]
+;W[ic]WL[35.197]
+;B[lb]BL[30]OB[4]
+;W[kd]WL[34.467]
+;B[lc]BL[30]OB[4]
+;W[je]WL[33.05]
+;B[db]BL[30]OB[4]
+;W[cc]WL[30]OW[5]
+;B[he]BL[30]OB[4]
+;W[ie]WL[30]OW[4]
+;B[hf]BL[30]OB[4]
+;W[fb]WL[30]OW[4]
+;B[gb]BL[30]OB[4]
+;W[gc]WL[30]OW[4]
+;B[eb]BL[30]OB[4]
+;W[fd]WL[30]OW[4]
+;B[ec]BL[30]OB[4]
+;W[ed]WL[30]OW[4]
+;B[cb]BL[30]OB[4]
+;W[bb]WL[30]OW[4]
+;B[fa]BL[30]OB[4]
+;W[ha]WL[30]OW[4]
+;B[ga]BL[30]OB[4]
+;W[gd]WL[30]OW[4]
+;B[cj]BL[30]OB[4]
+;W[bj]WL[30]OW[4]
+;B[kr]BL[30]OB[4]
+;W[lr]WL[30]OW[4]
+;B[nl]BL[30]OB[4]
+;W[mk]WL[30]OW[4]
+;B[ml]BL[30]OB[3]
+;W[mi]WL[30]OW[4]
+;B[lj]BL[30]OB[3]
+;W[lk]WL[30]OW[4]
+;B[dg]BL[30]OB[2]
+;W[cg]WL[30]OW[4]
+;B[mj]BL[30]OB[2]
+;W[nj]WL[30]OW[4]
+;B[ni]BL[30]OB[2]
+;W[ji]WL[30]OW[2]
+;B[mh]BL[30]OB[2]
+;W[kj]WL[30]OW[2]
+;B[li]BL[30]OB[2]
+;W[ij]WL[30]OW[2]
+;B[qf]BL[30]OB[2]
+;W[sf]WL[30]OW[2]
+;B[op]BL[30]OB[2]
+;W[qs]WL[30]OW[2]
+;B[rr]BL[30]OB[2]
+;W[ld]WL[30]OW[2]
+;B[md]BL[30]OB[2]
+;W[me]WL[30]OW[2]
+;B[le]BL[30]OB[2]
+;W[ke]WL[30]OW[2]C[edlee [1k\]: Hi Brandon :)
+]
+;B[lf]BL[30]OB[2]
+;W[mc]WL[30]OW[2]
+;B[nd]BL[30]OB[2]C[UToronto2 [-\]: gg
+]
+;W[mb]WL[30]OW[2]
+;B[ka]BL[30]OB[2]
+;W[ma]WL[30]OW[2]C[flobby [2k\]: ed knows the opponent?
+]
+;B[la]BL[30]OB[1]
+;W[ia]WL[30]OW[2]C[UToronto2 [-\]: thx
+DineshR [3k\]: nice
+DineshR [3k\]: ben we got 3
+UCSB2 [-\]: thanks 
+UToronto2 [-\]: tough game, thx for the game
+UToronto2 [-\]: fairly close game
+UCSB2 [-\]: ehh
+UCSB2 [-\]: I didn't play so well in the beggining
+UToronto2 [-\]: well i think yeah i was leading but when i counted recently,
+UToronto2 [-\]: black was not too too bad
+UToronto2 [-\]: still chance
+DineshR [3k\]: yea it was good to watch his moyo colapse
+DineshR [3k\]: lol
+UToronto2 [-\]: hehe
+UToronto2 [-\]: just now
+UToronto2 [-\]: i got really excited hoping u would cut me
+UToronto2 [-\]: hehehe
+UToronto2 [-\]: my heart was pumping cuz it would g
+UToronto2 [-\]: mean gg
+UToronto2 [-\]: anyway
+UToronto2 [-\]: gotta go study
+UToronto2 [-\]: thx
+UToronto2 [-\]: dinesh, we won all so far?
+flobby [2k\]: 3-2
+flobby [2k\]: unless SE is lying to me
+DineshR [3k\]: yea
+DineshR [3k\]: looks like a 3-2
+DineshR [3k\]: we dont have SE on the robarts comps
+DineshR [3k\]: lol
+flobby [2k\]: b+18.5
+flobby [2k\]: oh right i forgot SE bad with chinese rules
+UToronto2 [-\]: yo flob
+UToronto2 [-\]: we won all so far?
+flobby [2k\]: No
+UToronto2 [-\]: who lost
+flobby [2k\]: we lost 1 and andy is gonna lose
+flobby [2k\]: ed lost
+UToronto2 [-\]: WHATTT
+UToronto2 [-\]: why is andy losing
+UToronto2 [-\]: which board 3?
+flobby [2k\]: he's losing by like 30
+])

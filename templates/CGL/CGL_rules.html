@@ -3,7 +3,7 @@
 {% block javascript %}
 <script type="text/javascript">
 function rescale_rating(r) {
-	// Sends [-8, 30] to [0, 5]
+	// Sends [-8, 30] to [0, 7]
 	var a = (8 + r) * 7 / 38;
 	return a;
 };
@@ -15,7 +15,8 @@ function calculateHandicap() {
 	var base_handicap = player_2_rank - player_1_rank;
 	var computed_handicap = base_handicap * (1 - 1 / (1 + rescale_rating(average_rank)));
 	computed_handicap = Math.round(computed_handicap);
-	var output = document.getElementById("handicap_output");
+    computed_handicap = Math.max(-9, Math.min(9, computed_handicap));
+    var output = document.getElementById("handicap_output");
 	output.innerHTML = "Your appropriate handicap is " + computed_handicap.toString() + " stone(s)";
 };
 
@@ -34,6 +35,7 @@ function calculateHandicap() {
     <p><b>Handicap:</b> There is a sliding scale of handicap, ranging from full handicap for weaker players, partial handicap for low-kyu / low-dan players, and almost no handicap for dan players. See the handy tables and calculator below.</p>
     <p><b>No-Show:</b> If an entire school has not shown up by 1:15PM EST, that school forfeits the entire match. If at least one team member has shown up, that deadline is extended to 1:30pm EST, after which all missing boards are considered forfeits.</p>
     <p><b>Reporting Results:</b> We will handle the uploading and tagging of games. You can help us out by remembering to state your name in-game, so that the names of the players are in the SGF file. If we can't figure out who played a game, it will be recorded as "Unknown Player".</p>
+    <p><b>Championship Tournament:</b> Each season culminates in a championship tournament, which is open to all schools who have played at least one game in the main season. Seeding into this championship tournament is determined by ranking in the main season. All games will be <emph>no handicap</emph>. All other rules are the same as normal - in particular, any active members of the club may compete on the school's behalf. </p>
 
 <!--<img style="float:right;margin:15px 0px 0px 20px;clear:left;" src="../site_media/CGL-trophy.jpg" alt="Sorry, can't display this image!"/>-->
 
