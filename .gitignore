@@ -3,4 +3,6 @@
 *.mo
 *.po
 *~
+*.swp
 sensitive_data.py
+templates/rendered*

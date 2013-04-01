@@ -27,8 +27,11 @@ class Command(BaseCommand):
         except AttributeError:
             self.stdout.write('Warning: No next round exists.\n')        
 
-        previous_round = Round.objects.get_previous_round()
-                    
+        try:
+            previous_round = Round.objects.get_previous_round()
+        except IndexError:
+            self.stdout.write('Warning: no previous round exists.\n')
+        
         c = Context(locals())
         
         try:
@@ -37,8 +40,8 @@ class Command(BaseCommand):
         except:
             raise CommandError('Email template not found')
 
-        with open('templates/rendered-%s' % email_template, 'w') as f:
+        with open('templates/rendered-email', 'w') as f:
             f.write(t.render(c))
 
-        self.stdout.write('Email rendered to templates/rendered-%s.\n' % email_template)
-        self.stdout.write('Send this email with ./manage.py send_email %s.\n' % email_template)
+        self.stdout.write('Email rendered to templates/rendered-email.\n')
+        self.stdout.write('Send this email with ./manage.py send_email\n')
