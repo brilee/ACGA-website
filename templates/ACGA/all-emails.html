@@ -1,11 +1,13 @@
 {% extends "base_ACGA.html" %}
+{% load email_obfuscator %}
+
 
 {% block title %}All email addresses{% endblock title %}
 
 {% block maintext %}
 
 {% for school in all_schools %}
-{{school.contact_email}}, 
+{{school.contact_email|obfuscate|safe}}, 
 <br />
 {% endfor %}
 

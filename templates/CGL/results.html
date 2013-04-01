@@ -19,7 +19,7 @@
 	</tr>
 {% for membership in all_memberships %}
 	<tr>
-		<td>{{membership.school.name}}</td>
+		<td><a href="{{membership.school.get_absolute_url}}">{{membership.school.name}}</a></td>
 		<td>{{membership.num_wins}}</td>
 		<td>{{membership.num_losses}}</td>
 		<td>{{membership.num_ties}}</td>

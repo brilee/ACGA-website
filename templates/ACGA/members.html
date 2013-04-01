@@ -1,10 +1,13 @@
 {% extends "base_ACGA.html" %}
+{% load email_obfuscator %}
 
 
 {% block maintext %}
 <h1>Member Schools</h1>
 
 <img src="/site_media/FrontMontage.jpg" style="float: right;" alt="Image not found!">
+
+<p>This page lists all schools that are part of the ACGA. A subset of these schools participate in the <a href="/CGL/schools">Collegiate Go League</a></p>
 
 <p>We're delighted to welcome
 
@@ -21,6 +24,7 @@ to the ACGA.</p>
 <ul class="disc">
 	<li>Club President: {{school.club_president}}</li>
 	<li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
+	<li>Contact email: {{school.contact_email|obfuscate|safe}}</li>
 	<li>Meeting information: {{school.meeting_info}}</li>
 </ul>
 {% empty %}
