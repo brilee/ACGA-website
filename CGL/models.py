@@ -63,7 +63,9 @@ class Player(models.Model):
     school = models.ForeignKey(School)
     num_wins = models.IntegerField(editable=False, default = 0)
     num_losses = models.IntegerField(editable=False, default = 0)
-    
+    contact_email = models.EmailField(blank=True, help_text="For CGL match reminder spamming purposes")
+
+    receiveSpam = models.BooleanField(default=True, help_text="Uncheck if player doesn't want to get email reminders")
     isActive = models.BooleanField(default=True, help_text="Uncheck if player is inactive. Do not delete player; the database keeps track of everybody's games, including inactive players")
 
     def save(self, *args, **kwargs):
@@ -71,7 +73,7 @@ class Player(models.Model):
         super(Player, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return unicode("%s - %s" %(self.school.name, self.name))
+        return unicode("%s - %s %s" %(self.school.name, self.name, self.get_rank_display()))
 
     def name_and_rank(self):
         return unicode('%s, %s' % (self.name, self.get_rank_display()))
