@@ -1,5 +1,6 @@
 from django.db import models
 import os
+import datetime
 
 
 class Newsfeed(models.Model):
@@ -28,3 +29,26 @@ class Document(models.Model):
 
     def __unicode__(self):
         return unicode('%s by %s' %(self.title, self.author))
+
+class EventManager(models.Manager):
+    def get_upcoming_event(self):
+        upcoming_event = super(EventManager, self).filter(event_date__gte=datetime.datetime.now()
+                                ).order_by('event_date')
+        if upcoming_event:
+            return upcoming_event[0]
+        else:
+            return super(EventManager, self).none()
+        
+class Event(models.Model):
+    title = models.CharField(max_length=100)
+    slug_name = models.SlugField()
+    event_description = models.TextField(blank=True)
+    event_date = models.DateField()
+    objects = EventManager()
+
+    def __unicode__(self):
+        return unicode(self.title)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGA.ACGA.views.display_event', [str(self.slug_name)]) 

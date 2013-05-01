@@ -54,16 +54,17 @@
 	
 </div>
 
+{% if upcoming_event %}
 <div class="row">
 
 	<div class="twelve columns">
 	<div class="panel">
-	<h3>Upcoming Events: <a href="/CGL/results/">Collegiate Go League Season Two Championships (April 6th, 20th)</a></h3>
+	<h3>Upcoming Events: <a href="/events/">{{upcoming_event.title}}</a></h3>
 	</div>
 	</div>
 	
 </div>
-
+{% endif %}
 
 {% endblock content %}
 

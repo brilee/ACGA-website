@@ -1,0 +1,29 @@
+{% extends "base_ACGA.html" %}
+
+{% block content %}
+
+<div class="row">
+	<div class="twelve columns">
+		<div class="panel">
+		{% block maintext %}
+		<h2>{{requested_event.title}}</h2>
+		{{requested_event.event_description|safe}}	
+		{% endblock maintext %}
+		</div>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="twelve columns">
+		<div class="panel">
+		<p> All event announcements:</p>
+		<ul>
+			{% for event in all_events %}
+			<li><a href="{{event.get_absolute_url}}">{{event.title}}</a></li>
+			{% endfor %}
+		</ul>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
