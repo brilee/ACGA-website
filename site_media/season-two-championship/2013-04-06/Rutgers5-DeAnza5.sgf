@@ -1,0 +1,172 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[6.50]TM[1800]OT[5x30 byo-yomi]
+PW[Rutgers5]PB[DeAnza5]DT[2013-04-06]PC[The KGS Go Server at http://www.gokgs.com/]C[Rutgers5 [?\]: Dan Wang from Rutgers, 13k
+Rutgers5 [?\]: good luck have fun
+]RE[W+67.50]
+;B[dq]BL[1713.807]
+;W[pd]WL[1794.792]
+;B[dd]BL[1705.243]
+;W[oq]WL[1775.899]
+;B[co]BL[1692.456]
+;W[fc]WL[1738.807]
+;B[dc]BL[1674.187]
+;W[jc]WL[1724.732]
+;B[po]BL[1648.818]
+;W[qp]WL[1720.101]
+;B[qo]BL[1630.195]
+;W[pp]WL[1715.571]
+;B[pj]BL[1612.652]
+;W[jp]WL[1712.465]
+;B[dj]BL[1548.92]
+;W[qh]WL[1665.452]
+;B[qj]BL[1520.702]
+;W[fd]WL[1661.143]
+;B[eg]BL[1429.666]
+;W[fq]WL[1641.395]
+;B[ep]BL[1318.858]
+;W[fp]WL[1639.084]
+;B[fm]BL[1305.105]
+;W[hm]WL[1632.972]
+;B[gj]BL[1296.138]
+;W[ef]WL[1618.378]
+;B[df]BL[1277.323]
+;W[ff]WL[1609.177]
+;B[dh]BL[1253.493]
+;W[qc]WL[1599.23]
+;B[ji]BL[1170.949]
+;W[oo]WL[1591.118]
+;B[on]BL[1118.59]
+;W[no]WL[1581.364]
+;B[nn]BL[1099.314]
+;W[mn]WL[1577.352]
+;B[nm]BL[1047.822]
+;W[jg]WL[1573.947]
+;B[hh]BL[1027.637]
+;W[hg]WL[1572.037]
+;B[fg]BL[1022.564]
+;W[gg]WL[1567.756]
+;B[gh]BL[1018.737]
+;W[oh]WL[1562.639]
+;B[nj]BL[1002.827]
+;W[lh]WL[1561.605]
+;B[li]BL[996.383]
+;W[mm]WL[1542.08]
+;B[ml]BL[942.309]
+;W[jl]WL[1531.785]
+;B[rp]BL[926.458]
+;W[rq]WL[1529.892]
+;B[sp]BL[905.006]
+;W[sq]WL[1514.623]
+;B[rn]BL[901.758]
+;W[fo]WL[1486.599]
+;B[rh]BL[876.932]
+;W[rg]WL[1483.983]
+;B[ri]BL[869.798]
+;W[ph]WL[1475.382]
+;B[fr]BL[745.478]
+;W[gr]WL[1473.613]
+;B[fs]BL[735.899]
+;W[gs]WL[1470.536]
+;B[er]BL[722.945]
+;W[ll]WL[1466.985]
+;B[mk]BL[716.325]
+;W[lk]WL[1464.677]
+;B[lj]BL[711.605]
+;W[eo]WL[1458.502]
+;B[do]BL[706.327]
+;W[eq]WL[1455.874]
+;B[dr]BL[685.563]
+;W[en]WL[1454.134]
+;B[dm]BL[679.949]
+;W[em]WL[1446.699]
+;B[el]BL[674.956]
+;W[dn]WL[1429.898]
+;B[cn]BL[660.547]
+;W[dl]WL[1419.25]
+;B[cl]BL[596.377]
+;W[cm]WL[1399.996]
+;B[bm]BL[582.646]
+;W[fl]WL[1398.75]
+;B[ek]BL[572.211]
+;W[gl]WL[1373.792]
+;B[kk]BL[521.749]
+;W[kl]WL[1356.917]
+;B[jk]BL[485.688]
+;W[hk]WL[1351.977]
+;B[dk]BL[476.107]
+;W[eb]WL[1293.926]
+;B[db]BL[470.497]
+;W[mh]WL[1269.359]
+;B[dm]BL[432.496]
+;W[hj]WL[1245.817]
+;B[hi]BL[376.609]
+;W[ih]WL[1196.889]
+;B[gk]BL[351.312]
+;W[hl]WL[1182.842]
+;B[fk]BL[341.919]
+;W[ii]WL[1180.115]
+;B[fh]BL[329.069]
+;W[mi]WL[1166.245]
+;B[mj]BL[326.141]
+;W[oi]WL[1164.532]
+;B[oj]BL[316.554]
+;W[ee]WL[1161.181]
+;B[de]BL[301.71]
+;W[sg]WL[1159.288]
+;B[sh]BL[285.635]
+;W[qi]WL[1149.993]
+;B[rj]BL[276.973]
+;W[ea]WL[1138.887]
+;B[da]BL[273.315]
+;W[ik]WL[1107.976]
+;B[jj]BL[267.067]
+;W[kh]WL[1103.599]
+;B[ki]BL[260.353]
+;W[dp]WL[1089.056]
+;B[cp]BL[256.422]
+;W[ep]WL[1078.69]
+;B[ec]BL[186.944]
+;W[fb]WL[1058.775]
+;B[ij]BL[173.016]
+;W[jh]WL[1050.735]
+;B[ni]BL[167.071]
+;W[nh]WL[1049.96]
+;B[ed]BL[129.241]
+;W[pi]WL[974.893]
+;B[]BL[93.368]
+;W[]WL[947.117]TW[fa][ga][ha][ia][ja][ka][la][ma][na][oa][pa][qa][ra][sa][gb][hb][ib][jb][kb][lb][mb][nb][ob][pb][qb][rb][sb][gc][hc][ic][kc][lc][mc][nc][oc][pc][rc][sc][gd][hd][id][jd][kd][ld][md][nd][od][qd][rd][sd][fe][ge][he][ie][je][ke][le][me][ne][oe][pe][qe][re][se][gf][hf][if][jf][kf][lf][mf][nf][of][pf][qf][rf][sf][ig][kg][lg][mg][ng][og][pg][qg][il][fm][gm][im][jm][km][lm][fn][gn][hn][in][jn][kn][ln][go][ho][io][jo][ko][lo][mo][gp][hp][ip][kp][lp][mp][np][op][gq][hq][iq][jq][kq][lq][mq][nq][pq][qq][hr][ir][jr][kr][lr][mr][nr][or][pr][qr][rr][sr][hs][is][js][ks][ls][ms][ns][os][ps][qs][rs][ss]TB[aa][ba][ca][ab][bb][cb][ac][bc][cc][ad][bd][cd][ae][be][ce][af][bf][cf][ag][bg][cg][dg][ah][bh][ch][eh][ai][bi][ci][di][ei][fi][gi][si][aj][bj][cj][ej][fj][kj][sj][ak][bk][ck][nk][ok][pk][qk][rk][sk][al][bl][dl][nl][ol][pl][ql][rl][sl][am][cm][om][pm][qm][rm][sm][an][bn][pn][qn][sn][ao][bo][ro][so][ap][bp][aq][bq][cq][ar][br][cr][as][bs][cs][ds][es]C[Rutgers5 [?\]: gg ty for game
+Mages [-\]: Nice game Dan.
+DeAnza5 [-\]: Nice playing with you.
+DeAnza5 [-\]: Name : Porter
+DeAnza4 [-\]: ahhh.. porter
+DeAnza5 [-\]: Ya @Deanza4, no bueno for me my friends. :(
+DeAnza5 [-\]: but still a fun game.
+DeAnza4 [-\]: yep
+DeAnza4 [-\]: :)
+DeAnza5 [-\]: how did you do?
+DeAnza5 [-\]: and what about everyone else?
+DeAnza4 [-\]: I won by forfeit
+DeAnza4 [-\]: everyone else besides norman lost
+DeAnza3 [-\]: we lost 3-2
+DeAnza3 [-\]: how good is Rutgers5?
+DeAnza3 [-\]: rank-wise
+DeAnza5 [-\]: 13k. I think I played an exceptionally bad opening game. :(
+DeAnza3 [-\]: well actually
+DeAnza3 [-\]: you did very good vs 13k
+DeAnza3 [-\]: you are new yes?
+DeAnza3 [-\]: very new
+DeAnza3 [-\]: so, this doesn't look bad
+DeAnza4 [-\]: yep
+DeAnza4 [-\]: this doesn't look bad
+DeAnza3 [-\]: yea
+DeAnza5 [-\]: ya, my first time to the Go club was two or three weeks ago.
+DeAnza3 [-\]: just playing through very fast
+DeAnza3 [-\]: it looks very improved
+DeAnza4 [-\]: just play a lot
+DeAnza5 [-\]: Ya, I just need a lot of practice. I play mostly against GNU GO, but I should play more online.
+DeAnza3 [-\]: yes
+DeAnza3 [-\]: indeed
+DeAnza4 [-\]: Alright, I'll see u guys next week. 
+DeAnza3 [-\]: c ya
+DeAnza5 [-\]: bye.
+])

@@ -1,0 +1,972 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UMichigan1]PB[UToronto1]DT[2013-04-20]PC[The KGS Go Server at http://www.gokgs.com/]C[UMichigan1 [-\]: Hello!
+UToronto1 [-\]: Hi, This is Gansheng Shi from U of T
+]RE[W+Resign]
+;B[pd]BL[1784.133]C[UMichigan1 [-\]: Here is Zifan Yang
+UMichigan1 [-\]: gl hf
+]
+;W[dd]WL[1789.923]C[UToronto1 [-\]: gl hf
+]
+;B[qp]BL[1777.49]
+;W[dp]WL[1772.718]
+;B[fq]BL[1768.165]
+;W[op]WL[1757.907]
+;B[cn]BL[1761.95]C[UToronto2 [-\]: good luck Will
+]
+;W[dn]WL[1738.865]
+;B[dm]BL[1757.345]
+;W[en]WL[1720.896]
+;B[cp]BL[1753.102]
+;W[cq]WL[1703.133]
+;B[co]BL[1748.104]
+;W[dq]WL[1700.423]
+;B[gp]BL[1743.522]
+;W[fp]WL[1640.167]
+;B[ep]BL[1678.285]
+;W[fo]WL[1636.49]
+;B[hq]BL[1627.478]
+;W[eq]WL[1628.062]
+;B[go]BL[1604.734]C[CGLadmin [-\]: Gansheng Shi 1p (U of Toronto) vs. Zifan Yang 7d (U Michigan)
+]
+;W[gn]WL[1598.749]
+;B[hn]BL[1598.608]
+;W[gm]WL[1597.416]C[Prometheus [2k\]: thanks for relaying, CGL
+]
+;B[ck]BL[1566.182]C[blacklabel [2d\]: awesome , slow games :)
+]
+;W[qq]WL[1589.177]
+;B[mq]BL[1538.512]
+;W[pp]WL[1568.793]
+;B[qo]BL[1532.791]
+;W[pr]WL[1567.337]
+;B[ql]BL[1531.32]
+;W[kq]WL[1555.083]C[Prometheus [2k\]: I like black's fuseki
+]
+;B[lp]BL[1453.687]C[Flowers [-\]: I don,t inderstand the moves
+freepoints [11k\]: how strong are the players?
+Prometheus [2k\]: w is 1p
+blacklabel [2d\]: threaten min chinese/ kobayshi and resistance cat p4 quite normal
+Flowers [-\]: wow
+Prometheus [2k\]: b is AGA something awesome dan
+freepoints [11k\]: oreally?
+Prometheus [2k\]: yes
+blacklabel [2d\]: thus c6 also normal, and the game went from there
+Piggen [3k\]: no b is 1p
+freepoints [11k\]: name?
+Piggen [3k\]: CGLadmin [-\]: Gansheng Shi 1p (U of Toronto) vs. Zifan Yang 7d (U Michigan)
+freepoints [11k\]: cool
+Prometheus [2k\]: Gangshen is black, incidentally
+Prometheus [2k\]: I got that wrong earlier
+Falcon89 [4k?\]: B is Shi 1p from UT
+freepoints [11k\]: u guys trolling me or srs?
+mjzhang [?\]: serious
+freepoints [11k\]: lol k
+Prometheus [2k\]: he also gives the occasionally free lesson, they are very, very good indeed
+Falcon89 [4k?\]: w is 7dan
+mjzhang [?\]: white is 9d tygem
+Prometheus [2k\]: http://www.usgo.org/news/2012/08/gangshen-shi-wins-to-join-andy-liu-as-first-aga-profesionals/
+]
+;W[ip]WL[1389.724]C[Prometheus [2k\]: sorry, that is a link for the AGA report on Gangshen Shi
+Falcon89 [4k?\]: no problem
+Piggen [3k\]: hmm n3 overplay?
+freepoints [11k\]: nvm just scrolled to top of game
+gomk [7k\]: now j5
+freepoints [11k\]: thanks
+Piggen [3k\]: j5 want's to cut at h5 at the same time as he is running out i guess
+]
+;B[jp]BL[1347.739]
+;W[iq]WL[1335.289]C[hvk [-\]: 9pvs7p
+hvk [-\]: ?
+Zaitsev [2d\]: it's 1p vs 7d
+]
+;B[io]BL[1328.28]C[freepoints [11k\]: 1p vs 7dan
+]
+;W[hr]WL[1333.3]
+;B[gr]BL[1308.602]C[freepoints [11k\]: would be cool to have 9p at umich
+hvk [-\]: ok 
+hvk [-\]: thx 
+freepoints [11k\]: h4?
+]
+;W[hp]WL[1303.258]C[hvk [-\]: w1p
+hvk [-\]: ?
+adshae: yes
+Zaitsev [2d\]: black is 1p
+freepoints [11k\]: w7dan
+Zaitsev [2d\]: white is 7d
+adshae: which ever
+freepoints [11k\]: ooh i got 7dan move righ
+freepoints [11k\]: kgs rank me up
+adshae: haha
+gomk [7k\]: :)):
+hvk [-\]: thx 
+blacklabel [2d\]: early ko
+freepoints [11k\]: b g3
+blacklabel [2d\]: b cant g3
+freepoints [11k\]: why not
+blacklabel [2d\]: w will cut k5
+Piggen [3k\]: g3 h5 k3 j2 k2 f2 
+freepoints [11k\]: oh
+freepoints [11k\]: h5 then black just j2
+blacklabel [2d\]: g3 h5 is bad
+freepoints [11k\]: yea
+freepoints [11k\]: k5 i guess goo
+]
+;B[gq]BL[1173.598]C[freepoints [11k\]: lol
+adshae: g3 lol
+freepoints [11k\]: lets go
+freepoints [11k\]: i should be 1p
+adshae: yea...
+josekimq [1d\]: h5 j2
+adshae: h5 j2 k3 then go outside 
+Piggen [3k\]: h5 j2 k3 
+freepoints [11k\]: we'll see
+freepoints [11k\]: looks like a fun fight
+hvk [-\]: 2J
+freepoints [11k\]: maybe b just wants to resign early :P
+Piggen [3k\]: w j2 = 1 eye?
+]
+;W[ho]WL[1212.04]
+;B[ir]BL[1170.903]C[Piggen [3k\]: told ya
+]
+;W[jq]WL[1208.677]
+;B[jo]BL[1169.288]C[adshae: yea i said it before you but okay piggen ;)
+Piggen [3k\]: you did? :o
+adshae: look scroll :)
+freepoints [11k\]: lol
+Piggen [3k\]: aah well
+blacklabel [2d\]: dont like h5 at all 
+adshae: lol :) good fun is all ^^
+freepoints [11k\]: who shall win the fight
+]
+;W[mr]WL[1164.574]C[erosennin [2k\]: w should be able to live
+erosennin [2k\]: b gets wall
+adshae: b will live small on bottom in gote and w will live by connecting
+freepoints [11k\]: g2 needs to live
+]
+;B[nr]BL[1060.398]
+;W[lr]WL[1161.315]C[flobby [1k\]: is ryan at robarts?
+adshae: b has a nasty decision..
+DineshR [2k\]: only william is playing at Robarts
+freepoints [11k\]: nah
+DineshR [2k\]: eveyrone else is at home cause they want to focus
+DineshR [2k\]: :p
+Piggen [3k\]: p3 sente maybe?
+flobby [1k\]: ed stillt ehre?
+]
+;B[er]BL[975.845]C[adshae: yep live small in gote
+]
+;W[kp]WL[1137.503]
+;B[ko]BL[957.212]
+;W[lo]WL[1087.997]C[adshae: that is a nice cut 
+]
+;B[mo]BL[942.868]C[freepoints [11k\]: isn't the 1p "gifted" on kgs
+]
+;W[ln]WL[1078.563]C[afk [-\]: yes, free
+]
+;B[im]BL[935.068]C[freepoints [11k\]: swag
+]
+;W[mn]WL[1019.811]C[Luffyy [3d\]: who's the pro ?
+adshae: b is
+Luffyy [3d\]: thx
+Alex1888 [3k\]: n6 not quie good ?
+]
+;B[nq]BL[861.954]C[Flowers [-\]: is that a cpature ?
+blacklabel [2d\]: its a shame how w left corner captured a stone and isnt 100% unconditional alive
+afk [-\]: you don't want to attack the left corner
+adshae: o5 or p2...
+Zaitsev [2d\]: white can n1?
+blacklabel [2d\]: not yet, but b gets a free stone j9 and  things get diffrent very quick
+]
+;W[ns]WL[916.323]C[afk [-\]: d2 and e7 are almost sente
+]
+;B[os]BL[823.4]C[blacklabel [2d\]: yeah b needs d5 and then e7 gote for any attack on local eyeshape and  yes d2 is sente but if b has e7 d2  sente doesnt make alive locally
+adshae: p1 is surprising to me. I thought b would try to run out
+]
+;W[jr]WL[889.573]
+;B[hs]BL[820.21]
+;W[ms]WL[888.498]
+;B[no]BL[807.734]C[freepoints [11k\]: now enough libs to kill
+]
+;W[or]WL[853.166]C[freepoints [11k\]: unless l1
+freepoints [11k\]: escapar
+adshae: did w give up to much with this?
+]
+;B[nn]BL[775.617]
+;W[nm]WL[811.799]C[jzfhfddf: w can attack some groups now.
+]
+;B[om]BL[754.311]C[Zaitsev [2d\]: I think both are fine, but black somewhat better
+]
+;W[nl]WL[785.849]
+;B[ll]BL[743.347]C[afk [-\]: your statement is contradicting
+buggler [2d?\]: why do these two unis have such strong go players?
+freepoints [11k\]: ikr
+freepoints [11k\]: lots of them
+buggler [2d?\]: in my uni you're lucky to find a 1d
+]
+;W[jm]WL[707.355]C[adshae: well i guess the AGA gets their players from somewhere
+Mef [-\]: buggler - because they beat the teams that didn't have as good of players (=
+jzfhfddf: the unis all sowed "Hikaru No g
+]
+;B[il]BL[723.236]C[buggler [2d?\]: is this some sort of uni- final?
+flobby [1k\]: go to china or korea; you'll find tens of players as strong as these two
+Mef [-\]: yes
+blacklabel [2d\]: won>great>good>fine>bad>lost @ afk :P it made total sense to me :)
+jzfhfddf: the unis all sowed "Hikaru No Go" for free
+hellabryan [5k\]: what's this?
+adshae: or you just grew up with go.. :p
+freepoints [11k\]: on kgs there
+jzfhfddf: showed*
+buggler [2d?\]: dakusan
+]
+;W[ol]WL[654.294]C[freepoints [11k\]: like 100 7d+ and it just so happens 2 unis have 7 of them
+adshae: makes sense
+flobby [1k\]: there aren't 100+
+adshae: talent follows talent
+freepoints [11k\]: yeah i guess so also these are big/good schools
+]
+;B[pm]BL[682.612]C[flobby [1k\]: there are ~100 accounts, but probably over half are multiple accounts
+mjzhang [?\]: there are a lot of 7d in asia
+yame [2k\]: R9
+mjzhang [?\]: 2 of michigan's studnets are from china, one from korea
+]
+;W[kn]WL[609.861]
+;B[in]BL[678.11]
+;W[kk]WL[605.047]
+;B[do]BL[667.352]C[flobby [1k\]: mj, are you playing?
+]
+;W[eo]WL[599.613]
+;B[em]BL[664.36]C[mjzhang [?\]: no, sadly team captain is only strongest sub...
+mjzhang [?\]: at 1-2d
+blacklabel [2d\]: such a shame that cpature is false eye :(
+]
+;W[gl]WL[565.717]C[archer995: dakusan
+]
+;B[ij]BL[643.038]C[archer995: what is this?
+buggler [2d?\]: ho....
+buggler [2d?\]: ho....
+buggler [2d?\]: hooo.........
+blacklabel [2d\]: b will enjoy the next 20 moves alot
+buggler [2d?\]: honinbou.......
+]
+;W[lk]WL[536.819]C[archer995: shusaku!?!eh!?!
+adshae: ..
+freepoints [11k\]: ..........?
+flobby [1k\]: the bad thing about advertising this game to the public is all the spam
+yame [2k\]: F10?
+freepoints [11k\]: yes flobby
+archer995: kosumi???
+Hobbes [3k\]: f11
+]
+;B[gj]BL[591.69]
+;W[dr]WL[532.715]C[freepoints [11k\]: we are bad public
+hobajons [-\]: this is good for b
+]
+;B[es]BL[528.933]
+;W[bp]WL[528.801]
+;B[br]BL[519.146]C[buggler [2d?\]: 17,4.  komoku.
+freepoints [11k\]: ow boy
+]
+;W[bq]WL[455.703]
+;B[ds]BL[502.121]C[Rukis [3k\]: lol
+]
+;W[hk]WL[442.825]
+;B[ik]BL[494.122]C[adshae: c7
+adwue [4k\]: h10
+]
+;W[hj]WL[403.185]
+;B[hi]BL[480.969]C[RetardLion [8k\]: a2
+adwue [4k\]: j11
+TomoyaKun [3d\]: who are these both players?
+adshae: b is a 1p w is a 7d
+adshae: i forget their names
+TomoyaKun [3d\]: anyone remebers their names? :P
+adwue [4k\]: they are Undercover
+CGLadmin [-\]: Gansheng Shi 1p v. Zifan Yang 7d
+UToronto2 [-\]: black is William Shi 1p
+TomoyaKun [3d\]: thanks :)
+RetardLion [8k\]: f10
+adwue [4k\]: look at the U
+hobajons [-\]: hahaha
+hobajons [-\]: shi gansheng
+]
+;W[ii]WL[332.57]C[hobajons [-\]: pro
+hobajons [-\]: :)
+buggler [2d?\]: ohh toronto has kibitz spies
+CGLadmin [-\]: G9?
+buggler [2d?\]: using our collective knowledge
+CGLadmin [-\]: unless I'm missing something..
+buggler [2d?\]: psst...  k11
+hobajons [-\]: wait
+hobajons [-\]: who is black
+buggler [2d?\]: lets see if they are copying our moves
+CGLadmin [-\]: G9-H8-F6-F7-F8
+]
+;B[ji]BL[419.241]C[Zaitsev [2d\]: then connect somewhere
+]
+;W[ih]WL[328.112]C[buggler [2d?\]: !!
+Zaitsev [2d\]: white has an extra lib at h7
+]
+;B[kj]BL[413.229]C[hobajons [-\]: is gansheng b or w?
+adshae: gansheng is b
+hobajons [-\]: ok
+CGLadmin [-\]: oh, never mind.. W has one free lib
+hobajons [-\]: b is winning
+]
+;W[gi]WL[310.966]
+;B[hh]BL[398.471]C[hobajons [-\]: wait
+whitenoise [7k?\]: W is crying 
+archer995: this is?? not the best move or the...
+hobajons [-\]: why didnt b play g9
+]
+;W[fj]WL[295.981]
+;B[gh]BL[395.102]
+;W[fi]WL[294.29]C[hobajons [-\]: its k
+selahaddin [8k\]: m5 w group ...
+hobajons [-\]: either way good for b
+]
+;B[di]BL[357.764]
+;W[ig]WL[286.405]C[adwue [4k\]: e12
+adshae: yikes no
+Zaitsev [2d\]: too good, so white has to make complications
+selahaddin [8k\]: the thing is black is gaining points
+hobajons [-\]: b got greddy
+hobajons [-\]: greedy
+selahaddin [8k\]: he will attack m5 and grab the right edge too
+adshae: c14 maybe
+hobajons [-\]: well
+joh85 [12k\]: what dans are they?
+]
+;B[hf]BL[303.711]C[hobajons [-\]: b could easily die
+hobajons [-\]: h14
+hobajons [-\]: is werid
+RetardLion [8k\]: they are kyus
+hobajons [-\]: lol
+hobajons [-\]: sure
+blacklabel [2d\]: h14 looks only
+adshae: lol yea lion
+]
+;W[fh]WL[259.696]
+;B[ff]BL[291.821]C[buggler [2d?\]: L12 for w after this
+criatura [1k\]: n11 
+adshae: toronto just won a game
+freepoints [11k\]: is andy liu also in college?
+blacklabel [2d\]: its awesome how b manages his local weakness with k11 group with its strategical strenght
+]
+;W[ef]WL[154.776]C[adshae: it's all about entire board vision man
+adshae: :)
+]
+;B[ee]BL[241.264]C[blacklabel [2d\]: yeah vision being the keyword :P
+freepoints [11k\]: nah all about 1 point moves
+freepoints [11k\]: aka ko
+Sanyel [-\]: Damn' I was pretty sure it was all about kibbitz.
+Sanyel [-\]: (and nigiri)
+adshae: sanyel that is just what the kibbitzers say
+adshae: ;)
+]
+;W[dh]WL[84.951]C[selahaddin [8k\]: i am kibbitzer and i am happy
+RetardLion [8k\]: whites lower right isn't even quite alive is it?
+flobby [1k\]: it is very alive
+]
+;B[ch]BL[198.204]C[freepoints [11k\]: it will all die soon
+selahaddin [8k\]: alive as hell
+Rukis [3k\]: e6 is not alive
+freepoints [11k\]: and we will all be happy
+]
+;W[df]WL[68.51]C[adshae: e6 isn't yet but it will live
+Rukis [3k\]: yup
+]
+;B[de]BL[150.817]C[RetardLion [8k\]: s2 complicates perhaps for whites lvl of party
+RetardLion [8k\]: play;)
+buggler [2d?\]: no
+adshae: nah because w is connected
+adshae: p1 dead
+adshae: and plenty of aji anyway
+joh85 [12k\]: what dans are they-.-
+joh85 [12k\]: yell plox
+joh85 [12k\]: tell
+adshae: b is 1p w is 7d
+Alex1888 [3k\]: 12 dan
+Prometheus [2k\]: hum, living comfortably not so easy here
+]
+;W[fe]WL[30]OW[5]C[RetardLion [8k\]: p1 is a false eye if black disturbs situation
+joh85 [12k\]: how many p is there
+]
+;B[gf]BL[116.576]C[Prometheus [2k\]: RetardLion, w has two eyes there, end of
+blacklabel [2d\]: as if it wasnt messy enough already :) d15 
+adshae: what I'm saying lion is that s2 s3 is an option then two eyes already
+buggler [2d?\]: retardlion, are you trolling?
+Prometheus [2k\]: L2 is an eye, R2 is an eye
+selahaddin [8k\]: right lower corner situation is due to moves well wait and see
+]
+;W[cg]WL[30]OW[5]
+;B[ce]BL[86.355]
+;W[ci]WL[30]OW[5]C[freepoints [11k\]: e12?
+buggler [2d?\]: w needs to kill this lhs
+adshae: two eyes l1 is eye and eye in corner... comon folks
+]
+;B[bh]BL[76.293]C[SeiChan [5k\]: who is playing?o:
+yame [2k\]: b vs w
+anicca [2d\]: why needs to kill?
+freepoints [11k\]: yame is correct
+criatura [1k\]: b11
+]
+;W[dj]WL[30]OW[4]C[Mef [-\]: 1. Gansheng Shi 1p (B) vs. Zifan Yang 7d (W)
+weiqidevil [-\]: thanks, Mef
+UMichigan2 [-\]: who is ahead?
+Rukis [3k\]: b
+SeiChan [5k\]: ty mef
+adshae: i'd say b leads
+]
+;B[bi]BL[40.762]
+;W[cj]WL[30]OW[4]C[flobby [1k\]: really?
+]
+;B[bj]BL[38.202]C[freepoints [11k\]: why did 7dan get w?
+freepoints [11k\]: is it random?
+adshae: yea really
+CGLadmin [-\]: yes, random
+flobby [1k\]: well I hope you're right
+]
+;W[fd]WL[30]OW[4]C[adshae: the game is by no means over flobby though
+buggler [2d?\]: b still have weak groups
+mjzhang [?\]: white has chance
+flobby [1k\]: it doesn't look like b is ahead to me though... and I'm supposed to be biased
+buggler [2d?\]: w is making the game fun
+freepoints [11k\]: it's fine I have seen kbag beat pros
+UToronto2 [-\]: he's got no chance
+]
+;B[ed]BL[30]OB[5]C[polol: pros range from kgs 5d to kgs 9d
+freepoints [11k\]: who white?
+anicca [2d\]: shouldnt w cut ant b13?
+Forbidden1 [6d\]: oooh
+]
+;W[fc]WL[30]OW[4]C[polol: is w ags 7d?
+]
+;B[hd]BL[30]OB[5]C[polol: or kgs 7d?
+polol: aga
+freepoints [11k\]: aren't they about same?
+mjzhang [?\]: white is tygem 9d
+mjzhang [?\]: besides that, don't know aga or kgs
+polol: tygem 9d could mean 7d-9d on kgs
+regret [3d\]: what's whites tygem account?
+flobby [1k\]: pros aren't kgs 5d. 
+]
+;W[bg]WL[30]OW[4]C[Jerronte [1k?\]: no difference
+polol: some pros are about 5d kgs
+]
+;B[ec]BL[30]OB[5]C[mjzhang [?\]: no way kgs pro is 5d
+flobby [1k\]: that's like saying some pros are worse than kgs 30k; the ones who died
+polol: pros is not a measure of skill....... even if pros get worse they stay at their highest pro ranks
+selahaddin [8k\]: if b gets corner, game is over
+anicca [2d\]: maybe chess pros
+buggler [2d?\]: m12
+]
+;W[eb]WL[30]OW[4]C[freepoints [11k\]: b got corner
+polol: say lee sedol 9p at his age 120 has a strength of 2d kgs
+polol: he's still 9p
+]
+;B[db]BL[30]OB[5]C[flobby [1k\]: see my example
+flobby [1k\]: saying pros are 5d is misleading
+]
+;W[hc]WL[30]OW[4]C[polol: also some pros are 5d on kgs...... that's a fact
+]
+;B[ic]BL[30]OB[5]C[polol: at least one pro
+selahaddin [8k\]: very painfull for w
+]
+;W[gb]WL[30]OW[4]C[flobby [1k\]: I have never lost to lee sedol, that's also a fact
+freepoints [11k\]: who is that polol?
+]
+;B[hb]BL[30]OB[5]C[anicca [2d\]: doesnt  b8 just kill?
+]
+;W[gd]WL[30]OW[4]C[polol: there are some honorary pros who get pros ranks without passing exams..... one of them is
+]
+;B[gc]BL[30]OB[5]C[adshae: polol that is why it's "honorary"
+]
+;W[dk]WL[30]OW[4]C[Jerronte [1k?\]: KGS 5d pro...
+adshae: the two men who first played go in space with NASA are "honorary" 1ps
+]
+;B[cl]BL[30]OB[5]C[flobby [1k\]: I'm pretty sure even honorary pros are kgs 7d+ unless they got into some sort of accident or stopped playing for decades
+]
+;W[hc]WL[30]OW[4]C[polol: ya if you don't inclue honorary pros, prob the weakest pros are about 7d
+polol: on kgs
+joh85 [12k\]: why does b need this ko?
+]
+;B[fm]BL[30]OB[5]
+;W[fn]WL[30]OW[4]
+;B[gc]BL[30]OB[5]C[joh85 [12k\]: w cant live anyways
+]
+;W[bm]WL[30]OW[4]C[buggler [2d?\]: if he wins the ko he can
+anicca [2d\]: if w wins the ko I guess he wns the game
+]
+;B[bl]BL[30]OB[5]
+;W[hc]WL[30]OW[4]C[polol: prob many pros from japan are arond 7d on kgs maybe even weaker
+joh85 [12k\]: he can just g 19 and e 19
+selahaddin [8k\]: how so? can he go on ko fight till end of the game?
+adshae: you underestimate japanese pros to be honest
+]
+;B[fk]BL[30]OB[5]C[Prometheus [2k\]: don't feed the troll
+polol: well top japanese pros are 9d on kgs for sure
+adshae: right right
+flobby [1k\]: not active ones. maybe the 70 yr olds
+]
+;W[fl]WL[30]OW[4]
+;B[gc]BL[30]OB[5]C[buggler [2d?\]: b6
+iamnotpro [?\]: i think milan milan is 2p
+]
+;W[bn]WL[30]OW[4]C[polol: you are basing your statements on what you think is likely to be a case based on.... your idea of pros?
+]
+;B[cm]BL[30]OB[5]
+;W[hc]WL[30]OW[4]C[polol: me too, mostly, but i also have some experience interacting with some pros
+buggler [2d?\]: b5 next :)
+]
+;B[hl]BL[30]OB[5]C[adshae: yea buggler w came out good on that :)
+]
+;W[gk]WL[30]OW[4]
+;B[gc]BL[30]OB[5]C[TomoyaKun [3d\]: no use arguing over what rank pros would be on kgs, as long as kgs' members don't turn pro themselves, it's too hard to estimate
+]
+;W[bo]WL[30]OW[4]
+;B[ak]BL[30]OB[5]
+;W[hc]WL[30]OW[4]C[anicca [2d\]: this area is really a ko threat factory
+]
+;B[eh]BL[30]OB[5]C[TomoyaKun [3d\]: there are too few pros on kgs imo
+Jerronte [1k?\]: How many pros are on KGS?
+]
+;W[ei]WL[30]OW[4]
+;B[gc]BL[30]OB[5]C[adshae: you can count them on two hands
+Jerronte [1k?\]: How many are on Tygem
+Prometheus [2k\]: 6,439
+]
+;W[am]WL[30]OW[4]
+;B[al]BL[30]OB[5]
+;W[hc]WL[30]OW[4]C[iamnotpro [?\]: 6,438
+TomoyaKun [3d\]: who play actively? less than 10 i guess
+blacklabel [2d\]: basic TBS strat. infrastructure before war :P
+Prometheus [2k\]: oh, yeah
+Prometheus [2k\]: you are not a pro :)
+]
+;B[id]BL[30]OB[5]C[iamnotpro [?\]: :D
+]
+;W[ib]WL[30]OW[4]C[Prometheus [2k\]: you can actually see that data both in the help files and on senseis
+]
+;B[gc]BL[30]OB[5]C[adshae: yea, if your name was "iamapro" i might have believed it ;)
+Prometheus [2k\]: there's a lot more than 10 pros on kgs, but they mainly teach
+TomoyaKun [3d\]: that's the point
+]
+;W[cb]WL[30]OW[4]
+;B[ea]BL[30]OB[5]C[UCSB2 [-\]: erm
+buggler [2d?\]: f19 ?
+polol: thinkig about taking
+adshae: start another ko in the area? O-O
+polol: at h17
+selahaddin [8k\]: 2 kos?
+TomoyaKun [3d\]: f18
+buggler [2d?\]: oh no f19 dies
+]
+;W[fb]WL[30]OW[3]
+;B[dc]BL[30]OB[5]C[adshae: i think w's just about done
+]
+;W[hc]WL[30]OW[3]C[mjzhang [?\]: agreed
+]
+;B[mi]BL[30]OB[5]C[Prometheus [2k\]: time to take it to the bank
+]
+;W[qj]WL[30]OW[3]C[TomoyaKun [3d\]: interesting counter
+polol: i like
+]
+;B[pk]BL[30]OB[5]C[selahaddin [8k\]: r9
+TomoyaKun [3d\]: but i wonder how effective it can be
+polol: o10
+Capsule [4d\]: who are these players?
+]
+;W[ni]WL[30]OW[3]C[polol: natural exit and possibbly attack at l12 later
+]
+;B[pj]BL[30]OB[5]C[Prometheus [2k\]: Gangshen Shi w, 
+manofearth [?\]: wouldn'teven an honorary pro get2playin pro tournaments. But if the honoree had no real go strength his games against pros would be travestial so how cld he b allowed 2play?
+O0o0O [5k?\]: are the time controls real? 
+]
+;W[mj]WL[30]OW[3]C[adshae: if I'm not mistaken manofearth I think honorary pros are strictly an award
+flobby [1k\]: er gansheng* and he's black not w
+]
+;B[lj]BL[30]OB[5]C[Prometheus [2k\]: I keep that one wrong
+tjw [13k\]: O0o0O:  yeah, it's being played on KGS
+polol: atari do it
+Capsule [4d\]: so W is?
+polol: just have to
+adwue [4k\]: n12
+bokchulmun: 1
+flobby [1k\]: some guy 7d
+Jerronte [1k?\]: Black wins with a controlled situation
+adshae: a 7d zifen
+polol: can target j17 group
+polol: if b counter ataris at n9
+polol: but n12 do it
+]
+;W[mk]WL[30]OW[2]
+;B[mh]BL[30]OB[5]C[Capsule [4d\]: thanks
+polol: poop
+]
+;W[nh]WL[30]OW[2]C[manofearth [?\]: "then I wonder how the honor manifests"
+]
+;B[mg]BL[30]OB[5]
+;W[pi]WL[30]OW[2]
+;B[qi]BL[30]OB[5]C[Prometheus [2k\]: like thickness and influence
+adshae: well is it not an honor to be an "honorary" member of a go institution? 
+Prometheus [2k\]: it is just there
+]
+;W[on]WL[30]OW[2]C[tjw [13k\]: 1-1 now
+adshae: It's like getting an honorary college degree
+]
+;B[oo]BL[30]OB[5]C[anicca [2d\]: nice
+anicca [2d\]: q8 aji
+]
+;W[pl]WL[30]OW[2]C[blacklabel [2d\]: yeah  this helped r10 alot
+TCAxcE: this is like a tornament?
+ataribenji [3k\]: At what point will H19 become urgent I wonder?
+]
+;B[qm]BL[30]OB[5]C[manofearth [?\]: I guess that gets u into the cafeteria
+]
+;W[ri]WL[30]OW[2]C[adshae: haha i guess so :P
+Prometheus [2k\]: when b plays K18 :)
+]
+;B[qh]BL[30]OB[5]
+;W[qk]WL[30]OW[2]C[adwue [4k\]: cut
+UCSB2 [-\]: rj
+UCSB2 [-\]: eh*
+USopen [3d?\]: overplay
+polol: rejoice
+criatura [1k\]: b can dead 
+]
+;B[ph]BL[30]OB[5]
+;W[oi]WL[30]OW[2]
+;B[rl]BL[30]OB[5]C[adshae: where is b dead?
+]
+;W[rj]WL[30]OW[2]C[criatura [1k\]: can 
+]
+;B[rh]BL[30]OB[5]C[selahaddin [8k\]: q5
+Prometheus [2k\]: he means kill
+]
+;W[po]WL[30]OW[2]C[adshae: ah
+adwue [4k\]: l14
+Capsule [4d\]: i will dead u
+selahaddin [8k\]: now b in trouble
+]
+;B[pn]BL[30]OB[5]C[Prometheus [2k\]: or die :)
+]
+;W[ha]WL[30]OW[2]C[anicca [2d\]: no 
+Prometheus [2k\]: who am I to say
+ataribenji [3k\]: ih19 ;)
+]
+;B[kc]BL[30]OB[5]C[polol: michigan wins board 1
+selahaddin [8k\]: s6?
+]
+;W[ng]WL[30]OW[2]C[rjm [2d?\]: hard to die when there is t10
+selahaddin [8k\]: why did w stop?
+khgjhg: this is board 1
+]
+;B[nf]BL[30]OB[5]C[luffy1: u of t won
+adwue [4k\]: n14
+luffy1: michigan is no match lol..
+]
+;W[bc]WL[30]OW[2]C[luffy1: why is michigan even in the finals
+polol: well michigan is much better school in general
+polol: not sure about go
+USopen [3d?\]: ko
+]
+;B[bd]BL[30]OB[5]C[anicca [2d\]: b19
+polol: b19
+RetardLion [8k\]: someone helping white now. gamer improved ;)
+]
+;W[ba]WL[30]OW[2]C[adshae: now b14
+luffy1: michigan is a good school in general?
+flobby [1k\]: depends on what you mean by "in general"
+adshae: idk
+luffy1: look up the rankings
+polol: the pro player getting played by u michigan
+luffy1: vs u of ta
+]
+;B[bf]BL[30]OB[5]C[USopen [3d?\]: it is the ivy league of public school
+luffy1: polol nice trolling
+adshae: alright
+gomk [7k\]: w best fighter
+moyango [6k\]: ko ko
+]
+;W[ag]WL[30]OW[2]C[blacklabel [2d\]: s6 s5 s3 t9 t11 t7 
+luffy1: LOL michigan got destroyed by u of t this tournament
+luffy1: totaly ownage
+]
+;B[ae]BL[30]OB[5]C[moyango [6k\]: s6 t10
+rjm [2d?\]: blacklabel, doesn't t10 black just connect
+luffy1: i feel bad for these guys..
+polol: well us schools in general are .... just superior to canadian sschools
+Mentalist [?\]: w played too badly in the middle game 
+moyango [6k\]: no probl for b
+rjm [2d?\]: should be better than t9
+]
+;W[qc]WL[30]OW[2]C[polol: haven't checked the rankings comparing schools from both countries
+khgjhg: feel like b is teaching how to win a won game
+USopen [3d?\]: last war
+adshae: here we go last fight
+]
+;B[pc]BL[30]OB[5]
+;W[pb]WL[30]OW[2]
+;B[ob]BL[30]OB[5]C[criatura [1k\]: more ko xd 
+]
+;W[rb]WL[30]OW[2]C[selahaddin [8k\]: why not w s6?
+]
+;B[qd]BL[30]OB[5]
+;W[rd]WL[30]OW[2]C[polol: w is likely to win this game...  
+]
+;B[re]BL[30]OB[5]C[Mentalist [?\]: no way
+]
+;W[he]WL[30]OW[2]C[manofearth [?\]: i don't no their strengths, but b looks wellahead
+adshae: b is going to win
+moyango [6k\]: no way for white
+flobby [1k\]: US schools are in general more well known than canadian schools to americans
+]
+;B[if]BL[30]OB[5]C[adwue [4k\]: k14
+blacklabel [2d\]: nice spot yeah it does
+adshae: you could see b was a head for a while back now
+]
+;W[cf]WL[30]OW[2]C[polol: ya harvard, johns hopkins, stanford, yale, princeton, mit, cal tech...
+polol: top schools are in the us. no match 
+blacklabel [2d\]: so l3 was too much
+]
+;B[ab]BL[30]OB[5]C[manofearth [?\]: vs mcgill
+UCSB2 [-\]: geez more ko
+]
+;W[da]WL[30]OW[2]C[flobby [1k\]: the US has a much greater population; there are also many more schools that are "inferior"
+]
+;B[cc]BL[30]OB[5]C[polol: w has plenty of threats at s4
+roussos [2k?\]: what is the level of the players?
+]
+;W[ac]WL[30]OW[2]C[luffy1: michigan is ivy league?? LOL 
+]
+;B[ca]BL[30]OB[5]C[adshae: b is 1p w is 7d sheesh :P
+]
+;W[js]WL[30]OW[2]C[anicca [2d\]: b alive already
+]
+;B[is]BL[30]OB[5]
+;W[da]WL[30]OW[2]C[polol: being alive wont' help u win
+]
+;B[af]BL[30]OB[5]C[polol: well it may
+manofearth [?\]: he's only alive if he concedes the crnr
+]
+;W[nb]WL[30]OW[2]C[polol: but it's not sufficient for winning
+polol: w ko ko ko 
+]
+;B[oc]BL[30]OB[5]C[polol: w has plenty threats everywhere
+polol: so ko ko ko
+polol: ya ya ya w wins ya ya ya u michigan beats pro
+criatura [1k\]: ok or nothing 
+adshae: b is alive in corner just wants more..
+]
+;W[oa]WL[30]OW[2]
+;B[sd]BL[30]OB[5]C[ElMono [2d\]: w s6 ?
+polol: so htese players are not currently attneding respective schools, correct?
+ElMono [2d\]: oh, nvm, doesnt work
+polol: they arej ust some affiliates?
+flobby [1k\]: not current.
+flobby [1k\]: correct*
+adshae: t10 is there elmono
+criatura [1k\]: no ko now XD ?
+]
+;W[sc]WL[30]OW[2]
+;B[rc]BL[30]OB[5]C[ElMono [2d\]: right
+moyango [6k\]: w dead
+flobby [1k\]: gansheng is a freshman at u of t
+polol: like if lee sedol comes to umichigan to visit, he can play for the team
+]
+;W[jk]WL[30]OW[2]C[flobby [1k\]: u of t board 2 also happens to be a freshman
+]
+;B[jj]BL[30]OB[5]
+;W[rd]WL[30]OW[2]
+;B[qa]BL[30]OB[5]
+;W[se]WL[30]OW[2]
+;B[pa]BL[30]OB[5]C[ElMono [2d\]: w alive
+polol: oh this must be the young canadian guy
+]
+;W[qb]WL[30]OW[2]
+;B[na]BL[30]OB[5]C[polol: gang sheng
+selahaddin [8k\]: sr works
+polol: he was pretty strong last time i saw him
+selahaddin [8k\]: s6*
+mjzhang [?\]: toronto is very strong, for next year too
+polol: prob 9d kgs a few years ago
+mjzhang [?\]: michigan is losing 7d + 4d
+]
+;W[rf]WL[30]OW[2]
+;B[qe]BL[30]OB[5]C[UCSB2 [-\]: rigged
+]
+;W[ra]WL[30]OW[2]C[UCSB2 [-\]: lol
+polol: but this game is win for w
+]
+;B[jb]BL[30]OB[5]C[adshae: polol staph..
+TomoyaKun [3d\]: p14
+]
+;W[pg]WL[30]OW[2]
+;B[rk]BL[30]OB[5]
+;W[ok]WL[30]OW[2]C[polol: can't connect right
+polol: or he will die
+adshae: .....
+ElMono [2d\]: r14 
+moyango [6k\]: p13
+Mentalist [?\]: how is this a win for w
+polol: s3
+blacklabel [2d\]: r12 dies or w in center
+flobby [1k\]: well its 2-1 for michigan right now
+flobby [1k\]: so if we lose one more we lose this year
+]
+;B[og]BL[30]OB[3]
+;W[of]WL[30]OW[2]C[polol: this game will be won by w i think
+Path [-\]: toronto needs to win
+Path [-\]: or dinesh has to resign as president
+adshae: b will win
+ElMono [2d\]: looks dangerous for b
+bagala [3d\]: yeah
+flobby [1k\]: dinesh isn't even president anyway lol
+UCSB2 [-\]: ouch
+bagala [3d\]: aji with n19 now
+ElMono [2d\]: p12 r14 p15 q14 s6 ?
+]
+;B[oe]BL[30]OB[2]C[gomk [7k\]: yes
+flobby [1k\]: president is kjs who came to club a few times and never came again
+adshae: this works
+gomk [7k\]: p13 not good
+Path [-\]: loooool
+]
+;W[rn]WL[30]OW[2]C[polol: ya good timin
+polol: gogo w gg
+anicca [2d\]: omg
+]
+;B[ro]BL[30]OB[2]C[selahaddin [8k\]: s3
+RetardLion [8k\]: r14 r13 s13 before p
+UCSB2 [-\]: its too bad
+selahaddin [8k\]: s3
+]
+;W[rq]WL[30]OW[2]C[anicca [2d\]: seems p13 killed b
+UCSB2 [-\]: m3
+]
+;B[sj]BL[30]OB[2]C[adshae: m3
+]
+;W[oj]WL[30]OW[2]C[Aguirre [1d\]: m3 sente eye
+adshae: is a good move
+]
+;B[si]BL[30]OB[2]C[ElMono [2d\]: m3 o4 l1 n4 
+Mentalist [?\]: m3 is obviously not sente
+Zaitsev [2d\]: m3o4
+]
+;W[oh]WL[30]OW[2]C[adshae: then l2...
+Zaitsev [2d\]: the right side is bigger than bottom
+anicca [2d\]: poor b
+adshae: elmono
+ElMono [2d\]: yes, you capture some stones
+]
+;B[qg]BL[30]OB[2]C[criatura [1k\]: ko
+ElMono [2d\]: but big group dies
+]
+;W[qf]WL[30]OW[2]C[Zaitsev [2d\]: what ko?
+]
+;B[pf]BL[30]OB[2]
+;W[pe]WL[30]OW[2]C[criatura [1k\]: this 
+Zaitsev [2d\]: white can connect
+BigStan [2d\]: w just fills
+moyango [6k\]: ko is suicide
+polol: resign
+]
+;B[lq]BL[30]OB[1]C[TomoyaKun [3d\]: o3
+TomoyaKun [3d\]: 4
+Zaitsev [2d\]: o4!
+ElMono [2d\]: yes, o4
+Zaitsev [2d\]: gogogogo
+Zaitsev [2d\]: :)
+polol: hah
+]
+;W[np]WL[30]OW[2]C[gomk [7k\]: :):)
+polol: missed this
+RetardLion [8k\]: trnuki!
+Zaitsev [2d\]: yess
+]
+;B[pf]BL[30]OB[1]C[Zaitsev [2d\]: sente kill too
+polol: but not big enuff
+gomk [7k\]: l1
+]
+;W[og]WL[30]OW[2]C[gomk [7k\]: L1
+RetardLion [8k\]: wtf white?
+polol: l1 n4
+Shana [2d?\]: l1 and b's whole right side dies
+UCSB2 [-\]: what do u mean wtf white
+Zaitsev [2d\]: white just killed right side, lion.
+]
+;B[ks]BL[30]OB[1]C[polol: deaed and dead
+selahaddin [8k\]: w ok
+]
+;W[mp]WL[30]OW[2]C[pride1: swallow that pride
+gomk [7k\]: yes
+]
+;B[kr]BL[30]OB[1]C[RetardLion [8k\]: no l1
+TomoyaKun [3d\]: o15
+TomoyaKun [3d\]: n19
+UCSB2 [-\]: yay white wins
+]
+;W[on]WL[30]OW[2]C[Zaitsev [2d\]: f19
+Zaitsev [2d\]: o.0
+polol: gg
+ElMono [2d\]: f19 is big
+TomoyaKun [3d\]: lol whut?
+adshae: haha
+polol: resign dead and dead
+mjzhang [?\]: what happened?
+adshae: m1?
+polol: bye toronto
+TomoyaKun [3d\]: r3 in danger?
+]
+;B[sg]BL[30]OB[1]C[polol: welcome michigan
+]
+;W[sf]WL[30]OW[2]C[pride1: michigan is king
+moyango [6k\]: b is walking dead
+UCSB2 [-\]: ...
+Zaitsev [2d\]: okay that's unnecessary u of t
+]
+;B[ca]BL[30]OB[1]C[flobby [1k\]: c19?
+]
+;W[ne]WL[30]OW[2]C[gomk [7k\]: w will win
+]
+;B[mf]BL[30]OB[1]
+;W[da]WL[30]OW[2]C[Zaitsev [2d\]: err, pride
+selahaddin [8k\]: s6...
+Zaitsev [2d\]: white's right side is how many points b has total lol
+]
+;B[sn]BL[30]OB[1]C[UMichigan3 [-\]: what?!?1
+drlee [?\]: Stay classy
+]
+;W[sk]WL[30]OW[2]C[polol: 7k hope ... its like homeless people buying lottery
+selahaddin [8k\]: t9 yesss
+gutzman [6k\]: they  lack in maners unfortunately
+UToronto1 [-\]: lmfao
+UToronto1 [-\]: had a brain fartr
+UToronto1 [-\]: -_-
+gomk [7k\]: very good
+UCSB2 [-\]: gg guys
+Mentalist [?\]: "lmfao"
+Mentalist [?\]: a classy response
+mjzhang [?\]: hey stop trolling pride
+Zaitsev [2d\]: very classy, pride.
+UCSB2 [-\]: ...stay classy mich -_-
+UToronto1 [-\]: ye i suck
+UMichigan3 [-\]: god
+Rukis [3k\]: pride dont say that
+selahaddin [8k\]: i still cant understand why w stopped and did not play s6 ?
+selahaddin [8k\]: w waited 20 min for s6
+Zaitsev [2d\]: white didn't need s6, selahaddin
+selahaddin [8k\]: Zaitsev w won the game by s6
+Zaitsev [2d\]: err he had to do preparations in the side first
+joh85 [12k\]: 8k thinks he so pro
+joh85 [12k\]: gg
+UCSB2 [-\]: LOL
+khgjhg: this place is troll overload
+UCSB2 [-\]: so many nubz
+RetardLion [8k\]: what is estimate of score here by kgs
+RetardLion [8k\]: i'm on phone app
+gutzman [6k\]: thats why at the begining go was played onbly be higed class of socitey
+UCSB2 [-\]: idk man howa bout check score est..
+RetardLion [8k\]: phone app doesn't have it
+])

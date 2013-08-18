@@ -1,0 +1,162 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UToronto1]PB[Rutgers1]DT[2013-04-06]PC[The KGS Go Server at http://www.gokgs.com/]C[Rutgers1 [-\]: Hi, have a nice game
+]RE[W+Resign]
+;B[pd]BL[1788.118]C[UToronto1 [-\]: hi
+]
+;W[dp]WL[1793.797]C[Rutgers1 [-\]: This is Nikunj Patel from Rutgers
+]
+;B[pq]BL[1776.493]C[UToronto1 [-\]: My name is Ryan Li, what rank are you?
+]
+;W[dc]WL[1770.098]C[Rutgers1 [-\]: around 1d and you?
+]
+;B[fq]BL[1748.431]
+;W[cn]WL[1763.898]C[UToronto1 [-\]: 8d from University of Toronto
+]
+;B[qk]BL[1723.428]
+;W[eq]WL[1756.938]
+;B[jp]BL[1684.733]
+;W[hq]WL[1745.729]
+;B[hp]BL[1621.213]
+;W[gp]WL[1728.387]
+;B[ho]BL[1593.393]
+;W[iq]WL[1664.922]
+;B[jq]BL[1579.001]
+;W[fp]WL[1662.71]
+;B[jn]BL[1525.051]
+;W[po]WL[1655.826]
+;B[np]BL[1520.344]
+;W[qq]WL[1648.655]
+;B[qr]BL[1518.199]
+;W[qp]WL[1645.801]
+;B[rr]BL[1516.142]
+;W[no]WL[1644.363]
+;B[mo]BL[1476.323]
+;W[nn]WL[1638.625]
+;B[mn]BL[1431.893]
+;W[nl]WL[1630.462]
+;B[qh]BL[1322.443]
+;W[op]WL[1601.985]
+;B[oq]BL[1316.738]
+;W[mm]WL[1600.87]C[UMichigan3 [-\]: UT1 are you from China?
+]
+;B[lm]BL[1279.004]
+;W[ll]WL[1582.981]
+;B[km]BL[1273.833]
+;W[qc]WL[1575.913]
+;B[pc]BL[1236.219]
+;W[qd]WL[1552.438]
+;B[qe]BL[1234.831]
+;W[re]WL[1420.38]
+;B[rf]BL[1229.848]
+;W[pb]WL[1419.016]
+;B[ob]BL[1198.045]
+;W[qf]WL[1396.624]
+;B[pe]BL[1190.283]
+;W[rg]WL[1388.36]
+;B[rd]BL[1175.861]
+;W[sf]WL[1384.215]
+;B[rc]BL[1174.414]
+;W[pf]WL[1383.695]
+;B[oh]BL[1118.707]
+;W[qb]WL[1375.6]
+;B[rb]BL[1112.807]
+;W[pi]WL[1374.293]
+;B[ph]BL[1103.979]
+;W[oe]WL[1373.16]
+;B[oc]BL[1091.315]
+;W[nf]WL[1367.448]
+;B[mh]BL[1026.142]
+;W[nc]WL[1348.665]
+;B[nd]BL[958.819]
+;W[od]WL[1347.245]
+;B[nb]BL[937.229]
+;W[mc]WL[1342.789]
+;B[mb]BL[912.706]
+;W[lc]WL[1325.827]
+;B[mk]BL[864.155]
+;W[ml]WL[1288.553]
+;B[kj]BL[814.547]
+;W[qm]WL[1231.202]
+;B[de]BL[735.702]
+;W[ee]WL[1218.247]
+;B[ef]BL[704.31]
+;W[ed]WL[1206.657]
+;B[dg]BL[693.856]
+;W[ce]WL[1178.933]
+;B[cf]BL[681.12]
+;W[be]WL[1176.738]
+;B[lf]BL[662.828]
+;W[me]WL[1156.717]C[DineshR [3k\]: He's from Canada :D
+]
+;B[cl]BL[519.257]
+;W[ff]WL[1143.858]
+;B[fg]BL[509.253]
+;W[gg]WL[1139.351]
+;B[gf]BL[500.541]
+;W[fe]WL[1115.281]
+;B[hf]BL[479.592]
+;W[fh]WL[1111.69]
+;B[eg]BL[478.255]
+;W[gh]WL[1110.882]
+;B[ig]BL[413.983]
+;W[di]WL[1108.86]
+;B[ci]BL[399.553]
+;W[cj]WL[1106.471]
+;B[dj]BL[333.486]
+;W[ei]WL[1074.845]
+;B[bi]BL[258.711]
+;W[dk]WL[1063.754]
+;B[bj]BL[220.309]
+;W[bg]WL[1057.937]
+;B[ck]BL[105.572]
+;W[ch]WL[1055.014]
+;B[pl]BL[68.928]
+;W[pm]WL[971.171]
+;B[ol]BL[44.227]
+;W[om]WL[963.764]
+;B[pp]BL[30]OB[5]
+;W[nk]WL[872.206]
+;B[qi]BL[30]OB[5]
+;W[oo]WL[846.017]
+;B[ro]BL[30]OB[5]
+;W[qo]WL[843.111]
+;B[rn]BL[30]OB[5]
+;W[rq]WL[840.101]
+;B[rl]BL[30]OB[5]
+;W[rm]WL[826.313]
+;B[sm]BL[30]OB[5]
+;W[nq]WL[813.773]
+;B[mp]BL[30]OB[5]C[DineshR [3k\]: strong cut
+]
+;W[nr]WL[811.303]
+;B[or]BL[30]OB[5]
+;W[os]WL[807.966]C[Rutgers1 [-\]: thanks for the game
+UToronto1 [-\]: Good game
+DineshR [3k\]: good job ryan
+UToronto3 [-\]: hey.
+DineshR [3k\]: take down those 1ds
+UToronto1 [-\]: =/
+UToronto1 [-\]: -.-
+UToronto3 [-\]: my opponent  was 1k?
+DineshR [3k\]: it said rutgets had a 7d
+DineshR [3k\]: so i duno
+UToronto1 [-\]: wait this is cgl finals?
+DineshR [3k\]: its the championship quartfinals
+DineshR [3k\]: and we advanced to the semis
+UToronto3 [-\]: yo dinesh
+Rutgers1 [-\]: our 7d doesn
+Rutgers1 [-\]: t 
+UToronto3 [-\]: how strong was my opponent?
+Rutgers1 [-\]: come to meetings
+DineshR [3k\]: andy i think your guy was like 2k
+UToronto3 [-\]: ah sheet
+UToronto3 [-\]: ryan's opponent was a 1d
+DineshR [3k\]: yea actually i didnt know if de anza or rutgers would advance and they both have 7d listed
+DineshR [3k\]: so we needed ryan regardless
+Rutgers1 [-\]: UT1, do you mind reviewing the game?
+UToronto3 [-\]: dinesh...
+UToronto1 [-\]: I don't know how to use the controls
+UToronto3 [-\]: pizza?
+DineshR [3k\]: uh...
+])

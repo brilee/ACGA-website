@@ -1,0 +1,199 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UToronto2]PB[Rutgers2]DT[2013-04-06]PC[The KGS Go Server at http://www.gokgs.com/]C[Rutgers2 [-\]: hi
+Rutgers2 [-\]: robin xu rutgers
+]RE[W+Resign]
+;B[pd]BL[1789.859]C[UToronto2 [-\]: Hi, Ben Mantle from University of Toronto
+]
+;W[qp]WL[1786.935]
+;B[dd]BL[1775.627]
+;W[dq]WL[1781.352]
+;B[do]BL[1768.416]
+;W[cm]WL[1753.31]
+;B[op]BL[1736.874]
+;W[fp]WL[1701.265]
+;B[en]BL[1705.951]
+;W[mq]WL[1642.946]C[Rutgers2 [-\]: sorry
+]
+;B[qq]BL[1606.98]C[UToronto2 [-\]: np
+]
+;W[qm]WL[1543.966]
+;B[pp]BL[1595.262]
+;W[rp]WL[1501.316]
+;B[or]BL[1563.366]
+;W[rq]WL[1479.356]
+;B[kq]BL[1559.629]
+;W[mp]WL[1462.654]
+;B[om]BL[1534.841]
+;W[mn]WL[1429.915]
+;B[hq]BL[1509.691]
+;W[go]WL[1401.946]
+;B[fq]BL[1494.427]
+;W[eq]WL[1376.913]
+;B[fr]BL[1480.948]
+;W[cp]WL[1326.147]
+;B[dl]BL[1439.744]
+;W[kp]WL[1224.897]
+;B[jp]BL[1397.664]
+;W[on]WL[1222.871]
+;B[qr]BL[1358.784]
+;W[nm]WL[1186.617]
+;B[co]BL[1345.508]
+;W[bo]WL[1146.987]C[DineshR [3k\]: Robin is listed as 2d and Nikunj is 1k but they are on opposite boards :S
+]
+;B[bn]BL[1303.865]
+;W[bp]WL[1144.507]
+;B[cn]BL[1301.8]
+;W[qf]WL[1141.208]
+;B[nd]BL[1289.77]
+;W[of]WL[1082.832]
+;B[ep]BL[1283.521]
+;W[er]WL[1024.043]
+;B[mf]BL[1266.453]
+;W[nh]WL[1014.628]
+;B[df]BL[1252.674]
+;W[ic]WL[1003.023]
+;B[kc]BL[1238.117]
+;W[fc]WL[997.586]
+;B[dc]BL[1228.705]
+;W[ie]WL[889.017]
+;B[ig]BL[1170.798]
+;W[ii]WL[779.114]
+;B[hd]BL[1140.308]
+;W[id]WL[650.463]
+;B[kh]BL[1089.596]
+;W[ki]WL[566.584]
+;B[li]BL[1082.905]
+;W[kj]WL[564.672]
+;B[lj]BL[1074.616]
+;W[jh]WL[549.656]
+;B[ni]BL[1029.03]
+;W[oi]WL[514.831]
+;B[oj]BL[1021.35]
+;W[mi]WL[499.535]
+;B[mh]BL[996.676]
+;W[nj]WL[496.532]
+;B[jg]BL[993.39]
+;W[kk]WL[424.854]
+;B[hc]BL[942.978]
+;W[hb]WL[367.014]
+;B[gb]BL[935.963]
+;W[gc]WL[365.749]
+;B[ib]BL[928.148]
+;W[ha]WL[364.231]
+;B[ia]BL[908.649]
+;W[he]WL[362.331]
+;B[gd]BL[892.075]
+;W[fe]WL[359.76]
+;B[fg]BL[864.356]
+;W[ge]WL[339.69]
+;B[ga]BL[859.802]
+;W[gg]WL[294.817]
+;B[gh]BL[850.851]
+;W[hg]WL[289.014]
+;B[fh]BL[820.013]
+;W[kg]WL[266.817]
+;B[lh]BL[814.266]
+;W[kf]WL[137.333]
+;B[ih]BL[807.178]
+;W[ji]WL[124.671]C[UToronto3 [-\]: huh?
+UToronto3 [-\]: my opponent was a 1k?
+Rutgers3 [-\]: those ratings aren't exactly accurate when nik plays seriously
+]
+;B[ng]BL[741.254]C[Rutgers3 [-\]: any of our top 3 boards can beat any of the others, but nik will read the most
+]
+;W[hh]WL[30]OW[5]
+;B[ph]BL[666.03]
+;W[og]WL[30]OW[5]
+;B[oh]BL[664.474]C[DineshR [3k\]: interesting
+]
+;W[pi]WL[30]OW[3]
+;B[qh]BL[660.354]
+;W[ni]WL[30]OW[3]
+;B[qi]BL[658.262]
+;W[me]WL[30]OW[3]
+;B[ne]BL[602.401]
+;W[qg]WL[30]OW[2]
+;B[pj]BL[526.054]
+;W[nk]WL[30]OW[2]
+;B[re]BL[509.922]
+;W[nf]WL[30]OW[2]
+;B[mg]BL[487.222]
+;W[qj]WL[30]OW[1]
+;B[rj]BL[479.082]
+;W[qk]WL[30]OW[1]
+;B[sh]BL[454.58]C[Rutgers2 [-\]: np
+Rutgers2 [-\]: stupid to win that way lol
+]
+(;W[le]WL[30]OW[1]
+;B[pf]BL[452.567]
+;W[pg]WL[30]OW[1]
+;B[rg]BL[446.339]
+;W[qe]WL[30]OW[1]
+;B[rd]BL[440.219]
+;W[lk]WL[30]OW[1]
+;B[qd]BL[427.169]
+;W[mj]WL[30]OW[1]
+;B[rk]BL[423.665]
+;W[rl]WL[30]OW[1]
+;B[in]BL[403.37]
+;W[gk]WL[30]OW[1]
+;B[fj]BL[344.812]
+;W[nr]WL[30]OW[1]
+;B[rr]BL[338.921]
+;W[sr]WL[30]OW[1]
+;B[rs]BL[305.35]
+;W[ps]WL[30]OW[1]
+;B[nq]BL[203.61]
+;W[np]WL[30]OW[1]C[Rutgers2 [-\]: thanks
+UToronto2 [-\]: thx
+UToronto2 [-\]: good sportmanship (undo)
+UToronto4 [-\]: 5-0
+DineshR [3k\]: yea that was cool
+UToronto2 [-\]: this game
+UToronto2 [-\]: felt pretty hard
+UToronto2 [-\]: what is your rating?
+DineshR [3k\]: gg rutgers
+DineshR [3k\]: you played well
+Rutgers2 [-\]: 1d on kgs
+Rutgers2 [-\]: 2d aga
+UToronto2 [-\]: oh
+Rutgers1 [-\]: thanks UT
+UToronto2 [-\]: hehe i think i am pretty rusty
+UToronto2 [-\]: u played rly well
+Rutgers2 [-\]: haha
+DineshR [3k\]: yea ben it looked like he had you at some points
+Rutgers2 [-\]: thanks
+DineshR [3k\]: gotta be careful
+DineshR [3k\]: :p
+UToronto2 [-\]: yup
+UToronto2 [-\]: i sucked this game
+UToronto2 [-\]: but
+UToronto2 [-\]: i also think he played well
+UToronto2 [-\]: he deserves credit
+UToronto2 [-\]: not just me rusty
+DineshR [3k\]: most credit for nikunj playing against ryan
+DineshR [3k\]: 8d vs 1d
+UToronto2 [-\]: i forgot to play E5 earlier
+DineshR [3k\]: what does E5 do
+Rutgers1 [-\]: and total failure
+Rutgers2 [-\]: yea i was wondering why u tenuki'd there
+UToronto2 [-\]: this group was kilalble the whole time but i didnt think i had time for it hehe
+DineshR [3k\]: ah
+Rutgers2 [-\]: wait really?
+UToronto2 [-\]: yes
+Rutgers2 [-\]: O_O lol
+Rutgers2 [-\]: my reading so bad then lol
+UToronto2 [-\]: e5 connect my stones nd make a bit of aji in black
+UToronto2 [-\]: i was
+UToronto2 [-\]: banking on the fact that
+UToronto2 [-\]: u didnt defend yet so maybe u dont know
+DineshR [3k\]: O2 = automatic death?
+UToronto2 [-\]: cuz my opening was bad and u got an advantage
+])
+(;W[lf]WL[30]OW[1]
+;B[le]BL[446.378]C[UToronto2 [-\]: durrr stupid mouse..
+Rutgers2 [-\]: undo?
+Rutgers2 [-\]: if misclick
+UToronto2 [-\]: thx
+]))

@@ -1,0 +1,346 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[6.50]TM[1800]OT[5x30 byo-yomi]
+PW[Brown4]PB[Northeast4]DT[2013-04-06]PC[The KGS Go Server at http://www.gokgs.com/]RE[B+Resign]
+;B[pd]BL[1794.443]C[Brown4 [-\]: gg
+]
+;W[pp]WL[1797.008]C[Northeast4 [-\]: My name is Ryan by the way
+Northeast4 [-\]: good luck
+Brown4 [-\]: hi im jonathan
+]
+;B[dc]BL[1778.615]C[Brown4 [-\]: have fun
+]
+;W[dp]WL[1792.483]
+;B[ce]BL[1771.005]
+;W[jq]WL[1787.534]
+;B[qj]BL[1757.612]
+;W[dj]WL[1780.712]
+;B[qo]BL[1743.456]
+;W[qp]WL[1777.878]
+;B[pm]BL[1734.814]
+;W[jc]WL[1762.868]
+;B[gc]BL[1726.882]
+;W[mc]WL[1760.29]
+;B[oc]BL[1707.762]
+;W[qf]WL[1752.249]
+;B[re]BL[1688.82]
+;W[qe]WL[1745.758]
+;B[qd]BL[1686.989]
+;W[rf]WL[1744.809]
+;B[rd]BL[1685.483]
+;W[of]WL[1743.428]
+;B[mq]BL[1657.732]
+;W[oq]WL[1714.122]
+;B[no]BL[1635.951]
+;W[np]WL[1711.206]
+;B[mo]BL[1628.315]
+;W[mp]WL[1709.132]
+;B[lp]BL[1624.413]
+;W[lo]WL[1707.394]
+;B[ko]BL[1610.034]
+;W[ln]WL[1703.105]
+;B[nq]BL[1608.444]
+;W[op]WL[1699.381]
+;B[kq]BL[1604.843]
+;W[jp]WL[1692.628]
+;B[kp]BL[1601.678]
+;W[gq]WL[1688.088]
+;B[ck]BL[1561.84]
+;W[on]WL[1661.638]C[Northeast4 [-\]: After the game, or whenever, if you want to give me pointers or say that was good/bad thatd be cool. thanks
+Brown4 [-\]: okay sure
+]
+;B[pn]BL[1523.408]
+;W[oo]WL[1659.109]C[Brown4 [-\]: i think you are doing fine
+]
+;B[cn]BL[1503.775]C[Northeast4 [-\]: thanks =)
+]
+;W[kn]WL[1645.323]
+;B[jo]BL[1501.54]
+;W[co]WL[1637.779]
+;B[cj]BL[1496.259]
+;W[dn]WL[1633.97]
+;B[bn]BL[1486.492]
+;W[im]WL[1627.374]
+;B[ho]BL[1469.029]
+;W[kr]WL[1623.759]
+;B[lr]BL[1459.036]
+;W[jr]WL[1617.893]
+;B[or]BL[1427.189]
+;W[pr]WL[1614.68]
+;B[os]BL[1417.561]
+;W[di]WL[1604.377]
+;B[ch]BL[1406.295]
+;W[ci]WL[1601.873]
+;B[bi]BL[1404.539]
+;W[dk]WL[1594.377]
+;B[dm]BL[1399.712]
+;W[dl]WL[1577.63]
+;B[cl]BL[1385.602]
+;W[em]WL[1575.737]
+;B[cm]BL[1367.014]
+;W[oj]WL[1562.21]
+;B[en]BL[1339.133]
+;W[do]WL[1559.394]
+;B[fm]BL[1337.637]
+;W[el]WL[1558.011]
+;B[fo]BL[1311.851]
+;W[gp]WL[1551.714]
+;B[jn]BL[1301.896]
+;W[jm]WL[1549.592]
+;B[hn]BL[1289.01]
+;W[go]WL[1544.821]
+;B[gn]BL[1286.422]
+;W[gl]WL[1535.303]
+;B[cq]BL[1227.113]
+;W[dq]WL[1503.099]
+;B[bp]BL[1219.324]
+;W[bo]WL[1499.686]
+;B[ao]BL[1217.855]
+;W[cr]WL[1496.153]
+;B[br]BL[1215.267]
+;W[cp]WL[1493.222]
+;B[bq]BL[1213.116]
+;W[nd]WL[1463.781]
+;B[jh]BL[1196.515]
+;W[hd]WL[1459.974]
+;B[ge]BL[1189.533]
+;W[gd]WL[1457.691]
+;B[fd]BL[1188.445]
+;W[fe]WL[1454.084]
+;B[ff]BL[1171.792]
+;W[ee]WL[1451.42]
+;B[ef]BL[1171.095]
+;W[fc]WL[1426.222]
+;B[ed]BL[1168.941]
+;W[gb]WL[1424.215]
+;B[hc]BL[1150.931]
+;W[ic]WL[1420.721]
+;B[he]BL[1146.969]
+;W[hb]WL[1416.981]
+;B[ec]BL[1135.014]
+;W[ig]WL[1414.711]C[Northeast4 [-\]: ugh
+Northeast4 [-\]: lol
+]
+;B[hh]BL[1106.975]
+;W[hg]WL[1412.371]C[Brown4 [-\]: yeah i mean... im being pretty greedy :)
+]
+;B[gh]BL[1097.618]
+;W[gg]WL[1408.341]C[Northeast4 [-\]: yeah, well you can. I am not that great at this game =p
+]
+;B[fh]BL[1065.716]
+;W[fg]WL[1405.549]
+;B[eh]BL[1062.405]
+;W[eg]WL[1401.523]
+;B[dh]BL[1055.07]C[Northeast4 [-\]: lol
+]
+;W[ih]WL[1392.398]C[Brown4 [-\]: idk that was really bad for me
+Northeast4 [-\]: how so
+Brown4 [-\]: ...
+Brown4 [-\]: i let you run to safety
+Northeast4 [-\]: wait.. hmm
+]
+;B[fl]BL[1016.905]C[Brown4 [-\]: yeah
+]
+;W[fk]WL[1387.275]
+;B[gk]BL[1010.955]
+;W[gj]WL[1375.468]
+;B[hk]BL[1004.081]
+;W[fj]WL[1360.738]
+;B[hj]BL[967.967]C[Brown4 [-\]: yeah see i just fell asleep
+Brown4 [-\]: well no wits interesting
+Northeast4 [-\]: =D
+]
+;W[gm]WL[1297.53]
+;B[fn]BL[965.728]
+;W[in]WL[1296.255]
+;B[io]BL[963.365]
+;W[hm]WL[1295.14]
+;B[gi]BL[928.973]
+;W[ii]WL[1290.387]
+;B[hi]BL[927.224]
+;W[jk]WL[1283.414]
+;B[nm]BL[880.881]
+;W[om]WL[1279.928]
+;B[ol]BL[877.484]
+;W[pl]WL[1276.166]
+;B[ql]BL[865.292]
+;W[pk]WL[1273.865]
+;B[qk]BL[852.498]
+;W[ie]WL[1267.593]
+;B[gf]BL[846.817]
+;W[dg]WL[1264.938]
+;B[cg]BL[833.312]
+;W[df]WL[1262.998]
+;B[de]BL[832.261]
+;W[cf]WL[1261.629]
+;B[bf]BL[831.172]
+;W[ro]WL[1221.257]
+;B[rn]BL[828.49]
+;W[po]WL[1219.91]
+;B[qn]BL[821.503]
+;W[ps]WL[1213.036]
+;B[ms]BL[787.04]
+;W[rp]WL[1203.532]
+;B[ph]BL[777.624]
+;W[ri]WL[1185.634]
+;B[rj]BL[771.445]
+;W[pi]WL[1163.211]
+;B[pj]BL[764.625]
+;W[ok]WL[1161.514]
+;B[qi]BL[745.545]
+;W[oi]WL[1129.731]C[Brown4 [-\]: yucj yuck
+]
+;B[km]BL[730.382]
+;W[lm]WL[1125.613]
+;B[kl]BL[729.021]
+;W[ik]WL[1108.907]
+;B[ij]BL[698.789]
+;W[jj]WL[1106.912]
+;B[lk]BL[656.127]
+;W[nn]WL[1042.619]C[Northeast4 [-\]: hmm
+]
+;B[li]BL[608.259]
+;W[ji]WL[1015.526]
+;B[oh]BL[603.216]
+;W[nh]WL[981.893]C[Northeast4 [-\]: I think im fighting a losing battle
+]
+;B[nl]BL[518.722]
+;W[ni]WL[966.316]C[Brown4 [-\]: i have no idea whats going on
+]
+;B[rh]BL[500.198]C[Northeast4 [-\]: lol
+Northeast4 [-\]: same
+Brown4 [-\]: that was huge tho
+Northeast4 [-\]: yeah, the entire center
+Brown4 [-\]: no the move you just made was huge
+Northeast4 [-\]: ?
+Brown4 [-\]: mos timportant move
+Northeast4 [-\]: lol sweet
+Northeast4 [-\]: i just wanted that stone
+]
+;W[ip]WL[913.363]
+;B[hp]BL[496.67]
+;W[hq]WL[911.451]
+;B[fi]BL[477.462]
+;W[fp]WL[908.829]C[Northeast4 [-\]: OH GOD
+Northeast4 [-\]: 2 lib
+Northeast4 [-\]: lol
+]
+;B[ej]BL[453.052]C[Northeast4 [-\]: whew
+]
+;W[eb]WL[887.268]
+;B[db]BL[450.732]
+;W[nb]WL[883.249]
+;B[ob]BL[448.117]
+;W[oa]WL[881.175]
+;B[pa]BL[435.53]
+;W[na]WL[879.593]
+;B[qb]BL[432.851]
+;W[oe]WL[870.949]
+;B[nc]BL[416.112]
+;W[mb]WL[867.49]
+;B[md]BL[413.337]
+;W[da]WL[848.916]
+;B[ca]BL[404.083]
+;W[ea]WL[846.98]
+;B[bb]BL[400.942]
+;W[qg]WL[837.625]
+;B[qh]BL[395.632]
+;W[dr]WL[822.298]
+;B[ne]BL[374.484]
+;W[od]WL[817.954]
+;B[ng]BL[372.372]
+;W[og]WL[815.544]
+;B[mg]BL[358.003]C[Northeast4 [-\]: this is so much fun
+]
+;W[mk]WL[792.918]C[Northeast4 [-\]: even if I lose this center
+Brown4 [-\]: im so scared right nowww
+Northeast4 [-\]: lol
+Northeast4 [-\]: hmmmmm
+Shana [2d?\]: lol ryan, such a fun game
+]
+;B[je]BL[216.171]
+;W[me]WL[737.174]C[Northeast4 [-\]: aww so boring
+Brown4 [-\]: had to
+]
+;B[ld]BL[180.345]
+;W[lc]WL[718.046]
+;B[nf]BL[166.582]
+;W[le]WL[715.093]
+;B[kd]BL[163.23]
+;W[ke]WL[693.907]
+;B[if]BL[127.94]
+;W[jd]WL[691.175]C[Brown4 [-\]: lollllllllllllllllllll
+Northeast4 [-\]: it woudlnt have mattered would it
+Northeast4 [-\]: otherwise oops
+Brown4 [-\]: idk this game has been hilarious tho
+]
+;B[id]BL[74.001]
+;W[eo]WL[681.39]C[Northeast4 [-\]: WTF
+Northeast4 [-\]: oh nvm
+Northeast4 [-\]: lol scared me
+]
+;B[ek]BL[62.935]
+;W[ie]WL[679.053]
+;B[jf]BL[55.297]
+;W[hf]WL[674.822]C[Northeast4 [-\]: grrrr
+]
+;B[id]BL[51.615]
+;W[fk]WL[672.172]
+;B[fj]BL[47.735]
+;W[ie]WL[668.735]
+;B[nk]BL[30]OB[5]
+;W[mj]WL[664.574]
+;B[id]BL[30]OB[5]C[Northeast4 [-\]: most fun ko
+]
+;W[rl]WL[626.851]C[Shana [2d?\]: m10 would be a pretty interesting threat for b
+Northeast4 [-\]: is that dead if i dotn respond?
+Northeast4 [-\]: huh
+Northeast4 [-\]: idk!
+Shana [2d?\]: its alive xD
+Brown4 [-\]: bwahaha
+Brown4 [-\]: watch yr time
+Northeast4 [-\]: but im THINKING
+Brown4 [-\]: but dont rush!
+Brown4 [-\]: okay just friendly reminder
+]
+;B[sn]BL[30]OB[2]C[Northeast4 [-\]: idk
+]
+;W[ie]WL[620.205]C[Northeast4 [-\]: UHM
+]
+;B[ll]BL[30]OB[2]C[Northeast4 [-\]: i paniced
+]
+;W[lj]WL[606.997]
+;B[id]BL[30]OB[2]
+;W[rm]WL[603.081]C[Northeast4 [-\]: stahp
+]
+;B[qm]BL[30]OB[2]
+;W[ie]WL[600.22]
+;B[ml]BL[30]OB[2]
+;W[id]WL[585.277]C[Northeast4 [-\]: aww
+Brown4 [-\]: yeah
+]
+;B[mi]BL[30]OB[2]C[Brown4 [-\]: o i messed up lololol
+Shana [2d?\]: this game... words
+Northeast4 [-\]: well, i didnt know what to do
+Northeast4 [-\]: not enougj time
+Brown4 [-\]: uhhhh
+]
+;W[kk]WL[534.957]
+;B[mh]BL[30]OB[2]C[Northeast4 [-\]: ????
+]
+;W[kh]WL[532.045]
+;B[nj]BL[30]OB[2]C[Brown4 [-\]: yeah there was othing i could do
+Northeast4 [-\]: oh
+Northeast4 [-\]: YAY
+Northeast4 [-\]: Wow
+Brown4 [-\]: ggg
+Northeast4 [-\]: Well, good game man
+Brown4 [-\]: haha
+Shana [2d?\]: nice game, had a smile over my face the whole time
+Northeast4 [-\]: haha
+Brown4 [-\]: lol
+Northeast4 [-\]: =)
+Northeast4 [-\]: Good
+Brown4 [-\]: bye
+Northeast4 [-\]: I was so surprised i got center
+Northeast4 [-\]: gg
+])
