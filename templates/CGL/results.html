@@ -29,14 +29,14 @@
 </table>
 
 </div>
-<!-- Lol I did a SQL injection attack on my own templating engine-->
+<!-- Lol I did an injection attack on my own templating engine-->
 <div class="panel">
 
 <h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList">
 {% for round in requested_season.round_set.all %}
 	<li>
-	<h3 class="clickable">{{round}}</h3>
+	<h3 class="clickable">{{round.date}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}
 		<li><h5>[+] <a href="{{match.school1.get_absolute_url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.get_absolute_url}}">{{match.school2.name}}</a></h5>
@@ -56,7 +56,7 @@
 </ul>
 
 </div>
-<!-- Lol I did a SQL injection attack on my own templating engine-->
+<!-- Lol I did an injection attack on my own templating engine-->
 <div class="panel">
 
 <h2>Archives</h2>

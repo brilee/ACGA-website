@@ -3,7 +3,7 @@ from django.template.defaultfilters import slugify
 from django.db.models.signals import post_save
 from django.db.models import Count
 from django.contrib.auth import models as auth_models
-from settings import current_season_name
+from settings import current_season_nameA, current_season_nameB
 import datetime
 import os
 
@@ -128,10 +128,9 @@ class Membership(models.Model):
         return unicode("%s in %s" %(self.school, self.season))
 
 class RoundManager(models.Manager):
-    current_season = Season.objects.get(name=current_season_name)
-    def get_next_round(self):
+    def get_next_round(self, season):
         next_round = super(RoundManager, self
-                     ).filter(season=self.current_season
+                     ).filter(season__name=season
                         ).filter(date__gte=datetime.datetime.now()
                         ).order_by('date')
         if next_round:
@@ -139,13 +138,13 @@ class RoundManager(models.Manager):
         else:
             return super(RoundManager,self).none()
 
-    def get_previous_round(self):
-        return self.get_recent_rounds(1)[0]
+    def get_previous_round(self, season):
+        return self.get_recent_rounds(season, 1)[0]
     
-    def get_recent_rounds(self, depth):
+    def get_recent_rounds(self, season, depth):
         ''' depth is how many recent rounds you want to retrieve'''
         all_past_rounds = super(RoundManager, self
-                     ).filter(season=self.current_season
+                     ).filter(season__name=season
                         ).filter(date__lt=datetime.datetime.now()
                         ).order_by('-date')
         if len(all_past_rounds) < depth:
@@ -162,7 +161,7 @@ class Round(models.Model):
         ordering = ['-date']
     
     def __unicode__(self):
-        return unicode(self.date)
+        return unicode(self.date) + unicode(' in ') +  unicode(self.season.name)
 
 class Match(models.Model):
     round = models.ForeignKey(Round)
