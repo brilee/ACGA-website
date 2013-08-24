@@ -1,5 +1,5 @@
 from django.views.generic.simple import direct_to_template
-from CGA.forms import ContactForm
+from forms import ContactForm
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 

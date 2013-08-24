@@ -3,7 +3,7 @@
 
 
 from models import Round, Season
-from CGA.ACGA.models import Newsfeed
+from ACGA.models import Newsfeed
 from settings import current_season_nameA, current_season_nameB
 
 

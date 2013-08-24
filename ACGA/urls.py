@@ -3,7 +3,7 @@ from django.conf import settings
 from django.views.generic.simple import direct_to_template
 
 
-urlpatterns = patterns('CGA.ACGA.views',    
+urlpatterns = patterns('ACGA.views',    
     (r'^$', 'display_home'),
     (r'^home/$', 'display_home'),
     (r'^resources/$', 'display_resources'),

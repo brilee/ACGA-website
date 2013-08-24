@@ -51,4 +51,4 @@ class Event(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('CGA.ACGA.views.display_event', [str(self.slug_name)]) 
+        return ('ACGA.views.display_event', [str(self.slug_name)]) 

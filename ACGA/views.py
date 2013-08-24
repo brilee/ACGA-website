@@ -4,7 +4,7 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic.simple import direct_to_template
 from models import Newsfeed, Document, Event
-from CGA.CGL.models import School
+from CGL.models import School
 
 def display_home(request):
     latest_posts = Newsfeed.objects.all().order_by('-pub_date')[:3]

@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from django.views.generic.simple import direct_to_template, redirect_to
 
-urlpatterns = patterns('CGA.CGL.views',
+urlpatterns = patterns('CGL.views',
     (r'^$', direct_to_template, {'template': 'CGL.html'}),
     (r'^rules/$', direct_to_template, {'template': 'CGL_rules.html'}),
     (r'^schools/$', 'display_school'),

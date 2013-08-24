@@ -43,7 +43,7 @@ class School(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('CGA.CGL.views.display_roster', [str(self.slug_name)]) 
+        return ('CGL.views.display_roster', [str(self.slug_name)]) 
 
     class Meta:
         ordering = ['name']
@@ -80,7 +80,7 @@ class Player(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('CGA.CGL.views.display_player', [str(self.id)])
+        return ('CGL.views.display_player', [str(self.id)])
 
     def game_set(self):
         ''' Custom method because Game has two ForeignKeys to Player, so
@@ -112,7 +112,7 @@ class Season(models.Model):
    
     @models.permalink
     def get_absolute_url(self):
-        return ('CGA.CGL.views.display_season', [str(self.slug_name)])
+        return ('CGL.views.display_season', [str(self.slug_name)])
 
 
 class Membership(models.Model):
@@ -233,7 +233,7 @@ class Game(models.Model):
     
     @models.permalink
     def get_absolute_url(self):
-        return ('CGA.CGL.views.display_game', [str(self.id)])
+        return ('CGL.views.display_game', [str(self.id)])
     
     def display_result(self):
         '''

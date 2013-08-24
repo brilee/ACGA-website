@@ -22,7 +22,7 @@ urlpatterns = patterns('',
         {'document_root': '/var/www/CGA/media/admin/'}),
 )
 
-urlpatterns += patterns('CGA.contact.views',
+urlpatterns += patterns('contact.views',
     # Contact page
     (r'^contact/$', 'contact'),
     (r'^contact/thanks/$', direct_to_template, {
@@ -35,10 +35,10 @@ urlpatterns += patterns('CGA.contact.views',
 
 urlpatterns += patterns('',
     # CGL subportal
-    (r'^CGL/', include('CGA.CGL.urls')),
+    (r'^CGL/', include('CGL.urls')),
 
     # ACGA main pages
     # This must come last, since the regex matches everything.
-    (r'', include('CGA.ACGA.urls')),
+    (r'', include('ACGA.urls')),
 )
 

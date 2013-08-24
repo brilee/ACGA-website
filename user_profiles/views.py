@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
-from CGA.forms import ProfileForm
+from forms import ProfileForm
 
 @login_required
 def profile(request):

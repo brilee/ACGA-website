@@ -1,5 +1,5 @@
 from django.contrib import admin
-from CGA.CGL.models import * 
+from CGL.models import * 
 from guardian.admin import GuardedModelAdmin
 
 class SchoolAdmin (GuardedModelAdmin):
