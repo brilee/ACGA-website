@@ -1,0 +1,12 @@
+{% extends "basebase.html" %}
+
+{% block maintext %}
+<form action="." method="post"> {% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Login" />
+<input type="hidden" name="next" value="{{next}}" />
+</form>
+
+<p>Forgot your password or forgot your username? <a href="{% url auth_password_reset %}"> Click here </a> to send an email with your username and an (optional) password reset.</p>
+{% endblock %}
+

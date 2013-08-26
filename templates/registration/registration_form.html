@@ -1,0 +1,9 @@
+{% extends "basebase.html" %}
+
+{% block maintext %}
+<p>Register for an account: </p>
+<form action="." method="post"> {% csrf_token %}
+{{ form.as_p}}
+<input type="submit" value="Register">
+</form>
+{% endblock %}

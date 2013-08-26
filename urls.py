@@ -9,8 +9,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    #(r'^login/$', 'auth.views.login_user'),
-
     # Admin pages
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
@@ -34,6 +32,10 @@ urlpatterns += patterns('contact.views',
 )
 
 urlpatterns += patterns('',
+    # User homepage / select a player to link to
+    (r'^accounts/profile/$', 'CGL.views.redirect_to_player_profile'),
+    # Account registration/login
+    (r'^accounts/', include('registration.backends.default.urls')),
     # CGL subportal
     (r'^CGL/', include('CGL.urls')),
 

@@ -23,9 +23,9 @@ class Command(BaseCommand):
         send_mail(subject_line,
                   email_contents,
                   'cgl.tournament.director@gmail.com',
-                  ([school.contact_email for school in participating_schools] +
-                  [player.contact_email for school in participating_schools
-                                        for player in school.player_set.all()
-                                        if (player.contact_email and player.receiveSpam)]))
+                  ([school.contact_email for school in participating_schools])# +
+#                  [player.contact_email for school in participating_schools
+#                                        for player in school.player_set.all()
+#                                        if (player.contact_email and player.receiveSpam)]))
 
         self.stdout.write('Emails sent\n')

@@ -21,9 +21,6 @@ def wrap_tag(text, tag, extras=False):
 
     return open_tag + text + close_tag
 
-#class SchoolUser(models.Model):
-#    user = models.ForeignKey(auth_models.User, unique=True)
-
 class School(models.Model):
     name = models.CharField(max_length=50)
     KGS_name = models.CharField(blank=True, max_length=50, help_text="The prefix used for the KGS accounts")
@@ -34,8 +31,6 @@ class School(models.Model):
     website = models.URLField(blank = True)
     meeting_info = models.TextField(blank=True)
     inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL.")
-
-#    managers = models.ForeignKey(SchoolUser)
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
@@ -63,10 +58,11 @@ class Player(models.Model):
     school = models.ForeignKey(School)
     num_wins = models.IntegerField(editable=False, default = 0)
     num_losses = models.IntegerField(editable=False, default = 0)
-    contact_email = models.EmailField(blank=True, help_text="For CGL match reminder spamming purposes")
 
     receiveSpam = models.BooleanField(default=True, help_text="Uncheck if player doesn't want to get email reminders")
     isActive = models.BooleanField(default=True, help_text="Uncheck if player is inactive. Do not delete player; the database keeps track of everybody's games, including inactive players")
+
+    user = models.OneToOneField(auth_models.User, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)

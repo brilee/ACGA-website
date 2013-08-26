@@ -2,6 +2,7 @@ from django.template.loader import get_template
 from django.shortcuts import get_object_or_404, redirect
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views.generic.simple import direct_to_template
+from django.contrib.auth.decorators import login_required
 
 from models import School, Season, Round, Membership, Game, Player
 from settings import current_season_nameA
@@ -57,3 +58,14 @@ def display_game(request, game_id):
     game = get_object_or_404(Game, id=game_id)
 
     return direct_to_template(request, 'game-detailed.html', locals())
+
+@login_required
+def redirect_to_player_profile(request):
+    try:
+        player = request.user.get_profile()
+        # User has linked account to an existing player
+        return direct_to_template(request, 'players-detailed.html', locals())
+    except:
+        # User has not linked their account to an existing player yet.
+        errors = ['You may now select a player to associate your account with. Your request will be forwarded to the team captain to approve.']
+        return direct_to_template(request, 'players.html', locals())
