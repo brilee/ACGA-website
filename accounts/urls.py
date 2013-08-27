@@ -4,9 +4,12 @@ from django.views.generic.simple import direct_to_template
 from django.contrib.auth.views import login, logout
 from django.conf import settings
 
-urlpatterns = patterns('accounts.urls',
+urlpatterns = patterns('accounts.views',
     # User homepage / select a player to link to
-    (r'^profile/$', 'CGL.views.redirect_to_player_profile'),
+    (r'^profile/$', 'display_account_profile'),
+)
+
+urlpatterns += ('',
     # Account registration/login
     (r'', include('registration.backends.default.urls')),
     #(r'^$', direct_to_template, {'template': 'CGL.html'}),

@@ -4,5 +4,7 @@
 *.po
 *~
 *.swp
+settings.py
+local_settings.py
 sensitive_data.py
 templates/rendered*
