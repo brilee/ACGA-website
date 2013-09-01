@@ -1,0 +1,10 @@
+{% extends 'basebase.html' %}
+
+{% block maintext %}
+<h4> Select player to link to account: </h4>
+<p> Find yourself on this list and select. A request will be sent to your team captain for approval.</p>
+<form action="." method="post"> {% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Request player link">
+</form>
+{% endblock %}

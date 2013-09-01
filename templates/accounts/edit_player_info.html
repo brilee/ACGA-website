@@ -1,0 +1,9 @@
+{% extends 'basebase.html' %}
+
+{% block maintext %}
+<h4> Edit your player's information </h4>
+<form action="." method="post"> {% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Update information">
+</form>
+{% endblock %}

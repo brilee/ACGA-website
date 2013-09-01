@@ -1,0 +1,8 @@
+{% extends 'basebase.html' %}
+
+{% block maintext %}
+<h4> {{link_request}}</h4>
+<p> User "{{link_request.user}}" with email address {{link_request.user.email}} requested to link to <a href="{{link_request.player.get_absolute_url}}">{{link_request.player}}</a></p>
+
+<p> Here goes a DENY and an APPROVE button</p>
+{% endblock %}

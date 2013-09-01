@@ -32,10 +32,9 @@ urlpatterns += patterns('contact.views',
 )
 
 urlpatterns += patterns('',
-    # User homepage / select a player to link to
-    (r'^accounts/profile/$', 'CGL.views.redirect_to_player_profile'),
     # Account registration/login
-    (r'^accounts/', include('registration.backends.default.urls')),
+    (r'^accounts/', include('accounts.urls')),
+    #(r'^accounts/', include('registration.backends.default.urls')),
     # CGL subportal
     (r'^CGL/', include('CGL.urls')),
 

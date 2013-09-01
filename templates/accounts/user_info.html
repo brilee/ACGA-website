@@ -1,0 +1,36 @@
+{% extends 'basebase.html' %}
+
+{% block maintext %}
+<h2>Your Information </h2>
+<h4>Account information </h4>
+<ul>
+    <li>username: {{user.username}} </li>
+    <li>email address: {{user.email}}</li>
+</ul>
+
+
+<h4>Player information </h4>
+{% if player %}
+<ul>
+    <li>Name: {{player.name}}</li>
+    <li>School: {{player.school.name}}</li>
+    <li>Rank: {{player.get_rank_display}}</li>
+    <li>KGS Username: {{player.KGS_username}}</li>
+</ul>
+
+{% else %}
+<p>You have not yet associated your account with a player. You may search for yourself <a href="/CGL/players/">here</a> and send a request to your team captain to verify that you are this person. </p>
+
+{% endif %}
+
+<h4>Useful Links</h4>
+<ul>
+    <li><a href="/accounts/password/change/">Change your password</a></li>
+{% if player %}
+    <li><a href="{{player.get_absolute_url}}">Your public player profile</a></li>
+    <li><a href="/accounts/edit/profile/">Edit your player information</a></li>
+{% else %}
+    <li><a href="/accounts/edit/player_link/">Link your account to an existing player in the database </a></li>
+{% endif %}
+</ul>
+{% endblock %}
