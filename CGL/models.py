@@ -62,7 +62,7 @@ class Player(models.Model):
     receiveSpam = models.BooleanField(default=True, help_text="Uncheck if player doesn't want to get email reminders")
     isActive = models.BooleanField(default=True, help_text="Uncheck if player is inactive. Do not delete player; the database keeps track of everybody's games, including inactive players")
 
-    user = models.OneToOneField(auth_models.User, null=True, blank=True)
+    user = models.OneToOneField(auth_models.User, null=True, blank=True, on_delete=models.SET_NULL)
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)

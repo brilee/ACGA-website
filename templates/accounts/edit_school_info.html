@@ -1,0 +1,19 @@
+{% extends 'basebase.html' %}
+
+{% block maintext %}
+<h4> Edit your school's information </h4>
+<form action="." method="post"> {% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Update information">
+</form>
+
+<h4> Your school's roster </h4>
+<p> (Leave "Unknown Player" alone - he gets saddled with all of your games where we couldn't match a game with the person who played it)</p>
+<ul>
+{% for player in school.player_set.all %}
+    <li>Edit <a href="/accounts/edit/player/{{player.id}}">{{player.name_and_rank}}</a></li>
+{% endfor %}
+</ul>
+
+<p><a href="/accounts/edit/school/{{school.slug_name}}/create/player/"> Add a new player to your roster</a></p>
+{% endblock %}

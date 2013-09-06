@@ -59,13 +59,3 @@ def display_game(request, game_id):
 
     return direct_to_template(request, 'game-detailed.html', locals())
 
-@login_required
-def redirect_to_player_profile(request):
-    try:
-        player = request.user.get_profile()
-        # User has linked account to an existing player
-        return direct_to_template(request, 'players-detailed.html', locals())
-    except:
-        # User has not linked their account to an existing player yet.
-        errors = ['You may now select a player to associate your account with. Your request will be forwarded to the team captain to approve.']
-        return direct_to_template(request, 'players.html', locals())

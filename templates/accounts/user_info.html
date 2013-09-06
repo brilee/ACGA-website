@@ -33,4 +33,16 @@
     <li><a href="/accounts/edit/player_link/">Link your account to an existing player in the database </a></li>
 {% endif %}
 </ul>
+
+{% if school_edit_permissions %}
+<h4>Team Captain Stuff</h4>
+<p> You are authorized to edit the school profile, approve link requests, and edit any player profiles belonging to: {% for school in school_edit_permissions %}{{school}}, {% endfor %}</p>
+<ul>
+    <li><a href="/accounts/link_requests/">See your pending link requests. (Team captains only)</a></li>
+    {% for school in school_edit_permissions %}
+    <li><a href="/accounts/edit/school/{{school.slug_name}}/">Edit {{school.name}} info and roster</a></li>
+    {% endfor %}
+</ul>
+
+{% endif %}
 {% endblock %}
