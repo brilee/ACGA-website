@@ -75,7 +75,6 @@ def edit_school_info(request, school_slug):
             form = EditSchoolForm(request.POST, instance=school)
             if form.is_valid():
                 form.save()
-                return HttpResponseRedirect('/accounts/profile/')
         else:
             form = EditSchoolForm(instance=school)
         return render(request, 'edit_school_info.html', locals())
