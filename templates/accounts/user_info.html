@@ -1,8 +1,6 @@
 {% extends 'basebase.html' %}
 
 {% block maintext %}
-<p>You are logged in as {{user.username}}.<a href="/accounts/logout/"> Click here to logout. </a></p>
-<hr/>
 <h2>Your Information </h2>
 <h4>Account information </h4>
 <ul>
@@ -21,7 +19,7 @@
 </ul>
 
 {% else %}
-<p>You have not yet associated your account with a player. You may search for yourself <a href="/CGL/players/">here</a> and send a request to your team captain to verify that you are this person. </p>
+<p>You have not yet associated your account with a player. You may search for yourself <a href="/accounts/edit/player_link/">here</a> and send a request to your team captain to verify that you are this person. </p>
 
 {% endif %}
 

@@ -3,6 +3,7 @@
 {% block maintext %}
 <h4> Select player to link to account: </h4>
 <p> Find yourself on this list and select. A request will be sent to your team captain for approval.</p>
+<p>If you cannot find yourself on this list, ask your team captain to add you to the roster.</p>
 <form action="." method="post"> {% csrf_token %}
 {{form.as_p}}
 <input type="submit" value="Request player link">

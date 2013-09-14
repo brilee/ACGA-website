@@ -12,6 +12,8 @@
 <ul>
 {% for player in school.player_set.all %}
     <li>Edit <a href="/accounts/edit/player/{{player.id}}">{{player.name_and_rank}}</a></li>
+{% empty %}
+    <li>You have no players in your roster. Add your first player below!</li>
 {% endfor %}
 </ul>
 

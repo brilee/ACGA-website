@@ -7,6 +7,8 @@
 <input type="hidden" name="next" value="{{next}}" />
 </form>
 
-<p>Forgot your password or forgot your username? <a href="{% url auth_password_reset %}"> Click here </a> to send an email with your username and an (optional) password reset.</p>
+<p>Forgot your password? <a href="{% url auth_password_reset %}"> Send an email with a password reset link.</a></p>
+
+<p><a href="{% url registration_register %}">Register for a new account</a></p>
 {% endblock %}
 
