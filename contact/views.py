@@ -16,7 +16,7 @@ def contact(request, template='contact.html', redirect='contact/thanks/#form'):
                 ['acga.organizers@gmail.com'],
                 fail_silently=False
             )
-            return HttpResponseRedirect(after)
+            return HttpResponseRedirect(redirect)
         else:
             return direct_to_template(request, 'contact.html', locals())
     else:

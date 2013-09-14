@@ -1,9 +1,22 @@
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from accounts.forms import EditPlayerForm, EditSchoolForm, PlayerLinkRequestForm, ApproveLinkRequestForm
+from accounts.forms import EditPlayerForm, EditSchoolForm, PlayerLinkRequestForm, ApproveLinkRequestForm, UsernameReminderForm
 from accounts.models import PendingPlayerLinkRequest, SchoolEditPermission
 from CGL.models import School, Player
+
+
+def send_username_reminder(request):
+    if request.method == 'POST':
+        form = UsernameReminderForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/accounts/username_reminder/done/')
+        else:
+            return render(request, 'username_reminder.html', locals())
+    else:
+        form = UsernameReminderForm()
+        return render(request, 'username_reminder.html', locals())
 
 @login_required
 def display_user_info(request):

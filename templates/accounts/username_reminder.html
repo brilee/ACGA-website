@@ -1,0 +1,14 @@
+{% extends "basebase.html" %}
+
+{% block maintext %}
+<p> Enter your email address below and we'll send you a reminder email containing your username.</p>
+
+<form action="." method="post"> {% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Send reminder email" />
+<input type="hidden" name="next" value="{{next}}" />
+</form>
+
+{% endblock %}
+
+

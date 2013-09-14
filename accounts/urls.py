@@ -6,6 +6,8 @@ from django.conf import settings
 
 urlpatterns = patterns('accounts.views',
     # User homepage / select a player to link to
+    (r'^username_reminder/$', 'send_username_reminder'),
+    (r'^username_reminder/done/$', direct_to_template, {'template': 'username_reminder_done.html'}),
     (r'^profile/$', 'display_user_info'),
     (r'^edit/profile/$', 'edit_profile_info'),
     (r'^edit/player_link/$', 'link_to_player'),
