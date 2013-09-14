@@ -4,6 +4,9 @@
 *.po
 *~
 *.swp
+*.crt
+*.key
+*.csr
 settings.py
 local_settings.py
 sensitive_data.py

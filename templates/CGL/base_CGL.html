@@ -1,9 +1,8 @@
 {% extends "basebase.html" %}
 
 {% block navigation %}
-	<div class="eight columns">
+	<div class="seven columns">
 	<ul class="nav-bar left">
-		<li><a href="/CGL/" id="CGLnav">CGL</a></li>
 		<li><a href="/CGL/rules">Rules</a></li>
 		<li><a href="/CGL/results">Leaderboard</a></li>
 		<li><a href="/CGL/schools">Schools</a></li>
@@ -12,11 +11,16 @@
 	</ul>
 	</div>
 	
-	<div class="four columns">
+	<div class="five columns">
 	<ul class="nav-bar right">
-		<li><a href="/" id="homenav">ACGA</a></li>
-		<li><a href="/about/" id="aboutnav">About</a></li>
-		<li><a href="/contact/" id="contactnav">Contact</a></li>
+		<li><a href="/" id="homenav">Return to ACGA</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="/accounts/profile/">My profile</a></li>
+        <li><a href="/accounts/logout/">Logout</a></li>
+        {% else %}
+        <li><a href="/accounts/login/">Login</a></li>
+        <li><a href="/accounts/register/">Register</a></li>
+        {% endif %}
 	</ul>
 	</div>
 

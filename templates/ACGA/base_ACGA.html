@@ -2,21 +2,26 @@
 
 
 {% block navigation %}
-	<div class="seven columns">
+	<div class="eight columns">
 	<ul class="nav-bar left">
-		<li><a href="/">ACGA</a></li>
+        <li><a href="/CGL/">CGL</a></li>
 		<li><a href="/members/">Members</a></li>
 		<li><a href="/events/">Events</a></li>
 		<li><a href="/resources/">Resources</a></li>
-	</ul>
-	</div>
-	
-	<div class="five columns">
-	<ul class="nav-bar right">
-		<li><a href="/CGL/">CGL</a></li>
 		<li><a href="/ing/">Ing</a></li>
 		<li><a href="/about/" id="aboutnav">About</a></li>
 		<li><a href="/contact/" id="contactnav">Contact</a></li>
+	</ul>
+    </div>
+    <div class="four columns">
+    <ul class="nav-bar right">        
+        {% if user.is_authenticated %}
+        <li><a href="/accounts/profile/">My profile</a></li>
+        <li><a href="/accounts/logout/">Logout</a></li>
+        {% else %}
+        <li><a href="/accounts/login/">Login</a></li>
+        <li><a href="/accounts/register/">Register</a></li>
+        {% endif %}
 	</ul>
 	</div>
 

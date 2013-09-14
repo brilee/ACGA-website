@@ -37,21 +37,47 @@
 
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navigation Bar
+<nav class="top-bar">
+    <ul class="title-area">
+    <li class="name"><h1><a href="/">ACGA</a></h1></li>
+    </ul>
+
+    <section class="top-bar-section">
+        <ul class="right">
+            <li class="divider"></li>
+            <li class=
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li class="">
+            <li class="divider"></li>
+        </ul>
+    </section>
+</nav>-->
+
 <div id="header" class="row">
 	{% block navigation %}
-	<div class="five columns">
+	<div class="three columns">
 	<ul class="nav-bar left">
 	</ul>
 	</div>
 	
-	<div class="seven columns">
+	<div class="nine columns">
 	<ul class="nav-bar right">
 		<li><a href="/" id="homenav">ACGA</a></li>
 		<li><a href="/CGL/" id="CGLnav">CGL</a></li>
 		<li><a href="/ing/">Ing</a></li>
 		<li><a href="/about/" id="aboutnav">About</a></li>
 		<li><a href="/contact/" id="contactnav">Contact us</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="/accounts/profile/">My profile</a></li>
+        <li><a href="/accounts/logout/">Logout</a></li>
+        {% else %}
+        <li><a href="/accounts/login/">Login</a></li>
+        <li><a href="/accounts/register/">Register</a></li>
+        {% endif %}
 	</ul>
 	</div>
 	{% endblock navigation %}
