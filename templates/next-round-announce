@@ -2,21 +2,36 @@ Subject:[CGL] Next round: pairings announced
 
 Hi everyone,
 
-The next CGL round is scheduled for Saturday, {{next_round.date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:30pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
+The next CGL round is scheduled for Saturday, {{next_roundA.date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:45pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
 
 The following schools are matched (KGS account name prefix in parentheses):
 
-{% for match in next_round.match_set.all %}
+A LEAGUE
+{% for match in next_roundA.match_set.all %}
 	{{match.school1}} ({{match.school1.KGS_name}}) vs. {{match.school2}} ({{match.school2.KGS_name}})
 {% endfor %}
 
-{% if unmatched_school %}
-{{unmatched_school}} has a bye this round.
+{% if unmatched_schoolA %}
+{{unmatched_schoolA}} has a bye this round.
 
-If your school cannot compete this Saturday, please let us know by Wednesday, so that we can switch in {{unmatched_school}}.
+{% else %}
+If your school cannot compete this Saturday, please let us know as soon as possible.
+{% endif %}
+B LEAGUE
+{% for match in next_roundB.match_set.all %}
+	{{match.school1}} ({{match.school1.KGS_name}}) vs. {{match.school2}} ({{match.school2.KGS_name}})
+{% endfor %}
+
+{% if unmatched_schoolB %}
+{{unmatched_schoolB}} has a bye this round.
+
+If your school cannot compete this Saturday, please let us know by Wednesday, so that we can switch in {{unmatched_schoolB}}.
 
 {% else %}
 If your school cannot compete this Saturday, please let us know as soon as possible.
 {% endif %}
 
 Good luck to all teams.
+
+P.S. Wondering why you got this email? You may have recently signed up on the CGL website and connected your account to one of the players whose team is playing above. You can control whether you receive these emails from you profile page on the ACGA website. (college-go.org/accounts/profile)
+

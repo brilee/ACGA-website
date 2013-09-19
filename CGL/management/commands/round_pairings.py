@@ -1,11 +1,10 @@
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_season_name
 import random
 import datetime
 
 class Command(BaseCommand):
-    args = 'None'
+    args = '<season name>'
     help = '''Creates completely random match pairings for the first round
             that has not happened yet, as judged by today's date'''
     
@@ -50,11 +49,14 @@ class Command(BaseCommand):
         return matchups
 
     def handle(self, *args, **options):
-        next_round = Round.objects.get_next_round()
+        if len(args) != 1:
+            raise CommandError('Must specify exactly one season name!')
+        season_name = args[0]
+        next_round = Round.objects.get_next_round(season_name)
         if not next_round:
             raise CommandError('No upcoming round. Create a round first')
             
-        current_season = Season.objects.get(name=current_season_name)
+        current_season = Season.objects.get(name=season_name)
 
         # Only retrieves schools that are participating in this season
         # and that have not withdrawn from play.

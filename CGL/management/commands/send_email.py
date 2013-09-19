@@ -1,7 +1,7 @@
 from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_season_name
+from CGL.settings import current_season_nameA, current_season_nameB
 
 
 from django.core.mail import send_mail
@@ -12,7 +12,7 @@ class Command(BaseCommand):
     option_list = BaseCommand.option_list + (make_option('--fake', default=False, help='Don\'t actually send the email. Default is false'),)
 
     def handle(self, *args, **options):
-        participating_schools = set(m.school for m in Membership.objects.filter(season__name=current_season_name))
+        participating_schools = (set(m.school for m in Membership.objects.filter(season__name=current_season_nameA)) | set(m.school for m in Membership.objects.filter(season__name=current_season_nameB)))
 
         try:
             f = open('templates/rendered-email')
@@ -24,14 +24,14 @@ class Command(BaseCommand):
             f.close()
 
         recipients = ([school.contact_email for school in participating_schools] +
-                      [player.User.email for school in participating_schools
+                      [player.user.email for school in participating_schools
                                          for player in school.player_set.all()
-                                         if (player.User and player.receiveSpam)]))
+                                         if (player.user and player.receiveSpam)])
         if options['fake']: 
-            self.stdout.write('You would have sent an email with:')
+            self.stdout.write('You would have sent an email with:\n')
             self.stdout.write('Subject: %s' % subject_line)
-            self.stdout.write('Contents: %s' % email_contents)
-            self.stdout.write('Recipients:' + ', '.join(recipients))
+            self.stdout.write('Contents: %s\n' % email_contents)
+            self.stdout.write('Recipients:' + ', '.join(recipients) + '\n')
         else:
             send_mail(subject_line,
                       email_contents,

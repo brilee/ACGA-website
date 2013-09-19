@@ -2,9 +2,15 @@ Subject:[CGL] Previous round games uploaded
 
 Hi everyone,
 
-Games have been uploaded for the most recent round ({{previous_round.date}}). (If you rescheduled your match, send us an email after those games have been played so that we can upload them.)
+Games have been uploaded for the most recent round ({{previous_roundA.date}}). (If you rescheduled your match, send us an email after those games have been played so that we can upload them.)
 
-{% for match in previous_round.match_set.all %}
+A LEAGUE
+{% for match in previous_roundA.match_set.all %}
+	{{match.display_result}}
+{% endfor %}
+
+B LEAGUE
+{% for match in previous_roundB.match_set.all %}
 	{{match.display_result}}
 {% endfor %}
 
@@ -15,3 +21,6 @@ If you'd like "Unknown Player" to stop appearing on your team's games, then plea
 
 Thanks,
 CGL Organizers
+
+P.S. Wondering why you got this email? You may have recently signed up on the CGL website and connected your account to one of the players whose team is playing above. You can control whether you receive these emails from you profile page on the ACGA website. (college-go.org/accounts/profile)
+
