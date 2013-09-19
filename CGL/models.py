@@ -34,7 +34,17 @@ class School(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
-        super(School, self).save(*args, **kwargs)
+#        super(School, self).save(*args, **kwargs)
+        if not self.pk:
+            # just some utility things to initialize for new schools
+            super(School, self).save(*args, **kwargs)
+            p = Player(name="Unknown Player", school=self)
+            p.save()
+            from accounts.models import SchoolEditPermission
+            perm = SchoolEditPermission(user=auth_models.User.objects.get(username='brilee'), school=self)
+            perm.save()
+        else:
+            super(School, self).save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
@@ -294,3 +304,16 @@ class Forfeit(models.Model):
     def __unicode__(self):
         return unicode('%s vs %s on %s, board %s' %(self.match.school1, self.match.school2, self.match.round.date, self.board))
 
+
+class GameComment(models.Model):
+    game = models.ForeignKey(Game)
+    user = models.ForeignKey(auth_models.User)
+    datetime = models.DateTimeField(auto_now_add=True)
+    comment = models.TextField(max_length=1000)
+
+    class Meta:
+        ordering = ['-datetime']
+    
+    def __unicode__(self):
+        return unicode('%s: %s' % (self.user.username, self.comment[:100]))
+    

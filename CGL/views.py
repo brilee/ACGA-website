@@ -4,7 +4,8 @@ from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views.generic.simple import direct_to_template
 from django.contrib.auth.decorators import login_required
 
-from models import School, Season, Round, Membership, Game, Player
+from CGL.forms import CreateGameCommentForm
+from CGL.models import School, Season, Round, Membership, Game, Player, GameComment
 from settings import current_season_nameA
 
 def display_school(request):
@@ -56,6 +57,18 @@ def display_player(request, player_id):
 
 def display_game(request, game_id):
     game = get_object_or_404(Game, id=game_id)
-
+    form = CreateGameCommentForm()
     return direct_to_template(request, 'game-detailed.html', locals())
+
+def submit_comment(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
+    if request.method == 'POST':
+        form = CreateGameCommentForm(request.POST)
+        if form.is_valid():
+            comment = form.cleaned_data['comment']
+            user = request.user
+            new_comment = GameComment(game=game, comment=comment, user=user)
+            new_comment.save()
+    
+    return HttpResponseRedirect(game.get_absolute_url())
 
