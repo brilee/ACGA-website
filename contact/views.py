@@ -3,7 +3,7 @@ from forms import ContactForm
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 
-def contact(request, template='contact.html', redirect='contact/thanks/#form'):
+def contact(request, template='contact.html', redirect='/contact/thanks/'):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -28,5 +28,5 @@ def contact(request, template='contact.html', redirect='contact/thanks/#form'):
     return direct_to_template(request, 'contact.html', locals())
 
 def join_CGL(request):
-    return contact(request, template='join_CGL.html', redirect='/CGL/join/thanks/#form')
+    return contact(request, template='join_CGL.html', redirect='/CGL/join/thanks/')
     
