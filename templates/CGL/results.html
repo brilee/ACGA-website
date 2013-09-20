@@ -37,7 +37,8 @@
 <h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList">
 {% for round in season.round_set.all %}
-	<li>
+{% if round.upcoming_or_inpast %}
+<li>
 	<h3 class="clickable">{{round.date}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}
@@ -54,6 +55,7 @@
 	{% endfor %}
 	</ul>
 	</li>
+{% endif %}
 {% endfor %}
 </ul>
 

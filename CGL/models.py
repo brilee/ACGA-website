@@ -171,6 +171,15 @@ class Round(models.Model):
     
     def __unicode__(self):
         return unicode(self.date) + unicode(' in ') +  unicode(self.season.name)
+    
+    def in_future(self):
+        return self.date > datetime.date.today()
+
+    def in_past(self):
+        return self.date <= datetime.date.today()
+
+    def upcoming_or_inpast(self):
+        return self.date <= (datetime.date.today() + datetime.timedelta(days=14))
 
 class Match(models.Model):
     round = models.ForeignKey(Round)

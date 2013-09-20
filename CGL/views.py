@@ -1,12 +1,13 @@
 from django.template.loader import get_template
 from django.shortcuts import get_object_or_404, get_list_or_404, redirect
+from django.template.defaultfilters import slugify
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views.generic.simple import direct_to_template
 from django.contrib.auth.decorators import login_required
 
 from CGL.forms import CreateGameCommentForm
 from CGL.models import School, Season, Round, Membership, Game, Player, GameComment
-from settings import current_season_nameA
+from settings import current_season_name
 
 def display_school(request):
     all_schools = School.objects.filter(inCGL=True)
@@ -24,8 +25,7 @@ def display_roster(request, school_name):
     return direct_to_template(request, 'schools-detailed.html', locals())
 
 def redirect_to_current_season(request):
-    current_season = Season.objects.get(name=current_season_nameA)
-    return redirect(current_season)
+    return redirect('/CGL/results/%s/' % slugify(current_season_name))
     
 def display_season(request, season_name):
     season_name = season_name.strip()
