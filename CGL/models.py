@@ -130,6 +130,9 @@ class Membership(models.Model):
     num_forfeits = models.IntegerField(editable=False, default = 0)
     still_participating = models.BooleanField(default=True, help_text="Uncheck this box if school has withdrawn from season. This will cause them to not be considered by the matching algorithm")
 
+    class Meta:
+        ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
+
     def __unicode__(self):
         return unicode("%s in %s" %(self.school, self.season))
 

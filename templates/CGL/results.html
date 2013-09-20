@@ -3,11 +3,13 @@
 {% block javascript %}<script type="text/javascript" src="/site_media/CollapsibleLists.js"></script> {% endblock javascript %}
 
 {% block maintext %}
-<h2>{{requested_season.name}} Standings</h2>
+{% for season in requested_seasons %}
 
-{{requested_season.html|safe}}
+<h2>{{season.name}} Standings</h2>
 
-<p>{{requested_season.description}} </p>
+{{season.html|safe}}
+
+<p>{{season.description}} </p>
 
 <table>
 	<tr>
@@ -17,7 +19,7 @@
 		<th>Ties  </th>
 		<th><span style="color:red">Forfeited Games</span></th>
 	</tr>
-{% for membership in all_memberships %}
+{% for membership in season.membership_set.all %}
 	<tr>
 		<td><a href="{{membership.school.get_absolute_url}}">{{membership.school.name}}</a></td>
 		<td>{{membership.num_wins}}</td>
@@ -34,7 +36,7 @@
 
 <h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList">
-{% for round in requested_season.round_set.all %}
+{% for round in season.round_set.all %}
 	<li>
 	<h3 class="clickable">{{round.date}}</h3>
 	<ul>
@@ -59,9 +61,10 @@
 <!-- Lol I did an injection attack on my own templating engine-->
 <div class="panel">
 
+{% endfor %}
 <h2>Archives</h2>
-{% for season in all_seasons %}
-<h3><a href="/CGL/results/{{season.slug_name}}">{{season.name}}</a></h3>
+{% for season_name in all_season_names %}
+<h3><a href="/CGL/results/{{season_name|slugify}}">{{season_name}}</a></h3>
 {% endfor %}
 
 {% endblock maintext %}

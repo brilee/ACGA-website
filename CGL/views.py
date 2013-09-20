@@ -1,5 +1,5 @@
 from django.template.loader import get_template
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, get_list_or_404, redirect
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views.generic.simple import direct_to_template
 from django.contrib.auth.decorators import login_required
@@ -29,9 +29,18 @@ def redirect_to_current_season(request):
     
 def display_season(request, season_name):
     season_name = season_name.strip()
-    requested_season = get_object_or_404(Season, slug_name=season_name)
-    all_memberships = Membership.objects.filter(season=requested_season).order_by('-num_wins', 'num_losses', '-num_ties', 'num_forfeits')
-    all_seasons = Season.objects.all().order_by('-id')
+    if (season_name.startswith('Season One') 
+            or season_name.startswith('Season Two')):
+        requested_seasons = [get_object_or_404(Season, slug_name=season_name)]
+    else:
+        requested_seasons = get_list_or_404(Season, slug_name__contains=season_name)
+    # This is an ugly hack, but is necessary to get the correct league-splitting 
+    # behavior introduced starting in Season Three.
+    all_season_names = ['Season Three', 
+                        'Season Two Championship',
+                        'Season Two',
+                        'Season One Championship',
+                        'Season One',]
 
     return direct_to_template(request, 'results.html', locals())
 
