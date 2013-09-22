@@ -1,0 +1,390 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]HA[8]KM[6.50]TM[1800]OT[5x20 byo-yomi]
+PW[UCSB1]PB[UVirginia1]DT[2013-09-21]PC[The KGS Go Server at http://www.gokgs.com/]AB[dd][jd][pd][dj][pj][dp][jp][pp]C[UVirginia1 [-\]: i'm not used to having so many handicaps ^_^
+UCSB1 [-\]: nice meeting you
+UVirginia1 [-\]: yayyyyy
+UVirginia1 [-\]: ya
+]RE[W+Resign]
+;W[nc]WL[1784.414]
+;B[oc]BL[1793.326]
+;W[qf]WL[1777.456]
+;B[nd]BL[1789.054]
+;W[mb]WL[1759.135]
+;B[ob]BL[1761.198]
+;W[md]WL[1715.69]
+;B[qh]BL[1749.53]
+;W[ne]WL[1713.679]
+;B[qe]BL[1738.432]
+;W[pf]WL[1705.28]
+;B[re]BL[1733.629]
+;W[rf]WL[1700.073]
+;B[oh]BL[1721.249]
+;W[od]WL[1696.269]
+;B[qc]BL[1717.648]
+;W[cn]WL[1686.481]
+;B[cl]BL[1707.875]
+;W[en]WL[1675.356]
+;B[fq]BL[1698.393]
+;W[hq]WL[1662.03]
+;B[iq]BL[1691.278]
+;W[hp]WL[1653.66]
+;B[cq]BL[1684.215]
+;W[ch]WL[1642.017]
+;B[el]BL[1676.993]
+;W[gn]WL[1588.654]
+;B[dh]BL[1661.321]
+;W[gr]WL[1586.755]
+;B[fr]BL[1653.712]
+;W[dg]WL[1582.065]
+;B[ci]BL[1649.966]
+;W[eh]WL[1580.663]
+;B[di]BL[1646.95]
+;W[cd]WL[1567.567]
+;B[cf]BL[1628.478]
+;W[cg]WL[1562.15]
+;B[ce]BL[1621.412]
+;W[dc]WL[1535.341]
+;B[ee]BL[1615.475]
+;W[ed]WL[1521.731]
+;B[de]BL[1607.866]
+;W[cc]WL[1519.079]
+;B[fe]BL[1600.29]
+;W[fg]WL[1506.305]
+;B[fc]BL[1584.176]
+;W[ec]WL[1504.17]
+;B[fd]BL[1578.616]
+;W[bk]WL[1497.485]
+;B[bi]BL[1572.719]
+;W[bl]WL[1494.985]
+;B[bg]BL[1558.508]
+;W[ir]WL[1479.709]
+;B[kq]BL[1547.941]
+;W[jr]WL[1475.265]
+;B[kr]BL[1542.979]
+;W[ql]WL[1471.687]
+;B[qn]BL[1537.01]
+;W[pq]WL[1432.941]
+;B[qq]BL[1516.023]
+;W[qr]WL[1421.803]
+;B[pr]BL[1505.041]
+;W[oq]WL[1420.686]
+;B[rq]BL[1494.49]
+;W[or]WL[1402.917]
+;B[mq]BL[1484.81]
+;W[rr]WL[1399.473]
+;B[qo]BL[1480.485]
+;W[op]WL[1396.768]
+;B[oo]BL[1476.051]
+;W[no]WL[1380.877]
+;B[om]BL[1462.653]
+;W[on]WL[1379.531]
+;B[po]BL[1459.434]
+;W[pm]WL[1349.287]
+;B[nn]BL[1440.522]
+;W[pn]WL[1345.056]
+;B[pl]BL[1432.986]
+;W[qm]WL[1343.204]
+;B[ol]BL[1428.312]
+;W[mn]WL[1337.725]
+;B[nm]BL[1425.538]
+;W[rp]WL[1284.278]
+;B[rm]BL[1408.092]
+;W[rl]WL[1275.814]
+;B[rn]BL[1396.109]
+;W[rj]WL[1260.862]
+;B[ri]BL[1339.538]
+;W[qp]WL[1249.817]
+;B[qk]BL[1312.537]
+;W[rk]WL[1243.14]
+;B[sl]BL[1304.347]
+;W[qj]WL[1199.982]
+;B[sj]BL[1287.699]
+;W[pk]WL[1190.873]
+;B[sk]BL[1279.308]
+;W[pi]WL[1164.157]
+;B[oj]BL[1259.681]
+;W[qi]WL[1162.906]
+;B[rg]BL[1226.745]
+;W[sh]WL[1134.143]
+;B[rh]BL[1207.065]
+;W[ph]WL[1130.696]
+;B[sf]BL[1190.505]
+;W[lo]WL[1106.067]
+;B[jn]BL[1161.499]
+;W[ll]WL[1096.275]
+;B[oi]BL[1118.063]
+;W[og]WL[1082.466]
+;B[im]BL[1071.714]
+;W[gl]WL[1074.603]
+;B[fj]BL[1057.848]
+;W[ik]WL[1068.075]
+;B[lp]BL[1001.295]
+;W[ko]WL[1063.58]
+;B[jo]BL[984.476]
+;W[jl]WL[1045.836]
+;B[mp]BL[925.64]
+;W[mo]WL[1009.454]
+;B[ho]BL[902.467]
+;W[go]WL[978.981]
+;B[hn]BL[886.704]
+;W[ip]WL[971.088]
+;B[io]BL[753.099]
+;W[jq]WL[934.525]
+;B[kp]BL[745.616]
+;W[lr]WL[931.594]
+;B[ls]BL[690.545]
+;W[mr]WL[918.999]C[UVirginia1 [-\]: hello?
+UVirginia1 [-\]: testing
+UVirginia1 [-\]: testing
+UCSB1 [-\]: hello
+UVirginia1 [-\]: sorry internet went down for a moment
+UCSB1 [-\]: oh you are fine
+]
+;B[np]BL[568.281]
+;W[mk]WL[904.678]
+;B[nr]BL[524.479]
+;W[ms]WL[895.276]
+;B[ns]BL[470.689]
+;W[gi]WL[879.283]C[UVirginia1 [-\]: lol stop that
+UVirginia1 [-\]: STOP EET
+UVirginia1 [-\]: i hate this game
+]
+;B[bh]BL[431.1]
+;W[jf]WL[864.2]
+;B[mh]BL[416.59]
+;W[ng]WL[843.433]
+;B[li]BL[408.029]
+;W[mj]WL[817.599]
+;B[nh]BL[401.635]
+;W[gj]WL[810.835]
+;B[kg]BL[391.939]
+;W[ke]WL[800.584]
+;B[jg]BL[379.455]
+;W[hf]WL[793.635]C[UCSB1 [-\]: -_-
+UCSB1 [-\]: lol sorry :/
+]
+;B[jj]BL[311.956]C[UVirginia1 [-\]: grumble grumble
+]
+;W[ig]WL[784.272]C[UCSB1 [-\]: rumble rumble
+UCSB1 [-\]: Garen + rumble OPOP
+UVirginia1 [-\]: lol
+]
+;B[ij]BL[274.221]C[UVirginia1 [-\]: oh my
+UVirginia1 [-\]: i'm almost out of time
+]
+;W[hk]WL[768.862]C[UCSB1 [-\]: nah you fine...
+]
+;B[ih]BL[254.189]
+;W[hh]WL[757.703]
+;B[ii]BL[245.672]C[UVirginia1 [-\]: who won game 2?
+UVirginia1 [-\]: testing, testing
+UVirginia1 [-\]: internet flicking off again
+UVirginia1 [-\]: lol thanks
+]
+(;W[kk]WL[741.332]C[UCSB1 [-\]: np bro
+]
+;B[le]BL[175.439]
+;W[ld]WL[683.688]
+;B[lf]BL[163.958]
+;W[mg]WL[672.99]
+;B[lg]BL[120.697]
+;W[kd]WL[651.962]
+;B[kh]BL[116.371]
+;W[mi]WL[647.926]C[UVirginia1 [-\]: oh derp
+UVirginia1 [-\]: gg wp
+UVirginia1 [-\]: lol
+UCSB1 [-\]: hahaha
+UCSB1 [-\]: gg bro
+UVirginia1 [-\]: :p
+UCSB1 [-\]: :)
+UVirginia1 [-\]: nice playin
+UVirginia1 [-\]: still hate you though
+UCSB1 [-\]: yeah you too man! :)
+UCSB1 [-\]: hahahha
+UVirginia1 [-\]: made me think
+UCSB1 [-\]: sorrryyy
+UVirginia1 [-\]: so hard
+UCSB1 [-\]: Im so sorrry :/
+UVirginia1 [-\]: :ppppppp
+UVirginia1 [-\]: twas fun
+UCSB1 [-\]: How's U Virginia?
+UVirginia1 [-\]: hmm
+UVirginia1 [-\]: i'm not
+UVirginia1 [-\]: too into my own school haha
+UCSB1 [-\]: oh
+UVirginia1 [-\]: would've preferred some other places
+UCSB1 [-\]: yteah
+UCSB1 [-\]: where?
+UVirginia1 [-\]: buttttt
+UVirginia1 [-\]: heh
+UVirginia1 [-\]: well 
+UCSB1 [-\]: virginia is a good school though
+UCSB1 [-\]: you like east coast or west  coast
+UVirginia1 [-\]: east coast
+UVirginia1 [-\]: up there where 
+UVirginia1 [-\]: you know
+UVirginia1 [-\]: what the you know whats are at
+UCSB1 [-\]: how many students in your class rom
+UCSB1 [-\]: UC has so many students per class so annoying
+UVirginia1 [-\]: there are some with 200
+UVirginia1 [-\]: some with 20
+UVirginia1 [-\]: some with 5
+UVirginia1 [-\]: usually all the requirement classes for majors have super huge lectures
+UVirginia1 [-\]: then elective courses have small classrooms
+UCSB1 [-\]: oh
+UCSB1 [-\]: so is about the same then
+UCSB1 [-\]: what's your major?
+UVirginia1 [-\]: econ/cs
+UVirginia1 [-\]: what about you?
+UCSB1 [-\]: nice :)
+UCSB1 [-\]: im actuarial science major
+UCSB1 [-\]: just watched "the Beautiful mind"
+UVirginia1 [-\]: ah
+UCSB1 [-\]: haha
+UVirginia1 [-\]: that's cool
+UCSB1 [-\]: econ major
+UVirginia1 [-\]: i loveee that movie
+UCSB1 [-\]: I KNOW
+UCSB1 [-\]: dude
+UCSB1 [-\]: 29.6% accepted
+UCSB1 [-\]: your school is beast
+UVirginia1 [-\]: it was honestly my safety :/
+UCSB1 [-\]: WUUUT
+UCSB1 [-\]: what's your SAT?
+UVirginia1 [-\]: 2330
+UCSB1 [-\]: were you aiming for harvard
+UCSB1 [-\]: WOW O_O
+UVirginia1 [-\]: :/
+UVirginia1 [-\]: i mean it's not too hard to get into uva if you're from northern virginia
+UVirginia1 [-\]: in-state + reputation schools that they like to pick kids off of
+UCSB1 [-\]: oh yeah
+UCSB1 [-\]: so you are from virginia originally?
+UVirginia1 [-\]: yep
+UVirginia1 [-\]: kinda
+UCSB1 [-\]: oh
+UVirginia1 [-\]: i'm korean before i'm a virginian eh?
+UVirginia1 [-\]: :P
+UCSB1 [-\]: LOL
+UCSB1 [-\]: yeah
+UCSB1 [-\]: that 's weird
+UCSB1 [-\]: most asians are in california
+UVirginia1 [-\]: LOLOL
+UCSB1 [-\]: you are all the way out there
+UVirginia1 [-\]: trust me 
+UVirginia1 [-\]: there are a lot of...us...here
+UVirginia1 [-\]: a lot
+UVirginia1 [-\]: as in
+UCSB1 [-\]: ohhhh
+UVirginia1 [-\]: a lottttt
+UCSB1 [-\]: sooo
+UCSB1 [-\]: a lot of korean hotties?
+UVirginia1 [-\]: NOPE
+UVirginia1 [-\]: SADNESS
+UCSB1 [-\]: but korean girls are hot
+UVirginia1 [-\]: not the ones here *cough
+UVirginia1 [-\]: don't tell anyone i said that ~~~~
+UCSB1 [-\]: hahah
+UCSB1 [-\]: kk
+UCSB1 [-\]: so
+UVirginia1 [-\]: where'd you learn to play go anyway?
+UVirginia1 [-\]: -.-
+UCSB1 [-\]: im assuming you are good at LOL
+UCSB1 [-\]: oh in Taiwan
+UVirginia1 [-\]: i actually play hon
+UCSB1 [-\]: oh yeah
+UCSB1 [-\]: i play LOL
+UVirginia1 [-\]: course you do
+UCSB1 [-\]: hon > LOL
+UCSB1 [-\]: but
+UCSB1 [-\]: i dun want to pay
+UCSB1 [-\]: hahha
+UVirginia1 [-\]: oh
+UCSB1 [-\]: yeah
+UVirginia1 [-\]: it's f2p
+UCSB1 [-\]: well
+UVirginia1 [-\]: but the community sucks
+UVirginia1 [-\]: and not too many people play
+UCSB1 [-\]: yeahh
+UCSB1 [-\]: a lot of people go to LOL now
+UCSB1 [-\]: from dota or Hon
+UVirginia1 [-\]: right
+UCSB1 [-\]: iso
+UCSB1 [-\]: econ
+UCSB1 [-\]: what u gnna do with that major
+UVirginia1 [-\]: ummmmmmmmmm
+UVirginia1 [-\]: no clue
+UVirginia1 [-\]: since i'm a cs major as well i guess i can just go to
+UVirginia1 [-\]: any bank corporation thingies that want random nubs
+UVirginia1 [-\]: anyway uhh
+UCSB1 [-\]: oh nice!
+UCSB1 [-\]: yeah man
+UVirginia1 [-\]: i think i have to go now
+UCSB1 [-\]: yeah it's cool
+UVirginia1 [-\]: it was awesome meeting you
+UCSB1 [-\]: thanks for the game
+UCSB1 [-\]: yeah!
+UCSB1 [-\]: fellow asian :)
+UCSB1 [-\]: always good
+UVirginia1 [-\]: :P
+UVirginia1 [-\]: to be fair
+UCSB1 [-\]: peace man!
+UVirginia1 [-\]: almost all of us prob are
+UCSB1 [-\]: mhmm
+UVirginia1 [-\]: in this tourney
+UCSB1 [-\]: oh
+UCSB1 [-\]: oh goddamit
+UCSB1 [-\]: thought it'
+UCSB1 [-\]: it's diverse
+UCSB1 [-\]: oh well
+UVirginia1 [-\]: hey
+UVirginia1 [-\]: it's go yo
+UVirginia1 [-\]: :P
+UCSB1 [-\]: yeah i figured -_-
+UCSB1 [-\]: thought white people might be interested
+UCSB1 [-\]: wait
+UCSB1 [-\]: just one question
+UVirginia1 [-\]: mhm?
+UCSB1 [-\]: are all people in virginia 
+UCSB1 [-\]: korean
+UCSB1 [-\]: like
+UCSB1 [-\]: in ur go club
+UVirginia1 [-\]: this is my first time in the club
+UVirginia1 [-\]: ours is pretty small and i haven't met anyone
+UCSB1 [-\]: oh O_O
+UVirginia1 [-\]: haven't even had any meetings yet :P
+UCSB1 [-\]: gotcha :)
+UCSB1 [-\]: well
+UCSB1 [-\]: you will love Go
+UCSB1 [-\]: it's like the best board game
+UCSB1 [-\]: nothing tops that in terms of complexity
+UVirginia1 [-\]: i played as a little kid a lot
+UCSB1 [-\]: maybe LOL or Hon
+UVirginia1 [-\]: moving to the US
+UVirginia1 [-\]: makes it harder to play
+UCSB1 [-\]: i moved to US when i was in highschool
+UCSB1 [-\]: so I had a few trainging in Taian
+UCSB1 [-\]: Taiwan
+UVirginia1 [-\]: haha i did too
+UVirginia1 [-\]: paid lessons?
+UCSB1 [-\]: yeahh
+UVirginia1 [-\]: paid lessons ftw
+UCSB1 [-\]: yep ^^
+UCSB1 [-\]: alright man
+UVirginia1 [-\]: i had some too but when i was like 7 years old
+UCSB1 [-\]: Ill see you soon man
+UVirginia1 [-\]: yep
+UVirginia1 [-\]: ciao
+UCSB1 [-\]: ciao :)
+])
+(;W[kk]WL[577.629]C[UCSB1 [-\]: you are fine
+]
+;B[mg]BL[226.288]
+;W[lf]WL[557.909]C[UVirginia1 [-\]: i just
+UVirginia1 [-\]: made a 
+UVirginia1 [-\]: huge
+UVirginia1 [-\]: huge
+UVirginia1 [-\]: huge
+UVirginia1 [-\]: mistake
+UVirginia1 [-\]: huge
+UCSB1 [-\]: undo it?
+]))

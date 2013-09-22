@@ -1,0 +1,302 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]HA[5]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[UMichigan5]PB[Brock5]DT[2013-09-21]PC[The KGS Go Server at http://www.gokgs.com/]AB[dd][pd][jj][dp][pp]RE[W+150.50]
+;W[nq]WL[1793.662]
+;B[pq]BL[1794.497]C[UMichigan5 [-\]: glad to meet you...
+Brock5 [-\]: you as well. good luck
+]
+;W[kq]WL[1752.906]C[UMichigan5 [-\]: where are u from?
+Brock5 [-\]: toronto canada
+]
+;B[hq]BL[1763.307]
+;W[pn]WL[1722.063]C[Brock5 [-\]: how about you
+UMichigan5 [-\]: beijing china
+Brock5 [-\]: wow, thats far
+]
+;B[qo]BL[1698.297]
+;W[qn]WL[1717.041]C[UMichigan5 [-\]: yeah
+Brock5 [-\]: what year are you at school?
+]
+;B[oo]BL[1644.536]C[UMichigan5 [-\]: last year
+]
+;W[ro]WL[1699.997]C[Brock5 [-\]: me too
+]
+;B[qp]BL[1635.028]
+;W[rp]WL[1685.576]
+;B[lk]BL[1624.249]
+;W[qj]WL[1667.889]
+;B[qh]BL[1620.932]
+;W[jc]WL[1645.945]
+;B[nc]BL[1615.917]
+;W[fc]WL[1635.547]
+;B[cd]BL[1598.42]
+;W[cj]WL[1630.354]C[Brock5 [-\]: if your a 7d, how long have you been playing go
+]
+;B[ch]BL[1564.695]C[UMichigan5 [-\]: about 5 years
+]
+;W[cn]WL[1600.129]C[Brock5 [-\]: how much do you study ?
+]
+;B[cp]BL[1541.368]C[UMichigan5 [-\]: how much? 
+Brock5 [-\]: do you spend studying go?
+UMichigan5 [-\]: it's free
+Brock5 [-\]: are you sure
+UMichigan5 [-\]: of course
+]
+;W[fq]WL[1522.87]
+;B[hp]BL[1525.598]
+;W[eo]WL[1510.358]
+;B[ge]BL[1509.513]
+;W[hd]WL[1488.231]C[UMichigan5 [-\]: how long have you been playing go?
+]
+;B[fh]BL[1468.633]C[Brock5 [-\]: about 5 years as well.
+Brock5 [-\]: let me clarify. i mean, do you spend time reading books of go strategy and life an death?
+]
+;W[dr]WL[1407.433]
+;B[eb]BL[1440.566]
+;W[fb]WL[1380.988]
+;B[ec]BL[1437.288]C[UMichigan5 [-\]: yes, i read book every day.
+]
+;W[fd]WL[1348.668]
+;B[fe]BL[1420.234]C[Brock5 [-\]: wow, i could never do that
+]
+;W[ko]WL[1304.057]
+;B[in]BL[1412.543]C[UMichigan5 [-\]: why? is it boring?
+Brock5 [-\]: after a while, but also, im very busy
+]
+;W[en]WL[1247.392]C[UMichigan5 [-\]: oh 
+Brock5 [-\]: and i play go mostly for fun
+]
+;B[lp]BL[1382.751]
+;W[lq]WL[1242.588]
+;B[lo]BL[1380.452]
+;W[kp]WL[1233.81]
+;B[kn]BL[1367.35]C[UMichigan5 [-\]: if you play go for fun, it's not neccessary to read book
+]
+;W[or]WL[1196.472]
+;B[pr]BL[1337.148]
+;W[no]WL[1187.18]
+;B[on]BL[1331.707]
+;W[ln]WL[1165.634]C[UMichigan5 [-\]: do you play chess?
+]
+;B[ql]BL[1300.522]
+;W[pl]WL[1153.519]C[Brock5 [-\]: no, i dont know why, but i dont like chess
+]
+;B[rj]BL[1283.076]
+;W[qk]WL[1146.707]
+;B[qi]BL[1279.234]
+;W[rk]WL[1127.682]
+;B[ke]BL[1216.806]
+;W[qc]WL[1111.886]
+;B[qd]BL[1207.746]
+;W[rd]WL[1100.479]
+;B[re]BL[1177.205]
+;W[rb]WL[1083.125]
+;B[sc]BL[1152.395]
+;W[sd]WL[1074.65]
+;B[pb]BL[1139.557]
+;W[pc]WL[1051.313]
+;B[ob]BL[1131.704]
+;W[od]WL[1033.699]
+;B[pf]BL[1127.142]
+;W[oc]WL[1026.114]
+;B[nd]BL[1123.499]
+;W[oe]WL[1020.402]
+;B[of]BL[1119.195]
+;W[ne]WL[1004.926]
+;B[me]BL[1113.733]
+;W[nf]WL[993.051]
+;B[ng]BL[1108.822]
+;W[mf]WL[976.309]
+;B[le]BL[1104.033]
+;W[og]WL[967.923]
+;B[qg]BL[1078.725]
+;W[qb]WL[939.931]
+;B[kc]BL[1058.327]
+;W[kb]WL[926.736]
+;B[jd]BL[1051.891]
+;W[ic]WL[923.641]
+;B[hb]BL[1035.937]
+;W[he]WL[861.275]
+;B[hf]BL[1028.948]
+;W[gd]WL[845.032]
+;B[if]BL[1005.963]
+;W[oh]WL[829.48]
+;B[oi]BL[995.563]
+;W[mh]WL[790.549]C[Brock5 [-\]: if you needed to guess my rank, what do you think it is?
+]
+;B[ni]BL[980.138]
+;W[nh]WL[786.565]
+;B[ph]BL[973.715]
+;W[mb]WL[768.931]
+;B[nb]BL[950.186]
+;W[jn]WL[736.234]
+;B[im]BL[912.417]C[UMichigan5 [-\]: it's not easy to guess... sometimes you looks like a 1d or higher
+]
+;W[nl]WL[705.876]
+;B[nk]BL[902.445]
+;W[km]WL[666.518]C[Brock5 [-\]: what should i focus on improving?
+]
+;B[ek]BL[885.099]C[UMichigan5 [-\]: the answer is clear
+UMichigan5 [-\]: cauculate
+UMichigan5 [-\]: cauculation
+]
+;W[dl]WL[605.975]C[Brock5 [-\]: i dont understand, could you elaborate?
+]
+;B[bk]BL[822.685]
+;W[bj]WL[601.733]
+;B[br]BL[808.173]
+;W[bo]WL[595.274]C[UMichigan5 [-\]: i'm sorry...my english is poor...
+Brock5 [-\]: i just want you to explain
+UMichigan5 [-\]: i will try my best to explain..
+Brock5 [-\]: ok
+]
+;B[dq]BL[677.862]C[UMichigan5 [-\]: cauculate means you can predict the future
+]
+;W[er]WL[561.288]
+;B[fp]BL[656.552]C[UMichigan5 [-\]: before you take action, you need to estimate what will happen
+]
+;W[ep]WL[535.238]
+;B[eq]BL[648.757]
+;W[gr]WL[525.696]C[Brock5 [-\]: ohh, ok. what should i do to improve?
+]
+;B[fs]BL[639.125]
+;W[cr]WL[499.055]C[UMichigan5 [-\]: first, read some book
+Brock5 [-\]: what kind of book? 
+]
+;B[bq]BL[603.799]
+;W[bp]WL[494.843]C[UMichigan5 [-\]: maybe life and death
+]
+;B[fr]BL[534.121]
+;W[gq]WL[490.812]
+;B[hr]BL[510.053]
+;W[gs]WL[472.692]
+;B[kr]BL[504.119]C[UMichigan5 [-\]: not only need to remember the result, but also the process of thinking
+]
+;W[jr]WL[453.498]
+;B[jq]BL[498.349]
+;W[lr]WL[449.489]
+;B[ir]BL[495.638]
+;W[ks]WL[447.645]
+;B[jp]BL[491.911]
+;W[bh]WL[441.128]
+;B[cg]BL[482.496]
+;W[bg]WL[436.598]
+;B[bf]BL[481.231]
+;W[be]WL[398.334]C[Brock5 [-\]: how diffucult life and death?
+Brock5 [-\]: what rank??
+UMichigan5 [-\]: from easy to difficult
+UMichigan5 [-\]: i noticed that you have learn some basic shape
+]
+;B[bd]BL[398.979]
+;W[cf]WL[386.866]
+;B[df]BL[396.525]
+;W[af]WL[381.757]C[Brock5 [-\]: can we look over game after, you teach?
+]
+;B[dj]BL[364.358]C[UMichigan5 [-\]: ok
+]
+;W[dk]WL[369.029]
+;B[ej]BL[352.116]
+;W[ee]WL[357.629]
+;B[ef]BL[339.679]
+;W[jl]WL[328.07]C[Brock5 [-\]: thx
+]
+;B[il]BL[317.165]
+;W[jk]WL[324.802]
+;B[ik]BL[312.138]
+;W[kj]WL[323.44]
+;B[lj]BL[305.754]
+;W[ki]WL[319.524]
+;B[ji]BL[279.514]
+;W[pj]WL[314.322]
+;B[pi]BL[276.42]
+;W[rf]WL[292.009]
+;B[se]BL[202.782]
+;W[qe]WL[274.412]C[Brock5 [-\]: ohhh
+Brock5 [-\]: darn
+]
+;B[rc]BL[157.622]
+;W[pe]WL[242.947]
+;B[qf]BL[147.337]
+;W[rd]WL[230.183]
+;B[rg]BL[126.951]
+;W[lc]WL[213.575]
+;B[ld]BL[119.271]
+;W[ri]WL[209.853]
+;B[oj]BL[103.035]
+;W[ml]WL[200.508]
+;B[mk]BL[99.288]
+;W[mi]WL[198.803]
+;B[kh]BL[65.487]
+;W[li]WL[196.126]
+;B[fm]BL[59.158]
+;W[gp]WL[176.923]
+;B[go]BL[48.41]
+;W[fo]WL[174.61]
+;B[gn]BL[42.361]
+;W[ed]WL[172.28]
+;B[de]BL[38.053]
+;W[ea]WL[169.379]
+;B[db]BL[23.621]
+;W[da]WL[167.578]
+;B[ca]BL[22.042]
+;W[fa]WL[165.837]
+;B[bb]BL[19.997]
+;W[id]WL[164.115]
+;B[ie]BL[16.033]
+;W[kg]WL[160.604]
+;B[jg]BL[7.515]
+;W[lh]WL[157.256]
+;B[jh]BL[5.068]
+;W[ci]WL[152.144]
+;B[di]BL[2.547]
+;W[el]WL[150.174]
+;B[fl]BL[0.15]
+;W[jo]WL[140.225]
+;B[rq]BL[30]OB[5]
+;W[rr]WL[135.853]
+;B[sq]BL[30]OB[5]
+;W[qr]WL[127.487]
+;B[pm]BL[30]OB[5]
+;W[om]WL[115.288]
+;B[io]BL[30]OB[5]
+;W[kf]WL[109.036]
+;B[je]BL[30]OB[5]
+;W[mc]WL[101.143]
+;B[md]BL[30]OB[5]
+;W[ma]WL[99.994]
+;B[na]BL[30]OB[5]
+;W[kd]WL[96.184]
+;B[em]BL[30]OB[5]
+;W[dm]WL[94.156]
+;B[kc]BL[30]OB[5]
+;W[jb]WL[89.793]
+;B[qa]BL[30]OB[5]
+;W[ra]WL[85.098]
+;B[pa]BL[30]OB[5]
+;W[lf]WL[69.092]
+;B[jf]BL[30]OB[5]
+;W[js]WL[65.601]
+;B[hs]BL[30]OB[5]
+;W[es]WL[62.058]
+;B[sf]BL[30]OB[5]
+;W[sh]WL[53.438]
+;B[ce]BL[30]OB[5]
+;W[bf]WL[50.706]
+;B[ck]BL[30]OB[5]
+;W[ai]WL[48.015]
+;B[fn]BL[30]OB[5]
+;W[ad]WL[45.079]
+;B[ac]BL[30]OB[5]
+;W[ae]WL[37.957]
+;B[jm]BL[30]OB[5]
+;W[kd]WL[24.83]
+;B[is]BL[30]OB[5]
+;W[kc]WL[20.832]
+;B[]BL[30]OB[5]
+;W[mg]WL[2.703]
+;B[rn]BL[30]OB[5]
+;W[rm]WL[30]OW[5]
+;B[]BL[30]OB[5]
+;W[]WL[30]OW[5]TW[ga][ha][ia][ja][ka][la][sa][gb][hb][ib][lb][sb][gc][hc][rc][sc][pd][qd][sd][re][se][of][pf][qf][rf][sf][ag][lg][ng][pg][qg][rg][sg][ah][ph][qh][rh][bi][ni][oi][pi][qi][si][aj][lj][mj][nj][oj][rj][sj][ak][bk][ck][kk][lk][mk][nk][ok][pk][sk][al][bl][cl][kl][ll][ol][ql][rl][sl][am][bm][cm][lm][mm][nm][pm][qm][sm][an][bn][dn][kn][mn][nn][on][rn][sn][ao][co][do][lo][mo][oo][po][qo][so][ap][cp][dp][fp][lp][mp][np][op][pp][qp][sp][aq][bq][cq][dq][eq][mq][oq][pq][qq][rq][sq][ar][br][fr][kr][mr][nr][pr][sr][as][bs][cs][ds][fs][ls][ms][ns][os][ps][qs][rs][ss]TB[aa][ba][oa][ab][cb][bc][cc][dc][ff][gf][dg][eg][fg][gg][hg][ig][dh][eh][gh][hh][ih][ei][fi][gi][hi][ii][fj][gj][hj][ij][fk][gk][hk][gl][hl][gm][hm][hn][ho][ip][iq]C[Brock5 [-\]: good game
+UMichigan5 [-\]: how to look over it?
+])
