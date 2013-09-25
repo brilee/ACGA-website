@@ -1,6 +1,8 @@
 Subject:[CGL] Previous round games uploaded
 
-Hi everyone,
+Dear Teams,
+
+Thank you for playing this past Saturday!
 
 Games have been uploaded for the most recent round ({{previous_roundA.date}}). (If you rescheduled your match, send us an email after those games have been played so that we can upload them.)
 
@@ -14,10 +16,10 @@ B LEAGUE
 	{{match.display_result}}
 {% endfor %}
 
-Full results can be found here:
+Full results and game records can be found here:
 http://college-go.org/CGL/results
 
-If you'd like "Unknown Player" to stop appearing on your team's games, then please remind your team to introduce themselves in-game in the next round!
+If you'd like "Unknown Player" to stop appearing on your team's games, then please remember to introduce yourself in-game next round!
 
 Thanks,
 CGL Organizers

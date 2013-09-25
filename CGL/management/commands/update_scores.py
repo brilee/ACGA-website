@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_season_name
 
 from datetime import date, timedelta
 
@@ -78,7 +77,7 @@ class Command(BaseCommand):
     
     def handle(self, *args, **options):
         if not args:
-            season = Season.objects.get(name=current_season_name)
+            raise CommandError('Must provide a season name!')
         else:
             season = Season.objects.get(name=args[0])
         self.stdout.write('Updating %s\n' % (season.name))
