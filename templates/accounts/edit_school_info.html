@@ -11,7 +11,7 @@
 <p> (Leave "Unknown Player" alone - he gets saddled with all of your games where we couldn't match a game with the person who played it)</p>
 <ul>
 {% for player in school.player_set.all %}
-    <li>Edit <a href="/accounts/edit/player/{{player.id}}">{{player.name_and_rank}}</a></li>
+    <li><a href="{{player.get_absolute_url}}">{{player.name_and_rank}}</a> --- <a href="/accounts/edit/player/{{player.id}}">Edit</a></li>
 {% empty %}
     <li>You have no players in your roster. Add your first player below!</li>
 {% endfor %}

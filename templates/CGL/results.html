@@ -21,7 +21,7 @@
 	</tr>
 {% for membership in season.membership_set.all %}
 	<tr>
-		<td><a href="{{membership.school.get_absolute_url}}">{{membership.school.name}}</a></td>
+		<td><a href="{{membership.school.get_absolute_url}}">{% if not membership.still_participating %}({% endif %}{{membership.school.name}}{% if not membership.still_participating %}) **{% endif %}</a></td>
 		<td>{{membership.num_wins}}</td>
 		<td>{{membership.num_losses}}</td>
 		<td>{{membership.num_ties}}</td>
@@ -29,7 +29,7 @@
 	</tr>
 {% endfor %} 
 </table>
-
+<p> ** Currently not participating in this league </p>
 </div>
 <!-- Lol I did an injection attack on my own templating engine-->
 <div class="panel">
