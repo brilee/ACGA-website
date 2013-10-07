@@ -9,18 +9,26 @@ class Command(BaseCommand):
             for the requested season. Defaults to current season'''
 
     def update_match_and_schools(self, current_season):
-        # reset all scores for this season
+        # reset all scores for this season; recompute from scratch.
         for membership in Membership.objects.all().filter(season=current_season):
             membership.num_wins = 0
             membership.num_losses = 0
             membership.num_ties = 0
+            membership.num_byes = 0
             membership.num_forfeits = 0
             membership.save()
             
         # compute the result of each match, based on games and forfeits
         # at the same time, tally up each school's wins/losses
         for round in current_season.round_set.filter(date__lte=date.today()):
-            for m in round.match_set.all():
+            for b in round.bye_set.all():
+                mem = b.school.membership_set.get(season=current_season)
+                mem.num_byes += 1
+                mem.save()
+
+            for match in round.match_set.all():
+                m = match
+                
                 mem1 = m.school1.membership_set.get(season=current_season)
                 mem2 = m.school2.membership_set.get(season=current_season)
                 

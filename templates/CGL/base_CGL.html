@@ -49,24 +49,35 @@
 		    <p><strong>{{sidebar_upcoming_roundA.date}}</strong></p>
 		    <ul>
 			{% for match in sidebar_upcoming_roundA.match_set.all %}
-				<li>{{match.school1}} vs. {{match.school2}}</li>
+				<li>{{match.display_match}}</li>
 			{% empty %}
 				<li>No matches entered yet </li>
 			{% endfor %}
-			</ul>
+            </ul>
+            {% if sidebar_byesA %}
+                <p>{% for bye in sidebar_byesA %}
+                <emph>{{bye.school}}</emph>, 
+                {% endfor %} have a bye </p>
+            {% endif %}
 		{% else %}
 			<p>No upcoming matches scheduled; perhaps it's the beginning or end of a season</p>
 		{% endif %}
+
         <h3>B League</h3>
 		{% if sidebar_upcoming_roundB %}
 		    <p><strong>{{sidebar_upcoming_roundB.date}}</strong></p>
 		    <ul>
 			{% for match in sidebar_upcoming_roundB.match_set.all %}
-				<li>{{match.school1}} vs. {{match.school2}}</li>
+				<li>{{match.display_match}}</li>
 			{% empty %}
 				<li>No matches entered yet </li>
 			{% endfor %}
-			</ul>
+            </ul>
+            {% if sidebar_byesB %}
+                <p>{% for bye in sidebar_byesB %}
+                <emph>{{bye.school}}</emph>, 
+                {% endfor %} have a bye </p>
+            {% endif %}
 		{% else %}
 			<p>No upcoming matches scheduled; perhaps it's the beginning or end of a season</p>
 		{% endif %}
@@ -74,34 +85,32 @@
 	
 		<div class="panel">
 		<h2>Recent Matches</h2>
-		{% for round in sidebar_recent_roundA %}
-			<p><strong>{{round.date}}</strong></p>
+		{% if sidebar_recent_roundA %}
+			<p><strong>{{sidebar_recent_roundA.date}}</strong></p>
 			<ul>
-			{% for match in round.match_set.all %}
-				{% if match.score1 > match.score2 %}
-				<li>{{match.school1}} defeats {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
-				{% else %}{% if match.score2 > match.score1 %}
-				<li>{{match.school2}} defeats {{match.school1}}, {{match.score2}}-{{match.score1}}</li>
-				{% else %}
-				<li>{{match.school1}} ties {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
-				{% endif %}{% endif %}
+			{% for match in sidebar_recent_roundA.match_set.all %}
+				<li>{{match.display_result}}</li>
 			{% endfor %}			
 			</ul>
-		{% endfor %}
-		{% for round in sidebar_recent_roundB %}
-			<p><strong>{{round.date}}</strong></p>
+            {% if sidebar_recent_byesA %}
+                <p>{% for bye in sidebar_recent_byesA %}
+                <emph>{{bye.school}}</emph>,
+                {% endfor %} got a bye </p>
+            {% endif %}
+		{% endif %}
+		{% if sidebar_recent_roundB %}
+			<p><strong>{{sidebar_recent_roundB.date}}</strong></p>
 			<ul>
-			{% for match in round.match_set.all %}
-				{% if match.score1 > match.score2 %}
-				<li>{{match.school1}} defeats {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
-				{% else %}{% if match.score2 > match.score1 %}
-				<li>{{match.school2}} defeats {{match.school1}}, {{match.score2}}-{{match.score1}}</li>
-				{% else %}
-				<li>{{match.school1}} ties {{match.school2}}, {{match.score1}}-{{match.score2}}</li>
-				{% endif %}{% endif %}
+			{% for match in sidebar_recent_roundB.match_set.all %}
+                <li>{{match.display_result}}</li>
 			{% endfor %}			
 			</ul>
-		{% endfor %}
+            {% if sidebar_recent_byesB %}
+                <p>{% for bye in sidebar_recent_byesB %}
+                <emph>{{bye.school}}</emph>,
+                {% endfor %} got a bye </p>
+            {% endif %}
+		{% endif %}
 		</div>
 		<div class="panel">
 		<h5>See all dates, matches, and games for this season <a href="/CGL/results/">here</a>.</h5>

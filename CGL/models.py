@@ -127,6 +127,7 @@ class Membership(models.Model):
     num_wins = models.IntegerField(editable=False, default = 0)
     num_losses = models.IntegerField(editable=False, default = 0)
     num_ties = models.IntegerField(editable=False, default = 0)
+    num_byes = models.IntegerField(editable=False, default=0)
     num_forfeits = models.IntegerField(editable=False, default = 0)
     still_participating = models.BooleanField(default=True, help_text="Uncheck this box if school has withdrawn from season. This will cause them to not be considered by the matching algorithm")
 
@@ -139,7 +140,7 @@ class Membership(models.Model):
 class RoundManager(models.Manager):
     def get_next_round(self, season):
         next_round = super(RoundManager, self
-                     ).filter(season__name=season
+                     ).filter(season=season
                         ).filter(date__gte=datetime.datetime.now()
                         ).order_by('date')
         if next_round:
@@ -153,7 +154,7 @@ class RoundManager(models.Manager):
     def get_recent_rounds(self, season, depth):
         ''' depth is how many recent rounds you want to retrieve'''
         all_past_rounds = super(RoundManager, self
-                     ).filter(season__name=season
+                     ).filter(season=season
                         ).filter(date__lt=datetime.datetime.now()
                         ).order_by('-date')
         if len(all_past_rounds) < depth:
@@ -180,6 +181,16 @@ class Round(models.Model):
 
     def upcoming_or_inpast(self):
         return self.date <= (datetime.date.today() + datetime.timedelta(days=14))
+
+class Bye(models.Model):
+    school = models.ForeignKey(School)
+    round = models.ForeignKey(Round)
+
+    class Meta:
+        ordering = ['-round__date']
+
+    def __unicode__(self):
+        return unicode('%s got a bye on %s' % (self.school, self.round.date))
 
 class Match(models.Model):
     round = models.ForeignKey(Round)
@@ -209,6 +220,12 @@ class Match(models.Model):
                                                     self.score1,
                                                     self.score2))
     
+    def display_match(self):
+        return unicode("%s (%s) vs. %s (%s)" % (self.school1.name,
+                                                self.school1.KGS_name,
+                                                self.school2.name,
+                                                self.school2.KGS_name,))
+
     class Meta:
         verbose_name_plural = 'Matches'
         ordering = ['-round__date']
@@ -315,7 +332,6 @@ class Forfeit(models.Model):
 
     def __unicode__(self):
         return unicode('%s vs %s on %s, board %s' %(self.match.school1, self.match.school2, self.match.round.date, self.board))
-
 
 class GameComment(models.Model):
     game = models.ForeignKey(Game)

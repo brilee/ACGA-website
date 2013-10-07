@@ -8,28 +8,25 @@ The following schools are matched (KGS account name prefix in parentheses):
 
 A LEAGUE
 {% for match in next_roundA.match_set.all %}
-	{{match.school1}} ({{match.school1.KGS_name}}) vs. {{match.school2}} ({{match.school2.KGS_name}})
+    {{match.display_match}}
 {% endfor %}
 
-{% if unmatched_schoolA %}
-{{unmatched_schoolA}} has a bye this round.
+{% if unmatched_schoolsA %}
+The following schools get a bye:
+{% for s in unmatched_schoolsA %} {{s.name}}, {% last %}{{s.name}}.
+{% endfor %}
 
-{% else %}
-If your school cannot compete this Saturday, please let us know as soon as possible.
-{% endif %}
 B LEAGUE
 {% for match in next_roundB.match_set.all %}
-	{{match.school1}} ({{match.school1.KGS_name}}) vs. {{match.school2}} ({{match.school2.KGS_name}})
+    {{match.display_match}}
 {% endfor %}
 
-{% if unmatched_schoolB %}
-{{unmatched_schoolB}} has a bye this round.
+{% if unmatched_schoolsA %}
+The following schools get a bye:
+{% for s in unmatched_schoolsA %} {{s.name}}, {% last %}{{s.name}}.
+{% endfor %}
 
-If your school cannot compete this Saturday, please let us know by Wednesday, so that we can switch in {{unmatched_schoolB}}.
-
-{% else %}
-If your school cannot compete this Saturday, please let us know as soon as possible.
-{% endif %}
+If your school cannot compete this Saturday, please let us know by the Wednesday before the matches!
 
 Good luck to all teams.
 

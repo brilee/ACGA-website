@@ -65,24 +65,30 @@ class Command(BaseCommand):
         if len(all_schools) < 2:
             raise CommandError('Fewer than two schools are registered for the season')
 
-        # This allows for manual matching of schools. Algorithm will then
-        # ignore manually matched schools.
+        # You can manually match schools. 
+        # These schools will be ignored in the pairing algorithm.
         existing_matches = next_round.match_set.all()
         matched_schools = ([m.school1.id for m in existing_matches] +
                            [m.school2.id for m in existing_matches])
-        unmatched_schools = all_schools.exclude(id__in=matched_schools)
+        # Also, you can flag schools for nonparticipation by creating a
+        # bye for them. These schools will also be ignored.
+        flagged_bye_schools = [bye.school.id 
+                for bye in Bye.objects.filter(round=next_round)]
 
-        # Sort schools by number of forfeits. This ensures that schools with
-        # fewest forfeits get matched up consistently, whereas schools with
-        # many forfeits are more likely to be sat out.
-        def get_forfeits(school, season):
-            m = Membership.objects.get(season=season, school=school)
-            return m.num_forfeits
-        unmatched_schools = sorted(unmatched_schools, key=lambda s: get_forfeits(s, current_season))
+        unmatched_schools = all_schools.exclude(id__in=(matched_schools + flagged_bye_schools))
+
+        # Sort school by number of byes. 
+        # This ensures that schools with the most byes are guaranteed to
+        # play in the next round. As a side effect, byes from the future
+        # are also counted. This is desirable, since schools that will get
+        # a bye in the future should get a chance to play now, when they can.
+        def get_byes(school):
+            return len(Bye.objects.filter(round__season=current_season, school=school))
+        unmatched_schools = sorted(unmatched_schools, key=lambda s: get_byes(s, current_season), reverse=True)
         
         # Find existing matches, so that we don't match up two schools again.
         # This also select matches that are prescheduled for the future.
-        # This is desirable since if we want to match two schools in the future,
+        # This is desirable since if we manually match two schools for the future,
         # it wouldn't do to match them up now.
         existing_matches = Match.objects.filter(round__season = current_season)
         
@@ -106,6 +112,8 @@ class Command(BaseCommand):
             match_matrix[i][j] = 1
             match_matrix[j][i] = 1
 
+
+        # we are finally ready to create matchups.
         while True:
             # See algorithm description above.
             all_matchups = self.find_matchups(match_matrix, all_id)
@@ -132,6 +140,9 @@ class Command(BaseCommand):
                               school2 = School.objects.get(id=matchup[1]),
                               )
                     new_match.save()
+                if unmatched:
+                    bye = Bye(round=next_round, school=unmatched)
+                    bye.save()
                 break
             if finalize == 'quit':
                 raise CommandError('Exiting without creating matchups')
