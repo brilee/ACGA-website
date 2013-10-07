@@ -35,11 +35,15 @@
 <div class="panel">
 
 <h3>Rounds (Click to Expand)</h3>
-<ul class="collapsibleList">
+<ul class="collapsibleList disc">
 {% for round in season.round_set.all %}
-{% if round.upcoming_or_inpast %}
+{% if not round.upcoming_or_inpast %}
+<li><h3 style="color:#888;">{{round.date}}</h3></li>
+{% elif not round.in_past %}
+<li><h3>{{round.date}}</h3></li>
+{% else %}
 <li>
-	<h3 class="clickable">{{round.date}}</h3>
+	<h3 class="clickable">[+] {{round.date}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}
 		<li><h5>[+] <a href="{{match.school1.get_absolute_url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.get_absolute_url}}">{{match.school2.name}}</a></h5>
@@ -52,6 +56,8 @@
 		{% endfor %}
 		</ul>
 		</li>
+    {% empty %}
+        <li> Matches haven't been uploaded yet! Check back in a day or two.</li>
 	{% endfor %}
 	</ul>
 	</li>
