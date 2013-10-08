@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from accounts.forms import EditPlayerForm, EditSchoolForm, PlayerLinkRequestForm, ApproveLinkRequestForm, UsernameReminderForm
+from accounts.forms import EditPlayerForm, EditSchoolForm, PlayerLinkRequestForm, EditLinkRequestForm, UsernameReminderForm
 from accounts.models import PendingPlayerLinkRequest, SchoolEditPermission
 from CGL.models import School, Player
 
@@ -29,6 +29,30 @@ def display_user_info(request):
 
     return render(request, 'user_info.html', locals())
 
+def edit_model_with_permissioncheck(request,
+            modelinstance,
+            modelform,
+            template_name,
+            success_redirect='/accounts/profile/',
+            no_permission_redirect='/accounts/profile/',
+            **kwargs):
+    '''
+    Generic model editing logic. Should be fairly self-explanatory.
+    If the template needs any extra context variables, they can be
+    passed in through **kwargs.
+    '''
+    if SchoolEditPermission.objects.has_edit_permissions(request.user, modelinstance):
+        if request.method == 'POST':
+            form = modelform(request.POST, instance=modelinstance)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect(success_redirect)
+        else:
+            form = modelform(instance=modelinstance)
+        return render(request, template_name, dict(locals().items() + kwargs.items()))
+    else:
+        return HttpResponseRedirect(no_permission_redirect)
+
 @login_required
 def edit_profile_info(request):
     try:
@@ -36,15 +60,12 @@ def edit_profile_info(request):
     except:
         return HttpResponseRedirect('/accounts/profile/')
 
-    if request.method == 'POST': 
-        form = EditPlayerForm(request.POST, instance=player)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/accounts/profile/')
-    else:
-        form = EditPlayerForm(instance=player)
-
-    return render(request, 'edit_player_info.html', locals())
+    return edit_model_with_permissioncheck(request,
+                 modelinstance=player,
+                 modelform=EditPlayerForm,
+                 template_name='edit_player_info.html',
+                 success_redirect='/accounts/profile/',
+                 no_permission_redirect='/accounts/profile/')
 
 @login_required
 def create_player(request, school_slug):
@@ -66,36 +87,56 @@ def create_player(request, school_slug):
 @login_required
 def edit_player_info(request, player_id):
     player = get_object_or_404(Player, id=player_id)
-    if SchoolEditPermission.objects.has_edit_permissions(request.user, player):
-        if request.method == 'POST': 
-            form = EditPlayerForm(request.POST, instance=player)
-            if form.is_valid():
-                form.save()
-                return HttpResponseRedirect('/accounts/profile/')
-        else:
-            form = EditPlayerForm(instance=player)
+    return edit_model_with_permissioncheck(request,
+                 modelinstance=player,
+                 modelform=EditPlayerForm,
+                 template_name='edit_player_info.html',
+                 success_redirect='/accounts/profile/',
+                 no_permission_redirect='/accounts/profile/')
 
-        return render(request, 'edit_player_info.html', locals())
+@login_required
+def create_game(request):
+    pass
+
+@login_required
+def edit_game_info(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
+    return edit_model_with_permissioncheck(request,
+                 modelinstance=game,
+                 modelform=EditGameForm,
+                 template_name='edit_game_info.html',
+                 success_redirect='/accounts/profile/',
+                 no_permission_redirect='/accounts/profile/')
+    
+@login_required
+def create_forfeit(request, match_id):
+    pass
+
+@login_required
+def edit_forfeit_info(request, forfeit_id):
+    forfeit = get_object_or_404(Forfeit, id=forfeit_id)
+    if forfeit.match.round.in_near_past():
+        return edit_model_with_permissioncheck(request,
+                 modelinstance=forfeit,
+                 modelform=EditForfeitForm,
+                 template_name='edit_forfeit_info.html',
+                 success_redirect='/accounts/profile/',
+                 no_permission_redirect='/accounts/profile/')
     else:
         return HttpResponseRedirect('/accounts/profile/')
 
-    
+
 @login_required
 def edit_school_info(request, school_slug):
     school = get_object_or_404(School, slug_name=school_slug)
-    if school in SchoolEditPermission.objects.get_all_schools(request.user):
-        if request.method == 'POST': 
-            form = EditSchoolForm(request.POST, instance=school)
-            if form.is_valid():
-                form.save()
-        else:
-            form = EditSchoolForm(instance=school)
-        return render(request, 'edit_school_info.html', locals())
+    return edit_model_with_permissioncheck(request,
+                 modelinstance=school,
+                 modelform=EditSchoolForm,
+                 template_name='edit_school_info.html',
+                 success_redirect='/accounts/profile/',
+                 no_permission_redirect='/accounts/profile/',
+                 school=school)
 
-    else:
-        return HttpResponseRedirect('/accounts/profile/')
-
-@login_required
 def link_to_player(request):
     if request.method == 'POST':
         form = PlayerLinkRequestForm(request.POST)
@@ -112,23 +153,18 @@ def link_to_player(request):
 
 @login_required
 def display_all_link_requests(request):
+    all_school_perms = SchoolEditPermission.objects.get_all_schools(request.user)
     all_requests = PendingPlayerLinkRequest.objects.all()
     relevant_requests = [r for r in all_requests
-            if SchoolEditPermission.objects.has_edit_permissions(request.user, r.player)]
+            if r.player.school in all_school_perms]
     return render(request, 'all_link_requests.html', locals())
 
 @login_required
-def display_link_request(request, link_request_id):
+def edit_link_request(request, link_request_id):
     link_request = PendingPlayerLinkRequest.objects.get(id=link_request_id)
-    if SchoolEditPermission.objects.has_edit_permissions(request.user, link_request.player):
-        if request.method == 'POST':
-            form = ApproveLinkRequestForm(request.POST, instance=link_request)
-            if form.is_valid():
-                form.save()
-                return HttpResponseRedirect('/accounts/link_requests/')
-        else:
-            form = ApproveLinkRequestForm(instance=link_request)
-
-        return render(request, 'approve_link_request.html', locals())
-    else:
-        return HttpResponseRedirect('/accounts/link_requests/')
+    return edit_model_with_permissioncheck(request,
+                 modelinstance=link_request,
+                 modelform=EditLinkRequestForm,
+                 template_name='approve_link_request.html',
+                 success_redirect='/accounts/link_requests/',
+                 no_permission_redirect='/accounts/profile/')
