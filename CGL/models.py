@@ -179,8 +179,11 @@ class Round(models.Model):
     def in_past(self):
         return self.date <= datetime.date.today()
 
-    def upcoming_or_inpast(self):
-        return self.date <= (datetime.date.today() + datetime.timedelta(days=14))
+    def in_near_future(self):
+        return self.in_future() and self.date < datetime.date.today() + datetime.timedelta(days=14)
+
+    def in_near_past(self):
+        return self.in_past() and self.date > datetime.date.today() - datetime.timedelta(days=14)
 
 class Bye(models.Model):
     school = models.ForeignKey(School)

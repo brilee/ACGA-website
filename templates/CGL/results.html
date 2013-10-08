@@ -17,7 +17,8 @@
 		<th>Wins  </th>
 		<th>Losses  </th>
 		<th>Ties  </th>
-		<th><span style="color:red">Forfeited Games</span></th>
+        <th>Byes </th>
+        <th><span style="color:red">Forfeited Games</span></th>
 	</tr>
 {% for membership in season.membership_set.all %}
 	<tr>
@@ -25,6 +26,7 @@
 		<td>{{membership.num_wins}}</td>
 		<td>{{membership.num_losses}}</td>
 		<td>{{membership.num_ties}}</td>
+        <td>{{membership.num_byes}}</td>
 		<td>{{membership.num_forfeits}}</td>
 	</tr>
 {% endfor %} 
@@ -37,10 +39,12 @@
 <h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList disc">
 {% for round in season.round_set.all %}
-{% if not round.upcoming_or_inpast %}
+{% if round.in_future %}
+    {% if not round.in_near_future %}
 <li><h3 style="color:#888;">{{round.date}}</h3></li>
-{% elif not round.in_past %}
+    {% else %}
 <li><h3>{{round.date}}</h3></li>
+    {% endif %}
 {% else %}
 <li>
 	<h3 class="clickable">[+] {{round.date}}</h3>
@@ -55,12 +59,12 @@
 			{{forfeit.display_result|safe}}
 		{% endfor %}
 		</ul>
-		</li>
+        </li>
     {% empty %}
         <li> Matches haven't been uploaded yet! Check back in a day or two.</li>
 	{% endfor %}
 	</ul>
-	</li>
+</li>
 {% endif %}
 {% endfor %}
 </ul>
