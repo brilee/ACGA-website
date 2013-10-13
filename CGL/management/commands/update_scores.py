@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
+from CGL.settings import current_season_name
 
 from datetime import date, timedelta
 
@@ -8,9 +9,9 @@ class Command(BaseCommand):
     help = '''Recalculates all player records, match scores, and school records
             for the requested season. Defaults to current season'''
 
-    def update_match_and_schools(self, current_season):
+    def update_match_and_schools(self, season):
         # reset all scores for this season; recompute from scratch.
-        for membership in Membership.objects.all().filter(season=current_season):
+        for membership in Membership.objects.all().filter(season=season):
             membership.num_wins = 0
             membership.num_losses = 0
             membership.num_ties = 0
@@ -20,17 +21,17 @@ class Command(BaseCommand):
             
         # compute the result of each match, based on games and forfeits
         # at the same time, tally up each school's wins/losses
-        for round in current_season.round_set.filter(date__lte=date.today()):
+        for round in season.round_set.filter(date__lte=date.today()):
             for b in round.bye_set.all():
-                mem = b.school.membership_set.get(season=current_season)
+                mem = b.school.membership_set.get(season=season)
                 mem.num_byes += 1
                 mem.save()
 
             for match in round.match_set.all():
                 m = match
                 
-                mem1 = m.school1.membership_set.get(season=current_season)
-                mem2 = m.school2.membership_set.get(season=current_season)
+                mem1 = m.school1.membership_set.get(season=season)
+                mem2 = m.school2.membership_set.get(season=season)
                 
                 # Clear previously calculated match record
                 m.score1 = 0
@@ -85,14 +86,18 @@ class Command(BaseCommand):
     
     def handle(self, *args, **options):
         if not args:
-            raise CommandError('Must provide a season name!')
+            self.stdout.write('No season names provided. Defaulting to %s\n' % current_season_name)
+            seasons = Season.objects.filter(name__startswith=current_season_name)
         else:
-            season = Season.objects.get(name=args[0])
-        self.stdout.write('Updating %s\n' % (season.name))
-        self.update_match_and_schools(season)
-        self.stdout.write('%s match records updated\n' % (season.name))
-        self.stdout.write('School records updated from match results\n')
+            seasons = [Season.objects.get(name=arg) for arg in args]
+        for season in seasons:
+            self.stdout.write('Updating %s\n' % (season.name))
+            self.update_match_and_schools(season)
+            self.stdout.write('%s match records updated\n' % (season.name))
+            self.stdout.write('School records updated from match results\n')
+        self.stdout.write('Updating player records\n')
         for player in Player.objects.all():
             self.update_player_record(player)
         self.stdout.write('All player records updated\n')
         self.stdout.write('Done!\n')
+
