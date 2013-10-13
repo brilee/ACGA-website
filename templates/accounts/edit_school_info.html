@@ -2,8 +2,8 @@
 
 {% block maintext %}
 <h4> Edit your school's information </h4>
-<form action="." method="post"> {% csrf_token %}
-{{form.as_p}}
+<form action="." method="post">
+{% include 'form_snippet.html' %}
 <input type="submit" value="Update information">
 </form>
 

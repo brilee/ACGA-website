@@ -1,0 +1,13 @@
+{% extends 'base_accounts.html' %}
+
+{% block maintext %}
+<h4> Editing game for {{match.display_match}} </h4>
+<p>Hint - the name of the match tells you (School1 vs. School2)</p>
+<p>All fields are required. If you don't know a player's name, select the Unknown Player.</p>
+<p>(You will not be able to edit this game record once two weeks have passed) </p>
+<hr />
+<form action="." method="post">
+{% include 'form_snippet.html' %}
+<input type="submit" value="Update game information">
+</form>
+{% endblock %}

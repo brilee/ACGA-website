@@ -1,0 +1,11 @@
+{% extends 'base_accounts.html' %}
+
+{% block maintext %}
+<h4> Editing forfeit for {{match.display_match}} </h4>
+<p>The name of the match tells you (School1 vs. School2)</p>
+<p>(You will not be able to edit this forfeit record once two weeks have passed) </p>
+<form action="." method="post"> 
+{% include 'form_snippet.html' %}
+<input type="submit" value="Update forfeit information">
+</form>
+{% endblock %}

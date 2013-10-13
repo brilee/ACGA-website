@@ -53,10 +53,10 @@
 		<li><h5>[+] <a href="{{match.school1.get_absolute_url}}">{{match.school1.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.school2.get_absolute_url}}">{{match.school2.name}}</a></h5>
 		<ul>
 		{% for game in match.game_set.all %}
-			{{game.display_result|safe}}		
+			<li>{{game.display_result|safe}}</li>		
 		{% endfor %}
 		{% for forfeit in match.forfeit_set.all %}
-			{{forfeit.display_result|safe}}
+			<li>{{forfeit.display_result|safe}}</li>
 		{% endfor %}
 		</ul>
         </li>

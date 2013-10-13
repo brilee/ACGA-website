@@ -13,6 +13,8 @@ class SchoolEditPermissionManager(models.Manager):
             return obj.school in schoolperms
         elif type(obj) == School:
             return obj in schoolperms
+        elif type(obj) == Match:
+            return obj.school1 in schoolperms or obj.school2 in schoolperms
         elif type(obj) == Game:
             return obj.match.school1 in schoolperms or obj.match.school2 in schoolperms
         elif type(obj) == Forfeit:

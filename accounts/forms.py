@@ -47,6 +47,13 @@ class EditGameForm(forms.ModelForm):
         model = Game
         fields = ['board', 'gamefile', 'white_school', 'winning_school', 'school1_player', 'school2_player']
 
+    def __init__(self, *args, **kwargs):
+        match = kwargs.pop('match', False)
+        super(EditGameForm, self).__init__(*args, **kwargs)
+        if match:
+            self.fields['school1_player'].queryset = Player.objects.filter(school = match.school1)
+            self.fields['school2_player'].queryset = Player.objects.filter(school = match.school2)
+
 class EditForfeitForm(forms.ModelForm):
     '''
     A form that lets team captains edit or create a forfeit

@@ -63,7 +63,7 @@ class Player(models.Model):
                     [(100, '??')])
     name = models.CharField(max_length=30)
     slug_name = models.SlugField(blank=True, editable=False)
-    rank = models.IntegerField(choices = RANK_CHOICES, blank=True, default= 100)
+    rank = models.IntegerField(choices = RANK_CHOICES, default= 100)
     KGS_username = models.CharField(max_length=12, blank=True)
     school = models.ForeignKey(School)
     num_wins = models.IntegerField(editable=False, default = 0)
@@ -242,8 +242,8 @@ class Game(models.Model):
     
     match = models.ForeignKey(Match, help_text="This field determines who's 'School1' and who's 'School2'.")
     board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
-    gamefile = models.FileField(upload_to=upload_location)
-    white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are formatted whitePlayer-blackPlayer")
+    gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
+    white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are usually formatted whitePlayer-blackPlayer")
     winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
     school1_player = models.ForeignKey(Player, related_name="game_school1_player")
     school2_player = models.ForeignKey(Player, related_name="game_school2_player")
@@ -306,9 +306,7 @@ class Game(models.Model):
         sgf = wrap_tag('[sgf]', 'a', extras='href="%s"' % self.gamefile.url)
         game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.get_absolute_url())
         
-        almost_done = '%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2)
-
-        return unicode(wrap_tag(almost_done, 'li'))
+        return unicode('%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2))
 
     def __unicode__(self):
         return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))
@@ -327,11 +325,13 @@ class Forfeit(models.Model):
 
     def display_result(self):
         if self.school1_noshow and self.school2_noshow:
-            return unicode('<li>Board %s: Both schools failed to show</li>' % self.board)
+            return unicode('Board %s: Both schools failed to show' % self.board)
         elif self.school1_noshow and not self.school2_noshow:
-            return unicode('<li>Board %s: %s forfeits this board</li>' % (self.board, self.match.school1.name))
+            return unicode('Board %s: %s forfeits this board' % (self.board, self.match.school1.name))
         elif not self.school1_noshow and self.school2_noshow:
-            return unicode('<li>Board %s: %s forfeits this board</li>' % (self.board, self.match.school2.name))
+            return unicode('Board %s: %s forfeits this board' % (self.board, self.match.school2.name))
+        else:
+            return unicode('Board %s: Invalid forfeit record, at least one school must be marked as noshow' % self.board)
 
     def __unicode__(self):
         return unicode('%s vs %s on %s, board %s' %(self.match.school1, self.match.school2, self.match.round.date, self.board))

@@ -17,7 +17,7 @@ To change the season displayed on the website, edit the file at /CGL/settings.py
 There are some new commands under ./manage.py for your convenience, stored at /CGL/management/commands:
 
 ./manage.py update_scores <Season Name>
-This recalculates match results, school records, and player records for the current season, based on all database entries for games played. It's computationally intensive. It used to be run upon any update to a match, but that was way too slow. Now I run it once every two weeks, after I've finished adding that round's games.
+This recalculates match results, school records, and player records for the current season, based on all database entries for games played. It's computationally intensive. It used to be run upon any update to a match, but that was way too slow. Now I run it every day on midnight with a cronjob.
 
 ./manage.py round_pairings <Season Name>
 This generates round pairings for the next round, as determined by date. The pitfall of doing all pairings at the start of season is that new schools may have signed up in the meantime. Thus, it should be executed on the Sunday before a match, and a reminder email sent out to team captains to let us know if they can't make the match.

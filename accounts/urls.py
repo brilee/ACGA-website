@@ -10,11 +10,12 @@ urlpatterns = patterns('accounts.views',
     (r'^username_reminder/done/$', direct_to_template, {'template': 'username_reminder_done.html'}),
     (r'^profile/$', 'display_user_info'),
     (r'^edit/profile/$', 'edit_profile_info'),
-    (r'^edit/player_link/$', 'link_to_player'),
+    (r'^edit/player_link/$', 'create_link_request'),
     (r'^edit/player_link/done$', direct_to_template, {'template': 'player_link_done.html'}),
     (r'^edit/school/([A-Za-z_-]{1,50})/$', 'edit_school_info'),
     (r'^edit/school/([A-Za-z_-]{1,50})/create/player/$', 'create_player'),
     (r'^edit/player/([0-9]{1,4})/$', 'edit_player_info'),
+    (r'^show/matches/', 'display_all_matches'),
     (r'^edit/match/([0-9]{1,4})/create/game/$', 'create_game'),
     (r'^edit/match/([0-9]{1,4})/create/forfeit/$', 'create_forfeit'),
     (r'^edit/game/([0-9]{1,4})/$', 'edit_game_info'),
@@ -27,4 +28,5 @@ urlpatterns += patterns('',
     # Account registration/login
     (r'', include('registration.backends.default.urls')),
 )
+
 
