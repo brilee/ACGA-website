@@ -52,12 +52,12 @@ class Command(BaseCommand):
         if len(args) != 1:
             raise CommandError('Must specify exactly one season name!')
         season_name = args[0]
-        next_round = Round.objects.get_next_round(season_name)
+        current_season = Season.objects.get(name=season_name)
+
+        next_round = Round.objects.get_next_round(current_season)
         if not next_round:
             raise CommandError('No upcoming round. Create a round first')
             
-        current_season = Season.objects.get(name=season_name)
-
         # Only retrieves schools that are participating in this season
         # and that have not withdrawn from play.
         all_schools = current_season.schools.filter(membership__still_participating = True)
@@ -77,6 +77,9 @@ class Command(BaseCommand):
 
         unmatched_schools = all_schools.exclude(id__in=(matched_schools + flagged_bye_schools))
 
+        if len(unmatched_schools) < 2:
+            raise CommandError('There are fewer than two unmatched schools. Maybe delete matches and try again?')
+
         # Sort school by number of byes. 
         # This ensures that schools with the most byes are guaranteed to
         # play in the next round. As a side effect, byes from the future
@@ -84,7 +87,7 @@ class Command(BaseCommand):
         # a bye in the future should get a chance to play now, when they can.
         def get_byes(school):
             return len(Bye.objects.filter(round__season=current_season, school=school))
-        unmatched_schools = sorted(unmatched_schools, key=lambda s: get_byes(s, current_season), reverse=True)
+        unmatched_schools = sorted(unmatched_schools, key=lambda s: get_byes(s), reverse=True)
         
         # Find existing matches, so that we don't match up two schools again.
         # This also select matches that are prescheduled for the future.
@@ -141,7 +144,7 @@ class Command(BaseCommand):
                               )
                     new_match.save()
                 if unmatched:
-                    bye = Bye(round=next_round, school=unmatched)
+                    bye = Bye(round=next_round, school=unmatched[0])
                     bye.save()
                 break
             if finalize == 'quit':
