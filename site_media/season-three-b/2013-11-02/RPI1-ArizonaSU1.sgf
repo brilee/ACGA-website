@@ -1,0 +1,316 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[RPI1]PB[ArizonaSU1]DT[2013-11-02]PC[The KGS Go Server at http://www.gokgs.com/]RE[B+Resign]
+;B[pd]BL[1795.539]
+;W[dp]WL[1794.568]
+;B[pq]BL[1792.928]
+;W[dd]WL[1790.488]
+;B[fq]BL[1790.223]
+;W[ip]WL[1764.327]
+;B[fc]BL[1779.961]
+;W[qf]WL[1747.547]
+;B[nd]BL[1771.389]
+;W[qn]WL[1697.341]
+;B[qp]BL[1723.935]
+;W[pj]WL[1690.455]
+;B[mp]BL[1694.445]
+;W[eq]WL[1670.911]
+;B[cf]BL[1671.47]
+;W[ee]WL[1666.386]
+;B[cc]BL[1667.598]
+;W[fp]WL[1644.39]C[UMinn3 [-\]: 前来围观
+]
+;B[cd]BL[1645.674]
+;W[ck]WL[1583.655]
+;B[rd]BL[1532.168]C[RPI3 [-\]: 围观什么的
+RPI2 [-\]: 我这边开了
+]
+;W[lc]WL[1483.002]
+;B[jc]BL[1524.84]
+;W[oc]WL[1456.282]
+;B[od]BL[1476.345]
+;W[jb]WL[1348.984]
+;B[kb]BL[1455.415]
+;W[kc]WL[1347.192]
+;B[lb]BL[1453.712]
+;W[ib]WL[1341.727]
+;B[mc]BL[1406.43]
+;W[jd]WL[1339.406]
+;B[ci]BL[1389.817]
+;W[gd]WL[1332.49]
+;B[eb]BL[1333.791]
+;W[ek]WL[1318.856]
+;B[hc]BL[1326.983]
+;W[gc]WL[1300.918]C[UMinn3 [-\]: 重庆对贵州级别的比赛- -古力时越乃们好
+]
+;B[hb]BL[1319.704]
+;W[ic]WL[1258.818]
+;B[hd]BL[1317.143]
+;W[gb]WL[1256.729]
+;B[he]BL[1270.023]
+;W[eg]WL[1188.09]
+;B[ff]BL[1234.502]
+;W[cg]WL[1176.463]
+;B[df]BL[1223.501]
+;W[ef]WL[1167.678]
+;B[dg]BL[1221.992]
+;W[dh]WL[1118.247]
+;B[ch]BL[1211.435]
+;W[gh]WL[1110.409]
+;B[hg]BL[1192.026]
+;W[hh]WL[1069.048]
+;B[jf]BL[1187.336]
+;W[ig]WL[993.501]
+;B[if]BL[1141.553]
+;W[gg]WL[988.122]
+;B[ge]BL[1133.382]
+;W[le]WL[945.849]
+;B[jg]BL[1125.981]
+;W[hf]WL[934.039]
+;B[lg]BL[1090.584]
+;W[md]WL[903.216]
+;B[nc]BL[1027.59]
+;W[ne]WL[891.334]
+;B[mf]BL[1024.353]
+;W[me]WL[888.961]
+;B[pf]BL[1022.452]
+;W[kf]WL[685.443]
+;B[kg]BL[1017.738]
+;W[lf]WL[640.737]
+;B[ng]BL[997.587]
+;W[fd]WL[614.3]
+;B[ga]BL[882.63]
+;W[ie]WL[526.696]
+;B[fb]BL[804.664]
+;W[id]WL[451.788]
+;B[qg]BL[779.979]
+;W[og]WL[439.101]C[RPI2 [-\]: 这是啥情况。。。。。
+]
+;B[nf]BL[647.862]
+;W[of]WL[425.036]
+;B[oe]BL[644.992]
+;W[nh]WL[402.24]
+;B[mg]BL[641.979]
+;W[je]WL[335.544]
+;B[oh]BL[620.413]
+;W[qi]WL[315.043]
+;B[kq]BL[586.55]
+;W[jq]WL[278.151]
+;B[kp]BL[545.745]
+;W[kr]WL[275.825]
+;B[lr]BL[542.086]
+;W[in]WL[269.953]
+;B[il]BL[484.385]
+;W[ij]WL[165.407]
+;B[kl]BL[442.135]
+;W[hl]WL[154.117]
+;B[ei]BL[437.43]
+;W[dc]WL[114.356]
+;B[db]BL[408.682]
+;W[fa]WL[111.694]
+;B[ea]BL[391.683]
+;W[eh]WL[46.822]
+;B[bk]BL[377.523]
+;W[bj]WL[30]OW[4]
+;B[cj]BL[360.428]
+;W[bl]WL[30]OW[4]
+;B[dk]BL[358.588]
+;W[cl]WL[30]OW[4]
+;B[bi]BL[357.089]
+;W[ak]WL[30]OW[4]
+;B[ql]BL[318.882]
+;W[pl]WL[30]OW[4]
+;B[qm]BL[313.856]
+;W[pm]WL[30]OW[4]
+;B[rn]BL[286.758]C[ArizonaSU3 [-\]: 怎麼打中文呢
+ArizonaSU3 [-\]: 喔 打了....
+]
+;W[qk]WL[30]OW[4]C[RPI2 [-\]: 。。。。。。。。
+RPI2 [-\]: 。。。。。
+]
+;B[pn]BL[275.55]C[RPI3 [-\]: ASU3你太壞了
+RPI2 [-\]: 你不出勺子也输了
+]
+;W[rg]WL[30]OW[4]
+;B[rf]BL[255.098]
+;W[qh]WL[30]OW[4]C[ArizonaSU3 [-\]: 我不知道  不出金雞獨立 有人幫我點目嗎
+]
+;B[pg]BL[252.205]C[ArizonaSU3 [-\]: 我是覺得中間圍頗大的
+RPI2 [-\]: 你盘面领先
+]
+;W[on]WL[30]OW[4]C[RPI2 [-\]: 帮你们点了
+]
+;B[qo]BL[247.238]C[RPI2 [-\]: 黑棋中间太臭
+RPI3 [-\]: 不被吃大概輸10目
+]
+;W[nm]WL[30]OW[4]C[RPI3 [-\]: 手滑就被中間圍起來了
+RPI2 [-\]: 这棋都能被围起来
+ArizonaSU3 [-\]: 明明就是我厚
+]
+;B[jr]BL[216.117]
+;W[ir]WL[30]OW[4]
+;B[ks]BL[214.863]
+;W[op]WL[30]OW[4]C[RPI2 [-\]: 不不不
+]
+;B[no]BL[204.644]C[RPI2 [-\]: 黑送了不少
+]
+;W[oo]WL[30]OW[4]
+;B[oq]BL[202.081]C[RPI2 [-\]: 这棋为啥不动了
+RPI3 [-\]: 跑進去的時候太深了
+]
+;W[sf]WL[30]OW[4]C[ArizonaSU3 [-\]: 沒辦法啊  我也送了你不少
+]
+;B[re]BL[184.969]C[RPI2 [-\]: 对
+RPI2 [-\]: 右上角你怎么就被吃了
+ArizonaSU3 [-\]: 不狠一點會輸
+]
+;W[np]WL[30]OW[4]C[RPI2 [-\]: 我这边没看到
+ArizonaSU3 [-\]: 不小心....
+RPI2 [-\]: = =
+ArizonaSU3 [-\]: 腦殘
+]
+;B[nq]BL[153.505]C[RPI2 [-\]: 错进错出
+RPI3 [-\]: 問題出在
+RPI3 [-\]: 為什麼是分先..
+]
+;W[nj]WL[30]OW[4]C[RPI3 [-\]: 我只是個1d雜魚啊啊
+ArizonaSU3 [-\]: ..........kgs嗎?
+]
+;B[is]BL[129.095]C[RPI3 [-\]: 不要在意細節
+ArizonaSU3 [-\]: 我kgs也只下到1d
+RPI2 [-\]: 我原来下棋都不在KGS下。。。。
+UMinn3 [-\]: cgl的人来看对局记录会疯掉的
+]
+;W[hs]WL[30]OW[4]C[ArizonaSU3 [-\]: 我棋城也只有3d
+]
+;B[hr]BL[112.485]
+;W[js]WL[30]OW[4]
+;B[ke]BL[107.261]C[ArizonaSU3 [-\]: 然後我很久沒下了 差不多啦
+]
+;W[kd]WL[30]OW[4]C[RPI2 [-\]: 有在弈城下的嘛。。
+]
+;B[is]BL[103.589]C[RPI3 [-\]: 沒！
+RPI2 [-\]: 我们都很久没下了
+]
+;W[ce]WL[30]OW[4]C[RPI3 [-\]: 因為TOM超棒的
+]
+;B[be]BL[101.096]
+;W[js]WL[30]OW[4]C[RPI2 [-\]: 。。。。我Tom打到过9
+RPI3 [-\]: 9d哦？
+RPI2 [-\]: 恩
+RPI3 [-\]: WTF
+]
+;B[dj]BL[73.817]C[ArizonaSU3 [-\]: 湯姆是誰
+RPI2 [-\]: 真的打到过
+RPI3 [-\]: 大陸的圍棋平台
+RPI2 [-\]: 一个下棋的软件
+RPI2 [-\]: 原来职业高手都在那里下
+]
+;W[dl]WL[30]OW[4]
+;B[is]BL[71.795]
+;W[bf]WL[30]OW[4]C[RPI2 [-\]: 现在全到弈城了
+]
+;B[bg]BL[67.411]
+;W[js]WL[30]OW[4]C[RPI3 [-\]: 林聖賢在上面也只有8d
+RPI3 [-\]: 你竟然9
+RPI2 [-\]: 弈城9全是古力神马的
+RPI2 [-\]: 我只能打到8
+RPI2 [-\]: 我Tom真心到过9
+ArizonaSU3 [-\]: rpi2這麼強啊
+]
+;B[fk]BL[22.45]C[ArizonaSU3 [-\]: 還好我只有三將 ㄎㄎㄎ
+]
+;W[el]WL[30]OW[4]
+;B[is]BL[19.432]C[RPI3 [-\]: 顆顆。
+]
+;W[de]WL[30]OW[4]
+;B[af]BL[15.276]C[RPI2 [-\]: 。。。。
+]
+;W[js]WL[30]OW[4]C[RPI3 [-\]: 下次我去rpi1
+RPI3 [-\]: 1去2 2去3
+RPI2 [-\]: 李学长便秘了？
+ArizonaSU3 [-\]: 好的
+]
+;B[hm]BL[30]OB[5]C[RPI2 [-\]: 学长
+RPI2 [-\]: 来barton一趟
+RPI2 [-\]: 我不会截图
+RPI3 [-\]: 誒
+]
+;W[kr]WL[30]OW[3]
+;B[gl]BL[30]OB[5]
+;W[hk]WL[30]OW[3]
+;B[jr]BL[30]OB[5]
+;W[is]WL[30]OW[3]
+;B[im]BL[30]OB[5]
+;W[kn]WL[30]OW[3]C[RPI3 [-\]: 簡直鬼畜的一盤
+]
+;B[kj]BL[30]OB[5]
+;W[kr]WL[30]OW[3]C[UMinn3 [-\]: rpi2\\3都赢了吧
+]
+;B[gj]BL[30]OB[5]C[RPI3 [-\]: 贏了頭..
+]
+;W[fi]WL[30]OW[3]C[RPI3 [-\]: 被殺成狗
+RPI2 [-\]: 卧槽
+]
+;B[ej]BL[30]OB[5]C[RPI2 [-\]: 我说我怎么觉得俩人都在pass
+RPI2 [-\]: 我这里显示有问题
+RPI3 [-\]: ....
+]
+;W[fj]WL[30]OW[3]C[RPI2 [-\]: 都下这么多了我才显示到20多手
+RPI2 [-\]: 重新进了一下好了
+RPI3 [-\]: ....
+]
+;B[hj]BL[30]OB[4]
+;W[ik]WL[30]OW[3]
+;B[gk]BL[30]OB[4]
+;W[ii]WL[30]OW[3]
+;B[gn]BL[30]OB[4]
+;W[fm]WL[30]OW[3]
+;B[gm]BL[30]OB[4]
+;W[jk]WL[30]OW[3]
+;B[km]BL[30]OB[4]
+;W[kk]WL[30]OW[3]
+;B[lk]BL[30]OB[4]C[ArizonaSU3 [-\]: RPI3我沒殺你好嗎  你自己自爆的....@@
+RPI3 [-\]: 一樣啦
+ArizonaSU3 [-\]: 都不跟我打劫
+]
+;W[lj]WL[30]OW[3]C[RPI3 [-\]: 我看成雙活
+RPI3 [-\]: 感謝偉大的讀秒
+RPI2 [-\]: = =
+RPI2 [-\]: 读秒。。。
+RPI3 [-\]: 打劫也肯定打不過
+ArizonaSU3 [-\]: 你怎麼也能打繁中
+]
+;B[ln]BL[30]OB[3]C[RPI3 [-\]: 因為我是你老鄉
+RPI2 [-\]: 明显没下过10秒1盘的。。。。
+ArizonaSU3 [-\]: 我會讓你 我喜歡和平
+RPI3 [-\]: 鬼啦！
+]
+;W[ll]WL[30]OW[3]C[ArizonaSU3 [-\]: 喔 哪裡來的
+]
+;B[mk]BL[30]OB[3]C[RPI2 [-\]: 我先下了同志们。。。。
+ArizonaSU3 [-\]: 掰
+RPI2 [-\]: 88
+RPI3 [-\]: 白
+RPI3 [-\]: 我是台北人..
+]
+;W[ml]WL[30]OW[3]C[ArizonaSU3 [-\]: 嗯 
+]
+;B[mj]BL[30]OB[3]C[RPI3 [-\]: 這盤實在太高級了根本看不懂
+]
+;W[ko]WL[30]OW[2]
+;B[lm]BL[30]OB[3]C[UMinn3 [-\]: 有黑嘉嘉的粉丝么~
+]
+;W[lo]WL[30]OW[2]C[RPI3 [-\]: 你
+]
+;B[mo]BL[30]OB[3]
+;W[lp]WL[30]OW[2]
+;B[mm]BL[30]OB[3]
+;W[nl]WL[30]OW[2]C[UMinn3 [-\]: 0 0
+]
+;B[lq]BL[30]OB[3]
+;W[jh]WL[30]OW[2]
+;B[gp]BL[30]OB[3]C[RPI3 [-\]: gg
+ArizonaSU3 [-\]: good
+RPI1 [-\]: gg
+])
