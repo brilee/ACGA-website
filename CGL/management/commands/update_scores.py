@@ -30,9 +30,6 @@ class Command(BaseCommand):
             for match in round.match_set.all():
                 m = match
                 
-                mem1 = m.school1.membership_set.get(season=season)
-                mem2 = m.school2.membership_set.get(season=season)
-                
                 # Clear previously calculated match record
                 m.score1 = 0
                 m.score2 = 0
@@ -44,18 +41,26 @@ class Command(BaseCommand):
                     else:
                         m.score2 += 1
                 for forfeit in m.forfeit_set.all():
-                    if forfeit.school1_noshow and forfeit.school2_noshow:
-                        mem1.num_forfeits += 1
-                        mem2.num_forfeits += 1
-                    elif forfeit.school1_noshow and not forfeit.school2_noshow:
+                    if forfeit.school1_noshow and not forfeit.school2_noshow:
                         m.score2 += 1
-                        mem1.num_forfeits += 1
                     elif forfeit.school2_noshow and not forfeit.school1_noshow:
                         m.score1 += 1
-                        mem2.num_forfeits += 1
                 m.save()
 
+
+                if m.is_exhibition:
+                    # shortcircuit here. don't want to count exhibition matches
+                    # towards season results.
+                    continue
                 # Update the school's scores based on match result
+                mem1 = m.school1.membership_set.get(season=season)
+                mem2 = m.school2.membership_set.get(season=season)
+               
+                for forfeit in m.forfeit_set.all():
+                    if forfeit.school1_noshow:
+                        mem1.num_forfeits += 1
+                    if forfeit.school2_noshow:
+                        mem2.num_forfeits += 1
                 if m.score1 > m.score2:
                     mem1.num_wins += 1
                     mem2.num_losses += 1

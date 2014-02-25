@@ -201,6 +201,7 @@ class Match(models.Model):
     school2 = models.ForeignKey(School, related_name="school2")
     score1 = models.IntegerField(editable=False, default=0)
     score2 = models.IntegerField(editable=False, default=0)
+    is_exhibition = models.BooleanField(default=False, help_text="This will cause match to not be considered in scoring")
 
    
     def __unicode__(self):

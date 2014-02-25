@@ -58,9 +58,10 @@ class Command(BaseCommand):
         if not next_round:
             raise CommandError('No upcoming round. Create a round first')
             
+        all_schools = current_season.schools.all()
         # Only retrieves schools that are participating in this season
         # and that have not withdrawn from play.
-        all_schools = current_season.schools.filter(membership__still_participating = True)
+        all_participating_schools = current_season.schools.filter(membership__still_participating = True)
 
         if len(all_schools) < 2:
             raise CommandError('Fewer than two schools are registered for the season')
@@ -75,7 +76,7 @@ class Command(BaseCommand):
         flagged_bye_schools = [bye.school.id 
                 for bye in Bye.objects.filter(round=next_round)]
 
-        unmatched_schools = all_schools.exclude(id__in=(matched_schools + flagged_bye_schools))
+        unmatched_schools = all_participating_schools.exclude(id__in=(matched_schools + flagged_bye_schools))
 
         if len(unmatched_schools) < 2:
             raise CommandError('There are fewer than two unmatched schools. Maybe delete matches and try again?')
@@ -109,7 +110,7 @@ class Command(BaseCommand):
         all_id = [school.id for school in unmatched_schools]
         max_id = max(school.id for school in all_schools) + 1
         match_matrix = [[0]*max_id for i in range(max_id)]
-        
+       
         for match in existing_matches:
             i, j = match.school1.id, match.school2.id
             match_matrix[i][j] = 1

@@ -13,19 +13,20 @@ A LEAGUE
 
 {% if unmatched_schoolsA %}
 The following schools get a bye:
-{% for s in unmatched_schoolsA %} {{s.name}}, {% last %}{{s.name}}.
+{% for s in unmatched_schoolsA %} {{s.name}}{% if forloop.last %}.{% else %},{% endif %}
 {% endfor %}
+{% endif %}
 
 B LEAGUE
 {% for match in next_roundB.match_set.all %}
     {{match.display_match}}
 {% endfor %}
 
-{% if unmatched_schoolsA %}
+{% if unmatched_schoolsB %}
 The following schools get a bye:
-{% for s in unmatched_schoolsA %} {{s.name}}, {% last %}{{s.name}}.
+{% for s in unmatched_schoolsB %} {{s.name}}{% if forloop.last %}.{% else %},{% endif %}
 {% endfor %}
-
+{% endif %}
 If your school cannot compete this Saturday, please let us know by the Wednesday before the matches!
 
 Good luck to all teams.
