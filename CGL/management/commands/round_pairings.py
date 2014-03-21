@@ -54,7 +54,7 @@ class Command(BaseCommand):
         season_name = args[0]
         current_season = Season.objects.get(name=season_name)
 
-        next_round = Round.objects.get_next_round(current_season)
+        next_round = current_season.round_set.get_next_round()
         if not next_round:
             raise CommandError('No upcoming round. Create a round first')
             

@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_season_name
+from CGL.settings import current_seasons
 
 from datetime import date, timedelta
 
@@ -91,8 +91,8 @@ class Command(BaseCommand):
     
     def handle(self, *args, **options):
         if not args:
-            self.stdout.write('No season names provided. Defaulting to %s\n' % current_season_name)
-            seasons = Season.objects.filter(name__startswith=current_season_name)
+            self.stdout.write('No season names provided. Defaulting to %s\n' % current_seasons)
+            seasons = [Season.objects.get(name=s) for s in current_seasons]
         else:
             seasons = [Season.objects.get(name=arg) for arg in args]
         for season in seasons:

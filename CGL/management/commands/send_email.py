@@ -1,8 +1,7 @@
 from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_season_nameA, current_season_nameB
-
+from CGL.settings import current_seasons
 
 from django.core.mail import send_mail
 
@@ -12,7 +11,9 @@ class Command(BaseCommand):
     option_list = BaseCommand.option_list + (make_option('--fake', default=False, help='Don\'t actually send the email. Default is false'),)
 
     def handle(self, *args, **options):
-        participating_schools = (set(m.school for m in Membership.objects.filter(season__name=current_season_nameA)) | set(m.school for m in Membership.objects.filter(season__name=current_season_nameB)))
+        participating_schools = set()
+        for season_name in current_seasons:
+            participating_schools = (participating_schools | set(m.school for m in Membership.objects.filter(season__name=season_name)))
 
         try:
             f = open('templates/rendered-email')

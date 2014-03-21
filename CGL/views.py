@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 from CGL.forms import CreateGameCommentForm
 from CGL.models import School, Season, Round, Membership, Game, Player, GameComment
-from settings import current_season_name
+from settings import current_seasons
 
 def display_school(request):
     all_schools = School.objects.filter(inCGL=True)
@@ -24,23 +24,17 @@ def display_roster(request, school_name):
 
     return direct_to_template(request, 'schools-detailed.html', locals())
 
-def redirect_to_current_season(request):
-    return redirect('/CGL/results/%s/' % slugify(current_season_name))
+def display_current_seasons(request):
+    return display_seasons(request, current_seasons)
     
-def display_season(request, season_name):
-    season_name = season_name.strip()
-    if (season_name.startswith('Season One') 
-            or season_name.startswith('Season Two')):
+def display_seasons(request, season_name):
+    if isinstance(season_name, basestring):
+        season_name = season_name.strip()
         requested_seasons = [get_object_or_404(Season, slug_name=season_name)]
-    else:
-        requested_seasons = get_list_or_404(Season, slug_name__contains=season_name)
-    # This is an ugly hack, but is necessary to get the correct league-splitting 
-    # behavior introduced starting in Season Three.
-    all_season_names = ['Season Three', 
-                        'Season Two Championship',
-                        'Season Two',
-                        'Season One Championship',
-                        'Season One',]
+    elif hasattr(season_name, '__iter__'):
+        requested_seasons = [get_object_or_404(Season, name=s) for s in season_name]
+
+    all_seasons = Season.objects.all() 
 
     return direct_to_template(request, 'results.html', locals())
 

@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_season_nameA, current_season_nameB
+from CGL.settings import current_seasons as current_season_names
 
 from django.template import Context, loader
 
@@ -15,20 +15,9 @@ class Command(BaseCommand):
             previous-round-results\n'''
 
     def handle(self, *args, **options):
-        seasonA = Season.objects.get(name=current_season_nameA)
-        seasonB = Season.objects.get(name=current_season_nameB)
-
-        try: 
-            next_roundA = Round.objects.get_next_round(seasonA)
-            next_roundB = Round.objects.get_next_round(seasonB)
-            previous_roundA = Round.objects.get_previous_round(seasonA)
-            previous_roundB = Round.objects.get_previous_round(seasonB)
-        except:
-            self.stdout.write('Warning: Previous or next round was not found.\n')
-        
-        unmatched_schoolsA = set(bye.school for bye in Bye.objects.filter(round=next_roundA))
-        unmatched_schoolsB = set(bye.school for bye in Bye.objects.filter(round=next_roundB))
-
+        current_seasons = [Season.objects.get(name=s) for s in current_season_names]
+        previous_round_date = Round.objects.get_previous_round().date
+        next_round_date = Round.objects.get_next_round().date
         c = Context(locals())
         
         try:

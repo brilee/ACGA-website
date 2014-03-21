@@ -3,7 +3,6 @@ from django.template.defaultfilters import slugify
 from django.db.models.signals import post_save
 from django.db.models import Count
 from django.contrib.auth import models as auth_models
-from settings import current_season_nameA, current_season_nameB
 import datetime
 import os
 
@@ -118,8 +117,7 @@ class Season(models.Model):
    
     @models.permalink
     def get_absolute_url(self):
-        return ('CGL.views.display_season', [str(self.slug_name)])
-
+        return ('CGL.views.display_seasons', [str(self.slug_name)])
 
 class Membership(models.Model):
     school = models.ForeignKey(School)
@@ -138,9 +136,11 @@ class Membership(models.Model):
         return unicode("%s in %s" %(self.school, self.season))
 
 class RoundManager(models.Manager):
-    def get_next_round(self, season):
+    # The season filter is implicit - generally you want to call these
+    # as "season.round_set.get_next_round()"
+    # A pity that django templates don't really curry correctly...
+    def get_next_round(self):
         next_round = super(RoundManager, self
-                     ).filter(season=season
                         ).filter(date__gte=datetime.datetime.now()
                         ).order_by('date')
         if next_round:
@@ -148,13 +148,16 @@ class RoundManager(models.Manager):
         else:
             return super(RoundManager,self).none()
 
-    def get_previous_round(self, season):
-        return self.get_recent_rounds(season, 1)[0]
+    def get_previous_round(self):
+        previous_round = self.get_recent_rounds(1)
+        if previous_round:
+            return previous_round[0]
+        else:
+            return super(RoundManager, self).none()
     
-    def get_recent_rounds(self, season, depth):
+    def get_recent_rounds(self, depth):
         ''' depth is how many recent rounds you want to retrieve'''
         all_past_rounds = super(RoundManager, self
-                     ).filter(season=season
                         ).filter(date__lt=datetime.datetime.now()
                         ).order_by('-date')
         if len(all_past_rounds) < depth:

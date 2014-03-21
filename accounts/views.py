@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from accounts.forms import *
 from accounts.models import *
 from CGL.models import School, Player, Match, Game, Forfeit
-from CGL.settings import current_season_name
+from CGL.settings import current_seasons
 
 def send_username_reminder(request):
     if request.method == 'POST':
@@ -208,7 +208,10 @@ def create_forfeit(request, match_id):
 @login_required
 def display_all_matches(request):
     all_school_perms = SchoolEditPermission.objects.get_all_schools(request.user)
-    season_matches = Match.objects.filter(round__season__name__startswith=current_season_name)
+    season_matches = Match.objects.none()
+    for season in (Season.objects.get(name=s) for s in current_seasons):
+        season_matches = season_matches | Match.objects.filter(round__season=season)
+
     relevant_matches = [m for m in season_matches
             if m.round.in_past()
             and (m.school1 in all_school_perms

@@ -2,31 +2,25 @@ Subject:[CGL] Next round: pairings announced
 
 Hi everyone,
 
-The next CGL round is scheduled for Saturday, {{next_roundA.date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:45pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
+The next CGL round is scheduled for Saturday, {{next_round_date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:45pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
 
 The following schools are matched (KGS account name prefix in parentheses):
 
-A LEAGUE
-{% for match in next_roundA.match_set.all %}
+{% for season in current_seasons %}
+{% with next_round=season.round_set.get_next_round %}
+{{season.name}}
+    {% for match in next_round.match_set.all %}
     {{match.display_match}}
-{% endfor %}
+    {% endfor %}
 
-{% if unmatched_schoolsA %}
+    {% if next_round.bye_set %}
 The following schools get a bye:
-{% for s in unmatched_schoolsA %} {{s.name}}{% if forloop.last %}.{% else %},{% endif %}
-{% endfor %}
-{% endif %}
+{% for bye in next_round.bye_set.all %} {{bye.school.name}}{% if forloop.last %}.{% else %},{% endif %}{% endfor %}
+    {% endif %}
 
-B LEAGUE
-{% for match in next_roundB.match_set.all %}
-    {{match.display_match}}
+{% endwith %}
 {% endfor %}
 
-{% if unmatched_schoolsB %}
-The following schools get a bye:
-{% for s in unmatched_schoolsB %} {{s.name}}{% if forloop.last %}.{% else %},{% endif %}
-{% endfor %}
-{% endif %}
 If your school cannot compete this Saturday, please let us know by the Wednesday before the matches!
 
 Good luck to all teams.
