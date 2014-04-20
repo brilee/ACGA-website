@@ -15,9 +15,12 @@ class Command(BaseCommand):
             previous-round-results\n'''
 
     def handle(self, *args, **options):
-        current_seasons = [Season.objects.get(name=s) for s in current_season_names]
-        previous_round_date = Round.objects.get_previous_round().date
-        next_round_date = Round.objects.get_next_round().date
+        try:
+            current_seasons = [Season.objects.get(name=s) for s in current_season_names]
+            previous_round_date = Round.objects.get_previous_round().date
+            next_round_date = Round.objects.get_next_round().date
+        except Exception, e:
+            self.stdout.write('Warning: Couldn\'t find previous or next round date.')
         c = Context(locals())
         
         try:
