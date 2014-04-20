@@ -32,7 +32,7 @@ For example: ./manage.py send_email --all=True, --fake=True
 
         if options['all']:
             recipients = ([school.contact_email for school in School.objects.all()] +
-                          [player.user.email for player in Player.objects.all()]
+                          [player.user.email for player in Player.objects.all()
                                              if (player.user and player.receiveSpam)])
         else:
             recipients = ([school.contact_email for school in participating_schools] +
