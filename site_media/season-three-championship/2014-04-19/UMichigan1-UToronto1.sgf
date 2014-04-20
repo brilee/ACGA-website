@@ -1,0 +1,324 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UMichigan1]PB[UToronto1]DT[2014-04-19]PC[The KGS Go Server at http://www.gokgs.com/]RE[B+Resign]
+;B[pc]BL[1795.018]
+;W[qp]WL[1794.21]C[UToronto1 [-\]: hi
+UMichigan1 [-\]: Hi
+]
+;B[cd]BL[1789.916]C[UMichigan1 [-\]: Here is Zifan Yang
+UMichigan1 [-\]: GL HF!
+]
+;W[dp]WL[1762.559]C[UToronto1 [-\]: This is Ryan Li from University of Toronto
+]
+;B[qh]BL[1780.862]
+;W[ed]WL[1729.526]
+;B[hd]BL[1761.935]
+;W[dg]WL[1687.47]
+;B[ee]BL[1746.286]
+;W[fe]WL[1682.961]
+;B[ef]BL[1745.245]
+;W[cc]WL[1679.121]
+;B[cf]BL[1740.25]
+;W[bd]WL[1655.83]
+;B[fd]BL[1739.132]
+;W[ec]WL[1641.021]
+;B[be]BL[1736.147]
+;W[dd]WL[1638.975]
+;B[ce]BL[1735.175]
+;W[gd]WL[1633.288]
+;B[he]BL[1734.34]
+;W[ff]WL[1618.983]C[dogbert [4d\]: Go Crazywind:)
+]
+;B[eg]BL[1715.964]
+;W[fg]WL[1597.352]
+;B[eh]BL[1670.539]
+;W[cm]WL[1576.589]
+;B[oq]BL[1649.022]C[UMD5 [-\]: unbelievable that utorronto has such a strong player...
+]
+;W[po]WL[1508.529]C[DineshR [3k?\]: which?
+]
+;B[kq]BL[1583.917]C[DineshR [3k?\]: all our players are strong :)
+]
+;W[kd]WL[1471.762]
+;B[nd]BL[1518.458]
+;W[kf]WL[1434.908]
+;B[ig]BL[1478.186]
+;W[kh]WL[1407.333]
+;B[fh]BL[1440.974]
+;W[gh]WL[1404.589]
+;B[gg]BL[1431.445]
+;W[fc]WL[1397.895]
+;B[je]BL[1417.98]
+;W[ke]WL[1364.097]
+;B[gi]BL[1286.662]
+;W[hh]WL[1361.451]
+;B[jh]BL[1285.924]
+;W[hi]WL[1344.07]
+;B[ki]BL[1284.611]
+;W[lh]WL[1313.504]
+;B[ji]BL[1272.181]
+;W[hg]WL[1273.665]
+;B[mj]BL[1121.219]
+;W[jd]WL[1137.336]
+;B[if]BL[1104.923]
+;W[hc]WL[1125.53]
+;B[dq]BL[1098.256]C[zchen [?\]: Utoronto also has William Shi who is an AGA Pro 1d
+]
+;W[cq]WL[1101.15]
+;B[eq]BL[1095.553]C[zchen [?\]: on board 2
+]
+;W[cr]WL[1083.011]
+;B[fo]BL[1088.798]
+;W[do]WL[1079.21]
+;B[qm]BL[1085.667]C[zchen [?\]: Hello, everyone
+]
+;W[pq]WL[1055.774]
+;B[op]BL[1082.375]
+;W[or]WL[1051.633]
+;B[pp]BL[1071.595]C[dogbert [4d\]: uot has the strongest top two boards for sure. i thought william would play on board 1 again to seek revenge, maybe he decided that would become too personal:)
+zchen [?\]: I am Zhaonian Chen, this is the Finals of the 2013-2014 Collegiate Go league
+BeefSaku [1d\]: Yeah Zchen
+dogbert [4d\]: hello, yoda san
+zchen [?\]: I am happy to enjoy this delightful matchup with you guys
+zchen [?\]: Delighted!
+]
+;W[qq]WL[960.461]C[zchen [?\]: Ryan Li from U. Toronto is an already distinguished Player in the North American Go scene
+]
+;B[nr]BL[1050.462]
+;W[oo]WL[959.339]
+;B[pr]BL[1035.047]
+;W[no]WL[957.176]
+;B[os]BL[1025.664]C[zchen [?\]: as U toronto also has William Shi 1P on board 2
+]
+;W[mq]WL[926.726]C[zchen [?\]: They are wuite the favorite to win this year
+zchen [?\]: especially since they already made it to the Finals
+]
+;B[mr]BL[996.633]
+;W[pl]WL[901.7]C[zchen [?\]: This game started out with an interesting fight on the upper side
+zchen [?\]: I'd say the fight resulting from the L16 pincer favored White
+zchen [?\]: as he has secured the top territory and made the J14 string of black stones all dame
+]
+;B[rn]BL[915.017]
+;W[qo]WL[885.427]
+;B[pm]BL[909.684]
+;W[om]WL[880.142]C[zchen [?\]: now, the focus of the game shifts to the right side as Black must surround a rather large amount of territory there, to catch up in territory
+]
+;B[ol]BL[904.63]
+;W[pk]WL[873.135]
+;B[nm]BL[903.311]
+;W[on]WL[872.16]
+;B[rk]BL[902.715]C[spacetime [4d\]: o8 n7 necessary for w now?
+zchen [?\]: if he succeeds in separating the Q9 stonrs from the P7 stones
+zchen [?\]: while heeping his own stuff alive, he will have a big advantage
+]
+;W[rj]WL[812.033]C[zchen [?\]: Black can play R9, R10, Q10, P10, Q11, O8
+]
+;B[qk]BL[854.346]C[zchen [?\]: that would be an exchange for Black keeping territory on the right, while W gets to connect and be alive
+spacetime [4d\]: P10??
+]
+;W[nl]WL[782.661]C[spacetime [4d\]: or atari first i guess
+zchen [?\]: aha, W has done something clever, forsaking that exchange
+zchen [?\]: this that R10 Q10 exchange
+zchen [?\]: that helps white and is clearly better
+zchen [?\]: say B plays Q11, and w P9
+dogbert [4d\]: is uiuc in this league? uiuc could have a bleedy strong top board
+zchen [?\]: B will have about 40 on the right, 15 on bottom, and 5 on left for 60 points
+zchen [?\]: w has 15 on left bottom, 5 right bottom, 25 on top for 45
+zchen [?\]: but B would have a very weak group in the middle
+zchen [?\]: since it would be Black's turn, the game would be about even
+zchen [?\]: and more exciting things will happen later
+zchen [?\]: in the meantime
+zchen [?\]: Board 4 has finished, and the game goes to
+zchen [?\]: UMichigan
+]
+;B[oj]BL[639.83]C[dogbert [4d\]: ha, now if Michigan win 3rd and 5th board too....Toronto would be too disappointed:)
+Javaness [2d\]: hope i didn't put them off
+]
+;W[ok]WL[433.869]
+;B[pj]BL[638.053]C[zchen [?\]: Looks like Board 5 will go to Utoront
+]
+;W[gq]WL[379.822]C[zchen [?\]: Michigan needs to win board 3
+zchen [?\]: then they have a good chance
+]
+;B[ep]BL[602.827]C[zchen [?\]: B chose Gote with P10+Q10
+]
+;W[ho]WL[373.519]C[zchen [?\]: locally it is a strong shape
+]
+;B[iq]BL[598.289]C[zchen [?\]: but White has invadedstrongly on the bottom
+Palehorse [?\]: zchen, really good of you to give a commentary, thanks :)
+zchen [?\]: this is not an invasion, 
+wurst [3k\]: H5 should G5 ?
+]
+;W[jp]WL[329.689]C[zchen [?\]: H5 is used to make "many" exchanges
+zchen [?\]: giving you many stones to settle down
+zchen [?\]: H5 is offensive
+wurst [3k\]: thx
+]
+;B[kp]BL[547.588]C[zchen [?\]: rising, and getting reasy to close the net over his opponent,
+zchen [?\]: In go, it is good to 'know your place'
+zchen [?\]: and here, white is not invading, and trying to destroy territory
+zchen [?\]: he is pincer-attacking
+zchen [?\]: like German Panzers in WW2
+DineshR [3k?\]: ^ lol
+]
+;W[ip]WL[254.41]C[spacetime [4d\]: this commentary is amazing
+Palehorse [?\]: they played go in WW2?
+zchen [?\]: the state of affairs, is what prompted H5 instead of G5
+UMichigan4 [-\]: the Panzers didn't have to pincer, i think
+zchen [?\]: offence and defense
+troll [2d\]: could b compromise here with g4?
+]
+;B[jq]BL[526.619]
+;W[hq]WL[250.511]C[jgomo3 [8k?\]: UMIchigan1 contra UToronto1
+zchen [?\]: Oh they cut Deep into enemy territory, quickly
+]
+;B[kn]BL[511.073]C[zchen [?\]: Aha! W can now seal off the F5 stones
+troll [2d\]: why is b playing from this side, dont the f5 stones deserves some help?
+zchen [?\]: with one move
+zchen [?\]: leaving the right side to it's fate
+bemap [1d\]: g6
+Palehorse [?\]: troll, b wants to kill the right group?
+zchen [?\]: or, he can protect the right side
+zchen [?\]: this is where it gets good
+]
+;W[ll]WL[190.204]C[zchen [?\]: it's so easy and seductive, just play f6/g7/g6, it all works
+]
+;B[fm]BL[488.268]C[zchen [?\]: but no he goes back to defend
+]
+;W[hm]WL[179.018]C[zchen [?\]: now J13 stones are weak, H5 stones are weak, F7 stones are weak, O8 stones are
+zchen [?\]: weak
+]
+;B[gn]BL[467.347]C[zchen [?\]: oh boy
+]
+;W[il]WL[163.421]C[bemap [1d\]: j8
+]
+;B[jm]BL[462.04]C[bemap [1d\]: stronger now
+bemap [1d\]: :)
+troll [2d\]: weaker now
+zchen [?\]: i like j8 at k7 better
+zchen [?\]: but tha's okay
+]
+;W[im]WL[143.037]C[UMichigan4 [-\]: i have to agree
+]
+;B[kk]BL[459.543]C[zchen [?\]: again, seductive
+spacetime [4d\]: boom. perfect split
+zchen [?\]: Just kill the left side!
+Warfreak2 [5d?\]: who are the players?
+wurst [3k\]: big enough ?
+zchen [?\]: Black is Ryan Li from U toronto.
+]
+;W[fl]WL[101.938]C[zchen [?\]: Crazywind on KGS
+spacetime [4d\]: n7?
+zchen [?\]: White, i don't know
+zchen [?\]: but he seems quite strong
+zchen [?\]: He KILLS THE LEFT!
+]
+;B[mm]BL[438.593]C[troll [2d\]: is white offering trade, or claiming p6 cannot die?
+]
+;W[lm]WL[81.715]C[troll [2d\]: I guess m7 was the answer to that..
+zchen [?\]: E8, E7, G8, F9, 
+zchen [?\]: basically dead for B
+zchen [?\]: Left, uhoh
+zchen [?\]: n6, m9
+]
+;B[nk]BL[386.775]
+;W[mk]WL[61.695]
+;B[nj]BL[385.199]C[wurst [3k\]: nice
+zchen [?\]: it's complkicated
+BeefSaku [1d\]: Can black deny any eye around S3?
+zchen [?\]: let's just see what they do
+zchen [?\]: s2 denies
+BeefSaku [1d\]: yeah
+zchen [?\]: w can have a gote eye there
+zchen [?\]: if m9 is sente
+zchen [?\]: m5 also sente
+zchen [?\]: he can live
+]
+;W[ln]WL[30]OW[5]
+;B[jo]BL[369.597]C[manofearth [?\]: isn't w known 2b a pro?
+zchen [?\]: it's difficult to kill the while
+UMichigan4 [-\]: really, u know him ? :D
+]
+;W[io]WL[30]OW[4]C[zchen [?\]: he wouldn't play m6 if he was pro
+zchen [?\]: now B can play s2
+zchen [?\]: and
+manofearth [?\]: no?. i thought I got that from a previous kibitz
+zchen [?\]: don't see life
+BeefSaku [1d\]: Yeah, white looks dead
+]
+;B[lk]BL[321.321]
+;W[jl]WL[30]OW[4]C[bemap [1d\]: seal the deal?
+]
+;B[kl]BL[317.467]
+;W[km]WL[30]OW[4]
+;B[jn]BL[316.127]C[zchen [?\]: Board 2 for Toronto is profesisons
+]
+;W[lo]WL[30]OW[4]
+;B[ko]BL[314.842]C[zchen [?\]: try s2
+zchen [?\]: s5, 
+zchen [?\]: NO!
+Sarkenge [1d\]: What is their rank please ?
+wurst [3k\]: doesn't work though
+zchen [?\]: he just had to live!
+zchen [?\]: B is kgs 8d
+zchen [?\]: W is about the same
+Sarkenge [1d\]: u_u
+spacetime [4d\]: w dead ?
+Sarkenge [1d\]: For college players ? u_u
+]
+;W[qr]WL[30]OW[3]C[a4752375 [3d\]: i think w can live?
+]
+;B[ro]BL[308.907]C[Sarkenge [1d\]: Ty
+]
+;W[ml]WL[30]OW[3]C[DrH0use [1d\]: who is michigan?
+a4752375 [3d\]: wasn't s2 better than r2?
+]
+;B[sr]BL[300.169]
+;W[np]WL[30]OW[3]
+;B[lp]BL[296.771]C[Warfreak2 [5d?\]: s2 t3 
+]
+;W[nq]WL[30]OW[3]
+;B[or]BL[295.225]C[troll [2d\]: o3 p2 m3 m2 j2 k2 k1 ?
+troll [2d\]: oh, nvm, still eye at m1 :(
+]
+;W[js]WL[30]OW[3]C[Bogdan [2k\]: uh
+wurst [3k\]: smart but...
+Warfreak2 [5d?\]: this is a delicious move
+zchen [?\]: L1 will work against W
+]
+;B[ir]BL[226.52]C[Warfreak2 [5d?\]: m2
+zchen [?\]: What a premature resignation on board 4!
+]
+;W[mp]WL[30]OW[2]
+;B[mn]BL[218.285]C[zchen [?\]: Michigan!
+zchen [?\]: j2
+zchen [?\]: i think something is wrong!
+spacetime [4d\]: oh whoa m2 m3 n1 ko
+Warfreak2 [5d?\]: no ko
+Warfreak2 [5d?\]: b k1
+Warfreak2 [5d?\]: l1
+]
+;W[lr]WL[30]OW[1]
+;B[lq]BL[216.726]C[Warfreak2 [5d?\]: or just oshitsubushi
+spacetime [4d\]: that's still ko
+]
+;W[ms]WL[30]OW[1]
+;B[kr]BL[213.821]C[spacetime [4d\]: 2-step
+]
+;W[ks]WL[30]OW[1]
+;B[is]BL[211.92]C[spacetime [4d\]: oh wait duh :)
+DrH0use [1d\]: ko!
+UToronto1 [-\]: thanks
+kentia [1d\]: :)
+DineshR [3k?\]: good game guys
+UMichigan1 [-\]: thanks!
+UMichigan1 [-\]: good game
+DrH0use [1d\]: Why no ko?
+wurst [3k\]: cool
+BeefSaku [1d\]: Because J6 libety
+DrH0use [1d\]: oh j6 ...
+zchen [?\]: r1 does not force sente on the right side
+wurst [3k\]: thx for great comments
+zchen [?\]: well played game by W
+zchen [?\]: but M6 made him die
+])

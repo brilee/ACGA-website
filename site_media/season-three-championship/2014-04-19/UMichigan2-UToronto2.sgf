@@ -1,0 +1,465 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UMichigan2]PB[UToronto2]DT[2014-04-19]PC[The KGS Go Server at http://www.gokgs.com/]C[UMichigan2 [-\]: Hello I'
+UToronto2 [-\]: Hello
+UToronto2 [-\]: University of Toronto
+UToronto2 [-\]: William Shi\\
+]RE[W+3.50]
+;B[pc]BL[1772.813]C[UMichigan2 [-\]: I'm Zhixun Zhao from Michigan
+UMichigan2 [-\]: glhf
+]
+;W[dp]WL[1783.214]C[UMichigan2 [-\]: what happened
+]
+;B[qp]BL[1765.661]C[UMichigan2 [-\]: wait are you the pro
+]
+;W[op]WL[1770.449]
+;B[cd]BL[1758.881]
+;W[qe]WL[1759.06]
+;B[pg]BL[1748.324]
+;W[oe]WL[1648.564]
+;B[nd]BL[1745.388]
+;W[ld]WL[1549.665]C[dogbert [4d\]: 赵志勋也是职业:)
+]
+;B[md]BL[1690.262]
+;W[pi]WL[1256.07]
+;B[le]BL[1679.133]
+;W[lc]WL[1239.591]
+;B[mf]BL[1591.1]
+;W[hc]WL[1203.637]
+;B[qd]BL[1550.452]
+;W[rd]WL[1098.586]
+;B[rc]BL[1532.343]
+;W[qg]WL[1084.44]
+;B[re]BL[1419.946]
+;W[qo]WL[1058.967]
+;B[ro]BL[1377.178]
+;W[po]WL[1049.904]
+;B[qn]BL[1375.816]
+;W[rn]WL[1020.334]
+;B[rm]BL[1367.298]
+;W[rp]WL[1017.626]
+;B[sn]BL[1366.093]
+;W[qq]WL[1015.961]
+;B[qf]BL[1349.557]
+;W[ql]WL[1012.178]
+;B[pn]BL[1346.923]
+;W[on]WL[1008.053]
+;B[pl]BL[1318.974]
+;W[qk]WL[871.662]
+;B[om]BL[1304.492]
+;W[nn]WL[868.507]
+;B[nm]BL[1299.029]
+;W[qh]WL[827.384]
+;B[mn]BL[1291.952]
+;W[mm]WL[824.411]
+;B[np]BL[1281.62]
+;W[oq]WL[775.088]
+;B[mo]BL[1244.503]
+;W[oo]WL[771.792]
+;B[nk]BL[1231.511]
+;W[ml]WL[764.73]
+;B[pk]BL[1226.611]
+;W[ni]WL[749.246]
+;B[mk]BL[1206.789]
+;W[km]WL[738.034]
+;B[ko]BL[1172.208]
+;W[iq]WL[652.546]
+;B[io]BL[1121.799]
+;W[im]WL[644.779]
+;B[nq]BL[1086.47]
+;W[nr]WL[559.574]
+;B[mr]BL[1079.018]
+;W[or]WL[557.611]
+;B[hq]BL[1055.299]C[CGLadmin [-\]: For everyone wondering, this is Gansheng Shi 1p, one of the American pros.
+]
+;W[hp]WL[505.852]
+;B[ip]BL[1050.657]
+;W[gq]WL[504.421]
+;B[hr]BL[1043.534]
+;W[jq]WL[503.167]
+;B[gr]BL[1034.595]
+;W[lq]WL[475.233]
+;B[mq]BL[979.896]C[zchen [?\]: Hello everyone, I am Michael Chen, I'm delighted to enjoy this board 2 Match with you
+zchen [?\]: This is the Finals of the American Collegiate Go league
+zchen [?\]: This match is heavily favored to the Toronto player as he is 1P
+zchen [?\]: however, with Michigan leading 1-0
+]
+;W[fq]WL[409.379]C[zchen [?\]: The odds are tight
+zchen [?\]: the bottom semaie should go in B's favor
+zchen [?\]: f2, E3, J2, K2, M2
+zchen [?\]: is a simple win for Black
+]
+;B[fr]BL[873.79]C[zchen [?\]: with this bottom side dark, B secures 15 bottom +20 upper right, + 7-8 top left+right side = 
+zchen [?\]: = 45-50 points
+zchen [?\]: W has 10 bottom right, 10 bottom left, 5 top, -2 right side(since there's problems there)
+zchen [?\]: = 20-25 points
+zchen [?\]: as it is W turn aftee the bottom, he is behind, but not that much
+zchen [?\]: 10 points or so
+]
+;W[ho]WL[254.255]
+;B[kp]BL[796.666]
+;W[li]WL[157.606]
+;B[hn]BL[759.397]
+;W[nl]WL[144.428]
+;B[qj]BL[747.558]
+;W[rj]WL[122.789]
+;B[rk]BL[746.403]
+;W[rl]WL[104.95]
+;B[sl]BL[742.819]
+;W[sk]WL[103.539]
+;B[qm]BL[741.86]
+;W[sm]WL[99.349]
+;B[sp]BL[721.561]
+;W[rq]WL[94.399]
+;B[sl]BL[720.253]
+;W[lr]WL[69.427]
+;B[ms]BL[672.352]
+;W[sm]WL[60.966]
+;B[kl]BL[631.549]
+;W[pj]WL[18.417]
+;B[sl]BL[618.09]
+;W[qi]WL[15.764]
+;B[lm]BL[609.766]
+;W[ll]WL[10.941]
+;B[lk]BL[608.035]
+;W[ln]WL[9.898]
+;B[ol]BL[607.117]
+;W[lm]WL[9.186]
+;B[jl]BL[605.476]
+;W[jm]WL[7]
+;B[kj]BL[586.029]
+;W[il]WL[30]OW[5]
+;B[ij]BL[545.162]
+;W[ik]WL[30]OW[5]
+;B[jj]BL[539.207]
+;W[eq]WL[30]OW[5]
+;B[gn]BL[530.968]
+;W[fo]WL[30]OW[5]
+;B[er]BL[461.711]
+;W[dr]WL[30]OW[5]
+;B[ir]BL[443.875]
+;W[gk]WL[30]OW[5]
+;B[hj]BL[414.317]
+;W[fl]WL[30]OW[5]
+;B[in]BL[390.995]
+;W[fi]WL[30]OW[5]
+;B[ci]BL[359.101]
+;W[cf]WL[30]OW[5]C[zchen [?\]: this game became complicated
+]
+;B[ec]BL[315.432]
+;W[ck]WL[30]OW[5]C[zchen [?\]: W has managed to turn right side weakness into strength
+zchen [?\]: let's see how much hecan surround on the left
+zchen [?\]: Bc3 can make life in this territory for now
+zchen [?\]: but he has no time
+]
+;B[dg]BL[257.471]
+;W[df]WL[30]OW[5]
+;B[ef]BL[250.475]
+;W[cg]WL[30]OW[5]
+;B[dh]BL[247.146]
+;W[bi]WL[30]OW[5]
+;B[bj]BL[242.931]
+;W[bh]WL[30]OW[5]
+;B[cj]BL[241.163]
+;W[bk]WL[30]OW[5]
+;B[ee]BL[226.987]
+;W[aj]WL[30]OW[5]
+;B[dk]BL[222.405]
+;W[gh]WL[30]OW[5]
+;B[fg]BL[188.292]
+;W[jh]WL[30]OW[4]
+;B[ih]BL[172.291]
+;W[ig]WL[30]OW[4]
+;B[hh]BL[143.306]
+;W[hg]WL[30]OW[4]
+;B[kh]BL[132.304]C[spacetime [4d\]: what's the score so far? UofT won board 1, who won board 4?
+]
+;W[jg]WL[30]OW[4]C[CGLadmin [-\]: Michigan won board 4
+CGLadmin [-\]: 1-1 so far
+]
+;B[mh]BL[115.305]
+;W[dl]WL[30]OW[4]
+;B[jc]BL[100.836]C[zchen [?\]: board 4 = the ultimate premature resignation
+Sarkenge [1d\]: What's their rank please ?
+]
+;W[lh]WL[30]OW[4]C[zchen [?\]: if W keeps all of left side, he has a good chance
+]
+;B[mi]BL[88.684]
+;W[jd]WL[30]OW[4]
+;B[id]BL[74.486]
+;W[ke]WL[30]OW[4]C[BeefSaku [1d\]: UToronto2 is 1p
+BeefSaku [1d\]: UMichigan2 is ... 7 dan?
+]
+;B[ic]BL[28.911]
+;W[jr]WL[30]OW[4]
+;B[kq]BL[23.121]C[zchen [?\]: don't think k2 was sente
+]
+;W[hd]WL[30]OW[4]C[zchen [?\]: m14 is a key point
+]
+;B[je]BL[13.355]C[zchen [?\]: now!
+Sarkenge [1d\]: Ty
+]
+;W[lf]WL[30]OW[4]
+;B[me]BL[6.014]C[zchen [?\]: board 5 will be won by Utoronto
+zchen [?\]: this is risky!
+zchen [?\]: n10
+]
+;W[mj]WL[30]OW[3]
+;B[nj]BL[30]OB[4]C[troll [2d\]: o12?
+]
+;W[kd]WL[30]OW[3]C[zchen [?\]: needs N13
+zchen [?\]: o12, n13 and B connects
+zchen [?\]: W needs to play n13, O12, O13
+CGLadmin [-\]: Shouldn't B just grab points with H15?
+]
+;B[lg]BL[30]OB[3]
+;W[ie]WL[30]OW[3]C[zchen [?\]: this is life and death on the middle group
+]
+;B[hb]BL[30]OB[3]
+;W[gb]WL[30]OW[3]
+;B[he]BL[30]OB[3]
+;W[jf]WL[30]OW[3]
+;B[gc]BL[30]OB[3]
+;W[gd]WL[30]OW[3]C[zchen [?\]: if G17, G16, F16,G15,F18 J18,G19 K18
+]
+;B[fb]BL[30]OB[3]C[zchen [?\]: this?
+]
+;W[fc]WL[30]OW[3]C[zchen [?\]: oh boy it's worse for B
+reprisal [3d\]: this looks like a w success
+jpark47 [2k\]: weird
+]
+;B[ga]BL[30]OB[3]C[jpark47 [2k\]: bad
+]
+;W[ib]WL[30]OW[3]
+;B[gc]BL[30]OB[3]C[zchen [?\]: unnecesary Ko
+]
+;W[jb]WL[30]OW[3]C[zchen [?\]: but ko is okay I guess
+]
+;B[fd]BL[30]OB[3]C[CGLadmin [-\]: W success, yeah - he kept his top territory
+]
+;W[ge]WL[30]OW[3]C[zchen [?\]: Ahh
+zchen [?\]: so it is the same
+zchen [?\]: Now B needs to make C2 or C3 worl
+zchen [?\]: work
+zchen [?\]: E1 is not sente
+]
+;B[hk]BL[30]OB[3]
+;W[hl]WL[30]OW[3]
+;B[fn]BL[30]OB[3]C[Timk [1k\]: If W can't do something here, game over ?
+]
+;W[dn]WL[30]OW[3]C[UMichigan4 [-\]: w?
+Timk [1k\]: just like d6 for w :)
+Timk [1k\]: *B
+]
+;B[eo]BL[30]OB[3]C[Timk [1k\]: sry
+]
+;W[gp]WL[30]OW[3]
+;B[cl]BL[30]OB[3]
+;W[dm]WL[30]OW[3]C[scoutscode [7d?\]: e1 isn't sente for w?
+]
+;B[bl]BL[30]OB[3]
+;W[ak]WL[30]OW[3]
+;B[ek]BL[30]OB[3]
+;W[el]WL[30]OW[3]C[crocky [3d\]: it seem sente to me
+]
+;B[be]BL[30]OB[3]
+;W[kr]WL[30]OW[3]C[zchen [?\]: yes it is
+]
+;B[ls]BL[30]OB[3]
+;W[es]WL[30]OW[3]C[zchen [?\]: but L3 should be at L1
+CGLadmin [-\]: Seems like gansheng isn't going for a crushing win - he's playing safe and steady, and everytime he makes a mistake, he at least ends in sente to grab the next big move
+zchen [?\]: then it's not
+]
+;B[js]BL[30]OB[3]
+;W[dj]WL[30]OW[3]C[zchen [?\]: wow he's not worried about points at all
+]
+;B[ej]BL[30]OB[3]
+;W[ei]WL[30]OW[3]
+;B[di]BL[30]OB[3]
+;W[nh]WL[30]OW[3]
+;B[lj]BL[30]OB[3]
+;W[pf]WL[30]OW[3]
+;B[pe]BL[30]OB[3]
+;W[of]WL[30]OW[3]C[spacetime [4d\]: seems close, maybe b slight lead
+]
+;B[cq]BL[30]OB[3]
+;W[cr]WL[30]OW[3]C[zchen [?\]: if w can grab r14 sente and o18, he will win
+]
+;B[ai]BL[30]OB[3]C[zchen [?\]: but he won
+]
+;W[ah]WL[30]OW[3]C[zchen [?\]: wont*
+CGLadmin [-\]: Board 5 goes to UToronto
+]
+;B[cp]BL[30]OB[3]C[zchen [?\]: Utoronto won board 3
+zchen [?\]: UT has won 3-1 over Umichigan
+spacetime [4d\]: oh shit, toronto wins??
+]
+;W[co]WL[30]OW[3]C[UMichigan2 [-\]: I need more time!!!
+]
+;B[bo]BL[30]OB[3]
+;W[bn]WL[30]OW[3]C[mimi31k [?\]: yehhhhhhhhh
+]
+;B[do]BL[30]OB[3]
+;W[cn]WL[30]OW[3]C[zchen [?\]: nothing bad here 
+spacetime [4d\]: New Champion! Congrats U of T!
+]
+;B[dq]BL[30]OB[3]
+;W[bq]WL[30]OW[3]C[zchen [?\]: B3
+]
+;B[ep]BL[30]OB[3]
+;W[bp]WL[30]OW[3]
+;B[go]BL[30]OB[3]
+;W[dp]WL[30]OW[3]
+;B[fp]BL[30]OB[3]
+;W[dq]WL[30]OW[3]C[dogbert [4d\]: uot lost year?
+]
+;B[bf]BL[30]OB[3]C[Crazywind [8d\]: hey michael
+CGLadmin [-\]: Nice endgame sequence
+dogbert [4d\]: losy last year?
+]
+;W[al]WL[30]OW[3]
+;B[bg]BL[30]OB[3]
+;W[ch]WL[30]OW[3]C[DineshR [3k?\]: Lost last year, but came back this year :) Congrats all
+wanderling [10k?\]: Add time to Board 2 and 3 so not finish on time 
+spacetime [4d\]: this was the same matchup in the finals last year, and i believe michigan won cause they won board 3,4,5
+]
+;B[rg]BL[30]OB[3]C[zchen [?\]: B has gained small here
+DineshR [3k?\]: Last year Michigan won 1, 3, 4
+UMichigan4 [-\]:  :(
+]
+;W[kg]WL[30]OW[3]
+;B[ki]BL[30]OB[3]C[zchen [?\]: B leads game by 5-10
+]
+;W[fs]WL[30]OW[3]
+;B[lp]BL[30]OB[3]
+;W[nb]WL[30]OW[3]C[TyTaLuS [1k\]: p18
+]
+;B[ob]BL[30]OB[3]
+;W[nc]WL[30]OW[3]C[zchen [?\]: but 5< komi and 10>komi!
+]
+;B[mc]BL[30]OB[3]C[troll [2d\]: how many points was f1 worth?
+]
+;W[mb]WL[30]OW[3]
+;B[sm]BL[30]OB[3]
+;W[sq]WL[30]OW[3]
+;B[rh]BL[30]OB[3]
+;W[so]WL[30]OW[3]
+;B[am]BL[30]OB[3]
+;W[ai]WL[30]OW[3]
+;B[sp]BL[30]OB[3]C[zchen [?\]: 5
+troll [2d\]: thx
+zchen [?\]: k1 should have been at f1
+zchen [?\]: for points!
+]
+;W[gs]WL[30]OW[3]
+;B[jp]BL[30]OB[3]
+;W[so]WL[30]OW[3]C[Crazywind [8d\]: i dont think he can
+]
+;B[ag]BL[30]OB[3]
+;W[bm]WL[30]OW[3]
+;B[sp]BL[30]OB[3]
+;W[en]WL[30]OW[3]
+;B[fo]BL[30]OB[3]
+;W[so]WL[30]OW[3]C[scoutscode [7d?\]: instead of d3 couldn't b play b2?
+]
+;B[de]BL[30]OB[3]
+;W[cm]WL[30]OW[3]
+;B[sp]BL[30]OB[3]
+;W[hs]WL[30]OW[3]
+;B[ks]BL[30]OB[3]
+;W[so]WL[30]OW[3]
+;B[gf]BL[30]OB[3]C[zchen [?\]: b2 d3
+scoutscode [7d?\]: b2 d3 b1
+Herod [-\]: surely b can't win this ko?
+zchen [?\]: A5
+zchen [?\]: interesting
+Crazywind [8d\]: just for kicks hehe
+]
+;W[hf]WL[30]OW[2]
+;B[sp]BL[30]OB[3]C[zchen [?\]: so that will be a Ko for corner life
+]
+;W[rf]WL[30]OW[2]
+;B[sf]BL[30]OB[3]C[zchen [?\]: but gives up ~10 points on the outside
+zchen [?\]: first
+]
+;W[so]WL[30]OW[2]C[zchen [?\]: but W B3, B4, A3
+]
+;B[ok]BL[30]OB[3]
+;W[rn]WL[30]OW[2]
+;B[pm]BL[30]OB[3]
+;W[ng]WL[30]OW[2]C[jpark47 [2k\]: ouch
+]
+;B[mg]BL[30]OB[3]
+;W[oc]WL[30]OW[2]
+;B[pb]BL[30]OB[3]C[zchen [?\]: oh no
+]
+;W[od]WL[30]OW[2]C[zchen [?\]: let's look at that later
+]
+;B[fe]BL[30]OB[3]
+;W[kc]WL[30]OW[2]
+;B[gg]BL[30]OB[3]C[jpark47 [2k\]: f12!
+]
+;W[fj]WL[30]OW[2]C[CGLadmin [-\]: gansheng is an endgame monster
+]
+;B[ns]BL[30]OB[3]C[zchen [?\]: I think W has done it!
+]
+;W[os]WL[30]OW[2]
+;B[ri]BL[30]OB[3]C[UMichigan4 [-\]: agree
+]
+;W[pd]WL[30]OW[2]C[Crazywind [8d\]: done it?
+]
+;B[qe]BL[30]OB[3]
+;W[jk]WL[30]OW[2]
+;B[kk]BL[30]OB[3]C[zchen [?\]: reached deep and pulled out a win
+]
+;W[ro]WL[30]OW[2]
+;B[si]BL[30]OB[3]
+;W[sj]WL[30]OW[2]C[jpark47 [2k\]: f12 sente
+]
+;B[oj]BL[30]OB[3]
+;W[oi]WL[30]OW[2]
+;B[na]BL[30]OB[3]
+;W[ma]WL[30]OW[2]
+;B[oa]BL[30]OB[3]
+;W[ia]WL[30]OW[2]C[Crazywind [8d\]: wow
+]
+;B[ha]BL[30]OB[3]
+;W[fh]WL[30]OW[2]
+;B[eg]BL[30]OB[3]
+;W[fm]WL[30]OW[2]C[jpark47 [2k\]: e7 and k6 
+]
+;B[gm]BL[30]OB[3]
+;W[gl]WL[30]OW[2]
+;B[jn]BL[30]OB[3]
+;W[fk]WL[30]OW[2]
+;B[dj]BL[30]OB[3]
+;W[ds]WL[30]OW[2]
+;B[kf]BL[30]OB[3]C[UMichigan2 [-\]: omg
+zchen [?\]: oh wait!
+DineshR [3k?\]: d1?
+]
+;W[ji]WL[30]OW[2]
+;B[lf]BL[30]OB[3]
+;W[]WL[30]OW[2]C[zchen [?\]: he had ko threats
+jpark47 [2k\]: uh oh
+]
+;B[]BL[30]OB[3]TW[ja][ka][la][kb][lb][ic][jc][id][he][je][if][og][pg][oh][ph][qj][rk][bl][cl][am][em][an][ao][bo][ap][cp][pp][qp][sp][aq][cq][pq][ar][br][pr][qr][rr][sr][as][bs][cs][ps][qs][rs][ss]TB[aa][ba][ca][da][ea][fa][pa][qa][ra][sa][ab][bb][cb][db][eb][gb][qb][rb][sb][ac][bc][cc][dc][fc][qc][sc][ad][bd][dd][ed][rd][sd][ae][se][af][ff][rf][sg][lh][sh][li][mj][jo][mp][iq][jq][lq][jr][kr][lr]C[zchen [?\]: wow,
+Crazywind [8d\]: huh white didnt fight the ko
+Timk [1k\]: woot :)
+UMichigan4 [-\]: hope it's not 0.5
+jpark47 [2k\]: wow
+spacetime [4d\]: !
+kentia [1d\]: woah, gg
+CGLadmin [-\]: Dang :(
+UMichigan4 [-\]: gg
+BeefSaku [1d\]: Oh wow!
+Crazywind [8d\]: nice counting skills
+UMichigan4 [-\]: fun to watch
+spacetime [4d\]: nice job w
+UToronto2 [-\]: thx
+drlee [2d?\]: gg
+UMichigan2 [-\]: thanks
+DineshR [3k?\]: thanks guys gg
+UMichigan2 [-\]: i was 3 last year
+zchen [?\]: lol we were all way off
+])
