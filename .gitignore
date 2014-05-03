@@ -1,3 +1,4 @@
+*.DS_Store
 *.pyc
 *.log
 *.mo
@@ -11,3 +12,4 @@ settings.py
 local_settings.py
 sensitive_data.py
 templates/rendered*
+sftp-config.json
