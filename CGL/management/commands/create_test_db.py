@@ -7,7 +7,7 @@ import settings
 from CGL.models import *
 from accounts.models import *
 from ACGA.models import *
-from CGL.settings import current_season_nameA, current_season_nameB
+from CGL.settings import current_seasons
 
 def randomstr():
     letters = string.ascii_lowercase
@@ -25,33 +25,35 @@ class Command(BaseCommand):
             and settings.WEB_URL == '127.0.0.1:8000/'
             and socket.gethostname() == 'Brians-MacBook-Air.local'):
 
-            self.stdout.write('deleting existing database')
+            self.stdout.write('deleting existing database\n')
             try:
                 os.remove(settings.DATABASES['default']['NAME'])
-                self.stdout.write('deleted database')
+                self.stdout.write('deleted database\n')
             except:
-                self.stdout.write('couldn\'t delete database')
+                self.stdout.write('couldn\'t delete database\n')
                 pass
+        else:
+            raise CommandError("You don't seem to be developing locally! Quitting to be safe.")
 
         # setup the basic empty tables
         management.call_command('syncdb', interactive=False)
         management.call_command('migrate', 'CGL', interactive=False)
         management.call_command('migrate', 'ACGA', interactive=False)
         management.call_command('migrate', 'accounts', interactive=False)
-        self.stdout.write('database tables recreated')
+        self.stdout.write('database tables recreated\n')
 
         u = User(username='admin')
         u.set_password('password')
         u.is_superuser = True
         u.is_staff = True
         u.save()
-        self.stdout.write('superuser created with username/password : admin/password')
+        self.stdout.write('superuser created with username/password : admin/password\n')
 
         brilee = User(username='brilee')
         brilee.set_password('password')
         brilee.save()
-        self.stdout.write('basic user created with username/password : brilee/password')
-        self.stdout.write('this account also gets edit permissions for all schools')
+        self.stdout.write('basic user created with username/password : brilee/password\n')
+        self.stdout.write('this account also gets edit permissions for all schools\n')
 
         schoolnames = ('Testing University',
                        'Testing College',
@@ -66,18 +68,22 @@ class Command(BaseCommand):
                 p = Player(name=randomstr(), school=s)
                 p.save()
 
-        seasons = [Season(name='Season OneTest'),
-                   Season(name=current_season_nameA),
-                   Season(name=current_season_nameB),]
-
-        for s in seasons:
+        # This is so that context processors load correctly.
+        real_seasons = [Season(name=s) for s in current_seasons]
+        for s in real_seasons:
             s.save()
 
-        for s in seasons:
+        fake_seasons = [Season(name='test ' + s) for s in current_seasons]
+
+        for s in fake_seasons:
+            s.save()
+
+        for s in fake_seasons:
             for school in schools:
                 membership = Membership(school=school, season=s)
                 membership.save()
-            for datedelta in (datetime.timedelta(days=-7),
+            for datedelta in (datetime.timedelta(days=-30),
+                              datetime.timedelta(days=-7),
                               datetime.timedelta(days=1),
                               datetime.timedelta(days=10),
                               datetime.timedelta(days=30),
@@ -96,12 +102,12 @@ class Command(BaseCommand):
                                 board=i+1,
                                 white_school='School1',
                                 winning_school='School2',
-                                gamefile=File(open('site_media/season-one/2012-02-04/Omniscient-cdpruitt.sgf'))
+                                gamefile=File(open('site_media/test_file'))
                                 )
                             g.save()
 
-        self.stdout.write('Updating school rankings and records')
-        for s in seasons:
+        self.stdout.write('Updating school rankings and records\n')
+        for s in fake_seasons:
             management.call_command('update_scores', s.name, interactive=False)
 
         self.stdout.write('Test database entries created\n')
