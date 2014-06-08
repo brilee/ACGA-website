@@ -27,7 +27,7 @@ class Command(BaseCommand):
             email_template = args[0]
             t = loader.get_template(email_template)
         except Exception, e:
-            print e
+            self.stdout.write(str(e))
             raise CommandError('Email template not found')
 
         with open('templates/rendered-email', 'w') as f:
