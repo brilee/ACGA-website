@@ -1,3 +1,9 @@
+Requirements:
+
+django-south
+django-registration
+django-recaptcha
+
 Hi, and welcome to the ACGA website backend.
 
 This site is written in Django. Google for an introduction/tutorial.

@@ -1,14 +1,14 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 from django.conf import settings
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 
 
 urlpatterns = patterns('ACGA.views',    
-    (r'^$', 'display_home'),
-    (r'^home/$', 'display_home'),
+    (r'^$', TemplateView.as_view(template_name='home.html')),
+    (r'^home/$', TemplateView.as_view(template_name='home.html')),
     (r'^resources/$', 'display_resources'),
-    (r'^ing/$', direct_to_template, {'template': 'ing.html'}),
-    (r'^about/$', direct_to_template, {'template': 'about.html'}),
+    (r'^ing/$', TemplateView.as_view(template_name='ing.html')),
+    (r'^about/$', TemplateView.as_view(template_name='about.html')),
     (r'^members/$', 'display_members'),
     (r'^allemail/$', 'display_emails'),
     (r'^events/$', 'display_upcoming_event'),

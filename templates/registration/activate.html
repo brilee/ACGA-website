@@ -3,7 +3,7 @@
 {% block maintext %}
 
 {% if account %}
-You have successfully activated your account! You may now <a href="{% url 'auth_login' %}">login</a>.
+You have successfully activated your account! You may now <a href="{% url auth_login %}">login</a>.
 {% else %}
 
 <p>Account activation failed. Please check the URL.</p>

@@ -1,8 +1,9 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 from django.views import static
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 from django.contrib.auth.views import login, logout
 from django.conf import settings
+import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -15,20 +16,17 @@ urlpatterns = patterns('',
 
     # Static content
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': '/var/www/CGA/site_media/'}),
+        {'document_root': settings.MEDIA_ROOT}),
     (r'^admin/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': '/var/www/CGA/media/admin/'}),
+        {'document_root': settings.ADMIN_MEDIA_ROOT}),
 )
 
 urlpatterns += patterns('contact.views',
     # Contact page
     (r'^contact/$', 'contact'),
-    (r'^contact/thanks/$', direct_to_template, {
-        'template': 'thanks.html'}),
-
+    (r'^contact/thanks/$', TemplateView.as_view(template_name='thanks.html')),
     (r'^CGL/join/$', 'join_CGL'),
-    (r'^CGL/join/thanks/$', direct_to_template, {
-        'template': 'thanks_CGL.html'}),
+    (r'^CGL/join/thanks/$', TemplateView.as_view(template_name='thanks_CGL.html')),
 )
 
 urlpatterns += patterns('',
