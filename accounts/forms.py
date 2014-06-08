@@ -21,7 +21,7 @@ class UsernameReminderForm(forms.Form):
             subject = 'Username reminder for email %s' % email
             body = render_to_string('username_reminder.txt', locals())
             send_mail(subject, body, 'ACGA.organizers@gmail.com', [user.email]) 
-            
+        
 class EditPlayerForm(forms.ModelForm):
     '''
     A form that lets team captains / players edit or create a player
@@ -47,12 +47,6 @@ class EditGameForm(forms.ModelForm):
         model = Game
         fields = ['board', 'gamefile', 'white_school', 'winning_school', 'school1_player', 'school2_player']
 
-    def __init__(self, *args, **kwargs):
-        match = kwargs.pop('match', False)
-        super(EditGameForm, self).__init__(*args, **kwargs)
-        if match:
-            self.fields['school1_player'].queryset = Player.objects.filter(school = match.school1)
-            self.fields['school2_player'].queryset = Player.objects.filter(school = match.school2)
 
 class EditForfeitForm(forms.ModelForm):
     '''
@@ -78,4 +72,3 @@ class PlayerLinkRequestForm(forms.Form):
     A form that lets users request to link to a player.
     '''
     player = forms.ModelChoiceField(queryset=Player.objects.all())
-

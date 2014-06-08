@@ -1,0 +1,18 @@
+{% extends 'base_accounts.html' %}
+
+{% block maintext %}
+<h4>Creating / Editing game for {{match.display_match}} </h4>
+<p>Some instructions: </p>
+<ul class="square">
+    <li>The name of the match determines ([School1] vs. [School2]).</li>
+    <li>All fields are required. If you don't know a player's name, select the Unknown Player.</li>
+    <li>You will not be able to edit this game record once four weeks have passed) </li>
+    <li>To download an SGF file from KGS, log on to KGS, then go to User -> View User's Information and enter the account name (UVirginia1, for example). Then, go to the games tab, and right click on the relevant game. Select 'Copy Game to Disk', and you're done!</li>
+</ul>
+
+<hr />
+<form enctype="multipart/form-data" method="post" action=".">
+{% include 'form_snippet.html' %}
+<input type="submit" value="Update game information">
+</form>
+{% endblock %}

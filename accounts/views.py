@@ -1,8 +1,8 @@
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from accounts.forms import *
-from accounts.models import *
+from accounts.forms import UsernameReminderForm, EditGameForm, EditPlayerForm, EditSchoolForm, EditForfeitForm, EditLinkRequestForm, PlayerLinkRequestForm, form
+from accounts.models import SchoolEditPermission, PendingPlayerLinkRequest
 from CGL.models import School, Player, Match, Game, Forfeit
 from CGL.settings import current_seasons
 
@@ -37,11 +37,11 @@ def edit_model_with_permissioncheck(request,
             form_valid=None,
             success_redirect='/accounts/profile/',
             no_permission_redirect='/accounts/profile/',
-            **kwargs):
+            template_context=None):
     '''
     Generic model editing logic. Should be fairly self-explanatory.
     If the template needs any extra context variables, they can be
-    passed in through **kwargs.
+    passed in through template_context.
     '''
     if SchoolEditPermission.objects.has_edit_permissions(request.user, permissioncheck):
         if request.method == 'POST':
@@ -50,23 +50,20 @@ def edit_model_with_permissioncheck(request,
                 # Here's a handle for custom method execution. 
                 # If you want to do something, pass in a function that
                 # takes a form argument and does something to it.
+                # Useful for adding implicit model attributes, i.e.,
+                # injecting player.school='MIT' when the url was 
+                # /schools/MIT/create/player
+                modelinstance = form.save(commit=False)
                 if form_valid:
-                    form_valid(form)
+                    form_valid(modelinstance)
+
                 form.save()
                 return HttpResponseRedirect(success_redirect)
         else:
-            if modelform == EditGameForm:
-                # ugly special casing. I would love to just pass in 
-                # **kwargs, but the modelform __init__ method is very
-                # picky about what kwargs it expects to see, and 
-                # throws errors if it sees something unusual.
-                # In the 'match' case, the match is popped from the 
-                # kwarg list before calling super.__init__() so that
-                # django doesn't complain about it.
-                form = modelform(instance=modelinstance, match=kwargs['match'])
-            else:
-                 form = modelform(instance=modelinstance)
-        return render(request, template_name, dict(locals().items() + kwargs.items()))
+            form = modelform(instance=modelinstance)
+        if template_context is None:
+            template_context = {}
+        return render(request, template_name, dict(locals().items() + template_context.items()))
     else:
         return HttpResponseRedirect(no_permission_redirect)
 
@@ -119,8 +116,8 @@ def edit_game_info(request, game_id):
                  template_name='edit_game_info.html',
                  success_redirect='/accounts/show/matches/',
                  no_permission_redirect='/accounts/profile/',
-                 match=match)
-    
+                 template_context={'match':match})
+
 @login_required
 def edit_forfeit_info(request, forfeit_id):
     forfeit = get_object_or_404(Forfeit, id=forfeit_id)
@@ -133,7 +130,7 @@ def edit_forfeit_info(request, forfeit_id):
                  template_name='edit_forfeit_info.html',
                  success_redirect='/accounts/profile/',
                  no_permission_redirect='/accounts/profile/',
-                 match=match)
+                 template_context={'match':match})
     else:
         return HttpResponseRedirect('/accounts/profile/')
 
@@ -154,8 +151,8 @@ def create_player(request, school_slug):
     # I apologize for this code. Would have used a lambda, but 
     # python wouldn't let me.
     def add_school(school):
-        def inner(form):
-            form.instance.school = school
+        def inner(instance):
+            instance.school = school
             return None
         return inner
     return edit_model_with_permissioncheck(request,
@@ -166,14 +163,14 @@ def create_player(request, school_slug):
                  template_name='create_player.html',
                  success_redirect='/accounts/edit/school/%s' % school_slug,
                  no_permission_redirect='/accounts/profile/',
-                 school=school)
+                 template_context={'school':school})
 
 @login_required
 def create_game(request, match_id):
     match = Match.objects.get(id=match_id)
     def add_match(match):
-        def inner(form):
-            form.instance.match = match
+        def inner(instance):
+            instance.match = match
             return None
         return inner
     return edit_model_with_permissioncheck(request,
@@ -184,14 +181,14 @@ def create_game(request, match_id):
                  template_name='create_game.html',
                  success_redirect='/accounts/show/matches/',
                  no_permission_redirect='/accounts/profile/',
-                 match=match)
+                 template_context={'match':match})
 
 @login_required
 def create_forfeit(request, match_id):
     match = Match.objects.get(id=match_id)
     def add_match(match):
-        def inner(form):
-            form.instance.match = match
+        def inner(instance):
+            instance.match = match
             return None
         return inner
     
@@ -203,7 +200,7 @@ def create_forfeit(request, match_id):
                  template_name='create_forfeit.html',
                  success_redirect='/accounts/show/matches/',
                  no_permission_redirect='/accounts/profile/',
-                 match=match)
+                 template_context={'match':match})
 
 @login_required
 def display_all_matches(request):

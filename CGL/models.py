@@ -1,7 +1,5 @@
 from django.db import models
 from django.template.defaultfilters import slugify
-from django.db.models.signals import post_save
-from django.db.models import Count
 from django.contrib.auth import models as auth_models
 import datetime
 import os
