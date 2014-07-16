@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from accounts.forms import UsernameReminderForm, EditGameForm, EditPlayerForm, EditSchoolForm, EditForfeitForm, EditLinkRequestForm, PlayerLinkRequestForm, form
+from accounts.forms import UsernameReminderForm, EditGameForm, EditPlayerForm, EditSchoolForm, EditForfeitForm, EditLinkRequestForm, PlayerLinkRequestForm
 from accounts.models import SchoolEditPermission, PendingPlayerLinkRequest
 from CGL.models import School, Player, Match, Game, Forfeit
 from CGL.settings import current_seasons
