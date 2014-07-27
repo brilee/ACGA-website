@@ -249,22 +249,28 @@ class Game(models.Model):
     winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
     school1_player = models.ForeignKey(Player, related_name="game_school1_player")
     school2_player = models.ForeignKey(Player, related_name="game_school2_player")
+    white_player = models.ForeignKey(Player, related_name="white_player", null=True)
+    black_player = models.ForeignKey(Player, related_name="black_player", null=True)
 
     class Meta:
         ordering = ['-match__round__date', 'match__school1__name', 'board']
 
     def get_white_player(self):
-        if self.white_school == 'School1':
+        if self.white_player:
+            return self.white_player
+        elif self.white_school == 'School1':
             return self.school1_player
         else:
             return self.school2_player
 
     def get_black_player(self):
-        if self.white_school == 'School1':
+        if self.black_player:
+            return self.black_player
+        elif self.white_school == 'School1':
             return self.school2_player
         else:
             return self.school1_player
-       
+
     def winner(self):
         if self.winning_school == 'School1':
             return self.school1_player
