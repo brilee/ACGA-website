@@ -253,13 +253,13 @@ class Game(models.Model):
     class Meta:
         ordering = ['-match__round__date', 'match__school1__name', 'board']
 
-    def white_player(self):
+    def get_white_player(self):
         if self.white_school == 'School1':
             return self.school1_player
         else:
             return self.school2_player
 
-    def black_player(self):
+    def get_black_player(self):
         if self.white_school == 'School1':
             return self.school2_player
         else:
