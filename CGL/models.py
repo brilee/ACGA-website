@@ -249,29 +249,31 @@ class Game(models.Model):
     gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
     white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are usually formatted whitePlayer-blackPlayer")
     winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
-    school1_player = models.ForeignKey(Player, related_name="game_school1_player")
-    school2_player = models.ForeignKey(Player, related_name="game_school2_player")
     white_player = models.ForeignKey(Player, related_name="white_player", null=True)
     black_player = models.ForeignKey(Player, related_name="black_player", null=True)
 
     class Meta:
         ordering = ['-match__round__date', 'match__school1__name', 'board']
 
-    def get_white_player(self):
-        if self.white_player:
+    @property
+    def school1_player(self):
+        if self.white_school == SCHOOL1:
+            return self.white_player
+        elif self.white_school == SCHOOL2:
+            return self.black_player
+
+    @property
+    def school2_player(self):
+        if self.white_school == SCHOOL2:
             return self.white_player
         elif self.white_school == SCHOOL1:
-            return self.school1_player
-        else:
-            return self.school2_player
+            return self.black_player
+
+    def get_white_player(self):
+        return self.white_player
 
     def get_black_player(self):
-        if self.black_player:
-            return self.black_player
-        elif self.white_school == SCHOOL1:
-            return self.school2_player
-        else:
-            return self.school1_player
+        return self.black_player
 
     def winner(self):
         if self.winning_school == SCHOOL1:
