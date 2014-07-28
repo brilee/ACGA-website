@@ -5,14 +5,15 @@ from south.v2 import DataMigration
 from django.db import models
 
 class Migration(DataMigration):
+    SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
     def forwards(self, orm):
         "Write your forwards methods here."
         for game in orm.Game.objects.all():
-            if game.white_school == 'School1':
+            if game.white_school == self.SCHOOL1:
                 game.white_player = game.school1_player
                 game.black_player = game.school2_player
-            elif game.white_school == 'School2':
+            elif game.white_school == self.SCHOOL2:
                 game.black_player = game.school1_player
                 game.white_player = game.school2_player
             else:
@@ -24,10 +25,10 @@ class Migration(DataMigration):
 
     def backwards(self, orm):
         for game in orm.Game.objects.all():
-            if game.white_school == 'School1':
+            if game.white_school == self.SCHOOL1:
                 game.school1_player = game.white_player
                 game.school2_player = game.black_player
-            elif game.white_school == 'School2':
+            elif game.white_school == self.SCHOOL2:
                 game.school2_player = game.white_player
                 game.school1_player = game.black_player
             else:

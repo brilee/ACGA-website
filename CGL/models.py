@@ -239,8 +239,10 @@ class Game(models.Model):
     def upload_location(instance, filename):
         return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
 
+    SCHOOL1, SCHOOL2 = 'School1', 'School2'
+
     BOARD_CHOICES = (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'))
-    SCHOOL_CHOICES = (('School1', 'School1'), ('School2', 'School2'))
+    SCHOOL_CHOICES = ((SCHOOL1, SCHOOL1), (SCHOOL2, SCHOOL2))
     
     match = models.ForeignKey(Match, help_text="This field determines who's 'School1' and who's 'School2'.")
     board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
@@ -258,7 +260,7 @@ class Game(models.Model):
     def get_white_player(self):
         if self.white_player:
             return self.white_player
-        elif self.white_school == 'School1':
+        elif self.white_school == SCHOOL1:
             return self.school1_player
         else:
             return self.school2_player
@@ -266,13 +268,13 @@ class Game(models.Model):
     def get_black_player(self):
         if self.black_player:
             return self.black_player
-        elif self.white_school == 'School1':
+        elif self.white_school == SCHOOL1:
             return self.school2_player
         else:
             return self.school1_player
 
     def winner(self):
-        if self.winning_school == 'School1':
+        if self.winning_school == SCHOOL1:
             return self.school1_player
         else:
             return self.school2_player
