@@ -4,6 +4,8 @@ from django.contrib.auth import models as auth_models
 import datetime
 import os
 
+SCHOOL1, SCHOOL2 = 'School1', 'School2'
+
 def wrap_tag(text, tag, extras=False):
     '''
     Wraps an html tag around some text.
@@ -89,8 +91,8 @@ class Player(models.Model):
         ''' Custom method because Game has two ForeignKeys to Player, so
         reverse lookup is not well-defined. This overloads to provide
         expected behavior '''
-        games1 = self.game_school1_player.all()
-        games2 = self.game_school2_player.all()
+        games1 = self.white_player.all()
+        games2 = self.black_player.all()
         all_games = games1 | games2
         all_games = all_games.order_by('-match__round__date')
         return all_games
@@ -239,7 +241,6 @@ class Game(models.Model):
     def upload_location(instance, filename):
         return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
 
-    SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
     BOARD_CHOICES = (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'))
     SCHOOL_CHOICES = ((SCHOOL1, SCHOOL1), (SCHOOL2, SCHOOL2))

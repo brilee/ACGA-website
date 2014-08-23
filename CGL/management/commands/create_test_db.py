@@ -96,8 +96,8 @@ class Command(BaseCommand):
                     if m.round.date < datetime.datetime.today():
                         for i in range(3):
                             g = Game(
-                                school1_player=random.choice(m.school1.player_set.all()),
-                                school2_player=random.choice(m.school2.player_set.all()),
+                                white_player=random.choice(m.school1.player_set.all()),
+                                black_player=random.choice(m.school2.player_set.all()),
                                 match=m,
                                 board=i+1,
                                 white_school='School1',
