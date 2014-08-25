@@ -1,13 +1,8 @@
-"""
-This file demonstrates two different styles of tests (one doctest and one
-unittest). These will both pass when you run "manage.py test".
-
-Replace these with more appropriate tests for your application.
-"""
-
+import os, shutil
 import datetime
+from settings import MEDIA_ROOT
 
-from django.core.files import File
+from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 from django.test import Client
 from django.contrib.auth import models as auth_models
@@ -26,7 +21,13 @@ class SimpleTest(TestCase):
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
         self.test_match = Match.objects.create(round=self.test_round, school1=self.test_school, school2=self.test_school)
-        self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, winning_school='School1', board=1, white_school='School1', gamefile=File(open('site_media/test_file')))
+        self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, winning_school='School1', board=1, white_school='School1', gamefile=SimpleUploadedFile('test_file', 'blah'))
+
+    def tearDown(self):
+        subfolder, filename = os.path.split(self.test_game.gamefile.name)
+        folder = os.path.join(MEDIA_ROOT, subfolder)
+        self.test_game.gamefile.delete()
+        shutil.rmtree(folder)
 
     def test_all_views(self):
         # NB: all urls must have trailing slash, or else will trigger 301 redirects to slash version, breaking the test... :(
