@@ -237,21 +237,29 @@ class Match(models.Model):
         verbose_name_plural = 'Matches'
         ordering = ['-round__date']
 
-class Game(models.Model):
+class GameBase(models.Model):
+    class Meta:
+        abstract = True
     def upload_location(instance, filename):
         return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
+    gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
+    white_player = models.ForeignKey(Player, related_name="white_player", null=True)
+    black_player = models.ForeignKey(Player, related_name="black_player", null=True)
 
+    def get_white_player(self):
+        return self.white_player
 
+    def get_black_player(self):
+        return self.black_player
+
+class Game(GameBase):
     BOARD_CHOICES = (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'))
     SCHOOL_CHOICES = ((SCHOOL1, SCHOOL1), (SCHOOL2, SCHOOL2))
     
     match = models.ForeignKey(Match, help_text="This field determines who's 'School1' and who's 'School2'.")
     board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
-    gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
     white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are usually formatted whitePlayer-blackPlayer")
     winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
-    white_player = models.ForeignKey(Player, related_name="white_player", null=True)
-    black_player = models.ForeignKey(Player, related_name="black_player", null=True)
 
     class Meta:
         ordering = ['-match__round__date', 'match__school1__name', 'board']
@@ -269,12 +277,6 @@ class Game(models.Model):
             return self.white_player
         elif self.white_school == SCHOOL1:
             return self.black_player
-
-    def get_white_player(self):
-        return self.white_player
-
-    def get_black_player(self):
-        return self.black_player
 
     def winner(self):
         if self.winning_school == SCHOOL1:

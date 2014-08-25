@@ -15,8 +15,7 @@ def display_school(request):
     return render(request, 'schools.html', locals())
 
 def display_roster(request, school_name):
-    school_name = school_name.strip().replace('_', ' ').replace('-', ' ')
-    school = get_object_or_404(School, name=school_name)
+    school = get_object_or_404(School, slug_name=school_name)
     roster = school.player_set.filter(isActive=1).order_by('rank')
     inactives = school.player_set.filter(isActive=0).order_by('rank')
     participating_seasons = Membership.objects.filter(school__name=school_name)
