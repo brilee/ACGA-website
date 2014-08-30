@@ -10,7 +10,11 @@ from django.contrib.auth import models as auth_models
 from CGL.models import Season, Player, School, Membership, Round, Match, Game
 from CGL.settings import current_seasons
 
-class SimpleTest(TestCase):
+from sgf import MySGFGame
+
+CURR_DIR = os.path.dirname(os.path.realpath(__file__))
+
+class IntegrationTest(TestCase):
     def setUp(self):
         self.test_seasons = []
         for season in current_seasons:
@@ -59,3 +63,12 @@ class SimpleTest(TestCase):
                 import traceback
                 traceback.print_exc()
                 print "Failed to get %s with response %s" % (url, response.status_code)
+
+class SGFParserTest(TestCase):
+    def setUp(self):
+        filename = 'test_files/testfile.sgf'
+        with open(os.path.join(CURR_DIR, filename)) as f:
+            self.sgf_file = MySGFGame(f.read())
+
+    def test_parse_result(self):
+        assert self.sgf_file.result == 'B+Resign'
