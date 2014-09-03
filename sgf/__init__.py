@@ -5,6 +5,6 @@ class MySGFGame(object):
         self.crude_parsed = parse_sgf_game(bytes)
 
     @property
-    def result(self):
+    def game_result(self):
         parsed_result_tokens = self.crude_parsed.sequence[0].get('RE', [])
         return ''.join(parsed_result_tokens)

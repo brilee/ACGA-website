@@ -1,8 +1,14 @@
+import datetime
+import os, shutil
 from django.db import models
+from django.db.models.signals import post_delete
 from django.template.defaultfilters import slugify
 from django.contrib.auth import models as auth_models
-import datetime
-import os
+from django.dispatch.dispatcher import receiver
+
+from django.conf import settings
+
+from sgf import MySGFGame
 
 SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
@@ -245,12 +251,39 @@ class GameBase(models.Model):
     gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
     white_player = models.ForeignKey(Player, related_name="white_player", null=True)
     black_player = models.ForeignKey(Player, related_name="black_player", null=True)
+    game_result = models.CharField(max_length=10, editable=False, blank=True, default='')
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            # on first save, parse SGF file and extract result
+            parsed_file = MySGFGame(self.gamefile.read())
+            self.game_result = parsed_file.game_result
+        super(GameBase, self).save(*args, **kwargs)
 
     def get_white_player(self):
         return self.white_player
 
     def get_black_player(self):
         return self.black_player
+
+    @property
+    def winner(self):
+        if "b+" in self.game_result.lower():
+            return self.black_player
+        elif "w+" in self.game_result.lower():
+            return self.white_player
+        else:
+                # ugh. Don't really want to deal with a Maybe type here so
+            # I'm just going to default to letting W win.
+            return self.white_player
+
+    @property
+    def loser(self):
+        if self.winner == self.white_player:
+            return self.black_player
+        else:
+            return self.white_player
+
 
 class Game(GameBase):
     BOARD_CHOICES = (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'))
@@ -259,7 +292,9 @@ class Game(GameBase):
     match = models.ForeignKey(Match, help_text="This field determines who's 'School1' and who's 'School2'.")
     board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
     white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are usually formatted whitePlayer-blackPlayer")
-    winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?")
+
+    #obsolete
+    winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?", null=True)
 
     class Meta:
         ordering = ['-match__round__date', 'match__school1__name', 'board']
@@ -278,12 +313,6 @@ class Game(GameBase):
         elif self.white_school == SCHOOL1:
             return self.black_player
 
-    def winner(self):
-        if self.winning_school == SCHOOL1:
-            return self.school1_player
-        else:
-            return self.school2_player
-    
     @models.permalink
     def get_absolute_url(self):
         return ('CGL.views.display_game', [str(self.id)])
@@ -326,6 +355,18 @@ class Game(GameBase):
     def __unicode__(self):
         return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))
 
+
+
+
+@receiver(post_delete)
+def delete_Game(sender, instance, **kwargs):
+    if isinstance(instance, GameBase):
+        subfolder, filename = os.path.split(instance.gamefile.name)
+        instance.gamefile.delete(save=False)
+        full_folder_path = os.path.join(settings.MEDIA_ROOT, subfolder)
+        if not os.listdir(full_folder_path):
+            shutil.rmtree(full_folder_path)
+
 class Forfeit(models.Model):
     BOARD_CHOICES = (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'))
     SCHOOL_CHOICES = (('School1', 'School1'), ('School2', 'School2'))
@@ -362,4 +403,3 @@ class GameComment(models.Model):
     
     def __unicode__(self):
         return unicode('%s: %s' % (self.user.username, self.comment[:100]))
-    
