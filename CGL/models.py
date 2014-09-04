@@ -97,8 +97,8 @@ class Player(models.Model):
         ''' Custom method because Game has two ForeignKeys to Player, so
         reverse lookup is not well-defined. This overloads to provide
         expected behavior '''
-        games1 = self.white_player.all()
-        games2 = self.black_player.all()
+        games1 = self.white_player_game_set.all()
+        games2 = self.black_player_game_set.all()
         all_games = games1 | games2
         all_games = all_games.order_by('-match__round__date')
         return all_games
@@ -244,20 +244,23 @@ class Match(models.Model):
         ordering = ['-round__date']
 
 class GameBase(models.Model):
-    class Meta:
-        abstract = True
     def upload_location(instance, filename):
         return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
     gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
-    white_player = models.ForeignKey(Player, related_name="white_player", null=True)
-    black_player = models.ForeignKey(Player, related_name="black_player", null=True)
+    white_player = models.ForeignKey(Player, related_name="white_player_%(class)s_set", null=True)
+    black_player = models.ForeignKey(Player, related_name="black_player_%(class)s_set", null=True)
     game_result = models.CharField(max_length=10, editable=False, blank=True, default='')
+    handicap = models.IntegerField(default=0, editable=False)
+
+    class Meta:
+        abstract = True
 
     def save(self, *args, **kwargs):
         if not self.pk:
             # on first save, parse SGF file and extract result
             parsed_file = MySGFGame(self.gamefile.read())
             self.game_result = parsed_file.game_result
+            self.handicap = parsed_file.handicap
         super(GameBase, self).save(*args, **kwargs)
 
     def get_white_player(self):
@@ -355,6 +358,12 @@ class Game(GameBase):
     def __unicode__(self):
         return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))
 
+class LadderGame(GameBase):
+    season = models.ForeignKey(Season, blank=True, editable=False)
+
+    def save(self, *args, **kwargs):
+
+        super(LadderGame, self).save(*args, **kwargs)
 
 
 

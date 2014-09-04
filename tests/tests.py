@@ -13,6 +13,7 @@ from sgf import MySGFGame
 
 CURR_DIR = os.path.dirname(os.path.realpath(__file__))
 TEST_SGF = os.path.join(CURR_DIR, 'test_files/testfile.sgf')
+TEST_SGF2 = os.path.join(CURR_DIR, 'test_files/testfile2.sgf')
 
 class TestWithCGLSetup(TestCase):
     def setUp(self):
@@ -70,9 +71,19 @@ class ModelTests(TestWithCGLSetup):
         self.assertEquals(self.test_game.loser, self.test_game.white_player)
 
 class SGFParserTest(TestCase):
-    def setUp(self):
-        with open(TEST_SGF) as f:
-            self.sgf_file = MySGFGame(f.read())
-
     def test_parse_result(self):
-        self.assertEquals(self.sgf_file.game_result, 'B+Resign')
+        with open(TEST_SGF) as f:
+            sgf_file = MySGFGame(f.read())
+        self.assertEquals(sgf_file.game_result, 'B+Resign')
+        with open(TEST_SGF2) as f:
+            sgf_file = MySGFGame(f.read())
+        self.assertEquals(sgf_file.game_result, 'W+9.50')
+
+    def test_parse_handicap(self):
+        with open(TEST_SGF) as f:
+            sgf_file = MySGFGame(f.read())
+        self.assertEquals(sgf_file.handicap, 0)
+
+        with open(TEST_SGF2) as f:
+            sgf_file = MySGFGame(f.read())
+        self.assertEquals(sgf_file.handicap, 4)

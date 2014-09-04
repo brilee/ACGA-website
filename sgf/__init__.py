@@ -8,3 +8,8 @@ class MySGFGame(object):
     def game_result(self):
         parsed_result_tokens = self.crude_parsed.sequence[0].get('RE', [])
         return ''.join(parsed_result_tokens)
+
+    @property
+    def handicap(self):
+        parsed_result_tokens = self.crude_parsed.sequence[0].get('HA', ['0'])
+        return int(''.join(parsed_result_tokens))
