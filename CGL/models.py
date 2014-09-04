@@ -37,6 +37,9 @@ class School(models.Model):
     meeting_info = models.TextField(blank=True)
     inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL.")
 
+    class Meta:
+        ordering = ['name']
+
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
 #        super(School, self).save(*args, **kwargs)
@@ -54,9 +57,6 @@ class School(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('CGL.views.display_roster', [str(self.slug_name)]) 
-
-    class Meta:
-        ordering = ['name']
 
     def __unicode__(self):
         return self.name
@@ -78,6 +78,9 @@ class Player(models.Model):
     isActive = models.BooleanField(default=True, help_text="Uncheck if player is inactive. Do not delete player; the database keeps track of everybody's games, including inactive players")
 
     user = models.OneToOneField(auth_models.User, null=True, blank=True, on_delete=models.SET_NULL)
+
+    class Meta:
+        ordering = ['school', 'name', 'rank']
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)
@@ -102,9 +105,6 @@ class Player(models.Model):
         all_games = games1 | games2
         all_games = all_games.order_by('-match__round__date')
         return all_games
-    
-    class Meta:
-        ordering = ['school', 'name', 'rank']
 
 class Season(models.Model):
     name = models.CharField(max_length = 25, help_text="Season One, Season One Championship, etc.")
@@ -212,6 +212,9 @@ class Match(models.Model):
     score2 = models.IntegerField(editable=False, default=0)
     is_exhibition = models.BooleanField(default=False, help_text="This will cause match to not be considered in scoring")
 
+    class Meta:
+        verbose_name_plural = 'Matches'
+        ordering = ['-round__date']
    
     def __unicode__(self):
         return unicode("%s vs. %s on %s" %(self.school1.name, self.school2.name,unicode(self.round.date)))
@@ -238,10 +241,6 @@ class Match(models.Model):
                                                 self.school1.KGS_name,
                                                 self.school2.name,
                                                 self.school2.KGS_name,))
-
-    class Meta:
-        verbose_name_plural = 'Matches'
-        ordering = ['-round__date']
 
 class GameBase(models.Model):
     def upload_location(instance, filename):
