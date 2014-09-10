@@ -11,6 +11,9 @@ def display_members(request):
     return render(request, 'members.html', locals())
 
 def display_emails(request):
+    inactive = School.objects.filter(active=False)
+    active = School.objects.filter(active=True)
+    in_cgl = School.objects.filter(inCGL=True)
     all_schools = School.objects.all()
 
     return render(request, 'all-emails.html', locals())

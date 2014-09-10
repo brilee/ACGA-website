@@ -6,9 +6,27 @@
 
 {% block maintext %}
 
-{% for school in all_schools %}
+<h3> Active schools </h3>
+{% for school in active %}
 {{school.contact_email|obfuscate|safe}}, 
 <br />
 {% endfor %}
 
+<h3> Inctive schools </h3>
+{% for school in inactive %}
+{{school.contact_email|obfuscate|safe}}, 
+<br />
+{% endfor %}
+
+<h3> CGL schools </h3>
+{% for school in in_cgl %}
+{{school.contact_email|obfuscate|safe}}, 
+<br />
+{% endfor %}
+
+<h3> All schools </h3>
+{% for school in all_schools %}
+{{school.contact_email|obfuscate|safe}}, 
+<br />
+{% endfor %}
 {% endblock %}
