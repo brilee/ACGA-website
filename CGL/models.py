@@ -35,7 +35,8 @@ class School(models.Model):
     contact_email = models.EmailField()
     website = models.URLField(blank = True)
     meeting_info = models.TextField(blank=True)
-    inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL.")
+    active = models.BooleanField(default=True, help_text="Uncheck if school club appears to have died")
+    inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL. Does not affect registration status, but only listing status on the CGL schools page.")
 
     class Meta:
         ordering = ['name']
@@ -361,7 +362,6 @@ class LadderGame(GameBase):
     season = models.ForeignKey(Season, blank=True, editable=False)
 
     def save(self, *args, **kwargs):
-
         super(LadderGame, self).save(*args, **kwargs)
 
 
