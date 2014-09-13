@@ -65,6 +65,9 @@ class IntegrationTest(TestWithCGLSetup):
                 print "Failed to get %s with response %s" % (url, response.status_code)
 
 class ModelTests(TestWithCGLSetup):
+    def test_membership_autofill(self):
+        self.assertEquals(self.test_membership.team_name, self.test_membership.school.name)
+
     def test_game_properties(self):
         self.assertEquals(self.test_game.game_result, 'B+Resign')
         self.assertEquals(self.test_game.winner, self.test_game.black_player)

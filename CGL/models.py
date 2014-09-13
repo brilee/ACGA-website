@@ -129,6 +129,7 @@ class Season(models.Model):
 class Membership(models.Model):
     school = models.ForeignKey(School)
     season = models.ForeignKey(Season)
+    team_name = models.CharField(max_length=30, default='', help_text="Leave this blank to default to name of school")
     num_wins = models.IntegerField(editable=False, default = 0)
     num_losses = models.IntegerField(editable=False, default = 0)
     num_ties = models.IntegerField(editable=False, default = 0)
@@ -141,6 +142,11 @@ class Membership(models.Model):
 
     def __unicode__(self):
         return unicode("%s in %s" %(self.school, self.season))
+
+    def save(self, *args, **kwargs):
+        if self.team_name == '':
+            self.team_name = self.school.name
+        super(Membership, self).save(*args, **kwargs)
 
 class RoundManager(models.Manager):
     # The season filter is implicit - generally you want to call these
