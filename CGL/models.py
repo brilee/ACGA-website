@@ -439,6 +439,8 @@ class Forfeit(models.Model):
     board = models.CharField(max_length=1, choices=BOARD_CHOICES)
     school1_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 1 fail to show up?")
     school2_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 2 fail to show up?")
+    team1_noshow = models.BooleanField(default=False, blank=True, help_text="Did Team 1 fail to show up?")
+    team2_noshow = models.BooleanField(default=False, blank=True, help_text="Did Team 2 fail to show up?")
 
     class Meta:
         ordering = ['-match__round__date', 'board']
