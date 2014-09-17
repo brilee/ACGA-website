@@ -223,6 +223,8 @@ class Match(models.Model):
     round = models.ForeignKey(Round)
     school1 = models.ForeignKey(School, related_name="school1")
     school2 = models.ForeignKey(School, related_name="school2")
+    team1 = models.ForeignKey(Membership, related_name="team1", null=True)
+    team2 = models.ForeignKey(Membership, related_name="team2", null=True)
     score1 = models.IntegerField(editable=False, default=0)
     score2 = models.IntegerField(editable=False, default=0)
     is_exhibition = models.BooleanField(default=False, help_text="This will cause match to not be considered in scoring")
