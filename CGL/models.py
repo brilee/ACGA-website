@@ -137,7 +137,7 @@ class Season(models.Model):
 class Membership(models.Model):
     school = models.ForeignKey(School)
     season = models.ForeignKey(Season)
-    team_name = models.CharField(max_length=30, default='', blank=True, help_text="Leave this blank to default to name of school")
+    team_name = models.CharField(max_length=60, default='', blank=True, help_text="Leave this blank to default to name of school")
     num_wins = models.IntegerField(editable=False, default=0)
     num_losses = models.IntegerField(editable=False, default=0)
     num_ties = models.IntegerField(editable=False, default=0)
