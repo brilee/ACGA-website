@@ -8,6 +8,7 @@ from django.contrib.auth import models as auth_models
 from django.dispatch.dispatcher import receiver
 
 from django.conf import settings
+
 from CGL.settings import current_ladder_season
 
 from sgf import MySGFGame
@@ -259,7 +260,16 @@ class Match(models.Model):
                                              self.team2.school.KGS_name)
 
 class GameBase(models.Model):
-    gamefile = models.FileField(upload_to='temp_files', help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
+    def upload_to(instance, filename):
+        import pdb; pdb.set_trace()
+        if instance.__class__.__name__ == 'Game':
+            return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
+        elif instance.__class__.__name__ == 'LadderGame':
+            return os.path.join(slugify(self.season.name), 'ladder_games', filename)
+        else:
+            return 'temp'
+
+    gamefile = models.FileField(upload_to=upload_to, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
     white_player = models.ForeignKey(Player, related_name="white_player_%(class)s_set", null=True)
     black_player = models.ForeignKey(Player, related_name="black_player_%(class)s_set", null=True)
     game_result = models.CharField(max_length=10, editable=False, blank=True, default='')
@@ -355,17 +365,6 @@ class Game(GameBase):
     class Meta:
         ordering = ['-match__round__date', 'match__team1__school__name', 'board']
 
-    def save(self, *args, **kwargs):
-        if 'temp_files' in self.gamefile.name:
-            # Implement custom upload_to behavior for filename
-            temp_path = self.gamefile.name
-            temp_dir, filename = os.path.split(temp_path)
-            self.gamefile.storage.delete(temp_path)
-            actual_path = os.path.join(slugify(self.match.round.season.name), slugify(self.match.round.date), filename)
-            self.gamefile.storage.save(actual_path, self.gamefile)
-            self.gamefile = actual_path
-        super(Game, self).save(*args, **kwargs)
-
     @property
     def team1_player(self):
         if self.white_school == SCHOOL1:
@@ -404,14 +403,7 @@ class LadderGame(GameBase):
     def save(self, *args, **kwargs):
         if not self.season:
             self.season = Season.objects.get(name=current_ladder_season)
-        if 'temp_files' in self.gamefile.name:
-            # Implement custom upload_to behavior for filename
-            temp_path = self.gamefile.name
-            temp_dir, filename = os.path.split(temp_path)
-            self.gamefile.storage.delete(temp_path)
-            actual_path = os.path.join(slugify(self.season.name), 'ladder_games', filename)
-            self.gamefile.storage.save(actual_path, self.gamefile)
-            self.gamefile = actual_path
+
         super(LadderGame, self).save(*args, **kwargs)
 
     @models.permalink
