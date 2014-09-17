@@ -11,6 +11,7 @@ class Migration(DataMigration):
         for match in orm.Match.objects.all():
             match.team1 = orm.Membership.objects.get(school=match.school1, season=match.round.season)
             match.team2 = orm.Membership.objects.get(school=match.school2, season=match.round.season)
+            match.save()
 
     def backwards(self, orm):
         pass
