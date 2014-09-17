@@ -9,7 +9,8 @@ from django.test import Client
 from django.test.client import RequestFactory
 from django.contrib.auth import models as auth_models
 
-from CGL.models import Season, Player, School, Membership, Round, Match, Game, LadderGame, GameComment, LadderGameComment, a_tag
+from accounts.models import SchoolEditPermission
+from CGL.models import Season, Player, School, Membership, Round, Match, Game, Forfeit, LadderGame, GameComment, LadderGameComment, a_tag
 from CGL.views import submit_comment, submit_ladder_comment
 from CGL.settings import current_seasons
 
@@ -34,12 +35,15 @@ class TestWithCGLSetup(TestCase):
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
         self.test_match = Match.objects.create(round=self.test_round, school1=self.test_school, school2=self.test_school)
+        self.test_forfeit = Forfeit.objects.create(match=self.test_match, board=1, school1_noshow=True)
 
         with open(TEST_SGF) as f:
             sgf_contents = f.read()
 
         self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, board=1, white_school='School1', gamefile=SimpleUploadedFile('testfile', sgf_contents))
         self.test_ladder_game = LadderGame.objects.create(season=self.test_seasons[0], white_player=self.test_player, black_player=self.test_player, gamefile=SimpleUploadedFile('testfile', sgf_contents))
+
+        self.test_permission = SchoolEditPermission.objects.create(school=self.test_school, user=self.test_user)
 
     def tearDown(self):
         self.test_game.delete()
@@ -78,7 +82,7 @@ class IntegrationTest(TestWithCGLSetup):
                 traceback.print_exc()
                 print "Failed to get %s with response %s" % (url, response.status_code)
 
-    def test_all_post_views(self):
+    def test_public_post_views(self):
         url_comment = (
             ('/CGL/games/%s/submit/' % self.test_game.id, GameComment),
             ('/CGL/laddergames/%s/submit/' % self.test_ladder_game.id, LadderGameComment)
@@ -93,6 +97,9 @@ class IntegrationTest(TestWithCGLSetup):
             self.assertEquals(response.status_code, 302)
             new_comment = comment_model.objects.get(pk=1)
             self.assertEquals(new_comment.comment, comment_text)
+
+#    def test_captain_edit_views(self):
+
 
 class ModelTests(TestWithCGLSetup):
     def test_html_tags(self):
@@ -118,6 +125,13 @@ class ModelTests(TestWithCGLSetup):
             self.test_game.download_html(),
             '<a href="{}">[sgf]</a>'.format(self.test_game.gamefile.url)
         )
+
+    def test_edit_permissions(self):
+        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_school))
+        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_player))
+        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_game))
+        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_forfeit))
+        self.assertTrue(not SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_school2))
 
     def test_membership_autofill(self):
         self.assertEquals(self.test_membership.team_name, self.test_membership.school.name)

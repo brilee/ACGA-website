@@ -4,8 +4,7 @@ from CGL.models import Player, School, Match, Game, Forfeit
 
 class SchoolEditPermissionManager(models.Manager):
     def get_all_schools(self, user):
-        return [perm.school for perm in super(SchoolEditPermissionManager, 
-            self).filter(user=user)]
+        return [perm.school for perm in self.filter(user=user)]
 
     def has_edit_permissions(self, user, obj):
         schoolperms = self.get_all_schools(user)
