@@ -24,11 +24,12 @@ class TestWithCGLSetup(TestCase):
         self.test_user = User.objects.create_user(username='tester', email="tester@test.com", password='omgsuchsecret')
         self.client.login(username='tester', password='omgsuchsecret')
 
+        auth_models.User.objects.create(username=u'brilee')
         self.test_seasons = []
         for season in current_seasons:
             self.test_seasons.append(Season.objects.create(name=season))
-        self.test_user = auth_models.User.objects.create(username=u'brilee')
         self.test_school = School.objects.create(name=u'Test School')
+        self.test_school2 = School.objects.create(name=u'Test School 2')
         self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
