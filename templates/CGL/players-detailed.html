@@ -18,7 +18,7 @@
 <h3>Games played</h3>
 <ul>
 {% for game in player.game_set %}
-	<li>{{game.result_html|safe}}</li>
+	<li>{{game.full_description_html|safe}}</li>
 {% endfor %}
 </ul>
 
