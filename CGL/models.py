@@ -356,13 +356,14 @@ class Game(GameBase):
         ordering = ['-match__round__date', 'match__team1__school__name', 'board']
 
     def save(self, *args, **kwargs):
-        # Implement custom upload_to behavior for filename
-        temp_path = self.gamefile.name
-        temp_dir, filename = os.path.split(temp_path)
-        self.gamefile.storage.delete(temp_path)
-        actual_path = os.path.join(slugify(self.match.round.season.name), slugify(self.match.round.date), filename)
-        self.gamefile.storage.save(actual_path, self.gamefile)
-        self.gamefile = actual_path
+        if 'temp_files' in self.gamefile.name
+            # Implement custom upload_to behavior for filename
+            temp_path = self.gamefile.name
+            temp_dir, filename = os.path.split(temp_path)
+            self.gamefile.storage.delete(temp_path)
+            actual_path = os.path.join(slugify(self.match.round.season.name), slugify(self.match.round.date), filename)
+            self.gamefile.storage.save(actual_path, self.gamefile)
+            self.gamefile = actual_path
         super(Game, self).save(*args, **kwargs)
 
     @property
@@ -403,13 +404,14 @@ class LadderGame(GameBase):
     def save(self, *args, **kwargs):
         if not self.season:
             self.season = Season.objects.get(name=current_ladder_season)
-        # Implement custom upload_to behavior for filename
-        temp_path = self.gamefile.name
-        temp_dir, filename = os.path.split(temp_path)
-        self.gamefile.storage.delete(temp_path)
-        actual_path = os.path.join(slugify(self.season.name), 'ladder_games', filename)
-        self.gamefile.storage.save(actual_path, self.gamefile)
-        self.gamefile = actual_path
+        if 'temp_files' in self.gamefile.name
+            # Implement custom upload_to behavior for filename
+            temp_path = self.gamefile.name
+            temp_dir, filename = os.path.split(temp_path)
+            self.gamefile.storage.delete(temp_path)
+            actual_path = os.path.join(slugify(self.season.name), 'ladder_games', filename)
+            self.gamefile.storage.save(actual_path, self.gamefile)
+            self.gamefile = actual_path
         super(LadderGame, self).save(*args, **kwargs)
 
     @models.permalink
