@@ -225,7 +225,7 @@ class Bye(models.Model):
         ordering = ['-round__date']
 
     def __unicode__(self):
-        return u'{} got a bye on {}' % (self.school.name, unicode(self.round.date))
+        return u'{} got a bye on {}'.format(self.team.school.name, unicode(self.round.date))
 
 class Match(models.Model):
     round = models.ForeignKey(Round)
