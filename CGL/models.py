@@ -189,10 +189,17 @@ class RoundManager(models.Manager):
 class Round(models.Model):
     season = models.ForeignKey(Season)
     date = models.DateField(help_text="YYYY-MM-DD")
+    round_number = models.IntegerField(default=0, blank=True)
     objects = RoundManager()
 
     class Meta:
         ordering = ['-date']
+
+    def save(self, *args, **kwargs):
+        if not self.round_number:
+            previous_round_count = Round.objects.filter(date__lt=self.date, season=self.season).count()
+            self.round_number = previous_round_count + 1
+        super(Round, self).save(*args, **kwargs)
     
     def __unicode__(self):
         return '{} in {}'.format(unicode(self.date), self.season.name)
@@ -211,6 +218,7 @@ class Round(models.Model):
 
 class Bye(models.Model):
     school = models.ForeignKey(School)
+    team = models.ForeignKey(Membership, null=True)
     round = models.ForeignKey(Round)
 
     class Meta:
