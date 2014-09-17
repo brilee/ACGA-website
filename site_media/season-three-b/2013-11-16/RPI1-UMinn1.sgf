@@ -1,0 +1,441 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[RPI1]PB[UMinn1]DT[2013-11-16]PC[The KGS Go Server at http://www.gokgs.com/]RE[W+17.50]
+;B[pd]BL[1794.389]
+;W[dp]WL[1790.613]C[UMinn1 [-\]: 你是
+UMinn1 [-\]: 李昱璋吧
+]
+;B[qp]BL[1778.63]
+;W[dd]WL[1782.235]C[RPI1 [-\]: 是的
+]
+;B[fq]BL[1760.85]C[RPI1 [-\]: 听林嘉欣说，你也是人大的
+]
+;W[cn]WL[1773.14]C[UMinn1 [-\]: 呃，不是人大的
+]
+;B[kq]BL[1753.212]C[RPI1 [-\]: 哦，不好意思
+RPI1 [-\]: 你叫啥名字呀
+]
+;W[nc]WL[1760.496]C[UMinn1 [-\]: 只是在人大认识他的
+]
+;B[pf]BL[1744.736]C[UMinn1 [-\]: 我叫孙彦清
+]
+;W[jd]WL[1740.002]
+;B[pj]BL[1717.657]C[RPI1 [-\]: 嗯，咱都加油哈
+UMinn1 [-\]: - -
+UMinn1 [-\]: 你让我四个我都不一定能赢的- -
+RPI2 [-\]: ...
+RPI1 [-\]: 没事儿，咱都互相学习嘛
+]
+;W[jj]WL[1679.979]
+;B[op]BL[1701.563]
+;W[dj]WL[1661.854]C[RPI2 [-\]: 白棋。。。。。
+RPI3 [-\]: 自重
+]
+;B[cf]BL[1669.369]
+;W[ce]WL[1658.015]C[ArizonaSU1 [-\]: 你啥时候开始宇宙流了
+]
+;B[eg]BL[1650.925]
+;W[df]WL[1631.04]C[RPI3 [-\]: ASU1叔叔你好
+]
+;B[dg]BL[1633.731]
+;W[cg]WL[1596.977]
+;B[ch]BL[1631.675]
+;W[bf]WL[1593.006]
+;B[fi]BL[1627.19]
+;W[fk]WL[1556.992]C[ArizonaSU1 [-\]: 这个称呼好
+RPI2 [-\]: 大神你好
+]
+;B[hh]BL[1581.457]
+;W[jh]WL[1543.152]
+;B[jg]BL[1559.148]C[ArizonaSU3 [-\]: ..............沒人跟我下棋
+ArizonaSU1 [-\]: 他们人呢
+RPI3 [-\]: ASU3叔叔你好
+ArizonaSU3 [-\]: .......
+ArizonaSU3 [-\]: 他們那隊只來兩個
+]
+;W[ig]WL[1430.352]C[ArizonaSU3 [-\]: DigiPen3沒來...
+]
+;B[ih]BL[1556.27]
+;W[hg]WL[1414.273]C[RPI2 [-\]: 说实话。。。
+ArizonaSU1 [-\]: 那咱们赢一局就好了
+RPI2 [-\]: 来了跟没来一样。。。。。
+]
+;B[hj]BL[1534.412]C[ArizonaSU1 [-\]: martin 肯定能赢，我就随便下了
+ArizonaSU3 [-\]: .........................................
+]
+;W[kh]WL[1396.681]
+;B[gg]BL[1519.654]C[RPI3 [-\]: dgp战5
+]
+;W[jf]WL[1343.46]
+;B[hl]BL[1495.658]
+;W[rp]WL[1317.919]
+;B[qo]BL[1476.601]
+;W[qq]WL[1315.804]
+;B[pq]BL[1469.73]
+;W[qh]WL[1314.591]
+;B[ph]BL[1442.081]
+;W[qi]WL[1311.749]
+;B[pi]BL[1435.516]
+;W[qg]WL[1308.65]
+;B[qj]BL[1417.704]
+;W[qe]WL[1301.084]
+;B[qd]BL[1403.192]
+;W[rd]WL[1229.828]
+;B[rc]BL[1353.187]
+;W[pe]WL[1192.391]
+;B[oe]BL[1338.189]
+;W[re]WL[1190.227]
+;B[od]BL[1320.849]
+;W[pb]WL[1186.977]
+;B[qb]BL[1305.873]
+;W[pc]WL[1184.723]
+;B[qc]BL[1297.173]C[ArizonaSU3 [-\]: 沒有不戰而勝的嗎　哈哈
+]
+;W[rj]WL[1155.861]
+;B[rk]BL[1272.697]
+;W[si]WL[1147.798]
+;B[kg]BL[1260.509]C[RPI2 [-\]: 我只让DGP2得了4目棋。。。
+]
+;W[lg]WL[1061.308]
+;B[md]BL[1168.994]C[RPI3 [-\]:  完蛋我要被对面宰掉了
+ArizonaSU1 [-\]: martin局势怎么样了
+]
+;W[mc]WL[837.431]
+;B[kf]BL[1108.705]C[ArizonaSU1 [-\]: 白棋打入不便宜啊感觉
+]
+;W[lf]WL[778.921]C[RPI2 [-\]: =。=
+ArizonaSU3 [-\]: 她拿黑子...躺著贏吧
+]
+;B[ke]BL[1030.62]
+;W[je]WL[776.403]C[ArizonaSU1 [-\]: 好吧，那我就专心观战了
+]
+;B[le]BL[1014.194]C[ArizonaSU3 [-\]: 好爽　不用下棋
+]
+;W[nf]WL[672.942]
+;B[of]BL[960.267]
+;W[me]WL[659.921]
+;B[ne]BL[935.339]C[UMinn1 [-\]: 看错- -
+]
+;W[mf]WL[652.071]C[ArizonaSU1 [-\]: 是他太阴险了
+RPI1 [-\]: .
+]
+;B[qf]BL[915.564]
+;W[rf]WL[649.056]C[RPI2 [-\]: 勺子。。。。。
+RPI2 [-\]: 我这边打勺了。。。
+]
+;B[lc]BL[866.601]
+;W[nd]WL[607.083]C[RPI3 [-\]: 勺子是方言吗
+RPI2 [-\]: 恩 就是出棋了。。。
+ArizonaSU1 [-\]: 大家都是厨师
+RPI3 [-\]: 这盘是不是有点虚
+]
+;B[kc]BL[732.002]
+;W[ld]WL[456.252]
+;B[kd]BL[729.136]
+;W[jc]WL[439.382]
+;B[md]BL[651.536]
+;W[nh]WL[343.571]
+;B[oc]BL[589.436]
+;W[ld]WL[331.779]
+;B[jb]BL[560.532]
+;W[ib]WL[300.631]
+;B[md]BL[520.419]C[RPI2 [-\]: 好好的一盘棋被我搞复杂了
+RPI2 [-\]: 悲剧
+]
+;W[hq]WL[176.103]
+;B[lb]BL[469.339]
+;W[dr]WL[134.265]C[ArizonaSU3 [-\]: 。。。為何放棄治療
+]
+;B[ic]BL[434.408]
+;W[ja]WL[120.938]
+;B[kb]BL[419.549]
+;W[hb]WL[95.662]
+;B[id]BL[412.892]
+;W[gd]WL[49.952]
+;B[mk]BL[369.065]
+;W[nj]WL[30.87]
+;B[nk]BL[354.876]
+;W[jl]WL[29.107]C[ArizonaSU1 [-\]: 这棋还有点漫长啊
+]
+;B[hn]BL[288.037]
+;W[jn]WL[13.924]C[RPI2 [-\]: 我搞定了
+RPI2 [-\]: 学长帮我截个图
+ArizonaSU3 [-\]: 強者RPI2
+]
+;B[kk]BL[268.304]
+;W[jk]WL[30]OW[5]
+;B[li]BL[266.976]
+;W[lh]WL[30]OW[5]
+;B[qr]BL[241.223]
+;W[hf]WL[30]OW[5]
+;B[if]BL[218.821]
+;W[gf]WL[30]OW[5]
+;B[ie]BL[184.099]
+;W[gj]WL[30]OW[5]C[RPI2 [-\]: 罗学长输6目棋左右
+RPI2 [-\]: 让不动3个子
+RPI2 [-\]: 就看着判了
+RPI2 [-\]: 这盘
+]
+;B[gk]BL[156.301]
+;W[fj]WL[30]OW[5]
+;B[gi]BL[140.068]
+;W[ei]WL[30]OW[5]
+;B[eh]BL[108.55]
+;W[lm]WL[30]OW[5]C[RPI3 [-\]: 算上贴目输6目？
+]
+;B[io]BL[76.408]
+;W[jo]WL[30]OW[5]
+;B[ip]BL[66.781]
+;W[gp]WL[30]OW[5]C[RPI2 [-\]: 不贴目啊
+RPI2 [-\]: 盘面落后6目
+RPI2 [-\]: 你让子没有贴目
+]
+;B[lo]BL[39.436]C[ArizonaSU3 [-\]: 這盤有讓嗎
+]
+;W[ll]WL[30]OW[5]C[RPI3 [-\]: 哦干
+]
+;B[lk]BL[29.003]
+;W[og]WL[30]OW[5]
+;B[pg]BL[18.048]C[RPI3 [-\]: 我老记得让子倒贴
+RPI2 [-\]: 赢了
+RPI2 [-\]: 盘面貌似领先一幕
+RPI2 [-\]: 我在好好点点
+]
+;W[mi]WL[30]OW[5]
+;B[ki]BL[12.863]
+;W[ji]WL[30]OW[5]C[RPI2 [-\]: 。。。。
+]
+;B[fl]BL[30]OB[5]C[RPI2 [-\]: 再点一遍又输一幕。。。。点目能力直线下降啊
+ArizonaSU3 [-\]: 要不要學我　不點目
+]
+;W[oj]WL[30]OW[5]
+;B[ok]BL[30]OB[5]C[ArizonaSU3 [-\]: 人生會快活許多
+RPI2 [-\]: 输了
+RPI2 [-\]: 黑棋盘面不够
+]
+;W[oh]WL[30]OW[5]C[ArizonaSU1 [-\]: 我结束了
+]
+;B[dk]BL[30]OB[5]
+;W[cj]WL[30]OW[5]
+;B[el]BL[30]OB[5]C[RPI2 [-\]: 恩
+]
+;W[gn]WL[30]OW[5]C[ArizonaSU3 [-\]: rpi3贏還輸呢
+]
+;B[gm]BL[30]OB[5]
+;W[ln]WL[30]OW[5]C[RPI2 [-\]: 输了
+]
+;B[ck]BL[30]OB[4]
+;W[bh]WL[30]OW[5]
+;B[cm]BL[30]OB[3]
+;W[bm]WL[30]OW[5]
+;B[fp]BL[30]OB[3]
+;W[fo]WL[30]OW[5]C[ArizonaSU1 [-\]: ASU第二台赢了吧
+]
+;B[go]BL[30]OB[2]C[ArizonaSU3 [-\]: 嗯　我看贏了300目
+ArizonaSU1 [-\]: 这太爽了点
+]
+;W[ho]WL[30]OW[5]
+;B[fn]BL[30]OB[2]
+;W[go]WL[30]OW[5]
+;B[eo]BL[30]OB[2]
+;W[in]WL[30]OW[5]C[ArizonaSU1 [-\]: 这棋黑棋下的好啊
+]
+;B[dn]BL[30]OB[2]
+;W[ep]WL[30]OW[4]C[RPI2 [-\]: 这扑很正常的手筋啊。。。
+]
+;B[co]BL[30]OB[2]C[ArizonaSU1 [-\]: 我还真没这个感觉
+]
+;W[bn]WL[30]OW[4]C[RPI2 [-\]: 。。。。。。。额
+ArizonaSU1 [-\]: 而且C7那个靠多好啊
+RPI2 [-\]: 。。。。。。
+]
+;B[do]BL[30]OB[2]C[RPI2 [-\]: 其实白棋上面有很大机会吃掉黑棋的
+RPI2 [-\]: 不用那么麻烦。。。
+ArizonaSU1 [-\]: 他主要想简化局面吧
+ArizonaSU1 [-\]: 想控制一下
+]
+;W[cl]WL[30]OW[3]C[RPI3 [-\]: 据说asu1是rpi1的小弟
+RPI3 [-\]: 求证
+]
+;B[dm]BL[30]OB[2]C[ArizonaSU1 [-\]: 反了
+]
+;W[bk]WL[30]OW[3]
+;B[hm]BL[30]OB[2]
+;W[gq]WL[30]OW[3]C[RPI3 [-\]: rpi1说他可以轻松殴打asu1
+RPI3 [-\]: 是真的吗
+]
+;B[cq]BL[30]OB[2]C[ArizonaSU1 [-\]: 又反了
+]
+;W[cp]WL[30]OW[3]C[ArizonaSU1 [-\]: 哎，这棋黑棋本来有机会的
+]
+;B[bp]BL[30]OB[2]C[ArizonaSU3 [-\]: 實際上ASU1是我小弟　我都毆打他的
+]
+;W[fr]WL[30]OW[3]C[RPI3 [-\]: 原来如此
+RPI2 [-\]: = =
+ArizonaSU1 [-\]: 这群疯子。。。
+]
+;B[br]BL[30]OB[2]
+;W[bo]WL[30]OW[3]
+;B[ff]BL[30]OB[2]
+;W[hd]WL[30]OW[3]
+;B[mo]BL[30]OB[2]
+;W[nm]WL[30]OW[3]
+;B[ej]BL[30]OB[2]C[ArizonaSU1 [-\]: 你下午去下棋不了？
+]
+;W[pm]WL[30]OW[3]C[ArizonaSU3 [-\]: 不去
+]
+;B[ci]BL[30]OB[2]C[ArizonaSU3 [-\]: 我派我小弟去即可
+RPI3 [-\]: 你们asu是有个go club什么的吗
+ArizonaSU1 [-\]: 。。。又不去啊
+ArizonaSU1 [-\]: 是
+RPI3 [-\]: 厉害
+]
+;W[bj]WL[30]OW[3]C[RPI3 [-\]: rpi的go club最强的是3k
+ArizonaSU3 [-\]: RPI3為何要打簡體字
+]
+;B[di]BL[30]OB[2]C[ArizonaSU1 [-\]: 差不多
+]
+;W[jr]WL[30]OW[3]C[RPI3 [-\]: 我其实是中共的卧底
+RPI3 [-\]: 你被我骗了
+ArizonaSU1 [-\]: 而且那个是我们州的club
+]
+;B[jq]BL[30]OB[2]
+;W[kr]WL[30]OW[3]
+;B[lr]BL[30]OB[2]
+;W[iq]WL[30]OW[3]C[RPI2 [-\]: wtf？
+]
+;B[ld]BL[30]OB[1]C[RPI2 [-\]: 黑棋左下角怎么死的。。。
+RPI3 [-\]: 说起来
+]
+;W[jp]WL[30]OW[3]C[RPI3 [-\]: 我妈以前好像是asu毕业的
+]
+;B[lq]BL[30]OB[1]
+;W[pl]WL[30]OW[3]C[ArizonaSU3 [-\]: 你不是來自台灣嗎
+ArizonaSU1 [-\]: 这盘棋黑棋有点可惜的
+]
+;B[pk]BL[30]OB[1]C[RPI3 [-\]: 我被中共洗脑了啊
+]
+;W[ql]WL[30]OW[3]C[ArizonaSU3 [-\]: 那有黨證嗎
+RPI3 [-\]: yes chairman mao
+]
+;B[rl]BL[30]OB[1]
+;W[rm]WL[30]OW[3]C[ArizonaSU3 [-\]: 可以加我入黨嗎
+RPI3 [-\]: 不行
+]
+;B[qk]BL[30]OB[1]C[RPI3 [-\]: kmt no good
+UMinn1 [-\]: 渣官子--
+]
+;W[rn]WL[30]OW[3]
+;B[qn]BL[30]OB[1]
+;W[qm]WL[30]OW[3]
+;B[ro]BL[30]OB[1]
+;W[sd]WL[30]OW[3]
+;B[fe]BL[30]OB[1]
+;W[fd]WL[30]OW[3]
+;B[bi]BL[30]OB[1]
+;W[ai]WL[30]OW[3]
+;B[ks]BL[30]OB[1]
+;W[ir]WL[30]OW[3]
+;B[hc]BL[30]OB[1]
+;W[gc]WL[30]OW[3]
+;B[ec]BL[30]OB[1]
+;W[fb]WL[30]OW[1]
+;B[cr]BL[30]OB[1]
+;W[ap]WL[30]OW[1]
+;B[aq]BL[30]OB[1]
+;W[ao]WL[30]OW[1]C[ArizonaSU3 [-\]: 所以下次對Minn要小心了　頗強@@
+]
+;B[dl]BL[30]OB[1]C[UToronto2 [-\]: p14
+]
+;W[bl]WL[30]OW[1]C[RPI2 [-\]: 。。。。。。
+UToronto2 [-\]: um
+UToronto2 [-\]: looks bad
+RPI3 [-\]: 你让minn3三个子正好
+]
+;B[ed]BL[30]OB[1]
+;W[ee]WL[30]OW[1]
+;B[ef]BL[30]OB[1]
+;W[de]WL[30]OW[1]C[UToronto5 [-\]: damn strong Chinese chat box
+alark32 [6k\]: lool
+ArizonaSU3 [-\]: .....
+]
+;B[sc]BL[30]OB[1]C[ArizonaSU3 [-\]: seems I should not chat by Chinese 
+]
+;W[js]WL[30]OW[1]
+;B[ls]BL[30]OB[1]
+;W[so]WL[30]OW[1]C[RPI3 [-\]: but youre taiwanese sir
+]
+;B[rq]BL[30]OB[1]
+;W[sp]WL[30]OW[1]
+;B[sq]BL[30]OB[1]
+;W[sn]WL[30]OW[1]
+;B[on]BL[30]OB[1]
+;W[nl]WL[30]OW[1]C[UToronto5 [-\]: i didn't say you should not i just didn't expect it
+UToronto5 [-\]: i always see English or Japanese on kgs..
+]
+;B[mn]BL[30]OB[1]
+;W[nn]WL[30]OW[1]
+;B[no]BL[30]OB[1]
+;W[pn]WL[30]OW[1]
+;B[po]BL[30]OB[1]
+;W[oi]WL[30]OW[1]C[alark32 [6k\]: :Ocollege go looks fun
+RPI3 [-\]: college go is evil
+]
+;B[ol]BL[30]OB[1]
+;W[om]WL[30]OW[1]C[alark32 [6k\]: thanks for the warning O_O 
+]
+;B[sg]BL[30]OB[1]C[DigiPen1 [-\]: Depends on the college
+]
+;W[rg]WL[30]OW[1]C[alark32 [6k\]: Uminn :O
+]
+;B[mm]BL[30]OB[1]
+;W[ml]WL[30]OW[1]
+;B[sk]BL[30]OB[1]C[DigiPen1 [-\]: Ah
+]
+;W[sf]WL[30]OW[1]
+;B[ka]BL[30]OB[1]
+;W[ia]WL[30]OW[1]
+;B[ik]BL[30]OB[1]
+;W[ii]WL[30]OW[1]
+;B[hi]BL[30]OB[1]
+;W[kp]WL[30]OW[1]
+;B[lp]BL[30]OB[1]
+;W[il]WL[30]OW[1]C[alark32 [6k\]: is it something that you just sign up for O_O like a club?
+RPI3 [-\]: college go people pretend to be 1k but theyre in fact 6d or something
+]
+;B[im]BL[30]OB[1]
+;W[ij]WL[30]OW[1]
+;B[hk]BL[30]OB[1]
+;W[jm]WL[30]OW[1]C[alark32 [6k\]: I'm pretending to be 6k
+]
+;B[ko]BL[30]OB[1]C[alark32 [6k\]: But I am in fact, 31k or something 
+]
+;W[kj]WL[30]OW[1]C[RPI2 [-\]: 。。。。。。。。。
+RPI2 [-\]: 。。。。。。。
+]
+;B[lj]BL[30]OB[1]
+;W[sj]WL[30]OW[1]
+;B[oo]BL[30]OB[1]
+;W[eb]WL[30]OW[1]C[ArizonaSU3 [-\]: zzz
+]
+;B[kn]BL[30]OB[1]
+;W[kl]WL[30]OW[1]
+;B[ob]BL[30]OB[1]
+;W[mj]WL[30]OW[1]
+;B[sl]BL[30]OB[1]
+;W[he]WL[30]OW[1]
+;B[km]BL[30]OB[1]
+;W[sm]WL[30]OW[1]C[alark32 [6k\]: dames? it isnt japanese rules?
+]
+;B[]BL[30]OB[1]C[RPI3 [-\]: chinese rule
+alark32 [6k\]: ahh
+]
+;W[ge]WL[30]OW[1]C[UMinn1 [-\]: 。。。。。
+]
+;B[]BL[30]OB[1]
+;W[]WL[30]OW[1]TW[aa][ba][ca][da][ea][fa][ga][ha][ab][bb][cb][db][gb][ac][bc][cc][dc][ec][fc][ad][bd][cd][ed][ae][be][se][af][cf][ag][bg][mg][ng][sg][ah][mh][rh][sh][ni][ri][aj][ak][al][am][an][io][bp][fp][hp][ip][aq][bq][cq][dq][eq][fq][ar][br][cr][er][gr][hr][as][bs][cs][ds][es][fs][gs][hs][is]TB[la][ma][na][oa][pa][qa][ra][sa][mb][nb][pb][rb][sb][jc][mc][nc][pc][jd][nd][je][jf][fg][dh][fh][gh][ei][fj][gj][ek][fk][gl][em][fm][en][mp][np][pp][mq][nq][oq][qq][mr][nr][or][pr][rr][sr][ms][ns][os][ps][qs][rs][ss]C[RPI3 [-\]: wtf
+RPI3 [-\]: how come
+UMinn3 [-\]: good game
+UMinn1 [-\]: 瞬间一大波评论
+UMinn1 [-\]: gg
+])

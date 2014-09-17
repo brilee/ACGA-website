@@ -1,0 +1,493 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[CMU1]PB[UToronto1]DT[2013-11-16]PC[The KGS Go Server at http://www.gokgs.com/]C[UToronto1 [-\]: WHat's your level?
+CMU1 [-\]: am i white?
+CMU1 [-\]: lol sorry
+CMU1 [-\]: i was wondering what settings were
+]RE[B+Resign]
+;B[qd]BL[1776.197]
+;W[dd]WL[1797.652]C[UToronto1 [-\]: whats your level
+CMU1 [-\]: im not sure
+CMU1 [-\]: havent played for a while
+CMU1 [-\]: yourself?
+UToronto1 [-\]: well what was it
+]
+;B[pq]BL[1752.786]C[CMU1 [-\]: 4-5d
+]
+;W[dp]WL[1791.231]C[UToronto1 [-\]: ok same here
+]
+;B[lc]BL[1733.081]
+;W[po]WL[1789.359]
+;B[pm]BL[1724.317]
+;W[no]WL[1786.26]
+;B[nq]BL[1722.521]
+;W[qq]WL[1784.643]
+;B[qr]BL[1721.191]
+;W[qp]WL[1773.022]
+;B[or]BL[1719.17]
+;W[qm]WL[1761.589]
+;B[ql]BL[1716.801]
+;W[pl]WL[1760]
+;B[pk]BL[1663.489]
+;W[ol]WL[1757.892]
+;B[qk]BL[1661.882]
+;W[rm]WL[1683.564]
+;B[ok]BL[1657.311]
+;W[om]WL[1671.811]
+;B[pf]BL[1653.887]
+;W[dj]WL[1662.385]
+;B[fc]BL[1641.505]
+;W[id]WL[1630.004]
+;B[cc]BL[1515.85]
+;W[cd]WL[1580.204]
+;B[dc]BL[1512.214]
+;W[ed]WL[1579.372]
+;B[ec]BL[1421.177]
+;W[ge]WL[1577.699]
+;B[fq]BL[1319.104]
+;W[qc]WL[1355.337]
+;B[pc]BL[1285.254]C[UToronto1 [-\]: oh right,
+UToronto1 [-\]: Ben Mantle, 4d, University of Toronto
+UToronto1 [-\]: Well,
+UToronto1 [-\]: I guess 5d since stupid Howard said he's 5d xD
+UToronto2 [-\]: wutt
+]
+;W[pb]WL[1300.315]C[UToronto1 [-\]: He used his CGA rating
+CMU1 [-\]: Sean He, nice to play with u Ben
+UToronto1 [-\]: Same here
+]
+;B[oc]BL[1080.016]
+;W[rc]WL[1269.719]
+;B[ob]BL[1012.35]
+;W[rd]WL[1188.171]
+;B[qe]BL[1002.038]
+;W[re]WL[1181.865]
+;B[rf]BL[999.833]
+;W[qa]WL[1132.541]
+;B[dn]BL[940.092]
+;W[fp]WL[1130.064]
+;B[cp]BL[905.624]
+;W[cq]WL[868.037]
+;B[co]BL[896.758]
+;W[eq]WL[866.188]
+;B[bq]BL[894.602]
+;W[cr]WL[829.949]
+;B[cl]BL[875.817]
+;W[ck]WL[828.404]
+;B[bl]BL[836.734]
+;W[bk]WL[798.876]
+;B[gq]BL[800.56]
+;W[jq]WL[750.135]
+;B[ip]BL[726.756]
+;W[iq]WL[670.437]
+;B[gp]BL[701.853]
+;W[fo]WL[667.647]
+;B[ho]BL[497.624]
+;W[jp]WL[608.069]
+;B[fn]BL[397.316]
+;W[br]WL[481.416]
+;B[jo]BL[354.183]
+;W[ko]WL[477.885]
+;B[kn]BL[348.545]
+;W[lo]WL[429.141]
+;B[lq]BL[340.291]
+;W[mr]WL[421.856]
+;B[lr]BL[264.409]
+;W[gn]WL[405.188]
+;B[go]BL[253.898]
+;W[gm]WL[368.258]
+;B[jn]BL[71.157]
+;W[bp]WL[361.219]
+;B[bo]BL[65.543]
+;W[aq]WL[360.111]
+;B[fm]BL[25.651]
+;W[gl]WL[353.767]
+;B[fl]BL[30]OB[5]
+;W[gk]WL[352.766]
+;B[fk]BL[30]OB[5]
+;W[gj]WL[320.231]
+;B[fj]BL[30]OB[5]
+;W[dl]WL[258.507]
+;B[eo]BL[30]OB[5]
+;W[ep]WL[256.244]
+;B[gi]BL[30]OB[5]
+;W[hi]WL[90.345]
+;B[ei]BL[30]OB[5]
+;W[cm]WL[82.083]
+;B[hj]BL[30]OB[5]
+;W[gh]WL[69.715]
+;B[fi]BL[30]OB[5]
+;W[ij]WL[30]OW[5]
+;B[hk]BL[30]OB[5]
+;W[il]WL[30]OW[5]
+;B[ii]BL[30]OB[5]
+;W[hh]WL[30]OW[5]
+;B[ik]BL[30]OB[5]
+;W[jk]WL[30]OW[5]
+;B[jj]BL[30]OB[5]
+;W[hl]WL[30]OW[5]
+;B[ij]BL[30]OB[5]
+;W[kl]WL[30]OW[5]
+;B[ln]BL[30]OB[3]
+;W[lp]WL[30]OW[5]
+;B[ml]BL[30]OB[2]
+;W[kj]WL[30]OW[5]
+;B[ki]BL[30]OB[2]
+;W[ih]WL[30]OW[5]
+;B[ji]BL[30]OB[2]
+;W[li]WL[30]OW[5]
+;B[lj]BL[30]OB[2]
+;W[kk]WL[30]OW[5]
+;B[kh]BL[30]OB[2]
+;W[lh]WL[30]OW[5]
+;B[kg]BL[30]OB[2]
+;W[mk]WL[30]OW[5]
+;B[nl]BL[30]OB[2]
+;W[nk]WL[30]OW[5]
+;B[on]BL[30]OB[2]
+;W[pn]WL[30]OW[5]
+;B[nm]BL[30]OB[2]
+;W[pm]WL[30]OW[5]
+;B[mn]BL[30]OB[2]
+;W[lg]WL[30]OW[2]
+;B[kf]BL[30]OB[2]C[UToronto2 [-\]: so complicated
+UToronto4 [-\]: yeah
+]
+;W[ll]WL[30]OW[1]
+;B[mo]BL[30]OB[1]
+;W[mp]WL[30]OW[1]
+;B[np]BL[30]OB[1]
+;W[mq]WL[30]OW[1]
+;B[ni]BL[30]OB[1]
+;W[lf]WL[30]OW[1]
+;B[ke]BL[30]OB[1]
+;W[nj]WL[30]OW[1]
+;B[mi]BL[30]OB[1]
+;W[oi]WL[30]OW[1]
+;B[nh]BL[30]OB[1]
+;W[qi]WL[30]OW[1]C[UToronto2 [-\]: dang
+]
+;B[mj]BL[30]OB[1]
+;W[oh]WL[30]OW[1]
+;B[ng]BL[30]OB[1]
+;W[lk]WL[30]OW[1]
+;B[oj]BL[30]OB[1]
+;W[rk]WL[30]OW[1]C[UToronto5 [-\]: fack my life
+UToronto2 [-\]: dw
+UToronto5 [-\]: oh P5 is still there
+]
+;B[oo]BL[30]OB[1]
+;W[og]WL[30]OW[1]C[UToronto2 [-\]: we're still 3-2
+UToronto5 [-\]: Yup
+]
+;B[nf]BL[30]OB[1]C[UToronto4 [-\]: Oh Ben!
+UToronto4 [-\]: what the hell...
+]
+;W[do]WL[30]OW[1]
+;B[cn]BL[30]OB[1]
+;W[bm]WL[30]OW[1]C[UToronto5 [-\]: ?
+]
+;B[ch]BL[30]OB[1]
+;W[en]WL[30]OW[1]
+;B[dm]BL[30]OB[1]
+;W[bi]WL[30]OW[1]
+;B[fg]BL[30]OB[1]C[UToronto4 [-\]: i thought w is dead be4 i went to washroomm...
+]
+;W[ef]WL[30]OW[1]C[UToronto5 [-\]: Ben gona fight anyway
+]
+;B[hf]BL[30]OB[1]C[UToronto5 [-\]: Strong
+]
+;W[if]WL[30]OW[1]C[UToronto2 [-\]: whites okay
+UToronto2 [-\]: um
+UToronto2 [-\]: im not sure now
+]
+;B[he]BL[30]OB[1]C[UToronto2 [-\]: lol
+UToronto5 [-\]: lol
+UToronto2 [-\]: his e14 move was not very clean
+]
+;W[fh]WL[30]OW[1]C[CMU3 [-\]: i wouldve just gone h14 or something instead of e14
+]
+;B[eh]BL[30]OB[1]C[UToronto2 [-\]: yea
+UToronto2 [-\]: f12
+UToronto2 [-\]: looks bad too
+UToronto4 [-\]: now some chance
+]
+;W[gg]WL[30]OW[1]C[UToronto2 [-\]: ..
+]
+;B[gf]BL[30]OB[1]
+;W[ff]WL[30]OW[1]C[UToronto2 [-\]: dang
+CMU3 [-\]: lol it works
+]
+;B[ig]BL[30]OB[1]
+;W[eg]WL[30]OW[1]
+;B[gd]BL[30]OB[1]C[UToronto4 [-\]: hi U2 it's not good to  talk about the move directly....
+CMU3 [-\]: b shouldve also m9 when he had the chance
+UToronto2 [-\]: I'm talking about moves that already happened 
+]
+;W[bg]WL[30]OW[1]
+;B[bh]BL[30]OB[1]
+;W[kq]WL[30]OW[1]C[UToronto4 [-\]: :(
+]
+;B[ah]BL[30]OB[1]
+;W[al]WL[30]OW[1]
+;B[be]BL[30]OB[1]
+;W[bf]WL[30]OW[1]
+;B[bd]BL[30]OB[1]
+;W[cg]WL[30]OW[1]C[UToronto4 [-\]: guess 4-1 
+]
+;B[dg]BL[30]OB[1]
+;W[df]WL[30]OW[1]
+;B[dh]BL[30]OB[1]
+;W[of]WL[30]OW[1]C[UToronto4 [-\]: good ben!
+]
+;B[oe]BL[30]OB[1]
+;W[op]WL[30]OW[1]
+;B[pi]BL[30]OB[1]
+;W[nn]WL[30]OW[1]
+;B[mm]BL[30]OB[1]C[UToronto5 [-\]: did he zombie that sht
+]
+;W[ph]WL[30]OW[1]C[UToronto4 [-\]: w so dead
+]
+;B[qh]BL[30]OB[1]C[UToronto4 [-\]: clean kill
+UToronto5 [-\]: my god
+UToronto5 [-\]: lol
+]
+;W[hg]WL[30]OW[1]
+;B[jg]BL[30]OB[1]
+;W[em]WL[30]OW[1]
+;B[el]BL[30]OB[1]
+;W[eo]WL[30]OW[1]
+;B[er]BL[30]OB[1]
+;W[dq]WL[30]OW[1]
+;B[af]BL[30]OB[1]
+;W[pj]WL[30]OW[1]
+;B[pg]BL[30]OB[1]
+;W[pi]WL[30]OW[1]
+;B[ri]BL[30]OB[1]C[UToronto4 [-\]: time to resign
+]
+;W[rr]WL[30]OW[1]C[UToronto5 [-\]: nah
+UToronto5 [-\]: it'll be over soon
+]
+;B[se]BL[30]OB[1]
+;W[hr]WL[30]OW[1]
+;B[hq]BL[30]OB[1]
+;W[gr]WL[30]OW[1]
+;B[fr]BL[30]OB[1]
+;W[kc]WL[30]OW[1]
+;B[lb]BL[30]OB[1]
+;W[kb]WL[30]OW[1]C[UToronto4 [-\]: ...
+]
+;B[hd]BL[30]OB[1]
+;W[ld]WL[30]OW[1]
+;B[le]BL[30]OB[1]
+;W[md]WL[30]OW[1]
+;B[mc]BL[30]OB[1]
+;W[hb]WL[30]OW[1]
+;B[gb]BL[30]OB[1]
+;W[hc]WL[30]OW[1]
+;B[gc]BL[30]OB[1]
+;W[ie]WL[30]OW[1]
+;B[kd]BL[30]OB[1]
+;W[jd]WL[30]OW[1]
+;B[jb]BL[30]OB[1]C[UToronto1 [-\]: thanks
+CMU1 [-\]: ty
+UToronto1 [-\]: damn just didnt wanna resign did he
+UToronto5 [-\]: pro
+UToronto5 [-\]: i thought you lost for sure...
+UToronto1 [-\]: haha zombie style
+UToronto5 [-\]: zombie style x 100
+UToronto1 [-\]: haha
+UToronto5 [-\]: killed everthing
+UToronto5 [-\]: my god
+UToronto4 [-\]: did they changed a player?
+UToronto5 [-\]: what do you mean
+UToronto1 [-\]: i forgot to do shit at the bottom
+UToronto1 [-\]: but thats overkill
+UToronto4 [-\]: what were the last 50 shxt moves...
+UToronto5 [-\]: lolol
+UToronto5 [-\]: L3
+UToronto4 [-\]: all moves were shit since P14
+UToronto4 [-\]: not like a 5d
+UToronto1 [-\]: haha yeah
+UToronto4 [-\]: like a 5k
+UToronto1 [-\]: well,
+UToronto4 [-\]: even worse
+UToronto1 [-\]: once he got reverse killed on the upepr left,
+UToronto1 [-\]: he lost hois spirit
+UToronto1 [-\]: after that i didnt mind him killing my lower right or my stones in lower left
+UToronto2 [-\]: im kinda hungry
+UToronto2 [-\]: time to eat breakfast
+UToronto1 [-\]: hahaha
+UToronto4 [-\]: ....
+UToronto5 [-\]: lol
+UToronto4 [-\]: howard..
+UToronto2 [-\]: i woke up at 12
+UToronto2 [-\]: err
+UToronto1 [-\]: i had tea for breakfast
+UToronto5 [-\]: my go
+UToronto4 [-\]: still haven't seen you
+UToronto2 [-\]: 12:55
+UToronto5 [-\]: god
+UToronto1 [-\]: so guys
+UToronto1 [-\]: do we win??
+UToronto5 [-\]: alright good job guys
+UToronto5 [-\]: we win 4-1
+UToronto2 [-\]: yea
+UToronto2 [-\]: 4-1
+UToronto5 [-\]: andy got taken down
+UToronto1 [-\]: sweet
+UToronto1 [-\]: HAHAHAHAHA
+UToronto1 [-\]: always always
+UToronto5 [-\]: lol 
+UToronto5 [-\]: he's not doing too well lately
+UToronto1 [-\]: who took him down?
+UToronto5 [-\]: but he'll bounce back
+UToronto5 [-\]: some 4dan
+UToronto1 [-\]: ok well it wasnt a 3k
+UToronto5 [-\]: yea
+UToronto2 [-\]: 3ks are hard
+UToronto5 [-\]: 3k strongest rank in CGL
+UToronto2 [-\]: since you give 5 stones
+UToronto1 [-\]: howard,
+UToronto1 [-\]: next time
+UToronto2 [-\]: yea
+UToronto1 [-\]: say 4d
+UToronto2 [-\]: why
+UToronto2 [-\]: why don't you just say 5d
+UToronto1 [-\]: cuz its not cga ratings
+UToronto2 [-\]: kgs ratings?
+UToronto1 [-\]: thing is,
+UToronto5 [-\]: Yea I think you should both say 5d
+UToronto1 [-\]: u have to give more handicap if u do this
+UToronto1 [-\]: butbut,
+UToronto2 [-\]: i have my pride
+UToronto5 [-\]: lolol
+UToronto2 [-\]: xD
+UToronto2 [-\]: jk
+UToronto1 [-\]: i barely lost my handi games
+UToronto1 [-\]: i mean
+UToronto1 [-\]: won
+UToronto2 [-\]: but i beat a 1d
+UToronto2 [-\]: giving 5 stones
+UToronto2 [-\]: haahha
+UToronto1 [-\]: well thats just once instance
+UToronto1 [-\]: but like
+UToronto5 [-\]: you're stil giving 1d only 3 stones though not 4
+UToronto1 [-\]: i wanna sign up with my kgs rating
+UToronto5 [-\]: cause its handi -1
+UToronto1 [-\]: which is 4d usually
+UToronto4 [-\]: my kgs is still 1d
+UToronto4 [-\]: so i always say 1d
+UToronto1 [-\]: shouldnt the first board get to decide?
+UToronto1 [-\]: haha
+UToronto2 [-\]: wutt
+UToronto1 [-\]: whomever is first board should get to pick their rating,
+UToronto1 [-\]: and then
+UToronto2 [-\]: pick the others ratings?
+UToronto2 [-\]: fine
+UToronto2 [-\]: :p
+UToronto1 [-\]: no one should be higher than them
+UToronto2 [-\]: but i'm not
+UToronto1 [-\]: cuz then we are cheating or sth
+UToronto2 [-\]: wait
+UToronto2 [-\]: true
+UToronto5 [-\]: yea i just wanted to avoid having UT2 being stronger than UT1
+UToronto2 [-\]: fine
+UToronto5 [-\]: people usually complain
+UToronto2 [-\]: but I'm not
+UToronto2 [-\]: we can say you beat me 3-0
+UToronto1 [-\]: howard lets go with 4d
+UToronto5 [-\]: i know you're not stronger
+UToronto5 [-\]: but if you say 5d
+UToronto5 [-\]: and ben says 4d
+UToronto2 [-\]: :(
+UToronto5 [-\]: then people get mad
+UToronto2 [-\]: fine
+UToronto2 [-\]: I'll say 4d
+UToronto1 [-\]: but uh
+UToronto1 [-\]: howard
+UToronto1 [-\]: if u like
+UToronto4 [-\]: howard give me 5 stones and beat me
+UToronto1 [-\]: beat me twice in a row at club or sth
+UToronto4 [-\]: if you cannot you are 4d
+UToronto2 [-\]: kk
+UToronto1 [-\]: then u can be higher board
+UToronto2 [-\]: nah
+UToronto1 [-\]: and say 5d
+UToronto2 [-\]: 2 is too little
+UToronto5 [-\]: he's been practicing
+UToronto2 [-\]: has to be 4
+UToronto2 [-\]: not really
+UToronto2 [-\]: honestly
+UToronto2 [-\]: xD
+UToronto1 [-\]: howard is prolly getting stronger
+UToronto2 [-\]: about hte praticing
+UToronto1 [-\]: but im not
+UToronto2 [-\]: @zhiqi
+UToronto2 [-\]: okay 
+UToronto2 [-\]: ill give you 5 stones
+UToronto2 [-\]: i dont know hwo good youa re though
+UToronto4 [-\]: haha
+UToronto2 [-\]: want to play now?
+UToronto1 [-\]: i have plans for today
+UToronto5 [-\]: u gus should rest
+UToronto5 [-\]: guys*
+UToronto2 [-\]: kk
+UToronto1 [-\]: i gotta go outside soon
+UToronto2 [-\]: cya
+UToronto1 [-\]: howard,
+UToronto2 [-\]: I'll say 4d dw
+UToronto1 [-\]: im gettign weaker and weaker im sure u can finally win
+UToronto2 [-\]: nah
+UToronto5 [-\]: gj everyone, see you all soon
+UToronto1 [-\]: i mean, not that u couldnt ever beat me at my best but im just saying
+UToronto1 [-\]: it would be tough if u fight me two years ago
+UToronto1 [-\]: but now u can win
+UToronto2 [-\]: well thanks
+UToronto2 [-\]: cya later
+UToronto1 [-\]: byebye
+UToronto4 [-\]: ben i will beat you one day
+UToronto1 [-\]: 4th board....
+UToronto1 [-\]: zhiqi?
+UToronto4 [-\]: yha
+UToronto1 [-\]: I would be happy if u and dinesh beat me even,
+UToronto1 [-\]: then i will be surrounded by more power
+UToronto1 [-\]: and get stronger, maybe
+UToronto4 [-\]: haha
+UToronto1 [-\]: anyway, i actually am looking forward to it if u will beat me sometime,
+UToronto4 [-\]: gotta go
+UToronto1 [-\]: like actually, i want it
+UToronto1 [-\]: im rooting for all of u who are like 3d and below
+UToronto4 [-\]: i won 18 games in a row as a kgs 1d
+UToronto4 [-\]: but still 1d
+UToronto1 [-\]: woah
+UToronto4 [-\]: :)
+UToronto1 [-\]: that's actually pretty poiwerful
+UToronto4 [-\]: kgs rating is so good
+UToronto1 [-\]: if we were talking about 2d,
+UToronto1 [-\]: i dun even know if i could do that without losing focus
+UToronto4 [-\]: i play seriously...
+UToronto1 [-\]: or even 1d, maybe some of them are randomly not really 1d
+UToronto1 [-\]: and destroy my life
+UToronto4 [-\]: i don't play casual games anymore...
+UToronto1 [-\]: itsh ard for me to be serious these days, too much going on,
+UToronto1 [-\]: only like
+UToronto1 [-\]: sometiems for certain single games
+UToronto1 [-\]: like the one just now, or one at go club if i know it will be slow
+UToronto1 [-\]: like when i played jeffrey last week
+UToronto1 [-\]: and managed to win haha
+UToronto4 [-\]: oh jeff came to the club?
+UToronto1 [-\]: yup
+UToronto4 [-\]: i missed that
+UToronto1 [-\]: he prolly came ytd but i wasnt there
+UToronto4 [-\]: i was in paris
+UToronto1 [-\]: oh
+UToronto4 [-\]: anyway gotta go
+UToronto1 [-\]: yup see u
+UToronto4 [-\]: look at my game today!
+UToronto1 [-\]: ok
+UToronto4 [-\]: 70 moves clean kill
+UToronto4 [-\]: haha
+UToronto1 [-\]: k i will, see ya
+UToronto4 [-\]: cya
+])
