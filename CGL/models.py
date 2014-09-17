@@ -28,10 +28,10 @@ class School(models.Model):
     name = models.CharField(max_length=50)
     KGS_name = models.CharField(blank=True, max_length=50, help_text="The prefix used for the KGS accounts")
     slug_name = models.SlugField(blank=True, editable=False)
-    club_president = models.CharField(max_length=50, blank = True)
+    club_president = models.CharField(max_length=50, blank=True)
     captain = models.CharField(blank=True, max_length=50)
     contact_email = models.EmailField()
-    website = models.URLField(blank = True)
+    website = models.URLField(blank=True)
     meeting_info = models.TextField(blank=True)
     active = models.BooleanField(default=True, help_text="Uncheck if school club appears to have died")
     inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL. Does not affect registration status, but only listing status on the CGL schools page.")
@@ -67,11 +67,11 @@ class Player(models.Model):
                     [(100, '??')])
     name = models.CharField(max_length=30)
     slug_name = models.SlugField(blank=True, editable=False)
-    rank = models.IntegerField(choices = RANK_CHOICES, default= 100)
+    rank = models.IntegerField(choices=RANK_CHOICES, default= 100)
     KGS_username = models.CharField(max_length=12, blank=True)
     school = models.ForeignKey(School)
-    num_wins = models.IntegerField(editable=False, default = 0)
-    num_losses = models.IntegerField(editable=False, default = 0)
+    num_wins = models.IntegerField(editable=False, default=0)
+    num_losses = models.IntegerField(editable=False, default=0)
 
     receiveSpam = models.BooleanField(default=True, help_text="Uncheck if player doesn't want to get email reminders")
     isActive = models.BooleanField(default=True, help_text="Uncheck if player is inactive. Do not delete player; the database keeps track of everybody's games, including inactive players")
@@ -106,9 +106,9 @@ class Player(models.Model):
         return all_games
 
 class Season(models.Model):
-    name = models.CharField(max_length = 25, help_text="Season One, Season One Championship, etc.")
+    name = models.CharField(max_length=25, help_text="Season One, Season One Championship, etc.")
     slug_name = models.SlugField(blank=True, editable=False)
-    schoolyear = models.CharField(max_length = 40, help_text="2011-2012, etc.")
+    schoolyear = models.CharField(max_length=40, help_text="2011-2012, etc.")
     schools = models.ManyToManyField(School, through='Membership')
     html = models.TextField(blank=True, help_text="Any custom HTML for this season you'd like to appear in the archives")
     description = models.TextField(blank=True, help_text="Any historical notes about this season you'd like to appear in the archives")
@@ -128,11 +128,11 @@ class Membership(models.Model):
     school = models.ForeignKey(School)
     season = models.ForeignKey(Season)
     team_name = models.CharField(max_length=30, default='', blank=True, help_text="Leave this blank to default to name of school")
-    num_wins = models.IntegerField(editable=False, default = 0)
-    num_losses = models.IntegerField(editable=False, default = 0)
-    num_ties = models.IntegerField(editable=False, default = 0)
+    num_wins = models.IntegerField(editable=False, default=0)
+    num_losses = models.IntegerField(editable=False, default=0)
+    num_ties = models.IntegerField(editable=False, default=0)
     num_byes = models.IntegerField(editable=False, default=0)
-    num_forfeits = models.IntegerField(editable=False, default = 0)
+    num_forfeits = models.IntegerField(editable=False, default=0)
     still_participating = models.BooleanField(default=True, help_text="Uncheck this box if school has withdrawn from season. This will cause them to not be considered by the matching algorithm")
 
     class Meta:
@@ -335,7 +335,7 @@ class Game(GameBase):
     SCHOOL_CHOICES = ((SCHOOL1, SCHOOL1), (SCHOOL2, SCHOOL2))
     
     match = models.ForeignKey(Match, help_text="This field determines who's 'School1' and who's 'School2'.")
-    board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
+    board = models.CharField(max_length=1, choices=BOARD_CHOICES)
     white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are usually formatted whitePlayer-blackPlayer")
 
     #obsolete
@@ -424,7 +424,7 @@ class Forfeit(models.Model):
     SCHOOL_CHOICES = (('School1', 'School1'), ('School2', 'School2'))
 
     match = models.ForeignKey(Match, help_text="School1 vs School2")
-    board = models.CharField(max_length = 1, choices = BOARD_CHOICES)
+    board = models.CharField(max_length=1, choices=BOARD_CHOICES)
     school1_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 1 fail to show up?")
     school2_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 2 fail to show up?")
 
