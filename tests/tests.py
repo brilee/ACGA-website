@@ -34,7 +34,7 @@ class TestWithCGLSetup(TestCase):
         self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
-        self.test_match = Match.objects.create(round=self.test_round, school1=self.test_school, school2=self.test_school)
+        self.test_match = Match.objects.create(round=self.test_round, team1=self.test_membership, team2=self.test_membership, school1=self.test_school, school2=self.test_school)
         self.test_forfeit = Forfeit.objects.create(match=self.test_match, board=1, school1_noshow=True)
 
         with open(TEST_SGF) as f:
@@ -102,6 +102,8 @@ class IntegrationTest(TestWithCGLSetup):
 
 
 class ModelTests(TestWithCGLSetup):
+    def test_round_autoassign(self):
+        self.assertEquals(self.test_round.round_number, 1)
     def test_html_tags(self):
         self.assertEquals(
             a_tag('Click Here!', href='blah.com', class_='hello there'),

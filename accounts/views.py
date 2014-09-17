@@ -211,8 +211,8 @@ def display_all_matches(request):
 
     relevant_matches = [m for m in season_matches
             if m.round.in_past()
-            and (m.school1 in all_school_perms
-                 or m.school2 in all_school_perms)]
+            and (m.team1.school in all_school_perms
+                 or m.team2.school in all_school_perms)]
     return render(request, 'all_matches.html', locals())
 
 @login_required

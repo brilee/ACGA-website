@@ -56,7 +56,7 @@ class EditForfeitForm(forms.ModelForm):
     '''
     class Meta:
         model = Forfeit
-        fields = ['board', 'school1_noshow', 'school2_noshow']
+        fields = ['board', 'team1_noshow', 'team2_noshow']
 
 
 class EditLinkRequestForm(forms.ModelForm):

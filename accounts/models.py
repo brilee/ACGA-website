@@ -13,11 +13,11 @@ class SchoolEditPermissionManager(models.Manager):
         elif type(obj) == School:
             return obj in schoolperms
         elif type(obj) == Match:
-            return obj.school1 in schoolperms or obj.school2 in schoolperms
+            return obj.team1.school in schoolperms or obj.team2.school in schoolperms
         elif type(obj) == Game:
-            return obj.match.school1 in schoolperms or obj.match.school2 in schoolperms
+            return obj.match.team1.school in schoolperms or obj.match.team2.school in schoolperms
         elif type(obj) == Forfeit:
-            return obj.match.school1 in schoolperms or obj.match.school2 in schoolperms
+            return obj.match.team1.school in schoolperms or obj.match.team2.school in schoolperms
         elif type(obj) == PendingPlayerLinkRequest:
             return obj.player.school in schoolperms
         else:
