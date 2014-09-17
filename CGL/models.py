@@ -1,5 +1,6 @@
 import datetime
 import os, shutil
+from urllib import quote
 from django.db import models
 from django.db.models.signals import post_delete
 from django.template.defaultfilters import slugify
@@ -15,10 +16,19 @@ SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
 def html_tag(tag):
     def f(text, **kwargs):
+        '''
+        Constructs an html tag. Assumes that text does not contain XSS attacks!
+        Also assumes that text is already in bytes / encoded properly.
+        '''
         if 'class_' in kwargs:
             class_value = kwargs.pop('class_')
             kwargs['class'] = class_value
-        return "<{tag}".format(tag=tag) + ''.join(' {item[0]!s}="{item[1]!s}"'.format(item=item) for item in sorted(kwargs.items())) + '>{text}</{tag}>'.format(text=text, tag=tag)
+
+        return "<{tag}{attrs}>{text}</{tag}>".format(
+            tag=tag,
+            attrs=''.join(' {item[0]}="{item[1]}"'.format(item=item) for item in sorted(kwargs.items())),
+            text=text,
+        )
     return f
 
 a_tag = html_tag('a')
@@ -86,10 +96,10 @@ class Player(models.Model):
         super(Player, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return unicode("%s - %s %s" %(self.school.name, self.name, self.get_rank_display()))
+        return u"{} - {} {}".format(self.school.name, self.name, self.get_rank_display())
 
     def name_and_rank(self):
-        return unicode('%s, %s' % (self.name, self.get_rank_display()))
+        return '{}, {}'.format(self.name.encode('utf8'), self.get_rank_display())
 
     @models.permalink
     def get_absolute_url(self):
@@ -139,7 +149,7 @@ class Membership(models.Model):
         ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
 
     def __unicode__(self):
-        return unicode("%s in %s" %(self.school, self.season))
+        return u"{} in {}".format(self.team_name, self.season.name)
 
     def save(self, *args, **kwargs):
         if self.team_name == '':
@@ -185,7 +195,7 @@ class Round(models.Model):
         ordering = ['-date']
     
     def __unicode__(self):
-        return unicode(self.date) + unicode(' in ') +  unicode(self.season.name)
+        return '{} in {}'.format(unicode(self.date), self.season.name)
     
     def in_future(self):
         return self.date > datetime.date.today()
@@ -207,7 +217,7 @@ class Bye(models.Model):
         ordering = ['-round__date']
 
     def __unicode__(self):
-        return unicode('%s got a bye on %s' % (self.school, self.round.date))
+        return u'{} got a bye on {}' % (self.school.name, unicode(self.round.date))
 
 class Match(models.Model):
     round = models.ForeignKey(Round)
@@ -222,30 +232,30 @@ class Match(models.Model):
         ordering = ['-round__date']
    
     def __unicode__(self):
-        return unicode("%s vs. %s on %s" %(self.school1.name, self.school2.name,unicode(self.round.date)))
+        return u'{} vs. {} on {}'.format(self.school1.name, self.school2.name, unicode(self.round.date))
 
     def display_result(self):
         if self.score1 > self.score2:
-            return unicode('%s defeats %s, %s - %s' %(self.school1.name,
-                                                       self.school2.name,
-                                                       self.score1,
-                                                       self.score2))
-        elif self.score2 > self.score1:
-            return unicode('%s defeats %s, %s - %s' %(self.school2.name,
-                                                       self.school1.name,
-                                                       self.score2,
-                                                       self.score1))
-        else:
-            return unicode('%s ties  %s, %s - %s' %(self.school1.name,
+            return u'{} defeats {}, {} - {}'.format(self.school1.name,
                                                     self.school2.name,
                                                     self.score1,
-                                                    self.score2))
+                                                    self.score2)
+        elif self.score2 > self.score1:
+            return u'{} defeats {}, {} - {}'.format(self.school2.name,
+                                                    self.school1.name,
+                                                    self.score2,
+                                                    self.score1)
+        else:
+            return u'{} ties {}, {} - {}'.format(self.school1.name,
+                                                 self.school2.name,
+                                                 self.score1,
+                                                 self.score2)
     
     def display_match(self):
-        return unicode("%s (%s) vs. %s (%s)" % (self.school1.name,
-                                                self.school1.KGS_name,
-                                                self.school2.name,
-                                                self.school2.KGS_name,))
+        return u"{} ({}) vs. {} ({})".format(self.school1.name,
+                                             self.school1.KGS_name,
+                                             self.school2.name,
+                                             self.school2.KGS_name)
 
 class GameBase(models.Model):
     gamefile = models.FileField(upload_to='temp_files', help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
@@ -373,7 +383,7 @@ class Game(GameBase):
         return ('CGL.views.display_game', [str(self.id)])
 
     def __unicode__(self):
-        return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))
+        return u"{} vs. {} in {} vs. {} on {}, board {}".format(self.school1_player.name, self.school2_player.name, self.match.school1.name, self.match.school2.name, unicode(self.match.round.date), self.board)
 
 class LadderGame(GameBase):
     season = models.ForeignKey(Season, blank=True, help_text="Leave this blank to default to current ladder season")
@@ -395,7 +405,7 @@ class LadderGame(GameBase):
         return ('CGL.views.display_ladder_game', [str(self.id)])
 
     def __unicode__(self):
-        return unicode("%s vs %s" % (self.white_player, self.black_player))
+        return u"{} vs {}".format(self.white_player.name, self.black_player.name)
 
 class LadderMembership(models.Model):
     season = models.ForeignKey(Season)
@@ -408,7 +418,7 @@ class LadderMembership(models.Model):
         ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties']
 
     def __unicode__(self):
-        return unicode("%s in %s" %(self.player, self.season))
+        return u"{} in {}".format(self.player.name, self.season.name)
 
 @receiver(post_delete)
 def delete_Game(sender, instance, **kwargs):
@@ -433,16 +443,16 @@ class Forfeit(models.Model):
 
     def display_result(self):
         if self.school1_noshow and self.school2_noshow:
-            return unicode('Board %s: Both schools failed to show' % self.board)
+            return 'Board %s: Both schools failed to show' % self.board
         elif self.school1_noshow and not self.school2_noshow:
-            return unicode('Board %s: %s forfeits this board' % (self.board, self.match.school1.name))
+            return 'Board %s: %s forfeits this board' % (self.board, self.match.school1.name.encode('utf8'))
         elif not self.school1_noshow and self.school2_noshow:
-            return unicode('Board %s: %s forfeits this board' % (self.board, self.match.school2.name))
+            return 'Board %s: %s forfeits this board' % (self.board, self.match.school2.name.encode('utf8'))
         else:
-            return unicode('Board %s: Invalid forfeit record, at least one school must be marked as noshow' % self.board)
+            return 'Board %s: Invalid forfeit record, at least one school must be marked as noshow' % self.board
 
     def __unicode__(self):
-        return unicode('%s vs %s on %s, board %s' %(self.match.school1, self.match.school2, self.match.round.date, self.board))
+        return u'{} vs {} on {}, board {}'.format(self.match.school1.name, self.match.school2.name, unicode(self.match.round.date), self.board)
 
 class CommentBase(models.Model):
     user = models.ForeignKey(auth_models.User)
@@ -454,7 +464,7 @@ class CommentBase(models.Model):
         ordering = ['-datetime']
 
     def __unicode__(self):
-        return unicode('%s: %s' % (self.user.username, self.comment[:100]))
+        return u'{}: {}'.format(self.user.username, self.comment[:100])
 
 class GameComment(CommentBase):
     game = models.ForeignKey(Game)

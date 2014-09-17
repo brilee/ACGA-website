@@ -28,7 +28,7 @@ class Document(models.Model):
     public = models.BooleanField(default=False, help_text='Should this document be accessible by anyone?')
 
     def __unicode__(self):
-        return unicode('%s by %s' %(self.title, self.author))
+        return u'{} by {}'.format(self.title, self.author)
 
 class EventManager(models.Manager):
     def get_upcoming_event(self):
@@ -47,7 +47,7 @@ class Event(models.Model):
     objects = EventManager()
 
     def __unicode__(self):
-        return unicode(self.title)
+        return self.title
 
     @models.permalink
     def get_absolute_url(self):

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import datetime
 
@@ -26,9 +27,9 @@ class TestWithCGLSetup(TestCase):
         self.test_seasons = []
         for season in current_seasons:
             self.test_seasons.append(Season.objects.create(name=season))
-        self.test_user = auth_models.User.objects.create(username='brilee')
-        self.test_school = School.objects.create(name='test_school')
-        self.test_player = Player.objects.create(name='test_player', school=self.test_school, pk=17, rank=-2)
+        self.test_user = auth_models.User.objects.create(username=u'brilee')
+        self.test_school = School.objects.create(name=u'Test School')
+        self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
         self.test_match = Match.objects.create(round=self.test_round, school1=self.test_school, school2=self.test_school)
@@ -58,7 +59,7 @@ class IntegrationTest(TestWithCGLSetup):
             '/CGL/',
             '/CGL/rules/',
             '/CGL/schools/',
-            '/CGL/schools/test_school/',
+            '/CGL/schools/%s/' % self.test_school.slug_name,
             '/CGL/results/',
             '/CGL/results/%s/' % self.test_seasons[0].slug_name,
             '/CGL/players/',
@@ -106,7 +107,7 @@ class ModelTests(TestWithCGLSetup):
     def test_game_display(self):
         self.assertEquals(
             self.test_game.result_html(),
-            '<a href="/CGL/players/17/"><b>test_player, 2d (W)</b></a> vs. <a href="/CGL/players/17/">test_player, 2d (B)</a>'
+            '<a href="/CGL/players/17/"><b>\xe2\x98\x83player, 2d (W)</b></a> vs. <a href="/CGL/players/17/">\xe2\x98\x83player, 2d (B)</a>'
         )
         self.assertEquals(
             self.test_game.view_html(),

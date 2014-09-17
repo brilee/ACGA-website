@@ -31,7 +31,7 @@ class SchoolEditPermission(models.Model):
     objects = SchoolEditPermissionManager()
 
     def __unicode__(self):
-        return unicode('%s can edit %s' % (self.user, self.school))
+        return u'{} can edit {}'.format(self.user, self.school)
 
 class PendingPlayerLinkRequest(models.Model):
     STATUS_CHOICES = (('Approved', 'Approved'),
@@ -48,7 +48,7 @@ class PendingPlayerLinkRequest(models.Model):
         return ('accounts.views.edit_link_request', [str(self.id)])
 
     def __unicode__(self):
-        return unicode('%s - %s requests %s' % (self.status, self.user, self.player))
+        return u'{} - {} requests {}'.format(self.status, self.user.username, self.player.name)
 
     def save(self, *args, **kwargs):
         super(PendingPlayerLinkRequest, self).save(*args, **kwargs)
