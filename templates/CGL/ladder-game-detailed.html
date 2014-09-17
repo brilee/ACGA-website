@@ -7,17 +7,11 @@
 {% block maintext %}
 <h3>{{game.result_html|safe}}</h3>
 
-<ul>
-    <li> Board {{game.board}} of <a href="{{game.match.round.season.get_absolute_url}}">{{game.match}}</a></li>
-    <li> Winner: {{game.winner.name}}</li>
-</ul>
-
 <div class="eidogo-player-auto" sgf="{{game.gamefile.url}}"></div>
 <p>{{game.download_html|safe}}</p>
-
 <h5> Comments</h5>
 <ul class='square'>
-{% for comment in game.gamecomment_set.all %}
+{% for comment in game.laddergamecomment_set.all %}
     <li><b> {% if user.get_profile %} {{user.get_profile.name}} {% else %} Anonymous {% endif %}</b> on {{comment.datetime}}: <br />{{comment.comment}}</li>
 {% empty %}
     <li>No comments on this game yet!</li>

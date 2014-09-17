@@ -1,12 +1,15 @@
 import os
 import datetime
 
+from django.contrib.auth.models import User
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 from django.test import Client
+from django.test.client import RequestFactory
 from django.contrib.auth import models as auth_models
 
-from CGL.models import Season, Player, School, Membership, Round, Match, Game
+from CGL.models import Season, Player, School, Membership, Round, Match, Game, LadderGame, GameComment, LadderGameComment, a_tag
+from CGL.views import submit_comment, submit_ladder_comment
 from CGL.settings import current_seasons
 
 from sgf import MySGFGame
@@ -17,20 +20,28 @@ TEST_SGF2 = os.path.join(CURR_DIR, 'test_files/testfile2.sgf')
 
 class TestWithCGLSetup(TestCase):
     def setUp(self):
+        self.test_user = User.objects.create_user(username='tester', email="tester@test.com", password='omgsuchsecret')
+        self.client.login(username='tester', password='omgsuchsecret')
+
         self.test_seasons = []
         for season in current_seasons:
             self.test_seasons.append(Season.objects.create(name=season))
         self.test_user = auth_models.User.objects.create(username='brilee')
         self.test_school = School.objects.create(name='test_school')
-        self.test_player = Player.objects.create(name='test_player', school=self.test_school, pk=17)
+        self.test_player = Player.objects.create(name='test_player', school=self.test_school, pk=17, rank=-2)
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
         self.test_match = Match.objects.create(round=self.test_round, school1=self.test_school, school2=self.test_school)
+
         with open(TEST_SGF) as f:
-            self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, winning_school='School1', board=1, white_school='School1', gamefile=SimpleUploadedFile('testfile', f.read()))
+            sgf_contents = f.read()
+
+        self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, board=1, white_school='School1', gamefile=SimpleUploadedFile('testfile', sgf_contents))
+        self.test_ladder_game = LadderGame.objects.create(season=self.test_seasons[0], white_player=self.test_player, black_player=self.test_player, gamefile=SimpleUploadedFile('testfile', sgf_contents))
 
     def tearDown(self):
         self.test_game.delete()
+        self.test_ladder_game.delete()
 
 class IntegrationTest(TestWithCGLSetup):
     def test_all_views(self):
@@ -53,6 +64,7 @@ class IntegrationTest(TestWithCGLSetup):
             '/CGL/players/',
             '/CGL/players/%s/' % self.test_player.id,
             '/CGL/games/%s/' % self.test_game.id,
+            '/CGL/laddergames/%s/' % self.test_ladder_game.id,
         ) 
 
         for url in urls:
@@ -64,7 +76,47 @@ class IntegrationTest(TestWithCGLSetup):
                 traceback.print_exc()
                 print "Failed to get %s with response %s" % (url, response.status_code)
 
+    def test_all_post_views(self):
+        url_comment = (
+            ('/CGL/games/%s/submit/' % self.test_game.id, GameComment),
+            ('/CGL/laddergames/%s/submit/' % self.test_ladder_game.id, LadderGameComment)
+        )
+        for url, comment_model in url_comment:
+            comment_text = 'Test Comment to %s' % url
+            try:
+                response = self.client.post(url, {'comment': comment_text})
+            except:
+                import traceback
+                traceback.print_exc()
+            self.assertEquals(response.status_code, 302)
+            new_comment = comment_model.objects.get(pk=1)
+            self.assertEquals(new_comment.comment, comment_text)
+
 class ModelTests(TestWithCGLSetup):
+    def test_html_tags(self):
+        self.assertEquals(
+            a_tag('Click Here!', href='blah.com', class_='hello there'),
+            '<a class="hello there" href="blah.com">Click Here!</a>'
+        )
+        self.assertEquals(
+            a_tag('No attrs here'),
+            '<a>No attrs here</a>'
+        )
+
+    def test_game_display(self):
+        self.assertEquals(
+            self.test_game.result_html(),
+            '<a href="/CGL/players/17/"><b>test_player, 2d (W)</b></a> vs. <a href="/CGL/players/17/">test_player, 2d (B)</a>'
+        )
+        self.assertEquals(
+            self.test_game.view_html(),
+            '<a href="/CGL/games/1/">[view]</a>'
+        )
+        self.assertEquals(
+            self.test_game.download_html(),
+            '<a href="{}">[sgf]</a>'.format(self.test_game.gamefile.url)
+        )
+
     def test_membership_autofill(self):
         self.assertEquals(self.test_membership.team_name, self.test_membership.school.name)
 

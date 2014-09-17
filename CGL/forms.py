@@ -1,5 +1,5 @@
 from django import forms
-from CGL.models import GameComment
+from CGL.models import GameComment, LadderGameComment
 
 
 class CreateGameCommentForm(forms.ModelForm):
@@ -7,3 +7,7 @@ class CreateGameCommentForm(forms.ModelForm):
         model = GameComment
         fields = ['comment']
 
+class CreateLadderGameCommentForm(forms.ModelForm):
+    class Meta:
+        model = LadderGameComment
+        fields = ['comment']

@@ -13,4 +13,6 @@ urlpatterns = patterns('CGL.views',
     (r'^players/([0-9]{1,4})/$', 'display_player'),
     (r'^games/([0-9]{1,4})/$', 'display_game'),
     (r'^games/([0-9]{1,4})/submit/$', 'submit_comment'),
+    (r'^laddergames/([0-9]{1,4})/$', 'display_ladder_game'),
+    (r'^laddergames/([0-9]{1,4})/submit/$', 'submit_ladder_comment'),
 )

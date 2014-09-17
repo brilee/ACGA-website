@@ -7,24 +7,22 @@ from django.contrib.auth import models as auth_models
 from django.dispatch.dispatcher import receiver
 
 from django.conf import settings
+from CGL.settings import current_ladder_season
 
 from sgf import MySGFGame
 
 SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
-def wrap_tag(text, tag, extras=False):
-    '''
-    Wraps an html tag around some text.
-    Tag should be specified without brackets.
-    Extras should be given as raw text - 'id="someID"'
-    '''
-    if extras:
-        open_tag = '<' + tag + ' ' + extras + '>'
-    else:
-        open_tag = '<' + tag + '>'
-    close_tag = '</' + tag + '>'
+def html_tag(tag):
+    def f(text, **kwargs):
+        if 'class_' in kwargs:
+            class_value = kwargs.pop('class_')
+            kwargs['class'] = class_value
+        return "<{tag}".format(tag=tag) + ''.join(' {item[0]!s}="{item[1]!s}"'.format(item=item) for item in sorted(kwargs.items())) + '>{text}</{tag}>'.format(text=text, tag=tag)
+    return f
 
-    return open_tag + text + close_tag
+a_tag = html_tag('a')
+b_tag = html_tag('b')
 
 class School(models.Model):
     name = models.CharField(max_length=50)
@@ -250,9 +248,7 @@ class Match(models.Model):
                                                 self.school2.KGS_name,))
 
 class GameBase(models.Model):
-    def upload_location(instance, filename):
-        return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
-    gamefile = models.FileField(upload_to=upload_location, help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
+    gamefile = models.FileField(upload_to='temp_files', help_text="Please upload the SGF file. SGF files can be downloaded from KGS by right-clicking on the game record under a user's game list")
     white_player = models.ForeignKey(Player, related_name="white_player_%(class)s_set", null=True)
     black_player = models.ForeignKey(Player, related_name="black_player_%(class)s_set", null=True)
     game_result = models.CharField(max_length=10, editable=False, blank=True, default='')
@@ -269,11 +265,51 @@ class GameBase(models.Model):
             self.handicap = parsed_file.handicap
         super(GameBase, self).save(*args, **kwargs)
 
-    def get_white_player(self):
+    @property
+    def first_display_player(self):
+        '''Override this method in order to get customized result printouts'''
         return self.white_player
 
-    def get_black_player(self):
-        return self.black_player
+    @property
+    def second_display_player(self):
+        if self.first_display_player == self.black_player:
+            return self.white_player
+        else:
+            return self.black_player
+
+    def get_absolute_url(self):
+        raise NotImplementedError()
+
+    def download_html(self):
+        return a_tag('[sgf]', href=self.gamefile.url)
+
+    def view_html(self):
+        return a_tag('[view]', href=self.get_absolute_url())
+
+    def result_html(self):
+        p1 = self.first_display_player
+        p2 = self.second_display_player
+
+        if self.first_display_player == self.white_player:
+            c1, c2 = ' (W)', ' (B)'
+        else:
+            c1, c2 = ' (B)', ' (W)'
+
+        if self.first_display_player == self.winner:
+            n1 = b_tag(p1.name_and_rank() + c1)
+            n2 = p2.name_and_rank() + c2
+        else:
+            n1 = p1.name_and_rank() + c1
+            n2 = b_tag(p2.name_and_rank() + c2)
+
+        return (
+            a_tag(n1, href=p1.get_absolute_url()) +
+            ' vs. ' +
+            a_tag(n2, href=p2.get_absolute_url())
+        )
+
+    def full_description_html(self):
+        return self.download_html() + self.view_html() + self.result_html()
 
     @property
     def winner(self):
@@ -308,6 +344,16 @@ class Game(GameBase):
     class Meta:
         ordering = ['-match__round__date', 'match__school1__name', 'board']
 
+    def save(self, *args, **kwargs):
+        # Implement custom upload_to behavior for filename
+        temp_path = self.gamefile.name
+        temp_dir, filename = os.path.split(temp_path)
+        self.gamefile.storage.delete(temp_path)
+        actual_path = os.path.join(slugify(self.match.round.season.name), slugify(self.match.round.date), filename)
+        self.gamefile.storage.save(actual_path, self.gamefile)
+        self.gamefile = actual_path
+        super(Game, self).save(*args, **kwargs)
+
     @property
     def school1_player(self):
         if self.white_school == SCHOOL1:
@@ -325,52 +371,44 @@ class Game(GameBase):
     @models.permalink
     def get_absolute_url(self):
         return ('CGL.views.display_game', [str(self.id)])
-    
-    def display_result(self):
-        '''
-        Generates a nice representation of the game, with the format:
-        School_1 player vs. School_2 player [sgf link]
-        with the winner's name in bold.
-        '''
-        player1 = self.school1_player
-        player2 = self.school2_player
-        
-        p1 = player1.name_and_rank()
-        p2 = player2.name_and_rank()
-        
-        if self.white_school == 'School1':
-            p1 += ' (W)'
-            p2 += ' (B)'
-        else:
-            p2 += ' (W)'
-            p1 += ' (B)'
-
-        if self.winning_school == 'School1':
-            p1 = wrap_tag(p1, 'b')
-        else:
-            p2 = wrap_tag(p2, 'b')
-
-        def add_player_link(arg):
-            link = arg[1].get_absolute_url()
-            return wrap_tag(arg[0], 'a', extras='href="%s"' % link)
-
-        (p1, p2) = map(add_player_link, ((p1, player1), (p2, player2)))
-
-        sgf = wrap_tag('[sgf]', 'a', extras='href="%s"' % self.gamefile.url)
-        game_link = wrap_tag('[view]', 'a', extras='href="%s"' % self.get_absolute_url())
-        
-        return unicode('%s %s Board %s: %s vs. %s' % (sgf, game_link, self.board, p1, p2))
 
     def __unicode__(self):
         return unicode("%s vs. %s in %s vs. %s on %s, board %s" %(self.school1_player.name, self.school2_player.name, self.match.school1, self.match.school2, unicode(self.match.round.date), self.board))
 
 class LadderGame(GameBase):
-    season = models.ForeignKey(Season, blank=True, editable=False)
+    season = models.ForeignKey(Season, blank=True, help_text="Leave this blank to default to current ladder season")
 
     def save(self, *args, **kwargs):
+        if not self.season:
+            self.season = Season.objects.get(name=current_ladder_season)
+        # Implement custom upload_to behavior for filename
+        temp_path = self.gamefile.name
+        temp_dir, filename = os.path.split(temp_path)
+        self.gamefile.storage.delete(temp_path)
+        actual_path = os.path.join(slugify(self.season.name), 'ladder_games', filename)
+        self.gamefile.storage.save(actual_path, self.gamefile)
+        self.gamefile = actual_path
         super(LadderGame, self).save(*args, **kwargs)
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGL.views.display_ladder_game', [str(self.id)])
 
+    def __unicode__(self):
+        return unicode("%s vs %s" % (self.white_player, self.black_player))
+
+class LadderMembership(models.Model):
+    season = models.ForeignKey(Season)
+    player = models.ForeignKey(Player)
+    num_wins = models.IntegerField(editable=False, default=0)
+    num_losses = models.IntegerField(editable=False, default=0)
+    num_ties = models.IntegerField(editable=False, default=0)
+
+    class Meta:
+        ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties']
+
+    def __unicode__(self):
+        return unicode("%s in %s" %(self.player, self.season))
 
 @receiver(post_delete)
 def delete_Game(sender, instance, **kwargs):
@@ -406,14 +444,20 @@ class Forfeit(models.Model):
     def __unicode__(self):
         return unicode('%s vs %s on %s, board %s' %(self.match.school1, self.match.school2, self.match.round.date, self.board))
 
-class GameComment(models.Model):
-    game = models.ForeignKey(Game)
+class CommentBase(models.Model):
     user = models.ForeignKey(auth_models.User)
     datetime = models.DateTimeField(auto_now_add=True)
     comment = models.TextField(max_length=1000)
 
     class Meta:
+        abstract = True
         ordering = ['-datetime']
-    
+
     def __unicode__(self):
         return unicode('%s: %s' % (self.user.username, self.comment[:100]))
+
+class GameComment(CommentBase):
+    game = models.ForeignKey(Game)
+
+class LadderGameComment(CommentBase):
+    game = models.ForeignKey(LadderGame)
