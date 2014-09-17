@@ -77,7 +77,7 @@
             <p><strong>{{recent_round.date}}</strong></p>
             <ul>
             {% for match in recent_round.match_set.all %}
-                <li>{{match.display_result}}</li>
+                <li>{{match.display_result|safe}}</li>
             {% endfor %}            
             </ul>
             {% if recent_round.bye_set.all %}

@@ -9,7 +9,7 @@ Games have been uploaded for the most recent round ({{previous_round_date}}). (I
 {% for season in current_seasons %}
 {{season.name}}
     {% for match in season.round_set.get_previous_round.match_set.all %}
-    {{match.display_result}}
+    {{match.display_result|safe}}
     {% endfor %}
 {% endfor %}
 

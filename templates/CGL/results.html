@@ -50,7 +50,7 @@
 	<h3 class="clickable">[+] {{round.date}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}
-		<li><h5>[+] <a href="{{match.team1.school.get_absolute_url}}">{{match.team1.school.name}}</a> ({{match.score1}} - {{match.score2}}) <a href="{{match.team2.school.get_absolute_url}}">{{match.team2.school.name}}</a>{% if match.is_exhibition %} (Exhibition match){% endif %}</h5>
+		<li><h5>[+] {{match.display_result|safe}}</h5>
 		<ul>
 		{% for game in match.game_set.all %}
 			<li>{{game.full_description_html|safe}}</li>

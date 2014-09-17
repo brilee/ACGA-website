@@ -245,22 +245,13 @@ class Match(models.Model):
         return u'{} vs. {} on {}'.format(self.team1.school.name, self.team2.school.name, unicode(self.round.date))
 
     def display_result(self):
-        if self.score1 > self.score2:
-            return u'{} defeats {}, {} - {}'.format(self.team1.school.name,
-                                                    self.team2.school.name,
-                                                    self.score1,
-                                                    self.score2)
-        elif self.score2 > self.score1:
-            return u'{} defeats {}, {} - {}'.format(self.team2.school.name,
-                                                    self.team1.school.name,
-                                                    self.score2,
-                                                    self.score1)
-        else:
-            return u'{} ties {}, {} - {}'.format(self.team1.school.name,
-                                                 self.team2.school.name,
-                                                 self.score1,
-                                                 self.score2)
-    
+        return (
+            a_tag(self.team1.school.name.encode('utf8'), href=self.team1.school.get_absolute_url()) +
+            ' ({} - {}) '.format(self.score1, self.score2) +
+            a_tag(self.team2.school.name.encode('utf8'), href=self.team2.school.get_absolute_url()) +
+            ' (Exhibition match)' if self.is_exhibition else ''
+        )
+
     def display_match(self):
         return u"{} ({}) vs. {} ({})".format(self.team1.school.name,
                                              self.team1.school.KGS_name,
@@ -329,7 +320,7 @@ class GameBase(models.Model):
         )
 
     def full_description_html(self):
-        return self.download_html() + self.view_html() + self.result_html()
+        return ' '.join((self.download_html(), self.view_html(), self.result_html()))
 
     @property
     def winner(self):
