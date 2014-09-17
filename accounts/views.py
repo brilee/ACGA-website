@@ -92,7 +92,7 @@ def edit_school_info(request, school_slug):
                  template_name='edit_school_info.html',
                  success_redirect='/accounts/profile/',
                  no_permission_redirect='/accounts/profile/',
-                 school=school)
+                 template_context={'school':school})
 
 @login_required
 def edit_player_info(request, player_id):
