@@ -10,7 +10,7 @@ class Migration(DataMigration):
         "Write your forwards methods here."
         for bye in orm.Bye.objects.all():
             bye.team = orm.Membership.objects.get(school=bye.school, season=bye.round.season)
-            match.save()
+            bye.save()
 
     def backwards(self, orm):
         pass
