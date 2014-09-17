@@ -379,6 +379,10 @@ class Game(GameBase):
         elif self.white_school == SCHOOL1:
             return self.black_player
 
+    @property
+    def first_display_player(self):
+        return self.team1_player
+
     @models.permalink
     def get_absolute_url(self):
         return ('CGL.views.display_game', [str(self.id)])
