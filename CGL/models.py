@@ -261,7 +261,6 @@ class Match(models.Model):
 
 class GameBase(models.Model):
     def upload_to(instance, filename):
-        import pdb; pdb.set_trace()
         if instance.__class__.__name__ == 'Game':
             return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
         elif instance.__class__.__name__ == 'LadderGame':
