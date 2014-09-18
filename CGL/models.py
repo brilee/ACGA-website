@@ -254,9 +254,9 @@ class Match(models.Model):
         )
 
     def display_match(self):
-        return u"{} ({}) vs. {} ({})".format(self.team1.school.name,
+        return u"{} ({}) vs. {} ({})".format(self.team1.team_name,
                                              self.team1.school.KGS_name,
-                                             self.team2.school.name,
+                                             self.team2.team_name,
                                              self.team2.school.KGS_name)
 
 class GameBase(models.Model):

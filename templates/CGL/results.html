@@ -20,14 +20,14 @@
         <th>Byes </th>
         <th><span style="color:red">Forfeited Games</span></th>
 	</tr>
-{% for membership in season.membership_set.all %}
+{% for team in season.membership_set.all %}
 	<tr>
-		<td><a href="{{membership.school.get_absolute_url}}">{% if not membership.still_participating %}({% endif %}{{membership.school.name}}{% if not membership.still_participating %}) **{% endif %}</a></td>
-		<td>{{membership.num_wins}}</td>
-		<td>{{membership.num_losses}}</td>
-		<td>{{membership.num_ties}}</td>
-        <td>{{membership.num_byes}}</td>
-		<td>{{membership.num_forfeits}}</td>
+		<td><a href="{{team.school.get_absolute_url}}">{% if not team.still_participating %}({% endif %}{{team.team_name}}{% if not team.still_participating %}) **{% endif %}</a></td>
+		<td>{{team.num_wins}}</td>
+		<td>{{team.num_losses}}</td>
+		<td>{{team.num_ties}}</td>
+        <td>{{team.num_byes}}</td>
+		<td>{{team.num_forfeits}}</td>
 	</tr>
 {% endfor %} 
 </table>
@@ -39,7 +39,7 @@
 <h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList disc">
 {% for round in season.round_set.all %}
-{% if round.in_future and not round.in_near_future %}
+{% if not round.match_set %}
 <li><h3 style="color:#888;">{{round.date}}</h3></li>
 {% else %}
 <li>
