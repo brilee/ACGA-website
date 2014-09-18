@@ -8,8 +8,8 @@ from django.core.mail import send_mail
 class Command(BaseCommand):
     args = '<template_name>'
     help = '''Sends out a rendered email.
-Options: --fake, --all
-For example: ./manage.py send_email --all=True, --fake=True
+Options: --force, --all
+For example: ./manage.py send_email --all=True, --force
 '''
     option_list = BaseCommand.option_list + (
         make_option('--force', default=False, action='store_true', help='Actually send the email.'),
@@ -39,7 +39,7 @@ For example: ./manage.py send_email --all=True, --fake=True
                           [player.user.email for school in participating_schools
                                              for player in school.player_set.all()
                                              if (player.user and player.receiveSpam)])
-        if options['fake']: 
+        if options['force']: 
             self.stdout.write('You would have sent an email with:\n')
             self.stdout.write('Subject: %s' % subject_line)
             self.stdout.write('Contents: %s\n' % email_contents)
