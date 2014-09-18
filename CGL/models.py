@@ -264,7 +264,7 @@ class GameBase(models.Model):
         if instance.__class__.__name__ == 'Game':
             return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
         elif instance.__class__.__name__ == 'LadderGame':
-            return os.path.join(slugify(self.season.name), 'ladder_games', filename)
+            return os.path.join(slugify(instance.season.name), 'ladder_games', filename)
         else:
             return 'temp'
 
