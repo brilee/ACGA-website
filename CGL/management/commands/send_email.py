@@ -12,7 +12,7 @@ Options: --fake, --all
 For example: ./manage.py send_email --all=True, --fake=True
 '''
     option_list = BaseCommand.option_list + (
-        make_option('--fake', default=False, help='Don\'t actually send the email. Default is false'),
+        make_option('--force', default=False, action='store_true', help='Actually send the email.'),
         make_option('--all', default=False, help='Send to all schools, regardless of participation in season'),
     )
 

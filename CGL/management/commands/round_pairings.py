@@ -24,7 +24,7 @@ class Command(BaseCommand):
         if options['round']:
             round = Round.objects.get(season=season, round_number=int(options['round']))
         else:
-            round = Round.objects.filter(date__gte=datetime.datetime.now(), season=season).order_by('date')[0]
+            round = season.round_set.get_next_round()
 
         all_teams = set(Membership.objects.filter(season=season, still_participating=True))
         already_matched = set(itertools.chain(*[(match.team1.id, match.team2.id) for match in round.match_set.all()]))
