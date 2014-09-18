@@ -40,14 +40,13 @@ For example: ./manage.py send_email --all=True, --force
                                              for player in school.player_set.all()
                                              if (player.user and player.receiveSpam)])
         if options['force']: 
-            self.stdout.write('You would have sent an email with:\n')
-            self.stdout.write('Subject: %s' % subject_line)
-            self.stdout.write('Contents: %s\n' % email_contents)
-            self.stdout.write('Recipients:' + ', '.join(recipients) + '\n')
-        else:
             send_mail(subject_line,
                       email_contents,
                       'cgl.tournament.director@gmail.com',
                       recipients,)
             self.stdout.write('Emails sent\n')
-
+        else:
+            self.stdout.write('You would have sent an email with:\n')
+            self.stdout.write('Subject: %s' % subject_line)
+            self.stdout.write('Contents: %s\n' % email_contents)
+            self.stdout.write('Recipients:' + ', '.join(recipients) + '\n')
