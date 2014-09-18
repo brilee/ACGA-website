@@ -2,23 +2,26 @@
 import os
 import datetime
 
-from django.contrib.auth.models import User
 from django.core.files.uploadedfile import SimpleUploadedFile
+from django.core.management import call_command
+from django.contrib.auth.models import User
+from django.contrib.auth import models as auth_models
 from django.test import TestCase
 from django.test import Client
 from django.test.client import RequestFactory
-from django.contrib.auth import models as auth_models
 
 from accounts.models import SchoolEditPermission
-from CGL.models import Season, Player, School, Membership, Round, Match, Game, Forfeit, LadderGame, GameComment, LadderGameComment, a_tag
+from CGL.models import Season, Player, School, Membership, Round, Match, Game, Forfeit, Bye, LadderGame, GameComment, LadderGameComment, a_tag
 from CGL.views import submit_comment, submit_ladder_comment
 from CGL.settings import current_seasons
+from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 
 from sgf import MySGFGame
 
 CURR_DIR = os.path.dirname(os.path.realpath(__file__))
 TEST_SGF = os.path.join(CURR_DIR, 'test_files/testfile.sgf')
 TEST_SGF2 = os.path.join(CURR_DIR, 'test_files/testfile2.sgf')
+TEST_SGF3 = os.path.join(CURR_DIR, 'test_files/testfile3.sgf')
 
 class TestWithCGLSetup(TestCase):
     def setUp(self):
@@ -151,6 +154,9 @@ class SGFParserTest(TestCase):
         with open(TEST_SGF2) as f:
             sgf_file = MySGFGame(f.read())
         self.assertEquals(sgf_file.game_result, 'W+9.50')
+        # with open(TEST_SGF3) as f:
+        #     sgf_file = MySGFGame(f.read())
+        # self.assertEquals(sgf_file.game_result, 'B+59.50')
 
     def test_parse_handicap(self):
         with open(TEST_SGF) as f:
@@ -160,3 +166,93 @@ class SGFParserTest(TestCase):
         with open(TEST_SGF2) as f:
             sgf_file = MySGFGame(f.read())
         self.assertEquals(sgf_file.handicap, 4)
+
+class MatchmakingTest(TestCase):
+    def setUp(self):
+        auth_models.User.objects.create(username=u'brilee')
+        self.test_season = Season.objects.create(name='Season Blah')
+        self.round1 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1)
+        self.round2 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=2)
+        self.schools = [School.objects.create(id=i, name=str(i)) for i in range(7)]
+        self.teams = [Membership.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
+
+        # Records so far
+        # Sc W L T B F
+        WLTBF = (
+            (3, 0, 0, 0, 0),
+            (2, 0, 0, 1, 3),
+            (2, 1, 0, 0, 1),
+            (1, 1, 1, 1, 3),
+            (0, 2, 0, 1, 4),
+            (0, 2, 0, 1, 0),
+            (0, 3, 0, 0, 8),
+        )
+        self.matches = [
+            Match.objects.create(round=self.round1, team1=self.teams[0], team2=self.teams[1], score1=3, score2=2, school1=self.schools[0], school2=self.schools[1]),
+            Match.objects.create(round=self.round1, team1=self.teams[2], team2=self.teams[3], score1=3, score2=2, school1=self.schools[2], school2=self.schools[3]),
+            Match.objects.create(round=self.round1, team1=self.teams[5], team2=self.teams[6], score1=3, score2=2, school1=self.schools[5], school2=self.schools[6]),
+        ]
+        for team, (win, loss, tie, bye, forfeit) in zip(self.teams, WLTBF):
+            team.num_wins = win
+            team.num_losses = loss
+            team.num_ties = tie
+            team.num_byes = bye
+            team.num_forfeits = forfeit
+            team.save()
+
+        self.expected_pairings = [
+            (self.teams[0], self.teams[2]),
+            (self.teams[1], self.teams[3]),
+            (self.teams[4], self.teams[5]),
+        ]
+        self.expected_bye = self.teams[6]
+
+
+    def test_construct_matrix(self):
+        matrix = construct_matrix(self.matches)
+        # print '\n'.join("%s %s %s %s" % (i, j, matrix[i][j], matrix[j][i]) for i in range(7) for j in range(7) if i!=j)
+        self.assertTrue(matrix[0][1])
+        self.assertTrue(matrix[1][0])
+        self.assertTrue(matrix[2][3])
+        self.assertTrue(not matrix[2][4])
+        self.assertTrue(not matrix[2][1000])
+
+    def test_score_matchups(self):
+        matrix = construct_matrix(self.matches)
+        pairings = [
+            (self.teams[0], self.teams[2]),
+            (self.teams[1], self.teams[3]),
+            (self.teams[4], self.teams[5]),
+        ]
+        self.assertEquals(
+            score_matchups(pairings, self.teams[4], matrix),
+            310
+        )
+
+    def test_make_random_matchup(self):
+        pairings, bye = make_random_matchup(self.teams)
+        self.assertEquals(len(pairings), 3)
+        self.assertTrue(bool(bye))
+
+    def test_best_matchup(self):
+        success = 0
+        total = 0
+        for i in range(10):
+            pairings, bye = best_matchup(self.teams, self.matches)
+            if all(p==ep for p, ep in zip(pairings, self.expected_pairings)) and self.expected_bye == bye:
+                success +=1
+            total +=1
+        self.assertEquals(success, total)
+
+    def test_call_command(self):
+        call_command('round_pairings', season=self.test_season.name, round='2')
+        byes = Bye.objects.filter(round=self.round2)
+        self.assertEquals(len(byes), 1)
+        self.assertEquals(byes[0].team, self.expected_bye)
+
+        matches = self.round2.match_set.all()
+        self.assertEquals(len(matches), 3)
+        sorted_matches = sorted(matches, key=lambda m: m.team1.id)
+        for match, pairing in zip(sorted_matches, self.expected_pairings):
+            self.assertEquals(match.team1, pairing[0])
+            self.assertEquals(match.team2, pairing[1])
