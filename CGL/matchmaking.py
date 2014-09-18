@@ -19,6 +19,10 @@ def score_matchups(team_pairings, team_bye, matchup_matrix):
         score -= 5 * (team1.num_wins - team2.num_wins)**2
         # penalty for matching up teams with dasparate number of losses
         score -= 5 * (team1.num_losses - team2.num_losses)**2
+        # penalty for matching two teams from the same school
+        if team1.school == team2.school:
+            score -= 250
+
     if team_bye:
         # penalty for giving team byes more than once
         score -= team_bye.num_byes * 10
@@ -43,7 +47,7 @@ def make_random_matchup(team_pool):
 
 def best_matchup(team_pool, existing_matchups, num_iterations=1000):
     matchup_matrix = construct_matrix(existing_matchups)
-    best_score = 0
+    best_score = -10000
     best_pairings, best_bye = None, None
     for i in range(num_iterations):
         team_pairings, team_bye = make_random_matchup(team_pool)

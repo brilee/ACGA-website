@@ -1,4 +1,5 @@
 import itertools
+import datetime
 from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 
@@ -23,17 +24,18 @@ class Command(BaseCommand):
         if options['round']:
             round = Round.objects.get(season=season, round_number=int(options['round']))
         else:
-            round = Round.objects.get_next_round()
+            round = Round.objects.filter(date__gte=datetime.datetime.now(), season=season).order_by('date')[0]
 
         all_teams = set(Membership.objects.filter(season=season, still_participating=True))
-        already_matched = set(itertools.chain((match.team1, match.team2) for match in round.match_set.all()))
-        team_pool = all_teams - already_matched
+        already_matched = set(itertools.chain(*[(match.team1.id, match.team2.id) for match in round.match_set.all()]))
+        team_pool = [t for t in all_teams if t.id not in already_matched]
 
         if len(team_pool) < 2:
             raise CommandError("Not enough schools to do a pairing for round %s" % round.round_number)
 
         existing_matchups = Match.objects.filter(round__season=season)
 
+        self.stdout.write("Making matches for %s, round %s on %s" % (season, round.round_number, round.date))
         team_pairings, team_bye = best_matchup(team_pool, existing_matchups)
         for pairing in team_pairings:
             self.stdout.write('%s vs. %s\n' % pairing)
