@@ -19,11 +19,11 @@ def score_matchups(team_pairings, team_bye, matchup_matrix):
         score -= 5 * (team1.num_wins - team2.num_wins)**2
         # penalty for matching up teams with dasparate number of losses
         score -= 5 * (team1.num_losses - team2.num_losses)**2
-    # penalty for giving team byes more than once
-    score -= team_bye.num_byes * 10
-
-    # bonus for giving teams with lots of forfeits a bye
-    score += team_bye.num_forfeits * 10
+    if team_bye:
+        # penalty for giving team byes more than once
+        score -= team_bye.num_byes * 10
+        # bonus for giving teams with lots of forfeits a bye
+        score += team_bye.num_forfeits * 10
 
     return score
 

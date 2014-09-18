@@ -21,7 +21,7 @@ class Command(BaseCommand):
         else:
             season = Season.objects.get(name=current_seasons[0])
         if options['round']:
-            round = Round.objects.get(round_number=int(options['round']))
+            round = Round.objects.get(season=season, round_number=int(options['round']))
         else:
             round = Round.objects.get_next_round()
 
@@ -36,10 +36,10 @@ class Command(BaseCommand):
 
         team_pairings, team_bye = best_matchup(team_pool, existing_matchups)
         for pairing in team_pairings:
-            self.stdout.write('%s vs. %s' % pairing)
+            self.stdout.write('%s vs. %s\n' % pairing)
         if team_bye:
             self.stdout.write('%s has a bye this round\n' % team_bye)
-        self.stdout.write('Registering matchups!')
+        self.stdout.write('Registering matchups!\n')
         for pairing in team_pairings:
             Match.objects.create(round=round, team1=pairing[0], team2=pairing[1], school1=pairing[0].school, school2=pairing[1].school)
         if team_bye:

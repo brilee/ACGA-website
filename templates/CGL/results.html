@@ -39,12 +39,8 @@
 <h3>Rounds (Click to Expand)</h3>
 <ul class="collapsibleList disc">
 {% for round in season.round_set.all %}
-{% if round.in_future %}
-    {% if not round.in_near_future %}
+{% if round.in_future and not round.in_near_future %}
 <li><h3 style="color:#888;">{{round.date}}</h3></li>
-    {% else %}
-<li><h3>{{round.date}}</h3></li>
-    {% endif %}
 {% else %}
 <li>
 	<h3 class="clickable">[+] {{round.date}}</h3>
