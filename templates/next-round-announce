@@ -1,3 +1,4 @@
+To: {% for recip in recipients %} {{recip}}, {% endfor %}
 Subject:[CGL] Next round: pairings announced
 
 Hi everyone,
