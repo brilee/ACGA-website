@@ -116,6 +116,12 @@ class Player(models.Model):
         all_games = all_games.order_by('-match__round__date')
         return all_games
 
+    def laddergame_set(self):
+        games1 = self.white_player_laddergame_set.all()
+        games2 = self.black_player_laddergame_set.all()
+        all_games = games1 | games2
+        return all_games
+
 class Season(models.Model):
     name = models.CharField(max_length=25, help_text="Season One, Season One Championship, etc.")
     slug_name = models.SlugField(blank=True, editable=False)

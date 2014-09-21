@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from CGL.models import *
-from CGL.settings import current_seasons
+from CGL.settings import current_seasons, current_ladder_season
 
 from datetime import date, timedelta
 
@@ -83,10 +83,19 @@ class Command(BaseCommand):
         for game in player.game_set():
             if (date.today() - game.match.round.date) < timedelta(days=180):
                 player.isActive = True
-            if game.winner() == player:
+            if game.winner == player:
                 player.num_wins += 1
             else:
                 player.num_losses += 1
+
+        for game in player.laddergame_set():
+            if game.season.name == current_ladder_season:
+                player.isActive = True
+            if game.winner == player:
+                player.num_wins += 1
+            else:
+                player.num_losses += 1
+
         player.save()
     
     def handle(self, *args, **options):
