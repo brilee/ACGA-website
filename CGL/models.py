@@ -97,7 +97,7 @@ class Player(models.Model):
         super(Player, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return u"{} - {} {}".format(self.school.name, self.name, self.get_rank_display())
+        return u"{} {} - {}".format(self.name, self.get_rank_display(), self.school.name)
 
     def name_and_rank(self):
         return '{}, {}'.format(self.name.encode('utf8'), self.get_rank_display())
@@ -236,7 +236,7 @@ class Match(models.Model):
         ordering = ['-round__date']
    
     def __unicode__(self):
-        return u'{} vs. {} on {}'.format(self.team1.school.name, self.team2.school.name, unicode(self.round.date))
+        return u'{} vs. {} on {}'.format(self.team1.name, self.team2.name, unicode(self.round.date))
 
     def display_result(self):
         return (
