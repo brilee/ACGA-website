@@ -37,8 +37,8 @@ class TestWithCGLSetup(TestCase):
         self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
         self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
-        self.test_match = Match.objects.create(round=self.test_round, team1=self.test_membership, team2=self.test_membership, school1=self.test_school, school2=self.test_school)
-        self.test_forfeit = Forfeit.objects.create(match=self.test_match, board=1, school1_noshow=True)
+        self.test_match = Match.objects.create(round=self.test_round, team1=self.test_membership, team2=self.test_membership)
+        self.test_forfeit = Forfeit.objects.create(match=self.test_match, board=1, team1_noshow=True)
 
         with open(TEST_SGF) as f:
             sgf_contents = f.read()
@@ -94,12 +94,12 @@ class IntegrationTest(TestWithCGLSetup):
             comment_text = 'Test Comment to %s' % url
             try:
                 response = self.client.post(url, {'comment': comment_text})
+                self.assertEquals(response.status_code, 302)
+                new_comment = comment_model.objects.get(pk=1)
+                self.assertEquals(new_comment.comment, comment_text)
             except:
                 import traceback
                 traceback.print_exc()
-            self.assertEquals(response.status_code, 302)
-            new_comment = comment_model.objects.get(pk=1)
-            self.assertEquals(new_comment.comment, comment_text)
 
 #    def test_captain_edit_views(self):
 
@@ -188,9 +188,9 @@ class MatchmakingTest(TestCase):
             (0, 3, 0, 0, 8),
         )
         self.matches = [
-            Match.objects.create(round=self.round1, team1=self.teams[0], team2=self.teams[1], score1=3, score2=2, school1=self.schools[0], school2=self.schools[1]),
-            Match.objects.create(round=self.round1, team1=self.teams[2], team2=self.teams[3], score1=3, score2=2, school1=self.schools[2], school2=self.schools[3]),
-            Match.objects.create(round=self.round1, team1=self.teams[5], team2=self.teams[6], score1=3, score2=2, school1=self.schools[5], school2=self.schools[6]),
+            Match.objects.create(round=self.round1, team1=self.teams[0], team2=self.teams[1], score1=3, score2=2),
+            Match.objects.create(round=self.round1, team1=self.teams[2], team2=self.teams[3], score1=3, score2=2),
+            Match.objects.create(round=self.round1, team1=self.teams[5], team2=self.teams[6], score1=3, score2=2),
         ]
         for team, (win, loss, tie, bye, forfeit) in zip(self.teams, WLTBF):
             team.num_wins = win

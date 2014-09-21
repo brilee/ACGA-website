@@ -45,7 +45,7 @@ class EditGameForm(forms.ModelForm):
     '''
     class Meta:
         model = Game
-        fields = ['board', 'gamefile', 'white_school', 'winning_school', 'white_player', 'black_player']
+        fields = ['board', 'gamefile', 'white_school', 'white_player', 'black_player']
 
 
 class EditForfeitForm(forms.ModelForm):

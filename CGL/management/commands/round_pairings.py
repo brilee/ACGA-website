@@ -43,8 +43,8 @@ class Command(BaseCommand):
             self.stdout.write('%s has a bye this round\n' % team_bye)
         self.stdout.write('Registering matchups!\n')
         for pairing in team_pairings:
-            Match.objects.create(round=round, team1=pairing[0], team2=pairing[1], school1=pairing[0].school, school2=pairing[1].school)
+            Match.objects.create(round=round, team1=pairing[0], team2=pairing[1])
         if team_bye:
-            Bye.objects.create(round=round, team=team_bye, school=team_bye.school)
+            Bye.objects.create(round=round, team=team_bye)
 
 

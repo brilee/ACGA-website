@@ -223,21 +223,8 @@ class Round(models.Model):
     def in_near_past(self):
         return self.in_past() and self.date > datetime.date.today() - datetime.timedelta(days=14)
 
-class Bye(models.Model):
-    school = models.ForeignKey(School)
-    team = models.ForeignKey(Membership, null=True)
-    round = models.ForeignKey(Round)
-
-    class Meta:
-        ordering = ['-round__date']
-
-    def __unicode__(self):
-        return u'{} got a bye on {}'.format(self.team.school.name, unicode(self.round.date))
-
 class Match(models.Model):
     round = models.ForeignKey(Round)
-    school1 = models.ForeignKey(School, related_name="school1")
-    school2 = models.ForeignKey(School, related_name="school2")
     team1 = models.ForeignKey(Membership, related_name="team1", null=True)
     team2 = models.ForeignKey(Membership, related_name="team2", null=True)
     score1 = models.IntegerField(editable=False, default=0)
@@ -364,9 +351,6 @@ class Game(GameBase):
     board = models.CharField(max_length=1, choices=BOARD_CHOICES)
     white_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who played white? Hint: KGS filenames are usually formatted whitePlayer-blackPlayer")
 
-    #obsolete
-    winning_school = models.CharField(max_length=10, choices=SCHOOL_CHOICES, help_text="Who won the game?", null=True)
-
     class Meta:
         ordering = ['-match__round__date', 'match__team1__school__name', 'board']
 
@@ -446,8 +430,6 @@ class Forfeit(models.Model):
 
     match = models.ForeignKey(Match, help_text="Team1 vs Team2")
     board = models.CharField(max_length=1, choices=BOARD_CHOICES)
-    school1_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 1 fail to show up?")
-    school2_noshow = models.BooleanField(default=False, blank=True, help_text="Did School 2 fail to show up?")
     team1_noshow = models.BooleanField(default=False, blank=True, help_text="Did Team 1 fail to show up?")
     team2_noshow = models.BooleanField(default=False, blank=True, help_text="Did Team 2 fail to show up?")
 
@@ -466,6 +448,16 @@ class Forfeit(models.Model):
 
     def __unicode__(self):
         return u'{} vs {} on {}, board {}'.format(self.match.team1.school.name, self.match.team2.school.name, unicode(self.match.round.date), self.board)
+
+class Bye(models.Model):
+    team = models.ForeignKey(Membership, null=True)
+    round = models.ForeignKey(Round)
+
+    class Meta:
+        ordering = ['-round__date']
+
+    def __unicode__(self):
+        return u'{} got a bye on {}'.format(self.team.school.name, unicode(self.round.date))
 
 class CommentBase(models.Model):
     user = models.ForeignKey(auth_models.User)

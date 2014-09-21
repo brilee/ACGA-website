@@ -36,14 +36,14 @@ class Command(BaseCommand):
 
                 # Figure out who won the match. Make note of forfeits.
                 for game in m.game_set.all():
-                    if game.winning_school == 'School1':
+                    if game.winner == game.team1_player:
                         m.score1 += 1
                     else:
                         m.score2 += 1
                 for forfeit in m.forfeit_set.all():
-                    if forfeit.school1_noshow and not forfeit.school2_noshow:
+                    if forfeit.team1_noshow and not forfeit.team2_noshow:
                         m.score2 += 1
-                    elif forfeit.school2_noshow and not forfeit.school1_noshow:
+                    elif forfeit.team2_noshow and not forfeit.team1_noshow:
                         m.score1 += 1
                 m.save()
 
@@ -52,26 +52,24 @@ class Command(BaseCommand):
                     # shortcircuit here. don't want to count exhibition matches
                     # towards season results.
                     continue
+
                 # Update the school's scores based on match result
-                mem1 = m.school1.membership_set.get(season=season)
-                mem2 = m.school2.membership_set.get(season=season)
-               
                 for forfeit in m.forfeit_set.all():
                     if forfeit.school1_noshow:
-                        mem1.num_forfeits += 1
+                        m.team1.num_forfeits += 1
                     if forfeit.school2_noshow:
-                        mem2.num_forfeits += 1
+                        m.team2.num_forfeits += 1
                 if m.score1 > m.score2:
-                    mem1.num_wins += 1
-                    mem2.num_losses += 1
+                    m.team1.num_wins += 1
+                    m.team2.num_losses += 1
                 elif m.score1 < m.score2:
-                    mem1.num_losses += 1
-                    mem2.num_wins += 1
+                    m.team1.num_losses += 1
+                    m.team2.num_wins += 1
                 else:
-                    mem1.num_ties += 1
-                    mem2.num_ties += 1
-                mem1.save()
-                mem2.save()
+                    m.team1.num_ties += 1
+                    m.team2.num_ties += 1
+                m.team1.save()
+                m.team2.save()
                 
     def update_player_record(self, player):        
         player.num_wins = 0
