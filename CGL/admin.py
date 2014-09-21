@@ -11,13 +11,16 @@ class PlayerProfileInline(admin.StackedInline):
 class PlayerAdmin(UserAdmin):
     inlines = (PlayerProfileInline, )
 
+class GameAdmin(admin.ModelAdmin):
+    fields = ('match', 'gamefile', 'white_school', 'white_player', 'black_player', 'board')
+
 admin.site.register(School)
 admin.site.register(Player)
 admin.site.register(Season)
 admin.site.register(Membership)
 admin.site.register(Round)
 admin.site.register(Match)
-admin.site.register(Game)
+admin.site.register(Game, GameAdmin)
 admin.site.register(LadderGame)
 admin.site.register(Bye)
 admin.site.register(Forfeit)

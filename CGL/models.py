@@ -236,7 +236,7 @@ class Match(models.Model):
         ordering = ['-round__date']
    
     def __unicode__(self):
-        return u'{} vs. {} on {}'.format(self.team1.name, self.team2.name, unicode(self.round.date))
+        return u'{} vs. {} on {}'.format(self.team1.team_name, self.team2.team_name, unicode(self.round.date))
 
     def display_result(self):
         return (
