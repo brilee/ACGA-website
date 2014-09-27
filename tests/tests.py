@@ -311,6 +311,11 @@ class ScoreUpdaterTest(TestCase):
                 )
                 Forfeit.objects.create(match=match, board=3, team1_noshow=True)
 
+        Bye.objects.create(
+            team=self.teams[0],
+            round=self.rounds[0],
+        )
+
     def tearDown(self):
         for g in Game.objects.all():
             g.delete()
@@ -360,4 +365,6 @@ class ScoreUpdaterTest(TestCase):
             self.assertEquals(wins, team.num_wins)
             self.assertEquals(losses, team.num_losses)
             self.assertEquals(forfeits, team.num_forfeits)
+
+        self.assertEquals(Membership.objects.get(id=0).num_byes, 1)
 

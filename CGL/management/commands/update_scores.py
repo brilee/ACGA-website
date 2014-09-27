@@ -23,9 +23,8 @@ class Command(BaseCommand):
         # at the same time, tally up each school's wins/losses
         for round in season.round_set.filter(date__lte=date.today()):
             for b in round.bye_set.all():
-                mem = b.school.membership_set.get(season=season)
-                mem.num_byes += 1
-                mem.save()
+                b.team.num_byes += 1
+                b.team.save()
 
             for match in round.match_set.all():
                 m = match
