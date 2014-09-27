@@ -11,13 +11,13 @@ class Command(BaseCommand):
 
     def update_match_and_schools(self, season):
         # reset all scores for this season; recompute from scratch.
-        for membership in Membership.objects.all().filter(season=season):
-            membership.num_wins = 0
-            membership.num_losses = 0
-            membership.num_ties = 0
-            membership.num_byes = 0
-            membership.num_forfeits = 0
-            membership.save()
+        for team in Membership.objects.all().filter(season=season):
+            team.num_wins = 0
+            team.num_losses = 0
+            team.num_ties = 0
+            team.num_byes = 0
+            team.num_forfeits = 0
+            team.save()
             
         # compute the result of each match, based on games and forfeits
         # at the same time, tally up each school's wins/losses
@@ -55,9 +55,9 @@ class Command(BaseCommand):
 
                 # Update the school's scores based on match result
                 for forfeit in m.forfeit_set.all():
-                    if forfeit.school1_noshow:
+                    if forfeit.team1_noshow:
                         m.team1.num_forfeits += 1
-                    if forfeit.school2_noshow:
+                    if forfeit.team2_noshow:
                         m.team2.num_forfeits += 1
                 if m.score1 > m.score2:
                     m.team1.num_wins += 1
@@ -71,7 +71,7 @@ class Command(BaseCommand):
                 m.team1.save()
                 m.team2.save()
                 
-    def update_player_record(self, player):        
+    def update_player_record(self, player):  
         player.num_wins = 0
         player.num_losses = 0
 

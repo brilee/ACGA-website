@@ -256,3 +256,108 @@ class MatchmakingTest(TestCase):
         for match, pairing in zip(sorted_matches, self.expected_pairings):
             self.assertEquals(match.team1, pairing[0])
             self.assertEquals(match.team2, pairing[1])
+
+class ScoreUpdaterTest(TestCase):
+    def setUp(self):
+        auth_models.User.objects.create(username=u'brilee')
+
+        self.test_season = Season.objects.create(name='Season Four')
+        self.schools = [School.objects.create(id=i, name=str(i)) for i in range(4)]
+        self.teams = [Membership.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
+
+        self.players = [
+            [Player.objects.create(name=u'school%splayer%s' % (j, i), school=self.schools[j]) for i in range(3)] 
+            for j in range(4)
+        ]
+
+        self.rounds = [
+            Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=0),
+            Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1),
+        ]
+
+        round_pairings = (
+            ((0, 1), (2, 3)),
+            ((0, 2), (1, 3)),
+        )
+
+        self.matches = [
+            [
+                Match.objects.create(round=self.rounds[round_no], team1=self.teams[pairing[0]], team2=self.teams[pairing[1]])
+                for pairing in round
+            ] for round_no, round in enumerate(round_pairings)
+        ]
+
+        with open(TEST_SGF) as f:
+            # this sgf has B+resign.
+            sgf_contents = f.read()
+
+        for round in self.rounds:
+            for match in round.match_set.all():
+                Game.objects.create(
+                    match=match,
+                    white_player=self.players[match.team1.id][1],
+                    black_player=self.players[match.team2.id][1],
+                    board=1,
+                    white_school='School1',
+                    gamefile=SimpleUploadedFile('testfile', sgf_contents),
+                )
+                Game.objects.create(
+                    match=match,
+                    white_player=self.players[match.team2.id][2],
+                    black_player=self.players[match.team1.id][2],
+                    board=2,
+                    white_school='School2',
+                    gamefile=SimpleUploadedFile('testfile', sgf_contents),
+                )
+                Forfeit.objects.create(match=match, board=3, team1_noshow=True)
+
+    def tearDown(self):
+        for g in Game.objects.all():
+            g.delete()
+
+    def testUpdateScores(self):
+        call_command('update_scores', self.test_season.name)
+
+        expected_player_results = [
+            (0, 0),
+            (0, 0),
+            (0, 2),
+            (2, 0),
+            (0, 0),
+            (1, 1),
+            (1, 1),
+            (0, 0),
+            (1, 1),
+            (1, 1),
+            (0, 0),
+            (2, 0),
+        ]
+
+        expected_match_results = [
+            (1, 2),
+            (1, 2),
+            (1, 2),
+            (1, 2),            
+        ]
+
+        expected_team_results = [
+            (0, 2, 2),
+            (1, 1, 1),
+            (1, 1, 1),
+            (2, 0, 0),
+        ]
+
+        for p_id, (wins, losses) in zip(range(1, 13), expected_player_results):
+            player = Player.objects.get(id=p_id)
+            self.assertEquals(wins, player.num_wins)
+            self.assertEquals(losses, player.num_losses)
+        for m_id, (team1score, team2score) in zip(range(1, 5), expected_match_results):
+            match = Match.objects.get(id=m_id)
+            self.assertEquals(team1score, match.score1)
+            self.assertEquals(team2score, match.score2)
+        for t_id, (wins, losses, forfeits) in enumerate(expected_team_results):
+            team = Membership.objects.get(id=t_id)
+            self.assertEquals(wins, team.num_wins)
+            self.assertEquals(losses, team.num_losses)
+            self.assertEquals(forfeits, team.num_forfeits)
+
