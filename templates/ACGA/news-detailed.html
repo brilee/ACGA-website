@@ -1,9 +1,0 @@
-{% extends "base_ACGA.html" %}
-
-{% block maintext %}
-
-<h1>{{post.title}}</h1>
-{{post.content|safe|linebreaks}}
-<p>Published on {{post.get_date}}</p>
-
-{% endblock maintext %}

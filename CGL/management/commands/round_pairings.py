@@ -12,7 +12,7 @@ class Command(BaseCommand):
         make_option('--season', dest='season', default=None, help="Season name. Leave blank to default to current season."),
         make_option('--round', dest='round', default=0, help="Round number. Leave blank to default to next round")
     )
-    args = '<season name>'
+    args = '--season="Season Name" --round=3'
     help = '''Creates completely random match pairings for the first round
             that has not happened yet, as judged by today's date'''
 
