@@ -239,7 +239,7 @@ class Match(models.Model):
         return u'{} vs. {} on {}'.format(self.team1.team_name, self.team2.team_name, unicode(self.round.date))
 
     def display_result(self):
-        return '({} ({} - {}) {})'.format(self.team1.school.name.encode('utf8'), self.score1, self.score2, self.team2.school.name.encode('utf8'))
+        return '{} ({} - {}) {}'.format(self.team1.school.name.encode('utf8'), self.score1, self.score2, self.team2.school.name.encode('utf8'))
 
     def display_result_html(self):
         return (
