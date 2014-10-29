@@ -1,7 +1,19 @@
-To: {% for recip in recipients %} {{recip}}, {% endfor %}
-Subject:[CGL] Next round: pairings announced
+To: {% for recip in recipients %}{{recip}}, {% endfor %}
+Subject:[CGL] Results and next week matches
 
 Hi everyone,
+
+Games have been uploaded for the most recent round ({{previous_round_date}}). (If you rescheduled your match, send us an email after those games have been played so that we can upload them.)
+
+{% for season in current_seasons %}
+{{season.name}}
+    {% for match in season.round_set.get_previous_round.match_set.all %}
+    {{match.display_result}}
+    {% endfor %}
+{% endfor %}
+
+Full results and game records can be found here:
+http://college-go.org/CGL/results
 
 The next CGL round is scheduled for Saturday, {{next_round_date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:45pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
 
@@ -22,9 +34,9 @@ The following schools get a bye:
 {% endwith %}
 {% endfor %}
 
-If your school cannot compete this Saturday, please let us know by the Wednesday before the matches!
+If your school cannot compete this Saturday, please let us know ASAP!
 
 Good luck to all teams.
+- CGL Organizers
 
-P.S. Wondering why you got this email? You may have recently signed up on the CGL website and connected your account to one of the players whose team is playing above. You can control whether you receive these emails from you profile page on the ACGA website. (college-go.org/accounts/profile)
-
+(If you would like to stop receiving these emails, please let me know.)

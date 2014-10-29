@@ -46,7 +46,7 @@
 	<h3 class="clickable">[+] {{round.date}}</h3>
 	<ul>
 	{% for match in round.match_set.all %}
-		<li><h5>[+] {{match.display_result|safe}}</h5>
+		<li><h5>[+] {{match.display_result_html|safe}}</h5>
 		<ul>
 		{% for game in match.game_set.all %}
 			<li>{{game.full_description_html|safe}}</li>
