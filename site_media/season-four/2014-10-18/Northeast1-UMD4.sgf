@@ -1,0 +1,154 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[Northeast1]PB[UMD4]DT[2014-10-18]PC[The KGS Go Server at http://www.gokgs.com/]C[UMD4 [-\]: hihi
+Northeast1: gl hf
+UMD4 [-\]: Justin Teng
+Northeast1: ming li 5d
+]RE[W+Resign]
+;B[qd]BL[1793.481]
+;W[dp]WL[1797.342]C[UMD4 [-\]: ah we have played
+Northeast1: odnihs?
+]
+;B[pq]BL[1790.493]C[UMD4 [-\]: yea yea
+Northeast1: shana :)
+]
+;W[dc]WL[1790.366]
+;B[oc]BL[1784.714]
+;W[po]WL[1780.993]
+;B[qo]BL[1775.892]C[UMD4 [-\]: oh
+]
+;W[qn]WL[1777.883]C[UMD4 [-\]: ogm
+UMD4 [-\]: omg
+UMD4 [-\]: how did i not recognize the name before
+Northeast1: eh?
+UMD4 [-\]: holy
+]
+;B[qp]BL[1766.144]
+;W[rd]WL[1762.402]C[UMD4 [-\]: like i knew shana was ming li
+UMD4 [-\]: but didn't make the connection to you
+UMD4 [-\]: haha
+]
+;B[re]BL[1734.152]
+;W[qe]WL[1758.819]
+;B[pe]BL[1730.801]
+;W[qf]WL[1756.769]
+;B[rf]BL[1730.06]
+;W[qg]WL[1755.264]
+;B[rg]BL[1729.435]
+;W[qh]WL[1753.194]
+;B[qc]BL[1728.178]
+;W[pn]WL[1747.501]
+;B[nq]BL[1726.803]
+;W[qj]WL[1740.175]
+;B[de]BL[1725.007]
+;W[cg]WL[1710.685]C[UMD4 [-\]: actually nvm you never put your last name on shana lol
+]
+;B[cc]BL[1718.403]
+;W[cb]WL[1676.346]
+;B[cd]BL[1713.988]C[Northeast1: possible, i dont play on kgs anymore ^^
+]
+;W[gc]WL[1665.334]C[UMD4 [-\]: xD
+]
+;B[eg]BL[1711.834]C[Northeast1: tygem matchmaking <3 
+UMD4 [-\]: haha
+UMD4 [-\]: what rank are you on tygem?
+]
+;W[cj]WL[1646.391]C[Northeast1: still ranking up, not sure what ill end up as
+UMD4 [-\]: oh
+]
+;B[ch]BL[1561.367]
+;W[dh]WL[1575.721]
+;B[dg]BL[1559.172]
+;W[bh]WL[1560.454]
+;B[cf]BL[1554.746]
+;W[ci]WL[1559.089]
+;B[eb]BL[1550.257]
+;W[db]WL[1546.648]
+;B[ec]BL[1547.868]
+;W[ed]WL[1541.902]
+;B[dd]BL[1538.153]
+;W[ea]WL[1536.185]C[UMD4 [-\]: ok i fked up that order
+UMD4 [-\]: pretty hard
+]
+;B[fd]BL[1510.655]C[Northeast1: you can show me later then, i dont remember this xD feels like ages since i last saw
+]
+;W[fb]WL[1529.745]C[UMD4 [-\]: this is so bad
+]
+;B[ee]BL[1460.099]
+;W[jc]WL[1526.421]C[UMD4 [-\]: my god what have i done
+]
+;B[fq]BL[1414.848]
+;W[dn]WL[1512.228]
+;B[cq]BL[1409.868]
+;W[dq]WL[1500.133]
+;B[dr]BL[1408.763]
+;W[cp]WL[1466.387]
+;B[br]BL[1383.867]
+;W[bq]WL[1464.939]
+;B[cr]BL[1383.113]
+;W[pd]WL[1446.719]
+;B[pc]BL[1356.806]
+;W[mo]WL[1420.247]
+;B[lp]BL[1281.218]
+;W[gp]WL[1376.844]
+;B[fp]BL[1216.911]
+;W[fo]WL[1342.11]
+;B[go]BL[1206.218]
+;W[gq]WL[1339.3]
+;B[gr]BL[1201.93]
+;W[hr]WL[1337.445]
+;B[fr]BL[1201.052]
+;W[ip]WL[1335.708]
+;B[ho]BL[1183.428]
+;W[jp]WL[1313.448]
+;B[lo]BL[1061.317]
+;W[jn]WL[1291.79]
+;B[lm]BL[947.087]
+;W[mn]WL[1207.711]
+;B[ln]BL[922.356]
+;W[hm]WL[1193.909]
+;B[gm]BL[914.203]
+;W[fn]WL[1150.812]
+;B[gn]BL[777.167]
+;W[hl]WL[1104.018]
+;B[gl]BL[681.17]
+;W[gk]WL[1060.826]
+;B[fk]BL[659.992]
+;W[fl]WL[1051.119]
+;B[ek]BL[295.858]
+;W[el]WL[1003.683]
+;B[dk]BL[240.926]
+;W[bl]WL[948.646]
+;B[hk]BL[64.245]
+;W[gj]WL[945.867]
+;B[ik]BL[63.23]
+;W[jl]WL[927.559]
+;B[bo]BL[32.457]
+;W[bp]WL[852.278]
+;B[cm]BL[24.544]
+;W[dl]WL[833.021]
+;B[gi]BL[30]OB[4]
+;W[hj]WL[827.998]
+;B[fj]BL[30]OB[4]
+;W[hi]WL[820.438]
+;B[ck]BL[30]OB[4]
+;W[cl]WL[811.149]
+;B[bk]BL[30]OB[4]
+;W[bj]WL[774.921]
+;B[al]BL[30]OB[4]
+;W[am]WL[762.402]
+;B[ak]BL[30]OB[4]
+;W[fi]WL[598.196]
+;B[ei]BL[30]OB[4]
+;W[gh]WL[586.484]
+;B[eh]BL[30]OB[4]
+;W[bf]WL[581.428]
+;B[di]BL[30]OB[3]
+;W[ch]WL[577.258]C[Princeton2 [?\]: take it justin
+UMD4 [-\]: ty
+UMD4 [-\]: lol
+Northeast1: thx
+UMD4 [-\]: that beginning
+UMD4 [-\]: was too
+UMD4 [-\]: holy
+])
