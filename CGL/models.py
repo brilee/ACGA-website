@@ -156,7 +156,11 @@ class Membership(models.Model):
         ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
 
     def __unicode__(self):
-        return u"{} in {}".format(self.team_name, self.season.name)
+        return u"{} in {}{}".format(
+            self.team_name,
+            self.season.name,
+            ' (Inactive)' if not self.still_participating else ''
+        )
 
     def save(self, *args, **kwargs):
         if self.team_name == '':
