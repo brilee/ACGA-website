@@ -58,7 +58,7 @@
             </ul>
             {% if next_round.bye_set.all %}
                 <p>{% for bye in next_round.bye_set.all %}
-                <emph>{{bye.school}}</emph>, 
+                <emph>{{bye.team.school.name}}</emph>, 
                 {% endfor %} have a bye </p>
             {% endif %}
         {% else %}
