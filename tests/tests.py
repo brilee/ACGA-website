@@ -66,7 +66,6 @@ class IntegrationTest(TestWithCGLSetup):
             '/events/',
             '/CGL/',
             '/CGL/rules/',
-            '/CGL/schools/',
             '/CGL/schools/%s/' % self.test_school.slug_name,
             '/CGL/results/',
             '/CGL/results/%s/' % self.test_seasons[0].slug_name,

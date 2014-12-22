@@ -7,8 +7,6 @@
 
 <img src="/site_media/FrontMontage.jpg" style="float: right;" alt="Image not found!">
 
-<p>This page lists all schools that are part of the ACGA. A subset of these schools participate in the <a href="/CGL/schools">Collegiate Go League</a></p>
-
 <p>We're delighted to welcome
 
 {% for school in recent_schools %} 
@@ -26,6 +24,7 @@ to the ACGA.</p>
 	<li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
 	<li>Contact email: {{school.contact_email|obfuscate|safe}}</li>
 	<li>Meeting information: {{school.meeting_info}}</li>
+    <li>Participating in CGL? {% if school.inCGL %}Yes{% else %}No{% endif %}</li>
 </ul>
 {% empty %}
 <p>No schools found in database</p>
