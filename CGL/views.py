@@ -8,6 +8,11 @@ from CGL.forms import CreateGameCommentForm, CreateLadderGameCommentForm
 from CGL.models import School, Season, Round, Membership, Game, LadderGame, Player, GameComment, LadderGameComment
 from settings import current_seasons
 
+def display_schools(request):
+    all_schools = School.objects.all()
+    recent_schools = School.objects.order_by("-id")[:5]
+    return render(request, 'schools.html', locals())
+
 def display_roster(request, school_name):
     school = get_object_or_404(School, slug_name=school_name)
     roster = school.player_set.filter(isActive=1).order_by('rank')

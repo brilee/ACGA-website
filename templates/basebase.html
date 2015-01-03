@@ -14,20 +14,6 @@
 <link href="/site_media/foundation/stylesheets/foundation.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="/site_media/foundation/stylesheets/app.css" rel="stylesheet" type="text/css" media="screen" />
 
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26829521-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 <script src="/site_media/foundation/javascripts/modernizr.foundation.js"></script>
 <script type="text/javascript" src="/site_media/CollapsibleLists.js"></script>
 
@@ -58,40 +44,40 @@
 </nav>-->
 
 <div id="header" class="row">
-	{% block navigation %}
-	<div class="three columns">
-	<ul class="nav-bar left">
-	</ul>
-	</div>
-	
-	<div class="nine columns">
-	<ul class="nav-bar right">
-		<li><a href="/" id="homenav">ACGA</a></li>
-		<li><a href="/CGL/" id="CGLnav">CGL</a></li>
-		<li><a href="/ing/">Ing</a></li>
-		<li><a href="/about/" id="aboutnav">About</a></li>
-		<li><a href="/contact/" id="contactnav">Contact us</a></li>
+{% block navigation %}
+    <div class="eight columns">
+    <ul class="nav-bar left">
+        <li><a href="/CGL/rules">Rules</a></li>
+        <li><a href="/CGL/schools">Schools</a></li>
+        <li><a href="/CGL/results">Leaderboard</a></li>
+        <li><a href="/CGL/players">Players</a></li>
+        <li><a href="http://www.college-go.org/join-cgl">Sign Up</a></li>
+    </ul>
+    </div>
+    
+    <div class="four columns">
+    <ul class="nav-bar right">
+        <li><a href="http://www.college-go.org/blog">Blog</a></li>
+        <li><a href="http://www.college-go.org/ACGA">ACGA</a></li>
         {% if user.is_authenticated %}
         <li><a href="/accounts/profile/">My profile</a></li>
         <li><a href="/accounts/logout/">Logout</a></li>
         {% else %}
         <li><a href="/accounts/login/">Login</a></li>
-        <li><a href="/accounts/register/">Register</a></li>
         {% endif %}
-	</ul>
-	</div>
-	{% endblock navigation %}
+    </ul>
+    </div>
+
+{% endblock navigation %}
 </div>
 
 <!-- Banner -->
 <div class="row">
 	<div class="twelve columns">
-{% block logo %}
-	<div class="panel">
-	<h1><a href="/home/">American Collegiate Go Association </a></h1>
-	<p><em> Dedicated to furthering <a href="http://en.wikipedia.org/wiki/Go_(game)">the game of Go</a></em></p>
-	</div>
-{% endblock logo %}
+    {% block logo %}
+    <img src="/site_media/CGL_banner.png" alt="CGL Banner not found!">
+    <p>
+    {% endblock logo %}
 	</div>
 </div>
 

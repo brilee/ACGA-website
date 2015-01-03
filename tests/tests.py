@@ -56,16 +56,9 @@ class IntegrationTest(TestWithCGLSetup):
     def test_all_views(self):
         # NB: all urls must have trailing slash, or else will trigger 301 redirects to slash version, breaking the test... :(
         urls = (
-            '/',
-            '/home/',
-            '/resources/',
-            '/ing/',
-            '/about/',
-            '/members/',
-            '/allemail/',
-            '/events/',
             '/CGL/',
             '/CGL/rules/',
+            '/CGL/schools/',
             '/CGL/schools/%s/' % self.test_school.slug_name,
             '/CGL/results/',
             '/CGL/results/%s/' % self.test_seasons[0].slug_name,

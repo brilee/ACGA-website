@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 urlpatterns = patterns('CGL.views',
     (r'^$', TemplateView.as_view(template_name='CGL.html')),
     (r'^rules/$', TemplateView.as_view(template_name='CGL_rules.html')),
+    (r'^schools/$', 'display_schools'),
     (r'^schools/([A-Za-z0-9_-]{1,50})/$', 'display_roster'),
     (r'^results/$', 'display_current_seasons'),
     (r'^results/([A-Za-z0-9_-]{1,50})/$', 'display_seasons'),
