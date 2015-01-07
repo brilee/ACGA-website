@@ -45,7 +45,7 @@ class School(models.Model):
     website = models.URLField(blank=True)
     meeting_info = models.TextField(blank=True)
     active = models.BooleanField(default=True, help_text="Uncheck if school club appears to have died")
-    inCGL = models.BooleanField(default=True, help_text="Uncheck if school is not participating in the CGL. Does not affect registration status, but only listing status on the CGL schools page.")
+    inCGL = models.BooleanField(default=True, editable=False)
 
     class Meta:
         ordering = ['name']

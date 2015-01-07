@@ -255,6 +255,7 @@ class ScoreUpdaterTest(TestCase):
 
         self.test_season = Season.objects.create(name='Season Four')
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(4)]
+        self.inactive_school = School.objects.create(id=4, name='4')
         self.teams = [Membership.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
 
         self.players = [
@@ -359,4 +360,9 @@ class ScoreUpdaterTest(TestCase):
             self.assertEquals(forfeits, team.num_forfeits)
 
         self.assertEquals(Membership.objects.get(id=0).num_byes, 1)
+        for school in School.objects.filter(id__in=range(4)):
+            self.assertEquals(school.inCGL, True)
+        inactive_school = School.objects.get(id=self.inactive_school.id)
+        self.assertEquals(inactive_school.inCGL, False)
+
 

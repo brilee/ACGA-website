@@ -94,7 +94,15 @@ class Command(BaseCommand):
                 player.num_losses += 1
 
         player.save()
-    
+
+    def update_school_activeness(self):
+        seasons = Season.objects.filter(name__in=current_seasons)
+        current_schools = set([school for season in seasons for school in season.schools.all()])
+        all_schools = School.objects.all()
+        for school in all_schools:
+            school.inCGL = school in current_schools
+            school.save()
+
     def handle(self, *args, **options):
         if not args:
             self.stdout.write('No season names provided. Defaulting to %s\n' % current_seasons)
@@ -110,5 +118,7 @@ class Command(BaseCommand):
         for player in Player.objects.all():
             self.update_player_record(player)
         self.stdout.write('All player records updated\n')
+        self.update_school_activeness()
+        self.stdout.write('Updated school inCGL active status')
         self.stdout.write('Done!\n')
 
