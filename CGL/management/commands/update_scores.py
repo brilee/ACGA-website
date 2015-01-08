@@ -119,6 +119,6 @@ class Command(BaseCommand):
             self.update_player_record(player)
         self.stdout.write('All player records updated\n')
         self.update_school_activeness()
-        self.stdout.write('Updated school inCGL active status')
+        self.stdout.write('Updated school inCGL active status\n')
         self.stdout.write('Done!\n')
 
