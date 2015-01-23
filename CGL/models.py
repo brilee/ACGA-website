@@ -243,13 +243,13 @@ class Match(models.Model):
         return u'{} vs. {} on {}'.format(self.team1.team_name, self.team2.team_name, unicode(self.round.date))
 
     def display_result(self):
-        return '{} ({} - {}) {}'.format(self.team1.school.name.encode('utf8'), self.score1, self.score2, self.team2.school.name.encode('utf8'))
+        return '{} ({} - {}) {}'.format(self.team1.team_name.encode('utf8'), self.score1, self.score2, self.team2.team_name.encode('utf8'))
 
     def display_result_html(self):
         return (
-            a_tag(self.team1.school.name.encode('utf8'), href=self.team1.school.get_absolute_url()) +
+            a_tag(self.team1.team_name.encode('utf8'), href=self.team1.school.get_absolute_url()) +
             ' ({} - {}) '.format(self.score1, self.score2) +
-            a_tag(self.team2.school.name.encode('utf8'), href=self.team2.school.get_absolute_url()) +
+            a_tag(self.team2.team_name.encode('utf8'), href=self.team2.school.get_absolute_url()) +
             (' (Exhibition match)' if self.is_exhibition else '')
         )
 
