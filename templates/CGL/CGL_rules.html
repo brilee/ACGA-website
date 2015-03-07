@@ -1,8 +1,11 @@
 {% extends "base_CGL.html" %}
+{% load email_obfuscator %}
 
 
 {% block maintext %}
 <h1>CGL Rules</h1>
+
+<p>Questions can be directed to {{"cgl.tournament.director@gmail.com"|obfuscate|safe}}</p>
 
 <p><b>League Format:</b>The CGL features teams of three, competing in matches every other week throughout the school year, except in December and March, to avoid winter/spring breaks. </p>
 <p><b>Teams and Schools:</b> A school is currently allowed to have one team in the CGL. For larger schools we will grant a second team on case-by-case basis.</p>
