@@ -13,7 +13,7 @@ from django.test.client import RequestFactory
 from accounts.models import SchoolEditPermission
 from CGL.models import Season, Player, School, Membership, Round, Match, Game, Forfeit, Bye, LadderGame, GameComment, LadderGameComment, a_tag
 from CGL.views import submit_comment, submit_ladder_comment
-from CGL.settings import current_seasons
+from CGL.settings import current_seasons, current_ladder_season
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 
 from sgf import MySGFGame
@@ -162,7 +162,7 @@ class SGFParserTest(TestCase):
 class MatchmakingTest(TestCase):
     def setUp(self):
         auth_models.User.objects.create(username=u'brilee')
-        self.test_season = Season.objects.create(name='Season Blah')
+        self.test_season = Season.objects.create(name=current_ladder_season)
         self.round1 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1)
         self.round2 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=2)
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(7)]
@@ -253,7 +253,7 @@ class ScoreUpdaterTest(TestCase):
     def setUp(self):
         auth_models.User.objects.create(username=u'brilee')
 
-        self.test_season = Season.objects.create(name='Season Four')
+        self.test_season = Season.objects.create(name=current_ladder_season)
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(4)]
         self.inactive_school = School.objects.create(id=4, name='4')
         self.teams = [Membership.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
