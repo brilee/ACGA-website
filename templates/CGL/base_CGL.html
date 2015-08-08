@@ -16,7 +16,7 @@
         <h2>Upcoming Matches</h2>
     {% for season in current_seasons %}
     {% with next_round=season.round_set.get_next_round %}
-        <h3>{{season.name}}</h3>
+        <h3><a href="{{season.get_absolute_url}}">{{season.name}}</a></h3>
         {% if next_round %}
             <p><strong>{{next_round.date}}</strong></p>
             <ul>
@@ -42,7 +42,7 @@
         <h2>Recent Matches</h2>
     {% for season in current_seasons %}
     {% with recent_round=season.round_set.get_previous_round %}
-        <h3>{{season.name}}</h3>
+        <h3><a href="{{season.get_absolute_url}}">{{season.name}}</a></h3>
         {% if recent_round %}
             <p><strong>{{recent_round.date}}</strong></p>
             <ul>
@@ -62,10 +62,19 @@
     {% endfor %}
         </div>
         <div class="panel">
-        <h5>See all dates, matches, and games for this season <a href="/CGL/results/">here</a>.</h5>
-        </div>
+        <h2>Individual Ladder</h2>
+        <h3><a href="https://online-go.com/ladder/1926">Online Go Server</a></h3>
+        {% if iCGL_top_players %}
+        <ol>
+            {% for player in iCGL_top_players %}
+            <li><img src="{{player.icon}}" /> {{player.username}} ({{player.get_rank_display}})</li>
+            {% endfor %}
+        </ol>
+        {% else %}
+        <p>No results found for the OGS individual ladder</p>
+        {% endif %}
 
--->
+        </div>
     </aside>    
 </div>
 
