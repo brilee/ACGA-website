@@ -1,6 +1,5 @@
 from collections import defaultdict
 import random
-import itertools
 
 def construct_matrix(existing_matchups):
     m = defaultdict(lambda: defaultdict(lambda: False))

@@ -80,8 +80,8 @@ class Command(BaseCommand):
 
         for s in fake_seasons:
             for school in schools:
-                membership = Membership(school=school, season=s)
-                membership.save()
+                Team = Team(school=school, season=s)
+                Team.save()
             for datedelta in (datetime.timedelta(days=-30),
                               datetime.timedelta(days=-7),
                               datetime.timedelta(days=1),

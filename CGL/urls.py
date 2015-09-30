@@ -1,5 +1,4 @@
-from django.conf.urls import *
-from django.conf import settings
+from django.conf.urls import patterns
 from django.views.generic import TemplateView
 
 urlpatterns = patterns('CGL.views',

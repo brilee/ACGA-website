@@ -7,12 +7,9 @@ from django.core.management import call_command
 from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
-from django.test import Client
-from django.test.client import RequestFactory
 
 from accounts.models import SchoolEditPermission
-from CGL.models import Season, Player, School, Membership, Round, Match, Game, Forfeit, Bye, LadderGame, GameComment, LadderGameComment, a_tag
-from CGL.views import submit_comment, submit_ladder_comment
+from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, Bye, LadderGame, GameComment, LadderGameComment, a_tag
 from CGL.settings import current_seasons, current_ladder_season
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 
@@ -35,9 +32,9 @@ class TestWithCGLSetup(TestCase):
         self.test_school = School.objects.create(name=u'Test School')
         self.test_school2 = School.objects.create(name=u'Test School 2')
         self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
-        self.test_membership = Membership.objects.create(school=self.test_school, season=self.test_seasons[0])
+        self.test_team = Team.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
-        self.test_match = Match.objects.create(round=self.test_round, team1=self.test_membership, team2=self.test_membership)
+        self.test_match = Match.objects.create(round=self.test_round, team1=self.test_team, team2=self.test_team)
         self.test_forfeit = Forfeit.objects.create(match=self.test_match, board=1, team1_noshow=True)
 
         with open(TEST_SGF) as f:
@@ -75,7 +72,7 @@ class IntegrationTest(TestWithCGLSetup):
             except:
                 import traceback
                 traceback.print_exc()
-                print "Failed to get %s with response %s" % (url, response.status_code)
+                print ("Failed to get %s with response %s" % (url, response.status_code))
 
     def test_public_post_views(self):
         url_comment = (
@@ -130,8 +127,8 @@ class ModelTests(TestWithCGLSetup):
         self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_forfeit))
         self.assertTrue(not SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_school2))
 
-    def test_membership_autofill(self):
-        self.assertEquals(self.test_membership.team_name, self.test_membership.school.name)
+    def test_team_autofill(self):
+        self.assertEquals(self.test_team.team_name, self.test_team.school.name)
 
     def test_game_properties(self):
         self.assertEquals(self.test_game.game_result, 'B+Resign')
@@ -166,7 +163,7 @@ class MatchmakingTest(TestCase):
         self.round1 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1)
         self.round2 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=2)
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(7)]
-        self.teams = [Membership.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
+        self.teams = [Team.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
 
         # Records so far
         # Sc W L T B F
@@ -256,7 +253,7 @@ class ScoreUpdaterTest(TestCase):
         self.test_season = Season.objects.create(name=current_ladder_season)
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(4)]
         self.inactive_school = School.objects.create(id=4, name='4')
-        self.teams = [Membership.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
+        self.teams = [Team.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
 
         self.players = [
             [Player.objects.create(name=u'school%splayer%s' % (j, i), school=self.schools[j]) for i in range(3)] 
@@ -354,12 +351,12 @@ class ScoreUpdaterTest(TestCase):
             self.assertEquals(team1score, match.score1)
             self.assertEquals(team2score, match.score2)
         for t_id, (wins, losses, forfeits) in enumerate(expected_team_results):
-            team = Membership.objects.get(id=t_id)
+            team = Team.objects.get(id=t_id)
             self.assertEquals(wins, team.num_wins)
             self.assertEquals(losses, team.num_losses)
             self.assertEquals(forfeits, team.num_forfeits)
 
-        self.assertEquals(Membership.objects.get(id=0).num_byes, 1)
+        self.assertEquals(Team.objects.get(id=0).num_byes, 1)
         for school in School.objects.filter(id__in=range(4)):
             self.assertEquals(school.inCGL, True)
         inactive_school = School.objects.get(id=self.inactive_school.id)

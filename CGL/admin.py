@@ -17,7 +17,7 @@ class GameAdmin(admin.ModelAdmin):
 admin.site.register(School)
 admin.site.register(Player)
 admin.site.register(Season)
-admin.site.register(Membership)
+admin.site.register(Team)
 admin.site.register(Round)
 admin.site.register(Match)
 admin.site.register(Game, GameAdmin)

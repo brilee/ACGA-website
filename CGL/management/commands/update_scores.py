@@ -1,5 +1,5 @@
-from django.core.management.base import BaseCommand, CommandError
-from CGL.models import *
+from django.core.management.base import BaseCommand
+from CGL.models import Team, Season, School, Player
 from CGL.settings import current_seasons, current_ladder_season
 
 from datetime import date, timedelta
@@ -11,13 +11,13 @@ class Command(BaseCommand):
 
     def update_match_and_schools(self, season):
         # reset all scores for this season; recompute from scratch.
-        for team in Membership.objects.all().filter(season=season):
-            team.num_wins = 0
-            team.num_losses = 0
-            team.num_ties = 0
-            team.num_byes = 0
-            team.num_forfeits = 0
-            team.save()
+        Team.objects.filter(season=season).update(
+            num_wins=0,
+            num_losses=0,
+            num_ties=0,
+            num_byes=0,
+            num_forfeits=0
+        )
             
         # compute the result of each match, based on games and forfeits
         # at the same time, tally up each school's wins/losses

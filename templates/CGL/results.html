@@ -21,7 +21,7 @@
         <th>Byes </th>
         <th><span style="color:red">Forfeited Games</span></th>
 	</tr>
-{% for team in season.membership_set.all %}
+{% for team in season.team_set.all %}
 	<tr>
 		<td><a href="{{team.school.get_absolute_url}}">{% if not team.still_participating %}({% endif %}{{team.team_name}}{% if not team.still_participating %}) **{% endif %}</a></td>
 		<td>{{team.num_wins}}</td>

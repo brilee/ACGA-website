@@ -1,6 +1,5 @@
 import datetime
 import os, shutil
-from urllib import quote
 from django.db import models
 from django.db.models.signals import post_delete
 from django.template.defaultfilters import slugify
@@ -126,7 +125,7 @@ class Season(models.Model):
     name = models.CharField(max_length=25, help_text="Season One, Season One Championship, etc.")
     slug_name = models.SlugField(blank=True, editable=False)
     schoolyear = models.CharField(max_length=40, help_text="2011-2012, etc.")
-    schools = models.ManyToManyField(School, through='Membership')
+    schools = models.ManyToManyField(School, through='Team')
     html = models.TextField(blank=True, help_text="Any custom HTML for this season you'd like to appear in the archives")
     description = models.TextField(blank=True, help_text="Any historical notes about this season you'd like to appear in the archives")
 
@@ -141,7 +140,7 @@ class Season(models.Model):
     def get_absolute_url(self):
         return ('CGL.views.display_seasons', [str(self.slug_name)])
 
-class Membership(models.Model):
+class Team(models.Model):
     school = models.ForeignKey(School)
     season = models.ForeignKey(Season)
     team_name = models.CharField(max_length=60, default='', blank=True, help_text="Leave this blank to default to name of school")
@@ -154,6 +153,7 @@ class Membership(models.Model):
 
     class Meta:
         ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
+        db_table = "CGL_membership"
 
     def __unicode__(self):
         return u"{} in {}{}".format(
@@ -165,7 +165,7 @@ class Membership(models.Model):
     def save(self, *args, **kwargs):
         if self.team_name == '':
             self.team_name = self.school.name
-        super(Membership, self).save(*args, **kwargs)
+        super(Team, self).save(*args, **kwargs)
 
 class RoundManager(models.Manager):
     # The season filter is implicit - generally you want to call these
@@ -229,8 +229,8 @@ class Round(models.Model):
 
 class Match(models.Model):
     round = models.ForeignKey(Round)
-    team1 = models.ForeignKey(Membership, related_name="team1", null=True)
-    team2 = models.ForeignKey(Membership, related_name="team2", null=True)
+    team1 = models.ForeignKey(Team, related_name="team1", null=True)
+    team2 = models.ForeignKey(Team, related_name="team2", null=True)
     score1 = models.IntegerField(editable=False, default=0)
     score2 = models.IntegerField(editable=False, default=0)
     is_exhibition = models.BooleanField(default=False, help_text="This will cause match to not be considered in scoring")
@@ -409,19 +409,6 @@ class LadderGame(GameBase):
     def __unicode__(self):
         return u"{} vs {}".format(self.white_player.name, self.black_player.name)
 
-class LadderMembership(models.Model):
-    season = models.ForeignKey(Season)
-    player = models.ForeignKey(Player)
-    num_wins = models.IntegerField(editable=False, default=0)
-    num_losses = models.IntegerField(editable=False, default=0)
-    num_ties = models.IntegerField(editable=False, default=0)
-
-    class Meta:
-        ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties']
-
-    def __unicode__(self):
-        return u"{} in {}".format(self.player.name, self.season.name)
-
 @receiver(post_delete)
 def delete_Game(sender, instance, **kwargs):
     if isinstance(instance, GameBase):
@@ -457,7 +444,7 @@ class Forfeit(models.Model):
         return u'{} vs {} on {}, board {}'.format(self.match.team1.school.name, self.match.team2.school.name, unicode(self.match.round.date), self.board)
 
 class Bye(models.Model):
-    team = models.ForeignKey(Membership, null=True)
+    team = models.ForeignKey(Team, null=True)
     round = models.ForeignKey(Round)
 
     class Meta:

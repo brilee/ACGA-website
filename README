@@ -28,7 +28,7 @@ This recalculates match results, school records, and player records for the curr
 ./manage.py round_pairings <Season Name>
 This generates round pairings for the next round, as determined by date. The pitfall of doing all pairings at the start of season is that new schools may have signed up in the meantime. Thus, it should be executed on the Sunday before a match, and a reminder email sent out to team captains to let us know if they can't make the match.
 If the round already has some matches created, this algorithm ignores those schools and continues on. This is useful if you want to ensure that two schools are matched in an upcoming round.
-If a school's membership in a Season has "Still participating?" unchecked, then the algorithm will disregard that school in the pairings. If a school has a bye listed for that round, then the algorithm will also disregard.
+If a school's Team in a Season has "Still participating?" unchecked, then the algorithm will disregard that school in the pairings. If a school has a bye listed for that round, then the algorithm will also disregard.
 The algorithm pairs up schools, favoring the schools with the most byes. Thus, byes will be allocated fairly between the schools.
 
 
@@ -52,7 +52,7 @@ Season
       |    +-- Game (Player, Player, Board#)
       |    +-- Forfeit (School, School, Board#)
 
-Membership (Season, School)
+Team (Season, School)
 GameComment (Game, User)
 
 User (Player)

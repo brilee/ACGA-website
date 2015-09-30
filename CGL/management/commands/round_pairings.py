@@ -1,10 +1,9 @@
 import itertools
-import datetime
 from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 
 from CGL.settings import current_seasons
-from CGL.models import Season, Round, Match, Membership, Bye
+from CGL.models import Season, Round, Match, Team, Bye
 from CGL.matchmaking import best_matchup
 
 class Command(BaseCommand):
@@ -26,7 +25,7 @@ class Command(BaseCommand):
         else:
             round = season.round_set.get_next_round()
 
-        all_teams = set(Membership.objects.filter(season=season, still_participating=True))
+        all_teams = set(Team.objects.filter(season=season, still_participating=True))
         already_matched = set(itertools.chain(*[(match.team1.id, match.team2.id) for match in round.match_set.all()]))
         team_pool = [t for t in all_teams if t.id not in already_matched]
 
