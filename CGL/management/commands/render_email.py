@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand, CommandError
 from django.template import Context, loader
 
-from CGL.models import Round
+from CGL.models import Round, Season
 from CGL.settings import current_seasons as current_season_names
 from CGL.season_management import get_actively_participating_schools
 
@@ -16,6 +16,7 @@ class Command(BaseCommand):
         except Exception as e:
             self.stdout.write('Warning: Couldn\'t find previous or next round date.')
 
+        current_seasons = [Season.objects.get(name=s) for s in current_season_names]
         participating_schools = get_actively_participating_schools(current_season_names)
 
         recipients = (
