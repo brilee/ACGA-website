@@ -20,12 +20,6 @@ urlpatterns = patterns('',
         {'document_root': settings.MEDIA_ROOT}),
     (r'^admin/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.ADMIN_MEDIA_ROOT}),
-)
-
-urlpatterns += patterns('',
-    # Account registration/login
-    (r'^accounts/', include('accounts.urls')),
-    #(r'^accounts/', include('registration.backends.default.urls')),
     # CGL subportal
     (r'^CGL/', include('CGL.urls')),
 )

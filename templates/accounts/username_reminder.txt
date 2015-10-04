@@ -1,6 +1,0 @@
-Hi,
-
-Somebody, probably you, requested a username reminder at college-go.org for the email address {{email}}. 
-
-Your username is {{user.username}}
-
