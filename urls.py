@@ -1,10 +1,6 @@
 from django.conf.urls import *
 from django.shortcuts import redirect
-from django.views import static
-from django.views.generic import TemplateView
-from django.contrib.auth.views import login, logout
 from django.conf import settings
-import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin

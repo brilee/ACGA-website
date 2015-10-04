@@ -1,8 +1,8 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import  HttpResponseRedirect
 
-from CGL.forms import CreateGameCommentForm, CreateLadderGameCommentForm
-from CGL.models import School, Season, Team, Game, LadderGame, Player, GameComment, LadderGameComment
+from CGL.forms import CreateGameCommentForm
+from CGL.models import School, Season, Team, Game, Player, GameComment
 from settings import current_seasons
 
 def display_schools(request):
@@ -57,11 +57,6 @@ def display_game(request, game_id):
     form = CreateGameCommentForm()
     return render(request, 'game-detailed.html', locals())
 
-def display_ladder_game(request, l_game_id):
-    game = get_object_or_404(LadderGame, id=l_game_id)
-    form = CreateLadderGameCommentForm()
-    return render(request, 'ladder-game-detailed.html', locals())
-
 def submit_comment(request, game_id):
     game = get_object_or_404(Game, id=game_id)
     if request.method == 'POST':
@@ -72,16 +67,4 @@ def submit_comment(request, game_id):
             new_comment = GameComment(game=game, comment=comment, user=user)
             new_comment.save()
     
-    return HttpResponseRedirect(game.get_absolute_url())
-
-def submit_ladder_comment(request, l_game_id):
-    game = get_object_or_404(LadderGame, id=l_game_id)
-    if request.method == 'POST':
-        form = CreateLadderGameCommentForm(request.POST)
-        if form.is_valid():
-            comment = form.cleaned_data['comment']
-            user = request.user
-            new_comment = LadderGameComment(game=game, comment=comment, user=user)
-            new_comment.save()
-
     return HttpResponseRedirect(game.get_absolute_url())

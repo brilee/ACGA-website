@@ -8,8 +8,6 @@ from django.dispatch.dispatcher import receiver
 
 from django.conf import settings
 
-from CGL.settings import current_ladder_season
-
 from sgf import MySGFGame
 
 SCHOOL1, SCHOOL2 = 'School1', 'School2'
@@ -113,12 +111,6 @@ class Player(models.Model):
         games2 = self.black_player_game_set.all()
         all_games = games1 | games2
         all_games = all_games.order_by('-match__round__date')
-        return all_games
-
-    def laddergame_set(self):
-        games1 = self.white_player_laddergame_set.all()
-        games2 = self.black_player_laddergame_set.all()
-        all_games = games1 | games2
         return all_games
 
 class Season(models.Model):
@@ -263,8 +255,6 @@ class GameBase(models.Model):
     def upload_to(instance, filename):
         if instance.__class__.__name__ == 'Game':
             return os.path.join(slugify(instance.match.round.season.name), slugify(instance.match.round.date), filename)
-        elif instance.__class__.__name__ == 'LadderGame':
-            return os.path.join(slugify(instance.season.name), 'ladder_games', filename)
         else:
             return 'temp'
 
@@ -393,22 +383,6 @@ class Game(GameBase):
             self.board
         )
 
-class LadderGame(GameBase):
-    season = models.ForeignKey(Season, blank=True, help_text="Leave this blank to default to current ladder season")
-
-    def save(self, *args, **kwargs):
-        if not self.season:
-            self.season = Season.objects.get(name=current_ladder_season)
-
-        super(LadderGame, self).save(*args, **kwargs)
-
-    @models.permalink
-    def get_absolute_url(self):
-        return ('CGL.views.display_ladder_game', [str(self.id)])
-
-    def __unicode__(self):
-        return u"{} vs {}".format(self.white_player.name, self.black_player.name)
-
 @receiver(post_delete)
 def delete_Game(sender, instance, **kwargs):
     if isinstance(instance, GameBase):
@@ -468,5 +442,3 @@ class CommentBase(models.Model):
 class GameComment(CommentBase):
     game = models.ForeignKey(Game)
 
-class LadderGameComment(CommentBase):
-    game = models.ForeignKey(LadderGame)
