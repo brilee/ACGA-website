@@ -438,6 +438,14 @@ class CommentBase(models.Model):
 
     def __unicode__(self):
         return u'{}: {}'.format(self.user.username, self.comment[:100])
+class SchoolAuth(models.Model):
+    school = models.ForeignKey(School)
+    secret_key = models.CharField(max_length=16, null=False)
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            self.secret_key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
+            super(SchoolAuth, self).save(*args, **kwargs)
 
 class GameComment(CommentBase):
     game = models.ForeignKey(Game)

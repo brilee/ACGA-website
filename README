@@ -1,22 +1,10 @@
 Requirements:
 
-django-south
-django-registration
-django-recaptcha
-
 Hi, and welcome to the ACGA website backend.
 
 This site is written in Django. Google for an introduction/tutorial.
 
-The site is broadly arranged into two sections: ACGA-relevant material, and CGL-relevant material. The corresponding urls/views/models are under their respective apps. The templates folder is correspondingly partitioned.
-
-The settings file is not in this repository, unfortunately. 
-
-Some general django tips: changes to models/urls/settings are not dynamically loaded; you can force them to show up by restarting the server (>>>apachectl restart).
-Models can be syntax-checked by running ./manage.py validate
-
 Git repository is hosted at github.com/brilee/ACGA-website
-
 
 To change the season displayed on the website, edit the file at /CGL/settings.py. The entire site relies on those settings to determine what to show in recent/upcoming matches sidebar, results page, and a few other miscellaneous places.
 
@@ -32,28 +20,8 @@ If a school's Team in a Season has "Still participating?" unchecked, then the al
 The algorithm pairs up schools, favoring the schools with the most byes. Thus, byes will be allocated fairly between the schools.
 
 
-./manage.py render_email <template_name>
-./manage.py send_email (--fake)
-These two commands generate, and then send an email to currently participating schools, from the specified template. You can edit the rendered email before sending it out.
+./manage.py render_email
+Generate an email to currently participating schools, from the specified template. You can edit the rendered email before sending it out.
 
-Available templates are:
-/templates/next-round-announce
-/templates/previous-round-results
-
-The CGL database hierarchy:
-
-School
- +-- Player
-
-Season
- +-- Round (Date)
-      +-- Bye (School)
-      +-- Match (School, School)
-      |    +-- Game (Player, Player, Board#)
-      |    +-- Forfeit (School, School, Board#)
-
-Team (Season, School)
-GameComment (Game, User)
-
-User (Player)
-
+./manage.py test CGL
+Run tests.
