@@ -44,17 +44,17 @@ def process_KGS_game_row(row):
     columns = row.find_all("td")
     if len(columns) == 7:
         sgf_url = columns[0].a['href']
-        white = username_from_url(columns[1].a['href'])
-        black = username_from_url(columns[2].a['href'])
+        white = username_from_url(columns[1].a['href']).lower()
+        black = username_from_url(columns[2].a['href']).lower()
         date = datetime.strptime(columns[4].text, KGS_timestamp_format).date()
         type_ = columns[5].text
         result = columns[6].text
         return KgsGame(sgf_url, white, black, date, type_, result)
     elif len(columns) == 6:
         sgf_url = columns[0].a['href']
-        white = username_from_url(columns[1].a['href'])
+        white = username_from_url(columns[1].a['href']).lower()
         black = ""
-        date = datetime.strptime(columns[4].text, KGS_timestamp_format).date()
+        date = datetime.strptime(columns[3].text, KGS_timestamp_format).date()
         type_ = columns[4].text
         result = columns[5].text
         return KgsGame(sgf_url, white, black, date, type_, result)

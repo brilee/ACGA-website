@@ -26,8 +26,8 @@ class Command(BaseCommand):
                     self.stderr.write("Board %s already exists\n" % i)
                     continue
                 self.stderr.write("Fetching game info from KGS\n")
-                school1_username = school1.KGS_name + i
-                school2_username = school2.KGS_name + i
+                school1_username = (school1.KGS_name + i).lower()
+                school2_username = (school2.KGS_name + i).lower()
                 all_games = get_KGS_games(school1_username, year, month)
                 likely_games = filter(
                     filter_likely_games(
