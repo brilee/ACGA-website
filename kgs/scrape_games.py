@@ -23,7 +23,7 @@ def rate_limited(secs):
 KGS_url = "http://www.gokgs.com/gameArchives.jsp"
 KGS_timestamp_format = "%m/%d/%y %I:%M %p"
 
-@rate_limited(1)
+@rate_limited(5)
 def get_raw_KGS_data(username, year, month):
     qparams = {
         "user": username,

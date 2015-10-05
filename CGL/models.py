@@ -57,9 +57,6 @@ class School(models.Model):
             super(School, self).save(*args, **kwargs)
             p = Player(name="Unknown Player", school=self)
             p.save()
-            from accounts.models import SchoolEditPermission
-            perm = SchoolEditPermission(user=auth_models.User.objects.get(username='brilee'), school=self)
-            perm.save()
         else:
             super(School, self).save(*args, **kwargs)
 

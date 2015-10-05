@@ -8,9 +8,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
 
-from accounts.models import SchoolEditPermission
-from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, Bye, LadderGame, GameComment, LadderGameComment, a_tag
-from CGL.settings import current_seasons, current_ladder_season
+from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, Bye, GameComment, a_tag
+from CGL.settings import current_seasons
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 
 from sgf import MySGFGame
@@ -41,13 +40,9 @@ class TestWithCGLSetup(TestCase):
             sgf_contents = f.read()
 
         self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, board=1, white_school='School1', gamefile=SimpleUploadedFile('testfile', sgf_contents))
-        self.test_ladder_game = LadderGame.objects.create(season=self.test_seasons[0], white_player=self.test_player, black_player=self.test_player, gamefile=SimpleUploadedFile('testfile', sgf_contents))
-
-        self.test_permission = SchoolEditPermission.objects.create(school=self.test_school, user=self.test_user)
 
     def tearDown(self):
         self.test_game.delete()
-        self.test_ladder_game.delete()
 
 class IntegrationTest(TestWithCGLSetup):
     def test_all_views(self):
@@ -62,7 +57,6 @@ class IntegrationTest(TestWithCGLSetup):
             '/CGL/players/',
             '/CGL/players/%s/' % self.test_player.id,
             '/CGL/games/%s/' % self.test_game.id,
-            '/CGL/laddergames/%s/' % self.test_ladder_game.id,
         ) 
 
         for url in urls:
@@ -77,7 +71,6 @@ class IntegrationTest(TestWithCGLSetup):
     def test_public_post_views(self):
         url_comment = (
             ('/CGL/games/%s/submit/' % self.test_game.id, GameComment),
-            ('/CGL/laddergames/%s/submit/' % self.test_ladder_game.id, LadderGameComment)
         )
         for url, comment_model in url_comment:
             comment_text = 'Test Comment to %s' % url
@@ -120,13 +113,6 @@ class ModelTests(TestWithCGLSetup):
             '<a href="{}">[sgf]</a>'.format(self.test_game.gamefile.url)
         )
 
-    def test_edit_permissions(self):
-        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_school))
-        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_player))
-        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_game))
-        self.assertTrue(SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_forfeit))
-        self.assertTrue(not SchoolEditPermission.objects.has_edit_permissions(self.test_user, self.test_school2))
-
     def test_team_autofill(self):
         self.assertEquals(self.test_team.team_name, self.test_team.school.name)
 
@@ -159,7 +145,7 @@ class SGFParserTest(TestCase):
 class MatchmakingTest(TestCase):
     def setUp(self):
         auth_models.User.objects.create(username=u'brilee')
-        self.test_season = Season.objects.create(name=current_ladder_season)
+        self.test_season = Season.objects.create(name=current_seasons[0])
         self.round1 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1)
         self.round2 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=2)
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(7)]
@@ -250,7 +236,7 @@ class ScoreUpdaterTest(TestCase):
     def setUp(self):
         auth_models.User.objects.create(username=u'brilee')
 
-        self.test_season = Season.objects.create(name=current_ladder_season)
+        self.test_season = Season.objects.create(name=current_seasons[0])
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(4)]
         self.inactive_school = School.objects.create(id=4, name='4')
         self.teams = [Team.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]

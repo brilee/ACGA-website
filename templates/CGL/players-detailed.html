@@ -24,10 +24,4 @@
 {% endfor %}
 </ul>
 
-<h4>Individual Ladder</h4>
-<ul>
-{% for game in player.laddergame_set %}
-    <li>{{game.full_description_html|safe}}</li>
-{% endfor %}
-</ul>
 {% endblock maintext %}
