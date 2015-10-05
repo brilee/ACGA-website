@@ -1,5 +1,7 @@
 import datetime
 import os, shutil
+import random
+import string
 from django.db import models
 from django.db.models.signals import post_delete
 from django.template.defaultfilters import slugify
@@ -270,6 +272,7 @@ class GameBase(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             # on first save, parse SGF file and extract result
+            self.gamefile.seek(0)
             parsed_file = MySGFGame(self.gamefile.read())
             self.game_result = parsed_file.game_result
             self.handicap = parsed_file.handicap

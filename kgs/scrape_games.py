@@ -1,6 +1,5 @@
 from collections import namedtuple
 from datetime import datetime, timedelta
-from io import BytesIO
 import os
 import time
 from urlparse import parse_qs, urlparse
@@ -8,7 +7,7 @@ from urlparse import parse_qs, urlparse
 from bs4 import BeautifulSoup
 import requests
 
-from django.core.files import File
+from django.core.files.base import ContentFile
 
 KgsGame = namedtuple("KgsGame", "sgf_url white black date type result")
 
@@ -74,9 +73,9 @@ def get_filename(url):
     parsed_url = urlparse(url)
     return os.path.split(parsed_url.path)[1]
 
-def download_gamefile(kgs_game):
-    response = requests.get(kgs_game.sgf_url)
-    return File(BytesIO(response.content), name=get_filename(kgs_game.sgf_url))
+def download_gamefile(url):
+    response = requests.get(url)
+    return ContentFile(response.content, name=get_filename(url))
 
 def filter_likely_games(username1, username2, date=None):
     def filterer(kgs_game):
