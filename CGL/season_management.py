@@ -15,7 +15,7 @@ def regenerate_school_auth_keys(school):
     auth, created = SchoolAuth.objects.get_or_create(school=school)
     return (school.contact_email,
         urlparse.urlunparse([
-            "https",
+            "",
             settings.WEB_URL,
             reverse("display_all_matches"), "",
             AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key, ""]
