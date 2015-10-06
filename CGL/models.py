@@ -463,7 +463,7 @@ class SchoolAuth(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.secret_key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
-            super(SchoolAuth, self).save(*args, **kwargs)
+        super(SchoolAuth, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return u'{}: captain_school_auth={}'.format(self.school, self.secret_key)
