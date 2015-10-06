@@ -145,7 +145,6 @@ class Team(models.Model):
 
     class Meta:
         ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
-        db_table = "CGL_membership"
 
     def __unicode__(self):
         return u"{} in {}{}".format(

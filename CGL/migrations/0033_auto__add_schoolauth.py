@@ -8,53 +8,19 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Deleting model 'LadderMembership'
-        db.delete_table(u'CGL_laddermembership')
+        # Adding model 'SchoolAuth'
+        db.create_table('CGL_schoolauth', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('school', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['CGL.School'])),
+            ('secret_key', self.gf('django.db.models.fields.CharField')(max_length=16)),
+        ))
+        db.send_create_signal('CGL', ['SchoolAuth'])
 
-        # Deleting model 'LadderGameComment'
-        db.delete_table(u'CGL_laddergamecomment')
-
-        # Deleting model 'LadderGame'
-        db.delete_table(u'CGL_laddergame')
-
-        db.rename_table(u'CGL_membership', u'CGL_team')
 
     def backwards(self, orm):
-        # Adding model 'LadderMembership'
-        db.create_table(u'CGL_laddermembership', (
-            ('season', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['CGL.Season'])),
-            ('num_wins', self.gf('django.db.models.fields.IntegerField')(default=0)),
-            ('num_losses', self.gf('django.db.models.fields.IntegerField')(default=0)),
-            ('player', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['CGL.Player'])),
-            ('num_ties', self.gf('django.db.models.fields.IntegerField')(default=0)),
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-        ))
-        db.send_create_signal(u'CGL', ['LadderMembership'])
+        # Deleting model 'SchoolAuth'
+        db.delete_table('CGL_schoolauth')
 
-        # Adding model 'LadderGameComment'
-        db.create_table(u'CGL_laddergamecomment', (
-            ('comment', self.gf('django.db.models.fields.TextField')(max_length=1000)),
-            ('datetime', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
-            ('game', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['CGL.LadderGame'])),
-            ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-        ))
-        db.send_create_signal(u'CGL', ['LadderGameComment'])
-
-
-        # Adding model 'LadderGame'
-        db.create_table(u'CGL_laddergame', (
-            ('game_result', self.gf('django.db.models.fields.CharField')(default='', max_length=10, blank=True)),
-            ('gamefile', self.gf('django.db.models.fields.files.FileField')(max_length=100)),
-            ('white_player', self.gf('django.db.models.fields.related.ForeignKey')(related_name='white_player_laddergame_set', null=True, to=orm['CGL.Player'])),
-            ('handicap', self.gf('django.db.models.fields.IntegerField')(default=0)),
-            ('season', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['CGL.Season'], blank=True)),
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('black_player', self.gf('django.db.models.fields.related.ForeignKey')(related_name='black_player_laddergame_set', null=True, to=orm['CGL.Player'])),
-        ))
-        db.send_create_signal(u'CGL', ['LadderGame'])
-
-        db.rename_table(u'CGL_team', u'CGL_membership')
 
     models = {
         'CGL.bye': {
@@ -135,6 +101,12 @@ class Migration(SchemaMigration):
             'name': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
             'slug_name': ('django.db.models.fields.SlugField', [], {'max_length': '50', 'blank': 'True'}),
             'website': ('django.db.models.fields.URLField', [], {'max_length': '200', 'blank': 'True'})
+        },
+        'CGL.schoolauth': {
+            'Meta': {'object_name': 'SchoolAuth'},
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'school': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['CGL.School']"}),
+            'secret_key': ('django.db.models.fields.CharField', [], {'max_length': '16'})
         },
         'CGL.season': {
             'Meta': {'object_name': 'Season'},
