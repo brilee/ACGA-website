@@ -1,0 +1,17 @@
+{% extends 'base_CGL.html' %}
+
+{% block maintext %}
+<h3>Record Players</h3>
+
+<p> Here are all of your matches from this season. Please go through these matches and record the names of the players who played in each match.</p>
+
+{% for match in relevant_matches %}
+<h4>{{match.round.date}} {{match.display_match}}</h4>
+<ul class="disc">
+    {% for game in match.game_set.all %}
+	<li>{{game.result_html|safe}}</li>
+    {% endfor %}
+</ul>
+<p><strong><a href="/CGL/matches/{{match.id}}/edit/">Record your players</a></strong></p>
+{% endfor %}
+{% endblock %}

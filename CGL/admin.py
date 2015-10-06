@@ -19,5 +19,4 @@ admin.site.register(Game, GameAdmin)
 admin.site.register(Bye)
 admin.site.register(Forfeit)
 admin.site.register(GameComment)
-
-
+admin.site.register(SchoolAuth)

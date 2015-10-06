@@ -57,6 +57,7 @@ class School(models.Model):
             super(School, self).save(*args, **kwargs)
             p = Player(name="Unknown Player", school=self)
             p.save()
+            SchoolAuth.objects.get_or_create(school=self)
         else:
             super(School, self).save(*args, **kwargs)
 
@@ -358,12 +359,26 @@ class Game(GameBase):
         elif self.white_school == SCHOOL2:
             return self.black_player
 
+    @team1_player.setter
+    def team1_player(self, val):
+        if self.white_school == SCHOOL1:
+            self.white_player = val
+        elif self.white_school == SCHOOL2:
+            self.black_player = val
+
     @property
     def team2_player(self):
         if self.white_school == SCHOOL2:
             return self.white_player
         elif self.white_school == SCHOOL1:
             return self.black_player
+
+    @team2_player.setter
+    def team2_player(self, val):
+        if self.white_school == SCHOOL2:
+            self.white_player = val
+        elif self.white_school == SCHOOL1:
+            self.black_player = val
 
     @property
     def first_display_player(self):
@@ -438,6 +453,10 @@ class CommentBase(models.Model):
 
     def __unicode__(self):
         return u'{}: {}'.format(self.user.username, self.comment[:100])
+
+class GameComment(CommentBase):
+    game = models.ForeignKey(Game)
+
 class SchoolAuth(models.Model):
     school = models.ForeignKey(School)
     secret_key = models.CharField(max_length=16, null=False)
@@ -447,6 +466,5 @@ class SchoolAuth(models.Model):
             self.secret_key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
             super(SchoolAuth, self).save(*args, **kwargs)
 
-class GameComment(CommentBase):
-    game = models.ForeignKey(Game)
-
+    def __unicode__(self):
+        return u'{}: captain_school_auth={}'.format(self.school, self.secret_key)

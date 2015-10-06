@@ -5,8 +5,6 @@ from django.core import management
 from django.contrib.auth.models import User
 import settings
 from CGL.models import *
-from accounts.models import *
-from ACGA.models import *
 from CGL.settings import current_seasons
 
 def randomstr():
@@ -22,7 +20,7 @@ class Command(BaseCommand):
         # you'll have to manually add your socket.gethostname() entry to this line to successfully nuke and run this command.
         if (settings.DATABASES['default']['ENGINE'] == 'django.db.backends.sqlite3'
             and settings.DEBUG == True
-            and settings.WEB_URL == '127.0.0.1:8000/'
+            and settings.WEB_URL == '127.0.0.1:8000'
             and socket.gethostname() == 'Brians-MacBook-Air.local'):
 
             self.stdout.write('deleting existing database\n')
@@ -38,8 +36,6 @@ class Command(BaseCommand):
         # setup the basic empty tables
         management.call_command('syncdb', interactive=False)
         management.call_command('migrate', 'CGL', interactive=False)
-        management.call_command('migrate', 'ACGA', interactive=False)
-        management.call_command('migrate', 'accounts', interactive=False)
         self.stdout.write('database tables recreated\n')
 
         u = User(username='admin')
@@ -53,7 +49,6 @@ class Command(BaseCommand):
         brilee.set_password('password')
         brilee.save()
         self.stdout.write('basic user created with username/password : brilee/password\n')
-        self.stdout.write('this account also gets edit permissions for all schools\n')
 
         schoolnames = ('Testing University',
                        'Testing College',
@@ -69,19 +64,14 @@ class Command(BaseCommand):
                 p.save()
 
         # This is so that context processors load correctly.
-        real_seasons = [Season(name=s) for s in current_seasons]
-        for s in real_seasons:
+        seasons = [Season(name=s) for s in current_seasons]
+        for s in seasons:
             s.save()
 
-        fake_seasons = [Season(name='test ' + s) for s in current_seasons]
-
-        for s in fake_seasons:
-            s.save()
-
-        for s in fake_seasons:
-            for school in schools:
-                Team = Team(school=school, season=s)
-                Team.save()
+        for s in seasons:
+            teams = [Team(school=school, season=s) for school in schools]
+            for team in teams:
+                team.save()
             for datedelta in (datetime.timedelta(days=-30),
                               datetime.timedelta(days=-7),
                               datetime.timedelta(days=1),
@@ -91,23 +81,22 @@ class Command(BaseCommand):
                 r = Round(season=s, date=datetime.datetime.today()-datedelta)
                 r.save()
                 for i in range(2):
-                    m = Match(school1=random.choice(schools), school2=random.choice(schools), round=r)
+                    m = Match(team1=random.choice(teams), team2=random.choice(teams), round=r)
                     m.save()
                     if m.round.date < datetime.datetime.today():
                         for i in range(3):
                             g = Game(
-                                white_player=random.choice(m.school1.player_set.all()),
-                                black_player=random.choice(m.school2.player_set.all()),
+                                white_player=random.choice(m.team1.school.player_set.all()),
+                                black_player=random.choice(m.team2.school.player_set.all()),
                                 match=m,
                                 board=i+1,
                                 white_school='School1',
-                                winning_school='School2',
-                                gamefile=File(open('site_media/test_file'))
+                                gamefile=File(open('CGL/test_files/testfile.sgf'))
                                 )
                             g.save()
 
         self.stdout.write('Updating school rankings and records\n')
-        for s in fake_seasons:
+        for s in seasons:
             management.call_command('update_scores', s.name, interactive=False)
 
         self.stdout.write('Test database entries created\n')
