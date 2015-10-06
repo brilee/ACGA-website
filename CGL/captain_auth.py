@@ -18,7 +18,7 @@ def get_secret_key(request):
     return secret_key
 
 def set_secret_key(response, secret_key):
-    response.set_cookie(AUTH_KEY_COOKIE_NAME, secret_key, max_age=14*24*60*60)
+    response.set_cookie(AUTH_KEY_COOKIE_NAME, secret_key, max_age=52*7*24*60*60)
 
 def get_school(request):
     secret_key = get_secret_key(request)
