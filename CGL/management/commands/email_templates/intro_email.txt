@@ -8,7 +8,7 @@ We’re very excited to have you join the CGL and compete against other schools.
 CGL rounds occur every two weeks on Saturday, from 1-2:30 PM EST in the KGS room "Collegiate Go League". About a week beforehand, we'll send out an email detailing the matchups for that round. Three players from each school will compete against three from another school, matched from strongest to weakest. Your players should log onto the CGL team accounts we have provided you (NOT their personal KGS accounts), in order of their strength, so that board 1 is your strongest player, and board 3 is your weakest player.
 
 Your KGS account details are as follows:
-{{school.KGS_name}}# / password#
+{{school.KGS_name}}# / {{school.KGS_password}}#
 for # = 1 through 3
 
 Feel free to change the passwords if you wish (but leave the email address as cgl.tournament.director@gmail.com). As the team captain, it will be your responsibility to assign three players on your roster to these three accounts, in order of strength. 
