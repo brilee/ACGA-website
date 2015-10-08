@@ -5,6 +5,7 @@
 
 <p> Here are all of your matches from this season. Please go through these matches and record the names of the players who played in each match.</p>
 
+{% if relevant_matches %}
 {% for match in relevant_matches %}
 <h4>{{match.round.date}} {{match.display_match}}</h4>
 <ul class="disc">
@@ -14,4 +15,6 @@
 </ul>
 <p><strong><a href="/CGL/matches/{{match.id}}/edit/">Record your players</a></strong></p>
 {% endfor %}
+{% else %}
+<p> No matches played yet. Check back after your first match!</p>
 {% endblock %}
