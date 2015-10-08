@@ -1,0 +1,27 @@
+To: {{school.contact_email}}
+Subject:[CGL] Welcome to the CGL
+
+Welcome to the Collegiate Go League!
+
+We’re very excited to have you join the CGL and compete against other schools. Below is everything you need to know about the CGL. Please read it so that you will be familiar with the format and so that we can minimize delays on game day.
+
+CGL rounds occur every two weeks on Saturday, from 1-2:30 PM EST in the KGS room "Collegiate Go League". About a week beforehand, we'll send out an email detailing the matchups for that round. Three players from each school will compete against three from another school, matched from strongest to weakest. Your players should log onto the CGL team accounts we have provided you (NOT their personal KGS accounts), in order of their strength, so that board 1 is your strongest player, and board 3 is your weakest player.
+
+Your KGS account details are as follows:
+{{school.KGS_name}}# / password#
+for # = 1 through 3
+
+Feel free to change the passwords if you wish (but leave the email address as cgl.tournament.director@gmail.com). As the team captain, it will be your responsibility to assign three players on your roster to these three accounts, in order of strength. 
+
+On the day of the match, once everyone has arrived in the Collegiate Go Room and it’s time to start, find your opponent and open a chat with them. This is how you will establish your rank difference so you can set the appropriate handicap. Currently, our handicaps are "normal handicap, minus one stone, up to a limit of five stones." Please make sure that all of your team members know how to use the KGS software, how to set up games and change the handicaps, etc.
+
+The full rules and game settings can be found at https://college-go.org/CGL/rules
+
+Please share this tournament information with your teammates, and respond to this email as soon as possible to indicate your team's readiness to compete in the next round. We want to make sure every player has a good game and a chance to meet a player from another school, so we urge you to individually verify each player's availability for Saturday from 12:45 PM EST to 3:00 PM EST. We encourage maintaining a roster of more than three people, so if someone has a conflict another can step in. We also recommend that you meet physically with your team for each match so that you can help each other with any problems logging on / setting up their games (it’s more fun this way too). 
+
+Afterwards, the games will be automatically uploaded to our servers, where they will be marked as "Unknown Player". You should then go to this URL to find those matches and update the player names as appropriate. 
+
+https://college-go.org/CGL/matches/?{{AUTH_KEY_COOKIE_NAME}}={{school_auth.secret_key}}
+
+
+Good luck in the CGL!
