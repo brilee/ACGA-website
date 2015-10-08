@@ -8,8 +8,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
 
-from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, Bye, GameComment, a_tag
+from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, Bye, GameComment, a_tag, SchoolAuth
 from CGL.settings import current_seasons
+from CGL.captain_auth import AUTH_KEY_COOKIE_NAME
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 
 from sgf import MySGFGame
@@ -82,6 +83,15 @@ class IntegrationTest(TestWithCGLSetup):
             except:
                 import traceback
                 traceback.print_exc()
+
+    def test_captain_edit_views(self):
+        school = School.objects.create(name="blah school")
+        auth = SchoolAuth.objects.create(school=school)
+        response = self.client.get("/CGL/matches/")
+        assert 300 <= response.status_code < 400
+        response = self.client.get("/CGL/matches/?" + AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key)
+        assert response.status_code == 200
+
 
 #    def test_captain_edit_views(self):
 
