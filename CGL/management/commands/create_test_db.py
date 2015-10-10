@@ -81,9 +81,9 @@ class Command(BaseCommand):
                 r = Round(season=s, date=datetime.datetime.today()-datedelta)
                 r.save()
                 for i in range(2):
-                    m = Match(team1=random.choice(teams), team2=random.choice(teams), round=r)
-                    m.save()
-                    if m.round.date < datetime.datetime.today():
+                    if r.date < datetime.datetime.today():
+                        m = Match(team1=random.choice(teams), team2=random.choice(teams), round=r)
+                        m.save()
                         for i in range(3):
                             g = Game(
                                 white_player=random.choice(m.team1.school.player_set.all()),
