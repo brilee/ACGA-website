@@ -13,6 +13,7 @@ from CGL.settings import current_seasons
 from CGL.captain_auth import AUTH_KEY_COOKIE_NAME
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 
+import ogs
 from sgf import MySGFGame
 
 CURR_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -41,6 +42,8 @@ class TestWithCGLSetup(TestCase):
             sgf_contents = f.read()
 
         self.test_game = Game.objects.create(match=self.test_match, white_player=self.test_player, black_player=self.test_player, board=1, white_school='School1', gamefile=SimpleUploadedFile('testfile', sgf_contents))
+
+        ogs.get_ladder_top_players = lambda x: ogs.OgsPlayer({"id":1, "username": "blah", "icon": "blah", "ranking": "blah"})
 
     def tearDown(self):
         self.test_game.delete()
@@ -90,6 +93,9 @@ class IntegrationTest(TestWithCGLSetup):
         response = self.client.get("/CGL/matches/")
         assert 300 <= response.status_code < 400
         response = self.client.get("/CGL/matches/?" + AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key)
+        assert response.status_code == 200
+        # should have set a cookie
+        response = self.client.get("/CGL/matches/")
         assert response.status_code == 200
 
 
