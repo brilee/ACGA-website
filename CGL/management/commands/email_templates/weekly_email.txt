@@ -3,7 +3,7 @@ Subject:[CGL] Results and next week matches
 
 Hi everyone,
 
-Games have been uploaded for the most recent round ({{previous_round_date}}). (If you rescheduled your match, send us an email after those games have been played so that we can upload them.)
+Games have been uploaded for the most recent round ({{previous_round_date}}). You should have received a link to your match editing page, where you can fill in the player names from last week's games. If you haven't done this, please do so.
 
 {% for season in current_seasons %}
 {{season.name}}
