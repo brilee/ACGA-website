@@ -48,14 +48,7 @@ class Command(BaseCommand):
         current_seasons = [Season.objects.get(name=s) for s in current_season_names]
         participating_schools = get_actively_participating_schools(current_season_names)
 
-        recipients = (
-            [school.contact_email for school in participating_schools] +
-            [player.user.email 
-                for school in participating_schools
-                for player in school.player_set.all()
-                if (player.user and player.receiveSpam)]
-        )
-
+        recipients = [school.contact_email for school in participating_schools]
 
         c = Context(locals())
         self.stdout.write(t.render(c))
