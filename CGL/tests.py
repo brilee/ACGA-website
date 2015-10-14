@@ -250,16 +250,17 @@ class MatchmakingTest(TestCase):
 
 class ScoreUpdaterTest(TestCase):
     def setUp(self):
+        self.num_schools = 3
         auth_models.User.objects.create(username=u'brilee')
 
         self.test_season = Season.objects.create(name=current_seasons[0])
-        self.schools = [School.objects.create(id=i, name=str(i)) for i in range(4)]
-        self.inactive_school = School.objects.create(id=4, name='4')
+        self.schools = [School.objects.create(id=i, name=str(i)) for i in range(self.num_schools)]
+        self.inactive_school = School.objects.create(id=self.num_schools, name='3')
         self.teams = [Team.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]
 
         self.players = [
             [Player.objects.create(name=u'school%splayer%s' % (j, i), school=self.schools[j]) for i in range(3)] 
-            for j in range(4)
+            for j in range(self.num_schools)
         ]
 
         self.rounds = [
@@ -267,16 +268,9 @@ class ScoreUpdaterTest(TestCase):
             Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1),
         ]
 
-        round_pairings = (
-            ((0, 1), (2, 3)),
-            ((0, 2), (1, 3)),
-        )
-
         self.matches = [
-            [
-                Match.objects.create(round=self.rounds[round_no], team1=self.teams[pairing[0]], team2=self.teams[pairing[1]])
-                for pairing in round
-            ] for round_no, round in enumerate(round_pairings)
+            Match.objects.create(round=self.rounds[0], team1=self.teams[0], team2=self.teams[1]),
+            Match.objects.create(round=self.rounds[1], team1=self.teams[0], team2=self.teams[2]),
         ]
 
         with open(TEST_SGF) as f:
@@ -303,11 +297,6 @@ class ScoreUpdaterTest(TestCase):
                 )
                 Forfeit.objects.create(match=match, board=3, team1_noshow=True)
 
-        Bye.objects.create(
-            team=self.teams[0],
-            round=self.rounds[0],
-        )
-
     def tearDown(self):
         for g in Game.objects.all():
             g.delete()
@@ -321,45 +310,39 @@ class ScoreUpdaterTest(TestCase):
             (0, 2),
             (2, 0),
             (0, 0),
-            (1, 1),
-            (1, 1),
+            (1, 0),
+            (0, 1),
             (0, 0),
-            (1, 1),
-            (1, 1),
-            (0, 0),
-            (2, 0),
+            (1, 0),
         ]
 
         expected_match_results = [
             (1, 2),
             (1, 2),
-            (1, 2),
-            (1, 2),            
         ]
 
         expected_team_results = [
-            (0, 2, 2),
-            (1, 1, 1),
-            (1, 1, 1),
-            (2, 0, 0),
+            (0, 2, 2, 0),
+            (1, 0, 0, 1),
+            (1, 0, 0, 1),
         ]
 
-        for p_id, (wins, losses) in zip(range(1, 13), expected_player_results):
+        for p_id, (wins, losses) in zip(range(1, 3*self.num_schools+1), expected_player_results):
             player = Player.objects.get(id=p_id)
             self.assertEquals(wins, player.num_wins)
             self.assertEquals(losses, player.num_losses)
-        for m_id, (team1score, team2score) in zip(range(1, 5), expected_match_results):
+        for m_id, (team1score, team2score) in zip(range(1, 3), expected_match_results):
             match = Match.objects.get(id=m_id)
             self.assertEquals(team1score, match.score1)
             self.assertEquals(team2score, match.score2)
-        for t_id, (wins, losses, forfeits) in enumerate(expected_team_results):
+        for t_id, (wins, losses, forfeits, byes) in enumerate(expected_team_results):
             team = Team.objects.get(id=t_id)
             self.assertEquals(wins, team.num_wins)
             self.assertEquals(losses, team.num_losses)
             self.assertEquals(forfeits, team.num_forfeits)
+            self.assertEquals(byes, team.num_byes)
 
-        self.assertEquals(Team.objects.get(id=0).num_byes, 1)
-        for school in School.objects.filter(id__in=range(4)):
+        for school in School.objects.filter(id__in=range(self.num_schools)):
             self.assertEquals(school.inCGL, True)
         inactive_school = School.objects.get(id=self.inactive_school.id)
         self.assertEquals(inactive_school.inCGL, False)

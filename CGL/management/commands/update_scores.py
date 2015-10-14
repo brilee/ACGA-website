@@ -21,11 +21,8 @@ class Command(BaseCommand):
             
         # compute the result of each match, based on games and forfeits
         # at the same time, tally up each school's wins/losses
-        for round in season.round_set.filter(date__lte=date.today()):
-            for b in round.bye_set.all():
-                b.team.num_byes += 1
-                b.team.save()
-
+        all_rounds = season.round_set.filter(date__lte=date.today())
+        for round in all_rounds:
             for match in round.match_set.all():
                 m = match
                 
@@ -69,6 +66,15 @@ class Command(BaseCommand):
                     m.team2.num_ties += 1
                 m.team1.save()
                 m.team2.save()
+        # Every team gets a bye for not having played in a round
+        # even if they joined the CGL late; this way we can bias
+        # newcomers to always getting paired up. By recalculating
+        # this value, it's one less source of non-idempotency when
+        # creating matchups + byes each round.
+        num_rounds = len(all_rounds)
+        for team in Team.objects.filter(season=season):
+            team.num_byes = num_rounds - team.num_wins - team.num_losses - team.num_ties
+            team.save()
                 
     def update_player_record(self, player):  
         player.num_wins = 0
@@ -88,6 +94,7 @@ class Command(BaseCommand):
         player.save()
 
     def update_school_activeness(self):
+        School.objects.all().update(inCGL=False)
         seasons = Season.objects.filter(name__in=current_seasons)
         current_schools = set([school for season in seasons for school in season.schools.all()])
         all_schools = School.objects.all()
