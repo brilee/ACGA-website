@@ -42,6 +42,7 @@ class School(models.Model):
     club_president = models.CharField(max_length=50, blank=True)
     captain = models.CharField(blank=True, max_length=50)
     contact_email = models.EmailField()
+    secondary_contacts = models.CharField(blank=True, max_length=100, help_text="Comma separated list of alternate emails to be cc'd on communications")
     website = models.URLField(blank=True)
     meeting_info = models.TextField(blank=True)
     active = models.BooleanField(default=True, help_text="Uncheck if school club appears to have died")
@@ -68,6 +69,13 @@ class School(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def all_contact_emails(self):
+        if self.secondary_contacts:
+            return self.contact_email + ', ' + self.secondary_contacts
+        else:
+            return self.contact_email
+
 
 class Player(models.Model):
     RANK_CHOICES = ([(-10 * i, '%ip' % i) for i in range(9, 0, -1)] +

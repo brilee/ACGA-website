@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import datetime
+import sys
 
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.management import call_command
@@ -31,7 +32,13 @@ class TestWithCGLSetup(TestCase):
         for season in current_seasons:
             self.test_seasons.append(Season.objects.create(name=season))
         self.test_school = School.objects.create(name=u'Test School')
-        self.test_school2 = School.objects.create(name=u'Test School 2')
+        self.test_school2 = School.objects.create(
+            name=u'Test School 2',
+            contact_email="blah@blah.com",
+            secondary_contacts="blah2@blah.com,blah3@blah.com",
+            KGS_name="Blahh",
+            KGS_password="blabbers",
+        )
         self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
         self.test_team = Team.objects.create(school=self.test_school, season=self.test_seasons[0])
         self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
@@ -347,4 +354,17 @@ class ScoreUpdaterTest(TestCase):
         inactive_school = School.objects.get(id=self.inactive_school.id)
         self.assertEquals(inactive_school.inCGL, False)
 
+class EmailRenderingTest(TestWithCGLSetup):
+    def testIntroEmail(self):
+        from CGL.management.commands.render_email import Command
+        c = Command()
+        c.stdout = sys.stdout
+        c.stderr = sys.stderr
+        c.render_introductory_email(self.test_school2.name)
 
+    def testWeeklyEmail(self):
+        from CGL.management.commands.render_email import Command
+        c = Command()
+        c.stdout = sys.stdout
+        c.stderr = sys.stderr
+        c.render_weekly_email()

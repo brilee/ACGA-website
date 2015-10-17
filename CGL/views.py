@@ -28,7 +28,7 @@ def display_seasons(request, season_name):
     elif hasattr(season_name, '__iter__'):
         requested_seasons = [get_object_or_404(Season, name=s) for s in season_name]
 
-    all_seasons = Season.objects.all() 
+    all_seasons = Season.objects.all()
 
     return render(request, 'results.html', locals())
 

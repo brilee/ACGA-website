@@ -1,4 +1,4 @@
-To: {{school.contact_email}}
+To: {{school.all_contact_emails}}
 Subject:[CGL] Welcome to the CGL
 
 Welcome to the Collegiate Go League!
