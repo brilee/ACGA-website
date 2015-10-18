@@ -63,8 +63,11 @@ def process_KGS_game_row(row):
 
 def process_KGS_page(rawtext):
     soup = BeautifulSoup(rawtext)
-    rows = soup.find_all("table")[0].find_all("tr")[1:]
-    return map(process_KGS_game_row, rows)
+    try:
+        rows = soup.find_all("table")[0].find_all("tr")[1:]
+        return map(process_KGS_game_row, rows)
+    except IndexError:
+        return []
 
 def get_KGS_games(username, year, month):
     return process_KGS_page(get_raw_KGS_data(username, year, month))
