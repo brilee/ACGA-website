@@ -12,8 +12,6 @@ class Command(BaseCommand):
         season = Season.objects.get(name=current_seasons[0])
         round = season.round_set.get_previous_round()
 
-        year = round.date.year
-        month = round.date.month
         for match in round.match_set.all():
             school1 = match.team1.school
             school2 = match.team2.school
@@ -25,18 +23,12 @@ class Command(BaseCommand):
                 if existing_game:
                     self.stderr.write("Board %s already exists\n" % i)
                     continue
-                self.stderr.write("Fetching game info from KGS\n")
-                school1_username = (school1.KGS_name + i).lower()
-                school2_username = (school2.KGS_name + i).lower()
-                all_games = get_KGS_games(school1_username, year, month)
-                likely_games = filter(
-                    filter_likely_games(
-                        school1_username, school2_username, date=round.date),
-                    all_games
-                )
+
+                likely_games = self.fetch_likely_games(school1, school2, match, i)
+
                 if likely_games:
                     kgs_game = likely_games[0]
-                    if kgs_game.white == school1_username:
+                    if kgs_game.white.lower().beginswith(school1.KGS_name.lower()):
                         white_school = SCHOOL1
                         white_player = team1_player
                         black_player = team2_player
@@ -57,4 +49,31 @@ class Command(BaseCommand):
                     g.save()
                 else:
                     self.stderr.write("Couldn't find game for %s vs %s board %s\n" % (school1.name, school2.name, i))
+
+    def fetch_likely_games(self, school1, school2, match, board):
+        self.stderr.write("Fetching game info from KGS\n")
+        year = match.round.date.year
+        month = match.round.date.month
+
+        board_with_B_team_offset = str(int(board) + 3)
+
+        usernames_to_try = [
+            (school1.KGS_name + board).lower(),
+            (school2.KGS_name + board).lower(),
+            (school1.KGS_name + board_with_B_team_offset).lower(),
+            (school2.KGS_name + board_with_B_team_offset).lower(),
+        ]
+        likely_games = []
+        for username in usernames_to_try:
+            self.stderr.write("Trying username %s" % username)
+            all_games = get_KGS_games(username, year, month)
+            likely_games = filter(
+                filter_likely_games(
+                    school1.KGS_name, school2.KGS_name, date=round.date),
+                all_games
+            )
+            if likely_games:
+                break
+
+        return likely_games
 

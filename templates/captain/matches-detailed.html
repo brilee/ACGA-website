@@ -28,6 +28,8 @@
     <div class="three columns"><input for="{{game.board}}" type="submit" value="Update board" /><label id="error{{game.board}}"></label></div>
     <input id="game_id{{game.board}}" type="hidden" value="{{game.id}}">
 </div>
+{% empty %}
+<p>No games entered yet</p>
 {% endfor %}
 </form>
 
