@@ -69,7 +69,7 @@ class Command(BaseCommand):
             all_games = get_KGS_games(username, year, month)
             likely_games = filter(
                 filter_likely_games(
-                    school1.KGS_name, school2.KGS_name, date=round.date),
+                    school1.KGS_name, school2.KGS_name, date=match.round.date),
                 all_games
             )
             if likely_games:
