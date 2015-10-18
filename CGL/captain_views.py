@@ -1,15 +1,16 @@
 import json
 
 from django.views.decorators.http import require_http_methods
-from django.http import HttpResponse, HttpResponseBadRequest
+from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.shortcuts import render, get_object_or_404
 
-from CGL.models import Season, Match, Game, Player
+from CGL.models import Season, Match, Game, Player, School
 from CGL.settings import current_seasons
-from CGL.captain_auth import school_auth_required, get_school
+from CGL.captain_auth import school_auth_required, get_school, check_auth
+from CGL.forms import EditSchoolForm, EditPlayerForm
 
 @school_auth_required
-def display_all_matches(request):
+def edit_all_matches(request):
     school = get_school(request)
 
     season_matches = Match.objects.none()
@@ -23,20 +24,50 @@ def display_all_matches(request):
     return render(request, 'matches.html', locals())
 
 @school_auth_required
-def display_match(request, match_id):
+def edit_match(request, match_id):
     school = get_school(request)
     all_players = Player.objects.filter(school=school)
     match = get_object_or_404(Match, id=match_id)
     school_is_team1 = match.team1.school == school
     return render(request, 'matches-detailed.html', locals())
+
+@school_auth_required
+def edit_school(request, school_slug):
+    school_authed = get_school(request)
+    school = get_object_or_404(School, slug_name=school_slug)
+    if not check_auth(school_authed, school):
+        return HttpResponseForbidden()
+
+    if request.method == 'POST':
+        form = EditSchoolForm(request.POST, instance=school)
+        if form.is_valid():
+            form.save()
+    else:
+        form = EditSchoolForm(instance=school)
+    return render(request, 'edit_school.html', locals())
+
+@school_auth_required
+def edit_player(request, player_id):
+    school = get_school(request)
+    player = get_object_or_404(Player, id=player_id)
+    if not check_auth(school, player):
+        return HttpResponseForbidden()
+
+    if request.method == 'POST':
+        form = EditPlayerForm(request.POST, instance=player)
+        if form.is_valid():
+            form.save()
+    else:
+        form = EditPlayerForm(instance=player)
+    return render(request, 'edit_player.html', locals())
     
 @require_http_methods(["PUT"])
 @school_auth_required
 def update_players(request, game_id):
     school = get_school(request)
     game = get_object_or_404(Game, id=game_id)
-    if not (game.match.team1.school == school or game.match.team2.school == school):
-        return HttpResponseBadRequest("Don't have auth for that school")
+    if not check_auth(school, game):
+        return HttpResponseForbidden()
     submitted_data = json.loads(request.body)
     if submitted_data.get("is_new_player"):
         player = Player.objects.get_or_create(school=school, name=submitted_data['player_name'])[0]

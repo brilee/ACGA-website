@@ -98,15 +98,13 @@ class IntegrationTest(TestWithCGLSetup):
         school = School.objects.create(name="blah school")
         auth = SchoolAuth.objects.create(school=school)
         response = self.client.get("/CGL/matches/")
-        assert 300 <= response.status_code < 400
+        # not authed yet.
+        assert response.status_code == 403
         response = self.client.get("/CGL/matches/?" + AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key)
         assert response.status_code == 200
         # should have set a cookie
         response = self.client.get("/CGL/matches/")
         assert response.status_code == 200
-
-
-#    def test_captain_edit_views(self):
 
 
 class ModelTests(TestWithCGLSetup):

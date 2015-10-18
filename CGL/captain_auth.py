@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
-
-from CGL.models import SchoolAuth
+from django.http import HttpResponseForbidden
+from CGL.models import SchoolAuth, Player, School, Match, Forfeit, Game
 
 AUTH_KEY_COOKIE_NAME = "captain_school_auth"
 
@@ -29,9 +29,23 @@ def school_auth_required(view):
     def wrapped(request, *args, **kwargs):
         secret_key = get_secret_key(request)
         if secret_key is None:
-            return redirect("/CGL/results/")
+            return HttpResponseForbidden()
 
         response = view(request, *args, **kwargs)
         set_secret_key(response, secret_key)
         return response
     return wrapped
+
+def check_auth(school, obj):
+    if type(obj) == Player:
+        return obj.school == school
+    elif type(obj) == School:
+        return obj == school
+    elif type(obj) == Match:
+        return obj.team1.school == school or obj.team2.school == school
+    elif type(obj) == Game:
+        return obj.match.team1.school == school or obj.match.team2.school == school
+    elif type(obj) == Forfeit:
+        return obj.match.team1.school == school or obj.match.team2.school == school
+    else:
+        return False

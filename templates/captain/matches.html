@@ -13,9 +13,11 @@
 	<li>{{game.result_html|safe}}</li>
     {% endfor %}
 </ul>
-<p><strong><a href="{% url display_match match.id %}">Record your players</a></strong></p>
+<p><strong><a href="{% url edit_match match.id %}">Record your players</a></strong></p>
 {% endfor %}
 {% else %}
 <p> No matches played yet. Check back after your first match!</p>
 {% endif %}
+<hr />
+<h4><a href="{% url edit_school school.slug_name %}">Edit your school info / roster </a></h4>
 {% endblock %}
