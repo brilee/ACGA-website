@@ -28,7 +28,7 @@ class Command(BaseCommand):
 
                 if likely_games:
                     kgs_game = likely_games[0]
-                    if kgs_game.white.lower().beginswith(school1.KGS_name.lower()):
+                    if kgs_game.white.lower().startswith(school1.KGS_name.lower()):
                         white_school = SCHOOL1
                         white_player = team1_player
                         black_player = team2_player
