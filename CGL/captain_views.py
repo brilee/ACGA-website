@@ -1,9 +1,12 @@
+import json
+
+from django.views.decorators.http import require_http_methods
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, get_object_or_404
 
-from CGL.models import Match, Season, Player
+from CGL.models import Season, Match, Game, Player
 from CGL.settings import current_seasons
 from CGL.captain_auth import school_auth_required, get_school
-from CGL.forms import SubmitRosterInformationForm
 
 @school_auth_required
 def display_all_matches(request):
@@ -17,38 +20,37 @@ def display_all_matches(request):
             if m.round.in_past()
             and (m.team1.school == school
                  or m.team2.school == school)]
-    return render(request, 'edit-matches.html', locals())
+    return render(request, 'matches.html', locals())
 
 @school_auth_required
 def display_match(request, match_id):
     school = get_school(request)
     all_players = Player.objects.filter(school=school)
     match = get_object_or_404(Match, id=match_id)
-    games = match.game_set.all().order_by("board")
-    player_attr = "team1_player" if match.team1.school == school else "team2_player"
-    if request.method == 'POST':
-        # Got information; handle it
-        form = SubmitRosterInformationForm(request.POST)
-        if form.is_valid():
-            for i in "123":
-                player_name = form.cleaned_data['player_name'+i]
-                player_is_new = form.cleaned_data['player_is_new'+i]
-                if player_is_new:
-                    player = Player.objects.get_or_create(school=school, name=player_name)[0]
-                else:
-                    player = Player.objects.get(school=school, name=player_name)
-                game = match.game_set.get(board=i)
-                setattr(game, player_attr, player)
-                game.save()
-    else:
-        # Hitting page for first time; prepopulate fields
-        players = [getattr(game, player_attr) for game in games]
-        form = SubmitRosterInformationForm(initial=dict(
-            player_name1=players[0].name,
-            player_name2=players[1].name,
-            player_name3=players[2].name,
-            school_name=school.name
-        ))
-
-    return render(request, 'edit-matches-detailed.html', locals())
+    school_is_team1 = match.team1.school == school
+    return render(request, 'matches-detailed.html', locals())
     
+@require_http_methods(["PUT"])
+@school_auth_required
+def update_players(request, game_id):
+    school = get_school(request)
+    game = get_object_or_404(Game, id=game_id)
+    if not (game.match.team1.school == school or game.match.team2.school == school):
+        return HttpResponseBadRequest("Don't have auth for that school")
+    submitted_data = json.loads(request.body)
+    if submitted_data.get("is_new_player"):
+        player = Player.objects.get_or_create(school=school, name=submitted_data['player_name'])[0]
+    else:
+        try:
+            player = Player.objects.get(name=submitted_data['player_name'], school=school)
+        except Player.DoesNotExist:
+            return HttpResponseBadRequest('Couldn\'t find player')
+
+    if game.match.team1.school == school:
+        game.team1_player = player
+    else:
+        game.team2_player = player
+
+    game.save()
+
+    return HttpResponse("success")

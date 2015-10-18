@@ -13,7 +13,7 @@
 	<li>{{game.result_html|safe}}</li>
     {% endfor %}
 </ul>
-<p><strong><a href="/CGL/matches/{{match.id}}/edit/">Record your players</a></strong></p>
+<p><strong><a href="{% url display_match match.id %}">Record your players</a></strong></p>
 {% endfor %}
 {% else %}
 <p> No matches played yet. Check back after your first match!</p>

@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
-from CGL.captain_views import display_all_matches, display_match
+from CGL.captain_views import display_all_matches, display_match, update_players
 
 urlpatterns = patterns('CGL.views',
     (r'^$', TemplateView.as_view(template_name='CGL.html')),
@@ -18,5 +18,6 @@ urlpatterns = patterns('CGL.views',
 
 urlpatterns += patterns("",
     url(r'^matches/$', display_all_matches, name="display_all_matches"),
-    url(r'^matches/([0-9]{1,4})/edit/$', display_match, name="edit_match"),
+    url(r'^matches/([0-9]{1,4})/$', display_match, name="display_match"),
+    url(r'^games/([0-9]{1,4})/update_players/$', update_players, name="update_players")
 )

@@ -412,8 +412,10 @@ def delete_Game(sender, instance, **kwargs):
         subfolder, filename = os.path.split(instance.gamefile.name)
         instance.gamefile.delete(save=False)
         full_folder_path = os.path.join(settings.MEDIA_ROOT, subfolder)
-        if not os.listdir(full_folder_path):
-            shutil.rmtree(full_folder_path)
+        try:
+            if not os.listdir(full_folder_path):
+                shutil.rmtree(full_folder_path)
+        except: pass
 
 class Forfeit(models.Model):
     BOARD_CHOICES = (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'))

@@ -1,0 +1,73 @@
+{% extends 'base_CGL.html' %}
+
+{% block maintext %}
+<h3>{{match}}</h3>
+
+<ul>
+{% for game in match.game_set.all %}
+    <li>Board {{game.board}} - {{game.full_description_html|safe}}</li>
+{% endfor %}
+{% for forfeit in match.forfeit_set.all %}
+    <li>{{forfeit.display_result|safe}}</li>
+{% endfor %}
+</ul>
+
+<h4>Your current roster</h4>
+<ul>
+{% for player in all_players %}
+    <li>{{player.name}} ({{player.get_rank_display}})</li>
+{% endfor %}
+</ul>
+
+<form id="match_edit_form" action="." method="post">
+{% csrf_token %}
+{% for game in match.game_set.all %}
+<div class="row">
+    <div class="six columns"><label>Board {{game.board}}</label><input id="player_name{{game.board}}" type="text" value="{% if school_is_team1 %}{{game.team1_player.name}}{% else %}{{game.team2_player.name}}{% endif %}" maxlength="100"></div>
+    <div class="three columns"><label>New player?</label><input id="is_new_player{{game.board}}" type="checkbox"></div>
+    <div class="three columns"><input for="{{game.board}}" type="submit" value="Update board" /><label id="error{{game.board}}"></label></div>
+    <input id="game_id{{game.board}}" type="hidden" value="{{game.id}}">
+</div>
+{% endfor %}
+</form>
+
+{% endblock %}
+
+{% block javascript_footer %}
+<script type="text/javascript">
+var csrf_token = $("input[name=csrfmiddlewaretoken]").val();
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+    }
+});
+
+$(document).ready(function() {
+    $("#match_edit_form").submit(function() { return false; })
+
+    $("input[type=submit]").click(function(event) {
+        var board_id = $(this).attr("for");
+        var game_id = $("input#game_id"+board_id).val();
+        var player_name = $("input#player_name"+board_id).val();
+        var is_new_player = $("input#is_new_player"+board_id).is(":checked");
+
+        var data = {
+            "player_name": player_name,
+            "is_new_player": is_new_player
+        };
+
+        $.ajax({
+            url: "/CGL/games/"+game_id+"/update_players/",
+            type: "PUT",
+            data: JSON.stringify(data),
+            success: function(response) {
+                $("label#error"+board_id).text("Updated!");
+            },
+            error: function(response) {
+                $("label#error"+board_id).text(response['responseText']);
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
