@@ -65,7 +65,7 @@ class Command(BaseCommand):
         ]
         likely_games = []
         for username in usernames_to_try:
-            self.stderr.write("Trying username %s" % username)
+            self.stderr.write("Trying username %s\n" % username)
             all_games = get_KGS_games(username, year, month)
             likely_games = filter(
                 filter_likely_games(

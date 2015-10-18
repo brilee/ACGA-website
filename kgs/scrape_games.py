@@ -81,6 +81,8 @@ def download_gamefile(url):
     return ContentFile(response.content, name=get_filename(url))
 
 def filter_likely_games(KGS_name1, KGS_name2, date=None):
+    KGS_name1 = KGS_name1.lower()
+    KGS_name2 = KGS_name2.lower()
     def filterer(kgs_game):
         if kgs_game.type == "Review" or kgs_game.result == "Unfinished":
             return False
