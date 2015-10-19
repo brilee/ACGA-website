@@ -1,5 +1,4 @@
-from django.shortcuts import redirect
-from django.http import HttpResponseForbidden
+from django.core.exceptions import PermissionDenied
 from CGL.models import SchoolAuth, Player, School, Match, Forfeit, Game
 
 AUTH_KEY_COOKIE_NAME = "captain_school_auth"
@@ -29,7 +28,7 @@ def school_auth_required(view):
     def wrapped(request, *args, **kwargs):
         secret_key = get_secret_key(request)
         if secret_key is None:
-            return HttpResponseForbidden()
+            raise PermissionDenied
 
         response = view(request, *args, **kwargs)
         set_secret_key(response, secret_key)

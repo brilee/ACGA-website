@@ -1,7 +1,8 @@
 import json
 
 from django.views.decorators.http import require_http_methods
-from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseBadRequest
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404
 
 from CGL.models import Season, Match, Game, Player, School
@@ -36,7 +37,7 @@ def edit_school(request, school_slug):
     school_authed = get_school(request)
     school = get_object_or_404(School, slug_name=school_slug)
     if not check_auth(school_authed, school):
-        return HttpResponseForbidden()
+        raise PermissionDenied
 
     if request.method == 'POST':
         form = EditSchoolForm(request.POST, instance=school)
@@ -51,7 +52,7 @@ def edit_player(request, player_id):
     school = get_school(request)
     player = get_object_or_404(Player, id=player_id)
     if not check_auth(school, player):
-        return HttpResponseForbidden()
+        raise PermissionDenied
 
     if request.method == 'POST':
         form = EditPlayerForm(request.POST, instance=player)
@@ -67,7 +68,7 @@ def update_players(request, game_id):
     school = get_school(request)
     game = get_object_or_404(Game, id=game_id)
     if not check_auth(school, game):
-        return HttpResponseForbidden()
+        raise PermissionDenied
     submitted_data = json.loads(request.body)
     if submitted_data.get("is_new_player"):
         player = Player.objects.get_or_create(school=school, name=submitted_data['player_name'])[0]
