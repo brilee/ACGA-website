@@ -68,7 +68,7 @@ class Command(BaseCommand):
             if any(game.team2_player.name.startswith("Unknown") for game in match.game_set.all()):
                 guilty_schools.append(match.team2.school)
 
-        recipients = itertools.chain(school.all_contact_emails() for school in guilty_schools)
+        recipients = itertools.chain(*(school.all_contact_emails() for school in guilty_schools))
 
         c = Context(locals())
         self.stdout.write(t.render(c))
