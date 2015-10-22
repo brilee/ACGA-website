@@ -61,12 +61,12 @@ class Command(BaseCommand):
             t = template.Template(f.read())
 
         previous_round = Round.objects.get_previous_round()
-        guilty_schools = []
+        guilty_schools = set()
         for match in previous_round.match_set.all():
             if any(game.team1_player.name.startswith("Unknown") for game in match.game_set.all()):
-                guilty_schools.append(match.team1.school)
+                guilty_schools.add(match.team1.school)
             if any(game.team2_player.name.startswith("Unknown") for game in match.game_set.all()):
-                guilty_schools.append(match.team2.school)
+                guilty_schools.add(match.team2.school)
 
         recipients = itertools.chain(*(school.all_contact_emails() for school in guilty_schools))
 
