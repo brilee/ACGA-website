@@ -12,8 +12,6 @@
 {% endfor %}
 </ul>
 
-{% include 'roster_snippet.html' %}
-
 <form id="match_edit_form" action="." method="post">
 {% csrf_token %}
 {% for game in match.game_set.all %}
@@ -28,7 +26,10 @@
 {% endfor %}
 </form>
 
+{% include 'roster_snippet.html' %}
+
 {% endblock %}
+
 
 {% block javascript_footer %}
 <script type="text/javascript">
