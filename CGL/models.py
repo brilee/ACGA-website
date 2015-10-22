@@ -72,9 +72,9 @@ class School(models.Model):
 
     def all_contact_emails(self):
         if self.secondary_contacts:
-            return self.contact_email + ', ' + self.secondary_contacts
+            return [self.contact_email] + self.secondary_contacts.split(',')
         else:
-            return self.contact_email
+            return [self.contact_email]
 
 
 class Player(models.Model):

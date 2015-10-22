@@ -1,0 +1,8 @@
+To: {% for recip in recipients %}{{recip}}, {% endfor %}
+Subject:[CGL] Enter match player data
+
+Hi everybody,
+
+When you have the time, could you please go to https://college-go.org/CGL/matches/ and mark the players who played in the previous round of games?
+
+Let us know if you have any questions.

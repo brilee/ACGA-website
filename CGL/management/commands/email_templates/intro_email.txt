@@ -1,4 +1,5 @@
-To: {{school.all_contact_emails}}
+To: {% for recip in school.all_contact_emails %}{{recip}}, {% endfor %}
+
 Subject:[CGL] Welcome to the CGL
 
 Welcome to the Collegiate Go League!
