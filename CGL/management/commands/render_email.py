@@ -51,7 +51,7 @@ class Command(BaseCommand):
         current_seasons = [Season.objects.get(name=s) for s in current_season_names]
         participating_schools = get_actively_participating_schools(current_season_names)
 
-        recipients = itertools.chain(school.all_contact_emails() for school in participating_schools)
+        recipients = itertools.chain(*(school.all_contact_emails() for school in participating_schools))
 
         c = Context(locals())
         self.stdout.write(t.render(c))
