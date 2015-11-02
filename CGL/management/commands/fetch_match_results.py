@@ -16,8 +16,8 @@ class Command(BaseCommand):
             school1 = match.team1.school
             school2 = match.team2.school
             self.stderr.write("Handling %s vs %s\n" % (school1.name, school2.name))
-            team1_player = Player.objects.get(name="Unknown Player", school=school1)
-            team2_player = Player.objects.get(name="Unknown Player", school=school2)
+            team1_player = Player.objects.get_or_create(name="Unknown Player", school=school1)[0]
+            team2_player = Player.objects.get_or_create(name="Unknown Player", school=school2)[0]
             for i in "123":
                 existing_game = Game.objects.filter(match=match, board=i)
                 if existing_game:
