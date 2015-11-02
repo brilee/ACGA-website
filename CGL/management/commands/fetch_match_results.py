@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 
 from kgs.scrape_games import get_KGS_games, filter_likely_games, download_gamefile
 from CGL.settings import current_seasons
-from CGL.models import Season, SCHOOL1, SCHOOL2, Player, Game
+from CGL.models import Season, SCHOOL1, SCHOOL2, Player, Game, Forfeit
 
 class Command(BaseCommand):
     help = '''Fetches match results from KGS for the most recent round
@@ -23,6 +23,9 @@ class Command(BaseCommand):
                 if existing_game:
                     self.stderr.write("Board %s already exists\n" % i)
                     continue
+                forfeit = Forfeit.objects.filter(match=match, board=i)
+                if forfeit:
+                    self.stderr.write("Found forfeit, not going to try downloading match %s\n" % i)
 
                 likely_games = self.fetch_likely_games(school1, school2, match, i)
 
