@@ -26,6 +26,7 @@ class Command(BaseCommand):
                 forfeit = Forfeit.objects.filter(match=match, board=i)
                 if forfeit:
                     self.stderr.write("Found forfeit, not going to try downloading match %s\n" % i)
+                    continue
 
                 likely_games = self.fetch_likely_games(school1, school2, match, i)
 
