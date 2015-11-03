@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from kgs.scrape_games import get_KGS_games, filter_likely_games, download_gamefile
+from kgs.scrape_games import get_KGS_games, score_likely_games, download_gamefile
 from CGL.settings import current_seasons
 from CGL.models import Season, SCHOOL1, SCHOOL2, Player, Game, Forfeit
 
@@ -28,10 +28,9 @@ class Command(BaseCommand):
                     self.stderr.write("Found forfeit, not going to try downloading match %s\n" % i)
                     continue
 
-                likely_games = self.fetch_likely_games(school1, school2, match, i)
+                kgs_game = self.fetch_likely_games(school1, school2, match, i)
 
-                if likely_games:
-                    kgs_game = likely_games[0]
+                if kgs_game:
                     if kgs_game.white.lower().startswith(school1.KGS_name.lower()):
                         white_school = SCHOOL1
                         white_player = team1_player
@@ -67,17 +66,15 @@ class Command(BaseCommand):
             (school1.KGS_name + board_with_B_team_offset).lower(),
             (school2.KGS_name + board_with_B_team_offset).lower(),
         ]
-        likely_games = []
+        all_games = []
         for username in usernames_to_try:
             self.stderr.write("Trying username %s\n" % username)
-            all_games = get_KGS_games(username, year, month)
-            likely_games = filter(
-                filter_likely_games(
-                    school1.KGS_name, school2.KGS_name, date=match.round.date),
-                all_games
-            )
-            if likely_games:
-                break
+            all_games.extend(get_KGS_games(username, year, month))
 
-        return likely_games
+        best_games = sorted(all_games, 
+            key=lambda g: score_likely_games(g, school1.KGS_name, school2.KGS_name, date=match.round.date), reverse=True)
+        if best_games:
+            return best_games[0]
+        else:
+            return None
 
