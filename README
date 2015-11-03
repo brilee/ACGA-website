@@ -6,6 +6,11 @@ This site is written in Django. Google for an introduction/tutorial.
 
 Git repository is hosted at github.com/brilee/ACGA-website
 
+To run locally:
+pip install -r requirements.pip
+python manage.py create_test_db
+python manage.py runserver
+
 To change the season displayed on the website, edit the file at /CGL/settings.py. The entire site relies on those settings to determine what to show in recent/upcoming matches sidebar, results page, and a few other miscellaneous places.
 
 There are some new commands under ./manage.py for your convenience, stored at /CGL/management/commands:
