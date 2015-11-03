@@ -3,7 +3,7 @@ from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 
 from CGL.settings import current_seasons
-from CGL.models import Season, Round, Match, Team, Bye
+from CGL.models import Season, Round, Match, Team
 from CGL.matchmaking import best_matchup
 
 class Command(BaseCommand):
@@ -43,7 +43,4 @@ class Command(BaseCommand):
         self.stdout.write('Registering matchups!\n')
         for pairing in team_pairings:
             Match.objects.create(round=round, team1=pairing[0], team2=pairing[1])
-        if team_bye:
-            Bye.objects.create(round=round, team=team_bye)
-
 

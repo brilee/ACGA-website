@@ -24,7 +24,7 @@ def score_matchups(team_pairings, team_bye, matchup_matrix):
 
     if team_bye:
         # penalty for giving team byes more than once
-        score -= team_bye.num_byes * 10
+        score -= team_bye.num_byes * 100
         # bonus for giving teams with lots of forfeits a bye
         score += team_bye.num_forfeits * 10
 
