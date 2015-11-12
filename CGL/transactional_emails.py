@@ -15,11 +15,10 @@ def get_all_email_addresses():
 
     return itertools.chain(*(school.all_contact_emails() for school in participating_schools))
 
-def render_introductory_email(school_name):
+def render_introductory_email(school):
     with open(os.path.join(template_dir, "intro_email.txt")) as f:
         t = template.Template(f.read())
 
-    school = School.objects.get(name__contains=school_name)
     school_auth = SchoolAuth.objects.get(school=school)
 
     from CGL.captain_auth import AUTH_KEY_COOKIE_NAME

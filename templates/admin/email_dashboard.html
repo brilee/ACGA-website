@@ -1,0 +1,74 @@
+{% extends 'base_CGL.html' %}
+{% block maintext %}
+<h1>Email dashboard</h1>
+
+<h3>Weekly results + matchups email</h3>
+<p>(Send this email a day or two after matches have happened, and after all the games have been uploaded to the website.)</p>
+
+<pre id="weekly_results_email">
+{{weekly_results_email}}
+</pre>
+
+<hr/>
+
+<h3>Reminder email</h3>
+<p>(Send this email on the Wednesday before the next CGL round.)</p>
+
+<pre id="weekly_reminder_email">
+{{weekly_reminder_email}}
+</pre>
+
+<hr/>
+
+<h3>Email recipients</h3>
+<p>This is a list of all email addresses and secondary email addresses for participating CGL schools. Send your weekly results + reminder emails to these people.</p>
+
+<blockquote><pre>
+{% for email in emails %}{{email}},
+{% endfor %}
+</pre></blockquote>
+
+<h3>Generate introduction email</h3>
+<p>(Send this email when a school has joined CGL for the first time. Contains their match upload magic link.)</p>
+<form id="intro_email_form">
+<select id="intro_email_school_name">
+{% for school in schools %}
+    <option value="{{ school.id }}">{{ school.name }}</option>
+{% endfor %}
+</select>
+<input id="intro_email_button" type="submit" value="Generate email" />
+</form>
+
+<pre id="intro_email">
+</pre>
+
+
+
+{% endblock %}
+
+{% block javascript_footer %}
+<script type="text/javascript">
+var csrf_token = "{{ csrf_token }}";
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+    }
+});
+
+$(document).ready(function() {
+    $("#intro_email_form").submit(function() { return false; })
+
+    $("#intro_email_button").click(function(event) {
+        var school_id = $("#intro_email_school_name").val()
+
+        $.ajax({
+            url: "/CGL/admin/emails/intro_email/"+school_id,
+            type: "GET",
+            success: function(response) {
+                $("#intro_email").text(response);
+            },
+        });
+    });
+});
+</script>
+{% endblock %}

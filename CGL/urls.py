@@ -3,6 +3,8 @@ from django.views.generic import TemplateView
 
 from CGL.captain_views import edit_all_matches, edit_match, update_players, edit_school, edit_player
 
+from CGL.admin_views import email_dashboard, render_introductory_email_view
+
 urlpatterns = patterns('CGL.views',
     (r'^$', TemplateView.as_view(template_name='CGL.html')),
     (r'^rules/$', TemplateView.as_view(template_name='CGL_rules.html')),
@@ -22,4 +24,9 @@ urlpatterns += patterns("",
     url(r'^games/([0-9]{1,4})/update_players/$', update_players, name="update_players"),
     url(r'^schools/([A-Za-z0-9_-]{1,50})/edit$', edit_school, name="edit_school"),
     url(r'^players/([0-9]{1,4})/edit$', edit_player, name="edit_player"),
+)
+
+urlpatterns += patterns("",
+    url(r'^admin/emails/$', email_dashboard, name="email_dashboard"),
+    url(r'^admin/emails/intro_email/([0-9]{1,4})/$', render_introductory_email_view),
 )
