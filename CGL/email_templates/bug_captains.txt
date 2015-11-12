@@ -1,0 +1,11 @@
+Subject:[CGL] Match reminder!
+
+Hi everybody,
+
+Reminder that matches are this Saturday at 1pm ET! See your matchups at https://college-go.org/CGL/results 
+
+The following schools haven't yet added their players' names to the matches; when you have the time, could you please go to https://college-go.org/CGL/matches/ and add this data?
+
+{% for school in guilty_schools %} {{school.name}}, {% endfor %}
+
+Let us know if you have any questions or are unable to play on Saturday.

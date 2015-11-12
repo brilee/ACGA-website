@@ -1,9 +1,8 @@
-To: {% for recip in recipients %}{{recip}}, {% endfor %}
 Subject:[CGL] Results and next week matches
 
 Hi everyone,
 
-Games have been uploaded for the most recent round ({{previous_round_date}}). If you haven't yet filled in player names for your match, you should do so at https://college-go.org/CGL/matches/
+Games have been uploaded for the most recent round ({{previous_round.date}}). If you haven't yet filled in player names for your match, you should do so at https://college-go.org/CGL/matches/
 
 {% for season in current_seasons %}
 {{season.name}}
@@ -15,7 +14,7 @@ Games have been uploaded for the most recent round ({{previous_round_date}}). If
 Full results and game records can be found here:
 http://college-go.org/CGL/results
 
-The next CGL round is scheduled for Saturday, {{next_round_date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:45pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
+The next CGL round is scheduled for Saturday, {{next_round.date}} at 1pm EST/10am PST. Your team should log onto the accounts we have provided and be ready to go at 12:45pm EST in the Collegiate Go League room on KGS. If you've lost track of your login information, we can reset it for you.
 
 The following schools are matched (KGS account name prefix in parentheses):
 
