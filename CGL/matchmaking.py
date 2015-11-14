@@ -12,11 +12,11 @@ def score_matchups(team_pairings, team_bye, matchup_matrix):
     score = 0
     for team1, team2 in team_pairings:
         if not matchup_matrix[team1.id][team2.id]:
-            # bonus for not matching up the same teams
+            # bonus for not matching up teams who have played before
             score += 100
         # penalty for matching up teams with disparate number of wins
         score -= 5 * (team1.num_wins - team2.num_wins)**2
-        # penalty for matching up teams with dasparate number of losses
+        # penalty for matching up teams with disparate number of losses
         score -= 5 * (team1.num_losses - team2.num_losses)**2
         # penalty for matching two teams from the same school
         if team1.school == team2.school:
