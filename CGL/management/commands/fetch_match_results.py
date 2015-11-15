@@ -28,7 +28,7 @@ class Command(BaseCommand):
                     self.stderr.write("Found forfeit, not going to try downloading match %s\n" % i)
                     continue
 
-                likely_games = self.fetch_likely_games(school1, school2, match, i)
+                likely_games = self.fetch_likely_games(match.team1, match.team2, match, i)
 
                 if likely_games:
                     kgs_game = likely_games[0]
@@ -54,26 +54,25 @@ class Command(BaseCommand):
                 else:
                     self.stderr.write("Couldn't find game for %s vs %s board %s\n" % (school1.name, school2.name, i))
 
-    def fetch_likely_games(self, school1, school2, match, board):
+    def fetch_likely_games(self, team1, team2, match, board):
         self.stderr.write("Fetching game info from KGS\n")
         year = match.round.date.year
         month = match.round.date.month
 
-        board_with_B_team_offset = str(int(board) + 3)
+        usernames = []
+        for team in (team1, team2):
+            if team.team_name.endswith(" B"):
+                usernames += (team.school.KGS_name + str(int(board) + 3)).lower()
+            else:
+                usernames += (team.school.KGS_name + board).lower()
 
-        usernames_to_try = [
-            (school1.KGS_name + board).lower(),
-            (school2.KGS_name + board).lower(),
-            (school1.KGS_name + board_with_B_team_offset).lower(),
-            (school2.KGS_name + board_with_B_team_offset).lower(),
-        ]
         likely_games = []
-        for username in usernames_to_try:
+        for username in usernames:
             self.stderr.write("Trying username %s\n" % username)
             all_games = get_KGS_games(username, year, month)
             likely_games = filter(
                 filter_likely_games(
-                    school1.KGS_name, school2.KGS_name, date=match.round.date),
+                    usernames, date=match.round.date),
                 all_games
             )
             if likely_games:

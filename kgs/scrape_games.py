@@ -80,15 +80,13 @@ def download_gamefile(url):
     response = requests.get(url)
     return ContentFile(response.content, name=get_filename(url))
 
-def filter_likely_games(KGS_name1, KGS_name2, date=None):
-    KGS_name1 = KGS_name1.lower()
-    KGS_name2 = KGS_name2.lower()
+def filter_likely_games(possible_usernames, date=None):
+    canonical_usernames = [uname.lower() for uname in possible_usernames]
     def filterer(kgs_game):
         if kgs_game.type == "Review" or kgs_game.result == "Unfinished":
             return False
         if date is not None:
             if abs(date - kgs_game.date) > timedelta(days=7):
                 return False
-        return ((kgs_game.black.startswith(KGS_name1) and kgs_game.white.startswith(KGS_name2)) or
-                (kgs_game.black.startswith(KGS_name2) and kgs_game.white.startswith(KGS_name1)))
+        return set([kgs_game.black.lower(), kgs_game.white.lower()]) < set(canonical_usernames)
     return filterer
