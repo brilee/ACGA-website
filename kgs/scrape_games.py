@@ -92,5 +92,5 @@ def filter_likely_games(possible_usernames, date=None):
         if date is not None:
             if abs(date - kgs_game.date) > timedelta(days=7):
                 return False
-        return set([kgs_game.black.lower(), kgs_game.white.lower()]) < set(canonical_usernames)
+        return set([kgs_game.black.lower(), kgs_game.white.lower()]) <= set(canonical_usernames)
     return filterer

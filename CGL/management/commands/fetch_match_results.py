@@ -62,9 +62,9 @@ class Command(BaseCommand):
         usernames = []
         for team in (team1, team2):
             if team.team_name.endswith(" B"):
-                usernames += (team.school.KGS_name + str(int(board) + 3)).lower()
+                usernames.append((team.school.KGS_name + str(int(board) + 3)).lower())
             else:
-                usernames += (team.school.KGS_name + board).lower()
+                usernames.append((team.school.KGS_name + board).lower())
 
         likely_games = []
         for username in usernames:
