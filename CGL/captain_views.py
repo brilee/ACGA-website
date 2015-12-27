@@ -70,13 +70,10 @@ def update_players(request, game_id):
     if not check_auth(school, game):
         raise PermissionDenied
     submitted_data = json.loads(request.body)
-    if submitted_data.get("is_new_player"):
-        player = Player.objects.get_or_create(school=school, name=submitted_data['player_name'])[0]
-    else:
-        try:
-            player = Player.objects.get(name=submitted_data['player_name'], school=school)
-        except Player.DoesNotExist:
-            return HttpResponseBadRequest('Couldn\'t find player')
+    try:
+        player = Player.objects.get(name=submitted_data['player_name'], school=school)
+    except Player.DoesNotExist:
+        return HttpResponseBadRequest('Couldn\'t find player')
 
     if game.match.team1.school == school:
         game.team1_player = player

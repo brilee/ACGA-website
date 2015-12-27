@@ -16,9 +16,18 @@
 {% csrf_token %}
 {% for game in match.game_set.all %}
 <div class="row">
-    <div class="six columns"><label>Board {{game.board}}</label><input id="player_name{{game.board}}" type="text" value="{% if school_is_team1 %}{{game.team1_player.name}}{% else %}{{game.team2_player.name}}{% endif %}" maxlength="100"></div>
-    <div class="three columns"><label>New player?</label><input id="is_new_player{{game.board}}" type="checkbox"></div>
-    <div class="three columns"><input for="{{game.board}}" type="submit" value="Update board" /><label id="error{{game.board}}"></label></div>
+    <div class="eight columns"><label>Board {{game.board}}</label>
+        <select id="player_name{{game.board}}">
+            <option selected="selected">
+                {% if school_is_team1 %}{{game.team1_player.name}}{% else %}{{game.team2_player.name}}{% endif %}
+            </option>
+            <option>--------------</option>
+            {% for player in school.player_set.all %}
+            <option>{{player.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="four columns"><label>&nbsp;</label><input for="{{game.board}}" type="submit" value="Update board" /><label id="error{{game.board}}"></label></div>
     <input id="game_id{{game.board}}" type="hidden" value="{{game.id}}">
 </div>
 {% empty %}
@@ -46,7 +55,7 @@ $(document).ready(function() {
     $("input[type=submit]").click(function(event) {
         var board_id = $(this).attr("for");
         var game_id = $("input#game_id"+board_id).val();
-        var player_name = $("input#player_name"+board_id).val();
+        var player_name = $("select#player_name"+board_id).val();
         var is_new_player = $("input#is_new_player"+board_id).is(":checked");
 
         var data = {
