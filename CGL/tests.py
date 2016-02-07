@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import datetime
-import sys
 
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.management import call_command
@@ -9,10 +8,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
 
-from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, Bye, GameComment, a_tag, SchoolAuth
+from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, GameComment, a_tag, SchoolAuth
 from CGL.settings import current_seasons
 from CGL.captain_auth import AUTH_KEY_COOKIE_NAME
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
+from CGL.transactional_emails import render_introductory_email, render_weekly_email, render_reminder_email
 
 import ogs
 from sgf import MySGFGame
@@ -77,7 +77,7 @@ class IntegrationTest(TestWithCGLSetup):
             except:
                 import traceback
                 traceback.print_exc()
-                print ("Failed to get %s with response %s" % (url, response.status_code))
+                print ("Failed to get %s" % url)
 
     def test_public_post_views(self):
         url_comment = (
@@ -221,8 +221,8 @@ class MatchmakingTest(TestCase):
             (self.teams[4], self.teams[5]),
         ]
         self.assertEquals(
-            score_matchups(pairings, self.teams[4], matrix),
-            310
+            score_matchups(pairings, self.teams[6], matrix),
+            370
         )
 
     def test_make_random_matchup(self):
@@ -242,9 +242,6 @@ class MatchmakingTest(TestCase):
 
     def test_call_command(self):
         call_command('round_pairings', season=self.test_season.name, round='2')
-        byes = Bye.objects.filter(round=self.round2)
-        self.assertEquals(len(byes), 1)
-        self.assertEquals(byes[0].team, self.expected_bye)
 
         matches = self.round2.match_set.all()
         self.assertEquals(len(matches), 3)
@@ -354,15 +351,10 @@ class ScoreUpdaterTest(TestCase):
 
 class EmailRenderingTest(TestWithCGLSetup):
     def testIntroEmail(self):
-        from CGL.management.commands.render_email import Command
-        c = Command()
-        c.stdout = sys.stdout
-        c.stderr = sys.stderr
-        c.render_introductory_email(self.test_school2.name)
+        render_introductory_email(self.test_school2.id)
 
     def testWeeklyEmail(self):
-        from CGL.management.commands.render_email import Command
-        c = Command()
-        c.stdout = sys.stdout
-        c.stderr = sys.stderr
-        c.render_weekly_email()
+        render_weekly_email()
+
+    def testReminderEmail(self):
+        render_reminder_email()
