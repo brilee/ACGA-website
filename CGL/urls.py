@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
-from CGL.captain_views import edit_all_matches, edit_match, update_players, edit_school, edit_player
+from CGL.captain_views import edit_all_matches, edit_match, update_players, edit_school, edit_player, create_player
 
 from CGL.admin_views import email_dashboard, render_introductory_email_view
 
@@ -23,6 +23,7 @@ urlpatterns += patterns("",
     url(r'^matches/([0-9]{1,4})/edit$', edit_match, name="edit_match"),
     url(r'^games/([0-9]{1,4})/update_players/$', update_players, name="update_players"),
     url(r'^schools/([A-Za-z0-9_-]{1,50})/edit$', edit_school, name="edit_school"),
+    url(r'^players/new$', create_player, name="create_player"),
     url(r'^players/([0-9]{1,4})/edit$', edit_player, name="edit_player"),
 )
 

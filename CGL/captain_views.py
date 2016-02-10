@@ -3,7 +3,7 @@ import json
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.core.exceptions import PermissionDenied
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from CGL.models import Season, Match, Game, Player, School
 from CGL.settings import current_seasons
@@ -46,6 +46,19 @@ def edit_school(request, school_slug):
     else:
         form = EditSchoolForm(instance=school)
     return render(request, 'edit_school.html', locals())
+
+@school_auth_required
+def create_player(request):
+    school = get_school(request)
+    if request.method == 'GET':
+        form = EditPlayerForm()
+    elif request.method == 'POST':
+        form = EditPlayerForm(request.POST)
+        if form.is_valid():
+            new_player = Player(school=school, **form.cleaned_data)
+            new_player.save()
+            return redirect('edit_school', school.slug_name)
+    return render(request, 'create_player.html', locals())
 
 @school_auth_required
 def edit_player(request, player_id):

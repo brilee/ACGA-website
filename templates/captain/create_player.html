@@ -1,0 +1,10 @@
+{% extends 'base_CGL.html' %}
+
+{% block maintext %}
+<p><a href="{% url edit_school school.slug_name %}">Back to school roster</a></p>
+<h4> Add a player to your roster</h4>
+<form method="post">
+{% include 'form_snippet.html' %}
+<input type="submit" value="Add player">
+</form>
+{% endblock %}
