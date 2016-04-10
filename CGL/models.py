@@ -125,7 +125,7 @@ class Player(models.Model):
 class Season(models.Model):
     name = models.CharField(max_length=25, help_text="Season One, Season One Championship, etc.")
     slug_name = models.SlugField(blank=True, editable=False)
-    schoolyear = models.CharField(max_length=40, help_text="2011-2012, etc.")
+    is_championship = models.BooleanField(default=False)
     schools = models.ManyToManyField(School, through='Team')
     html = models.TextField(blank=True, help_text="Any custom HTML for this season you'd like to appear in the archives")
     description = models.TextField(blank=True, help_text="Any historical notes about this season you'd like to appear in the archives")
