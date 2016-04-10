@@ -12,6 +12,7 @@
 
 <p>{{season.description}} </p>
 
+{% if not season.is_championship %}
 <table>
 	<tr>
 		<th>School Name  </th>
@@ -33,6 +34,8 @@
 {% endfor %} 
 </table>
 <p> ** Currently not participating in this league </p>
+{% endif %}
+
 </div>
 <!-- Lol I did an injection attack on my own templating engine-->
 <div class="panel">
