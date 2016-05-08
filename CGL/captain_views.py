@@ -12,16 +12,25 @@ from CGL.forms import EditSchoolForm, EditPlayerForm
 
 @school_auth_required
 def edit_all_matches(request):
-    school = get_school(request)
+    return edit_matches_for_seasons(request, current_seasons)
 
+@school_auth_required
+def edit_season_matches(request, season_name):
+    season = get_object_or_404(Season, slug_name=season_name)
+    return edit_matches_for_seasons(request, [season])
+
+def edit_matches_for_seasons(request, season_names):
+    school = get_school(request)
     season_matches = Match.objects.none()
-    for season in (Season.objects.get(name=s) for s in current_seasons):
+    for season in (Season.objects.get(name=s) for s in season_names):
         season_matches = season_matches | Match.objects.filter(round__season=season)
 
     relevant_matches = [m for m in season_matches
             if m.round.in_past()
             and (m.team1.school == school
                  or m.team2.school == school)]
+
+    all_seasons = Season.objects.all()
     return render(request, 'matches.html', locals())
 
 @school_auth_required

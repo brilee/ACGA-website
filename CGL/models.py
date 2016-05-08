@@ -141,6 +141,9 @@ class Season(models.Model):
     def get_absolute_url(self):
         return ('CGL.views.display_seasons', [str(self.slug_name)])
 
+    def get_captain_edit_url(self):
+        return ('CGL.views.edit_season_matches', [str(self.slug_name)])
+
 class Team(models.Model):
     school = models.ForeignKey(School)
     season = models.ForeignKey(Season)

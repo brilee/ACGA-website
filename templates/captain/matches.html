@@ -20,4 +20,11 @@
 {% endif %}
 <hr />
 <h4><a href="{% url edit_school school.slug_name %}">Edit your school info / roster </a></h4>
+<hr />
+<h4>See matches from previous seasons</h4>
+<ul class="disc">
+    {% for season in all_seasons %}
+    <li><a href="{% url edit_season_matches season.slug_name %}">{{season.name}}</a></li>
+    {% endfor %}
+</ul>
 {% endblock %}
