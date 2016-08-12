@@ -1,0 +1,17 @@
+Procedure for Creating New KGS Accounts for Schools
+...................................................
+KGS accounts must be 1-10 letters/numbers long. Must start with a letter. If a school's name is too long to fit, abbreviate it.
+
+Format of account name should be:
+[schoolnameprefix][number]
+
+For example:
+Brown1
+MIT5
+Northeast3
+
+Register this account to cgl.tournament.director@gmail.com. 
+
+Log onto the account with the new password to verify it. Then, edit personal info to not display rank, and put "college-go.org" in the info. Also, change the password to something besides the default.
+
+Then, go to Rooms -> Tournament -> Join Collegiate Go League.
