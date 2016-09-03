@@ -13,3 +13,5 @@ local_settings.py
 sensitive_data.py
 templates/rendered*
 sftp-config.json
+bin/*
+lib/*

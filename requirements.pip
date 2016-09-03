@@ -1,4 +1,0 @@
-django==1.4.13
-South
-django-registration
-django-recaptcha

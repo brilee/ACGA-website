@@ -81,7 +81,6 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     'south',
     'email_obfuscator',
-    'captcha',
     'registration'
 )
 
