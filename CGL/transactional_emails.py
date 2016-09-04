@@ -4,14 +4,13 @@ import itertools
 from django.template import Context
 from django import template
 
-from CGL.models import Round, Season, School, SchoolAuth
-from CGL.settings import current_seasons as current_season_names
+from CGL.models import Round, Season, CurrentSeasons, School, SchoolAuth
 from CGL.season_management import get_actively_participating_schools
 
 template_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "email_templates")
 
 def get_all_email_addresses():
-    participating_schools = get_actively_participating_schools(current_season_names)
+    participating_schools = get_actively_participating_schools()
 
     return itertools.chain(*(school.all_contact_emails() for school in participating_schools))
 
@@ -33,7 +32,7 @@ def render_weekly_email():
     previous_round = Round.objects.get_previous_round()
     next_round = Round.objects.get_next_round()
 
-    current_seasons = [Season.objects.get(name=s) for s in current_season_names]
+    current_seasons = CurrentSeasons.objects.get()
 
     c = Context(locals())
     return t.render(c)

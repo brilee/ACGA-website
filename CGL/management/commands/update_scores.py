@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand
-from CGL.models import Team, Season, School, Player
-from CGL.settings import current_seasons
+from CGL.models import Team, Season, CurrentSeasons, School, Player
 
 from datetime import date, timedelta
 
@@ -95,7 +94,7 @@ class Command(BaseCommand):
 
     def update_school_activeness(self):
         School.objects.all().update(inCGL=False)
-        seasons = Season.objects.filter(name__in=current_seasons)
+        seasons = CurrentSeasons.objects.get()
         current_schools = set([school for season in seasons for school in season.schools.all()])
         all_schools = School.objects.all()
         for school in all_schools:
@@ -104,8 +103,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         if not args:
-            self.stdout.write('No season names provided. Defaulting to %s\n' % current_seasons)
-            seasons = [Season.objects.get(name=s) for s in current_seasons]
+            self.stdout.write('No season names provided. Defaulting to current seasons\n')
+            seasons = CurrentSeasons.objects.get()
         else:
             seasons = [Season.objects.get(name=arg) for arg in args]
         for season in seasons:

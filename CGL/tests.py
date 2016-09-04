@@ -8,8 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
 
-from CGL.models import Season, Player, School, Team, Round, Match, Game, Forfeit, GameComment, a_tag, SchoolAuth
-from CGL.settings import current_seasons
+from CGL.models import Season, CurrentSeasons, Player, School, Team, Round, Match, Game, Forfeit, GameComment, a_tag, SchoolAuth
 from CGL.captain_auth import AUTH_KEY_COOKIE_NAME
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 from CGL.transactional_emails import render_introductory_email, render_weekly_email, render_reminder_email
@@ -28,9 +27,7 @@ class TestWithCGLSetup(TestCase):
         self.client.login(username='tester', password='omgsuchsecret')
 
         auth_models.User.objects.create(username=u'brilee')
-        self.test_seasons = []
-        for season in current_seasons:
-            self.test_seasons.append(Season.objects.create(name=season))
+        self.test_seasons = Season.objects.create(name="blah")
         self.test_school = School.objects.create(name=u'Test School')
         self.test_school2 = School.objects.create(
             name=u'Test School 2',
@@ -40,8 +37,8 @@ class TestWithCGLSetup(TestCase):
             KGS_password="blabbers",
         )
         self.test_player = Player.objects.create(name=u'☃player', school=self.test_school, pk=17, rank=-2)
-        self.test_team = Team.objects.create(school=self.test_school, season=self.test_seasons[0])
-        self.test_round = Round.objects.create(season=self.test_seasons[0], date=datetime.datetime.today())
+        self.test_team = Team.objects.create(school=self.test_school, season=self.test_seasons)
+        self.test_round = Round.objects.create(season=self.test_seasons, date=datetime.datetime.today())
         self.test_match = Match.objects.create(round=self.test_round, team1=self.test_team, team2=self.test_team)
         self.test_forfeit = Forfeit.objects.create(match=self.test_match, board=1, team1_noshow=True)
 
@@ -64,7 +61,7 @@ class IntegrationTest(TestWithCGLSetup):
             '/CGL/schools/',
             '/CGL/schools/%s/' % self.test_school.slug_name,
             '/CGL/results/',
-            '/CGL/results/%s/' % self.test_seasons[0].slug_name,
+            '/CGL/results/%s/' % self.test_seasons.slug_name,
             '/CGL/players/',
             '/CGL/players/%s/' % self.test_player.id,
             '/CGL/games/%s/' % self.test_game.id,
@@ -166,7 +163,7 @@ class SGFParserTest(TestCase):
 class MatchmakingTest(TestCase):
     def setUp(self):
         auth_models.User.objects.create(username=u'brilee')
-        self.test_season = Season.objects.create(name=current_seasons[0])
+        self.test_season = Season.objects.create(name="blah")
         self.round1 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=1)
         self.round2 = Round.objects.create(season=self.test_season, date=datetime.datetime.today(), round_number=2)
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(7)]
@@ -255,7 +252,11 @@ class ScoreUpdaterTest(TestCase):
         self.num_schools = 3
         auth_models.User.objects.create(username=u'brilee')
 
-        self.test_season = Season.objects.create(name=current_seasons[0])
+        self.test_season = Season.objects.create(name="blah")
+        current_seasons = CurrentSeasons.objects.all()[0]
+        current_seasons.current_seasons = [self.test_season]
+        current_seasons.save()
+
         self.schools = [School.objects.create(id=i, name=str(i)) for i in range(self.num_schools)]
         self.inactive_school = School.objects.create(id=self.num_schools, name='3')
         self.teams = [Team.objects.create(school=s, season=self.test_season, id=s.id) for s in self.schools]

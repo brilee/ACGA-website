@@ -5,14 +5,13 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404, redirect
 
-from CGL.models import Season, Match, Game, Player, School
-from CGL.settings import current_seasons
+from CGL.models import Season, Match, Game, Player, School, CurrentSeasons
 from CGL.captain_auth import school_auth_required, get_school, check_auth
 from CGL.forms import EditSchoolForm, EditPlayerForm
 
 @school_auth_required
 def edit_all_matches(request):
-    return edit_matches_for_seasons(request, current_seasons)
+    return edit_matches_for_seasons(request, CurrentSeasons.objects.get())
 
 @school_auth_required
 def edit_season_matches(request, season_name):
