@@ -1,4 +1,5 @@
 from django.contrib import admin
+from singleton_models.admin import SingletonModelAdmin
 from CGL.models import * 
 
 class PlayerProfileInline(admin.StackedInline):
@@ -12,6 +13,7 @@ class GameAdmin(admin.ModelAdmin):
 admin.site.register(School)
 admin.site.register(Player)
 admin.site.register(Season)
+admin.site.register(CurrentSeasons, SingletonModelAdmin)
 admin.site.register(Team)
 admin.site.register(Round)
 admin.site.register(Match)

@@ -10,6 +10,8 @@ from django.dispatch.dispatcher import receiver
 
 from django.conf import settings
 
+from singleton_models.models import SingletonModel
+
 from sgf import MySGFGame
 
 SCHOOL1, SCHOOL2 = 'School1', 'School2'
@@ -143,6 +145,27 @@ class Season(models.Model):
 
     def get_captain_edit_url(self):
         return ('CGL.views.edit_season_matches', [str(self.slug_name)])
+
+class CurrentSeasonsManager(models.Manager):
+    def get(self):
+        curr_seasons_singleton = self.all()
+        if not curr_seasons_singleton:
+            c = CurrentSeasons()
+            c.save()
+        else:
+            c = curr_seasons_singleton[0]
+        return c.current_seasons.all()
+
+class CurrentSeasons(SingletonModel):
+    current_seasons = models.ManyToManyField(Season)
+    objects = CurrentSeasonsManager()
+
+    def __unicode__(self):
+        return u'Current seasons'
+
+    class Meta:
+        verbose_name = "Current seasons"
+        verbose_name_plural = "Current seasons"
 
 class Team(models.Model):
     school = models.ForeignKey(School)
