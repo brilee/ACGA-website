@@ -1,15 +1,17 @@
 from django.core.management.base import BaseCommand
 
 from kgs.scrape_games import get_KGS_games, filter_likely_games, download_gamefile
-from CGL.settings import current_seasons
-from CGL.models import Season, SCHOOL1, SCHOOL2, Player, Game, Forfeit
+from CGL.models import CurrentSeasons, SCHOOL1, SCHOOL2, Player, Game, Forfeit
 
 class Command(BaseCommand):
     help = '''Fetches match results from KGS for the most recent round
             as judged by today's date'''
 
     def handle(self, *args, **options):
-        season = Season.objects.get(name=current_seasons[0])
+        for season in CurrentSeasons.objects.get():
+            self.do_season(season)
+
+    def do_season(self, season):
         round = season.round_set.get_previous_round()
 
         for match in round.match_set.all():

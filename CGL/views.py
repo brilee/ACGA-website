@@ -2,8 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import  HttpResponseRedirect
 
 from CGL.forms import CreateGameCommentForm
-from CGL.models import School, Season, Team, Game, Player, GameComment
-from settings import current_seasons
+from CGL.models import School, CurrentSeasons Season, Team, Game, Player, GameComment
 
 def display_schools(request):
     all_schools = School.objects.all()
@@ -19,14 +18,14 @@ def display_roster(request, school_name):
     return render(request, 'roster.html', locals())
 
 def display_current_seasons(request):
-    return display_seasons(request, current_seasons)
+    return display_seasons(request, CurrentSeasons.objects.get())
     
-def display_seasons(request, season_name):
-    if isinstance(season_name, basestring):
-        season_name = season_name.strip()
-        requested_seasons = [get_object_or_404(Season, slug_name=season_name)]
-    elif hasattr(season_name, '__iter__'):
-        requested_seasons = [get_object_or_404(Season, name=s) for s in season_name]
+def display_seasons(request, seasons):
+    if isinstance(seasons, basestring):
+        seasons = seasons.strip()
+        requested_seasons = [get_object_or_404(Season, slug_name=seasons)]
+    elif hasattr(seasons, '__iter__'):
+        requested_seasons = seasons
 
     all_seasons = Season.objects.all()
 

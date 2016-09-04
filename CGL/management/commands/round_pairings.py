@@ -2,8 +2,7 @@ import itertools
 from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 
-from CGL.settings import current_seasons
-from CGL.models import Season, Round, Match, Team
+from CGL.models import CurrentSeasons, Season, Round, Match, Team
 from CGL.matchmaking import best_matchup
 
 class Command(BaseCommand):
@@ -19,7 +18,7 @@ class Command(BaseCommand):
         if options['season']:
             season = Season.objects.get(name=options['season'])
         else:
-            season = Season.objects.get(name=current_seasons[0])
+            season = CurrentSeasons.objects.get()[0]
         if options['round']:
             round = Round.objects.get(season=season, round_number=int(options['round']))
         else:
