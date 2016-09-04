@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import  HttpResponseRedirect
 
 from CGL.forms import CreateGameCommentForm
-from CGL.models import School, CurrentSeasons Season, Team, Game, Player, GameComment
+from CGL.models import School, CurrentSeasons, Season, Team, Game, Player, GameComment
 
 def display_schools(request):
     all_schools = School.objects.all()
