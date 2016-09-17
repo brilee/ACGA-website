@@ -61,20 +61,6 @@
     {% endwith %}
     {% endfor %}
         </div>
-        <div class="panel">
-        <h2>Individual Ladder</h2>
-        <h3><a href="https://online-go.com/ladder/1926">Online Go Server</a></h3>
-        {% if iCGL_top_players %}
-        <ol>
-            {% for player in iCGL_top_players %}
-            <li><img src="{{player.icon}}" /> {{player.username}} ({{player.get_rank_display}})</li>
-            {% endfor %}
-        </ol>
-        {% else %}
-        <p>No results found for the OGS individual ladder</p>
-        {% endif %}
-
-        </div>
     </aside>    
 </div>
 

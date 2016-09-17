@@ -3,7 +3,7 @@
 
 from django.core.cache import cache
 
-from models import Season, CurrentSeasons
+from models import CurrentSeasons
 
 from ogs.client import get_ladder_top_players
 
@@ -22,9 +22,6 @@ get_ladder_top_players = django_caching(get_ladder_top_players)
 
 
 def sidebar_CGL(request):
-    top_players = get_ladder_top_players(1926)
-
     return {
         'current_seasons': CurrentSeasons.objects.get(),
-        'iCGL_top_players': top_players,
     }
