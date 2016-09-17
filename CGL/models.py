@@ -139,6 +139,9 @@ class Season(models.Model):
     def __unicode__(self):
         return self.name
    
+    class Meta:
+        ordering = ['id']
+
     @models.permalink
     def get_absolute_url(self):
         return ('CGL.views.display_seasons', [str(self.slug_name)])
