@@ -15,7 +15,7 @@ def display_roster(request, school_name):
     inactives = school.player_set.filter(isActive=0).order_by('rank')
     participating_seasons = Team.objects.filter(school__slug_name=school_name)
 
-    return render(request, 'roster.html', locals())
+    return render(request, 'school.html', locals())
 
 def display_current_seasons(request):
     return display_seasons(request, CurrentSeasons.objects.get())
