@@ -31,6 +31,10 @@ def display_seasons(request, seasons):
 
     return render(request, 'results.html', locals())
 
+def display_team(request, team_id):
+    team = get_object_or_404(Team, id=team_id)
+    return render(request, 'team.html', locals())
+
 def display_player_search(request):
     query = request.GET.get('query', '')
     errors = []
