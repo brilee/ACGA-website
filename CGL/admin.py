@@ -13,11 +13,15 @@ class GameAdmin(admin.ModelAdmin):
 
 class TeamAdmin(admin.ModelAdmin):
     def formfield_for_manytomany(self, db_field, request, **kwargs):
-        # hack to get the actual instance being referred to by the admin view.
-        team_id = filter(bool, request.path.split('/'))[-1]
-        team = Team.objects.get(id=team_id)
         if db_field.name == "players":
-             kwargs["queryset"] = Player.objects.filter(school=team.school)
+            # hack to get the actual instance being referred to by the admin view.
+            team_id = filter(bool, request.path.split('/'))[-1]
+            try:
+                team_id = int(team_id)
+                team = Team.objects.get(id=team_id)
+                kwargs["queryset"] = Player.objects.filter(school=team.school)
+            except ValueError:
+                pass
         return super(TeamAdmin, self).formfield_for_manytomany(db_field, request, **kwargs)
 
 
