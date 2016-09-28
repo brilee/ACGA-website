@@ -4,7 +4,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 from CGL.models import School, Player, CurrentSeasons
 from CGL.transactional_emails import get_all_email_addresses, render_introductory_email, render_weekly_email, render_reminder_email
-from CGL.season_management import make_round_pairings, update_match_and_schools, update_player_record, update_school_activeness
+from CGL.season_management import make_round_pairings, update_match_and_schools, update_player_record, update_school_activeness, fetch_match_results
 
 @staff_member_required
 def admin_dashboard(request):
@@ -54,3 +54,14 @@ def update_scores(request):
     update_school_activeness()
     debug_messages.append('Updated school inCGL active status')
     return HttpResponse("\n".join(debug_messages))
+
+@staff_member_required
+def fetch_results(request):
+    if request.method != 'POST':
+        return HttpResponse("Must use POST", status=405)
+    debug_messages = []
+    for season in CurrentSeasons.objects.get():
+        messages = fetch_match_results(season)
+        debug_messages.extend(messages)
+    return HttpResponse("\n".join(debug_messages))
+

@@ -28,6 +28,9 @@ def regenerate_school_auth_keys(school):
 def fetch_match_results(season):
     debug_messages = []
     round = season.round_set.get_previous_round()
+    if not round:
+        debug_messages.append("No previous round found for %s" % season)
+        return debug_messages
 
     for match in round.match_set.all():
         school1 = match.team1.school
