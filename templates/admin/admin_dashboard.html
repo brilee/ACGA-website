@@ -1,0 +1,94 @@
+{% extends 'base_admin.html' %}
+{% block maintext %}
+<h1>CGL Admin dashboard</h1>
+<hr />
+
+<h2><a href="{% url email_dashboard %}">Email dashboard </a></h2>
+<p> Use this page to quickly generate templated emails, like announcing upcoming matches, match results, introductory emails, etc.</p>
+<hr />
+<h2>Make match pairings</h2>
+<p> Automatically generate pairings for the upcoming round.</p>
+
+<p> To exclude a school from the algorithm, manually create a "Bye" object for that school and round, using the django admin</p>
+<p> To ensure a specific pairing, manually create a "Match" object for those two schools using the django admin</p>
+<p> The pairing algorithm will ignore any teams marked "Not participating" in the django admin. It prefers to put together teams that have not yet played together, as well as teams that have similar win/loss records.</p>
+
+<div id="round_pairings">
+<form>
+    <input type="submit" value="Generate round pairings" />
+</form>
+</div>
+<hr />
+<h2>Scrape KGS website for match results</h2>
+<p> On the day after the matches (have to wait for a day for the website to consider that round a "past round" instead of an "upcoming round".), click this button to scrape KGS's website for match results. This will automatically fill in the game winners + SGF files. It won't be able to figure out who played, though - so you'll see "Unknown Player" everywhere. This script can take a while, because KGS has a anti-scraping 5-second limit on refreshing.</p>
+<p> Forfeits are not detected - if a team was no-show, you'll have to manually mark those by creating "Forfeit" objects in the django admin.</p>
+<div id="fetch_results">
+<form>
+    <input type="submit" value="Fetch results from KGS" />
+</form>
+</div>
+<hr />
+<h2>Recalculate team standings</h2>
+<p> Recalculates all standings for current season (i.e. win/loss/tie/bye/forfeits), as well as individual player records.</p>
+<div id="update_scores">
+<form>
+    <input type="submit" value="Recalculate standings" />
+</form>
+</div>
+<hr />
+
+
+{% endblock %}
+{% block javascript_footer %}
+<script type="text/javascript">
+var csrf_token = "{{ csrf_token }}";
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+    }
+});
+
+function make_p_tag(msg) {
+    var p_node = document.createElement("p");
+    var text = document.createTextNode(msg);
+    p_node.appendChild(text)
+    return p_node;
+}
+
+function add_command(command_name) {
+    var div = $("div#" + command_name);
+    var form = $("div#" + command_name + " form");
+    var button = $("div#" + command_name + " input");
+    // disable default action of form
+    form.submit(function() { return false; });
+    button.click(function(event) {
+        div.append(make_p_tag("Working..."))
+        $.ajax({
+            url: "/CGL/admin/commands/" + command_name + "/",
+            type: "POST",
+            timeout: 30000,
+            success: function(response) {
+                div.append(make_p_tag("Done! (Debug output shown below)."))
+                console.log(response);
+                var error_messages = response.split('\n');
+                var error_ps = error_messages.map(make_p_tag)
+                error_ps.map(function(node) {div.append(node)});
+            },
+            error: function(xhr, error_type) {
+                if (error_type === 'timeout') {
+                    div.append(make_p_tag("Server is taking a while to execute command. It'll keep on working but no further status updates."))
+                } else {
+                    div.append(make_p_tag("Uhoh, something went wrong!"));
+                }
+            }
+        })
+    })
+}
+
+$(document).ready(function() {
+    add_command("round_pairings");
+    add_command("update_scores");
+    add_command("fetch_results");
+});
+</script>
+{% endblock %}
