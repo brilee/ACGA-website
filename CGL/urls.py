@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse_lazy
 
 from CGL.captain_views import edit_all_matches, edit_season_matches, edit_match, update_players, edit_school, edit_player, create_player
 
-from CGL.admin_views import email_dashboard, render_introductory_email_view
+from CGL.admin_views import admin_dashboard, email_dashboard, render_introductory_email_view, round_pairings, update_scores
 
 urlpatterns = patterns('CGL.views',
     (r'^$', TemplateView.as_view(template_name='CGL.html')),
@@ -31,6 +31,9 @@ urlpatterns += patterns("",
 )
 
 urlpatterns += patterns("",
+    url(r'^admin/$', admin_dashboard, name="admin_dashboard"),
+    url(r'^admin/commands/round_pairings/$', round_pairings, name="admin_round_pairings"),
+    url(r'^admin/commands/update_scores/$', update_scores, name="admin_update_scores"),
     url(r'^admin/emails/$', email_dashboard, name="email_dashboard"),
     url(r'^admin/emails/intro_email/([0-9]{1,4})/$', render_introductory_email_view),
 )

@@ -11,22 +11,4 @@ pip install -r requirements.pip
 python manage.py create_test_db
 python manage.py runserver
 
-To change the season displayed on the website, edit the file at /CGL/settings.py. The entire site relies on those settings to determine what to show in recent/upcoming matches sidebar, results page, and a few other miscellaneous places.
-
-There are some new commands under ./manage.py for your convenience, stored at /CGL/management/commands:
-
-./manage.py update_scores <Season Name>
-This recalculates match results, school records, and player records for the current season, based on all database entries for games played. It's computationally intensive. It used to be run upon any update to a match, but that was way too slow. Now I run it every day on midnight with a cronjob.
-
-./manage.py round_pairings <Season Name>
-This generates round pairings for the next round, as determined by date. The pitfall of doing all pairings at the start of season is that new schools may have signed up in the meantime. Thus, it should be executed on the Sunday before a match, and a reminder email sent out to team captains to let us know if they can't make the match.
-If the round already has some matches created, this algorithm ignores those schools and continues on. This is useful if you want to ensure that two schools are matched in an upcoming round.
-If a school's Team in a Season has "Still participating?" unchecked, then the algorithm will disregard that school in the pairings. If a school has a bye listed for that round, then the algorithm will also disregard.
-The algorithm pairs up schools, favoring the schools with the most byes. Thus, byes will be allocated fairly between the schools.
-
-
-./manage.py render_email
-Generate an email to currently participating schools, from the specified template. You can edit the rendered email before sending it out.
-
-./manage.py test CGL
-Run tests.
+To change the season displayed on the website, use the django web interface at /admin. The entire site relies on this setting to determine what to show in recent/upcoming matches sidebar, results page, and a few other miscellaneous places.
