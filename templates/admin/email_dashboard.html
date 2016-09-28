@@ -1,32 +1,39 @@
-{% extends 'base_CGL.html' %}
+{% extends 'base_admin.html' %}
+{% block javascript %}
+<style type="text/css">
+textarea {
+    min-height: 250px;
+}
+</style>
+{% endblock %}
 {% block maintext %}
 <h1>Email dashboard</h1>
 
 <h3>Weekly results + matchups email</h3>
 <p>(Send this email a day or two after matches have happened, and after all the games have been uploaded to the website.)</p>
 
-<pre id="weekly_results_email">
+<textarea id="weekly_results_email">
 {{weekly_results_email}}
-</pre>
+</textarea>
 
 <hr/>
 
 <h3>Reminder email</h3>
 <p>(Send this email on the Wednesday before the next CGL round.)</p>
 
-<pre id="weekly_reminder_email">
+<textarea id="weekly_reminder_email">
 {{weekly_reminder_email}}
-</pre>
+</textarea>
 
 <hr/>
 
 <h3>Email recipients</h3>
 <p>This is a list of all email addresses and secondary email addresses for participating CGL schools. Send your weekly results + reminder emails to these people.</p>
 
-<blockquote><pre>
+<blockquote><textarea>
 {% for email in emails %}{{email}},
 {% endfor %}
-</pre></blockquote>
+</textarea></blockquote>
 
 <h3>Generate introduction email</h3>
 <p>(Send this email when a school has joined CGL for the first time. Contains their match upload magic link.)</p>
@@ -39,8 +46,8 @@
 <input id="intro_email_button" type="submit" value="Generate email" />
 </form>
 
-<pre id="intro_email">
-</pre>
+<textarea id="intro_email">
+</textarea>
 
 
 
