@@ -36,6 +36,7 @@ def round_pairings(request):
             continue
         messages = make_round_pairings(season, round)
         debug_messages.extend(messages)
+    return HttpResponse("\n".join(debug_messages))
 
 @staff_member_required
 def update_scores(request):
