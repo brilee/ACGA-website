@@ -107,7 +107,9 @@ def make_round_pairings(season, round):
     debug_messages = []
     all_teams = set(Team.objects.filter(season=season, still_participating=True))
     already_matched = set(itertools.chain(*[(match.team1.id, match.team2.id) for match in round.match_set.all()]))
-    team_pool = [t for t in all_teams if t.id not in already_matched]
+    teams_with_byes = set(bye.team.id for bye in round.bye_set.all())
+    ignore_schools = already_matched | teams_with_byes
+    team_pool = [t for t in all_teams if t.id not in ignore_schools]
 
     if len(team_pool) < 2:
         debug_messages.append("There are fewer than 2 unpaired schools, nothing to do for %s" % season.name)
