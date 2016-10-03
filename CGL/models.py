@@ -183,7 +183,7 @@ class Team(models.Model):
     players = models.ManyToManyField(Player, blank=True)
 
     class Meta:
-        ordering = ['-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
+        ordering = ['-still_participating', '-season__pk', '-num_wins', 'num_losses', '-num_ties', 'num_forfeits']
 
     def __unicode__(self):
         return u"{} in {}{}".format(
