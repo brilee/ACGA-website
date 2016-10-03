@@ -8,6 +8,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from CGL.models import Season, Match, Game, Player, School, CurrentSeasons
 from CGL.captain_auth import school_auth_required, get_school, check_auth
 from CGL.forms import EditSchoolForm, EditPlayerForm
+from CGL.transactional_emails import send_magic_link_email
 
 @school_auth_required
 def edit_all_matches(request):
@@ -83,6 +84,13 @@ def edit_player(request, player_id):
         form = EditPlayerForm(instance=player)
     return render(request, 'edit_player.html', locals())
     
+@require_http_methods(["POST"])
+def send_magic_link(request, school_id):
+    school = get_object_or_404(School, id=school_id)
+    send_magic_link_email(school)
+    return HttpResponse("success")
+
+
 @require_http_methods(["PUT"])
 @school_auth_required
 def update_players(request, game_id):

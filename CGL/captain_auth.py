@@ -1,4 +1,4 @@
-from django.core.exceptions import PermissionDenied
+from django.shortcuts import render
 from CGL.models import SchoolAuth, Player, School, Match, Forfeit, Game
 
 AUTH_KEY_COOKIE_NAME = "captain_school_auth"
@@ -28,7 +28,8 @@ def school_auth_required(view):
     def wrapped(request, *args, **kwargs):
         secret_key = get_secret_key(request)
         if secret_key is None:
-            raise PermissionDenied
+            schools = School.objects.all()
+            return render(request, '403.html', {'schools': schools}, status=403)
 
         response = view(request, *args, **kwargs)
         set_secret_key(response, secret_key)

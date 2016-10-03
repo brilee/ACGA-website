@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, RedirectView
 from django.core.urlresolvers import reverse_lazy
 
 from CGL.captain_views import (edit_all_matches, edit_season_matches,
-    edit_match, update_players, edit_school, edit_player, create_player)
+    edit_match, update_players, edit_school, edit_player, create_player, send_magic_link)
 
 from CGL.admin_views import (admin_dashboard, email_dashboard,
     render_introductory_email_view, round_pairings, update_scores,
@@ -23,6 +23,7 @@ urlpatterns = patterns('CGL.views',
 )
 
 urlpatterns += patterns("",
+    url(r'^schools/([0-9]{1,4})/magic_link_email$', send_magic_link, name='send_magic_link'),
     url(r'^matches/$', RedirectView.as_view(url=reverse_lazy('edit_all_matches'))),
     url(r'^seasons/current/matches/$', edit_all_matches, name="edit_all_matches"),
     url(r'^seasons/([A-Za-z0-9_-]{1,50})/matches/$', edit_season_matches, name="edit_season_matches"),

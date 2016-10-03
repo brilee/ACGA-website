@@ -6,8 +6,52 @@
 <div class="panel">
 <h1> Not authenticated... </h1>
 <br/>
-<p>Sorry, we can't figure out which school you're the team captain for. You should have gotten a magic link that looked like "https://college-go.org/CGL/seasons/current/matches/?captain_school_auth=ABC123" when you first signed up for the CGL - clicking that link will let us know who you are. If you need this link again, contact a CGL admin.</p>
+<p>Sorry, we can't figure out which school you're the team captain for. </p>
+
+<p>If you select your school below, we'll send a magic link to your schools' contact email. Clicking that link will let us know you're authorized to edit your school's info.</p>
+
+<p>If you have any problems, email us and we'll get it fixed up pronto!</p>
+
+<form id="send_magic_link">
+<select id="magic_link_school">
+{% for school in schools %}
+    <option value="{{ school.id }}">{{ school.name }}</option>
+{% endfor %}
+</select>
+<input id="send_magic_link_button" type="submit" value="Generate email" />
+</form>
+
 </div>
 </div>
 </div>
 {% endblock content %}
+
+{% block javascript_footer %}
+<script type="text/javascript">
+var csrf_token = "{{ csrf_token }}";
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+    }
+});
+
+$(document).ready(function() {
+    $("#send_magic_link").submit(function() { return false; })
+
+    $("#send_magic_link_button").click(function(event) {
+        var school_id = $("#magic_link_school").val()
+
+        $.ajax({
+            url: "/CGL/schools/" + school_id + "/magic_link_email",
+            type: "POST",
+            success: function(response) {
+                alert("Email sent!")
+            },
+            error: function(xhr) {
+                alert("Uhoh, something went wrong - send the CGL admins an email!")
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
