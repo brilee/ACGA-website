@@ -13,22 +13,22 @@
 <p>{{school.meeting_info}}</p>
 <h3><a href="{{ school.website }}">Club Website</a></h3>
 <hr />
-<h4>Participated, or is currently participating in the following seasons:</h4>
+<h4>CGL Participation</h4>
 <ul>
-{% for season_m in participating_seasons %}
-    <li><a href="{{season_m.season.get_absolute_url}}">{{season_m.season.name}}</a>: {{season_m.num_wins}}W, {{season_m.num_losses}}L, {{season_m.num_ties}}T.</li>
+{% for team in all_teams %}
+    <li><a href="{{team.get_absolute_url}}">{{team.season.name}}</a>: {{team.num_wins}}W, {{team.num_losses}}L, {{team.num_ties}}T.</li>
 {% endfor %}
 </ul>
 
 <hr />
-<h3>Active Roster</h3>
-<table id="roster">
+<h3>Active Players</h3>
+<table>
 	<tr>
 		<td>Name</td>
 		<td>Rank</td>
 		<td>KGS username</td>
 	</tr>
-{% for player in roster %}
+{% for player in actives %}
 	<tr>
 		<td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
 		<td>{{ player.get_rank_display }}</td>
@@ -39,7 +39,7 @@
 
 </table>
 <h3>Inactive Players</h3>
-<table id="roster">
+<table>
 	<tr>
 		<td>Name</td>
 		<td>Rank</td>

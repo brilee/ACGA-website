@@ -56,11 +56,9 @@ $(document).ready(function() {
         var board_id = $(this).attr("for");
         var game_id = $("input#game_id"+board_id).val();
         var player_name = $("select#player_name"+board_id).val();
-        var is_new_player = $("input#is_new_player"+board_id).is(":checked");
 
         var data = {
             "player_name": player_name,
-            "is_new_player": is_new_player
         };
 
         $.ajax({

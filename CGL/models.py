@@ -189,8 +189,12 @@ class Team(models.Model):
         return u"{} in {}{}".format(
             self.team_name,
             self.season.name,
-            ' (Inactive)' if not self.still_participating else ''
+            ' (Withdrawn)' if not self.still_participating else ''
         )
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGL.views.display_team', [self.id])
 
     def save(self, *args, **kwargs):
         if self.team_name == '':
@@ -277,9 +281,9 @@ class Match(models.Model):
 
     def display_result_html(self):
         return (
-            a_tag(self.team1.team_name.encode('utf8'), href=self.team1.school.get_absolute_url()) +
+            a_tag(self.team1.team_name.encode('utf8'), href=self.team1.get_absolute_url()) +
             ' ({} - {}) '.format(self.score1, self.score2) +
-            a_tag(self.team2.team_name.encode('utf8'), href=self.team2.school.get_absolute_url()) +
+            a_tag(self.team2.team_name.encode('utf8'), href=self.team2.get_absolute_url()) +
             (' (Exhibition match)' if self.is_exhibition else '')
         )
 
