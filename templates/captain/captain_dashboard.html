@@ -33,7 +33,7 @@
         <td>KGS username</td>
         <td>Edit</td>
     </tr>
-{% for player in school.player_set.all %}
+{% for player in school.player_set.all_but_unknown %}
     <tr>
         <td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
         <td>{{ player.get_rank_display }}</td>

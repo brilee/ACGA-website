@@ -80,6 +80,9 @@ class School(models.Model):
         else:
             return [self.contact_email]
 
+class PlayerManager(models.Manager):
+    def all_but_unknown(self):
+        return super(PlayerManager, self).exclude(name="Unknown Player")
 
 class Player(models.Model):
     RANK_CHOICES = ([(-10 * i, '%ip' % i) for i in range(9, 0, -1)] +
@@ -97,6 +100,7 @@ class Player(models.Model):
     receiveSpam = models.BooleanField(default=True, help_text="Uncheck if player doesn't want to get email reminders")
     isActive = models.BooleanField(default=True, help_text="Uncheck if player is inactive. Do not delete player; the database keeps track of everybody's games, including inactive players")
 
+    objects = PlayerManager()
     user = models.OneToOneField(auth_models.User, null=True, blank=True, on_delete=models.SET_NULL)
 
     class Meta:
