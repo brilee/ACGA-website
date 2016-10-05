@@ -25,7 +25,7 @@ def send_magic_link_email(school, AUTH_KEY_COOKIE_NAME=AUTH_KEY_COOKIE_NAME): # 
     school_auth = SchoolAuth.objects.get(school=school)
     c = Context(locals())
 
-    subject_line = "CGL Captain's admin panel -- magic link"
+    subject_line = "CGL Captain's dashbord -- magic link"
     email_body = t.render(c)
     recipients = [school.contact_email] + school.secondary_contacts.split(',')
 
@@ -59,11 +59,12 @@ def render_reminder_email():
 
     previous_round = Round.objects.get_previous_round()
     guilty_schools = set()
-    for match in previous_round.match_set.all():
-        if any(game.team1_player.name.startswith("Unknown") for game in match.game_set.all()):
-            guilty_schools.add(match.team1.school)
-        if any(game.team2_player.name.startswith("Unknown") for game in match.game_set.all()):
-            guilty_schools.add(match.team2.school)
+    if previous_round:
+        for match in previous_round.match_set.all():
+            if any(game.team1_player.name.startswith("Unknown") for game in match.game_set.all()):
+                guilty_schools.add(match.team1.school)
+            if any(game.team2_player.name.startswith("Unknown") for game in match.game_set.all()):
+                guilty_schools.add(match.team2.school)
 
     c = Context(locals())
     return t.render(c)

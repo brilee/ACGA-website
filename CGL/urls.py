@@ -2,8 +2,9 @@ from django.conf.urls import patterns, url
 from django.views.generic import TemplateView, RedirectView
 from django.core.urlresolvers import reverse_lazy
 
-from CGL.captain_views import (edit_all_matches, edit_season_matches,
-    edit_match, update_players, edit_school, edit_player, create_player, send_magic_link)
+from CGL.captain_views import (captain_dashboard, edit_season_matches,
+    edit_match, edit_game, edit_school, edit_player, create_player,
+    edit_team, send_magic_link)
 
 from CGL.admin_views import (admin_dashboard, email_dashboard,
     render_introductory_email_view, round_pairings, update_scores,
@@ -19,19 +20,20 @@ urlpatterns = patterns('CGL.views',
     (r'^players/$', 'display_player_search'),
     (r'^players/([0-9]{1,4})/$', 'display_player'),
     (r'^games/([0-9]{1,4})/$', 'display_game'),
-    (r'^games/([0-9]{1,4})/submit/$', 'submit_comment'),
+    (r'^teams/([0-9]{1,4})/$', 'display_team'),
 )
 
 urlpatterns += patterns("",
     url(r'^schools/([0-9]{1,4})/magic_link_email$', send_magic_link, name='send_magic_link'),
-    url(r'^matches/$', RedirectView.as_view(url=reverse_lazy('edit_all_matches'))),
-    url(r'^seasons/current/matches/$', edit_all_matches, name="edit_all_matches"),
+    url(r'^seasons/current/matches/$', RedirectView.as_view(url=reverse_lazy('captain_dashboard'))),
+    url(r'^captain_admin/$', captain_dashboard, name="captain_dashboard"),
     url(r'^seasons/([A-Za-z0-9_-]{1,50})/matches/$', edit_season_matches, name="edit_season_matches"),
-    url(r'^matches/([0-9]{1,4})/edit$', edit_match, name="edit_match"),
-    url(r'^games/([0-9]{1,4})/update_players/$', update_players, name="update_players"),
-    url(r'^schools/([A-Za-z0-9_-]{1,50})/edit$', edit_school, name="edit_school"),
+    url(r'^matches/([0-9]{1,4})/edit/$', edit_match, name="edit_match"),
+    url(r'^games/([0-9]{1,4})/edit/$', edit_game, name="edit_game"),
+    url(r'^schools/([A-Za-z0-9_-]{1,50})/edit/$', edit_school, name="edit_school"),
     url(r'^players/new$', create_player, name="create_player"),
-    url(r'^players/([0-9]{1,4})/edit$', edit_player, name="edit_player"),
+    url(r'^players/([0-9]{1,4})/edit/$', edit_player, name="edit_player"),
+    url(r'^teams/([0-9]{1,4})/edit/$', edit_team, name="edit_team"),
 )
 
 urlpatterns += patterns("",

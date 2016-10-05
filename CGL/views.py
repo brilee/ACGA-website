@@ -1,8 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import  HttpResponseRedirect
 
-from CGL.forms import CreateGameCommentForm
-from CGL.models import School, CurrentSeasons, Season, Team, Game, Player, GameComment
+from CGL.models import School, CurrentSeasons, Season, Team, Game, Player
 
 def display_schools(request):
     all_schools = School.objects.all()
@@ -11,11 +10,11 @@ def display_schools(request):
 
 def display_roster(request, school_name):
     school = get_object_or_404(School, slug_name=school_name)
-    roster = school.player_set.filter(isActive=1).order_by('rank')
+    actives = school.player_set.filter(isActive=1).order_by('rank')
     inactives = school.player_set.filter(isActive=0).order_by('rank')
-    participating_seasons = Team.objects.filter(school__slug_name=school_name)
+    all_teams = Team.objects.filter(school__slug_name=school_name)
 
-    return render(request, 'roster.html', locals())
+    return render(request, 'school.html', locals())
 
 def display_current_seasons(request):
     return display_seasons(request, CurrentSeasons.objects.get())
@@ -30,6 +29,10 @@ def display_seasons(request, seasons):
     all_seasons = Season.objects.all()
 
     return render(request, 'results.html', locals())
+
+def display_team(request, team_id):
+    team = get_object_or_404(Team, id=team_id)
+    return render(request, 'team.html', locals())
 
 def display_player_search(request):
     query = request.GET.get('query', '')
@@ -49,21 +52,8 @@ def display_player_search(request):
 
 def display_player(request, player_id):
     player = get_object_or_404(Player, id=player_id)
-    return render(request, 'players-detailed.html', locals())
+    return render(request, 'player.html', locals())
 
 def display_game(request, game_id):
     game = get_object_or_404(Game, id=game_id)
-    form = CreateGameCommentForm()
-    return render(request, 'game-detailed.html', locals())
-
-def submit_comment(request, game_id):
-    game = get_object_or_404(Game, id=game_id)
-    if request.method == 'POST':
-        form = CreateGameCommentForm(request.POST)
-        if form.is_valid():
-            comment = form.cleaned_data['comment']
-            user = request.user
-            new_comment = GameComment(game=game, comment=comment, user=user)
-            new_comment.save()
-    
-    return HttpResponseRedirect(game.get_absolute_url())
+    return render(request, 'game.html', locals())

@@ -1,0 +1,45 @@
+{% extends "base_CGL.html" %}
+{% block title %}Collegiate Go League - {{team.school.name}}{% endblock %}
+
+{% block maintext %}
+<h1>{{team}}</h1>
+
+<table>
+    <tr>
+        <th>Wins  </th>
+        <th>Losses  </th>
+        <th>Ties  </th>
+        <th>Byes </th>
+        <th><span style="color:red">Forfeited Games</span></th>
+    </tr>
+    <tr>
+        <td>{{team.num_wins}}</td>
+        <td>{{team.num_losses}}</td>
+        <td>{{team.num_ties}}</td>
+        <td>{{team.num_byes}}</td>
+        <td>{{team.num_forfeits}}</td>
+    </tr>
+</table>
+
+<hr />
+<h3>Roster</h3>
+<table id="roster">
+    <tr>
+        <td>Name</td>
+        <td>Rank</td>
+        <td>KGS username</td>
+    </tr>
+{% for player in team.players.all %}
+    <tr>
+        <td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
+        <td>{{ player.get_rank_display }}</td>
+        <td>{{ player.KGS_username }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+<hr />
+<h3>See also</h3>
+<p><a href={{team.school.get_absolute_url}}>{{team.school}}</a></p>
+<p><a href={{team.season.get_absolute_url}}>{{team.season}}</a></p>
+{% endblock maintext %}

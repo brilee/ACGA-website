@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from CGL.models import SchoolAuth, Player, School, Match, Forfeit, Game
+from CGL.models import SchoolAuth, Player, School, Match, Forfeit, Game, Team
 
 AUTH_KEY_COOKIE_NAME = "captain_school_auth"
 
@@ -43,6 +43,8 @@ def check_auth(school, obj):
         return obj == school
     elif type(obj) == Match:
         return obj.team1.school == school or obj.team2.school == school
+    elif type(obj) == Team:
+        return obj.school == school
     elif type(obj) == Game:
         return obj.match.team1.school == school or obj.match.team2.school == school
     elif type(obj) == Forfeit:

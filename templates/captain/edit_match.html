@@ -18,13 +18,15 @@
 <div class="row">
     <div class="eight columns"><label>Board {{game.board}}</label>
         <select id="player_name{{game.board}}">
-            <option selected="selected">
-                {% if school_is_team1 %}{{game.team1_player.name}}{% else %}{{game.team2_player.name}}{% endif %}
-            </option>
-            <option>--------------</option>
-            {% for player in school.player_set.all %}
-            <option>{{player.name}}</option>
+        {% if school_is_team1 %}
+            {% for player in match.team1.players.all %}
+            <option {% if player.name == game.team1_player.name %} selected="selected" {% endif %}>{{player.name}}</option>
             {% endfor %}
+        {% else %}
+            {% for player in match.team2.players.all %}
+            <option {% if player.name == game.team2_player.name %} selected="selected" {% endif %}>{{player.name}}</option>
+            {% endfor %}
+        {% endif %}
         </select>
     </div>
     <div class="four columns"><label>&nbsp;</label><input for="{{game.board}}" type="submit" value="Update board" /><label id="error{{game.board}}"></label></div>
@@ -34,8 +36,6 @@
 <p>No games entered yet</p>
 {% endfor %}
 </form>
-
-{% include 'roster_snippet.html' %}
 
 {% endblock %}
 
@@ -50,28 +50,28 @@ $.ajaxSetup({
 });
 
 $(document).ready(function() {
+    var EDIT_GAME_URL = "{% url edit_game 1717 %}"
     $("#match_edit_form").submit(function() { return false; })
 
     $("input[type=submit]").click(function(event) {
         var board_id = $(this).attr("for");
         var game_id = $("input#game_id"+board_id).val();
         var player_name = $("select#player_name"+board_id).val();
-        var is_new_player = $("input#is_new_player"+board_id).is(":checked");
 
         var data = {
             "player_name": player_name,
-            "is_new_player": is_new_player
         };
 
         $.ajax({
-            url: "/CGL/games/"+game_id+"/update_players/",
+            url: EDIT_GAME_URL.replace(1717, game_id),
             type: "PUT",
             data: JSON.stringify(data),
             success: function(response) {
                 $("label#error"+board_id).text("Updated!");
             },
-            error: function(response) {
-                $("label#error"+board_id).text(response['responseText']);
+            error: function(xhr, textStatus, errorThrown) {
+                var error_message = xhr['responseText']
+                $("label#error"+board_id).text(error_message);
             }
         });
     });

@@ -1,2 +1,2 @@
 Somebody recently requested the magic link. Click the following link to make changes for {{school.name}}
-https://college-go.org{% url edit_all_matches %}?{{AUTH_KEY_COOKIE_NAME}}={{school_auth.secret_key}}
+https://college-go.org{% url captain_dashboard %}?{{AUTH_KEY_COOKIE_NAME}}={{school_auth.secret_key}}

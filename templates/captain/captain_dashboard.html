@@ -1,0 +1,26 @@
+{% extends 'base_CGL.html' %}
+
+{% block maintext %}
+<h1>Team Captain Dashboard</h1>
+
+<p><strong><a href="{{school.get_absolute_url}}">{{school.name}}</a></strong> - <a href="{% url edit_school school.slug_name %}">[Edit school info]</a></p>
+<ul class="disc">
+    <li>Club President: {{school.club_president}}</li>
+    <li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
+    <li>Contact email: {{school.contact_email}}</li>
+    <li>Meeting information: {{school.meeting_info}}</li>
+    <li>Participating in CGL? {% if school.inCGL %}Yes{% else %}No{% endif %}</li>
+</ul>
+<p></p>
+<hr />
+<h2>Your teams</h2>
+{% for team in all_teams %}
+<p>{{team}}</p>
+<ul> 
+    <li><a href="{% url edit_season_matches team.season.slug_name %}">Record the players for {{team.team_name}}' s matches</a></li>
+    <li><a href="{% url edit_team team.id %}">Update the roster for {{team.team_name}}</a></li>
+</ul>
+{% empty %}
+<p> You don't have any teams competing in the CGL this year. Send us an email if you want in! </p>
+{% endfor %}
+{% endblock %}

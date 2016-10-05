@@ -16,6 +16,8 @@ from sgf import MySGFGame
 
 SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
+MAX_PLAYERS_PER_ROSTER = 5
+
 def html_tag(tag):
     def f(text, **kwargs):
         '''
@@ -189,8 +191,12 @@ class Team(models.Model):
         return u"{} in {}{}".format(
             self.team_name,
             self.season.name,
-            ' (Inactive)' if not self.still_participating else ''
+            ' (Withdrawn)' if not self.still_participating else ''
         )
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('CGL.views.display_team', [self.id])
 
     def save(self, *args, **kwargs):
         if self.team_name == '':
@@ -277,9 +283,9 @@ class Match(models.Model):
 
     def display_result_html(self):
         return (
-            a_tag(self.team1.team_name.encode('utf8'), href=self.team1.school.get_absolute_url()) +
+            a_tag(self.team1.team_name.encode('utf8'), href=self.team1.get_absolute_url()) +
             ' ({} - {}) '.format(self.score1, self.score2) +
-            a_tag(self.team2.team_name.encode('utf8'), href=self.team2.school.get_absolute_url()) +
+            a_tag(self.team2.team_name.encode('utf8'), href=self.team2.get_absolute_url()) +
             (' (Exhibition match)' if self.is_exhibition else '')
         )
 
@@ -481,21 +487,6 @@ class Bye(models.Model):
 
     def __unicode__(self):
         return u'{} got a bye on {}'.format(self.team.school.name, unicode(self.round.date))
-
-class CommentBase(models.Model):
-    user = models.ForeignKey(auth_models.User)
-    datetime = models.DateTimeField(auto_now_add=True)
-    comment = models.TextField(max_length=1000)
-
-    class Meta:
-        abstract = True
-        ordering = ['-datetime']
-
-    def __unicode__(self):
-        return u'{}: {}'.format(self.user.username, self.comment[:100])
-
-class GameComment(CommentBase):
-    game = models.ForeignKey(Game)
 
 class SchoolAuth(models.Model):
     school = models.ForeignKey(School)

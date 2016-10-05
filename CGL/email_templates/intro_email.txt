@@ -22,7 +22,7 @@ Please share this tournament information with your teammates, and respond to thi
 
 Afterwards, the games will be automatically uploaded to our servers, where they will be marked as "Unknown Player". You should then go to this URL to find those matches and update the player names as appropriate. 
 
-https://college-go.org{% url edit_all_matches %}?{{AUTH_KEY_COOKIE_NAME}}={{school_auth.secret_key}}
+https://college-go.org{% url captain_dashboard %}?{{AUTH_KEY_COOKIE_NAME}}={{school_auth.secret_key}}
 
 
 Good luck in the CGL!
