@@ -10,7 +10,7 @@ from CGL.captain_auth import school_auth_required, get_school, check_auth
 from CGL.forms import EditSchoolForm, EditPlayerForm
 
 @school_auth_required
-def edit_all_matches(request):
+def captain_dashboard(request):
     return edit_matches_for_seasons(request, CurrentSeasons.objects.get())
 
 @school_auth_required
@@ -85,7 +85,7 @@ def edit_player(request, player_id):
     
 @require_http_methods(["PUT"])
 @school_auth_required
-def update_players(request, game_id):
+def edit_game(request, game_id):
     school = get_school(request)
     game = get_object_or_404(Game, id=game_id)
     if not check_auth(school, game):

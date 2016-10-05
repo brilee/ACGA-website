@@ -17,6 +17,6 @@ def regenerate_school_auth_keys(school):
         urlparse.urlunparse([
             "",
             settings.WEB_URL,
-            reverse("edit_all_matches"), "",
+            reverse("captain_dashboard"), "",
             AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key, ""]
     ))

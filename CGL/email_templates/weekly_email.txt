@@ -2,7 +2,7 @@ Subject:[CGL] Results and next week matches
 
 Hi everyone,
 
-Games have been uploaded for the most recent round ({{previous_round.date}}). If you haven't yet filled in player names for your match, you should do so at https://college-go.org{% url edit_all_matches %}
+Games have been uploaded for the most recent round ({{previous_round.date}}). If you haven't yet filled in player names for your match, you should do so at https://college-go.org{% url captain_dashboard %}
 
 {% for season in current_seasons %}
 {{season.name}}
