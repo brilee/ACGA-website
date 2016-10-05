@@ -43,11 +43,12 @@ def render_reminder_email():
 
     previous_round = Round.objects.get_previous_round()
     guilty_schools = set()
-    for match in previous_round.match_set.all():
-        if any(game.team1_player.name.startswith("Unknown") for game in match.game_set.all()):
-            guilty_schools.add(match.team1.school)
-        if any(game.team2_player.name.startswith("Unknown") for game in match.game_set.all()):
-            guilty_schools.add(match.team2.school)
+    if previous_round:
+        for match in previous_round.match_set.all():
+            if any(game.team1_player.name.startswith("Unknown") for game in match.game_set.all()):
+                guilty_schools.add(match.team1.school)
+            if any(game.team2_player.name.startswith("Unknown") for game in match.game_set.all()):
+                guilty_schools.add(match.team2.school)
 
     c = Context(locals())
     return t.render(c)

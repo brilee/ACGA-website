@@ -79,13 +79,13 @@ class IntegrationTest(TestWithCGLSetup):
     def test_captain_edit_views(self):
         school = School.objects.create(name="blah school")
         auth = SchoolAuth.objects.create(school=school)
-        response = self.client.get("/CGL/seasons/current/matches/")
+        response = self.client.get("/CGL/captain_admin/")
         # not authed yet.
         assert response.status_code == 403
-        response = self.client.get("/CGL/seasons/current/matches/?" + AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key)
+        response = self.client.get("/CGL/captain_admin/?" + AUTH_KEY_COOKIE_NAME + "=" + auth.secret_key)
         assert response.status_code == 200
         # should have set a cookie
-        response = self.client.get("/CGL/seasons/current/matches/")
+        response = self.client.get("/CGL/captain_admin/")
         assert response.status_code == 200
 
 
