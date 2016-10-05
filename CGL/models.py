@@ -100,7 +100,7 @@ class Player(models.Model):
     user = models.OneToOneField(auth_models.User, null=True, blank=True, on_delete=models.SET_NULL)
 
     class Meta:
-        ordering = ['school', 'name', 'rank']
+        ordering = ['school', 'rank', 'name']
 
     def save(self, *args, **kwargs):
         self.slug_name = slugify(self.name)

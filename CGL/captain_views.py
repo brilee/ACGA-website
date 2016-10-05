@@ -68,7 +68,7 @@ def create_player(request):
         if form.is_valid():
             new_player = Player(school=school, **form.cleaned_data)
             new_player.save()
-            return redirect('edit_school', school.slug_name)
+            return redirect('captain_dashboard')
     return render(request, 'create_player.html', locals())
 
 @school_auth_required

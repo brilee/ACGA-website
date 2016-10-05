@@ -15,7 +15,7 @@
 <hr />
 <h2>Your teams</h2>
 {% for team in all_teams %}
-<p>{{team}}</p>
+<p><a href="{{ team.get_absolute_url }}">{{team}}</a></p>
 <ul> 
     <li><a href="{% url edit_season_matches team.season.slug_name %}">Record the players for {{team.team_name}}' s matches</a></li>
     <li><a href="{% url edit_team team.id %}">Update the roster for {{team.team_name}}</a></li>
@@ -23,4 +23,21 @@
 {% empty %}
 <p> You don't have any teams competing in the CGL this year. Send us an email if you want in! </p>
 {% endfor %}
+
+<h2>Your players</h2>
+<p><a href="{% url create_player %}">Click here to add a new player</a></p>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Rank</td>
+        <td>KGS username</td>
+    </tr>
+{% for player in school.player_set.all %}
+    <tr>
+        <td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
+        <td>{{ player.get_rank_display }}</td>
+        <td>{{ player.KGS_username }}</td>
+    </tr>
+{% endfor %}
+</table>
 {% endblock %}
