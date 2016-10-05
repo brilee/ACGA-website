@@ -1,7 +1,7 @@
 {% extends 'base_CGL.html' %}
 
 {% block maintext %}
-<p><a href="{% url edit_school school.slug_name %}">Back to school roster</a></p>
+<p><a href="{% url captain_dashboard %}">Back to Team Captain Dashboard</a></p>
 <h4> Edit your player's information </h4>
 <form method="post">
 {% include 'form_snippet.html' %}

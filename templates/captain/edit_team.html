@@ -1,0 +1,32 @@
+{% extends 'base_CGL.html' %}
+{% block javascript %}
+<style>
+    .form_error { color: #F00; }
+    #player_select > ul { list-style-type: none; }
+</style>
+{% endblock %}
+
+{% block maintext %}
+<p><a href="{% url captain_dashboard %}">Back to Team Captain Dashboard</a></p>
+
+<h4> Editing roster for {{team}} </h4>
+<form method="post">
+{% csrf_token %}
+    <div class="row">
+        <p> Select up to 5 players from {{school.name}}</p>
+        {% if form.players.errors %}
+            <ul class="form_error">
+            {% for error in form.players.errors %}
+                <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+        <div class="ten mobile-three columns" id="player_select">
+            {{form.players}}
+            <p><em>{{form.players.help_text}}</em></p>
+        </div>
+    </div>
+<input type="submit" value="Update roster">
+</form>
+{% endblock %}

@@ -16,6 +16,8 @@ from sgf import MySGFGame
 
 SCHOOL1, SCHOOL2 = 'School1', 'School2'
 
+MAX_PLAYERS_PER_ROSTER = 5
+
 def html_tag(tag):
     def f(text, **kwargs):
         '''

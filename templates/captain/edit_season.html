@@ -1,0 +1,23 @@
+{% extends 'base_CGL.html' %}
+
+{% block maintext %}
+<p><a href="{% url captain_dashboard %}">Back to Team Captain Dashboard</a></p>
+
+<h3>Record Players</h3>
+
+<p> Here are all of your matches from this season. Please go through these matches and record the names of the players who played in each match.</p>
+
+{% if relevant_matches %}
+{% for match in relevant_matches %}
+<h4>{{match.round.date}} {{match.display_match}}</h4>
+<ul class="disc">
+    {% for game in match.game_set.all %}
+	<li>{{game.result_html|safe}}</li>
+    {% endfor %}
+</ul>
+<p><strong><a href="{% url edit_match match.id %}">Record your players</a></strong></p>
+{% endfor %}
+{% else %}
+<p> No matches played yet. Check back after your first match!</p>
+{% endif %}
+{% endblock %}

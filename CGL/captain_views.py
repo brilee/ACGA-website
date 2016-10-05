@@ -5,13 +5,15 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404, redirect
 
-from CGL.models import Season, Match, Game, Player, School, CurrentSeasons
+from CGL.models import Season, Match, Game, Player, School, CurrentSeasons, Team
 from CGL.captain_auth import school_auth_required, get_school, check_auth
-from CGL.forms import EditSchoolForm, EditPlayerForm
+from CGL.forms import EditSchoolForm, EditPlayerForm, EditTeamForm
 
 @school_auth_required
 def captain_dashboard(request):
-    return edit_matches_for_seasons(request, CurrentSeasons.objects.get())
+    school = get_school(request)
+    all_teams = Team.objects.filter(school=school, season__in=CurrentSeasons.objects.get())
+    return render(request, 'captain_dashboard.html', locals())
 
 @school_auth_required
 def edit_season_matches(request, season_name):
@@ -30,7 +32,7 @@ def edit_matches_for_seasons(request, season_names):
                  or m.team2.school == school)]
 
     all_seasons = Season.objects.all()
-    return render(request, 'captain_dashboard.html', locals())
+    return render(request, 'edit_season.html', locals())
 
 @school_auth_required
 def edit_match(request, match_id):
@@ -115,3 +117,19 @@ def edit_game(request, game_id):
     game.save()
 
     return HttpResponse("success")
+
+@school_auth_required
+def edit_team(request, team_id):
+    school = get_school(request)
+    team = get_object_or_404(Team, id=team_id)
+    if not check_auth(school, team):
+        raise PermissionDenied
+
+    if request.method == 'POST':
+        form = EditTeamForm(request.POST, instance=team)
+        if form.is_valid():
+            form.save()
+    else:
+        form = EditTeamForm(instance=team)
+    form.fields['players'].queryset = Player.objects.filter(school=school)
+    return render(request, 'edit_team.html', locals())

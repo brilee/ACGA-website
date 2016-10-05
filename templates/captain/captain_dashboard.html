@@ -1,30 +1,26 @@
 {% extends 'base_CGL.html' %}
 
 {% block maintext %}
-<h3>Record Players</h3>
+<h1>Team Captain Dashboard</h1>
 
-<p> Here are all of your matches from this season. Please go through these matches and record the names of the players who played in each match.</p>
-
-{% if relevant_matches %}
-{% for match in relevant_matches %}
-<h4>{{match.round.date}} {{match.display_match}}</h4>
+<p><strong><a href="{{school.get_absolute_url}}">{{school.name}}</a></strong> - <a href="{% url edit_school school.slug_name %}">[Edit school info]</a></p>
 <ul class="disc">
-    {% for game in match.game_set.all %}
-	<li>{{game.result_html|safe}}</li>
-    {% endfor %}
+    <li>Club President: {{school.club_president}}</li>
+    <li>Club Website: <a href="{{school.website}}">{{school.website}}</a></li>
+    <li>Contact email: {{school.contact_email}}</li>
+    <li>Meeting information: {{school.meeting_info}}</li>
+    <li>Participating in CGL? {% if school.inCGL %}Yes{% else %}No{% endif %}</li>
 </ul>
-<p><strong><a href="{% url edit_match match.id %}">Record your players</a></strong></p>
+<p></p>
+<hr />
+<h2>Your teams</h2>
+{% for team in all_teams %}
+<p>{{team}}</p>
+<ul> 
+    <li><a href="{% url edit_season_matches team.season.slug_name %}">Record the players for {{team.team_name}}' s matches</a></li>
+    <li><a href="{% url edit_team team.id %}">Update the roster for {{team.team_name}}</a></li>
+</ul>
+{% empty %}
+<p> You don't have any teams competing in the CGL this year. Send us an email if you want in! </p>
 {% endfor %}
-{% else %}
-<p> No matches played yet. Check back after your first match!</p>
-{% endif %}
-<hr />
-<h4><a href="{% url edit_school school.slug_name %}">Edit your school info / roster </a></h4>
-<hr />
-<h4>See matches from previous seasons</h4>
-<ul class="disc">
-    {% for season in all_seasons %}
-    <li><a href="{% url edit_season_matches season.slug_name %}">{{season.name}}</a></li>
-    {% endfor %}
-</ul>
 {% endblock %}

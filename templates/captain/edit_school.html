@@ -1,13 +1,11 @@
 {% extends 'base_CGL.html' %}
 
 {% block maintext %}
-<p><a href="{% url captain_dashboard %}">Back to all matches</a></p>
+<p><a href="{% url captain_dashboard %}">Back to Team Captain Dashboard</a></p>
 <h4> Edit your school's information </h4>
 <form method="post">
 {% include 'form_snippet.html' %}
 <input type="submit" value="Update information">
 </form>
-
-{% include 'roster_snippet.html' %}
 
 {% endblock %}
