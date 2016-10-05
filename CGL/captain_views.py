@@ -89,12 +89,23 @@ def edit_game(request, game_id):
     school = get_school(request)
     game = get_object_or_404(Game, id=game_id)
     if not check_auth(school, game):
-        raise PermissionDenied
+        return HttpResponse("Game wasn't played by your school", status=403)
+    if not game.match.round.season in CurrentSeasons.objects.get():
+        return HttpResponseBadRequest("Can't edit games from old seasons")
+
     submitted_data = json.loads(request.body)
     try:
         player = Player.objects.get(name=submitted_data['player_name'], school=school)
     except Player.DoesNotExist:
         return HttpResponseBadRequest('Couldn\'t find player')
+
+    if game.match.team1.school == school:
+        valid_roster = game.match.team1.players.all()
+    else:
+        valid_roster = game.match.team2.players.all()
+
+    if not player in valid_roster:
+        return HttpResponseBadRequest("Submitted player is not in current roster")
 
     if game.match.team1.school == school:
         game.team1_player = player

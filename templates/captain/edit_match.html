@@ -18,13 +18,15 @@
 <div class="row">
     <div class="eight columns"><label>Board {{game.board}}</label>
         <select id="player_name{{game.board}}">
-            <option selected="selected">
-                {% if school_is_team1 %}{{game.team1_player.name}}{% else %}{{game.team2_player.name}}{% endif %}
-            </option>
-            <option>--------------</option>
-            {% for player in school.player_set.all %}
-            <option>{{player.name}}</option>
+        {% if school_is_team1 %}
+            {% for player in match.team1.players.all %}
+            <option {% if player.name == game.team1_player.name %} selected="selected" {% endif %}>{{player.name}}</option>
             {% endfor %}
+        {% else %}
+            {% for player in match.team2.players.all %}
+            <option {% if player.name == game.team2_player.name %} selected="selected" {% endif %}>{{player.name}}</option>
+            {% endfor %}
+        {% endif %}
         </select>
     </div>
     <div class="four columns"><label>&nbsp;</label><input for="{{game.board}}" type="submit" value="Update board" /><label id="error{{game.board}}"></label></div>
@@ -69,8 +71,9 @@ $(document).ready(function() {
             success: function(response) {
                 $("label#error"+board_id).text("Updated!");
             },
-            error: function(response) {
-                $("label#error"+board_id).text(response['responseText']);
+            error: function(xhr, textStatus, errorThrown) {
+                var error_message = xhr['responseText']
+                $("label#error"+board_id).text(error_message);
             }
         });
     });
