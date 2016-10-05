@@ -30,7 +30,7 @@ def edit_matches_for_seasons(request, season_names):
                  or m.team2.school == school)]
 
     all_seasons = Season.objects.all()
-    return render(request, 'matches.html', locals())
+    return render(request, 'captain_dashboard.html', locals())
 
 @school_auth_required
 def edit_match(request, match_id):
@@ -38,7 +38,7 @@ def edit_match(request, match_id):
     all_players = Player.objects.filter(school=school)
     match = get_object_or_404(Match, id=match_id)
     school_is_team1 = match.team1.school == school
-    return render(request, 'matches-detailed.html', locals())
+    return render(request, 'edit_match.html', locals())
 
 @school_auth_required
 def edit_school(request, school_slug):

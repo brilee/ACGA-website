@@ -52,8 +52,8 @@ def display_player_search(request):
 
 def display_player(request, player_id):
     player = get_object_or_404(Player, id=player_id)
-    return render(request, 'players-detailed.html', locals())
+    return render(request, 'player.html', locals())
 
 def display_game(request, game_id):
     game = get_object_or_404(Game, id=game_id)
-    return render(request, 'game-detailed.html', locals())
+    return render(request, 'game.html', locals())
