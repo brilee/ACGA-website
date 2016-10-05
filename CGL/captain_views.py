@@ -139,5 +139,5 @@ def edit_team(request, team_id):
             form.save()
     else:
         form = EditTeamForm(instance=team)
-    form.fields['players'].queryset = Player.objects.filter(school=school)
+    form.fields['players'].queryset = school.player_set.all_but_unknown()
     return render(request, 'edit_team.html', locals())
