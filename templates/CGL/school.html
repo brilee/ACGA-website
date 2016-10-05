@@ -19,40 +19,4 @@
     <li><a href="{{team.get_absolute_url}}">{{team.season.name}}</a>: {{team.num_wins}}W, {{team.num_losses}}L, {{team.num_ties}}T.</li>
 {% endfor %}
 </ul>
-
-<hr />
-<h3>Active Players</h3>
-<table>
-	<tr>
-		<td>Name</td>
-		<td>Rank</td>
-		<td>KGS username</td>
-	</tr>
-{% for player in actives %}
-	<tr>
-		<td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
-		<td>{{ player.get_rank_display }}</td>
-		<td>{{ player.KGS_username }}</td>
-	</tr>
-{% endfor %}
-
-
-</table>
-<h3>Inactive Players</h3>
-<table>
-	<tr>
-		<td>Name</td>
-		<td>Rank</td>
-		<td>KGS username</td>
-	</tr>
-{% for player in inactives %}
-	<tr>
-		<td><a href="{{player.get_absolute_url}}">{{player.name}}</a></td>
-		<td>{{ player.get_rank_display }}</td>
-		<td>{{ player.KGS_username }}</td>
-	</tr>
-{% endfor %}
-</table>
-
-<p>**Inactive Players are detected automatically every time the server updates. Players are marked inactive if their last game was over six months ago.</p>
 {% endblock maintext %}
