@@ -16,7 +16,6 @@ urlpatterns = patterns('CGL.views',
     (r'^players/$', 'display_player_search'),
     (r'^players/([0-9]{1,4})/$', 'display_player'),
     (r'^games/([0-9]{1,4})/$', 'display_game'),
-    (r'^games/([0-9]{1,4})/submit/$', 'submit_comment'),
     (r'^teams/([0-9]{1,4})/$', 'display_team'),
 )
 

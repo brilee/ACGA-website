@@ -1,10 +1,5 @@
 from django import forms
-from CGL.models import GameComment, School, Player
-
-class CreateGameCommentForm(forms.ModelForm):
-    class Meta:
-        model = GameComment
-        fields = ['comment']
+from CGL.models import School, Player
 
 class EditSchoolForm(forms.ModelForm):
     class Meta:

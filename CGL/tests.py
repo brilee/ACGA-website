@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
 
-from CGL.models import Season, CurrentSeasons, Player, School, Team, Round, Match, Game, Forfeit, GameComment, a_tag, SchoolAuth
+from CGL.models import Season, CurrentSeasons, Player, School, Team, Round, Match, Game, Forfeit, a_tag, SchoolAuth
 from CGL.captain_auth import AUTH_KEY_COOKIE_NAME
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
 from CGL.transactional_emails import render_introductory_email, render_weekly_email, render_reminder_email
@@ -75,21 +75,6 @@ class IntegrationTest(TestWithCGLSetup):
                 import traceback
                 traceback.print_exc()
                 print ("Failed to get %s" % url)
-
-    def test_public_post_views(self):
-        url_comment = (
-            ('/CGL/games/%s/submit/' % self.test_game.id, GameComment),
-        )
-        for url, comment_model in url_comment:
-            comment_text = 'Test Comment to %s' % url
-            try:
-                response = self.client.post(url, {'comment': comment_text})
-                self.assertEquals(response.status_code, 302)
-                new_comment = comment_model.objects.get(pk=1)
-                self.assertEquals(new_comment.comment, comment_text)
-            except:
-                import traceback
-                traceback.print_exc()
 
     def test_captain_edit_views(self):
         school = School.objects.create(name="blah school")

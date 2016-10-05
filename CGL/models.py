@@ -486,21 +486,6 @@ class Bye(models.Model):
     def __unicode__(self):
         return u'{} got a bye on {}'.format(self.team.school.name, unicode(self.round.date))
 
-class CommentBase(models.Model):
-    user = models.ForeignKey(auth_models.User)
-    datetime = models.DateTimeField(auto_now_add=True)
-    comment = models.TextField(max_length=1000)
-
-    class Meta:
-        abstract = True
-        ordering = ['-datetime']
-
-    def __unicode__(self):
-        return u'{}: {}'.format(self.user.username, self.comment[:100])
-
-class GameComment(CommentBase):
-    game = models.ForeignKey(Game)
-
 class SchoolAuth(models.Model):
     school = models.ForeignKey(School)
     secret_key = models.CharField(max_length=16, null=False)

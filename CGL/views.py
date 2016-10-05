@@ -1,8 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import  HttpResponseRedirect
 
-from CGL.forms import CreateGameCommentForm
-from CGL.models import School, CurrentSeasons, Season, Team, Game, Player, GameComment
+from CGL.models import School, CurrentSeasons, Season, Team, Game, Player
 
 def display_schools(request):
     all_schools = School.objects.all()
@@ -57,17 +56,4 @@ def display_player(request, player_id):
 
 def display_game(request, game_id):
     game = get_object_or_404(Game, id=game_id)
-    form = CreateGameCommentForm()
     return render(request, 'game-detailed.html', locals())
-
-def submit_comment(request, game_id):
-    game = get_object_or_404(Game, id=game_id)
-    if request.method == 'POST':
-        form = CreateGameCommentForm(request.POST)
-        if form.is_valid():
-            comment = form.cleaned_data['comment']
-            user = request.user
-            new_comment = GameComment(game=game, comment=comment, user=user)
-            new_comment.save()
-    
-    return HttpResponseRedirect(game.get_absolute_url())
