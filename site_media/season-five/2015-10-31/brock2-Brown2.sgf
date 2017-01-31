@@ -1,0 +1,329 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]HA[5]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[brock2]PB[Brown2]DT[2015-10-31]PC[The KGS Go Server at http://www.gokgs.com/]RE[W+Resign]
+;B[pd]BL[1795.616]
+;B[pp]BL[1793.186]
+;B[dd]BL[1791.663]
+;B[dp]BL[1790.377]
+;B[jj]BL[1788.976]C[brock2 [-\]: Hello Brown2, so my name is Justin Shih from Brock
+]
+;W[nq]WL[1777.494]C[Brown2 [-\]: I'm Jake Small from Brown. Good luck.
+]
+;B[oq]BL[1765.554]
+;W[np]WL[1775.501]
+;B[pn]BL[1758.002]
+;W[fq]WL[1773.656]
+;B[iq]BL[1754.283]
+;W[kq]WL[1768.862]
+;B[io]BL[1752.716]C[brock2 [-\]: let me know whenever you want the discuss
+]
+;W[cq]WL[1765.771]C[brock2 [-\]: or more aggresively
+]
+(;B[dq]BL[1747.096]
+;W[cp]WL[1764.669]C[Brown2 [-\]: Would c2 have been better?
+brock2 [-\]: i think c5 would be better than c2
+brock2 [-\]: because you do want to seal me inside
+brock2 [-\]: but c5 gives a lot of cut points which lead to fights
+brock2 [-\]: I would go with d5
+Brown2 [-\]: I see.
+]
+(;B[co]BL[1737.712]C[brock2 [-\]: I think c5 is a bit too agressive
+]
+;W[do]WL[1696.805]
+;B[cr]BL[1720.965]
+;W[br]WL[1686.688]
+;B[cn]BL[1681.279]
+;W[dr]WL[1671.656]C[brock2 [-\]: if i were you i would do e2
+brock2 [-\]: can you play it? i gave you control
+]
+(;B[eo]BL[1657.696]
+;W[eq]WL[1662.964]C[brock2 [-\]: after e3
+brock2 [-\]: I would personally prefer d6
+brock2 [-\]: so the trade off of a potential few points for getting rid of the threat is worth it
+]
+(;B[ep]BL[1655.657]
+;W[cf]WL[1659.582]
+;B[ce]BL[1650.123]
+;W[df]WL[1656.761]
+;B[fd]BL[1648.668]C[Brown2 [-\]: *e5
+]
+;W[cj]WL[1654.654]
+;B[dn]BL[1646.44]C[Brown2 [-\]: If you were to respond with 35 would you not capture though?
+Brown2 [-\]: Right, especially since I took it anyway there.
+brock2 [-\]: yep
+brock2 [-\]: basically it means that you took it initially
+brock2 [-\]: then played e4
+brock2 [-\]: if you re sequence the moves
+brock2 [-\]: and e4 doesn't really add a lot of value
+]
+;W[gp]WL[1649.161]
+;B[gr]BL[1641.456]
+;W[fr]WL[1634.833]C[brock2 [-\]: i would go g6
+brock2 [-\]: imagine you are a hunter, you don't stand next to your prey
+brock2 [-\]: you follow it closely, keep a good distance, not too far that you won't able to reach it when there's an opening
+brock2 [-\]: and not too close to start the fight when things are not on your side
+]
+(;B[go]BL[1628.194]C[brock2 [-\]: g5 is a bit too strong
+]
+;W[hp]WL[1632.997]
+;B[ip]BL[1626.617]C[brock2 [-\]: j4 block is good though
+Brown2 [-\]: I see, & this time way black would actually live there.
+brock2 [-\]: yep
+brock2 [-\]: but the thing is, it also attacks the white group
+brock2 [-\]: so it's both a defensive and offensive play
+]
+;W[ho]WL[1632.078]
+;B[hn]BL[1622.586]C[brock2 [-\]: this block is a bit reckless
+brock2 [-\]: because there's many cut points
+]
+;W[gn]WL[1630.181]C[brock2 [-\]: i would just connect j6
+]
+(;B[fo]BL[1618.667]
+;W[in]WL[1629.14]
+;B[hm]BL[1593.053]
+;W[jn]WL[1625.009]
+;B[kp]BL[1589.765]
+;W[lo]WL[1527.879]C[brock2 [-\]: l4 is a good move though
+brock2 [-\]: really disturbing
+]
+;B[lq]BL[1522.499]
+(;W[or]WL[1461.722]C[brock2 [-\]: but q2 is what i wanted
+Brown2 [-\]: I think that I see.
+brock2 [-\]: so I would just give up the corner
+brock2 [-\]: and play say
+]
+(;B[pr]BL[1515.199]C[Brown2 [-\]: Should I have ignored p2 & tried to escape for the center?
+brock2 [-\]: yep
+brock2 [-\]: because by playing q2, i wanted to prevent the connect you may play by playing m2
+]
+;W[kr]WL[1439.998]
+;B[lr]BL[1506.338]
+;W[lp]WL[1325.216]C[Brown2 [-\]: Oh, since that threatens the k6 group too, I get it.
+brock2 [-\]: yep
+brock2 [-\]: and here, i would say it's the last straw that kills the black group
+]
+(;B[jq]BL[1487.284]
+;W[ko]WL[1322.252]C[brock2 [-\]: because you gave white a good move to connect the stones
+brock2 [-\]: and make them stronger
+brock2 [-\]: alternatively
+]
+;B[jp]BL[1445.878]
+;W[mr]WL[1318.086]
+;B[jr]BL[1440.863]
+;W[hr]WL[1314.239]
+;B[hq]BL[1435.608]
+;W[gq]WL[1312.498]
+;B[pf]BL[1419.006]C[brock2 [-\]: q14 is really good
+brock2 [-\]: that was my next target :)
+]
+;W[qq]WL[1299.696]C[brock2 [-\]: i didn't play very well here
+brock2 [-\]: it's too small 
+Brown2 [-\]: So I should just have given you the corner, & made up for it with a wall towards the left side.
+brock2 [-\]: yep
+brock2 [-\]: because the most white can get from the corner is 10 15 points
+brock2 [-\]: with 2 to 3 moves
+brock2 [-\]: imagine how many points you can get with 2 to 3 moves elsewhere
+]
+(;B[pq]BL[1415.258]
+;W[qo]WL[1297.646]
+;B[qp]BL[1410.815]
+;W[qn]WL[1294.216]
+;B[pm]BL[1394.721]
+;W[qm]WL[1292.398]
+;B[po]BL[1373.687]
+;W[qk]WL[1288.7]
+;B[ro]BL[1371.304]
+;W[rn]WL[1287.209]
+(;B[rq]BL[1368.16]C[brock2 [-\]: s3  is not big enough either
+brock2 [-\]: unless you want to kill the white stones
+brock2 [-\]: but white has the tempo
+Brown2 [-\]: I see, & in returrn get more of the upper corner.
+]
+(;W[kc]WL[1267.397]C[brock2 [-\]: yup
+]
+;B[rj]BL[1363.881]C[brock2 [-\]: s10 is a bit too close
+brock2 [-\]: r 11 may be better
+brock2 [-\]: white still has to run
+brock2 [-\]: because black can still get s8
+]
+;W[qh]WL[1260.955]
+;B[qj]BL[1361.402]C[brock2 [-\]: errr i gotta go now, but it's nice talking to you! that was an interesting game!
+brock2 [-\]: see you in two weeks Jake!
+Brown2 [-\]: Thank you for the game & the review.
+Brown2 [-\]: Enjoy your day!
+]
+;W[pl]WL[1258.604]
+;B[oj]BL[1358.115]
+;W[nl]WL[1224.907]
+;B[pk]BL[1345.605]
+;W[ok]WL[1223.137]
+;B[pj]BL[1336.927]
+;W[oh]WL[1221.483]
+;B[rl]BL[1330.433]
+;W[ql]WL[1219.544]
+;B[nk]BL[1325.888]
+;W[ol]WL[1217.872]
+;B[nh]BL[1323.447]
+;W[qe]WL[1185.039]
+;B[qf]BL[1318.9]
+;W[og]WL[1176.514]
+;B[of]BL[1316.189]
+;W[ng]WL[1175.338]
+;B[nf]BL[1313.786]
+;W[mg]WL[1173.026]
+;B[nj]BL[1307.232]
+;W[lj]WL[1137.752]
+;B[li]BL[1278.085]
+;W[ki]WL[1129.615]
+;B[lh]BL[1271.773]
+;W[kj]WL[1126.284]
+;B[mj]BL[1261.615]
+;W[mh]WL[1121.278]
+;B[mi]BL[1257.949]
+;W[lf]WL[1093.818]
+;B[mc]BL[1252.774]
+;W[jg]WL[1086.402]
+;B[ml]BL[1246.836]
+;W[nn]WL[1083.616]
+;B[mn]BL[1226.779]
+;W[rg]WL[1068.262]
+;B[no]BL[1223.062]
+;W[mm]WL[1058.891]
+;B[lm]BL[1215.9]
+;W[nm]WL[1057.734]
+;B[ln]BL[1211.818]
+;W[ll]WL[1053.462]
+;B[mk]BL[1210.518]
+;W[mo]WL[1049.854]
+;B[oo]BL[1209.223]C[brock2 [-\]: good game
+Brown2 [-\]: Thank you for the game.
+brock2 [-\]: do you want to do a quick review?
+Brown2 [-\]: I would be up for that.
+brock2 [-\]: sure
+])
+(;W[qh]C[brock2 [-\]: if necessary
+])
+(;W[jc]))
+(;B[qi]
+;W[rp]
+;B[rq]
+;W[so]C[brock2 [-\]: may as well make white capture that one stone
+brock2 [-\]: and live in a tiny place
+]))
+(;B[jd]C[brock2 [-\]: it's very small for you too
+]
+;W[qo]
+;B[qn]
+;W[po]
+;B[oo]
+;W[qp]
+;B[pj]C[brock2 [-\]: the most white could get is the corner
+brock2 [-\]: but black could pretty much get everything else
+]))
+(;B[ko]
+;W[kn]
+(;B[nr]
+;W[mr]C[brock2 [-\]: see?
+])
+(;B[jq]
+;W[jo]
+;B[jp]
+(;W[ln]C[Brown2 [-\]: Now I can make an eye on the left.
+brock2 [-\]: yep
+brock2 [-\]: say  if white decides to break the eye
+])
+(;W[hr]
+;B[ks]
+;W[mr]
+;B[ln]C[brock2 [-\]: there's still a fighting chance
+brock2 [-\]: beceause the outside white stones are weaker
+]
+;W[lm]
+;B[mn]))))
+(;B[ko]
+;W[qq]
+;B[ln]C[brock2 [-\]: shift your focus from the bottom to the centre
+]))
+(;W[lp])
+(;W[kr]
+;B[lr]
+;W[lp]
+;B[ko]
+;W[kn]
+;B[nr]C[brock2 [-\]: see?  it me 2 stones versus your 6 stones
+brock2 [-\]: which is bad for white
+]))
+(;B[in]
+;W[fo]
+;B[lr]C[brock2 [-\]: because it's hard for white to kill the d3 group
+brock2 [-\]: so, it's a good trade, I think it's more likely for black to kill the o3 group
+brock2 [-\]: than white capturing the d3 group
+]))
+(;B[gn]
+;W[ho]
+;B[hn]
+;W[ip]
+;B[jp]
+;W[hp]
+;B[jq]
+;W[jo]
+;B[kp]
+;W[in]
+;B[lq]C[brock2 [-\]: that might be the best white could do
+brock2 [-\]: and black gains the bottom right
+]))
+(;B[dn]C[Brown2 [-\]: Just to get rid of aji?
+brock2 [-\]: simply to remove the threat
+brock2 [-\]: aji?
+brock2 [-\]: sorry I am not very familiar with japanese terms
+Brown2 [-\]: Oh, apologies, it basically just means threats from dead stones.
+brock2 [-\]: yup
+brock2 [-\]: because say white play e4
+]
+;W[ep]C[brock2 [-\]: black doesn't have much to lose
+brock2 [-\]: even black plays else where
+]
+;B[jc]C[brock2 [-\]: and white capture
+]
+;W[do]
+;B[dp]C[brock2 [-\]: there's the recapture
+Brown2 [-\]: Right I see.
+brock2 [-\]: so the c5 c6 d6 group is not affected at all
+]))
+(;B[er]
+(;W[cs]C[brock2 [-\]: I can't remember the c1 play
+]
+;B[eq]
+(;W[fr]
+;B[eo]
+;W[es]
+;B[dn]C[brock2 [-\]: it's essentially the same, but the j3 and j5 are less affected
+])
+(;W[eo]C[brock2 [-\]: ohhh
+brock2 [-\]: then black can just connect f2
+]
+;B[fr]C[brock2 [-\]: and try to capture the 3 white stone
+brock2 [-\]: stones
+Brown2 [-\]: Oh, I get it.
+brock2 [-\]: basically, what that does is giving up the corner
+brock2 [-\]: for the tempo to capture and kill the other outside white stones
+Brown2 [-\]: I think that I understand.
+brock2 [-\]: even if you fail, it's likely you will build influence on the k axis
+Brown2 [-\]: I'll give you control.
+brock2 [-\]: and the territory on the left
+]))
+(;W[eo]C[brock2 [-\]: like this?
+Brown2 [-\]: I meant after c1 e3
+])))
+(;B[do]
+;W[co]
+;B[lo]C[brock2 [-\]: and then go back to the white in the bottom right
+]))
+(;B[cp]
+;W[dq]
+;B[ep]
+;W[fr]
+;B[go]C[brock2 [-\]: try to get the top and middle left
+brock2 [-\]: but that could be challenging
+brock2 [-\]: because it's still wide open
+]))

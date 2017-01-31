@@ -1,0 +1,251 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[6.50]TM[60]OT[5x30 byo-yomi]
+PW[UCSB2]PB[UAlberta2]DT[2016-02-06]PC[The KGS Go Server at http://www.gokgs.com/]C[UCSB2 [-\]: o do we add time now
+UAlberta2 [-\]: add 5mins
+]RE[B+Resign]
+;B[qd]BL[40.901]C[UAlberta2 [-\]: yeah
+]
+;W[dc]WL[348.409]
+;B[pq]BL[336.327]
+;W[dp]WL[346.936]
+;B[oc]BL[334.439]
+;W[po]WL[345.518]C[UAlberta2 [-\]: so may you have 5mins and I have 10?
+UAlberta2 [-\]: because I still have time left
+]
+;B[qo]BL[309.755]C[UCSB2 [-\]: yeah okay
+]
+;W[qn]WL[343.368]
+;B[qp]BL[308.432]
+;W[rd]WL[341.068]
+;B[re]BL[306.259]
+;W[qe]WL[340.52]
+;B[pe]BL[304.724]
+;W[qf]WL[340.022]
+;B[rf]BL[303.867]
+;W[qg]WL[339.598]
+;B[rg]BL[303.067]
+;W[qh]WL[339.157]
+;B[rh]BL[301.576]
+;W[qi]WL[338.358]
+;B[qc]BL[300.736]
+;W[pn]WL[337.934]
+;B[nq]BL[299.07]
+;W[ci]WL[335.949]
+;B[gd]BL[298.182]
+;W[de]WL[334.212]
+;B[jd]BL[297.384]
+;W[lq]WL[333.412]
+;B[lp]BL[296.629]
+;W[kp]WL[332.43]
+;B[mp]BL[295.86]
+;W[jq]WL[332.109]
+;B[qk]BL[294.509]
+;W[pk]WL[331.419]
+;B[pl]BL[292.021]
+;W[ql]WL[330.963]
+;B[pj]BL[290.941]
+;W[ok]WL[330.49]
+;B[qj]BL[290.318]
+;W[oj]WL[329.623]
+;B[pi]BL[289.403]
+;W[oi]WL[328.554]
+;B[ph]BL[288.582]
+;W[op]WL[327.502]
+;B[oq]BL[286.813]
+;W[ng]WL[327.254]
+;B[oh]BL[285.773]
+;W[nh]WL[325.941]
+;B[cn]BL[283.414]
+;W[co]WL[325.173]
+;B[dn]BL[282.659]
+;W[fp]WL[324.872]
+;B[ck]BL[281.139]
+(;W[fn]WL[324.152]
+;B[cq]BL[272.788]
+;W[bn]WL[323.904]
+;B[er]BL[271.348]
+;W[bp]WL[321.902]
+;B[gq]BL[270.562]
+;W[fr]WL[321.511]
+;B[fq]BL[269.576]
+;W[eq]WL[321.314]
+;B[gr]BL[268.862]
+(;W[dr]WL[314.55]
+;B[fs]BL[268.216]
+;W[dq]WL[314.332]
+;B[ip]BL[266.887]
+;W[iq]WL[312.908]
+;B[gp]BL[265.38]
+(;W[go]WL[312.341]
+;B[ho]BL[259.276]
+;W[kn]WL[309.898]
+;B[mn]BL[258.463]
+;W[ej]WL[307.352]
+;B[ek]BL[257.056]
+;W[fk]WL[305.134]
+;B[bi]BL[255.683]
+;W[bj]WL[304.942]
+;B[cj]BL[254.47]
+;W[bk]WL[304.716]
+;B[di]BL[252.015]
+;W[ch]WL[304.155]
+;B[dj]BL[251.04]
+;W[el]WL[302.455]
+;B[dl]BL[248.418]
+;W[dk]WL[301.533]
+;B[bh]BL[246.118]C[UAlberta2 [-\]: so ....where's my 5 mins= =
+UCSB2 [-\]: oops
+UCSB2 [-\]: sorry
+UCSB2 [-\]: is this good?
+UAlberta2 [-\]: that's ok
+]
+;W[cl]WL[255.916]
+;B[bl]BL[540.129]
+;W[dm]WL[191.214]
+;B[ak]BL[519.128]
+;W[bm]WL[182.678]
+;B[aj]BL[517.574]
+;W[hr]WL[167.181]
+;B[hm]BL[515.262]
+;W[in]WL[158.82]
+;B[hn]BL[513.672]
+;W[ik]WL[118.456]
+;B[jo]BL[504.431]
+;W[ko]WL[107.847]
+;B[il]BL[495.6]
+;W[jl]WL[70.269]
+;B[jm]BL[481.457]
+;W[im]WL[59.043]
+;B[hl]BL[479.921]
+;W[jn]WL[32.2]
+;B[jk]BL[476.844]
+;W[kl]WL[30.628]
+;B[hk]BL[475.797]
+;W[ij]WL[24.699]
+;B[hj]BL[473.966]
+;W[hi]WL[8.485]
+;B[ii]BL[472.145]
+;W[jj]WL[7.843]
+;B[gi]BL[471.093]
+;W[hh]WL[6.484]
+;B[gh]BL[468.945]
+;W[hg]WL[3.863]
+;B[gj]BL[461.293]
+;W[gg]WL[30]OW[5]
+;B[ei]BL[456.144]
+;W[ld]WL[30]OW[5]
+;B[lc]BL[450.785]
+;W[mc]WL[30]OW[5]
+;B[kc]BL[448.908]
+;W[pf]WL[30]OW[4]
+;B[oe]BL[411.786]
+;W[of]WL[30]OW[4]
+;B[ri]BL[410.293]
+;W[gb]WL[30]OW[4]
+;B[me]BL[400.392]
+;W[le]WL[30]OW[4]
+;B[md]BL[397.304]
+;W[mf]WL[30]OW[4]
+;B[jf]BL[394.877]
+;W[kg]WL[30]OW[4]
+;B[ml]BL[387.638]
+;W[nm]WL[30]OW[4]
+;B[mm]BL[375.784]
+;W[bf]WL[30]OW[3]
+;B[cg]BL[368.863]
+;W[ie]WL[30]OW[3]
+;B[id]BL[355.395]
+;W[he]WL[30]OW[3]
+;B[hd]BL[352.241]
+;W[je]WL[30]OW[3]
+;B[cc]BL[343.504]
+;W[db]WL[30]OW[3]
+;B[mj]BL[325.974]
+;W[lk]WL[30]OW[3]
+;B[mk]BL[311.67]
+;W[ni]WL[30]OW[3]
+;B[rl]BL[304.618]
+;W[qm]WL[30]OW[3]
+;B[kj]BL[286.332]
+;W[kk]WL[30]OW[3]
+;B[ds]BL[283.279]
+;W[cr]WL[30]OW[3]
+;B[ji]BL[277.315]
+;W[jk]WL[30]OW[3]
+;B[lj]BL[274.309]
+;W[ki]WL[30]OW[3]
+;B[be]BL[245.863]
+;W[cf]WL[30]OW[3]
+;B[cd]BL[239.217]
+;W[cb]WL[30]OW[2]
+;B[bb]BL[226.104]
+;W[ba]WL[30]OW[2]
+;B[ad]BL[224.593]
+;W[bg]WL[30]OW[2]
+;B[bc]BL[214.798]
+;W[ab]WL[30]OW[2]
+;B[dd]BL[211.994]
+;W[ed]WL[30]OW[2]
+;B[ec]BL[208.85]
+;W[fc]WL[30]OW[2]
+;B[ee]BL[207.822]
+;W[fd]WL[30]OW[2]
+;B[df]BL[187.197]
+;W[ce]WL[30]OW[2]
+;B[ef]BL[185.41]
+;W[dg]WL[30]OW[2]
+;B[eg]BL[181.854]
+;W[ae]WL[30]OW[2]
+;B[af]BL[178.897]
+;W[ag]WL[30]OW[2]
+;B[ae]BL[177.529]C[UCSB2 [-\]: GG\\
+UCSB2 [-\]: thanks for the game
+UAlberta2 [-\]: thanks
+UAlberta2 [-\]: good game
+UCSB2 [-\]: yeah good game!
+UCSB2 [-\]: you played really well!
+UAlberta2 [-\]: thanks...you too
+UAlberta2 [-\]: you know I had a tough time to survive
+UCSB2 [-\]: haha
+UCSB2 [-\]: i dunno if i played it wrong 
+UCSB2 [-\]: did i ?
+UCSB2 [-\]: i wasnt sure
+UAlberta2 [-\]: i was not either...
+UCSB2 [-\]: haha 
+UCSB2 [-\]: ima review it later
+UAlberta2 [-\]: actually I think I played wrong on the top
+UAlberta2 [-\]: yes...
+UCSB2 [-\]: the top right?
+UAlberta2 [-\]: yes.///
+UAlberta2 [-\]: a little bit slower
+UCSB2 [-\]: oh the opening
+UCSB2 [-\]: the attack you mean?
+UAlberta2 [-\]: yes...and after that I shouldn't let your stones out
+UCSB2 [-\]: yes agree
+UCSB2 [-\]: but you [;ayed well top left
+UAlberta2 [-\]: ok I sent a message to admin./..after they response we can have a review about it 
+UCSB2 [-\]: oh
+UCSB2 [-\]: review the game you mean?
+UAlberta2 [-\]: thank you...I just felt like I can do something in it...
+UAlberta2 [-\]: yes
+UAlberta2 [-\]: because the outside is not so strong for you
+UAlberta2 [-\]: so I may have some chances
+UCSB2 [-\]: true
+UCSB2 [-\]: hahha
+UCSB2 [-\]: i played wrong on the bottom left
+UAlberta2 [-\]: just like if I was wrong...I will lose for sure
+UAlberta2 [-\]: yes....but it is hard to kill anyway
+UAlberta1 [-\]: well done
+UAlberta2 [-\]: thanks
+UAlberta3 [-\]: good job Wenda :) also you playted very well gary! great game to watch
+UCSB2 [-\]: Thank you!
+UCSB2 [-\]: What's your name?
+UAlberta2 [-\]: thank you Cory
+UAlberta2 [-\]: am i right?
+UAlberta3 [-\]: yes~
+UAlberta2 [-\]: ok...so let's review it?
+])
+(;W[kn]WL[312.277]))
+(;W[ds]WL[320.288]
+;B[fs]BL[268.079]))
+(;W[bn]WL[324.662]))

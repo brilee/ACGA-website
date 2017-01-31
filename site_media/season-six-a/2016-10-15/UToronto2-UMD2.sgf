@@ -1,0 +1,140 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[UToronto2]PB[UMD2]DT[2016-10-15]PC[The KGS Go Server at http://www.gokgs.com/]C[UToronto2 [-\]: hi
+UMD2 [-\]: Hello
+UToronto2 [-\]: Have a nice game
+UMD2 [-\]: So we start first?
+UToronto2 [-\]: I think all the games should be happening simultaneously
+]RE[W+Resign]
+;B[qd]BL[1747.495]
+;W[dp]WL[1790.165]C[UMD2 [-\]: ok, have a nice game
+]
+;B[pq]BL[1738.62]
+;W[dc]WL[1776.65]
+;B[fq]BL[1728.974]
+;W[cn]WL[1741.418]
+;B[jp]BL[1709.33]
+;W[qk]WL[1688.309]
+;B[qi]BL[1575.574]
+;W[qo]WL[1641.205]
+;B[qm]BL[1542.796]
+;W[op]WL[1633.189]
+;B[pp]BL[1503.114]
+;W[po]WL[1621.42]
+;B[oo]BL[1501.333]
+;W[pm]WL[1522.177]
+;B[np]BL[1461.971]
+;W[on]WL[1479.235]
+;B[no]BL[1454.805]
+;W[qf]WL[1469.479]
+;B[od]BL[1396.678]
+;W[ph]WL[1360.66]
+;B[pi]BL[1365.388]
+;W[oi]WL[1356.653]C[UToronto2 [-\]: by the way this is Jianqiu Chen from University of Toronto
+]
+;B[qh]BL[1321.636]C[UMD2 [-\]: I'm Xitong Yang, from UMD
+]
+;W[pg]WL[1343.971]
+;B[pk]BL[1316.929]C[UToronto2 [-\]: pleasure to meet you
+]
+;W[oj]WL[1253.786]
+;B[ql]BL[1275.844]
+;W[ok]WL[1154.438]C[McMaster [-\]: Go UT go
+]
+;B[rk]BL[1115.61]
+;W[mc]WL[1145.581]
+;B[ne]BL[1052.863]
+;W[kd]WL[1092.685]
+;B[cf]BL[907.5]
+;W[ob]WL[1081.952]
+;B[qb]BL[803.553]
+;W[mf]WL[1012.874]
+;B[nf]BL[295.702]
+;W[mg]WL[1002.599]
+;B[nb]BL[217.539]
+;W[nc]WL[994.568]
+;B[oc]BL[215.009]
+;W[pb]WL[961.72]
+;B[pc]BL[203.165]
+;W[mb]WL[954.923]
+;B[pa]BL[200.366]
+;W[na]WL[952.572]
+;B[ci]BL[13.037]
+;W[re]WL[863.11]
+;B[pe]BL[30]OB[5]
+;W[de]WL[825.602]
+;B[df]BL[30]OB[5]
+;W[ef]WL[738.188]
+;B[ce]BL[30]OB[5]
+;W[dd]WL[711.656]
+;B[ei]BL[30]OB[4]
+;W[eg]WL[700.867]
+;B[cl]BL[30]OB[4]
+;W[dr]WL[684.749]
+;B[fo]BL[30]OB[4]
+;W[hn]WL[581.383]
+;B[hl]BL[30]OB[4]
+;W[fn]WL[517.811]
+;B[do]BL[30]OB[4]
+;W[co]WL[481.954]
+;B[ep]BL[30]OB[4]
+;W[dq]WL[476.556]
+;B[en]BL[30]OB[4]
+;W[fm]WL[472.925]
+;B[em]BL[30]OB[4]
+;W[gk]WL[315.406]
+;B[gl]BL[30]OB[4]
+;W[fl]WL[312.703]
+;B[fk]BL[30]OB[4]
+;W[el]WL[308.551]
+;B[fj]BL[30]OB[4]
+;W[dl]WL[289.866]
+;B[ck]BL[30]OB[3]
+;W[ip]WL[279.325]
+;B[iq]BL[30]OB[3]
+;W[hq]WL[247.141]
+;B[io]BL[30]OB[3]
+;W[hp]WL[244.667]
+;B[ho]BL[30]OB[3]
+;W[jq]WL[241.445]
+;B[ir]BL[30]OB[3]
+;W[jo]WL[126.233]
+;B[gn]BL[30]OB[2]
+;W[kp]WL[105.514]
+;B[in]BL[30]OB[2]
+;W[ig]WL[65.978]
+;B[lq]BL[30]OB[2]
+;W[jr]WL[50.133]
+;B[gr]BL[30]OB[2]
+;W[hr]WL[32.191]
+;B[pl]BL[30]OB[1]
+;W[ol]WL[30]OW[5]
+;B[nm]BL[30]OB[1]
+;W[om]WL[30]OW[5]
+;B[kq]BL[30]OB[1]
+;W[lp]WL[30]OW[5]
+;B[mq]BL[30]OB[1]
+;W[ln]WL[30]OW[5]
+;B[fg]BL[30]OB[1]
+;W[gf]WL[30]OW[5]
+;B[lm]BL[30]OB[1]
+;W[nn]WL[30]OW[5]
+;B[km]BL[30]OB[1]
+;W[bd]WL[30]OW[5]C[UToronto2 [-\]: thanks
+UMD2 [-\]: thank you
+UToronto2 [-\]: you can cut me N6
+UToronto2 [-\]: and then go for P12
+UToronto2 [-\]: the chance is slim but it is a chance
+UMD2 [-\]: yes.. 
+UToronto2 [-\]: the problem is you have K7 
+UToronto2 [-\]: I probably have an eye down in the corner
+UToronto2 [-\]: need to make an eye outside sente
+UToronto2 [-\]: You played a good beginning
+UToronto2 [-\]: but I feel like c14 was slow and a mistake
+UMD2 [-\]: i think my top right part takes me too much time.. too uncomfortable...
+UToronto2 [-\]: yeah
+UToronto2 [-\]: that is the consequence of c14
+UMD2 [-\]: any suggestion for that move?
+UToronto2 [-\]: you should not have allowed P18
+UToronto2 [-\]: it is a lot of points+ your base
+])

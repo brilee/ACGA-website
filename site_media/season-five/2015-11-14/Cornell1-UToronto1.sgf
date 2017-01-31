@@ -1,0 +1,192 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[1800]OT[5x30 byo-yomi]
+PW[Cornell1]PB[UToronto1]DT[2015-11-14]PC[The KGS Go Server at http://www.gokgs.com/]C[UToronto1 [-\]: Nice to meet you
+Cornell1 [-\]: Hi, I am Bowen
+Cornell1 [-\]: Nice to meet you!
+UToronto1 [-\]: I'm Minsung, 
+]RE[W+Time]
+;B[qd]BL[1772.336]
+;W[dc]WL[1793.129]
+;B[pq]BL[1762.92]C[Cornell1 [-\]: Need to learn sth from you!
+]
+;W[dp]WL[1781.07]C[Cornell1 [-\]: Are you 6d?
+UToronto1 [-\]: I should be the one. 
+UToronto1 [-\]: Yes I'm 6D
+UToronto1 [-\]: How about you?
+]
+;B[de]BL[1740.428]
+;W[cg]WL[1767.394]C[Cornell1 [-\]: A weak 6d
+]
+;B[cc]BL[1693.455]C[Cornell1 [-\]: I think you help me to go over a game last time
+]
+;W[gc]WL[1748.453]C[Cornell2 [-\]: goodluck
+UToronto1 [-\]: Did I?
+Cornell1 [-\]: When I played with UToronto4 4 weeks ago
+]
+;B[fd]BL[1627.581]C[UToronto1 [-\]: Oh, it should be another guy, because today is my first match.
+]
+;W[eb]WL[1609.704]C[Cornell1 [-\]: Haha, fine. Have a good game!
+UToronto1 [-\]: Yeah, have a good game 9-:
+UToronto1 [-\]: (-:
+]
+;B[be]BL[1385.083]
+;W[cb]WL[1517.601]
+;B[ci]BL[1363.188]
+;W[eg]WL[1471.802]
+;B[gd]BL[1238.757]
+;W[hc]WL[1432.245]
+;B[bg]BL[1197.811]
+;W[cf]WL[1399.032]
+;B[bf]BL[1193.272]
+;W[ce]WL[1397.928]
+;B[cd]BL[1168.822]
+;W[dd]WL[1396.248]
+;B[ee]BL[1165.006]
+;W[ch]WL[1385.122]
+;B[bh]BL[1162.411]
+;W[di]WL[1383.617]
+;B[dj]BL[1055.15]
+;W[cj]WL[1376.184]
+;B[bi]BL[1053.966]
+;W[ei]WL[1374.809]
+;B[dk]BL[985.037]
+;W[bb]WL[1361.974]
+;B[cn]BL[920.646]
+;W[fq]WL[1334.752]
+;B[ac]BL[911.997]
+;W[hf]WL[1264.668]
+;B[nc]BL[843.307]
+;W[po]WL[1244.713]
+;B[gf]BL[763.36]
+;W[gg]WL[1168.629]
+;B[qm]BL[631.136]
+;W[qq]WL[1159.564]
+;B[qr]BL[587.857]
+;W[qp]WL[980.924]
+;B[mq]BL[564.559]C[Cornell1 [-\]: I am terribly  sorry that my internet access has some trouble
+UToronto1 [-\]: No problem
+]
+;W[pm]WL[822.523]
+;B[pl]BL[558.684]
+;W[or]WL[797.424]
+;B[pr]BL[550.568]
+;W[oq]WL[773.039]
+;B[op]BL[544.32]
+;W[pp]WL[762.779]
+;B[nq]BL[535.301]
+;W[np]WL[755.297]
+;B[oo]BL[533.054]
+;W[nn]WL[749.85]
+;B[os]BL[528.164]
+;W[on]WL[746.141]
+;B[nr]BL[526.033]
+;W[ql]WL[737.848]
+;B[qn]BL[523.445]
+;W[pk]WL[735.082]
+;B[ol]BL[521.363]
+;W[rk]WL[730.37]
+;B[rl]BL[518.593]
+;W[qk]WL[729.119]
+;B[pn]BL[516.779]
+;W[nl]WL[717.687]
+;B[ro]BL[512.779]
+;W[oq]WL[715.815]
+;B[or]BL[511.418]
+;W[no]WL[714.836]
+;B[oq]BL[510.724]
+;W[rm]WL[687.187]
+;B[rn]BL[509.028]
+;W[sl]WL[685.936]
+;B[rq]BL[506.647]
+;W[qf]WL[669.831]
+;B[od]BL[485.543]
+;W[of]WL[602.499]
+;B[ok]BL[456.236]
+;W[om]WL[547.305]
+;B[oj]BL[432.671]
+;W[mj]WL[458.453]
+;B[mm]BL[396.988]
+;W[nm]WL[321.118]
+;B[pg]BL[351.751]
+;W[pf]WL[277.257]
+;B[pi]BL[191.129]
+;W[ri]WL[186.899]
+;B[mk]BL[30]OB[5]
+;W[nk]WL[151.774]
+;B[nj]BL[30]OB[5]
+;W[ml]WL[148.988]
+;B[lk]BL[30]OB[5]
+;W[ll]WL[96.175]
+;B[mi]BL[30]OB[5]
+;W[lj]WL[77.777]
+;B[kk]BL[30]OB[5]
+;W[kj]WL[17.168]
+;B[kl]BL[30]OB[5]
+;W[km]WL[10.807]
+;B[jm]BL[30]OB[5]
+;W[jn]WL[30]OW[5]
+;B[jj]BL[30]OB[5]
+;W[lh]WL[30]OW[5]
+;B[mh]BL[30]OB[4]
+;W[im]WL[30]OW[5]
+;B[li]BL[30]OB[4]
+;W[ki]WL[30]OW[5]
+;B[kh]BL[30]OB[4]
+;W[ji]WL[30]OW[5]
+;B[lg]BL[30]OB[4]
+;W[jh]WL[30]OW[5]
+;B[if]BL[30]OB[3]
+;W[jg]WL[30]OW[5]
+;B[id]BL[30]OB[3]
+;W[ke]WL[30]OW[5]
+;B[hg]BL[30]OB[3]
+;W[he]WL[30]OW[5]
+;B[hd]BL[30]OB[3]
+;W[ig]WL[30]OW[3]
+;B[hh]BL[30]OB[3]
+;W[gh]WL[30]OW[3]
+;B[me]BL[30]OB[2]
+;W[kc]WL[30]OW[2]
+;B[jd]BL[30]OB[2]
+;W[hi]WL[30]OW[1]
+;B[kd]BL[30]OB[2]
+;W[le]WL[30]OW[1]
+;B[ld]BL[30]OB[2]
+;W[mf]WL[30]OW[1]
+;B[lf]BL[30]OB[2]
+;W[ne]WL[30]OW[1]
+;B[md]BL[30]OB[2]
+;W[rd]WL[30]OW[1]
+;B[jf]BL[30]OB[1]C[UToronto5 [-\]: ..................`
+]
+;W[qc]WL[30]OW[1]
+;B[pc]BL[30]OB[1]
+;W[qb]WL[30]OW[1]
+;B[en]BL[30]OB[1]
+;W[co]WL[30]OW[1]
+;B[bn]BL[30]OB[1]
+;W[kq]WL[30]OW[1]
+;B[cq]BL[30]OB[1]
+;W[bo]WL[30]OW[1]
+;B[er]BL[30]OB[1]
+;W[eq]WL[30]OW[1]
+;B[fr]BL[30]OB[1]
+;W[dr]WL[30]OW[1]
+;B[gq]BL[30]OB[1]
+;W[gp]WL[30]OW[1]C[Cornell1 [-\]: ?????
+UToronto1 [-\]: ???
+UToronto1 [-\]: ah/.//
+Cornell1 [-\]: time off?
+UToronto5 [-\]: lol what a joke
+UToronto5 [-\]: gg
+Cornell1 [-\]: ....
+UToronto1 [-\]: I clicked, but....
+UToronto1 [-\]: gg
+Cornell1 [-\]: I do not know how to deal with time off
+Cornell1 [-\]: I never meet with this situation
+Cornell1 [-\]: Anyone know?
+UToronto1 [-\]: I lost
+Cornell1 [-\]: So sorry about that
+Cornell1 [-\]: Shall we go over it?
+UToronto1 [-\]: yeah sure, 
+])
