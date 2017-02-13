@@ -3,7 +3,6 @@ import os
 import datetime
 
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django.core.management import call_command
 from django.contrib.auth.models import User
 from django.contrib.auth import models as auth_models
 from django.test import TestCase
@@ -11,6 +10,7 @@ from django.test import TestCase
 from CGL.models import Season, CurrentSeasons, Player, School, Team, Round, Match, Game, Forfeit, a_tag, SchoolAuth
 from CGL.captain_auth import AUTH_KEY_COOKIE_NAME
 from CGL.matchmaking import construct_matrix, score_matchups, make_random_matchup, best_matchup
+from CGL.season_management import make_round_pairings, update_match_and_schools, update_player_record, update_school_activeness
 from CGL.transactional_emails import render_introductory_email, render_weekly_email, render_reminder_email
 
 import ogs
@@ -189,11 +189,11 @@ class MatchmakingTest(TestCase):
     def test_construct_matrix(self):
         matrix = construct_matrix(self.matches)
         # print '\n'.join("%s %s %s %s" % (i, j, matrix[i][j], matrix[j][i]) for i in range(7) for j in range(7) if i!=j)
-        self.assertTrue(matrix[0][1])
-        self.assertTrue(matrix[1][0])
-        self.assertTrue(matrix[2][3])
-        self.assertTrue(not matrix[2][4])
-        self.assertTrue(not matrix[2][1000])
+        self.assertTrue(matrix[(0,1)])
+        self.assertTrue(matrix[(1,0)])
+        self.assertTrue(matrix[(2,3)])
+        self.assertFalse(matrix[(2,4)])
+        self.assertFalse(matrix[(2,1000)])
 
     def test_score_matchups(self):
         matrix = construct_matrix(self.matches)
@@ -204,7 +204,7 @@ class MatchmakingTest(TestCase):
         ]
         self.assertEquals(
             score_matchups(pairings, self.teams[6], matrix),
-            370
+            70
         )
 
     def test_make_random_matchup(self):
@@ -223,7 +223,7 @@ class MatchmakingTest(TestCase):
         self.assertEquals(success, total)
 
     def test_call_command(self):
-        call_command('round_pairings', season=self.test_season.name, round='2')
+        make_round_pairings(self.test_season, self.round2)
 
         matches = self.round2.match_set.all()
         self.assertEquals(len(matches), 3)
@@ -290,7 +290,10 @@ class ScoreUpdaterTest(TestCase):
             g.delete()
 
     def testUpdateScores(self):
-        call_command('update_scores', self.test_season.name)
+        update_match_and_schools(self.test_season)
+        for player in Player.objects.all():
+            update_player_record(player)
+        update_school_activeness()
 
         expected_player_results = [
             (0, 0),
