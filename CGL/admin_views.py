@@ -43,7 +43,6 @@ def update_scores(request):
     if request.method != 'POST':
         return HttpResponse("Must use POST", status=405)
     debug_messages = []
-    import time; time.sleep(10)
     seasons = CurrentSeasons.objects.get()
     for season in seasons:
         debug_messages.append('Updating %s standings' % (season.name))

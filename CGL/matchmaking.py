@@ -2,18 +2,17 @@ from collections import defaultdict
 import random
 
 def construct_matrix(existing_matchups):
-    m = defaultdict(lambda: defaultdict(lambda: False))
+    m = defaultdict(int)
     for match in existing_matchups:
-        m[match.team1.id][match.team2.id] = True
-        m[match.team2.id][match.team1.id] = True
+        m[(match.team1.id, match.team2.id)] += 1
+        m[(match.team2.id, match.team1.id)] +=1
     return m
 
 def score_matchups(team_pairings, team_bye, matchup_matrix):
     score = 0
     for team1, team2 in team_pairings:
-        if not matchup_matrix[team1.id][team2.id]:
-            # bonus for not matching up teams who have played before
-            score += 100
+        # penalty for matching up teams who have played before
+        score -= 100 * matchup_matrix[(team1.id, team2.id)]
         # penalty for matching up teams with disparate number of wins
         score -= 5 * (team1.num_wins - team2.num_wins)**2
         # penalty for matching two teams from the same school
