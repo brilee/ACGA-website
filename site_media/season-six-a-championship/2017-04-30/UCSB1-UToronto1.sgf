@@ -1,0 +1,246 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[2700]OT[5x30 byo-yomi]
+PW[UCSB1]PB[UToronto1]DT[2017-04-30]PC[The KGS Go Server at http://www.gokgs.com/]C[UToronto1 [-\]: hi
+UCSB1 [-\]: Hi
+UCSB1 [-\]: Stephen Hu from UCSB
+UToronto1 [-\]: this is jianing gan from u of t
+UCSB1 [-\]: Have a good game :)
+UToronto1 [-\]: have a good game
+]RE[B+Resign]
+;B[pd]BL[2670.518]
+;W[dd]WL[2691.831]
+;B[pq]BL[2652.724]
+;W[dp]WL[2684.49]
+;B[fq]BL[2594.714]
+;W[cn]WL[2674.127]
+;B[ip]BL[2584.219]
+;W[qn]WL[2641.987]
+;B[qp]BL[2571.84]
+;W[qk]WL[2604.648]
+;B[qi]BL[2560.146]
+;W[on]WL[2574.19]
+;B[pm]BL[2556.089]
+;W[pn]WL[2562.024]
+;B[mp]BL[2548.813]
+;W[ok]WL[2550.851]
+;B[nc]BL[2497.606]C[odnihs [-\]: Hi everyone, live commentary with Eric Lui 1p will be starting in about 10 minutes at twitch.tv/odnihs
+]
+;W[fc]WL[2439.705]
+;B[ch]BL[2473.949]
+;W[ck]WL[2383.85]
+;B[be]BL[2449.006]
+;W[bd]WL[2366.499]
+;B[cd]BL[2440.969]
+;W[cc]WL[2261.474]
+;B[ce]BL[2438.813]
+;W[bc]WL[2257.654]
+;B[de]BL[2396.023]C[odnihs [-\]: Live commentary is starting now!
+odnihs [-\]: You can watch it at twitch.tv/odnihs
+]
+;W[ed]WL[2198.261]C[afgani [3d\]: what is their rank?
+]
+;B[jd]BL[2360.096]C[odnihs [-\]: 6d and 7d
+]
+;W[qd]WL[2021.18]
+;B[qe]BL[2349.773]
+;W[pc]WL[1986.211]
+;B[od]BL[2345.411]
+;W[rc]WL[1981.26]
+;B[re]BL[2343.915]
+;W[ob]WL[1978.42]
+;B[nb]BL[2316.019]
+;W[qb]WL[1974.98]
+;B[oi]BL[2286.021]
+;W[eq]WL[1871.41]
+;B[fp]BL[2283.542]
+;W[fr]WL[1838.84]
+;B[gr]BL[2282.053]
+;W[er]WL[1837.175]
+;B[en]BL[2218.088]
+;W[hr]WL[1657.92]
+;B[gq]BL[2176.848]C[XXNINJAXX [5d?\]: black seems a lot better than white
+]
+;W[mi]WL[1552.169]
+;B[cm]BL[2149.134]
+;W[bm]WL[1454.901]
+;B[bn]BL[2144.226]
+;W[bo]WL[1444.68]
+;B[co]BL[2079.795]C[darkronin [-\]: i don't know, white does have 3 corners
+]
+;W[an]WL[1430.167]
+;B[dn]BL[2077.214]
+;W[bn]WL[1419.595]
+;B[nj]BL[2062.6]C[bert [?\]: twitch.tv doesnt work for me
+]
+;W[mf]WL[1223.551]
+;B[ki]BL[2001.17]
+;W[kf]WL[998.409]
+;B[rl]BL[1829.235]
+;W[rk]WL[898.3]
+;B[rn]BL[1666.358]C[Archimed [1d\]: this could get veery dangerous for white
+]
+;W[ro]WL[701.419]
+;B[qm]BL[1625.668]
+;W[sn]WL[689.91]
+;B[rm]BL[1609.577]
+;W[qo]WL[662.991]
+;B[ol]BL[1494.215]
+;W[nl]WL[622.468]
+;B[pk]BL[1488.633]
+;W[pj]WL[588.005]
+;B[pl]BL[1470.626]C[bab84k: the game is about to change dramatically
+bert [?\]: b will capture r9 s9 , but w eill get strengthened
+]
+;W[nk]WL[535.701]C[bab84k: n10
+]
+;B[qj]BL[1373.465]C[bert [?\]: this is not b success
+]
+;W[oj]WL[405.44]
+;B[pi]BL[1327.518]C[MerlinZY [?\]: ...
+bert [?\]: p7 captures, i think
+]
+;W[mo]WL[307.114]
+;B[mj]BL[1307.669]C[MerlinZY [?\]: T8 got black?
+MerlinZY [?\]: no..
+bab84k: this looks more and more b success
+]
+;W[om]WL[253.211]C[bert [?\]: well, ko
+]
+;B[sl]BL[1276.351]C[FranklyMe1 [7k\]: no ko
+FranklyMe1 [7k\]: what
+afgani [3d\]: nice
+FranklyMe1 [7k\]: t9 
+]
+;W[np]WL[220.175]C[FranklyMe1 [7k\]: ?
+]
+;B[nq]BL[1270.615]C[bab84k: t9 s10
+MerlinZY [?\]: N5 does not make sense I think
+]
+;W[op]WL[170.086]C[redreoicy [4d\]: it's to stop the o7 cut
+]
+;B[oq]BL[1260.675]C[baygo [2k\]: j4?
+]
+;W[lp]WL[129.204]
+;B[mq]BL[1258.447]C[MerlinZY [?\]: isn't P7 forcing so w donot need to worry o7 cut?
+baygo [2k\]: M5?
+MerlinZY [?\]: ah I see
+redreoicy [4d\]: even if you play p7 in sente, there is still a cut ^^
+baygo [2k\]: it seems w is behind,
+]
+;W[mm]WL[14.658]
+;B[mh]BL[1205.645]
+;W[if]WL[30]OW[5]
+;B[lo]BL[1187.68]C[baygo [2k\]: ouch
+]
+;W[ln]WL[30]OW[5]
+;B[ko]BL[1184.325]
+;W[pp]WL[30]OW[5]
+;B[fs]BL[1072.169]
+;W[es]WL[30]OW[5]
+;B[cp]BL[1006.714]
+;W[cq]WL[30]OW[5]
+;B[do]BL[1002.647]
+;W[bp]WL[30]OW[5]
+;B[ep]BL[980.771]C[bab84k: g1
+]
+;W[dq]WL[30]OW[5]
+;B[le]BL[963.837]C[Darchik [2d\]: Why play e4 already...
+]
+;W[lf]WL[30]OW[5]C[redreoicy [4d\]: later on maybe not sente
+]
+;B[hd]BL[934.252]C[redreoicy [4d\]: actually already white might choose to play g1 instead of d3, so black wanted to make srue
+]
+;W[ff]WL[30]OW[5]
+;B[gb]BL[901.651]
+;W[dg]WL[30]OW[5]
+;B[dh]BL[896.053]
+;W[eh]WL[30]OW[5]
+;B[ei]BL[857.33]
+;W[cg]WL[30]OW[4]
+;B[bg]BL[855.465]
+;W[eg]WL[30]OW[4]
+;B[bi]BL[850.955]
+;W[fi]WL[30]OW[4]
+;B[ej]BL[838.629]
+;W[fj]WL[30]OW[3]
+;B[fb]BL[820.002]
+;W[eb]WL[30]OW[3]
+;B[gs]BL[806.074]
+;W[kd]WL[30]OW[3]
+;B[ke]BL[742.72]
+;W[je]WL[30]OW[3]
+;B[ie]BL[739.229]
+;W[jf]WL[30]OW[3]C[Darchik [2d\]: Right. I would've just let it be for later happenings.
+]
+;B[ld]BL[650.898]
+;W[kc]WL[30]OW[3]
+;B[jc]BL[618.123]
+;W[he]WL[30]OW[3]
+;B[id]BL[613.555]C[redreoicy [4d\]: since white should have answered at g1, you'd have played better
+redreoicy [4d\]: but b tricked white and got the best result
+]
+;W[gc]WL[30]OW[3]
+;B[hb]BL[594.13]C[Zerged [3d\]: guys how is white gonna win this
+Zerged [3d\]: we need some creativity now
+]
+;W[hc]WL[30]OW[3]C[danielhast [2k\]: don't see anywhere for w to make up the points, unless there's somehow enough forcing moves to make sizable center territory
+danielhast [2k\]: but I'm not seeing it
+]
+;B[lc]BL[514.008]
+;W[ic]WL[30]OW[3]
+;B[ib]BL[507.599]
+;W[gd]WL[30]OW[3]
+;B[kb]BL[504.794]
+;W[cj]WL[30]OW[3]
+;B[ci]BL[497.005]
+;W[ji]WL[30]OW[3]
+;B[jj]BL[486.988]C[cadillac [3d\]: isn't b 1p
+Darchik [2d\]: Nice move k11
+]
+;W[kh]WL[30]OW[3]
+;B[kj]BL[480.524]C[Zerged [3d\]: b is 7dan i think
+cadillac [3d\]: hmm mybe im mixing him up with someone else
+YoungPro [-\]: I thought there will be some commentary somewhere
+YoungPro [-\]: link?
+Zerged [3d\]: there is
+]
+;W[ij]WL[30]OW[2]C[Zerged [3d\]: wait a sec
+Zerged [3d\]: https://www.twitch.tv/odnihs
+]
+;B[rd]BL[471.732]C[Zerged [3d\]: there we go
+]
+;W[qc]WL[30]OW[2]C[YoungPro [-\]: I thought pro will comment..
+Zerged [3d\]: its pro
+Zerged [3d\]: ..
+Zerged [3d\]: eric lui1p
+YoungPro [-\]: oh, great ! 
+Jayy [-\]: maybe confusing with gansheng shi?
+]
+;B[rq]BL[434.161]
+;W[kn]WL[30]OW[2]
+;B[jo]BL[430.307]
+;W[lh]WL[30]OW[2]
+;B[li]BL[427.852]
+;W[ik]WL[30]OW[1]
+;B[bj]BL[423.395]
+;W[bk]WL[30]OW[1]
+;B[im]BL[414.029]
+;W[hm]WL[30]OW[1]
+;B[hn]BL[400.817]
+;W[gm]WL[30]OW[1]
+;B[il]BL[378.271]
+;W[hl]WL[30]OW[1]
+;B[ek]BL[366.432]
+;W[gn]WL[30]OW[1]
+;B[no]BL[347.728]
+;W[mn]WL[30]OW[1]
+;B[oo]BL[345.425]
+;W[po]WL[30]OW[1]C[bab84k: m8
+]
+;B[jk]BL[270.369]C[UCSB1 [-\]: Thanks for the game
+UToronto1 [-\]: thanks for the game
+UToronto1 [-\]: gg
+UCSB1 [-\]: Could we review?
+UToronto1 [-\]: yeah sure
+UCSB1 [-\]: Thanks
+])

@@ -1,0 +1,459 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]HA[2]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+PW[BYU3]PB[UChicago6]DT[2017-02-25]PC[The KGS Go Server at http://www.gokgs.com/]C[UChicago6 [-\]: Hi! I'm Alec, good luck!
+]RE[W+1.50]
+;B[dp]BL[1780.393]C[BYU3 [-\]: Thanks
+]
+;B[pd]BL[1777.152]C[BYU3 [-\]: I'm Paxton
+]
+;W[pp]WL[1790.308]
+;B[dc]BL[1768.18]
+;W[de]WL[1787.727]
+;B[ce]BL[1766.2]
+;W[cf]WL[1786.361]
+;B[cd]BL[1765.1]
+;W[dn]WL[1780.151]
+;B[cn]BL[1752.998]
+;W[do]WL[1776.903]
+;B[co]BL[1751.487]
+;W[ep]WL[1776.437]
+;B[dq]BL[1749.943]
+;W[eq]WL[1769.203]
+;B[dr]BL[1746.782]C[BYU1 [-\]: don't play blitz! *slaps hand*
+]
+;W[ip]WL[1767.391]
+;B[nq]BL[1737.653]
+;W[lq]WL[1744.408]
+;B[qq]BL[1734.162]
+;W[pq]WL[1741.832]
+;B[qp]BL[1722.882]
+;W[pr]WL[1726.135]
+;B[qr]BL[1720.243]
+;W[qf]WL[1715.377]
+;B[qh]BL[1709.834]
+;W[of]WL[1713.686]
+;B[nd]BL[1707.835]
+;W[mf]WL[1708.914]
+;B[ld]BL[1695.23]C[BYU2 [-\]: interesting
+]
+;W[di]WL[1687.278]
+;B[df]BL[1689.378]
+;W[cg]WL[1683.462]
+;B[ee]BL[1687]
+;W[cm]WL[1679.878]
+;B[fg]BL[1669.666]C[BYU2 [-\]: so they cant see our messages?
+]
+;W[qo]WL[1669.652]C[BYU1 [-\]: nope
+]
+;B[ro]BL[1667.397]C[BYU2 [-\]: sweet
+]
+;W[qn]WL[1667.844]
+;B[rn]BL[1666.124]
+;W[qm]WL[1657.743]
+;B[qk]BL[1659.439]C[BYU2 [-\]: rip
+]
+;W[rm]WL[1648.452]C[BYU2 [-\]: i think he needed that attack
+]
+;B[rk]BL[1649.73]C[BYU1 [-\]: ye
+BYU2 [-\]: can this be ko or anything
+BYU2 [-\]: in corner
+]
+;W[rd]WL[1621.647]
+;B[qc]BL[1643.201]C[BYU1 [-\]: prolly haha
+BYU1 [-\]: idk :o
+]
+;W[rg]WL[1596.015]C[BYU2 [-\]: too hard to read :p
+]
+;B[pg]BL[1639.066]
+;W[pf]WL[1594.612]
+;B[rh]BL[1637.446]C[BYU2 [-\]: i think he should have just gone all the way to 3-3
+BYU1 [-\]: i feel liek you can always make a ko... hahaha
+]
+;W[og]WL[1576.264]C[BYU1 [-\]: w coudl still b without a base tho. idk. 
+]
+;B[oh]BL[1627.938]
+;W[nh]WL[1575.272]
+;B[oi]BL[1625.93]C[BYU1 [-\]: not that hsi base is really big...
+BYU2 [-\]: hope black doesnt get l14
+]
+;W[ln]WL[1550.834]C[BYU1 [-\]: mm
+]
+;B[ol]BL[1608.384]
+;W[om]WL[1542.943]
+;B[nl]BL[1605.107]
+;W[nm]WL[1538.537]
+;B[kf]BL[1592.984]
+;W[bm]WL[1535.174]C[BYU2 [-\]: ouchhh
+]
+;B[bn]BL[1589.986]
+;W[le]WL[1514.105]
+;B[ke]BL[1585.143]
+;W[md]WL[1513.643]
+;B[mc]BL[1576.444]
+;W[me]WL[1512.779]
+;B[kc]BL[1575.082]
+;W[lh]WL[1510.288]C[odnihs [-\]: hello friends
+BYU2 [-\]: hello
+BYU1 [-\]: hi
+]
+;B[gj]BL[1559.367]C[odnihs [-\]: hm so
+odnihs [-\]: seems like there is a problem in the bottom right
+BYU2 [-\]: ya i was wondering about this
+]
+;W[fi]WL[1483.659]
+;B[gi]BL[1553.452]C[odnihs [-\]: looks like a ko only because of s9
+]
+;W[fh]WL[1478.274]
+;B[gh]BL[1548.598]C[BYU1 [-\]: hmm
+]
+;W[jh]WL[1468.548]
+;B[ig]BL[1542.225]
+;W[fk]WL[1458.855]C[odnihs [-\]: actually wait
+odnihs [-\]: that doesn't even matter
+]
+;B[fj]BL[1536.175]C[odnihs [-\]: it's just dead
+]
+;W[ej]WL[1457.319]C[BYU2 [-\]: would you push in at t6 first
+]
+;B[gk]BL[1534.415]
+;W[fl]WL[1454.616]C[odnihs [-\]: yea hane first
+BYU2 [-\]: i think t6 is first
+]
+;B[gl]BL[1531.35]
+;W[gm]WL[1451.494]C[odnihs [-\]: then hane the other side
+odnihs [-\]: and t2
+odnihs [-\]: famous shape :)
+BYU1 [-\]: :)
+BYU2 [-\]: :)
+odnihs [-\]: how strong is byu3?
+BYU1 [-\]: 7k i think
+odnihs [-\]: ah
+BYU2 [-\]: his kgs rank is 7k but we think hes stronger in person
+odnihs [-\]: haha
+BYU1 [-\]: but he is usualyl a god fighter as well
+BYU2 [-\]: which is odd
+BYU2 [-\]: i suck in person
+BYU1 [-\]: :P
+odnihs [-\]: so you three are all about the same level?
+BYU2 [-\]: well idk about suck but compared to online
+BYU1 [-\]: about yeah
+BYU2 [-\]: uh 1 and 2 we are both like 4-5
+odnihs [-\]: that's pretty nice hehe
+BYU1 [-\]: yeah
+odnihs [-\]: how big is your club?
+BYU1 [-\]: we have an average of 6 people who come
+odnihs [-\]: that's not bad
+BYU1 [-\]: (we had 60 sign up)
+odnihs [-\]: haha
+BYU2 [-\]: woah what i didnt know that
+odnihs [-\]: my rule of thumb for that is
+]
+;B[mm]BL[1421.203]
+;W[mn]WL[1444.486]C[odnihs [-\]: if 2% of your signups stay as regulars
+odnihs [-\]: that's satisfactory
+BYU1 [-\]: yeah haha
+]
+;B[ki]BL[1412.53]
+;W[kh]WL[1438.81]
+;B[jn]BL[1405.623]C[odnihs [-\]: if you get 10% that's godly
+BYU2 [-\]: heh
+BYU1 [-\]: \\o/
+]
+;W[il]WL[1415.288]C[BYU2 [-\]: our strongest is around 1don he would be first board but couldnt make it
+]
+;B[im]BL[1382.866]C[BYU1 [-\]: yeah, 20 people even came to the first meeting
+]
+;W[hm]WL[1412.55]C[BYU2 [-\]: ya that was sweet
+]
+;B[hl]BL[1372.924]
+;W[jl]WL[1404.205]
+;B[jm]BL[1360.942]C[BYU2 [-\]: hm
+]
+;W[km]WL[1378.145]
+;B[kl]BL[1345.667]
+;W[kk]WL[1350.046]
+;B[ll]BL[1341.142]
+;W[ij]WL[1349.503]
+;B[jk]BL[1294.134]
+;W[ik]WL[1347.369]
+;B[jj]BL[1292.516]
+;W[lj]WL[1325.246]
+;B[li]BL[1263.233]
+;W[ji]WL[1303.567]C[BYU1 [-\]: jsut n11 was ok.. right?
+]
+;B[mi]BL[1244.249]C[BYU1 [-\]: oh no
+]
+;W[kj]WL[1300.386]C[BYU2 [-\]: he can just connect his white stones on upper side
+BYU2 [-\]: but black will get points in middle
+]
+;B[ni]BL[1220.833]C[BYU2 [-\]: j11 and l10 miai
+BYU1 [-\]: mm
+BYU2 [-\]: but n11? uhm
+]
+;W[er]WL[1266.571]C[BYU1 [-\]: no n11 didnt work
+BYU1 [-\]: cause b jsut m9
+]
+;B[dg]BL[1185.809]C[BYU1 [-\]: no
+BYU2 [-\]: ya
+BYU2 [-\]: well idk
+BYU1 [-\]: it did work...
+]
+;W[dh]WL[1250.404]C[BYU1 [-\]: cause snap back lol
+]
+;B[es]BL[1158.569]
+;W[fs]WL[1239.869]
+;B[ds]BL[1156.753]
+;W[gr]WL[1235.801]
+;B[eg]BL[1150.933]
+;W[rb]WL[1230.758]
+;B[rc]BL[1141.727]
+;W[sc]WL[1229.467]
+;B[qb]BL[1138.026]
+;W[sn]WL[1207.158]C[BYU2 [-\]: think theres endgame in sente bottom left?
+BYU2 [-\]: oh snap
+BYU2 [-\]: gett itt
+]
+;B[sp]BL[1130.593]C[BYU1 [-\]: :}
+]
+;W[qs]WL[1198.652]C[BYU2 [-\]: think its still dead
+BYU1 [-\]: yeah
+]
+;B[rs]BL[1085.173]
+;W[ps]WL[1196.382]C[BYU2 [-\]: rip
+BYU1 [-\]: :(
+]
+;B[sr]BL[1075.482]
+;W[sh]WL[1175.172]
+;B[si]BL[1073.212]
+;W[sg]WL[1174.542]
+;B[ri]BL[1068.617]C[BYU2 [-\]: looks like a close game
+]
+;W[mh]WL[1145.958]C[BYU1 [-\]: all up to endgame
+]
+;B[am]BL[1058.609]C[BYU2 [-\]: pretty sure white can play b4
+]
+;W[al]WL[1143.825]
+;B[an]BL[1056.846]
+;W[bk]WL[1142.917]C[BYU2 [-\]: rip
+BYU1 [-\]: haha that was his biggest endgame i think
+BYU1 [-\]: but alas, he has gote
+]
+;B[mj]BL[1029.609]C[BYU2 [-\]: boo
+BYU2 [-\]: small
+BYU2 [-\]: punishh
+]
+;W[lk]WL[1131.264]C[BYU1 [-\]: :(
+]
+;B[mk]BL[1025.181]
+;W[lm]WL[1130.172]
+;B[ml]BL[1024.09]C[BYU2 [-\]: q8
+BYU2 [-\]: k13
+]
+;W[pl]WL[1098.893]C[BYU1 [-\]: oha nd it is chinese! i keep forgetting
+]
+;B[pk]BL[1020.249]C[BYU2 [-\]: oh true
+]
+;W[qg]WL[1071.059]
+;B[bf]BL[1011.324]
+;W[bg]WL[1068.636]
+;B[af]BL[1009.946]
+;W[ag]WL[1066.282]
+;B[bd]BL[1004.8]
+;W[ph]WL[1054.488]
+;B[pi]BL[1002.346]C[BYU2 [-\]: odnihs how strong are you?
+]
+;W[eh]WL[1030.991]
+;B[ne]BL[996.461]
+;W[nf]WL[1026.919]
+;B[qd]BL[991.052]
+;W[re]WL[1025.394]
+;B[lg]BL[983.216]C[BYU1 [-\]: he has a crown next to his name, which i believe means he is a KGS tourny winner
+BYU2 [-\]: oh nice
+]
+;W[mg]WL[995.746]
+;B[kg]BL[976.329]
+;W[ih]WL[991.347]
+;B[hg]BL[971.303]
+;W[jg]WL[989.174]
+;B[jf]BL[969.258]C[odnihs [-\]: oh
+odnihs [-\]: im 6d
+BYU1 [-\]: uau
+]
+;W[oe]WL[935.624]
+;B[od]BL[966.273]C[BYU2 [-\]: dang
+odnihs [-\]: oh no he didn't see t2
+BYU1 [-\]: yeah
+BYU2 [-\]: :(
+odnihs [-\]: well there's his life and death lesson for the day haha
+BYU2 [-\]: haha
+BYU1 [-\]: haha NEVER AGAIN
+]
+;W[ch]WL[899.893]C[odnihs [-\]: ah he didn't get a6 either
+BYU2 [-\]: ya this game is very close now
+]
+;B[so]BL[953.255]C[BYU1 [-\]: :/
+]
+;W[sm]WL[896.855]
+;B[hi]BL[930.916]C[odnihs [-\]: a6 was worth 12 points
+]
+;W[ii]WL[893.32]
+;B[ra]BL[910.95]
+;W[sb]WL[891.847]
+;B[ql]BL[907.855]
+;W[pm]WL[889.465]C[BYU1 [-\]: hey, aside from endgame, do you have to play very different in chinese counting?
+]
+;B[hh]BL[865.669]
+;W[sk]WL[883.972]
+;B[sj]BL[863.066]
+;W[sl]WL[881.394]
+;B[pg]BL[854.099]
+;W[rq]WL[868.272]
+;B[sq]BL[850.307]
+;W[ph]WL[864.937]
+;B[fm]BL[845.146]
+;W[gn]WL[831.572]
+;B[pg]BL[835.171]
+;W[cp]WL[826.255]
+;B[bp]BL[812.998]
+;W[ph]WL[814.803]
+;B[fn]BL[800.715]
+;W[go]WL[806.693]
+;B[pg]BL[783.481]
+;W[cq]WL[797.814]
+;B[cr]BL[778.928]
+;W[ph]WL[794.39]
+;B[em]BL[776.167]
+;W[ek]WL[788.418]
+;B[pg]BL[750.82]
+;W[sd]WL[743]
+;B[ph]BL[742.129]
+;W[sa]WL[741.864]
+;B[qa]BL[740.546]
+;W[qe]WL[739.603]
+;B[dm]BL[734.854]C[BYU1 [-\]: so many threats still
+]
+;W[eo]WL[733.629]
+;B[cl]BL[731.83]
+;W[bl]WL[731.994]
+;B[ck]BL[730.77]
+;W[bj]WL[729.339]
+;B[fo]BL[718.801]
+;W[gp]WL[719.152]C[BYU2 [-\]: ya
+]
+;B[rl]BL[687.318]
+;W[lf]WL[709.559]C[odnihs [-\]: ah uh
+odnihs [-\]: just fill the dame
+]
+;B[no]BL[643.615]
+;W[nn]WL[703.417]
+;B[lp]BL[641.852]
+;W[kq]WL[685.299]C[odnihs [-\]: at a glance it seems like white is up
+]
+;B[kp]BL[633.137]C[odnihs [-\]: i think
+]
+;W[nr]WL[667.709]
+;B[mr]BL[628.553]
+;W[or]WL[662.999]
+;B[mq]BL[627.021]
+;W[jq]WL[661.782]C[BYU1 [-\]: if i count it like japanese, hwo close woudl the score be..?
+BYU1 [-\]: caus ei don't liek to count all of the stones..
+]
+;B[ns]BL[607.414]
+;W[oo]WL[652.301]C[BYU2 [-\]: k5
+]
+;B[pn]BL[606.223]C[odnihs [-\]: oh i mean you can still count territory when you're trying to calculate the score
+]
+;W[mo]WL[642.864]
+;B[np]BL[603.397]
+;W[mp]WL[635.95]C[BYU1 [-\]: w fine now
+]
+;B[lr]BL[593.253]C[odnihs [-\]: so black has 90-2-8
+]
+;W[jp]WL[613.991]C[odnihs [-\]: so white needs 80 on the board
+]
+;B[ko]BL[588.966]
+;W[jo]WL[596.529]C[BYU2 [-\]: if white ignores and jsut lets black play stones in chinese is he still getting points
+BYU1 [-\]: -2-8?
+]
+;B[kn]BL[572.701]C[odnihs [-\]: i count 88 for white on the board
+]
+;W[hj]WL[582.197]C[BYU1 [-\]: so w ahead?
+odnihs [-\]: yea by around 8
+BYU2 [-\]: in japanese scoring would he be winning?
+]
+;B[gf]BL[540.281]
+;W[pe]WL[576.939]C[odnihs [-\]: japanese scoring and chinese scoring usually only differs by a point
+odnihs [-\]: point or two
+BYU2 [-\]: hm
+BYU2 [-\]: ok
+odnihs [-\]: but result only changes in rare circumstances
+BYU2 [-\]: how long have you been playing go for odnihs?
+odnihs [-\]: bit over 9 years
+BYU1 [-\]: nice
+BYU1 [-\]: are you in college?
+odnihs [-\]: yea im a senior
+]
+;B[]BL[450.704]
+;W[hk]WL[574.07]C[odnihs [-\]: ah so white gained another point there
+odnihs [-\]: maybe w+10
+]
+;B[]BL[431.326]
+;W[]WL[574.069]TW[se][rf][sf][ng][ah][bh][ai][bi][ci][ei][aj][cj][dj][jj][ak][ck][dk][jk][cl][dl][el][dm][em][fm][im][jm][en][fn][hn][in][jn][kn][on][pn][fo][ho][io][ko][lo][no][po][fp][hp][kp][lp][np][op][fq][gq][hq][iq][mq][nq][oq][fr][hr][ir][jr][kr][lr][mr][gs][hs][is][js][ks][ls][ms][ns][os]TB[aa][ba][ca][da][ea][fa][ga][ha][ia][ja][ka][la][ma][na][oa][pa][ab][bb][cb][db][eb][fb][gb][hb][ib][jb][kb][lb][mb][nb][ob][pb][ac][bc][cc][ec][fc][gc][hc][ic][jc][lc][nc][oc][pc][ad][dd][ed][fd][gd][hd][id][jd][kd][ae][be][de][fe][ge][he][ie][je][ef][ff][hf][if][gg][qi][nj][oj][pj][qj][rj][nk][ok][ao][bo][ap][cp][rp][aq][bq][cq][rq][ar][br][rr][as][bs][cs][ss]C[BYU2 [-\]: does he not realize its chinese?
+odnihs [-\]: prob just didn't see it
+BYU1 [-\]: :o
+odnihs [-\]: oh wtf
+odnihs [-\]: i'm way off LOL
+BYU1 [-\]: dang
+BYU2 [-\]: wow
+BYU1 [-\]: so close
+BYU1 [-\]: gg
+UChicago6 [-\]: wow gg
+BYU2 [-\]: gg
+BYU3 [-\]: gg
+BYU3 [-\]: ty
+odnihs [-\]: lemme count again
+BYU1 [-\]: haha
+odnihs [-\]: wait so
+odnihs [-\]: that means that dame mattered
+UChicago6 [-\]: sorry, I forgot we were playing chinese
+BYU3 [-\]: yeah
+odnihs [-\]: that was a two point swing
+BYU1 [-\]: dang!
+BYU3 [-\]: :/
+UChicago6 [-\]: :)
+BYU1 [-\]: the ko too, there were more threats
+BYU1 [-\]: thanks Chicago for palying! \]
+odnihs [-\]: oh now i have 93-2-8
+odnihs [-\]: so white needs 83 on the board
+BYU3 [-\]: yeah i was thinking that with chinese the ko wouldnt really matter, but thats not quite the case when i think about it
+BYU1 [-\]: yeah
+BYU2 [-\]: gg
+BYU3 [-\]: gg
+UChicago6 [-\]: gg thx
+odnihs [-\]: now i only get 76 for white, dunno :\\
+odnihs [-\]: oh wait there's no komi
+UChicago6 [-\]: yeah, only .5 for handicap
+odnihs [-\]: that's why i was off lol
+BYU1 [-\]: that'll do it
+odnihs [-\]: ok so i wasn't too crazy haha
+BYU1 [-\]: well... 
+BYU2 [-\]: haha
+BYU1 [-\]: haha 
+BYU3 [-\]: well gl in your matches in the future
+BYU2 [-\]: our the matches for next time already decided odnihs?
+BYU2 [-\]: are
+UChicago6 [-\]: likewise
+odnihs [-\]: uh
+odnihs [-\]: i run the pairings after each round
+odnihs [-\]: so not yet
+UChicago6 [-\]: Did anyone else from uchicagoB show up?
+odnihs [-\]: nope :(
+UChicago6 [-\]: ah, sorry about that
+odnihs [-\]: :s
+odnihs [-\]: it's ok
+BYU1 [-\]: :)
+UChicago6 [-\]: whelp, unfortunately I
+UChicago6 [-\]: I've got to sign off and get back to real life and homework
+UChicago6 [-\]: thanks for the match BYU
+BYU2 [-\]: thx
+])

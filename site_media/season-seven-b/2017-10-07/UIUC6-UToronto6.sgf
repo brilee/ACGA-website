@@ -1,0 +1,183 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Chinese]SZ[19]KM[7.50]TM[2700]OT[5x30 byo-yomi]
+PW[UIUC6]PB[UToronto6]DT[2017-10-07]PC[The KGS Go Server at http://www.gokgs.com/]C[UIUC6 [-\]: Ah, hello
+UToronto6 [-\]: alright, finally
+UIUC6 [-\]: BTW, what strength are you?
+]RE[W+Resign]
+(;B[pd]BL[2653.423]C[UToronto6 [-\]: how much handicap?
+UIUC6 [-\]: I'll let you place 4 star point stones
+]
+;W[]WL[2652.563]C[UToronto6 [-\]: oh wow, when we take back moves, chat gets deleted with it
+]
+;B[dd]BL[2646.044]C[UIUC6 [-\]: Hm? Not for me
+]
+;W[]WL[2652.562]
+;B[dp]BL[2644.654]
+;W[]WL[2652.562]
+;B[pp]BL[2643.376]
+;W[qf]WL[2650.718]
+;B[nc]BL[2633.404]
+;W[qn]WL[2646.369]
+;B[nq]BL[2622.542]
+;W[pj]WL[2643.806]
+;B[of]BL[2612.184]
+;W[rd]WL[2606.754]
+;B[qc]BL[2606.917]
+;W[pg]WL[2562.015]
+;B[qo]BL[2544.437]
+;W[pn]WL[2557.941]
+;B[ro]BL[2532.276]
+;W[cj]WL[2555.156]
+;B[dj]BL[2517.775]
+;W[dk]WL[2552.501]
+;B[ek]BL[2509.45]
+;W[di]WL[2502.226]
+;B[ej]BL[2494.488]
+;W[dl]WL[2448.915]
+;B[cn]BL[2468.009]
+;W[cf]WL[2439.615]
+;B[bd]BL[2455.691]
+;W[fc]WL[2427.032]
+;B[hc]BL[2438.892]
+;W[ee]WL[2399.632]
+;B[ec]BL[2403.037]
+;W[fd]WL[2392.657]
+;B[io]BL[2379.538]
+;W[lq]WL[2276.949]
+;B[lp]BL[2316.975]
+;W[kp]WL[2271.709]
+;B[kq]BL[2278.466]
+;W[mp]WL[2233.91]
+;B[lo]BL[2273.249]
+;W[mo]WL[2225.49]
+;B[mq]BL[2240.384]
+;W[lr]WL[2224.344]
+;B[kr]BL[2226.311]
+;W[ln]WL[2209.706]
+;B[ko]BL[2215.421]
+;W[kn]WL[2208.556]
+;B[jo]BL[2200.057]
+;W[og]WL[2201.657]
+;B[hj]BL[2089.514]
+;W[jj]WL[2177.789]
+;B[hl]BL[2063.168]
+;W[jl]WL[2171.203]
+;B[sl]BL[2034.793]
+;W[rn]WL[2093.291]
+;B[sn]BL[2005.001]
+;W[rm]WL[2087.221]
+;B[sm]BL[1974.924]
+;W[rk]WL[2084.705]
+;B[ng]BL[1944.72]
+;W[nh]WL[2049.735]
+;B[mf]BL[1928.851]
+;W[mg]WL[2047.855]
+;B[nf]BL[1923.455]
+;W[cq]WL[2018.902]
+;B[dq]BL[1898.877]
+;W[dr]WL[2016.918]
+;B[er]BL[1896.429]
+;W[br]WL[2015.102]
+;B[cp]BL[1883.773]
+;W[bp]WL[2013.188]
+;B[bo]BL[1875.869]
+;W[es]WL[1977.115]
+;B[fs]BL[1864.446]
+;W[ds]WL[1975.366]
+;B[fq]BL[1857.434]
+;W[aq]WL[1936.782]
+;B[lg]BL[1795.167]
+;W[id]WL[1857.203]
+;B[fb]BL[1769.631]
+;W[gb]WL[1845.549]
+;B[eb]BL[1729.438]
+;W[gc]WL[1833.608]
+;B[mh]BL[1697.2]
+;W[mi]WL[1812.399]
+;B[ni]BL[1686.896]
+;W[oh]WL[1810.598]
+;B[li]BL[1679.784]
+;W[mj]WL[1809.498]
+;B[lj]BL[1677.435]
+;W[lk]WL[1799.936]
+;B[ji]BL[1660.128]
+;W[lc]WL[1784.299]
+;B[ld]BL[1646.474]
+;W[kc]WL[1733.26]
+;B[no]BL[1615.185]
+;W[nn]WL[1731.388]
+;B[kk]BL[1575.325]
+;W[ll]WL[1724.517]
+;B[jk]BL[1527.976]
+;W[en]WL[1658.293]
+;B[dm]BL[1510.524]
+;W[el]WL[1655.531]
+;B[em]BL[1506.649]
+;W[fl]WL[1641.061]
+;B[fm]BL[1491.447]
+;W[ei]WL[1633.697]
+;B[cl]BL[1406.482]
+;W[gi]WL[1592.603]
+;B[ij]BL[1357.415]
+;W[be]WL[1587.83]
+;B[ce]BL[1333.509]
+;W[de]WL[1584.259]
+;B[cd]BL[1330.684]
+;W[bf]WL[1571.329]
+;B[fk]BL[1255.291]
+;W[gk]WL[1568.205]
+;B[gl]BL[1208.468]
+;W[ck]WL[1556.349]
+;B[jm]BL[1141.935]
+;W[bc]WL[1548.362]
+;B[ad]BL[1132.312]
+;W[cb]WL[1536.09]
+;B[ab]BL[1129.977]
+;W[ac]WL[1526.225]
+;B[cc]BL[1049.559]
+;W[bb]WL[1523.604]
+;B[db]BL[1039.22]
+;W[aa]WL[1445.817]
+;B[ca]BL[999.46]
+;W[ed]WL[1429.555]
+;B[dc]BL[937.984]
+;W[fa]WL[1412.959]
+;B[da]BL[912.679]
+;W[ae]WL[1410.539]C[UToronto6 [-\]: gg
+UIUC6 [-\]: gg
+UIUC6 [-\]: wp
+UIUC6 [-\]: That's fine :)
+UIUC6 [-\]: It's all for fun
+UIUC6 [-\]: I was getting pretty scared I might not have been able to keep up
+UIUC6 [-\]: catch up*
+UToronto6 [-\]: yeah I had a lot of fun today too
+UIUC6 [-\]: Wish you luck in the rest of the tournament!
+UToronto6 [-\]: my first ever 19x19 game with time controls
+UToronto6 [-\]: thanks
+UIUC6 [-\]: Neat!
+UIUC6 [-\]: You did very well, considering that
+UIUC6 [-\]: I could review some of this game, if you wanted?
+UToronto6 [-\]: I gotta run, ferry departs at 15 past the hour, every hour
+UIUC6 [-\]: K
+UIUC6 [-\]: Cya
+UToronto6 [-\]: was expecting to catch the 3:15 but I can get the early one now
+])
+(;B[pd]BL[2687.196]C[UToronto6 [-\]: untested
+UIUC6 [-\]: K
+UIUC6 [-\]: I'm about 5-6k
+UToronto6 [-\]: DDK, not sure where in that range tho
+UIUC6 [-\]: Let's have a swell game :)
+]
+;W[qp]WL[2671.23]C[UToronto6 [-\]: :)
+UIUC6 [-\]: Let me take a second to ask about this
+]
+;B[dd]BL[2677.029]C[UIUC6 [-\]: Actually
+]
+;W[dp]WL[2668.515]
+;B[cn]BL[2664.637]C[UIUC6 [-\]: Wait a sec
+UIUC6 [-\]: I'm supposed to give you handicap, I believe
+UToronto6 [-\]: ok
+UIUC6 [-\]: I guess we'll restart this game
+UIUC6 [-\]: By closing out of it
+UToronto6 [-\]: idk about the tournament format, I got recruited pretty last minute
+]))
